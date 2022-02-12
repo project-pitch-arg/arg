@@ -1,0 +1,17 @@
+.content {
+    height: 100vh;
+    background-color: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content a {
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+}
+
+.tab {
+    text-decoration: underline;
+}
