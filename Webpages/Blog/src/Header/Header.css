@@ -1,0 +1,33 @@
+.header-content {
+    background-color: hsl(93, 75%, 27%);
+    height: 100px;
+    width: 100%;
+}
+
+#left {
+    float: left;
+    /* width: 50%; */
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+#left ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+}
+
+#right {
+    float: right;
+    padding-top: 15px;
+    padding-right: 20px;
+    /* text-align: right; */
+    /* width: 50%; */
+    /* padding: 20px; */
+}
+
+#down {
+    float: down;
+    padding-top: 15px;
+    padding-right: 20px;
+}

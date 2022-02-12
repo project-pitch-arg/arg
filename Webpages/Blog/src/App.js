@@ -9,11 +9,13 @@ import TabFourOne from './Tabs/DropDown/TabFourOne';
 import TabFourTwo from './Tabs/DropDown/TabFourTwo';
 import TabFourThree from './Tabs/DropDown/TabFourThree';
 import Footer from './Footer/Footer';
+import Header from './Header/Header';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+       <Header />
         <TopBar />
         <Routes>
           <Route path="*" element={<Wrong />} /> {/*Default when path doesn't match any of the ones listed below*/}

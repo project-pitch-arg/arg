@@ -5,6 +5,23 @@
     justify-content: center;
     align-items: center;
 }
+.post {
+    height: 100px;
+    width: 400px;
+    position: static;
+    background-color: #7071a7;
+    border: 2px solid rgb(182, 52, 29);
+    text-align: center;
+    margin-top: 10px;  
+    padding: 10px;
+}
+
+.background{
+    height: fit-content;
+    background-color: rgb(51, 133, 105);
+    display: flex;
+    justify-content: center;
+}
 
 .content a {
     font-weight: bold;

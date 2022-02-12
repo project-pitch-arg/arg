@@ -1,11 +1,12 @@
 import React from 'react';
 import './TabContent.css';
 
-export default function Walk() {
+export default function Posts() {
     return (
-        <div class="content">
-          <a>Content for <a class="tab">Third</a> tab <br/> goes here... </a>          
-        </div>
-      
+      <div class="background">
+        <div class="post">
+         <p>Hello</p>
+        </div> 
+       </div>
     )
 }
