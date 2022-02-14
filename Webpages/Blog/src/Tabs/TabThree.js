@@ -1,26 +1,6 @@
 import React, { useState } from 'react';
 import './TabContent.css';
 import PostContent from './PostContent.js';
-import styled from "styled-components";
-
-const Button = styled.button`
-  background-color: black;
-  color: white;
-  font-size: 10px;
-  padding: 20px 30px;
-  border-radius: 1px;
-  margin: 777px 0px;
-  cursor: pointer;
-  &:disabled {
-    color: grey;
-    opacity: 0.7;
-    cursor: default;
-  }
-`;
-
-const ButtonGroup = styled.div`
-  display: flex;
-`;
 
 export default function Posts() {
   const[start, startChange] = useState(0);
@@ -77,10 +57,10 @@ export default function Posts() {
   }
   return (
     <div style = {{height:"100vh"}} class="background">
-        <ButtonGroup>
-        <Button onClick={firstPage} disabled={disableF}> FIRST</Button>
-        <Button onClick={prevPage} disabled={disableP}> PREV </Button>   
-        </ButtonGroup>
+        <div class="buttongroup">
+        <button class="button" onClick={firstPage} disabled={disableF}> FIRST</button>
+        <button class="button" onClick={prevPage} disabled={disableP}> PREV </button>
+        </div>
          <div class="postlist">
          {(Content.slice(start,last)).map(item => {
             return (
@@ -101,10 +81,10 @@ export default function Posts() {
       )
       })}
          </div>
-         <ButtonGroup>
-         <Button onClick={nextPage} disabled={disableN}> NEXT </Button>
-         <Button onClick={lastPage} disabled={disableL}>LAST</Button>
-         </ButtonGroup>
+         <div class="buttongroup">
+          <button class="button" onClick={nextPage} disabled={disableN}> NEXT</button>
+          <button class="button" onClick={lastPage} disabled={disableL}> LAST </button>
+        </div>
       </div>
     )
 }

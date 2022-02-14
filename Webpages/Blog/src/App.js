@@ -57,7 +57,7 @@ function App() {
             <Route exact path="/FourTwo" element={<TabFourTwo />} />
             <Route exact path="/FourThree" element={<TabFourThree />} />
         </Routes>
-       <Footer />
+       {/*<Footer />*/}
       </BrowserRouter>
     </div>
   );
