@@ -13,7 +13,7 @@ import Header from './Header/Header';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <BrowserRouter>
        <Header />
         <TopBar />
@@ -27,7 +27,7 @@ function App() {
             <Route exact path="/FourTwo" element={<TabFourTwo />} />
             <Route exact path="/FourThree" element={<TabFourThree />} />
         </Routes>
-       {/* --- <Footer /> */}
+       <Footer />
       </BrowserRouter>
     </div>
   );
