@@ -38,6 +38,25 @@
     right:0;
 }
 
+.button {
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    padding: 20px 30px;
+    border-radius: 1px;
+    cursor: pointer;
+
+}
+.button[disabled]{
+    color: grey;
+    opacity: 0.7;
+    cursor: default;
+}
+
+.buttongroup {
+    margin-top: 90vh;
+}
+
 .post-name {
     text-align: left;
     font-weight: bold;
