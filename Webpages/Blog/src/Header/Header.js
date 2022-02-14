@@ -6,7 +6,7 @@ export default function Header(props) {
 
     return (
         <div className='header-content'>
-            <div id='left'>
+            <div id='left' class="title">
                 <a>Daily Thoughts <br/></a>
             </div>
        </div>
