@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './TabContent.css';
 import PostContent from './PostContent.js';
-import styled from "styled-components";
 
 export default function Posts() {
   const[start, startChange] = useState(0);
@@ -82,10 +81,10 @@ export default function Posts() {
       )
       })}
          </div>
-         <div class="buttongroup">
-         <button  class="button" onClick={nextPage} disabled={disableN}> NEXT </button>
-         <button  class="button" onClick={lastPage} disabled={disableL}>LAST</button>
-         </div>
+         <ButtonGroup>
+         <Button onClick={nextPage} disabled={disableN}> NEXT </Button>
+         <Button onClick={lastPage} disabled={disableL}>LAST</Button>
+         </ButtonGroup>
       </div>
     )
 }
