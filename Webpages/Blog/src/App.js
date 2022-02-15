@@ -8,7 +8,7 @@ import TabTwo from './Tabs/TabTwo';
 import TabPosts from './Tabs/TabPosts';
 // import TabFour from './Tabs/TabFour';
 import TabFourOne from './Tabs/DropDown/TabFourOne';
-import TabFourTwo from './Tabs/DropDown/TabFourTwo';
+import TabAbout from './Tabs/DropDown/TabAbout';
 import TabQotD from './Tabs/DropDown/TabQotD';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
@@ -54,7 +54,7 @@ function App() {
           <Route exact path="/Posts" element={<TabPosts />} />
           {/* <Route exact path="/Four" element={<TabFour />} /> */}
             <Route exact path="/FourOne" element={<TabFourOne />} />
-            <Route exact path="/FourTwo" element={<TabFourTwo />} />
+            <Route exact path="/TabAbout" element={<TabAbout />} />
             <Route exact path="/QotD" element={<TabQotD />} />
         </Routes>
      {/* <Footer /> */}
