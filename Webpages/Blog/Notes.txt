@@ -1,0 +1,2 @@
+Things to think about:
+ - How to get the page to exactly fill the browser?

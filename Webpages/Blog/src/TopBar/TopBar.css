@@ -1,6 +1,7 @@
 .topbar {
   position: relative;
   top: 0px;
+  margin:0;
 }
 
 #topbar-ul {
@@ -19,7 +20,7 @@
   display: block;
   color: white;
   /* text-align: center; */
-  padding: 14px 16px;
+  padding: 2vh 5vh;
   text-decoration: none;
   
 }

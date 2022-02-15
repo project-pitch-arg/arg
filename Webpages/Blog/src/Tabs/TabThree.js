@@ -81,10 +81,10 @@ export default function Posts() {
       )
       })}
          </div>
-         <ButtonGroup>
-         <Button onClick={nextPage} disabled={disableN}> NEXT </Button>
-         <Button onClick={lastPage} disabled={disableL}>LAST</Button>
-         </ButtonGroup>
+         <div class="buttongroup">
+         <button class="button" onClick={nextPage} disabled={disableN}> NEXT </button>
+         <button class="button" onClick={lastPage} disabled={disableL}>LAST</button>
+         </div>
       </div>
     )
 }

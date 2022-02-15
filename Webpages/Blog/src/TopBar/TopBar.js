@@ -67,7 +67,7 @@ export default function TopBar(props) {
                     <div class="dropdown-content">
                         <Link id="tab-four-one" onClick={() => highlightActive('FourOne')} to ='/FourOne'> FAQ </Link>
                         <Link id="tab-four-two" onClick={() => highlightActive('FourTwo')} to ='/FourTwo'> About </Link>
-                        <Link id="tab-four-three" onClick={() => highlightActive('FourThree')} to ='/FourThree'> Quote of the day </Link>
+                        <Link id="tab-four-three" onClick={() => highlightActive('FourThree')} to ='/FourThree'> Quotes of the day </Link>
                         </div>
                     </div> 
                 </li>

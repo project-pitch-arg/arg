@@ -1,9 +1,9 @@
 .content {
-    height: 100vh;
     background-color: #c9b394;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80vh;
 }
 
 .postlist {
