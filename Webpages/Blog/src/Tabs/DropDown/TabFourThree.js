@@ -62,7 +62,7 @@ export default function Walk() {
     };
 
     return (
-        <div class="content quotes">
+        <div class="content">
           <QotD quotes={quotes} />
         </div>
     )
