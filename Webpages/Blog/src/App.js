@@ -5,7 +5,7 @@ import TopBar from './TopBar/TopBar';
 import Wrong from './Wrong';
 import Home from './Tabs/Home';
 import TabTwo from './Tabs/TabTwo';
-import TabThree from './Tabs/TabThree';
+import TabPosts from './Tabs/TabPosts';
 // import TabFour from './Tabs/TabFour';
 import TabFourOne from './Tabs/DropDown/TabFourOne';
 import TabFourTwo from './Tabs/DropDown/TabFourTwo';
@@ -51,7 +51,7 @@ function App() {
           <Route path="*" element={<Wrong />} /> {/*Default when path doesn't match any of the ones listed below*/}
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Two" element={<TabTwo />} />
-          <Route exact path="/Three" element={<TabThree />} />
+          <Route exact path="/Posts" element={<TabPosts />} />
           {/* <Route exact path="/Four" element={<TabFour />} /> */}
             <Route exact path="/FourOne" element={<TabFourOne />} />
             <Route exact path="/FourTwo" element={<TabFourTwo />} />
