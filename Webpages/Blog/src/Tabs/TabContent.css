@@ -124,6 +124,8 @@
     text-align: center;
     position: center;
     overflow-y: auto;
+    justify-content: center;
+    font-size: medium;
 }
 
 .question {
@@ -144,6 +146,42 @@
 .answerWilfred {
     font-weight: normal;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
