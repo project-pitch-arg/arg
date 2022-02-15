@@ -23,8 +23,8 @@ export default function TopBar(props) {
                 document.getElementById("tab-two").classList.add('active');
             break;
             
-            case 'Three':
-                document.getElementById("tab-three").classList.add('active');
+            case 'Posts':
+                document.getElementById("tab-posts").classList.add('active');
             break;
             
             case 'Four':
@@ -59,7 +59,7 @@ export default function TopBar(props) {
               <ul id='topbar-ul'>
                 <li class='topbar-li'><Link id="tab-home" onClick={() => highlightActive('')} to ='/'> Home </Link></li>
                 <li class='topbar-li'><Link id="tab-two" onClick={() => highlightActive('Two')} to ='/Two'> Two </Link></li>
-                <li class='topbar-li'><Link id="tab-three" onClick={() => highlightActive('Three')} to ='/Three'> Posts</Link></li>
+                <li class='topbar-li'><Link id="tab-posts" onClick={() => highlightActive('Posts')} to ='/Posts'> Posts</Link></li>
                 {/* <li><Link id="tab-four" onClick={() => highlightActive('Four')} to = '/Four'> Four </Link></li> */}
                 <li>
                     <div class="dropdown">
