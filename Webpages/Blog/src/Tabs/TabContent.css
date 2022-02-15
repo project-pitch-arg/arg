@@ -2,17 +2,17 @@
 
 /* The colour of the background often used.*/
 .content {
+    height: 80vh;
     background-color: #c9b394;
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    display: flex;
 }
 /* More specifications for general use,
     this is for text. */
 .content a {
-    font-weight: bold;
     text-align: center;
+    font-weight: bold;
     font-size: 24px;
 }
 .tab {
@@ -26,15 +26,15 @@
 .background {
     height: fit-content;
     background-color: hsl(93, 40%, 60%);
-    display: flex;
     justify-content: center;
+    display: flex;
 }
 /* Creates and area to place posts in.
     Has a scrollbar if necessary. */
 .postlist {
     height: 100vh;
-    background-color: hsl(47, 34%, 74%);
     width: 70%;
+    background-color: hsl(47, 34%, 74%);
     text-align: center;
     position: center;
     overflow-y: auto;
@@ -43,25 +43,25 @@
     size depends on the amount of content. */
 .post {
     width: 80%;
-    position: center;
-    background-color: hsl(47, 28%, 66%);
     border: 2px solid rgb(0, 0, 0);
-    text-align: left;
     margin-left: auto; 
     margin-right: auto;
     margin-top: 10px;  
     padding: 10px;
+    background-color: hsl(47, 28%, 66%);
+    text-align: left;
+    position: center;
     overflow-y: visible;
 }
 /* Places the date of the posts in the upper right. */
 .post-date {
-    list-style: none;
     margin:0px;
     padding:0px;
-    text-align: right;
-    position:relative;
     bottom:0;
     right:0;
+    text-align: right;
+    position:relative;
+    list-style: none;
 }
 /* Places the name of the poster in the upper left, 
     with a different use of font.*/
@@ -84,9 +84,9 @@
 .button {
     background-color: black;
     color: white;
-    font-size: 10px;
     padding: 20px 30px;
     border-radius: 1px;
+    font-size: 10px;
     cursor: pointer;
 }
 /* The design of the buttons when you
@@ -102,24 +102,25 @@
 
 /* Makes a block and sets the text for the quotes */
 .quote {
-    color: black;
     width: 50vw;
-    background-color: #aa9a84;
-    font-size: 5vh;
     padding: 2vh;
+    background-color: #aa9a84;
+    color: black;
+    font-size: 5vh;
 }
 /* Displays the name of the person who said the quote. */
 .saidBy {
-    text-align: right;
     color: black;
+    text-align: right;
 }
 
 /* -------------------- TabAbout -------------------- */
 
 .questionlist {
     height: 80vh;
-    background-color: hsl(47, 34%, 74%);
     width: 70%;
+    background-color: hsl(47, 34%, 74%);
+    justify-content: center;
     text-align: center;
     position: center;
     overflow-y: auto;
@@ -129,14 +130,14 @@
 
 .question {
     width: 60%;
-    position: center;
-    text-align: left;
     margin-left: auto; 
     margin-right: auto;
     margin-top: 10px;  
     padding: 10px;
-    overflow-y: visible;
+    text-align: left;
+    position: center;
     font-weight: bold;
+    overflow-y: visible;
 }
 .answerEdwin {
     font-weight: normal;
