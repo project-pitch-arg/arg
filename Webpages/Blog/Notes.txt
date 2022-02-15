@@ -1,3 +1,7 @@
 Things to think about:
  - How to get the page to exactly fill the browser?
  - Fix background with patterns everywhere.
+ - Fixa radbrytning i arrayer för att underlätta läsning.
+ - Bilder till About
+ - Koppla ihop användarnamn kopplat med namn i about.
+ -Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
