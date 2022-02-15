@@ -12,7 +12,7 @@ import QuotesContent from './QuotesContent.js';
 export default function Walk() {
 
   // Edit this to change the time each quote is displayed (in seconds).
-  const quoteTime = 1;
+  const quoteTime = 5;
 
   // Function to get a random integer between two limits.
   function getRandomInt(min, max) {
@@ -45,6 +45,7 @@ export default function Walk() {
 
     // Imported array is declared here.
     const quotes = QuotesContent();
+    shuffle(quotes);
     
     // Handler of timing and displaying the quotes.
     const QotD = timer => {
