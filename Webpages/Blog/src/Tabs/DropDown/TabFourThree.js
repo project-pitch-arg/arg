@@ -1,15 +1,29 @@
+/*
+  Tab with daily quotes that periodically change.
+  One quote is displayed at a time. 
+  Along with the originator of the quote.
+  Change the interval of the changes between quotes with the value quoteTime.
+  This value sets the time in seconds.
+*/
 import React, {useState, useEffect} from 'react';
 import '../TabContent.css';
 import QuotesContent from './QuotesContent.js';
 
 export default function Walk() {
+
+  // Edit this to change the time each quote is displayed (in seconds).
+  const quoteTime = 1;
+
+  // Function to get a random integer between two limits.
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random(2) * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+
+    // The maximum is exclusive and the minimum is inclusive.
+    return Math.floor(Math.random(2) * (max - min) + min); 
   }
   
-  //
+  // Fisher-Yates shuffle function.
   function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -25,31 +39,42 @@ export default function Walk() {
         array[randomIndex], array[currentIndex]];
     }
   
+    // Returns a shuffled array.
     return array;
   }
 
+    // Imported array is declared here.
     const quotes = QuotesContent();
     
-    //const quotes = ["First quote", "Second one", "Chocolate pudding", "Fourth quote", "5", "6", "7", "8", "9"];
-    const [message, setMessage] = useState(getRandomInt(0, quotes.length));
+    // Handler of timing and displaying the quotes.
     const QotD = timer => {
       const { quotes } = timer;
+
+      // Start at random index in array.
       const [message, setMessage] = useState(getRandomInt(0, quotes.length));
 
       useEffect(() => {
         let delay;
 
+        // If statement to check if the end of the array is reached.
         if (message < quotes.length-1) {
-          delay = setTimeout(() => setMessage(message+1), 5000);
+
+          // Start timer for 1000*quoteTime milliseconds.
+          delay = setTimeout(() => setMessage(message+1), 1000 * quoteTime);
         } else {
+
+            // Start over and shuffle array after reaching the end.
             setMessage(0);
             shuffle(quotes);
         }
+
+        // Reset timer so that next quote can be displayed and then counted down.
         return () => {clearTimeout(delay);};
       }, 
         [quotes, message]
       );
 
+      // Display quotes and originators according to css classes "quote" and "saidBy".
       return <div class="quote">
               <il>"</il>
               {quotes[message].quote}
@@ -61,6 +86,7 @@ export default function Walk() {
            </div>;
     };
 
+    // Display entire page.
     return (
         <div class="content quotes">
           <QotD quotes={quotes} />
