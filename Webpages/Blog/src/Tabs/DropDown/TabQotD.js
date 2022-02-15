@@ -89,7 +89,7 @@ export default function Walk() {
 
     // Display entire page.
     return (
-        <div class="content quotes">
+        <div class="content">
           <QotD quotes={quotes} />
         </div>
     )
