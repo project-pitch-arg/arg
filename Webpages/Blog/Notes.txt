@@ -4,4 +4,7 @@ Things to think about:
  - Fixa radbrytning i arrayer för att underlätta läsning.
  - Bilder till About
  - Koppla ihop användarnamn kopplat med namn i about.
- -Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
+ - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
+ - Kommentera mer kod. Framförallt chatten.
+ - Ett pussel med ett citat. Antingen löst eller inte eller båda.
+ - Intervall för citat.
