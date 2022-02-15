@@ -3,9 +3,9 @@ import './TabContent.css';
 
 export default function Walk() {
     return (
-        <div class="content">
-          <a>Content for <a class="tab">Second </a> tab <br/> goes here... </a>          
-        </div>
+       <div>
+         <iframe class="chat" src="http://localhost:3002/" title="pleasework"></iframe>
+         </div> 
       
     )
 }
