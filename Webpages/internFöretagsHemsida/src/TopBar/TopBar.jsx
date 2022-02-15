@@ -2,6 +2,7 @@ import React, {  lazy, Suspense, Component } from 'react';
 import './TopBar.css';
 import {Link} from "react-router-dom";
 import Wrong from '../Wrong';
+import Home from '../Tabs/Home';
 import {fetchData} from '../Client/client.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -18,11 +19,9 @@ export default class TopBar extends Component {
         await this.addTabs("/src/Tabs/", this.locations);
         await this.addTabs("/src/Tabs/DropDown/",this.dropdownLocations);
         this.highlightActive({file: "Home"});
-
     }
     highlightActive = (path) => {
         var oldActiveElements = document.getElementsByClassName('active');
-        console.log(path);
         if (oldActiveElements.length > 0) {
           for (let elem of oldActiveElements){
               elem.classList.remove('active');
@@ -69,6 +68,7 @@ export default class TopBar extends Component {
                 </li>
               </ul>
               <Routes>
+                  <Route path="" element={<Home/>}/>
                   <Route path="*" element={<Wrong />} />
                   {
                     this.locations.map((file) => {

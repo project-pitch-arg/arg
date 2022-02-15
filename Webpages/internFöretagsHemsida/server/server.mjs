@@ -14,6 +14,7 @@ app.use(express.urlencoded());
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 
+//Returns the names of all the files in the specified directory
 app.post('/getFiles', (req, res) => {
   var data = req.body.data;
   var list = [];
@@ -35,7 +36,13 @@ app.post('/getFiles', (req, res) => {
         return res.send(JSON.stringify({files: list}));
     })
 });
+//Returns all conversation between CEO and other staff
+app.post('/getConversations', (req, res) => {
+  var list = [];
+  const data = fs.readFileSync("./Chat/Chats.txt");
+  return res.send(data);
+});
 
 app.listen(8080, () =>
-  console.log('Example app listening on port 8080!'),
+  console.log('Server listening on port 8080!'),
 );
