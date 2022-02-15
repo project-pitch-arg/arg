@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import '../TabContent.css';
+import QuotesContent from './QuotesContent.js';
 
 export default function Walk() {
   function getRandomInt(min, max) {
@@ -8,7 +9,7 @@ export default function Walk() {
     return Math.floor(Math.random(2) * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
   
-  // Fisher-Yates (aka Knuth) Shuffle.
+  //
   function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -27,8 +28,10 @@ export default function Walk() {
     return array;
   }
 
-    const quotes = ["First quote", "Second one", "Chocolate pudding", "Fourth quote", "5", "6", "7", "8", "9"];
-
+    const quotes = QuotesContent();
+    
+    //const quotes = ["First quote", "Second one", "Chocolate pudding", "Fourth quote", "5", "6", "7", "8", "9"];
+    const [message, setMessage] = useState(getRandomInt(0, quotes.length));
     const QotD = timer => {
       const { quotes } = timer;
       const [message, setMessage] = useState(getRandomInt(0, quotes.length));
@@ -36,19 +39,26 @@ export default function Walk() {
       useEffect(() => {
         let delay;
 
-        if (message < quotes.length) {
-          delay = setTimeout(() => setMessage(message+1), 1000);
+        if (message < quotes.length-1) {
+          delay = setTimeout(() => setMessage(message+1), 5000);
         } else {
             setMessage(0);
             shuffle(quotes);
         }
-
         return () => {clearTimeout(delay);};
       }, 
-      
-      [quotes, message]);
-    
-      return <div>{quotes[message]}</div>;
+        [quotes, message]
+      );
+
+      return <div class="quote">
+              <il>"</il>
+              {quotes[message].quote}
+              <il>"</il>
+              <div class="saidBy">
+                <il>-</il>
+                {quotes[message].saidBy}
+              </div>
+           </div>;
     };
 
     return (

@@ -38,6 +38,19 @@
     right:0;
 }
 
+.quote {
+    color: black;
+    width: 50vw;
+    background-color: #aa9a84;
+    font-size: 5vh;
+    padding: 2vh;
+}
+
+.saidBy {
+    text-align: right;
+    color: black;
+}
+
 .button {
     background-color: black;
     color: white;

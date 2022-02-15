@@ -1,5 +1,5 @@
 import React from 'react';
-import './TabContent.css';
+import '../TabContent.css';
 
 export default function QuotesContent() {
   return (
@@ -12,8 +12,8 @@ export default function QuotesContent() {
      {quote: "Always remember that you are absolutely unique. Just like everyone else.", saidBy: "Margaret Mead"},
      {quote: "Tell me and I forget. Teach me and I remember. Involve me and I learn.", saidBy: "Benjamin Franklin"},
      {quote: "Whoever is happy will make others happy too.", saidBy: "Anne Frank"},
-     {quote: "Never let the fear of striking out keep you from playing the game.", saidBy: "Babe Ruth"},
      {quote: "The only impossible journey is the one you never begin.", saidBy: "Tony Robbins"},
+     {quote: "Never let the fear of striking out keep you from playing the game.", saidBy: "Babe Ruth"}
     ]
   )
 }
