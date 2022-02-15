@@ -124,6 +124,7 @@
     position: center;
     overflow-y: auto;
     justify-content: center;
+    font-size: medium;
 }
 
 .question {
@@ -143,5 +144,9 @@
 
 .answerWilfred {
     font-weight: normal;
+}
 
+.about-names {
+    font-weight: bold;
+    font-size: medium;
 }
