@@ -37,7 +37,7 @@ app.post('/getFiles', (req, res) => {
 //Returns all conversation between CEO and other staff
 app.post('/getConversations', (req, res) => {
   var list = [];
-  const data = fs.readFileSync("./Chat/Chats.txt");
+  const data = fs.readFileSync("./Chat/Chats.json");
   return res.send(data);
 });
 
