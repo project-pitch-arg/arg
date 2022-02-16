@@ -4,8 +4,6 @@ import fs from 'fs';
 
 const app = express();
 
-var path = 'C:/Users/2021/Documents/GitHub/arg/Webpages/internFöretagsHemsida/';
-
 app.use(cors());
 
 // Parse URL-encoded bodies (as sent by HTML forms)
@@ -19,7 +17,7 @@ app.post('/getFiles', (req, res) => {
   var data = req.body.data;
   var list = [];
 
-  fs.readdir(path+data, (err,files) =>  {
+  fs.readdir("../" + data, (err,files) =>  {
       files.forEach((file) => {
         if(file.split(".")[1] === "js" || file.split(".")[1] === "jsx" ){
             list.push(file.split(".")[0]);
