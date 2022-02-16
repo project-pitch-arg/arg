@@ -29,7 +29,7 @@
     justify-content: center;
     display: flex;
 }
-/* Creates and area to place posts in.
+/* Creates an area to place posts in.
     Has a scrollbar if necessary. */
 .postlist {
     height: 100vh;
@@ -116,6 +116,8 @@
 
 /* -------------------- TabAbout -------------------- */
 
+/* Creates an area to place questions in.
+    Has a scrollbar if necessary. */
 .questionlist {
     height: 80vh;
     width: 70%;
@@ -127,7 +129,7 @@
     justify-content: center;
     font-size: medium;
 }
-
+/* The style for individual questions. */
 .question {
     width: 60%;
     margin-left: auto; 
@@ -139,26 +141,20 @@
     font-weight: bold;
     overflow-y: visible;
 }
+/* Font for formatting of questions and answer text. */
 .answerEdwin {
     font-weight: normal;
 }
-
 .answerWilfred {
     font-weight: normal;
 }
+.about-names {
+    font-weight: bold;
+}
 
+/* -------------------- TabChat -------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
+/* Fits the chat to the window. */
 .chat {
     height: 80vh;
     width: 100vw;

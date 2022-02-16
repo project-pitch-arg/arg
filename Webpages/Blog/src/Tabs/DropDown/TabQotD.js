@@ -9,7 +9,7 @@ import React, {useState, useEffect} from 'react';
 import '../TabContent.css';
 import QuotesContent from './QuotesContent.js';
 
-export default function Walk() {
+export default function printingQuotes() {
 
   // Edit this to change the time each quote is displayed (in seconds).
   const quoteTime = 5;
