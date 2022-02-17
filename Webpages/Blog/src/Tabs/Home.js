@@ -1,9 +1,12 @@
 import React from 'react';
 import './TabContent.css';
+import {Link} from 'react-router-dom';
 import PostContent from './PostContent.js';
+import Help from '../TopBar/TopBar';
 import dino from '../img/babydino.png';
 import robot from '../img/freerobot.png';
 import ceasar from '../img/ceasarsalad.jpeg';
+import help from '../img/help.png'
 
 export default function Walk() {
     const Content = PostContent();
@@ -12,9 +15,9 @@ export default function Walk() {
         <div class="content">
           <div class="question">
             Is this your first time here? Click this.
-            <button class="button">
-              Beep Boop
-            </button>
+            <Link onClick={Help} to='/FAQ'>
+              <img src={help}/>
+            </Link>
           </div>
           <div class="post">
             <div class="post-date">
