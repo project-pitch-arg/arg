@@ -11,7 +11,9 @@
 import React, { useState } from 'react';
 import './TabContent.css';
 import PostContent from './PostContent.js';
-import logo from '../img/DTLogo.PNG';
+import Robot from '../img/freerobot.png';
+import Salad from '../img/ceasarsalad.jpeg';
+
 
 export default function Posts() {
   
@@ -109,12 +111,15 @@ export default function Posts() {
       )
       })}
          </div>
+         <div class="right-side">
          <div class="buttongroup">
          <button class="button" onClick={nextPage} disabled={disableN}> NEXT </button>
          <button class="button" onClick={lastPage} disabled={disableL}>LAST</button>
-         
-           <img src={logo} />
-         
+         </div>
+          <div class="author-pictures">
+           <img src={Robot}></img>
+           <img src={Salad}></img>
+          </div>
          </div>
       </div>
     )

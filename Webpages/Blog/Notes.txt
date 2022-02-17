@@ -8,3 +8,5 @@ Things to think about:
  - Kommentera mer kod. Framförallt chatten.
  - Ett pussel med ett citat. Antingen löst eller inte eller båda.
  - Intervall för citat.
+
+ -Hämta senare alla bilder via JSON eller dylikt så att de lätta kan bytas ut.

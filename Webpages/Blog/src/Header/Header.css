@@ -1,9 +1,17 @@
 
 .header-content {
-    background-color: hsl(93, 40%, 60%);
     height: 13vh;
     width: 100%;
     margin: 0;
+    background: repeating-linear-gradient( 45deg,hsl(93, 40%, 60%), hsl(93, 27%, 45%), 1px,hsl(93, 40%, 60%) 1px);
+}
+
+.image-textLogo {
+    height: 9vh;
+    width: auto;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
 }
 
 #left {
