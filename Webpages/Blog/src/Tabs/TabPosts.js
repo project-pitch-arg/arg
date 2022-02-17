@@ -11,8 +11,8 @@
 import React, { useState } from 'react';
 import './TabContent.css';
 import PostContent from './PostContent.js';
-import Robot from '../img/freerobot.png';
-import Salad from '../img/ceasarsalad.jpeg';
+import Robot from '../img/Bild2png.png';
+import Salad from '../img/ceasarsalad-removebg-preview.png';
 
 
 export default function Posts() {
@@ -117,8 +117,10 @@ export default function Posts() {
          <button class="button" onClick={lastPage} disabled={disableL}>LAST</button>
          </div>
           <div class="author-pictures">
-           <img src={Robot}></img>
-           <img src={Salad}></img>
+           <img src={Robot} class="image" ></img>
+           <p>Hello! I'm Robot1312113!</p>
+           <img src={Salad} class="image"></img>
+           <p>Hello! I'm Fexjo.</p>
           </div>
          </div>
       </div>

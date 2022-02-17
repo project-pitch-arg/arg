@@ -27,9 +27,9 @@ export default function DisplayAbout() {
             <div class="question">
                 {item.question} 
             <div class="answerWilfred"> 
-              <il class="about-names"> Wilfred: </il> {item.answerWilfred} 
+              <il class="about-names"> Robot1312113: </il> {item.answerWilfred} 
             <div class="answerEdwin">
-              <il class="about-names"> Edwin: </il> {item.answerEdwin}
+              <il class="about-names"> Fexjo: </il> {item.answerEdwin}
             </div>
             </div>
          </div>

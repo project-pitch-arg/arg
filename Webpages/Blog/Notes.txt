@@ -10,3 +10,4 @@ Things to think about:
  - Intervall för citat.
 
  -Hämta senare alla bilder via JSON eller dylikt så att de lätta kan bytas ut.
+ -Och namnen och allt annat...

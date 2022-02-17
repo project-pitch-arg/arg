@@ -37,7 +37,8 @@
     width: 75vw;
     background-color: hsl(47, 34%, 74%);
     text-align: center;
-    position: center;
+    position: sticky;
+   
     overflow-y: auto;
 }
 /* The style for individual posts. The posts
@@ -100,9 +101,17 @@
 }
 
 .author-pictures {
-    max-width:10%;
-    height: 30vh;
-    position: right;
+    padding-top: 10vh;
+    position: absolute;
+    padding-left: 3px;
+}
+
+.image {
+    height: 12vh;
+    max-width: 20vw;
+    position: center;
+    border: 5px solid #555;
+    background-color: hsl(93, 27%, 45%);
 }
 
 /* -------------------- TabQotD -------------------- */
