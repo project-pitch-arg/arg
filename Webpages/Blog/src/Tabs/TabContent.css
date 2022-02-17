@@ -19,6 +19,12 @@
     text-decoration: underline;
 }
 
+/* --------------------TabHome -------------------- */
+
+.content-home {
+    flex-direction: column;
+}
+
 /* --------------------TabPosts -------------------- */
 
 /* The color of the background outside

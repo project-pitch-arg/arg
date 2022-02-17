@@ -12,13 +12,15 @@ export default function Walk() {
     const Content = PostContent();
     const item = Content[Content.length-1];
     return (
-        <div class="content">
+        <div class='content content-home'>
           <div class="question">
             Is this your first time here? Click this.
-            <Link onClick={Help} to='/FAQ'>
+            <Link onClick={Help} to='/About'>
               <img src={help}/>
             </Link>
           </div>
+          <div >
+            Latest Post
           <div class="post">
             <div class="post-date">
               {item.date}
@@ -31,6 +33,7 @@ export default function Walk() {
              {item.image}
             </div>  
            </div>
+         </div>
          </div>
        </div>
         <div className="Bild">
