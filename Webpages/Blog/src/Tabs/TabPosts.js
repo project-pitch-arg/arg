@@ -11,6 +11,7 @@
 import React, { useState } from 'react';
 import './TabContent.css';
 import PostContent from './PostContent.js';
+import logo from '../img/DTLogo.PNG';
 
 export default function Posts() {
   
@@ -111,6 +112,9 @@ export default function Posts() {
          <div class="buttongroup">
          <button class="button" onClick={nextPage} disabled={disableN}> NEXT </button>
          <button class="button" onClick={lastPage} disabled={disableL}>LAST</button>
+         
+           <img src={logo} />
+         
          </div>
       </div>
     )

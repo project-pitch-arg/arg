@@ -25,9 +25,10 @@
     of the posts. */
 .background {
     height: fit-content;
-    background-color: hsl(93, 40%, 60%);
+    /*background-color: hsl(93, 40%, 60%);*/
     justify-content: center;
     display: flex;
+    background: repeating-linear-gradient( 45deg,hsl(93, 40%, 60%), hsl(93, 27%, 45%), 1px,hsl(93, 40%, 60%) 1px);
 }
 /* Creates an area to place posts in.
     Has a scrollbar if necessary. */
