@@ -1,8 +1,9 @@
 import './Footer.css';
-import facebook from '../img/facebook-icon.png';
+/*import facebook from '../img/facebook-icon.png';
 import instagram from '../img/instagram-icon.png';
 import twitter from '../img/twitter-icon.png';
 import icons from '../img/icons.png';
+<img src={icons} alt="VisitIcons" height="60px"/>*/
 
 
 
@@ -20,7 +21,7 @@ export default function TopBar(props) {
             
             <div id='right'>
                 Visit us at: <br />
-                <img src={icons} alt="VisitIcons" height="60px"/>
+                
             </div>
 
         </div>
