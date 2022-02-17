@@ -4,12 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import TopBar from './TopBar/TopBar';
 import Wrong from './Wrong';
 import Home from './Tabs/Home';
-import TabChat from './Tabs/TabChat';
-import TabPosts from './Tabs/TabPosts';
+import Chat from './Tabs/TabChat';
+import Posts from './Tabs/TabPosts';
 // import TabFour from './Tabs/TabFour';
-import TabFourOne from './Tabs/DropDown/TabFourOne';
-import TabAbout from './Tabs/DropDown/TabAbout';
-import TabQotD from './Tabs/DropDown/TabQotD';
+import FAQ from './Tabs/DropDown/TabFAQ';
+import About from './Tabs/DropDown/TabAbout';
+import QotD from './Tabs/DropDown/TabQotD';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 
@@ -26,12 +26,12 @@ function App() {
         <Routes>
           <Route path="*" element={<Wrong />} /> {/*Default when path doesn't match any of the ones listed below*/}
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/Chat" element={<TabChat />} />
-          <Route exact path="/Posts" element={<TabPosts />} />
+          <Route exact path="/Chat" element={<Chat />} />
+          <Route exact path="/Posts" element={<Posts />} />
           {/* <Route exact path="/Four" element={<TabFour />} /> */}
-            <Route exact path="/FourOne" element={<TabFourOne />} />
-            <Route exact path="/TabAbout" element={<TabAbout />} />
-            <Route exact path="/QotD" element={<TabQotD />} />
+            <Route exact path="/FAQ" element={<FAQ />} />
+            <Route exact path="/About" element={<About />} />
+            <Route exact path="/QotD" element={<QotD />} />
         </Routes>
      {/* <Footer /> */}
       </BrowserRouter>
