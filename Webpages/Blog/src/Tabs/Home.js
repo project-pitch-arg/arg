@@ -1,21 +1,26 @@
 import React from 'react';
 import './TabContent.css';
+import {Link} from 'react-router-dom';
 import PostContent from './PostContent.js';
+import Help from '../TopBar/TopBar';
 import dino from '../img/babydino.png';
 import robot from '../img/freerobot.png';
 import ceasar from '../img/ceasarsalad.jpeg';
+import help from '../img/help.png'
 
 export default function Walk() {
     const Content = PostContent();
     const item = Content[Content.length-1];
     return (
-        <div class="content">
+        <div class='content content-home'>
           <div class="question">
             Is this your first time here? Click this.
-            <button class="button">
-              Beep Boop
-            </button>
+            <Link onClick={Help} to='/About'>
+              <img src={help}/>
+            </Link>
           </div>
+          <div >
+            Latest Post
           <div class="post">
             <div class="post-date">
               {item.date}
@@ -28,6 +33,7 @@ export default function Walk() {
              {item.image}
             </div>  
            </div>
+         </div>
          </div>
        </div>
         <div className="Bild">
