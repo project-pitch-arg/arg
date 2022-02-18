@@ -9,7 +9,19 @@ const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
 const App = () => {
   if (!localStorage.getItem('username')) return <LoginForm />;
 
+  function logOut () {
+    
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    <LoginForm/>;
+    return window.location.reload(false);
+  }
+
   return (
+    <div>
+      <div>
+        <button onClick={logOut}>Log out</button>
+      </div>
     <ChatEngine
       height="100vh"
       projectID={projectID}
@@ -18,6 +30,9 @@ const App = () => {
       renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
       onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
     />
+    
+    </div>
+    
   );
 };
 
