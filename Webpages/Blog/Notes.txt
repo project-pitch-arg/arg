@@ -2,7 +2,7 @@ Things to think about:
  - How to get the page to exactly fill the browser?
  - Fix background with patterns everywhere.
  - Fixa radbrytning i arrayer för att underlätta läsning.
- - Bilder till About
+ - Bilder till About. Uppdatera text.
  - Koppla ihop användarnamn kopplat med namn i about.
  - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
  - Kommentera mer kod. Framförallt chatten.
@@ -12,3 +12,9 @@ Things to think about:
  -Hämta senare alla bilder via JSON eller dylikt så att de lätta kan bytas ut.
  -Och namnen och allt annat...
  - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
+
+- Blog design
+- Lägga in data (från fil, JSON?) i chat.
+- Logga in via blogg, ge inloggning. 
+- Stil i chatten
+- Bloggvy i mobilform

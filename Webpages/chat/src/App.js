@@ -1,39 +1,41 @@
-import React from 'react';
-import { StreamChat } from 'stream-chat';
-import { Chat, Channel, ChannelHeader, MessageInput, MessageList, Thread, Window } from 'stream-chat-react';
+import { ChatEngine } from 'react-chat-engine';
 
-import 'stream-chat-react/dist/css/index.css';
+import ChatFeed from './components/ChatFeed';
+import LoginForm from './components/LoginForm';
+import './App.css';
 
-const chatClient = StreamChat.getInstance('dz5f4d5kzrue');
-const userToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidGhyb2JiaW5nLXdhdGVyZmFsbC01IiwiZXhwIjoxNjQ0OTU0MzQ2fQ.2iC9eKNdMqCz5zj4mEVSsKqD6TIu_g4ea8WeBGbZGzw';
+const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
 
-chatClient.connectUser(
-  {
-    id: 'throbbing-waterfall-5',
-    name: 'throbbing',
-    image: 'https://getstream.io/random_png/?id=throbbing-waterfall-5&name=throbbing',
-  },
-  userToken,
-);
+const App = () => {
+  if (!localStorage.getItem('username')) return <LoginForm />;
 
-const channel = chatClient.channel('messaging', 'custom_channel_id', {
-  // add as many custom fields as you'd like
-  image: 'https://www.drupal.org/files/project-images/react.png',
-  name: 'Talk about React',
-  members: ['throbbing-waterfall-5'],
-});
+  function logOut () {
+    
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    <LoginForm/>;
+    return window.location.reload(false);
+  }
 
-const App = () => (
-  <Chat client={chatClient} theme='messaging light'>
-    <Channel channel={channel}>
-      <Window>
-        <ChannelHeader />
-        <MessageList />
-        <MessageInput />
-      </Window>
-      <Thread />
-    </Channel>
-  </Chat>
-);
+  return (
+    <div>
+      <div>
+        <button onClick={logOut}>Log out</button>
+      </div>
+    <ChatEngine
+      height="100vh"
+      projectID={projectID}
+      userName={localStorage.getItem('username')}
+      userSecret={localStorage.getItem('password')}
+      renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
+      onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
+    />
+    
+    </div>
+    
+  );
+};
+
+// infinite scroll, logout, more customizations...
 
 export default App;
