@@ -3,9 +3,9 @@ import './TabContent.css';
 import {Link} from 'react-router-dom';
 import PostContent from './PostContent.js';
 import Help from '../TopBar/TopBar';
-import dino from '../img/babydino.png';
-import robot from '../img/freerobot.png';
-import ceasar from '../img/ceasarsalad.jpeg';
+import dino from '../img/babydino-removebg-preview.png';
+import robot from '../img/Bild2png.png';
+import ceasar from '../img/ceasarsalad-removebg-preview.png';
 import helpbutton from '../img/helpTest.png'
 
 export default function Walk() {
@@ -51,15 +51,15 @@ export default function Walk() {
         
         <div class='content content-home-2'>
           <div>
-            <img src={dino} />
+            <img class="home-image" src={robot} />
           </div>
           
           <div>
-            <img src={robot} />
+            <img class="home-image" src={dino} />
           </div>
           
           <div >
-            <img src={ceasar} />
+            <img class="home-image" src={ceasar} />
           </div>
         </div>
       </div>

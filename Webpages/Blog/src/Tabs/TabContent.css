@@ -48,6 +48,11 @@
     margin-bottom: 5%;
 }
 
+.home-image {
+    width: 100%;
+    height: auto;
+}
+
 /* --------------------TabPosts -------------------- */
 
 /* The color of the background outside
