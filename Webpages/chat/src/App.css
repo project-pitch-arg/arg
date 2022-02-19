@@ -1,4 +1,27 @@
 /* CHAT STYLES */
+
+.web-chat-title {
+  height: 10vh;
+  font-style: bold;
+  font-size: 8vh;
+  font-family: default;
+  text-align: center;
+  padding-left: 10vw;
+  background-color: hsl(47, 34%, 74%);
+}
+
+.log-out-button {
+  float: right;
+  margin-top: 2vh;
+  margin-right: 2vw;
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 1px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
 * {
     font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
       Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
