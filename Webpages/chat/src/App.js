@@ -19,11 +19,12 @@ const App = () => {
 
   return (
     <div>
-      <div>
-        <button onClick={logOut}>Log out</button>
+      <div class="web-chat-title">
+        DT Chat Application
+        <button class="log-out-button" onClick={logOut}>Log out</button>
       </div>
     <ChatEngine
-      height="100vh"
+      height="90vh"
       projectID={projectID}
       userName={localStorage.getItem('username')}
       userSecret={localStorage.getItem('password')}
