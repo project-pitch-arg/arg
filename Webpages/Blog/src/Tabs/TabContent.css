@@ -21,8 +21,31 @@
 
 /* --------------------TabHome -------------------- */
 
-.content-home {
+.content-home-1 {
+    height: 80vh;
+    position: relative;
+    width: 80%;
+    float: left;
     flex-direction: column;
+}
+
+.content-home-2 {
+    height: 80vh;  
+    position: relative;
+    width: 20%;
+    float: left;
+    flex-direction: column;
+}
+
+.help-button {
+    height: 50px;
+    width: 100px;
+}
+
+.help-text {
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 /* --------------------TabPosts -------------------- */
