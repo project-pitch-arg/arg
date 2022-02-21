@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../TabContent.css';
-import {fetchData} from "../../Client/client";
+import {basicFetchData} from "../../Client/BasicFetch";
 
 export default class News extends Component{
     state = { dataReceived: false,}
@@ -14,17 +14,12 @@ export default class News extends Component{
     }
 
     async getNews(){
-            var json = {
-                text: "hello"
-            }
-            const response = await fetchData('/getNews', json);
-            const data = await response.json();
+            var data = await basicFetchData("/getNews");
             Object.keys(data[0]).forEach((key) => {
                 this.news[data[0][key].title] = data[0][key].text;
             })
-            console.log(this.news);
             this.setState({dataReceived: true});
-        }
+    }
 
     render(){
         if(this.state.dataReceived){

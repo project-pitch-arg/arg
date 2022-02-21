@@ -52,7 +52,12 @@ export default class TopBar extends Component {
               <ul id='topbar-ul'>
               {
                 this.locations.map((file, index) => {
-                    return (<li id='topbar-li' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
+                    if(file === "Account"){
+                        return (<li id='topbar-li-Right' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
+                    }
+                    else {
+                        return (<li id='topbar-li' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
+                    }
                 })
               }
                 <li id="Dropdown" key="Dropdown">

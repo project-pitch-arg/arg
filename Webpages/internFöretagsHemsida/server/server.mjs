@@ -45,6 +45,11 @@ app.post('/getNews', (req, res) => {
   const data = fs.readFileSync("./News/News.json");
   return res.send(data);
 });
+app.post('/getHR', (req, res) => {
+  var list = [];
+  const data = fs.readFileSync("./HR/HR.json");
+  return res.send(data);
+});
 
 app.listen(8080, () =>
   console.log('Server listening on port 8080!'),
