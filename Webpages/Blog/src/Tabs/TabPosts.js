@@ -10,7 +10,8 @@
 */
 import React, { useState } from 'react';
 import './TabContent.css';
-import PostContent from './PostContent.js';
+import PostContentOrg from './PostContentOrg.js';
+import PostContent from './PostContent.json';
 import Robot from '../img/Bild2png.png';
 import Salad from '../img/ceasarsalad-removebg-preview.png';
 
@@ -25,7 +26,9 @@ export default function Posts() {
   const[last, lastChange] = useState(postsPerPage);
   
   // Get the contents for the posts from another file.
-  const Content = PostContent();
+  // const Content = PostContent();
+  const Content = PostContent;
+  console.log(PostContent[0].date);
 
   // Set up the buttons to change posts.
   const [disableF,setDF] = useState(false);
@@ -83,16 +86,72 @@ export default function Posts() {
     }
   }
 
+  // Add class to .css. Or just enough with post-img?
+  // Shows an image in a post.
+  // For testing  {Image(picture[0], picture[1])} 
+  function Image(imageSource, altText) {
+    return (
+      <div className="post-image">
+        <img src={imageSource} alt={altText} />
+      </div>
+    )
+  }
+
   // Return the quotes and display them one by one by iterating the array of
   // content using the function .map.
   return (
     <div style = {{height:"100vh"}} class="background">
-        <div class="buttongroup">
-        <button class="button" onClick={firstPage} disabled={disableF}> FIRST</button>
-        <button class="button" onClick={prevPage} disabled={disableP}> PREV </button>   
-        </div>
          <div class="postlist">
-         {(Content.slice(start,last)).map(item => {
+         {(Content.slice(start,last)).map(post => {
+           return (
+              <div class="post">
+                <div class="post-date">
+                  {post.date}
+                <div class="post-name"> 
+                  {post.poster} 
+                <div class="post-content">
+                  {post.content}
+                </div>
+                <div class="post-img">
+                  {post.pictures.map (picture => {
+                    return (
+                      <div>
+                      
+                      <img src={picture[0]} alt={picture[1]} />
+                      </div>
+                    )
+                  })}
+                  <img src={require('../img/Bild2png.png')} alt="testing"/>
+                </div>  
+                </div>
+              </div>
+            </div>
+           )
+         } ) }
+         </div>
+         <div class="right-side">
+         <div class="buttongroup">
+          <button class="button" onClick={firstPage} disabled={disableF}> FIRST</button>
+          <button class="button" onClick={prevPage} disabled={disableP}> PREV </button>   
+         </div>  
+         <div class="buttongroup">
+          <button class="button" onClick={nextPage} disabled={disableN}> NEXT </button>
+          <button class="button" onClick={lastPage} disabled={disableL}>LAST</button>
+         </div>
+          <div class="author-pictures">
+           <img src={Robot} class="image" ></img>
+           <p>Hello, I'm Robot1312113! Join us in the chat!</p>
+           <img src={Salad} class="image"></img>
+           <p>Hello! I'm Fexjo. If you want to know more about the authors, go to About.</p>
+          </div>
+         </div>
+      </div>
+    )
+}
+
+
+/* Old verision of showing posts.
+{(Content.slice(start,last)).map(item => {
             return (
           <div class="post">
             <div class="post-date">
@@ -110,19 +169,4 @@ export default function Posts() {
        </div>
       )
       })}
-         </div>
-         <div class="right-side">
-         <div class="buttongroup">
-         <button class="button" onClick={nextPage} disabled={disableN}> NEXT </button>
-         <button class="button" onClick={lastPage} disabled={disableL}>LAST</button>
-         </div>
-          <div class="author-pictures">
-           <img src={Robot} class="image" ></img>
-           <p>Hello! I'm Robot1312113!</p>
-           <img src={Salad} class="image"></img>
-           <p>Hello! I'm Fexjo.</p>
-          </div>
-         </div>
-      </div>
-    )
-}
+      */

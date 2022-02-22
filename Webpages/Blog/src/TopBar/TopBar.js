@@ -30,11 +30,7 @@ export default function TopBar(props) {
             case 'Four':
                 document.getElementById("tab-four").classList.add('active');
             break;
-                
-            case 'FAQ':
-                document.getElementById("tab-faq").classList.add('active');
-            break    
-                
+
             case 'About':
                 document.getElementById("tab-about").classList.add('active');
             break    
@@ -65,7 +61,6 @@ export default function TopBar(props) {
                     <div class="dropdown">
                     <button class="dropdown-button">Information</button>
                     <div class="dropdown-content">
-                        <Link id="tab-faq" onClick={() => highlightActive('FAQ')} to ='/FAQ'> FAQ </Link>
                         <Link id="tab-about" onClick={() => highlightActive('About')} to ='/About'> About </Link>
                         <Link id="tab-QotD" onClick={() => highlightActive('QotD')} to ='/QotD'> Quotes of the day </Link>
                         </div>
@@ -75,3 +70,10 @@ export default function TopBar(props) {
             </div>
         )
     }
+
+/* Not needed
+    case 'FAQ':
+        document.getElementById("tab-faq").classList.add('active');
+    break 
+    
+    <Link id="tab-faq" onClick={() => highlightActive('FAQ')} to ='/FAQ'> FAQ </Link>   */

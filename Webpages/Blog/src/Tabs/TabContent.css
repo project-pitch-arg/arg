@@ -2,8 +2,9 @@
 
 /* The colour of the background often used.*/
 .content {
-    height: 80vh;
-    background-color: #c9b394;
+    height: 85vh;
+    background: repeating-linear-gradient( 45deg,hsl(93, 40%, 60%), hsl(93, 27%, 45%), 1px,hsl(93, 40%, 60%) 1px);
+   /* background-color: #c9b394; */
     justify-content: center;
     align-items: center;
     display: flex;
@@ -18,11 +19,31 @@
 .tab {
     text-decoration: underline;
 }
+/*Style of all scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: hsl(93, 40%, 60%); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: hsl(93, 27%, 45%); 
+}
 
 /* --------------------TabHome -------------------- */
 
 .content-home-1 {
-    height: 80vh;
+    height: 85vh;
     position: relative;
     width: 80%;
     float: left;
@@ -30,7 +51,7 @@
 }
 
 .content-home-2 {
-    height: 80vh;  
+    height: 85vh;  
     position: relative;
     width: 20%;
     float: left;
@@ -40,12 +61,15 @@
 .help-button {
     height: 50px;
     width: 100px;
+    position: absolute;
 }
 
 .help-text {
     font-size: xx-large;
     text-align: center;
     margin-bottom: 5%;
+    padding: 10px;
+    position: relative;
 }
 
 .home-image {
@@ -59,8 +83,7 @@
     of the posts. */
 .background {
     height: fit-content;
-    /*background-color: hsl(93, 40%, 60%);*/
-    justify-content: center;
+    justify-content: left;
     display: flex;
     background: repeating-linear-gradient( 45deg,hsl(93, 40%, 60%), hsl(93, 27%, 45%), 1px,hsl(93, 40%, 60%) 1px);
 }
@@ -68,21 +91,26 @@
     Has a scrollbar if necessary. */
 .postlist {
     height: 100vh;
-    width: 75vw;
+    width: 90%;
+    min-width: 50vw;
     background-color: hsl(47, 34%, 74%);
+    margin-left: 40px;
     text-align: center;
-    position: sticky;
+    overflow-x: hidden;
+    /* position: sticky; */
    
     overflow-y: auto;
 }
 /* The style for individual posts. The posts
     size depends on the amount of content. */
 .post {
-    width: 70vw;
+    max-width: 70vw;
+    width: 90%;
     border: 2px solid rgb(0, 0, 0);
     margin-left: auto; 
     margin-right: auto;
     margin-top: 10px;  
+    margin-bottom: 5px;
     padding: 10px;
     background-color: hsl(47, 28%, 66%);
     text-align: left;
@@ -96,7 +124,7 @@
     bottom:0;
     right:0;
     text-align: right;
-    position:relative;
+    position: relative;
     list-style: none;
 }
 /* Places the name of the poster in the upper left, 
@@ -111,6 +139,18 @@
 .post-content {
     font-weight: normal;
 }
+/* Sets the size of the images in a posts. */
+.post-image {
+
+}
+/* Set the area on the right side */
+.right-side {
+    margin-left: 40px;
+    margin-right: 40px;
+    justify-content: center;
+    text-align: center;
+    background-color: hsl(93, 40%, 60%); /* Temporary? to see the area. */
+}
 /* Keeps the buttons together at a certain place. */
 .buttongroup {
     margin-top: 2vh;
@@ -118,9 +158,10 @@
 /* Design of the buttons used to change
     the page of posts currently viewed. */
 .button {
+    width: 150px;
     background-color: black;
     color: white;
-    padding: 10px 30px;
+    padding: 20px 40px;
     border-radius: 1px;
     font-size: 10px;
     cursor: pointer;
@@ -136,8 +177,7 @@
 
 .author-pictures {
     padding-top: 10vh;
-    position: absolute;
-    padding-left: 3px;
+    position: relative;
 }
 
 .image {
@@ -156,7 +196,7 @@
     padding: 2vh;
     background-color: #aa9a84;
     color: black;
-    font-size: 5vh;
+    font-size: 3vh;
 }
 /* Displays the name of the person who said the quote. */
 .saidBy {

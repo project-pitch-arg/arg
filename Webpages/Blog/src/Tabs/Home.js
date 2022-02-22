@@ -1,7 +1,7 @@
 import React from 'react';
 import './TabContent.css';
 import {Link} from 'react-router-dom';
-import PostContent from './PostContent.js';
+import PostContent from './PostContentOrg.js';  //CHANGE LATER!
 import Help from '../TopBar/TopBar';
 import dino from '../img/babydino-removebg-preview.png';
 import robot from '../img/Bild2png.png';
@@ -23,7 +23,7 @@ export default function Walk() {
           </div>
 
           <div class="help-text">
-            Is this your first time here? Click this.
+            Is this your first time here? Click here:
             <Link onClick={Help} to='/About'>
               <img class="help-button" src={helpbutton}/>
             </Link>

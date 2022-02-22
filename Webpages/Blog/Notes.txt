@@ -1,20 +1,33 @@
 Things to think about:
  - How to get the page to exactly fill the browser?
+    - Inte direkt nödvändigt, bara resten ser bra ut.
+    - Hellre lite för stor än en vit kant?
  - Fix background with patterns everywhere.
- - Fixa radbrytning i arrayer för att underlätta läsning.
  - Bilder till About. Uppdatera text.
+    - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
  - Koppla ihop användarnamn kopplat med namn i about.
  - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
  - Kommentera mer kod. Framförallt chatten.
  - Ett pussel med ett citat. Antingen löst eller inte eller båda.
  - Intervall för citat.
 
- -Hämta senare alla bilder via JSON eller dylikt så att de lätta kan bytas ut.
- -Och namnen och allt annat...
- - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
+ - Hämta senare alla bilder via JSON eller dylikt så att de lättare kan bytas ut.
+    - Och namnen och allt annat...
+
+- Add logo to website
 
 - Blog design
-- Lägga in data (från fil, JSON?) i chat.
+- Lägga in data i chat.
+    - Översätta de filerna till .jsx?
 - Logga in via blogg, ge inloggning. 
 - Stil i chatten
 - Bloggvy i mobilform
+    - Det mesta ser konstigt ut just nu.
+- Ordning på menyn
+    - Byt plats på posts och chatt?
+- Ge alt="..." till alla bilder.
+- Kan just nu inte ladda in bilder med relativa filnamn i posts, men hela addressen går.
+
+- PostContentOrg-filen behövs inte längre, men lät den vara kvar tillfälligt.
+
+. Change home to use the .json file.

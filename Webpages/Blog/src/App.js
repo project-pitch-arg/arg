@@ -7,11 +7,13 @@ import Home from './Tabs/Home';
 import Chat from './Tabs/TabChat';
 import Posts from './Tabs/TabPosts';
 // import TabFour from './Tabs/TabFour';
-import FAQ from './Tabs/DropDown/TabFAQ';
+// import FAQ from './Tabs/DropDown/TabFAQ';
 import About from './Tabs/DropDown/TabAbout';
 import QotD from './Tabs/DropDown/TabQotD';
-import Footer from './Footer/Footer';
+// import Footer from './Footer/Footer';
 import Header from './Header/Header';
+
+// import Images from './img';
 
 import logo from './logo.svg';
 
@@ -29,7 +31,6 @@ function App() {
           <Route exact path="/Chat" element={<Chat />} />
           <Route exact path="/Posts" element={<Posts />} />
           {/* <Route exact path="/Four" element={<TabFour />} /> */}
-            <Route exact path="/FAQ" element={<FAQ />} />
             <Route exact path="/About" element={<About />} />
             <Route exact path="/QotD" element={<QotD />} />
         </Routes>
@@ -40,3 +41,5 @@ function App() {
 }
 
 export default App;
+
+// Not needed <Route exact path="/FAQ" element={<FAQ />} />
