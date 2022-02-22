@@ -19,7 +19,7 @@
 .tab {
     text-decoration: underline;
 }
-/*Style of all scrollbars */
+/* Style of all scrollbars (does not work in all browsers). */
 ::-webkit-scrollbar {
     width: 8px;
 }

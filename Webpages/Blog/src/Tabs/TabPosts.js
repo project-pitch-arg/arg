@@ -26,9 +26,7 @@ export default function Posts() {
   const[last, lastChange] = useState(postsPerPage);
   
   // Get the contents for the posts from another file.
-  // const Content = PostContent();
   const Content = PostContent;
-  console.log(PostContent[0].date);
 
   // Set up the buttons to change posts.
   const [disableF,setDF] = useState(false);
@@ -86,16 +84,6 @@ export default function Posts() {
     }
   }
 
-  // Add class to .css. Or just enough with post-img?
-  // Shows an image in a post.
-  // For testing  {Image(picture[0], picture[1])} 
-  function Image(imageSource, altText) {
-    return (
-      <div className="post-image">
-        <img src={imageSource} alt={altText} />
-      </div>
-    )
-  }
 
   // Return the quotes and display them one by one by iterating the array of
   // content using the function .map.
@@ -116,12 +104,10 @@ export default function Posts() {
                   {post.pictures.map (picture => {
                     return (
                       <div>
-                      
-                      <img src={picture[0]} alt={picture[1]} />
+                       <img src={picture[0]} alt={picture[1]} />
                       </div>
                     )
                   })}
-                  <img src={require('../img/Bild2png.png')} alt="testing"/>
                 </div>  
                 </div>
               </div>
