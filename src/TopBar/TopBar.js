@@ -16,15 +16,14 @@ export default function TopBar(props) {
         switch (path) {
             case '':
                 document.getElementById("tab-home").classList.add('active');
-        
             break;
             
-            case 'Two':
-                document.getElementById("tab-two").classList.add('active');
+            case 'OurWork':
+                document.getElementById("tab-our-work").classList.add('active');
             break;
-            
-            case 'Three':
-                document.getElementById("tab-three").classList.add('active');
+
+            case 'AboutUs':
+                document.getElementById("tab-about-us").classList.add('active');
             break;
             
             case 'Four':
@@ -53,14 +52,29 @@ export default function TopBar(props) {
     
         highlightActive(path)
       })
+
+      const hideBackground = () => {
+        if (window.scrollY >= 100) {
+            var classes = document.getElementsByClassName("topbar");
+            for (var i = 0; i < classes.length; i++) {
+                classes[i].style.background = "#333";
+              }                            
+        } else {
+            var classes = document.getElementsByClassName("topbar");
+            for (var i = 0; i < classes.length; i++) {
+                classes[i].style.background = "transparent";
+            } 
+        }
+      }
+
+      window.addEventListener('scroll', hideBackground);
     
       return (
-            <div class="topbar">
+            <div class='topbar'>
               <ul id='topbar-ul'>
                 <li class='topbar-li'><Link id="tab-home" onClick={() => highlightActive('')} to ='/'> Home </Link></li>
-                <li class='topbar-li'><Link id="tab-two" onClick={() => highlightActive('Two')} to ='/Two'> Two </Link></li>
-                <li class='topbar-li'><Link id="tab-three" onClick={() => highlightActive('Three')} to ='/Three'> Three</Link></li>
-                {/* <li><Link id="tab-four" onClick={() => highlightActive('Four')} to = '/Four'> Four </Link></li> */}
+                <li class='topbar-li'><Link id="tab-our-work" onClick={() => highlightActive('OurWork')} to ='/OurWork'> Our Work </Link></li>
+                <li class='topbar-li'><Link id="tab-about-us" onClick={() => highlightActive('AboutUs')} to ='/AboutUs'> About Us</Link></li>
                 <li>
                     <div class="dropdown">
                     <button class="dropdown-button">Four</button>

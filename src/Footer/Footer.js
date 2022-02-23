@@ -6,7 +6,7 @@ import icons from '../img/icons.png';
 
 
 
-export default function TopBar(props) {
+export default function Footer() {
 
     return (
         <div className='footer-content'>

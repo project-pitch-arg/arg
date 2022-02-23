@@ -1,10 +1,17 @@
 import React from 'react';
-import '../TabContent.css';
+import '../Company.css';
 
-export default function Walk() {
+export default function TabFourOne() {
     return (
-        <div class="content">
-          <a>Content for <a class="tab">Fourth</a> tab <br/> <a class="tab">First</a> dropdown goes here... </a>          
+        <div>
+          <div class="header">
+            <a>Tab FourOne</a>
+          </div>
+
+          <div class="content">
+            <a class="temp">Content goes here</a>
+          </div>
+
         </div>
       
     )
