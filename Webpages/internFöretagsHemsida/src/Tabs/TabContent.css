@@ -124,11 +124,29 @@
     border-size: 10px;
     border-style: solid;
     border-radius: 15px;
-    background-color: lightblue;
+    background-color: lightgray;
     padding: 10px;
     margin: 10px;
 }
+.documentList{
+    display: block;
+    width: 25%;
+    height: 100%;
+    background-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
 .pdf{
     padding: 10px;
-    background-color: lightblue;
+    background-color: lightseagreen;
+    border-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    min-width: 140px;
+}
+h1 {
+    color: #246f94;
 }

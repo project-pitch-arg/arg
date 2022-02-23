@@ -54,7 +54,7 @@ export default class Policy extends Component{
     render(){
         if(this.state.dataReceived) {
             return (
-                    <div>
+                    <div class="documentList">
                         <h1>Document list</h1>
                       {
                         this.location.map((file) => {
