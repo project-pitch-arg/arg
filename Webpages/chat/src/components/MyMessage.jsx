@@ -1,16 +1,19 @@
 
 const MyMessage = ({ message }) => {
 
-  //Problem here!! Entered to often, even when it there is no picture.
-  if(message.hasOwnProperty('custom_json') && message.custom_json.length > 2 && typeof(message.custom_json) == 'string') {
+  if(message.custom_json.length > 2) {
     return (
-      
-      <img
+      <div style={{overflow: 'hidden'}}>
+       <div className="message" style={{ float: 'right', marginRight: '18px', color: 'white', backgroundColor: '#3B2A50' }}>
+        {message.text}
+       </div>
+       <img
           src={message.custom_json}
           alt="message-attachment"
           className="message-image"
-          style={{ float: 'right' , backgroundColor: '#500000'}}
+          style={{ float: 'right', clear: 'both', marginTop: '5px'}}
         />
+      </div>
 
     ) 
   }

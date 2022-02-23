@@ -155,7 +155,7 @@
   
   .message-image {
     margin-right: 18px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 6px;
     height: 30vw;
     /* width: 30vw; */
