@@ -1,11 +1,11 @@
 
 const MyMessage = ({ message }) => {
 
-  if(message.hasOwnProperty('custom_json')) {
-   const customJson = message.custom_json
+  if(message.hasOwnProperty('custom_json') && typeof(message.custom_json) == 'string') {
+    console.log("nice");
     return (
       <img
-          src={message.custom_json}
+          src={message.custom_json[1]}
           alt="message-attachment"
           className="message-image"
           style={{ float: 'right' }}
