@@ -19,7 +19,7 @@ import Salad from '../img/ceasarsalad-removebg-preview.png';
 export default function Posts() {
   
   // Edit this variable to change the posts displayed on each page.
-  const postsPerPage = 10;
+  const postsPerPage = 5;
 
   // The variables for the indexes of the posts currently displayed
   const[start, startChange] = useState(0);
@@ -27,6 +27,76 @@ export default function Posts() {
   
   // Get the contents for the posts from another file.
   const Content = PostContent;
+
+  function puzzleHandler(post) {
+    if(post.isPuzzle) {
+      switch (post.puzzleNr) {
+        case "2c": return puzzle2c(post);
+      }  
+    }
+    return (
+      <div class="post">
+        <div class="post-date">
+          {post.date}
+        <div class="post-name"> 
+          {post.poster} 
+        <div class="post-content">
+          {post.content}
+        </div>
+        {hasPicture(post)}
+        </div>
+      </div>
+    </div>
+   )
+  }
+
+  function changeALetter(post, letter, count) {
+    var count1 = count;
+    var index = post.content.indexOf(letter);
+    while(count1 > 1) {
+      index = post.content.indexOf(letter, index+1);
+      count1--;
+    }
+
+    return (
+      <div class="post-content">
+        {post.content.slice(0,index)}
+        <font color="red" face="roboto">{post.content[index]}</font>
+        {post.content.slice(index+1)}
+      </div> 
+      )
+  }
+
+  function puzzle2c(post) {
+    if(post.comment == "This post belongs to puzzle 2c-a.") {
+      return (
+        <div class="post">
+          <div class="post-date">
+            {post.date}
+          <div class="post-name"> 
+            {post.poster} 
+          {changeALetter(post, "e", 2)}
+          {hasPicture(post)}
+          </div>
+        </div>
+      </div>
+     )
+    }
+    return (
+      <div class="post">
+        <div class="post-date">
+          {post.date}
+        <div class="post-name"> 
+          {post.poster} 
+        <div class="post-content">
+          {post.content}
+        </div>
+        {hasPicture(post)}
+        </div>
+      </div>
+    </div>
+   )
+  }
 
   // Set up the buttons to change posts.
   const [disableF,setDF] = useState(false);
@@ -106,20 +176,7 @@ export default function Posts() {
     <div style = {{height:"100vh"}} class="background">
          <div class="postlist">
          {(Content.slice(start,last)).map(post => {
-           return (
-              <div class="post">
-                <div class="post-date">
-                  {post.date}
-                <div class="post-name"> 
-                  {post.poster} 
-                <div class="post-content">
-                  {post.content}
-                </div>
-                {hasPicture(post)}
-                </div>
-              </div>
-            </div>
-           )
+           return (<div>{puzzleHandler(post)}</div>)
          } ) }
          </div>
          <div class="right-side">

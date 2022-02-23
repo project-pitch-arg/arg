@@ -4,14 +4,16 @@
         "poster": "Robot1312113",
         "content": "I ate some duros while reading about my favorite dinaosaurs today. Unfortunately, the book did not include Ichthyosaur, but Talarurus also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
         "isPuzzle": true,
-        "comment": "This post belongs to puzzle 2c."
+        "puzzleNr": "2c",
+        "comment": "This post belongs to puzzle 2c-a."
     },
     {
         "date": "20-02-22",
         "poster": "Robot1312113",
         "content": "I never told you, but my favorite dinosaurs are Aardonyx, Datanglong and Ichthyosaur.",
         "isPuzzle": true,
-        "comment": "This post belongs to puzzle 2c."
+        "puzzleNr": "2c",
+        "comment": "This post belongs to puzzle 2c-b."
     },
     
     {
