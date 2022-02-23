@@ -51,20 +51,25 @@ export default function Posts() {
   }
 
   function changeALetter(post, letter, count) {
-    var count1 = count;
+    const n = (post.content.split(letter).length - 1)
     var index = post.content.indexOf(letter);
-    while(count1 > 1) {
+    var count1 = count % n;
+    while(count1 != count) {
       index = post.content.indexOf(letter, index+1);
-      count1--;
+      count1++;
     }
 
     return (
       <div class="post-content">
         {post.content.slice(0,index)}
-        <font color="red" face="roboto">{post.content[index]}</font>
+        <font color="red" face="monaco">{post.content[index]}</font>
         {post.content.slice(index+1)}
       </div> 
       )
+  }
+
+  function changeString (function1, function2) {
+    //Take changeFont and changeColor and give back proper 
   }
 
   function puzzle2c(post) {
@@ -75,7 +80,7 @@ export default function Posts() {
             {post.date}
           <div class="post-name"> 
             {post.poster} 
-          {changeALetter(post, "e", 2)}
+          {changeALetter(post, "t", 500)}
           {hasPicture(post)}
           </div>
         </div>
