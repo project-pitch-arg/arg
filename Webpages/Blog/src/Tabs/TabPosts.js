@@ -84,6 +84,21 @@ export default function Posts() {
     }
   }
 
+  function hasPicture(post) {
+    if(post.hasOwnProperty('pictures')) {
+      return (<div class="post-img">
+              {post.pictures.map (picture => {
+                    return (
+                      <div>
+                       <img src={picture[0]} alt={picture[1]} />
+                      </div>
+                    )
+                  })}
+                </div>  
+                )
+    }
+    return true;
+  }
 
   // Return the quotes and display them one by one by iterating the array of
   // content using the function .map.
@@ -100,15 +115,7 @@ export default function Posts() {
                 <div class="post-content">
                   {post.content}
                 </div>
-                <div class="post-img">
-                  {post.pictures.map (picture => {
-                    return (
-                      <div>
-                       <img src={picture[0]} alt={picture[1]} />
-                      </div>
-                    )
-                  })}
-                </div>  
+                {hasPicture(post)}
                 </div>
               </div>
             </div>

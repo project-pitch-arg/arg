@@ -14,7 +14,12 @@ Things to think about:
  - Hämta senare alla bilder via JSON eller dylikt så att de lättare kan bytas ut.
     - Och namnen och allt annat...
 
+- Pilar till Posts. 
+
+- Uppdatera Home och sidvändning till JSON.
+- Variabel till nycklar, ID i chatten (Py).
 - Add logo to website
+- Funktion för datum.
 
 - Blog design
 - Lägga in data i chat.

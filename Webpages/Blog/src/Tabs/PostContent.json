@@ -1,8 +1,94 @@
 [
     {
+        "date": "23-02-22",
+        "poster": "Robot1312113",
+        "content": "I ate some duros while reading about my favorite dinaosaurs today. Unfortunately, the book did not include Ichthyosaur, but Talarurus also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
+        "isPuzzle": true,
+        "comment": "This post belongs to puzzle 2c."
+    },
+    {
+        "date": "20-02-22",
+        "poster": "Robot1312113",
+        "content": "I never told you, but my favorite dinosaurs are Aardonyx, Datanglong and Ichthyosaur.",
+        "isPuzzle": true,
+        "comment": "This post belongs to puzzle 2c."
+    },
+    
+    {
         "date": "13-02-22",
         "poster": "Robot1312113",
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "pictures": [["https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png", "A robot"], ["postImages/babydino-removebg-preview.png", "Dino!!!"] ]
+        "pictures": [["https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png", "A robot"], ["postImages/babydino-removebg-preview.png", "Dino!!!"] ],
+        "isPuzzle": false
+    },
+    {
+        "date": "14-02-22",
+        "poster": "Robot1312113",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pictures": [["postImages/babydino-removebg-preview.png", "Dino!!!"] ],
+        "isPuzzle": false
+    },
+    {
+        "date": "15-02-22",
+        "poster": "Robot1312113",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pictures": [["https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png", "A robot"], ["postImages/babydino-removebg-preview.png", "Dino!!!"] ],
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Robot1312113",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pictures": [["postImages/babydino-removebg-preview.png", "Dino!!!"] ],
+        "isPuzzle": false
     }
+
 ]
