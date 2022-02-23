@@ -1,15 +1,17 @@
 
 const MyMessage = ({ message }) => {
 
-  if(message.hasOwnProperty('custom_json') && typeof(message.custom_json) == 'string') {
-    console.log("nice");
+  //Problem here!! Entered to often, even when it there is no picture.
+  if(message.hasOwnProperty('custom_json') && message.custom_json.length > 2 && typeof(message.custom_json) == 'string') {
     return (
+      
       <img
-          src={message.custom_json[1]}
+          src={message.custom_json}
           alt="message-attachment"
           className="message-image"
-          style={{ float: 'right' }}
+          style={{ float: 'right' , backgroundColor: '#500000'}}
         />
+
     ) 
   }
 

@@ -7,7 +7,12 @@
     {
         "text": "Hello world. I count like 1 10 11.",
         "thisIsMe": "Robot1312113",
+        "password": "Imarobot"
+    },
+    {
+        "text":"",
+        "thisIsMe": "Robot1312113",
         "password": "Imarobot",
-        "custom-json": "https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png"
+        "custom_json": "https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png"
     }
 ]
