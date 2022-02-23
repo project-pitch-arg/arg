@@ -7,3 +7,7 @@ export async function basicFetchData(path){
     const response = await fetchData(path, json);
     return await response.json();
 }
+export async function basicFetchDataJson(path, json){
+    const response = await fetchData(path, json);
+    return await response.json();
+}

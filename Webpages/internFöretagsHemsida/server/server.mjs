@@ -1,6 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -37,20 +41,33 @@ app.post('/getFiles', (req, res) => {
 //Returns all conversation between CEO and other staff
 app.post('/getConversations', (req, res) => {
   var list = [];
-  const data = fs.readFileSync("./Chat/Chats.json");
+  const data = fs.readFileSync("./JsonFiles/Chats.json");
   return res.send(data);
 });
 app.post('/getNews', (req, res) => {
   var list = [];
-  const data = fs.readFileSync("./News/News.json");
+  const data = fs.readFileSync("./JsonFiles/News.json");
   return res.send(data);
 });
 app.post('/getHR', (req, res) => {
   var list = [];
-  const data = fs.readFileSync("./HR/HR.json");
+  const data = fs.readFileSync("./JsonFiles/HR.json");
   return res.send(data);
 });
+app.post("/getPolicy", (req, res) => {
+  var list = [];
+  fs.readdir("./PDF/", (err,files) =>  {
+        files.forEach((file) => {
+            list.push(file);
+        })
+          return res.send(JSON.stringify({files: list}));
+      })
+});
+app.post("/getPDF", (req, res) => {
+  var data = req.body.fileName;
+  res.sendFile(__dirname + "/PDF/" + data);
+});
 
-app.listen(8080, () =>
+app.listen(process.env.PORT || 8080, () =>
   console.log('Server listening on port 8080!'),
 );
