@@ -20,6 +20,7 @@ Things to think about:
 - Variabel till nycklar, ID i chatten (Py).
 - Add logo to website
 - Funktion för datum.
+    - Lägg automatiskt posts i datumordning.
 
 - Blog design
 - Lägga in data i chat.
