@@ -86,11 +86,11 @@ export default function Posts() {
 
   function hasPicture(post) {
     if(post.hasOwnProperty('pictures')) {
-      return (<div class="post-img">
+      return (<div class="post-images">
               {post.pictures.map (picture => {
                     return (
                       <div>
-                       <img src={picture[0]} alt={picture[1]} />
+                       <img src={picture[0]} alt={picture[1]} class="post-image"/>
                       </div>
                     )
                   })}

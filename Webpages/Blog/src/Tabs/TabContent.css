@@ -139,9 +139,17 @@
 .post-content {
     font-weight: normal;
 }
+/* Area for images in post */
+.post-images {
+    column-count: 2;
+    width: 100%;
+    max-width: 1000px;
+}
 /* Sets the size of the images in a posts. */
 .post-image {
-
+    width: 100%;
+    max-height: 500px;
+    padding: 5px;
 }
 /* Set the area on the right side */
 .right-side {
