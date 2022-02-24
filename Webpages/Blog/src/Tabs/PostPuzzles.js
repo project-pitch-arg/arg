@@ -81,54 +81,65 @@ export default function Puzzles(post) {
   }
 
   function shiftArrayWrap(array, amount) {
-    var tempArray = new Array(array.length);
-    for (var a = 0; a<amount; a++) {
-        for (var i = 0; i<array.length; i++) {
-            tempArray[(i+1)%array.length]=array[i];
+    var tempNr;
+    for (var a = 0; a < amount; a++) {
+        tempNr = array.shift();
+        array.push(tempNr);
+      /*for (var i = array.length-1; i >= 0; i--) {
+          if(i == 0) {
+            tempArray[array.length - 1] = array[i];
+          }  else {
+            tempArray[i-1]=array[i];
+          }
         }
-        array = tempArray;
+        array = tempArray; */
     }
     return array;
   }
 
   function encodedMsg(toBeEncoded) {
-    const key = ["a", 11, 28, 57, 80];
+    const key = ["a", 11, 28, 57, 80]; //Change to have different letters.
 
+    // The different rings on a mexican wheel.
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var lowNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
+    var lowNumbers = ["01", "02", "03", "04", "05", "06", "07", "08", "09", 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
     var mediumNumbers = [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52];
     var largeNumbers = [53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78];
     var highestNumbers = [79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 , 99, 100, "", "", "", ""];
 
+    // Find indexes for placements of all keys.
     var letterIndex = letters.indexOf(key[0]);
     var lowNumbersIndex = lowNumbers.indexOf(key[1]);
     var mediumNumbersIndex = mediumNumbers.indexOf(key[2]);
     var largeNumbersIndex = largeNumbers.indexOf(key[3]);
     var highestNumbersIndex = highestNumbers.indexOf(key[4]);
 
-    lowNumbers = shiftArrayWrap(lowNumbers, (lowNumbersIndex-letterIndex)%letters.length)
-    mediumNumbers = shiftArrayWrap(mediumNumbers, (mediumNumbersIndex-letterIndex)%letters.length)
-    largeNumbers = shiftArrayWrap(largeNumbers, (largeNumbersIndex-letterIndex)%letters.length)
-    highestNumbers = shiftArrayWrap(highestNumbers, (highestNumbersIndex-letterIndex)%letters.length)
+    // Shift the arrays to turn the rings according to the key.
+    lowNumbers = shiftArrayWrap(lowNumbers, (lowNumbersIndex-letterIndex));
+    mediumNumbers = shiftArrayWrap(mediumNumbers, (mediumNumbersIndex-letterIndex));
+    largeNumbers = shiftArrayWrap(largeNumbers, (largeNumbersIndex-letterIndex));
+    highestNumbers = shiftArrayWrap(highestNumbers, (highestNumbersIndex-letterIndex));
 
+    // Create some variable.
     var encodedArray = new Array(toBeEncoded.length);
     var tempIndex;
     var whichArray;
 
-    for (var i = 0; i<toBeEncoded.length; i++) {
+    //
+    for (var i = 0; i < toBeEncoded.length; i++) {
         tempIndex = letters.indexOf(toBeEncoded[i]);
         whichArray = getRandomInt(1,5)
         if(whichArray == 1) {
-            encodedArray[i] = lowNumbers[i];
+            encodedArray[i] = lowNumbers[tempIndex];   
         } else if (whichArray == 2) {
-            encodedArray[i] = mediumNumbers[i];
+            encodedArray[i] = mediumNumbers[tempIndex];
         } else if (whichArray == 3) {
-            encodedArray[i] = largeNumbers[i];
+            encodedArray[i] = largeNumbers[tempIndex];
         } else if (whichArray == 4) {
             if (highestNumbers[i] == "") {
                 i--;
             } else {
-                encodedArray[i] = highestNumbers[i];
+                encodedArray[i] = highestNumbers[tempIndex];
             }
         }
     }
@@ -146,11 +157,12 @@ export default function Puzzles(post) {
   }
 
   function puzzle2c(post) {
+    /*Change date to be a clue later */
     if(post.comment == "This post belongs to puzzle 2c-a.") {
       return (
         <div class="post">
           <div class="post-date">
-            {post.date}
+            24-80A-22
           <div class="post-name"> 
             {post.poster} 
           {changeString(post,changeColor(post, "tda", 2),changeFont(post, "eda", 1))}
