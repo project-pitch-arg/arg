@@ -80,14 +80,69 @@ export default function Puzzles(post) {
     return true;
   }
 
-  function encodedMsg(post) {
+  function shiftArrayWrap(array, amount) {
+    var tempArray = new Array(array.length);
+    for (var a = 0; a<amount; a++) {
+        for (var i = 0; i<array.length; i++) {
+            tempArray[(i+1)%array.length]=array[i];
+        }
+        array = tempArray;
+    }
+    return array;
+  }
+
+  function encodedMsg(toBeEncoded) {
+    const key = ["a", 11, 28, 57, 80];
+
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var lowNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
     var mediumNumbers = [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52];
     var largeNumbers = [53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78];
-    var highestNumbers = [79, 80, 81, 82, 83, ];
+    var highestNumbers = [79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 , 99, 100, "", "", "", ""];
 
-    return ("bauibfdhikbdfh")
+    var letterIndex = letters.indexOf(key[0]);
+    var lowNumbersIndex = lowNumbers.indexOf(key[1]);
+    var mediumNumbersIndex = mediumNumbers.indexOf(key[2]);
+    var largeNumbersIndex = largeNumbers.indexOf(key[3]);
+    var highestNumbersIndex = highestNumbers.indexOf(key[4]);
+
+    lowNumbers = shiftArrayWrap(lowNumbers, (lowNumbersIndex-letterIndex)%letters.length)
+    mediumNumbers = shiftArrayWrap(mediumNumbers, (mediumNumbersIndex-letterIndex)%letters.length)
+    largeNumbers = shiftArrayWrap(largeNumbers, (largeNumbersIndex-letterIndex)%letters.length)
+    highestNumbers = shiftArrayWrap(highestNumbers, (highestNumbersIndex-letterIndex)%letters.length)
+
+    var encodedArray = new Array(toBeEncoded.length);
+    var tempIndex;
+    var whichArray;
+
+    for (var i = 0; i<toBeEncoded.length; i++) {
+        tempIndex = letters.indexOf(toBeEncoded[i]);
+        whichArray = getRandomInt(1,5)
+        if(whichArray == 1) {
+            encodedArray[i] = lowNumbers[i];
+        } else if (whichArray == 2) {
+            encodedArray[i] = mediumNumbers[i];
+        } else if (whichArray == 3) {
+            encodedArray[i] = largeNumbers[i];
+        } else if (whichArray == 4) {
+            if (highestNumbers[i] == "") {
+                i--;
+            } else {
+                encodedArray[i] = highestNumbers[i];
+            }
+        }
+    }
+    encodedArray = encodedArray.join("");
+
+    return encodedArray;
+  }
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+
+    // The maximum is exclusive and the minimum is inclusive.
+    return Math.floor(Math.random(2) * (max - min) + min); 
   }
 
   function puzzle2c(post) {
@@ -99,7 +154,9 @@ export default function Puzzles(post) {
           <div class="post-name"> 
             {post.poster} 
           {changeString(post,changeColor(post, "tda", 2),changeFont(post, "eda", 1))}
-          <p style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>{encodedMsg(post)}</p>
+          <p id="test" style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
+              {encodedMsg("test")}
+          </p>
           {hasPicture(post)}
           </div>
         </div>
