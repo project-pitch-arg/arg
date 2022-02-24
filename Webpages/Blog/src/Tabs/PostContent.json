@@ -16,7 +16,14 @@
         "puzzleNr": "2c",
         "comment": "This post belongs to puzzle 2c-b."
     },
-    
+    {
+        "date": "21-02-22",
+        "poster": "Robot1312113",
+        "content": "Man, this latest course of mine, LMA017, was so fun. Way too little math for my taste though.",
+        "isPuzzle": true,
+        "puzzleNr": "2c",
+        "comment": "This post belongs to puzzle 2c-b."
+    },
     {
         "date": "13-02-22",
         "poster": "Robot1312113",
