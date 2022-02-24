@@ -16,6 +16,7 @@ import Robot from '../img/Bild2png.png';
 import Salad from '../img/ceasarsalad-removebg-preview.png';
 
 
+
 export default function Posts() {
   
   // Edit this variable to change the posts displayed on each page.
@@ -50,26 +51,66 @@ export default function Posts() {
    )
   }
 
-  function changeALetter(post, letter, count) {
-    const n = (post.content.split(letter).length - 1)
-    var index = post.content.indexOf(letter);
-    var count1 = count % n;
-    while(count1 != count) {
-      index = post.content.indexOf(letter, index+1);
-      count1++;
+  function changeColor(post, letter, count) {
+    var indexArray = new Array(letter.length);
+    var counter = 0;
+    for(let i = 0; i<letter.length; i++){
+      const n = (post.content.split(letter[i]).length - 1)
+      var index = post.content.indexOf(letter[i]);
+      var count1 = count % n;
+      while(count1 > 0) {
+        index = post.content.indexOf(letter[i], index+1);
+        count1--;
+      }
+      indexArray[counter] = index;
+      counter++;
     }
+    const index1 = indexArray[0];
+    const index2 = indexArray[1];
+    const index3 = indexArray[2];
+    const finalArray = [[index1,"color"],[index2, "color"],[index3, "color"]];
+    return finalArray;
+  }
 
+  function changeFont(post,letter, count) {
+    var col = changeColor(post, letter, count);
+    col[0][1] = "font";
+    col[1][1] = "font";
+    col[2][1] = "font";
+    return col;
+  }
+
+  function changeString(post, array1, array2) {
+    var totalArray = array1.concat(array2);
+    var sortedArray = totalArray.sort(function(a,b){return (a[0]-b[0])});
+    
     return (
       <div class="post-content">
-        {post.content.slice(0,index)}
-        <font color="red" face="monaco">{post.content[index]}</font>
-        {post.content.slice(index+1)}
+        {post.content.slice(0,sortedArray[0][0])}
+        {helpChangeString(post, sortedArray[0])}
+        {post.content.slice(sortedArray[0][0]+1,sortedArray[1][0])}
+        {helpChangeString(post, sortedArray[1])}
+        {post.content.slice(sortedArray[1][0]+1,sortedArray[2][0])}
+        {helpChangeString(post, sortedArray[2])}
+        {post.content.slice(sortedArray[2][0]+1,sortedArray[3][0])}
+        {helpChangeString(post, sortedArray[3])}
+        {post.content.slice(sortedArray[3][0]+1,sortedArray[4][0])}
+        {helpChangeString(post, sortedArray[4])}
+        {post.content.slice(sortedArray[4][0]+1,sortedArray[5][0])}
+        {helpChangeString(post, sortedArray[5])}
+        {post.content.slice(sortedArray[5][0]+1)}
       </div> 
       )
   }
 
-  function changeString (function1, function2) {
-    //Take changeFont and changeColor and give back proper 
+  function helpChangeString(post, element) {
+    if (element[1] == "color") {
+      return (<font color="rgb(0,0,51)">{post.content[element[0]]}</font>)
+    } else if (element[1] == "font") {
+      return (<font face="monaco">{post.content[element[0]]}</font>)
+    } else {
+      return
+    }
   }
 
   function puzzle2c(post) {
@@ -80,7 +121,7 @@ export default function Posts() {
             {post.date}
           <div class="post-name"> 
             {post.poster} 
-          {changeALetter(post, "t", 500)}
+          {changeString(post,changeColor(post, "dat", 2),changeFont(post, "tda", 1))}
           {hasPicture(post)}
           </div>
         </div>
@@ -186,12 +227,12 @@ export default function Posts() {
          </div>
          <div class="right-side">
          <div class="buttongroup">
-          <button class="button" onClick={firstPage} disabled={disableF}> FIRST</button>
-          <button class="button" onClick={prevPage} disabled={disableP}> PREV </button>   
+          <button class="button" onClick={prevPage} disabled={disableP}> {"<"} </button> 
+          <button class="button" onClick={nextPage} disabled={disableN}> {">"} </button>  
          </div>  
          <div class="buttongroup">
-          <button class="button" onClick={nextPage} disabled={disableN}> NEXT </button>
-          <button class="button" onClick={lastPage} disabled={disableL}>LAST</button>
+         <button class="button" onClick={firstPage} disabled={disableF}> {"<<"}</button>
+          <button class="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
          </div>
           <div class="author-pictures">
            <img src={Robot} class="image" ></img>
