@@ -19,10 +19,7 @@ const App = () => {
 
   return (
     <div>
-      <div class="web-chat-title">
-        DT Chat Application
-        <button class="log-out-button" onClick={logOut}>Log out</button>
-      </div>
+      
     <ChatEngine
       height="90vh"
       projectID={projectID}
@@ -31,7 +28,15 @@ const App = () => {
       renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
       onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
     />
-    
+     <div class="web-chat-title">
+     <button class="log-out-button" onClick={logOut}>Log out</button>
+        <p>
+        Is something not working? </p>
+        <p>
+        Please contact us through the information on the About page.
+        </p>
+        
+      </div>
     </div>
     
   );

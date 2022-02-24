@@ -40,6 +40,13 @@
 	background: hsl(93, 27%, 45%); 
 }
 
+
+/* --------------------TabChat -------------------- */
+
+.chat-area {
+    overflow: hidden;
+}
+
 /* --------------------TabHome -------------------- */
 
 .content-home-1 {
@@ -254,7 +261,6 @@
 
 /* Fits the chat to the window. */
 .chat {
-    height: 80vh;
+    height: 79vh;
     width: 100vw;
-
 }

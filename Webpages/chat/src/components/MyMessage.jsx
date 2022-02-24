@@ -4,7 +4,7 @@ const MyMessage = ({ message }) => {
   if(message.custom_json.length > 2) {
     return (
       <div style={{overflow: 'hidden'}}>
-       <div className="message" style={{ float: 'right', marginRight: '18px', color: 'white', backgroundColor: '#3B2A50' }}>
+       <div className="message" style={{ float: 'right', marginRight: '18px', color: 'white', backgroundColor: 'hsl(93, 27%, 45%)' }}>
         {message.text}
        </div>
        <img
@@ -18,8 +18,7 @@ const MyMessage = ({ message }) => {
     ) 
   }
 
-  if (message.attachments && message.attachments.length > 0) {
-    console.log(message.attachments)  
+  if (message.attachments && message.attachments.length > 0) {  
     return (
         <img
           src={message.attachments[0].file}
@@ -31,7 +30,7 @@ const MyMessage = ({ message }) => {
     }
     
     return (
-      <div className="message" style={{ float: 'right', marginRight: '18px', color: 'white', backgroundColor: '#3B2A50' }}>
+      <div className="message" style={{ float: 'right', marginRight: '18px', color: 'white', backgroundColor: 'hsl(93, 27%, 45%)' }}>
         {message.text}
       </div>
     );
