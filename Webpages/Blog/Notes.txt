@@ -36,4 +36,18 @@ Things to think about:
 
 - PostContentOrg-filen behövs inte längre, men lät den vara kvar tillfälligt.
 
-. Change home to use the .json file.
+- Change home to use the .json file.
+
+- Change quote content to a JSON file.
+
+- Move changeable variables to another file and import them.
+
+- A solved puzzle on the blog could be about the usernames.
+
+- Change encryption to also accept capital letters.
+
+- Documentation for puzzles, how they work and their names.
+
+- Make About in JSON.
+
+- CSS-file. Add colour names to make it easier to change the overall impression.

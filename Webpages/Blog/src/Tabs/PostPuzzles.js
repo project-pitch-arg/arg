@@ -1,11 +1,21 @@
+/*
+  This file contains the functions necessary to make
+  the puzzles hidden in posts modifiable.
+  
+  To change the answers, change the variables
+  in the file ChangeableVariables.jsx.
+*/
+
 import React from 'react';
 
 export default function Puzzles(post) {
 
+  // This function changes the color of the letters in a post, where the 
+  // argument count is the "x":th letter of that type.
   function changeColor(post, letter, count) {
     var indexArray = new Array(letter.length);
     var counter = 0;
-    for(let i = 0; i<letter.length; i++){
+    for(let i = 0; i < letter.length; i++){
       const n = (post.content.split(letter[i]).length - 1)
       var index = post.content.indexOf(letter[i]);
       var count1 = count % n;
@@ -23,6 +33,8 @@ export default function Puzzles(post) {
     return finalArray;
   }
 
+  // This function changes the font of the letters in a post, where the 
+  // argument count is the "x":th letter of that type.
   function changeFont(post,letter, count) {
     var col = changeColor(post, letter, count);
     col[0][1] = "font";
@@ -31,6 +43,7 @@ export default function Puzzles(post) {
     return col;
   }
 
+  // ???
   function changeString(post, array1, array2) {
     var totalArray = array1.concat(array2);
     var sortedArray = totalArray.sort(function(a,b){return (a[0]-b[0])});
@@ -54,6 +67,8 @@ export default function Puzzles(post) {
       )
   }
 
+  // Function for changing both color and font
+  // on certain places in a string.
   function helpChangeString(post, element) {
     if (element[1] == "color") {
       return (<font color="rgb(0,0,51)">{post.content[element[0]]}</font>)
@@ -64,6 +79,8 @@ export default function Puzzles(post) {
     }
   }
 
+  // Check if the post has picture(s) and
+  // if it does, return it/them.
   function hasPicture(post) {
     if(post.hasOwnProperty('pictures')) {
       return (<div class="post-images">
@@ -80,6 +97,9 @@ export default function Puzzles(post) {
     return true;
   }
 
+  // Function to shift an array to the left,
+  // with the first element becoming the
+  // new last element.
   function shiftArrayWrap(array, amount) {
     if(amount < 0) {
         amount = array.length + amount;
@@ -100,6 +120,8 @@ export default function Puzzles(post) {
     return array;
   }
 
+  // Encodes a string according to a key of letters and numbers.
+  // The encoding is according to Mexican Army Wheels.
   function encodedMsg(toBeEncoded) {
     const key = [["a", 11],["d", 28], ["m", 57], ["o", 80]]; //Change to have different letters.
 
@@ -131,7 +153,7 @@ export default function Puzzles(post) {
     var tempIndex;
     var whichArray;
 
-    //
+    // Encode each letter with a random choice of ring.
     for (var i = 0; i < toBeEncoded.length; i++) {
         tempIndex = letters.indexOf(toBeEncoded[i]);
         if(tempIndex == -1) {
@@ -158,16 +180,20 @@ export default function Puzzles(post) {
     return encodedArray;
   }
 
+  // Function to get a random number.
+  // The maximum is exclusive and the minimum is inclusive.
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
 
-    // The maximum is exclusive and the minimum is inclusive.
     return Math.floor(Math.random(2) * (max - min) + min); 
   }
 
+  // Function to encode the puzzle 2c.
+  // See documentation for an explanation of the puzzle.
+  // TODO: add name of document.
   function puzzle2c(post) {
-    /*Change date to be a clue later */
+    /*Change date to be a (variable) clue later */
     if(post.comment == "This post belongs to puzzle 2c-a.") {
       return (
         <div class="post">
@@ -177,7 +203,7 @@ export default function Puzzles(post) {
             {post.poster} 
           {changeString(post,changeColor(post, "tda", 2),changeFont(post, "eda", 1))}
           <p id="test" style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
-              {encodedMsg("Wow, this entire message will be encoded. That's very cool.")}
+              {encodedMsg("encoded")}
           </p>
           {hasPicture(post)}
           </div>
