@@ -81,6 +81,9 @@ export default function Puzzles(post) {
   }
 
   function shiftArrayWrap(array, amount) {
+    if(amount < 0) {
+        amount = array.length + amount;
+    }
     var tempNr;
     for (var a = 0; a < amount; a++) {
         tempNr = array.shift();
@@ -98,7 +101,7 @@ export default function Puzzles(post) {
   }
 
   function encodedMsg(toBeEncoded) {
-    const key = ["a", 11, 28, 57, 80]; //Change to have different letters.
+    const key = [["a", 11],["d", 28], ["m", 57], ["o", 80]]; //Change to have different letters.
 
     // The different rings on a mexican wheel.
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -108,17 +111,20 @@ export default function Puzzles(post) {
     var highestNumbers = [79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 , 99, 100, "", "", "", ""];
 
     // Find indexes for placements of all keys.
-    var letterIndex = letters.indexOf(key[0]);
-    var lowNumbersIndex = lowNumbers.indexOf(key[1]);
-    var mediumNumbersIndex = mediumNumbers.indexOf(key[2]);
-    var largeNumbersIndex = largeNumbers.indexOf(key[3]);
-    var highestNumbersIndex = highestNumbers.indexOf(key[4]);
+    var letterIndexLow = letters.indexOf(key[0][0]);
+    var lowNumbersIndex = lowNumbers.indexOf(key[0][1]);
+    var letterIndexMedium = letters.indexOf(key[1][0]);
+    var mediumNumbersIndex = mediumNumbers.indexOf(key[1][1]);
+    var letterIndexLarge = letters.indexOf(key[2][0]);
+    var largeNumbersIndex = largeNumbers.indexOf(key[2][1]);
+    var letterIndexHighest = letters.indexOf(key[3][0]);
+    var highestNumbersIndex = highestNumbers.indexOf(key[3][1]);
 
     // Shift the arrays to turn the rings according to the key.
-    lowNumbers = shiftArrayWrap(lowNumbers, (lowNumbersIndex-letterIndex));
-    mediumNumbers = shiftArrayWrap(mediumNumbers, (mediumNumbersIndex-letterIndex));
-    largeNumbers = shiftArrayWrap(largeNumbers, (largeNumbersIndex-letterIndex));
-    highestNumbers = shiftArrayWrap(highestNumbers, (highestNumbersIndex-letterIndex));
+    lowNumbers = shiftArrayWrap(lowNumbers, (lowNumbersIndex-letterIndexLow));
+    mediumNumbers = shiftArrayWrap(mediumNumbers, (mediumNumbersIndex-letterIndexMedium));
+    largeNumbers = shiftArrayWrap(largeNumbers, (largeNumbersIndex-letterIndexLarge));
+    highestNumbers = shiftArrayWrap(highestNumbers, (highestNumbersIndex-letterIndexHighest));
 
     // Create some variable.
     var encodedArray = new Array(toBeEncoded.length);
