@@ -3,7 +3,7 @@ import './TopBar.css';
 import {Link} from "react-router-dom";
 import Wrong from '../Wrong';
 import Home from '../Tabs/Home';
-import {fetchData} from '../Client/client.jsx';
+import {fetchData} from '../Client/Client.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default class TopBar extends Component {
@@ -18,7 +18,7 @@ export default class TopBar extends Component {
         this.addTabs = this.addTabs.bind(this);
         await this.addTabs("/src/Tabs/", this.locations);
         await this.addTabs("/src/Tabs/DropDown/",this.dropdownLocations);
-        this.highlightActive({file: "Home"});
+
     }
     highlightActive = (path) => {
         var oldActiveElements = document.getElementsByClassName('active');

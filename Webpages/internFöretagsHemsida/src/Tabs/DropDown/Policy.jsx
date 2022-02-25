@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../TabContent.css';
-import {basicFetchData} from "../../Client/BasicFetch";
+import {basicFetchData} from "../../Client/Client";
 import axios from 'axios';
 
 
@@ -44,21 +44,18 @@ export default class Policy extends Component{
     }
     //Requests pdf file names from server
     async getPolicy(){
-            var data = await basicFetchData("/getPolicy");
-            for (var i = 0; i < data.files.length; i++) {
-                  this.location.push(data.files[i]);
-            }
+            this.location = await basicFetchData("/getPolicy");
             this.setState({dataReceived: true});
     }
 
     render(){
         if(this.state.dataReceived) {
             return (
-                    <div class="documentList">
+                    <div class="standardDivList">
                         <h1>Document list</h1>
                       {
                         this.location.map((file) => {
-                            return <button class="pdf" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button>
+                            return <button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button>
                         })
                       }
                     </div>

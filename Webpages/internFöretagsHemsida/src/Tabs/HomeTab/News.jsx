@@ -1,23 +1,25 @@
 import React, {Component} from 'react';
+import {basicFetchData} from "../../Client/Client";
+import 'antd/dist/antd.css';
 import '../TabContent.css';
-import {basicFetchData} from "../../Client/BasicFetch";
+import {List} from "antd";
 
 export default class News extends Component{
-    state = { dataReceived: false,}
+
+    state = { dataReceived: false}
 
     constructor(props){
         super(props);
-        this.news = {};
+        this.news = [];
     }
+
     async componentDidMount(){
+        this.getNews.bind(this);
         await this.getNews();
     }
 
     async getNews(){
-            var data = await basicFetchData("/getNews");
-            Object.keys(data[0]).forEach((key) => {
-                this.news[data[0][key].title] = data[0][key].text;
-            })
+            this.news = await basicFetchData("/getNews");
             this.setState({dataReceived: true});
     }
 
@@ -26,15 +28,22 @@ export default class News extends Component{
             return (
                 <div class="newsBlock">
                     <h1>News</h1>
-                  {
-                    Object.entries(this.news).map(([key,value]) => {
-                        return (<div class="news">
-                                <h2>{key}</h2>
-                                <p>{value}</p>
-                            </div>
-                        )
-                    })
-                  }
+                    {
+                        Object.keys(this.news).map((key) => {
+                            return (<List
+                               itemLayout="horizontal"
+                               dataSource={key}
+                               renderItem={item => (
+                                 <List.Item>
+                                   <List.Item.Meta
+                                     title={this.news[item].title + " - " + this.news[item].date}
+                                     description={this.news[item].text}
+                                   />
+                                 </List.Item>
+                               )}
+                             />)
+                        })
+                    }
                 </div>
             )
         }

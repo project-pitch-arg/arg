@@ -38,12 +38,6 @@ app.post('/getFiles', (req, res) => {
         return res.send(JSON.stringify({files: list}));
     })
 });
-//Returns all conversation between CEO and other staff
-app.post('/getConversations', (req, res) => {
-  var list = [];
-  const data = fs.readFileSync("./JsonFiles/Chats.json");
-  return res.send(data);
-});
 app.post('/getNews', (req, res) => {
   var list = [];
   const data = fs.readFileSync("./JsonFiles/News.json");

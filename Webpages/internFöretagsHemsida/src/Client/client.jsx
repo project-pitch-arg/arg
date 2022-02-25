@@ -13,6 +13,35 @@ export function fetchData(postPath, data){
         options.body = JSON.stringify(data);
       return fetch(path + postPath, options);
 }
+//Handles the most used way to request and use data
+export async function basicFetchData(path){
+    var json = {}
+    const response = await fetchData(path, json);
+    const data = await response.json();
+    var array = [];
+    try {
+        Object.keys(data[0]).map((key) => {
+                  array.push(data[0][key]);
+            })
+            console.log(array);
+    }
+    catch {
+        Object.keys(data).map((key,index) => {
+            data[key].forEach((value) => {
+                array.push(value)
+            })
+
+        })
+        console.log(array);
+    }
+    return array;
+}
+//Handles cases when the server needs information from the client
+export async function basicFetchDataJson(path, json){
+    const response = await fetchData(path, json);
+    return await response.json();
+}
+
 
 
 
