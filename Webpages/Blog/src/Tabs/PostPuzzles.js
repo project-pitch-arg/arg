@@ -134,6 +134,10 @@ export default function Puzzles(post) {
     //
     for (var i = 0; i < toBeEncoded.length; i++) {
         tempIndex = letters.indexOf(toBeEncoded[i]);
+        if(tempIndex == -1) {
+            encodedArray[i] = toBeEncoded[i];
+            continue;
+        }
         whichArray = getRandomInt(1,5)
         if(whichArray == 1) {
             encodedArray[i] = lowNumbers[tempIndex];   
@@ -173,7 +177,7 @@ export default function Puzzles(post) {
             {post.poster} 
           {changeString(post,changeColor(post, "tda", 2),changeFont(post, "eda", 1))}
           <p id="test" style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
-              {encodedMsg("test")}
+              {encodedMsg("Wow, this entire message will be encoded. That's very cool.")}
           </p>
           {hasPicture(post)}
           </div>
