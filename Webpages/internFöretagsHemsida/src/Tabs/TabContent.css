@@ -24,7 +24,7 @@
 .newsBlock{
     display: block;
     height: 100%;
-    width: 35%;
+    width: 30%;
     margin: 10px;
     text-align: left;
     float: left;
@@ -58,14 +58,20 @@
     padding: 10px;
     margin: 10px;
 }
+.pdfItemDiv{
+    padding: 1px;
+}
 .pdfItem{
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    min-width: 140px;
-    margin-bottom: 10px;
-    display: block;
+    min-width: 200px;
+    margin-bottom: 20px;
+
+}
+h1.underline{
+    text-decoration: underline;
 }
 h1 {
     color: #246f94;
@@ -75,6 +81,9 @@ h1 {
 }
 img{
     width: 75%;
+}
+img.graph{
+    width: 100%;
 }
 h3{
     font-size: 18px;

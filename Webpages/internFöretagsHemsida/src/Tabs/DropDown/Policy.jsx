@@ -52,10 +52,10 @@ export default class Policy extends Component{
         if(this.state.dataReceived) {
             return (
                     <div class="standardDivList">
-                        <h1>Document list</h1>
+                        <h1 class="underline">Policy Documents</h1>
                       {
                         this.location.map((file) => {
-                            return <button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button>
+                            return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
                         })
                       }
                     </div>

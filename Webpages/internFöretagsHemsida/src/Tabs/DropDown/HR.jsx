@@ -23,7 +23,7 @@ export default class HR extends Component{
         if(this.state.dataReceived){
             return (
                 <div class="standardDivList">
-                    <h1>HR Staff</h1>
+                    <h1 class="underline">HR Staff</h1>
                     <div>
                         {
                             Object.keys(this.hr).map((key) => {
