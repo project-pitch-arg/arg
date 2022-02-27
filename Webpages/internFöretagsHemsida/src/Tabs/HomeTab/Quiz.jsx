@@ -8,7 +8,9 @@ export default class Quiz extends Component{
                 <div class="newsBlock">
                         <h1>Quiz</h1>
                         <p>This week's quiz is about the history of our company, good luck!</p>
-                        <button href="quiz">Take Quiz</button>
+                        <form action="/wrong">
+                            <input type="submit" value="Take Quiz" />
+                        </form>
                 </div>
             )
     }

@@ -81,11 +81,27 @@ h1 {
 }
 img{
     width: 75%;
+    border-radius: 50px;
 }
 img.graph{
     width: 100%;
+    border-radius: 0px;
 }
 h3{
     font-size: 18px;
+}
+.hidden {
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+.console {
+    padding: 10px;
+    color: white;
+    background-color: black;
+
+}
+.console:focus{
+    color: white;
+    background-color: black;
 }
 

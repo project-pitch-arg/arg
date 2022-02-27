@@ -6,15 +6,24 @@ import axios from 'axios';
 
 export default class Policy extends Component{
 
-    state = { dataReceived: false,numberOfPages: 0, pageNumber: 1, fileName: null}
+    state = { dataReceived: false,numberOfPages: 0, pageNumber: 1, fileName: null, hidden: true}
 
     constructor(props){
         super(props);
         this.policy = {};
         this.location = [];
+        this.keys = [];
+        this.input = "";
+
     }
     async componentDidMount(){
         await this.getPolicy();
+        document.addEventListener("keydown", this._handleKeyDown);
+        document.addEventListener("keyup", this._handleKeyUp);
+    }
+    componentWillUnmount(){
+        document.removeEventListener("keydown", this._handleKeyDown);
+        document.removeEventListener("keyup", this._handleKeyUp);
     }
     //Requests and displays specific pdf file from server
     async getPDF(fileName){
@@ -48,8 +57,35 @@ export default class Policy extends Component{
             this.setState({dataReceived: true});
     }
 
+    _handleKeyDown = (event) => {
+        this.keys.push(event.key);
+        switch( event.key ) {
+            case "Enter":
+                if(this.checkPressedKeys("o") && this.checkPressedKeys("p") && this.checkPressedKeys("e") && this.checkPressedKeys("n")){
+                    this.setState({hidden: !this.state.hidden});
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    _handleKeyUp = (event) => {
+        this.keys.pop(event.key);
+    }
+    checkPressedKeys(key){
+        if(this.keys.some(item => key === item)){
+            return true;
+        }
+        return false;
+    }
+    handleInput(event){
+        event.preventDefault();
+        if(event.target.command.value === "352"){
+            alert("New Email Received! Check your email!");
+        }
+    }
     render(){
-        if(this.state.dataReceived) {
+        if(this.state.dataReceived && this.state.hidden) {
             return (
                     <div class="standardDivList">
                         <h1 class="underline">Policy Documents</h1>
@@ -58,8 +94,25 @@ export default class Policy extends Component{
                             return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
                         })
                       }
+
                     </div>
                 )
+        }
+        else if(this.state.dataReceived) {
+            return (
+                                <div class="standardDivList">
+                                    <h1 class="underline">Policy Documents</h1>
+                                  {
+                                    this.location.map((file) => {
+                                        return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
+                                    })
+                                  }
+                                  <form onSubmit={this.handleInput}>
+                                    <label>Code: </label>
+                                    <input class="console" type="text" name="name" id="command"/>
+                                  </form>
+                                </div>
+                            )
         }
         else {
             return (<div>Loading...</div>)

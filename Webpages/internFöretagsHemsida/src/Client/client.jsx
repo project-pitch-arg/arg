@@ -20,19 +20,16 @@ export async function basicFetchData(path){
     const data = await response.json();
     var array = [];
     try {
-        Object.keys(data[0]).map((key) => {
+        Object.keys(data[0]).forEach((key) => {
                   array.push(data[0][key]);
             })
-            console.log(array);
     }
     catch {
-        Object.keys(data).map((key,index) => {
+        Object.keys(data).forEach((key,index) => {
             data[key].forEach((value) => {
                 array.push(value)
             })
-
         })
-        console.log(array);
     }
     return array;
 }
