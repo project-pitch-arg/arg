@@ -4,6 +4,7 @@ import News from './HomeTab/News';
 import Graphs from './HomeTab/Graphs';
 import Quiz from './HomeTab/Quiz';
 
+
 export default class Home extends Component{
     render(){
         return (

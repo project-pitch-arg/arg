@@ -1,19 +1,44 @@
 import React, {Component} from 'react';
 import './TabContent.css';
+import {basicFetchDataJson} from "../Client/Client";
 
 
 export default class Account extends Component{
-    render(){
-        return (
-                <div class="standardDivList">
-                    <h1>Name</h1>
-                    <img src="person" alt=""/>
-                    <h2>PhoneNumber:</h2>
-                    <h2>Email:</h2>
-                    <button>Apply changes</button>
 
-                </div>
-            )
+    state = { dataReceived: false}
+
+    constructor(props){
+        super(props);
+        this.account = [];
     }
 
+    async componentDidMount(){
+        this.getAccountData.bind(this);
+        await this.getAccountData();
+    }
+
+    async getAccountData(){
+        var json = {
+            name: "Edmund Schmidt",
+            password: "password123"
+        }
+        this.account = await basicFetchDataJson("/getUser", json);
+        this.setState({dataReceived: true});
+    }
+
+    render(){
+        if(this.state.dataReceived){
+            return (
+                <div class="standardDivList">
+                    <h1>{this.account.name}</h1>
+                    <img src={require('./DropDown/images/'+ this.account.name +".jpg")} alt=""/>
+                    <h2>PhoneNumber:{this.account.phoneNumber}</h2>
+                    <h2>Email:{this.account.email}</h2>
+                </div>
+            )
+        }
+        else {
+            return (<div>Loading...</div>)
+        }
+    }
 }

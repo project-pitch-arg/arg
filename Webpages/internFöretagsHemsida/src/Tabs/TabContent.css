@@ -80,7 +80,8 @@ h1 {
     margin-right: 10px;
 }
 img{
-    width: 75%;
+    max-width: 400px;
+    max-height: 300px;
     border-radius: 50px;
 }
 img.graph{

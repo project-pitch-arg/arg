@@ -61,6 +61,18 @@ app.post("/getPDF", (req, res) => {
   var data = req.body.fileName;
   res.sendFile(__dirname + "/PDF/" + data);
 });
+app.post("/getUser", (req, res) => {
+  var name = req.body.name;
+  var password = req.body.password;
+
+  const response = fs.readFileSync("./JsonFiles/Accounts.json");
+  var data = JSON.parse(response);
+  Object.keys(data[0]).forEach((key) => {
+        if(data[0][key].name === name && data[0][key].password == password){
+            return res.send(data[0][key]);
+        }
+  })
+});
 
 app.listen(process.env.PORT || 8080, () =>
   console.log('Server listening on port 8080!'),
