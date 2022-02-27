@@ -14,8 +14,8 @@ export default class Policy extends Component{
         this.location = [];
         this.keys = [];
         this.input = "";
-
     }
+    //Adds eventListeners for key presses
     async componentDidMount(){
         await this.getPolicy();
         document.addEventListener("keydown", this._handleKeyDown);
@@ -56,7 +56,7 @@ export default class Policy extends Component{
             this.location = await basicFetchData("/getPolicy");
             this.setState({dataReceived: true});
     }
-
+    //Called when a key is pressed
     _handleKeyDown = (event) => {
         this.keys.push(event.key);
         switch( event.key ) {
@@ -69,50 +69,54 @@ export default class Policy extends Component{
                 break;
         }
     }
+    //Called when a key is released
     _handleKeyUp = (event) => {
         this.keys.pop(event.key);
     }
+    //Checks if specific key is pressed down
     checkPressedKeys(key){
         if(this.keys.some(item => key === item)){
             return true;
         }
         return false;
     }
+    //Called when input is submitted
     handleInput(event){
         event.preventDefault();
         if(event.target.command.value === "352"){
             alert("New Email Received! Check your email!");
         }
     }
+
     render(){
         if(this.state.dataReceived && this.state.hidden) {
             return (
-                    <div class="standardDivList">
-                        <h1 class="underline">Policy Documents</h1>
-                      {
-                        this.location.map((file) => {
-                            return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
-                        })
-                      }
+                <div class="standardDivList">
+                    <h1 class="underline">Policy Documents</h1>
+                  {
+                    this.location.map((file) => {
+                        return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
+                    })
+                  }
 
-                    </div>
-                )
+                </div>
+            )
         }
         else if(this.state.dataReceived) {
             return (
-                                <div class="standardDivList">
-                                    <h1 class="underline">Policy Documents</h1>
-                                  {
-                                    this.location.map((file) => {
-                                        return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
-                                    })
-                                  }
-                                  <form onSubmit={this.handleInput}>
-                                    <label>Code: </label>
-                                    <input class="console" type="text" name="name" id="command"/>
-                                  </form>
-                                </div>
-                            )
+                <div class="standardDivList">
+                    <h1 class="underline">Policy Documents</h1>
+                  {
+                    this.location.map((file) => {
+                        return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
+                    })
+                  }
+                  <form onSubmit={this.handleInput}>
+                    <label>Code: </label>
+                    <input class="console" type="text" name="name" id="command"/>
+                  </form>
+                </div>
+            )
         }
         else {
             return (<div>Loading...</div>)

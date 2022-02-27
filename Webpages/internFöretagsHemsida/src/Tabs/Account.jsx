@@ -13,7 +13,6 @@ export default class Account extends Component{
     }
 
     async componentDidMount(){
-        this.getAccountData.bind(this);
         await this.getAccountData();
     }
 
