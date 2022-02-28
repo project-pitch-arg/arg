@@ -123,6 +123,7 @@ export default function Puzzles(post) {
   // Encodes a string according to a key of letters and numbers.
   // The encoding is according to Mexican Army Wheels.
   function encodedMsg(toBeEncoded) {
+    toBeEncoded = toBeEncoded.toLowerCase();
     const key = [["a", 11],["d", 28], ["m", 57], ["o", 80]]; //Change to have different letters.
 
     // The different rings on a mexican wheel.
