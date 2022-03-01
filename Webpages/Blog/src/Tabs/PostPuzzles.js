@@ -124,7 +124,7 @@ export default function Puzzles(post) {
   // The encoding is according to Mexican Army Wheels.
   function encodedMsg(toBeEncoded) {
     toBeEncoded = toBeEncoded.toLowerCase();
-    const key = [["a", 11],["d", 28], ["m", 57], ["o", 80]]; //Change to have different letters.
+    const key = [["m", 11],["d", 28], ["o", 57], ["a", 80]]; //Change to have different letters.
 
     // The different rings on a mexican wheel.
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];

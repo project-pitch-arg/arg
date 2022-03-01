@@ -3,7 +3,7 @@
         "date": "23-02-22",
         "poster": "Robot1312113",
         "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinaosaurs today. Unfortunately, the book did not include Ichthyosaurus, but Talarurus also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
-        "pictures": [["puzzles/Futoshiki.PNG","A numbers puzzle."], ["puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["puzzles/duros.jpg", "A package of duros."], ["puzzles/Computer.png", "A computer drinking coffee." ]],
+        "pictures": [["puzzles/NumbersPuzzle.png","A numbers puzzle."], ["puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["puzzles/duros.jpg", "A package of duros."], ["puzzles/Computer.png", "A computer drinking coffee." ]],
         "isPuzzle": true,
         "puzzleNr": "2c",
         "comment": "This post belongs to puzzle 2c-a."
