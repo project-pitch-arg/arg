@@ -10,6 +10,7 @@
     background-attachment: fixed;
 }
 
+
 .header a {
     width: 100%;
     display: inline-block;
@@ -18,6 +19,31 @@
     font-size: 64px;
     color: white;
 }
+.aboutUs-header {
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    background-image: url("../img/about-us.jpg");
+    background-attachment: fixed;
+    border: 2px solid black;
+     padding: 25px;
+
+     background-repeat: no-repeat;
+     background-size: 100% 85%;
+}
+.aboutUs-header a {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: 64px;
+    color: lightseagreen;
+}
+
 
 .content {
     background-color: lightgray; /*Temp background color*/
@@ -170,6 +196,64 @@
   }
 
 /* ------------------------------- About Us CSS ------------------------------- */
+.aboutUs-section {
+    background-color: lightgray; /*Temp background color*/
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+}
+#aboutUs-goals-img{
+    margin-left:10%;
+    float: left;
+    text-align: center;
+}
+#aboutUs-goals-img img{
+    height: 300px;
+    width: 500px;
+}
+#aboutUs-environment-img{
+    margin-right:10%;
+    float: right;
+    text-align: center;
+}
+#aboutUs-environment-img img{
+     height: 300px;
+     width: 500px;
+}
+
+.aboutUs-content{
+    margin-top: 50px;
+}
+.aboutUs-content a {
+    /*margin-left: 50px;*/
+}
+.aboutUs-content h1{
+    font-weight: normal;
+    width: 100%;
+    text-align: left;
+    color: #246f94;
+    font-size:41px;
+}
+#aboutUs-goals-desc{
+    position:relative;
+    margin-left:2%;
+    float:left;
+    width:500px;
+}
+#aboutUs-env-desc{
+    margin-right:2%;
+    position:relative;
+    float:right;
+    width:500px;
+}
+
+
+
+
+
+
+
 
 
 #team-content {
@@ -187,6 +271,8 @@
     text-align: center;
     color: #246f94;
 }
+
+
 
 .team-member {
     width: 25%;
