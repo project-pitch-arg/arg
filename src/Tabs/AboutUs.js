@@ -4,9 +4,10 @@ import { useEffect } from 'react';
 
 import teamMember from '../img/team-member.png';
 
-import aboutUsImg from '../img/about-us.jpg';
+import aboutUsHeaderImg from '../img/about-us.jpg';
 import environmentImg from '../img/environment.jpg';
 import goalsImg from '../img/goals.jpg';
+
 
 import christianImg from '../img/christian-yates.jpg';
 import eloiseImg from '../img/eloise-christensen.jpg';
@@ -45,29 +46,30 @@ export default function AboutUs() {
     return(
 
         <div>
-          <div class="header" style={{backgroundImage: `url(${environmentImg})`}}>
+          <div class="aboutUs-header"style={{backgroundImage: `url(${aboutUsHeaderImg})`}}>
             <a>About Us</a>
           </div>
 
-          <div class="content">
+          <div class="aboutUs-section">
 
-            <div id="intro-content">
-              <div id="intro-img">
-                <img src={goalsImg} height='215px'/>
-              </div>
-              <div id="intro-desc">
+            <div class="aboutUs-content">
+              <div id="aboutUs-goals-img"><img src={goalsImg} height='215px'/> </div>
+              <div id="aboutUs-goals-desc">
                 <h1> Our Goals </h1>
                 <a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
               </div>
             </div>
 
-            <div id="goal-content">
-              <div id="goal-desc">
+
+
+            <div class="aboutUs-content">
+             <div id="aboutUs-environment-img"><img src={environmentImg}/></div>
+              <div id="aboutUs-env-desc">
                 <h1>Sustainable Practices</h1>
                 <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
               </div>
-              <div id="goal-img"><img src={environmentImg}/></div>
             </div>
+
             <div id="tech-content">
               <h1>Why Work with us?</h1>
               <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</a>
