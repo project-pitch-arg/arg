@@ -8,19 +8,20 @@ import dino from '../img/babydino-removebg-preview.png';
 //import ceasar from '../img/CaesarSalad.jpeg';
 import helpbutton from '../img/helpTest.png'
 
-import { userPicture1, userPicture2 } from '../ChangeableVariables';
+import { userName1, userName2, userPicture1, userPicture2 } from '../ChangeableVariables';
 
-// Check so that latest post works!
 export default function Walk() {
-    const Content = PostContent;
-    const item = Content[Content.length-1];
+    
+  const Content = PostContent;
+  const item = Content[Content.length-1]; //THis is not the latest post depending on how we fix the date! Does not work with pictuers now!
+
     return (
       <div>
         <div class='content content-home-1'>
           <div class="help-text">
             Welcome to Daily Thoughts Website
             <br></br>
-            Home of Robot1312113 and Fexjo
+            Home of {userName1} and {userName2}
             <br></br>
             Hope you enjoy your stay!
           </div>

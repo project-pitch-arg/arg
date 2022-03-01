@@ -27,78 +27,61 @@
     {
         "date": "13-02-22",
         "poster": "Robot1312113",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "pictures": [["https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png", "A robot"], ["postImages/babydino-removebg-preview.png", "Dino!!!"] ],
+        "content": "I borrowed some pictures from Edwin to make these. What do you think it all means?",
+        "pictures": [["puzzles/Skyline1.jpg", "A skyline."], ["puzzles/Shapes.png", "Two rectangles and a triangle."], ["puzzles/Skyline3.jpg", "A skyline"], ["puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
+        "isPuzzle": true,
+        "puzzleNr": "2b",
+        "comment": "This is the main post to puzzle 2b."
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Have you read the book 'A Short History of Nearly Everything'? I learned quite a lot of odd things from that. Also, this made me feel quite special 'Not one of your pertinent ancestors was squashed, devoured, drowned, starved, stranded, stuck fast, untimely wounded, or otherwise deflected from its life's quest of delivering a tiny charge of genetic material to the right partner at the right moment in order to perpetuate the only possible sequence of hereditary combinations that could result -- eventually, astoundingly, and all too briefly -- in you.' and this is just way to true 'There are three stages in scientific discovery. First, people deny that it is true, then they deny that it is important; finally they credit the wrong person.'.",
         "isPuzzle": false
     },
     {
         "date": "14-02-22",
         "poster": "Robot1312113",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "pictures": [["postImages/babydino-removebg-preview.png", "Dino!!!"] ],
+        "content": "Have you ever sort of sang in your bad no-one-can-hear-me-so-it-doesn't-matter-voice in the shower only to remeber that you have guests? Then you know how I felt today. (－‸ლ)",
+        "isPuzzle": false
+    },
+    {
+        "date": "14-02-22",
+        "poster": "Robot1312113",
+        "content": "Just a happy dinosaur to make your day better.",
+        "pictures": [["postImages/babydino-removebg-preview.png", "Dino!!!"]],
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Fexjo",
+        "content": "Do you ever think about life on other planets? I certainly hope they, on whatever planet they may be, are not as destructive as we are.",
         "isPuzzle": false
     },
     {
         "date": "15-02-22",
         "poster": "Robot1312113",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "pictures": [["https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png", "A robot"], ["postImages/babydino-removebg-preview.png", "Dino!!!"] ],
+        "content": "Have you figured out what our usernames mean yet? I'll give you a hint for Fexjo. What is this?",
+        "pictures": [["postImages/Caesar.png"]],
         "isPuzzle": false
     },
     {
         "date": "13-02-22",
         "poster": "Robot1312113",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "content": "How can someone be so unlucky? My alarm did not go off. I missed the tram despite skipping breakfast. It was even raining. Of course I was late after all that. When i arrived I even discovered I forgot my charger. So my computer died. To top it all off I spilled my drink during lunch. And that is were we are now. What is this? (◞‸◟；) This sad robot hopes the rest of the day will be better. Please. ",
+        "isPuzzle": false
+    },
+    {
+        "date": "13-02-22",
+        "poster": "Robot1312113",
+        "content": "You ever experienced feeling like you fall and wake up with a start? Today, I also did that. And included the falling part. It hurt. (×_×#)",
         "isPuzzle": false
     },
     {
         "date": "13-02-22",
         "poster": "Fexjo",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "isPuzzle": false
-    },
-    {
-        "date": "13-02-22",
-        "poster": "Fexjo",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "isPuzzle": false
-    },
-    {
-        "date": "13-02-22",
-        "poster": "Fexjo",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "isPuzzle": false
-    },
-    {
-        "date": "13-02-22",
-        "poster": "Fexjo",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "isPuzzle": false
-    },
-    {
-        "date": "13-02-22",
-        "poster": "Fexjo",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "isPuzzle": false
-    },
-    {
-        "date": "13-02-22",
-        "poster": "Fexjo",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "isPuzzle": false
-    },
-    {
-        "date": "13-02-22",
-        "poster": "Fexjo",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "isPuzzle": false
-    },
-    {
-        "date": "13-02-22",
-        "poster": "Fexjo",
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "pictures": [["postImages/babydino-removebg-preview.png", "Dino!!!"] ],
+        "content": "Saw this nice-looking boat today. Somehow, it did not rain although the sky was grey all day.",
+        "pictures": [["postImages/Boat.jpg", "Picture of a boat."]],
         "isPuzzle": false
     }
-
 ]

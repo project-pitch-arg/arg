@@ -11,6 +11,31 @@ import { answerToBeEncrypted, keyForEncryption, dateAsClue } from '../Changeable
 
 export default function Puzzles(post) {
 
+  if(post.isPuzzle) {
+    switch (post.puzzleNr) {
+      case "2b": return puzzle2b(post);
+      case "2c": return puzzle2c(post);
+    }  
+  } else {
+    return (
+        <div class="post">
+          <div class="post-date">
+            {post.date}
+          <div class="post-name"> 
+            {post.poster} 
+          <div class="post-content">
+            {post.content}
+          </div>
+          {hasPicture(post)}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+
+/* -------------------- Functions -------------------- */  
+
   // This function changes the color of the letters in a post, where the 
   // argument count is the "x":th letter of that type.
   function changeColor(post, letter, count) {
@@ -231,24 +256,27 @@ export default function Puzzles(post) {
    )
   }
 
-  if(post.isPuzzle) {
-    switch (post.puzzleNr) {
-      case "2c": return puzzle2c(post);
-    }  
-  } else {
+  //TODO!
+  function puzzle2b(post) {
     return (
-        <div class="post">
-          <div class="post-date">
-            {post.date}
-          <div class="post-name"> 
-            {post.poster} 
-          <div class="post-content">
-            {post.content}
-          </div>
-          {hasPicture(post)}
-          </div>
+      <div class="post">
+        <div class="post-date">
+          {post.date}
+        <div class="post-name"> 
+          {post.poster} 
+        <div class="post-content">
+          {post.content}
+        </div>
+        {hasPicture(post)}
         </div>
       </div>
-    )
+    </div>
+   )
   }
+
+
+
+
+
+  
 }

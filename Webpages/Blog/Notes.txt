@@ -10,9 +10,7 @@ Things to think about:
 
  - Kommentera mer kod. Framförallt chatten.
 
- - Ett pussel med ett citat. Antingen löst eller inte eller båda.
-
-- Pilar till Posts. 
+ - Ett pussel med ett citat. Antingen löst eller inte eller båda. 
 
 - Variabel till nycklar, ID i chatten (Py).
 
@@ -37,10 +35,6 @@ Things to think about:
 
 - Ge alt="..." till alla bilder.
 
-- Change home to use the .json file.
-
-- Move changeable variables to another file and import them. (started)
-
 - A solved puzzle on the blog could be about the usernames.
 
 - Documentation for puzzles, how they work and their names.
@@ -48,3 +42,9 @@ Things to think about:
 - CSS-file. Add colour names to make it easier to change the overall impression.
 
 - Kommentarer!
+
+- Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
+
+- Latest post i Home
+
+- Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
