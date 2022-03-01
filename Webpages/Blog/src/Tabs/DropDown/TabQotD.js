@@ -7,12 +7,14 @@
 */
 import React, {useState, useEffect} from 'react';
 import '../TabContent.css';
-import QuotesContent from './QuotesContent.js';
+import QuotesContent from './QuotesContent.json';
+import { changeQuoteTime } from '../../ChangeableVariables';
+
 
 export default function printingQuotes() {
 
   // Edit this to change the time each quote is displayed (in seconds).
-  const quoteTime = 5;
+  const quoteTime = changeQuoteTime;
 
   // Function to get a random integer between two limits.
   function getRandomInt(min, max) {
@@ -44,7 +46,7 @@ export default function printingQuotes() {
   }
 
     // Imported array is declared here.
-    const quotes = QuotesContent();
+    const quotes = QuotesContent;
     shuffle(quotes);
     
     // Handler of timing and displaying the quotes.

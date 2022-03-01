@@ -247,12 +247,10 @@
     overflow-y: visible;
 }
 /* Font for formatting of questions and answer text. */
-.answerEdwin {
+.answer {
     font-weight: normal;
 }
-.answerWilfred {
-    font-weight: normal;
-}
+
 .about-names {
     font-weight: bold;
 }

@@ -25,8 +25,8 @@ Date for 2c. (different from JSON, in JSON it is the date written, here the clue
 /* -------------------- Creators of the blog -------------------- */
 // Keep in mind that theser are in a puzzle and connected to the 
 // real names. EXPLAIN MORE WHEN PUZZLE IS ADDED AND SOLVED IN CHAT.
-const userName1 = "Robot1312113";
-const userName2 = "Fexjo";
+export const userName1 = "Robot1312113";
+export const userName2 = "Fexjo";
 
 const realFirstName1 = "Wilfred";
 const realLastName1 = "Malm";
@@ -37,6 +37,10 @@ const realLastName2 = "Fairchild";
 const userPicture1 = "";
 const userPicture2 = "";
 
+/* -------------------- Tab QotD -------------------- */
+
+// The time intervall of changing quotes in seconds.
+export const changeQuoteTime = 30;
 
 /* -------------------- Puzzle 2c -------------------- */
 

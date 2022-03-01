@@ -1,0 +1,37 @@
+[
+    {
+        "question": "Who are we?", 
+        "answerUser1": "I'm a 23-year old masters student who doesn't know what I'm suppsed to do with all the puzzles I make. Also, never EVER give me grapefruit!", 
+        "answerUser2": "An exchange student that went to Chalmers Institute of Technology a while back. I like to explore and take photos with my phone to remember places."
+    },
+    {
+        "question": "Why do we have a blog?", 
+        "answerUser1": "To keep in contact with Edwin and have someone solve my puzzles.", 
+        "answerUser2": "It's nice to be able to upload what you think about and pictures you like."
+    },
+    {
+        "question": "What are these puzzles you keep mentioning?", 
+        "answerUser1": "That is for you to figure out.", 
+        "answerUser2": "What puzzles?"
+    },
+    {
+        "question": "Can I copy your content?", 
+        "answerUser1": "Ctrl + C and Ctrl + V are sacred buttons not to be used here.", 
+        "answerUser2": "Small pieces, but please avoid to do so."
+    },
+    {
+        "question": "Why is the blog green?", 
+        "answerUser1": "Because Edwin wanted it to be.", 
+        "answerUser2": ":)"
+    },
+    {
+        "question": "Why do you not upload pictures of yourselves?", 
+        "answerUser1": "What's wrong with my robot?", 
+        "answerUser2": "I would like my online life to be kept separet from my IRL one."
+    },
+    {
+        "question": "What's 678^2/3698?", 
+        "answerUser1": "0x3F", 
+        "answerUser2": "≈124.306111412"
+    }
+]
