@@ -6,7 +6,7 @@
         "pictures": [["puzzles/NumbersPuzzle.png","A numbers puzzle."], ["puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["puzzles/duros.jpg", "A package of duros."], ["puzzles/Computer.png", "A computer drinking coffee." ]],
         "isPuzzle": true,
         "puzzleNr": "2c",
-        "comment": "This post belongs to puzzle 2c-a."
+        "comment": "This is the main post to puzzle 2c."
     },
     {
         "date": "20-02-22",
@@ -14,7 +14,7 @@
         "content": "I never told you, but my favorite dinosaurs are Aardonyx, Datanglong and Ichthyosaurus.",
         "isPuzzle": true,
         "puzzleNr": "2c",
-        "comment": "This post belongs to puzzle 2c-b."
+        "comment": "This post is a helper to puzzle 2c."
     },
     {
         "date": "21-02-22",
@@ -22,7 +22,7 @@
         "content": "Man, this latest course of mine, LMA017, was so fun. Way too little math for my taste though.",
         "isPuzzle": true,
         "puzzleNr": "2c",
-        "comment": "This post belongs to puzzle 2c-b."
+        "comment": "This post is a helper to puzzle 2c"
     },
     {
         "date": "13-02-22",

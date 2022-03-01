@@ -1,3 +1,10 @@
+/*
+  This file reads the content in the file AboutContent.json
+  and writes it as a question-answer sheet.
+  The names of the users are imported
+  from the ChangeVariables file (userName1/userName2).
+*/
+
 import React from 'react';
 import '../TabContent.css';
 import AboutContent from './AboutContent.json';

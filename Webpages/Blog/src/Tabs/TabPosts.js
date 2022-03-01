@@ -10,12 +10,9 @@
 */
 import React, { useState } from 'react';
 import './TabContent.css';
-import PostContentOrg from './PostContentOrg.js';
 import PostContent from './PostContent.json';
-import Robot from '../img/Bild2png.png';
-import Salad from '../img/ceasarsalad-removebg-preview.png';
 import PuzzleHandler from './PostPuzzles.js';
-
+import { userPicture1, userPicture2 } from '../ChangeableVariables';
 
 
 export default function Posts() {
@@ -105,9 +102,9 @@ export default function Posts() {
           <button class="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
          </div>
           <div class="author-pictures">
-           <img src={Robot} class="image" ></img>
+           <img src={userPicture1} class="image" ></img>
            <p>Hello, I'm Robot1312113! Join us in the chat!</p>
-           <img src={Salad} class="image"></img>
+           <img src={userPicture2} class="image"></img>
            <p>Hello! I'm Fexjo. If you want to know more about the authors, go to About.</p>
           </div>
          </div>
