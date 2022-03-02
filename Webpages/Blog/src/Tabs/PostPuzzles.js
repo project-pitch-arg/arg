@@ -20,7 +20,7 @@ export default function Puzzles(post) {
     return (
         <div class="post">
           <div class="post-date">
-            {post.date}
+            {post.date[0]}.{post.date[1]}.{post.date[2]}
           <div class="post-name"> 
             {post.poster} 
           <div class="post-content">
@@ -261,7 +261,7 @@ export default function Puzzles(post) {
     return (
       <div class="post">
         <div class="post-date">
-          {post.date}
+          {post.date[0]}.{post.date[1]}.{post.date[2]}
         <div class="post-name"> 
           {post.poster} 
         <div class="post-content">
@@ -273,10 +273,4 @@ export default function Puzzles(post) {
     </div>
    )
   }
-
-
-
-
-
-  
 }
