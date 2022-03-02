@@ -1,12 +1,18 @@
 import { useState } from 'react';
 import axios from 'axios';
+import CreateAccount from './CreateAccount';
 
 const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
 
+var haveAccount = true;
+
 const Modal = () => {
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  if (!haveAccount) {return <CreateAccount />;} //TODO: fix
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,6 +32,11 @@ const Modal = () => {
     }
   };
 
+  function createAccount() {
+    haveAccount = false;
+    return window.location.reload(false);
+  }
+
   return (
     <div className="wrapper">
       <div className="form">
@@ -39,6 +50,11 @@ const Modal = () => {
             </button>
           </div>
         </form>
+        <div align="right">
+          <button onclick={createAccount} className="buttonCA">
+            <span>Create account</span>
+          </button>
+        </div>
         <h1>{error}</h1>
       </div>
     </div>

@@ -220,7 +220,7 @@ export default function Puzzles(post) {
   // See documentation for an explanation of the puzzle.
   // TODO: add name of document.
   function puzzle2c(post) {
-    
+
     // This post has the puzzle in it.
     if (post.comment == "This is the main post to puzzle 2c.") {
       return (

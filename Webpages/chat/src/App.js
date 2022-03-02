@@ -7,13 +7,11 @@ import './App.css';
 const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
 
 const App = () => {
-  if (!localStorage.getItem('username')) return <LoginForm />;
+  if (!localStorage.getItem('username')) return <LoginForm/>;
 
   function logOut () {
-    
     localStorage.removeItem('username');
     localStorage.removeItem('password');
-    <LoginForm/>;
     return window.location.reload(false);
   }
 
