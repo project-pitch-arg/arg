@@ -9,24 +9,20 @@
     To change quotes, got to QuotesContent.json.
 */
 
-/* TO ADD
-Usernames.
-Real names.
-User pictures (file paths).
 
-Key for 2c.
-Answer to 2c.
-Date for 2c. (different from JSON, in JSON it is the date written, here the clue date).
-// Skulle kunna ha att alla som är ledtrådar har samma märkliga datum för att göra det lättare att hitta dem,
-// alltså den med favoritdinosaurier och kurskoder. Tror det kan vara svårt annars.
+// Import picutres you wish to use, with the relative
+// path as seen from this file.
+import Robot from './img/Robot1312113.png';
+import CaesarSalad from './img/Caesar.png';
 
-*/
+
 
 /* -------------------- Creators of the blog -------------------- */
-// Keep in mind that theser are in a puzzle and connected to the 
+
+// Keep in mind that these are in a puzzle and connected to the 
 // real names. EXPLAIN MORE WHEN PUZZLE IS ADDED AND SOLVED IN CHAT.
-const userName1 = "Robot1312113";
-const userName2 = "Fexjo";
+export const userName1 = "Robot1312113";
+export const userName2 = "Fexjo";
 
 const realFirstName1 = "Wilfred";
 const realLastName1 = "Malm";
@@ -34,17 +30,27 @@ const realLastName1 = "Malm";
 const realFirstName2 = "Edwin";
 const realLastName2 = "Fairchild";
 
-const userPicture1 = "";
-const userPicture2 = "";
+export const userPicture1 = Robot;
+export const userPicture2 = CaesarSalad;
 
+/* -------------------- Tab QotD -------------------- */
+
+// The time intervall of changing quotes in seconds.
+export const changeQuoteTime = 30;
 
 /* -------------------- Puzzle 2c -------------------- */
 
-const answerToBeEncrypted = "";
+export const answerToBeEncrypted = "http://ThisWillBeAWebSiteAddress.later";
 
-// Explain format. List, letter, number.
-const keyForEncryption = "";
+// This key needs to be an array with smaller arrays
+// each containing first a letter as a string and
+// then an integer. The number can at most be 100.
+// Example: [["m", 11],["d", 28], ["o", 57], ["a", 80]]
+export const keyForEncryption = [["m", 11],["d", 28], ["o", 57], ["a", 80]];
 
-// Explain what it needs to contain now.
-const dateAsClue = "";
+// See documentation (TODO: write this) for what
+// meaning this clue has. It replaces the date in
+// PostContent.json for the post belonging to puzzle 2c
+// with this clue.
+export const dateAsClue = "24-80A-22";
 

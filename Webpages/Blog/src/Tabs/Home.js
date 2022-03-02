@@ -1,23 +1,27 @@
 import React from 'react';
 import './TabContent.css';
 import {Link} from 'react-router-dom';
-import PostContent from './PostContentOrg.js';  //CHANGE LATER!
+import PostContent from './PostContent.json';
 import Help from '../TopBar/TopBar';
 import dino from '../img/babydino-removebg-preview.png';
-import robot from '../img/Bild2png.png';
-import ceasar from '../img/ceasarsalad-removebg-preview.png';
+//import robot from '../img/Robot1312113.png';
+//import ceasar from '../img/CaesarSalad.jpeg';
 import helpbutton from '../img/helpTest.png'
 
+import { userName1, userName2, userPicture1, userPicture2 } from '../ChangeableVariables';
+
 export default function Walk() {
-    const Content = PostContent();
-    const item = Content[Content.length-1];
+    
+  const Content = PostContent;
+  const item = Content[Content.length-1]; //THis is not the latest post depending on how we fix the date! Does not work with pictuers now!
+
     return (
       <div>
         <div class='content content-home-1'>
           <div class="help-text">
             Welcome to Daily Thoughts Website
             <br></br>
-            Home of Robot1312113 and Fexjo
+            Home of {userName1} and {userName2}
             <br></br>
             Hope you enjoy your stay!
           </div>
@@ -51,7 +55,7 @@ export default function Walk() {
         
         <div class='content content-home-2'>
           <div>
-            <img class="home-image" src={robot} />
+            <img class="home-image" src={userPicture1} />
           </div>
           
           <div>
@@ -59,7 +63,7 @@ export default function Walk() {
           </div>
           
           <div >
-            <img class="home-image" src={ceasar} />
+            <img class="home-image" src={userPicture2} />
           </div>
         </div>
       </div>

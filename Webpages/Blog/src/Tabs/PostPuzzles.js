@@ -7,8 +7,34 @@
 */
 
 import React from 'react';
+import { answerToBeEncrypted, keyForEncryption, dateAsClue } from '../ChangeableVariables';
 
 export default function Puzzles(post) {
+
+  if(post.isPuzzle) {
+    switch (post.puzzleNr) {
+      case "2b": return puzzle2b(post);
+      case "2c": return puzzle2c(post);
+    }  
+  } else {
+    return (
+        <div class="post">
+          <div class="post-date">
+            {post.date}
+          <div class="post-name"> 
+            {post.poster} 
+          <div class="post-content">
+            {post.content}
+          </div>
+          {hasPicture(post)}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+
+/* -------------------- Functions -------------------- */  
 
   // This function changes the color of the letters in a post, where the 
   // argument count is the "x":th letter of that type.
@@ -124,7 +150,7 @@ export default function Puzzles(post) {
   // The encoding is according to Mexican Army Wheels.
   function encodedMsg(toBeEncoded) {
     toBeEncoded = toBeEncoded.toLowerCase();
-    const key = [["m", 11],["d", 28], ["o", 57], ["a", 80]]; //Change to have different letters.
+    const key = keyForEncryption; //TODO: use the keyForEncryption everywhere instead?
 
     // The different rings on a mexican wheel.
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -194,17 +220,18 @@ export default function Puzzles(post) {
   // See documentation for an explanation of the puzzle.
   // TODO: add name of document.
   function puzzle2c(post) {
-    /*Change date to be a (variable) clue later */
-    if(post.comment == "This post belongs to puzzle 2c-a.") {
+    
+    // This post has the puzzle in it.
+    if (post.comment == "This is the main post to puzzle 2c.") {
       return (
         <div class="post">
           <div class="post-date">
-            24-80A-22
+            {dateAsClue}
           <div class="post-name"> 
             {post.poster} 
           {changeString(post,changeColor(post, "tda", 2),changeFont(post, "eda", 1))}
           <p id="test" style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
-              {encodedMsg("encoded")}
+              {encodedMsg(answerToBeEncrypted)}
           </p>
           {hasPicture(post)}
           </div>
@@ -212,6 +239,25 @@ export default function Puzzles(post) {
       </div>
      )
     }
+    // Else, it is one of the helper posts which also has a strange date as clue.
+    return (
+      <div class="post">
+        <div class="post-date">
+          {dateAsClue}
+        <div class="post-name"> 
+          {post.poster} 
+        <div class="post-content">
+          {post.content}
+        </div>
+        {hasPicture(post)}
+        </div>
+      </div>
+    </div>
+   )
+  }
+
+  //TODO!
+  function puzzle2b(post) {
     return (
       <div class="post">
         <div class="post-date">
@@ -228,24 +274,9 @@ export default function Puzzles(post) {
    )
   }
 
-  if(post.isPuzzle) {
-    switch (post.puzzleNr) {
-      case "2c": return puzzle2c(post);
-    }  
-  } else {
-    return (
-        <div class="post">
-          <div class="post-date">
-            {post.date}
-          <div class="post-name"> 
-            {post.poster} 
-          <div class="post-content">
-            {post.content}
-          </div>
-          {hasPicture(post)}
-          </div>
-        </div>
-      </div>
-    )
-  }
+
+
+
+
+  
 }
