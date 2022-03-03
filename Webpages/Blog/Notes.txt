@@ -5,6 +5,7 @@ Things to think about:
 
  - Bilder till About. Uppdatera text.
     - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
+    - Ändra kontaktmetod till chatten (ändra också footer i chat)
 
  - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
 
@@ -15,9 +16,6 @@ Things to think about:
 - Variabel till nycklar, ID i chatten (Py).
 
 - Add logo to website
-
-- Funktion för datum.
-    - Lägg automatiskt posts i datumordning.
 
 - Blog design
 

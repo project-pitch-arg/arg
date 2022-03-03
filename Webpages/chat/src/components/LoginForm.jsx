@@ -6,13 +6,17 @@ const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
 
 var haveAccount = true;
 
+export var haveAccount;
+
 const Modal = () => {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  if (!haveAccount) {return <CreateAccount />;} //TODO: fix
+  haveAccount = false;
+  //console.log("hill");
+  //if (!haveAccount) {haveAccount=true; console.log("hello");return <CreateAccount />;} //TODO: fix
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,8 +37,9 @@ const Modal = () => {
   };
 
   function createAccount() {
-    haveAccount = false;
-    return window.location.reload(false);
+    localStorage.setItem('getAccount', true);
+    window.location.reload();
+    return;
   }
 
   return (
@@ -50,8 +55,8 @@ const Modal = () => {
             </button>
           </div>
         </form>
-        <div align="right">
-          <button onclick={createAccount} className="buttonCA">
+        <div align="center">
+          <button onClick={createAccount} className="buttonCA">
             <span>Create account</span>
           </button>
         </div>
