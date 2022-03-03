@@ -52,5 +52,5 @@ export const keyForEncryption = [["m", 11],["d", 28], ["o", 57], ["a", 80]];
 // meaning this clue has. It replaces the date in
 // PostContent.json for the post belonging to puzzle 2c
 // with this clue.
-export const dateAsClue = "24-80A-22";
+export const dateAsClue = "2022.80A.24";
 
