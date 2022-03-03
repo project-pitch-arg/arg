@@ -48,3 +48,7 @@ Things to think about:
 - Latest post i Home
 
 - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
+
+- Code of conduct-knapp och dokument (i About?).
+
+- Jämför med kodstandard.
