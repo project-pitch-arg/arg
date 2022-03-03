@@ -30,7 +30,7 @@ export default class Account extends Component{
             return (
                 <div class="standardDivList">
                     <h1>{this.account.name}</h1>
-                    <img src={require('./DropDown/images/'+ this.account.name +".jpg")} alt=""/>
+                    <img src={require('../images/'+ this.account.name +".jpg")} alt=""/>
                     <h2>PhoneNumber:{this.account.phoneNumber}</h2>
                     <h2>Email:{this.account.email}</h2>
                 </div>

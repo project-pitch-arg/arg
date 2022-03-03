@@ -48,56 +48,56 @@ export default class TopBar extends Component {
       render(){
       return (
             <div class="topbar">
-            <BrowserRouter>
-              <ul id='topbar-ul'>
-              {
-                this.locations.map((file, index) => {
-                    if(file === "Account"){
-                        return (<li id='topbar-li-Right' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
-                    }
-                    else {
-                        return (<li id='topbar-li' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
-                    }
-                })
-              }
-                <li id="Dropdown" key="Dropdown">
-                    <div class="dropdown">
-                    <button class="dropdown-button">Information</button>
-                    <div class="dropdown-content">{
-                        this.dropdownLocations.map((file) => {
-                                return (<Link id={file} key={file.toString()} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link>);
-                        })
-                        }
-                        </div>
-                    </div> 
-                </li>
-              </ul>
-              <Routes>
-                  <Route path="" element={<Home/>}/>
-                  <Route path="*" element={<Wrong />} />
+                <BrowserRouter>
+                  <ul id='topbar-ul'>
                   {
-                    this.locations.map((file) => {
-                        const Tag = lazy(() => import("../Tabs/" + file));
-                            return (<Route key={file} exact path={"/" + file} element={
-                              <Suspense fallback={<Wrong />}>
-                                  <Tag/>
-                              </Suspense>
-                          }/>);
+                    this.locations.map((file, index) => {
+                        if(file === "Account"){
+                            return (<li id='topbar-li-Right' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
                         }
-                    )}
-                  {
-                    this.dropdownLocations.map((file) => {
-                        const Tag = lazy(() => import("../Tabs/DropDown/" + file));
-                            return (<Route exact path={"/" + file} element={
-                              <Suspense fallback={<Wrong />}>
-                                  <Tag/>
-                              </Suspense>
-                          }/>);
+                        else {
+                            return (<li id='topbar-li' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
+                        }
                     })
                   }
-              }
-              </Routes>
-              </BrowserRouter>
+                    <li id="Dropdown" key="Dropdown">
+                        <div class="dropdown">
+                        <button class="dropdown-button">Information</button>
+                        <div class="dropdown-content">{
+                            this.dropdownLocations.map((file) => {
+                                    return (<Link id={file} key={file.toString()} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link>);
+                            })
+                            }
+                            </div>
+                        </div>
+                    </li>
+                  </ul>
+                  <Routes>
+                      <Route path="" element={<Home/>}/>
+                      <Route path="*" element={<Wrong />} />
+                      {
+                        this.locations.map((file) => {
+                            const Tag = lazy(() => import("../Tabs/" + file));
+                                return (<Route key={file} exact path={"/" + file} element={
+                                  <Suspense fallback={<Wrong />}>
+                                      <Tag/>
+                                  </Suspense>
+                              }/>);
+                            }
+                        )}
+                      {
+                        this.dropdownLocations.map((file) => {
+                            const Tag = lazy(() => import("../Tabs/DropDown/" + file));
+                                return (<Route exact path={"/" + file} element={
+                                  <Suspense fallback={<Wrong />}>
+                                      <Tag/>
+                                  </Suspense>
+                              }/>);
+                        })
+                      }
+                  }
+                  </Routes>
+               </BrowserRouter>
             </div>
         )
         }

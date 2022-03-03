@@ -1,17 +1,14 @@
 import React, {Component} from 'react';
 import './TabContent.css';
 import News from './HomeTab/News';
-import Graphs from './HomeTab/Graphs';
-import Quiz from './HomeTab/Quiz';
-
+import Extra from './HomeTab/Extra';
 
 export default class Home extends Component{
     render(){
         return (
-                <div class="home">
-                        <News/>
-                        <Graphs/>
-                        <Quiz/>
+                <div class="homeDiv" style={{ overflowY: 'scroll'}}>
+                    <News/>
+                    <Extra/>
                 </div>
             )
     }

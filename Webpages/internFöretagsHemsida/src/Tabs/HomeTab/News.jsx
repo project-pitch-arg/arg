@@ -13,9 +13,9 @@ export default class News extends Component{
         this.news = [];
     }
 
-    async componentDidMount(){
+    componentDidMount(){
         this.getNews.bind(this);
-        await this.getNews();
+        this.getNews();
     }
 
     async getNews(){
@@ -26,7 +26,7 @@ export default class News extends Component{
     render(){
         if(this.state.dataReceived){
             return (
-                <div class="newsBlock">
+                <div class="newsBlock" style={{overflowY: 'scroll'}}>
                     <h1>News</h1>
                     {
                         Object.keys(this.news).map((key) => {

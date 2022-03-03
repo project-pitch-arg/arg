@@ -6,7 +6,7 @@ import axios from 'axios';
 
 export default class Policy extends Component{
 
-    state = { dataReceived: false,numberOfPages: 0, pageNumber: 1, fileName: null, hidden: true}
+    state = { dataReceived: false, numberOfPages: 0, pageNumber: 1, fileName: null, hidden: true}
 
     constructor(props){
         super(props);
