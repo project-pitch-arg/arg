@@ -31,6 +31,7 @@ export default class News extends Component{
                     {
                         Object.keys(this.news).map((key) => {
                             return (<List
+                               class="listItem"
                                itemLayout="horizontal"
                                dataSource={key}
                                renderItem={item => (
