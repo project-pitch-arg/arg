@@ -58,7 +58,7 @@
     {
         "poster": "Robot1312113",
         "content": "Have you figured out what our usernames mean yet? I'll give you a hint for Fexjo. What is this?",
-        "pictures": [["postImages/Caesar.png"]],
+        "pictures": [["postImages/Caesar.png", "Some nice salad."]],
         "isPuzzle": false
     },
     {
@@ -76,6 +76,47 @@
         "poster": "Fexjo",
         "content": "Saw this nice-looking boat today. Somehow, it did not rain although the sky was grey all day.",
         "pictures": [["postImages/Boat.jpg", "Picture of a boat."]],
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I watched an old TED talk the other day about the sound of black holes. It was performed by a woman named Janna Levin in 2011 if anyone is interested in attending. To liken a black hole to a drum and to hear the sound and composition of objects existing in a noiseless vacuum, it's truly something I recommend other people take a gander at as well. Revisiting topics like this, even if they're a few years old now, is often an interesting and fascinating experience. Surmise to say, I think i'm going to go through a bunch of old TED talks over the coming week. It just struck me as in the mood.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "My god, I almost had a heart attack today during lunch. Someone, I still don't know who, had put grapefruit, I reiterate, GRAPEFRUIT, in my salad. (‡▼益▼) Is there any worse crime a man can commit? I doubt it. Luckily I was observant enough to not have to suffer through something as terrifying as, and it pains me to even imagine it, eat it. ..・ヾ(。＞＜)シ",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I feel that lately Robot1312113 has been in a peculiar mood. I'm not sure what's causing it but hopefully he'll turn around soon. On another note the weirdest thing happened today. I was about to eat lunch and grabbed my salad from the fridge like usual. But when I sat down imagine my surprise when I noticed that there was no grapefruit in my salad! I thought I had done a regular grapefruit and avocado salad, something I don't eat often but that can be quite delicious when i'm in the mood. Something must have happened to it, I will have to keep an eye out but it will remain a mystery for now.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I figured that we haven't really showed much presence for our school of choice lately and just thought i'd leave this here. To commemorate all the good times we've had.",
+        "pictures": [["postImages/ChalmersLogo.png", "Chalmers logo in gold."]],
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "You know, one of my friends is working part time as a programmer at a lesser known company. He has developed a routine of multiple cups of coffee a day from the extra hours he works on top of studying. He keeps telling me he is a staunch supporter of python code but I know that his heart lies with java. (￣ω￣)",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "When people tell me to learn R, they say I should familiarize myself with an entirely new programming language. When they tell a baby to learn R, they just want them to pronounce a letter correctly. Life is unfair. (╥﹏╥)",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "Today, I have a simple query. (⌐■_■) Do you think dinosaurs were hot-blooded or cold-blooded? There are theories pointing toward either case so I would urge you to think about it yourself. What makes most sense to you? ",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "My camera just got smashed after I stumbled and dropped it. Now i'm in the market for a new one. I only have one issue. Cameras are so expensive! It's been so long since I had to buy a new one that I had forgotten the price of quality. I might just have to stick to my guns and go with a cheaper alternative. I'm not made of money after all, especially not for what is, ultimately, just a hobby.",
         "isPuzzle": false
     }
 ]
