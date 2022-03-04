@@ -16,9 +16,6 @@ Things to think about:
 
 - Add logo to website
 
-- Funktion för datum.
-    - Lägg automatiskt posts i datumordning.
-
 - Blog design
 
 - Lägga in data i chat.
@@ -42,6 +39,10 @@ Things to think about:
 - CSS-file. Add colour names to make it easier to change the overall impression.
 
 - Kommentarer!
+
+- Line break i JSON.
+
+- Allmän guide till Allt -kod.
 
 - Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
 
