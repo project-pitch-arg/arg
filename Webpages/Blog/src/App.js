@@ -19,6 +19,12 @@ import logo from './logo.svg';
 
 function App() {
 
+  // This is to ensure that PostContent is sorted 
+  // and that everything has a date the first time the website is up. 
+  // This way the home page will be able to display the latest post 
+  // without having to seperately load the Posts tab first.
+  Posts();
+
   return (
     
     <div className="App"> 
