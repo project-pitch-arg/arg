@@ -11,6 +11,8 @@ import { answerToBeEncrypted, keyForEncryption, dateAsClue } from '../Changeable
 
 export default function Puzzles(post) {
 
+  // Checks if a post is a puzzle and in that case which puzzle it is.
+  // Depending on the result it will return different displays.
   if(post.isPuzzle) {
     switch (post.puzzleNr) {
       case "2b": return puzzle2b(post);
@@ -60,7 +62,9 @@ export default function Puzzles(post) {
   }
 
   // This function changes the font of the letters in a post, where the 
-  // argument count is the "x":th letter of that type.
+  // argument count is the "x":th letter of that type. It does this 
+  // with the help of the previous 'changeColor' function that works
+  // in a similar way.
   function changeFont(post,letter, count) {
     var col = changeColor(post, letter, count);
     col[0][1] = "font";
@@ -69,12 +73,17 @@ export default function Puzzles(post) {
     return col;
   }
 
-  // ???
+  // This function takes two results from either 'changeColor' or
+  // 'changeFont' or both and appends them together to then return it in
+  // a HTML format appropriate for the post itself.
   function changeString(post, array1, array2) {
     var totalArray = array1.concat(array2);
     var sortedArray = totalArray.sort(function(a,b){return (a[0]-b[0])});
     
     return (
+      // With the help of the 'helpChangeString' function each individual 
+      // letter that is specified is modified by either it's color or
+      // it's font.
       <div class="post-content">
         {post.content.slice(0,sortedArray[0][0])}
         {helpChangeString(post, sortedArray[0])}
@@ -93,8 +102,9 @@ export default function Puzzles(post) {
       )
   }
 
-  // Function for changing both color and font
-  // on certain places in a string.
+  // Helper function to assign a character either a change in
+  // font or a change in color and then help return that
+  // in a proper HTML format.
   function helpChangeString(post, element) {
     if (element[1] == "color") {
       return (<font color="rgb(0,0,51)">{post.content[element[0]]}</font>)
@@ -106,7 +116,7 @@ export default function Puzzles(post) {
   }
 
   // Check if the post has picture(s) and
-  // if it does, return it/them.
+  // if it does, return it/them in proper HTML format.
   function hasPicture(post) {
     if(post.hasOwnProperty('pictures')) {
       return (<div class="post-images">
@@ -134,6 +144,8 @@ export default function Puzzles(post) {
     for (var a = 0; a < amount; a++) {
         tempNr = array.shift();
         array.push(tempNr);
+
+        // Old code that is both slower and non-functional.
       /*for (var i = array.length-1; i >= 0; i--) {
           if(i == 0) {
             tempArray[array.length - 1] = array[i];
@@ -147,10 +159,9 @@ export default function Puzzles(post) {
   }
 
   // Encodes a string according to a key of letters and numbers.
-  // The encoding is according to Mexican Army Wheels.
+  // The encoding is according to the Mexican Army Wheel Cipher.
   function encodedMsg(toBeEncoded) {
     toBeEncoded = toBeEncoded.toLowerCase();
-    const key = keyForEncryption; //TODO: use the keyForEncryption everywhere instead?
 
     // The different rings on a mexican wheel.
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -160,14 +171,14 @@ export default function Puzzles(post) {
     var highestNumbers = [79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 , 99, 100, "", "", "", ""];
 
     // Find indexes for placements of all keys.
-    var letterIndexLow = letters.indexOf(key[0][0]);
-    var lowNumbersIndex = lowNumbers.indexOf(key[0][1]);
-    var letterIndexMedium = letters.indexOf(key[1][0]);
-    var mediumNumbersIndex = mediumNumbers.indexOf(key[1][1]);
-    var letterIndexLarge = letters.indexOf(key[2][0]);
-    var largeNumbersIndex = largeNumbers.indexOf(key[2][1]);
-    var letterIndexHighest = letters.indexOf(key[3][0]);
-    var highestNumbersIndex = highestNumbers.indexOf(key[3][1]);
+    var letterIndexLow = letters.indexOf(keyForEncryption[0][0]);
+    var lowNumbersIndex = lowNumbers.indexOf(keyForEncryption[0][1]);
+    var letterIndexMedium = letters.indexOf(keyForEncryption[1][0]);
+    var mediumNumbersIndex = mediumNumbers.indexOf(keyForEncryption[1][1]);
+    var letterIndexLarge = letters.indexOf(keyForEncryption[2][0]);
+    var largeNumbersIndex = largeNumbers.indexOf(keyForEncryption[2][1]);
+    var letterIndexHighest = letters.indexOf(keyForEncryption[3][0]);
+    var highestNumbersIndex = highestNumbers.indexOf(keyForEncryption[3][1]);
 
     // Shift the arrays to turn the rings according to the key.
     lowNumbers = shiftArrayWrap(lowNumbers, (lowNumbersIndex-letterIndexLow));
@@ -175,19 +186,27 @@ export default function Puzzles(post) {
     largeNumbers = shiftArrayWrap(largeNumbers, (largeNumbersIndex-letterIndexLarge));
     highestNumbers = shiftArrayWrap(highestNumbers, (highestNumbersIndex-letterIndexHighest));
 
-    // Create some variable.
+    // Create some variables to help the encoding.
     var encodedArray = new Array(toBeEncoded.length);
     var tempIndex;
     var whichArray;
 
-    // Encode each letter with a random choice of ring.
+    // Encode each letter with a number from a 
+    // random choice of the four rings.
     for (var i = 0; i < toBeEncoded.length; i++) {
         tempIndex = letters.indexOf(toBeEncoded[i]);
+
+        // If the character isn't a letter,
+        // keep it as it is without encoding it.
         if(tempIndex == -1) {
             encodedArray[i] = toBeEncoded[i];
             continue;
         }
+
         whichArray = getRandomInt(1,5)
+
+        // Choose a random ring to take the encoding from
+        // and apply it to the output.
         if(whichArray == 1) {
             encodedArray[i] = lowNumbers[tempIndex];   
         } else if (whichArray == 2) {
@@ -202,6 +221,9 @@ export default function Puzzles(post) {
             }
         }
     }
+
+    // Format the output appropriately by displaying
+    // each element of the array next to each other.
     encodedArray = encodedArray.join("");
 
     return encodedArray;
@@ -256,7 +278,8 @@ export default function Puzzles(post) {
    )
   }
 
-  //TODO!
+  //TODO! Puzzle is implemented but doesn't require it's own function.
+  // Not sure what to do here.
   function puzzle2b(post) {
     return (
       <div class="post">

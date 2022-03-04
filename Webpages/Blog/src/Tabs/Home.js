@@ -10,8 +10,13 @@ import PuzzleHandler from './PostPuzzles.js';
 
 import { userName1, userName2, userPicture1, userPicture2, PostContent } from '../ChangeableVariables';
 
-export default function Walk() {
+// TODO! Make the Home page look nicer.
+
+export default function Home() {
     
+    // Returns the appearance of the Home page
+    // along with a button to reach the 'About'
+    // page as well as the latest Post from 'Posts'.
     return (
       <div>
         <div class='content content-home-1'>

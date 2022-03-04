@@ -5,6 +5,8 @@ import {Link} from "react-router-dom";
 
 export default function TopBar(props) {
 
+    // This is to change the color of a highlighted and non-highlighted item
+    // by changing their class for CSS.
     const highlightActive = (path) => {
         var oldActiveElements = document.getElementsByClassName('active');
         if (oldActiveElements.length > 0) {
@@ -13,6 +15,9 @@ export default function TopBar(props) {
             }
           } 
     
+        // This switch statement is included in the function and checks 
+        // which button is currently the active one and highlights it.
+        // By 'active' I mean the tab that is currently being viewed.
         switch (path) {
             case '':
                 document.getElementById("tab-home").classList.add('active');
@@ -44,6 +49,7 @@ export default function TopBar(props) {
         }
       }
     
+      // This is a helper function to locate which tab is currently the active one.
       useEffect(() => {
         var path = window.location.pathname.split("/")[1];
     
@@ -51,6 +57,8 @@ export default function TopBar(props) {
       })
     
       return (
+          // This is a HTML statement to display the topbar and at the same time implement the above functions.
+          // Various CSS classes help format and display the buttons available on the topbar.
             <div class="topbar">
               <ul id='topbar-ul'>
                 <li class='topbar-li'><Link id="tab-home" onClick={() => highlightActive('')} to ='/'> Home </Link></li>

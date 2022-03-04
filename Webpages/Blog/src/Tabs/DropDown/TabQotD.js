@@ -13,9 +13,6 @@ import { changeQuoteTime } from '../../ChangeableVariables';
 
 export default function printingQuotes() {
 
-  // Edit this to change the time each quote is displayed (in seconds).
-  const quoteTime = changeQuoteTime;
-
   // Function to get a random integer between two limits.
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -60,10 +57,10 @@ export default function printingQuotes() {
         let delay;
 
         // If statement to check if the end of the array is reached.
-        if (message < quotes.length-1) {
+        if (message < quotes.length - 1) {
 
-          // Start timer for 1000*quoteTime milliseconds.
-          delay = setTimeout(() => setMessage(message+1), 1000 * quoteTime);
+          // Start timer for 1000 * quoteTime milliseconds.
+          delay = setTimeout(() => setMessage(message + 1), 1000 * changeQuoteTime);
         } else {
 
             // Start over and shuffle array after reaching the end.

@@ -12,12 +12,10 @@ import { userName1, userName2 } from '../../ChangeableVariables';
 
 export default function DisplayAbout() {
 
-    const content = AboutContent;
-
     return (
     <div class="content">
      <div class="questionlist">
-        {content.map(item => {
+        {AboutContent.map(item => {
           return (
             <div class="question">
                 {item.question} 

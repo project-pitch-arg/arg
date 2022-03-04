@@ -88,7 +88,7 @@ export default function Posts() {
       return;
     })}
 
-    posts.sort(function(a,b){return compareDates(a.date, b.date)});
+    posts.sort(function(post1,post2){return compareDates(post1.date, post2.date)});
 
     return posts;
 
@@ -108,26 +108,26 @@ export default function Posts() {
     if(date1[2] > date2[2]) {
       return 1;
     }
-    // The second date is larger.
+    // The second date is larger. Thus returning a negative value.
     return -1;
   }
 
-  // Function which changes indexes to previous (later date) posts.
+  // Function which changes indexes to previous (older) posts.
   function prevPage() {
-    if (start-postsPerPage < 0) {
+    if (start - postsPerPage < 0) {
       firstPage();
     } 
     else {
-      lastChange(last-postsPerPage);
-      startChange(start-postsPerPage);
+      lastChange(last - postsPerPage);
+      startChange(start - postsPerPage);
       setDL(false);
       setDN(false);
     }
   }
 
-  // Function which changes indexes to following (earlier date) posts.
+  // Function which changes indexes to following (newer) posts.
   function nextPage() {
-    if(Content.length < last+postsPerPage) {
+    if(Content.length < last + postsPerPage) {
       lastPage();
     }
     else {
@@ -138,7 +138,7 @@ export default function Posts() {
     } 
   }
 
-  // Function to take you back to the first page of posts (most recent date).
+  // Function to take you back to the first page of posts (the oldest ones).
   function firstPage() {
     lastChange(postsPerPage);
     startChange(0);
@@ -150,7 +150,7 @@ export default function Posts() {
     }
   }
 
-  // Function to take the user to the last page of posts (the oldest ones).
+  // Function to take the user to the last page of posts (most recent date).
   function lastPage(){
     lastChange(Content.length);
     startChange(Content.length-postsPerPage);

@@ -36,7 +36,8 @@ export const userPicture2 = CaesarSalad;
 
 /* -------------------- Tab QotD -------------------- */
 
-// The time intervall of changing quotes in seconds.
+// The time interval of changing quotes in seconds.
+// Edit this to change the time each quote is displayed.
 export const changeQuoteTime = 30;
 
 /* -------------------- Puzzle 2c -------------------- */
@@ -55,9 +56,13 @@ export const keyForEncryption = [["m", 11],["d", 28], ["o", 57], ["a", 80]];
 // with this clue.
 export const dateAsClue = "2022.80A.24";
 
-// Global variables to access sorted posts through other tabs. 
+/* -------------------- PostContent -------------------- */
+
+// Global list to access sorted posts through other tabs. 
 // Like the Home page for example.
 export var PostContent = Content;
+
+// Function that is needed to change the list in other tabs than this one.
 export function setPostContent(content) {
     PostContent = content;
 }

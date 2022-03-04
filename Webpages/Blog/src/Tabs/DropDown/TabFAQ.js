@@ -1,6 +1,9 @@
 import React from 'react';
 import '../TabContent.css';
 
+// This file is currently unused. The 'About' page
+// is being used instead as a fascimile.
+
 export default function Walk() {
     return (
         <div class="content">
