@@ -14,6 +14,7 @@
 // path as seen from this file.
 import Robot from './img/Robot1312113.png';
 import CaesarSalad from './img/Caesar.png';
+import Content from './Tabs/PostContent.json';
 
 
 
@@ -53,4 +54,11 @@ export const keyForEncryption = [["m", 11],["d", 28], ["o", 57], ["a", 80]];
 // PostContent.json for the post belonging to puzzle 2c
 // with this clue.
 export const dateAsClue = "2022.80A.24";
+
+// Global variables to access sorted posts through other tabs. 
+// Like the Home page for example.
+export var PostContent = Content;
+export function setPostContent(content) {
+    PostContent = content;
+}
 

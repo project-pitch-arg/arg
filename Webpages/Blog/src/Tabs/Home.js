@@ -1,20 +1,17 @@
 import React from 'react';
 import './TabContent.css';
 import {Link} from 'react-router-dom';
-import PostContent from './PostContent.json';
 import Help from '../TopBar/TopBar';
 import dino from '../img/babydino-removebg-preview.png';
 //import robot from '../img/Robot1312113.png';
 //import ceasar from '../img/CaesarSalad.jpeg';
 import helpbutton from '../img/helpTest.png'
+import PuzzleHandler from './PostPuzzles.js';
 
-import { userName1, userName2, userPicture1, userPicture2 } from '../ChangeableVariables';
+import { userName1, userName2, userPicture1, userPicture2, PostContent } from '../ChangeableVariables';
 
 export default function Walk() {
     
-  const Content = PostContent;
-  const item = Content[Content.length-1]; //THis is not the latest post depending on how we fix the date! Does not work with pictuers now!
-
     return (
       <div>
         <div class='content content-home-1'>
@@ -34,22 +31,8 @@ export default function Walk() {
           </div>
 
           <div>
-            Latest Post
-            <div class="post">
-              <div class="post-date">
-                {item.date}
-                <div class="post-name"> 
-                  {item.name} 
-                  <div class="post-content">
-                    {item.content}
-                  </div>
-                  
-                  <div class="post-img">
-                    {item.image}
-                  </div>  
-                </div>
-              </div>
-            </div>
+            Latest Post 
+            {PuzzleHandler(PostContent[PostContent.length - 1])}
           </div>
         </div>
         

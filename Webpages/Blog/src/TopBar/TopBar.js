@@ -54,8 +54,8 @@ export default function TopBar(props) {
             <div class="topbar">
               <ul id='topbar-ul'>
                 <li class='topbar-li'><Link id="tab-home" onClick={() => highlightActive('')} to ='/'> Home </Link></li>
-                <li class='topbar-li'><Link id="tab-chat" onClick={() => highlightActive('Chat')} to ='/Chat'> Chat </Link></li>
                 <li class='topbar-li'><Link id="tab-posts" onClick={() => highlightActive('Posts')} to ='/Posts'> Posts</Link></li>
+                <li class='topbar-li'><Link id="tab-chat" onClick={() => highlightActive('Chat')} to ='/Chat'> Chat </Link></li>
                 {/* <li><Link id="tab-four" onClick={() => highlightActive('Four')} to = '/Four'> Four </Link></li> */}
                 <li>
                     <div class="dropdown">

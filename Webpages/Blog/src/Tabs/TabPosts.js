@@ -10,9 +10,8 @@
 */
 import React, { useState } from 'react';
 import './TabContent.css';
-import PostContent from './PostContent.json';
 import PuzzleHandler from './PostPuzzles.js';
-import { userName1, userName2, userPicture1, userPicture2 } from '../ChangeableVariables';
+import { userName1, userName2, userPicture1, userPicture2, PostContent, setPostContent } from '../ChangeableVariables';
 
 
 export default function Posts() {
@@ -26,6 +25,9 @@ export default function Posts() {
   
   // Get the contents for the posts from another file.
   const Content = changeDateAndSort(PostContent);
+
+  // Set the global variable with the sorted and assigned dates.
+  setPostContent(Content);
 
   // Set up the buttons to change posts.
   const [disableF,setDF] = useState(false);

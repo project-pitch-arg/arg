@@ -27,10 +27,6 @@ Things to think about:
 - Bloggvy i mobilform (inte prioriterat)
     - Det mesta ser konstigt ut just nu.
 
-- Ordning på menyn
-    - Byt plats på posts och chatt?
-    - Information är lite ovanför?
-
 - Ge alt="..." till alla bilder.
 
 - A solved puzzle on the blog could be about the usernames.
@@ -43,14 +39,10 @@ Things to think about:
 
 - Line break i JSON.
 
-- Allmän guide till Allt -kod.
+- Allmän guide till Allt - kod.
 
 - Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
 
-- Latest post i Home
-
 - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
-
-- Code of conduct-knapp och dokument (i About?).
 
 - Jämför med kodstandard.
