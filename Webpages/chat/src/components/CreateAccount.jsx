@@ -3,6 +3,13 @@ import axios from 'axios';
 
 const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
 
+function exit() {
+    localStorage.removeItem('getAccount');
+    window.location.reload();
+    return;
+}
+
+
 const Test = () => {
     const [username, setUsername] = useState('');
     const [firstname, setFirstName] = useState('');
@@ -37,14 +44,20 @@ const Test = () => {
                         <input type="text" value={lastname} onChange={(e) => setLastName(e.target.value)}className="input" placeholder="Last Name"/>
                         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required/>
                         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}className="input" placeholder="Email"/>
-                        <div align="right">
+                        <div align="center">
                             <button type="submit" className="button">
                             <span>Create account</span>
                             </button>
                         </div>
                     </form>
+                    <div align="center">
+                        <button onClick={exit} className="button">
+                            <span>Exit</span>
+                        </button>
+                    </div>
                 <h1>{error}</h1>
             </div>
+
         </div>
     );
 };

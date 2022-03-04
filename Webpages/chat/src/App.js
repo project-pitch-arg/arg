@@ -4,10 +4,23 @@ import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
 import './App.css';
 
+//TEST
+import {haveAccount} from './components/LoginForm';
+import CreateAccount from './components/CreateAccount';
+
 const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
 
+
 const App = () => {
-  if (!localStorage.getItem('username')) return <LoginForm/>;
+
+  if (!localStorage.getItem('username')) {
+    console.log("check");
+    if(localStorage.getItem('getAccount')) {
+      console.log("hi+");
+      return <CreateAccount/>;
+    }
+    return <LoginForm/>;
+  }
 
   function logOut () {
     localStorage.removeItem('username');

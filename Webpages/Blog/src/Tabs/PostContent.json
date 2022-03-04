@@ -28,7 +28,7 @@
         "date": [2022, 1, 10],
         "poster": "Robot1312113",
         "content": "I borrowed some pictures from Edwin to make these. What do you think it all means?",
-        "pictures": [["puzzles/Skyline1.jpg", "A skyline."], ["puzzles/Shapes.png", "Two rectangles and a triangle."], ["puzzles/Skyline3.jpg", "A skyline"], ["puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
+        "pictures": [["puzzles/Skyline1.jpg", "A skyline."], ["puzzles/Skyline2.png", "A skyline"],  ["puzzles/Skyline3.jpg", "A skyline"], ["puzzles/Shapes.png", "Two rectangles and a triangle."],  ["puzzles/Lines.png", "Four underscores in different colours. Three with signs."], ["puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
         "isPuzzle": true,
         "puzzleNr": "2b",
         "comment": "This is the main post to puzzle 2b."

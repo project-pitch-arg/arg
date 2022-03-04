@@ -5,6 +5,7 @@ Things to think about:
 
  - Bilder till About. Uppdatera text.
     - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
+    - Ändra kontaktmetod till chatten (ändra också footer i chat)
 
  - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
 
@@ -49,3 +50,7 @@ Things to think about:
 - Latest post i Home
 
 - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
+
+- Code of conduct-knapp och dokument (i About?).
+
+- Jämför med kodstandard.
