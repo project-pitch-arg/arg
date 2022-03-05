@@ -5,7 +5,6 @@ import twitter from '../img/twitter-icon.png';
 import icons from '../img/icons.png';
 
 
-
 export default function Footer() {
 
     return (
@@ -17,10 +16,11 @@ export default function Footer() {
                     <li>E-Mail: email@example.com</li>
                 </ul>
             </div>
-            
+
             <div id='right'>
-                Visit us at: <br />
-                <img src={icons} alt="VisitIcons" height="60px"/>
+                <a> Website written and
+                <br/>
+                developed by Lyra Bell </a>
             </div>
 
         </div>

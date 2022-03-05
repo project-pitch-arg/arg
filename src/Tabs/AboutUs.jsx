@@ -56,7 +56,7 @@ export default function AboutUs() {
               <div id="aboutUs-goals-img"><img src={goalsImg} height='215px'/> </div>
               <div id="aboutUs-goals-desc">
                 <h1> Our Goals </h1>
-                <a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
+                <a> Our primary goal is for all customers, those with and without financial stability to feel safe. Listening to feedback and improving services is what we strive for. If you ever need us for anything we will be by your side ready to help.</a>
               </div>
             </div>
 
@@ -66,7 +66,7 @@ export default function AboutUs() {
              <div id="aboutUs-environment-img"><img src={environmentImg}/></div>
               <div id="aboutUs-env-desc">
                 <h1>Sustainable Practices</h1>
-                <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
+                <a> We work hard to provide the best access to sustainable practices worldwide. Our internal workforce works diligently to innovate new types of renewable systems daily. To use or even participate in this movement use, only once per customer, the code “FUTURE” when purchasing from here or at any of our providers.</a>
               </div>
             </div>
 
