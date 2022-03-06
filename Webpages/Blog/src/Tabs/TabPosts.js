@@ -73,16 +73,16 @@ export default function Posts() {
   function changeDateAndSort(posts) {
     
     // The month starts at index 0.
-    var day = new Date(posts[0].date[0], posts[0].date[1] - 1, posts[0].date[2]);
+    var day = new Date(posts[0].date[0], posts[0].date[1], posts[0].date[2]);
     var nextDay = new Date(day);
 
     {posts.map(post => {
       if (!post.hasOwnProperty('date')) {
         nextDay.setDate(day.getDate() + 1); //Set date to next day.
-        post.date = [nextDay.getFullYear(), nextDay.getMonth() + 1, nextDay.getDate()];
+        post.date = [nextDay.getFullYear(), nextDay.getMonth(), nextDay.getDate()];
       }
-      else {;
-        nextDay = new Date(post.date[0], post.date[1] - 1, post.date[2]); 
+      else {
+        nextDay = new Date(post.date[0], post.date[1], post.date[2]); 
       }
       day = nextDay;
       return;
@@ -96,21 +96,25 @@ export default function Posts() {
 
   function compareDates(date1, date2) {
     
+    return (5000*(date2[0]-date1[0])+100*(date2[1]-date1[1])+(date2[2]-date1[2]));
+  
+  }
+/*
     // Compare the years.
     if(date1[0] > date2[0]) {
-      return 1;
+      return 100*(date2[0]-date1[0]);
     }
     // Compare the months.
     if(date1[1] > date2[1]) {
-      return 1;
+      return 10*(date2[1]-date1[1]);
     }
     // Compare the days.
     if(date1[2] > date2[2]) {
-      return 1;
+      return (date2[2]-date1[2]);
     }
     // The second date is larger. Thus returning a negative value.
-    return -1;
-  }
+    return 1;
+  }*/
 
   // Function which changes indexes to previous (older) posts.
   function prevPage() {

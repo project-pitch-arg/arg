@@ -39,10 +39,19 @@ Things to think about:
 
 - Line break i JSON.
 
-- Allmän guide till Allt - kod.
+- Allmän guide till Allt 
+    - kod.
 
 - Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
+    - Fråga på möte.
 
 - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
 
 - Jämför med kodstandard.
+
+- Tillsammans? På olika platser.
+    - Inlägg för detta.
+    - Var bor Edwin?
+
+
+

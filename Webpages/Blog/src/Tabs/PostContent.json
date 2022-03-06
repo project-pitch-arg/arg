@@ -95,7 +95,7 @@
     },
     {
         "poster": "Fexjo",
-        "content": "I figured that we haven't really showed much presence for our school of choice lately and just thought i'd leave this here. To commemorate all the good times we've had.",
+        "content": "I figured that we haven't really showed much presence for our school of choice lately and just thought I'd leave this here. To commemorate all the good times we've had.",
         "pictures": [["postImages/ChalmersLogo.png", "Chalmers logo in gold."]],
         "isPuzzle": false
     },
@@ -122,7 +122,54 @@
     },
     {
         "poster": "Fexjo",
-        "content": "My camera just got smashed after I stumbled and dropped it. Now i'm in the market for a new one. I only have one issue. Cameras are so expensive! It's been so long since I had to buy a new one that I had forgotten the price of quality. I might just have to stick to my guns and go with a cheaper alternative. I'm not made of money after all, especially not for what is, ultimately, just a hobby.",
+        "content": "My camera just got smashed after I stumbled and dropped it. Now I'm in the market for a new one. I only have one issue. Cameras are so expensive! It's been so long since I had to buy a new one that I had forgotten the price of quality. I might just have to stick to my guns and go with a cheaper alternative. I'm not made of money after all, especially not for what is, ultimately, just a hobby.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I really experienced Newton's first law this morning. 'A body at rest wants to stay at rest.' But in the end, I won and got out of bed.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "So I was listening calmly to music just yesterday and thought 'Why not create some myself?' ヾ(⌐■_■)ノ♪. I was incredibly motivated and found an old guitar at my parents' place. I downloaded an app to learn. I think it went well and pracitce makes perfect, but after half an hour or so the people around me wildly protested. Why? ┐(￣ヘ￣;)┌. The guitar was confiscated during my protests to this decision.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I saw the poster for a dinosaur exhibition today. My only thought was that Robot1312113 will probably invite me to this soon enough.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "It would be a bit hard to invite you, you are in a different country. Besides, I went to one just the other day. I have some patience... and too few numbers in my bank account.(￣ヘ￣)",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Have you heard of the butterfly effect? Where a single flap of a butterfly's wings can cause a tornado in another part of the world. A cascading series of events that causes something huge from the tiniest of things. My teacher did not accept that excuse to why I was late this morning.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "A common stereotype of students is that they are quite lazy. They come late to class, they don't do all the work assigned to them, and they constantly complain about everything they have to do. Thus, I feel justified in complaining about my latest essay assignment. It feels like I just ran a marathon, and not in a good way. On to better news though, highest grade in class. I'm still amazed with how fast the teacher grades the assignments in this course, I mean, it's barely been three hours. Simply incredible.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "I entered a hacker competition last week and today was finally the day to perform. <(￣︶￣)> Honestly, kind of disappointed in the kind of tests and work we had to do. It's not something I could see being of actual use in a real situation. ┐(￣ヘ￣;)┌ And i'm not just saying that because I lost. (; ⌣̀_⌣́)",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 3, 14],
+        "poster": "Fexjo",
+        "content": "I made an assortment of delicious pies today. Included amongst them are apple pies, blueberry pies, rhubarb pies, and a bunch more. It truly was quite a treat.",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 3, 14],
+        "poster": "Robot1312113",
+        "content": "I think Fexjo went mad today. Out of nowhere he just suddenly spouted that he needed to make a bunch of pies. He then went on to create an entire buffet. Something has gotten into him, and i'm not quite sure what, or how I can fix him. ＼(〇_ｏ)／",
         "isPuzzle": false
     }
 ]
