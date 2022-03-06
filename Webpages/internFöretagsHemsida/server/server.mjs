@@ -62,16 +62,16 @@ app.post("/getPDF", (req, res) => {
   res.sendFile(__dirname + "/PDF/" + data);
 });
 app.post("/getUser", (req, res) => {
-  var name = req.body.name;
+  var username = req.body.username;
   var password = req.body.password;
-
   const response = fs.readFileSync("./JsonFiles/Accounts.json");
   var data = JSON.parse(response);
   Object.keys(data[0]).forEach((key) => {
-        if(data[0][key].name === name && data[0][key].password == password){
+        if(data[0][key].username === username && data[0][key].password == password){
             return res.send(data[0][key]);
         }
   })
+  return res.send({error: "Wrong password or username!"});
 });
 
 app.listen(process.env.PORT || 8080, () =>

@@ -25,6 +25,9 @@ export default class Policy extends Component{
         document.removeEventListener("keydown", this._handleKeyDown);
         document.removeEventListener("keyup", this._handleKeyUp);
     }
+    componentDidUpdate(prevProps, prevState){
+        this.reloadPage = this.props.reloadPage;
+    }
     //Requests and displays specific pdf file from server
     async getPDF(fileName){
         var json = {
@@ -81,10 +84,13 @@ export default class Policy extends Component{
         return false;
     }
     //Called when input is submitted
-    handleInput(event){
+    handleInput = (event) => {
         event.preventDefault();
         if(event.target.command.value === "352"){
-            alert("New Email Received! Check your email!");
+            localStorage.setItem('Console', true);
+            this.reloadPage();
+            window.history.replaceState(null, "New Page Title", "/Console");
+            window.location.reload(false);
         }
     }
 

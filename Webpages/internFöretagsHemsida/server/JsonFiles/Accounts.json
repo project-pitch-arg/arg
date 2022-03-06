@@ -1,12 +1,19 @@
 [{
   "u1" : {
-    "name": "Edmund Schmidt",
+    "username": "Edmund Schmidt",
     "password": "password123",
     "phoneNumber": "070-4502355",
     "email" : "Hello@gmail.com"
   },
   "u2" : {
-    "name": "Mark Ryan",
+    "username": "Mark Ryan",
+    "password": "password123",
+    "phoneNumber": "070-4502355",
+    "email" : "Hello@gmail.com"
+  },
+  "u3" : {
+    "username": "CEO",
+    "password": "password123",
     "phoneNumber": "070-4502355",
     "email" : "Hello@gmail.com"
   }

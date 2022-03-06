@@ -7,19 +7,19 @@ import {fetchData} from '../Client/Client.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default class TopBar extends Component {
-    state = {files: [], dataRecieved: false}
+    state = {files: [], dataReceived: false}
     constructor(props) {
         super(props);
         this.locations = [];
         this.dropdownLocations = [];
+        this.customLocations = [];
     }
+
     async componentDidMount(){
-        this.highlightActive = this.highlightActive.bind(this);
-        this.addTabs = this.addTabs.bind(this);
         await this.addTabs("/src/Tabs/", this.locations);
         await this.addTabs("/src/Tabs/DropDown/",this.dropdownLocations);
-
     }
+
     highlightActive = (path) => {
         var oldActiveElements = document.getElementsByClassName('active');
         if (oldActiveElements.length > 0) {
@@ -34,6 +34,7 @@ export default class TopBar extends Component {
             console.log("no such path")
         }
       }
+
       addTabs = async (path, location) => {
             var json = {
                 data: path
@@ -43,62 +44,96 @@ export default class TopBar extends Component {
             for (var i = 0; i < data.files.length; i++) {
                     location.push(data.files[i]);
             }
-            this.setState({dataRecieved: true});
+            this.setState({dataReceived: true});
       }
+
+      reloadPage = () => {
+            this.setState({dataReceived: true});
+      }
+
+      addCustomTabs = (fileName) => {
+            if(!this.customLocations.includes(fileName)){
+                this.customLocations.push(fileName);
+            }
+      }
+
+      removeCustomTabs = (fileName) => {
+           if(this.customLocations.includes(fileName)){
+               this.customLocations.splice(fileName,1);
+           }
+      }
+
       render(){
-      return (
-            <div class="topbar">
-                <BrowserRouter>
-                  <ul id='topbar-ul'>
-                  {
-                    this.locations.map((file, index) => {
-                        if(file === "Account"){
-                            return (<li id='topbar-li-Right' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
-                        }
-                        else {
-                            return (<li id='topbar-li' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
-                        }
-                    })
-                  }
-                    <li id="Dropdown" key="Dropdown">
-                        <div class="dropdown">
-                        <button class="dropdown-button">Information</button>
-                        <div class="dropdown-content">{
-                            this.dropdownLocations.map((file) => {
-                                    return (<Link id={file} key={file.toString()} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link>);
-                            })
-                            }
-                            </div>
-                        </div>
-                    </li>
-                  </ul>
-                  <Routes>
-                      <Route path="" element={<Home/>}/>
-                      <Route path="*" element={<Wrong />} />
+            if(localStorage.getItem('Console') === "true"){
+                this.addCustomTabs("Console");
+            }
+            else {
+                this.removeCustomTabs("Console");
+            }
+          return (
+                <div class="topbar">
+                    <BrowserRouter>
+                      <ul id='topbar-ul'>
                       {
-                        this.locations.map((file) => {
-                            const Tag = lazy(() => import("../Tabs/" + file));
-                                return (<Route key={file} exact path={"/" + file} element={
-                                  <Suspense fallback={<Wrong />}>
-                                      <Tag/>
-                                  </Suspense>
-                              }/>);
+                        this.locations.map((file, index) => {
+                            if(file === "Account"){
+                                return (<li id='topbar-li-Right' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
                             }
-                        )}
-                      {
-                        this.dropdownLocations.map((file) => {
-                            const Tag = lazy(() => import("../Tabs/DropDown/" + file));
-                                return (<Route exact path={"/" + file} element={
-                                  <Suspense fallback={<Wrong />}>
-                                      <Tag/>
-                                  </Suspense>
-                              }/>);
+                            else {
+                                return (<li id='topbar-li' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
+                            }
                         })
                       }
-                  }
-                  </Routes>
-               </BrowserRouter>
-            </div>
-        )
-        }
+                        <li id="Dropdown" key="Dropdown">
+                            <div class="dropdown">
+                            <button class="dropdown-button">Information</button>
+                            <div class="dropdown-content">{
+                                this.dropdownLocations.map((file) => {
+                                        return (<Link id={file} key={file.toString()} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link>);
+                                })
+                                }
+                                </div>
+                            </div>
+                        </li>
+                      </ul>
+                      <Routes>
+                          <Route path="" element={<Home/>}/>
+                          <Route path="*" element={<Wrong />} />
+                          {
+                            this.locations.map((file) => {
+                                const Tag = lazy(() => import("../Tabs/" + file));
+                                    return (<Route key={file} exact path={"/" + file} element={
+                                      <Suspense fallback={<Wrong />}>
+                                          <Tag reloadPage={this.reloadPage}/>
+                                      </Suspense>
+                                  }/>);
+                                }
+                            )}
+                          {
+                            this.dropdownLocations.map((file) => {
+                                const Tag = lazy(() => import("../Tabs/DropDown/" + file));
+                                    return (<Route exact path={"/" + file} element={
+                                      <Suspense fallback={<Wrong />}>
+                                          <Tag reloadPage={this.reloadPage}/>
+                                      </Suspense>
+                                  }/>);
+                            })
+
+                          }
+                          {
+                            this.customLocations.map((file) => {
+                                const Tag = lazy(() => import("../CustomPages/" + file));
+                                    return (<Route exact path={"/" + file} element={
+                                      <Suspense fallback={<Wrong />}>
+                                          <Tag reloadPage={this.reloadPage}/>
+                                      </Suspense>
+                                  }/>);
+                            })
+                          }
+                      }
+                      </Routes>
+                   </BrowserRouter>
+                </div>
+            )
+          }
     }

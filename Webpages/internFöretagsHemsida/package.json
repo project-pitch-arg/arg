@@ -19,6 +19,7 @@
     "react-pdf": "^5.7.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-scroll-to-bottom": "^4.2.0",
     "util": "^0.12.4",
     "webpack": "^5.68.0"
   },
