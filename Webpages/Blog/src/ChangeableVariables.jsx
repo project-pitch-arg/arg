@@ -48,6 +48,7 @@ export const answerToBeEncrypted = "http://ThisWillBeAWebSiteAddress.later";
 // each containing first a letter as a string and
 // then an integer. The number can at most be 100.
 // Example: [["m", 11],["d", 28], ["o", 57], ["a", 80]]
+// TODO: Include number limits for each subset.
 export const keyForEncryption = [["m", 11],["d", 28], ["o", 57], ["a", 80]];
 
 // See documentation (TODO: write this) for what
