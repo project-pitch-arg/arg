@@ -25,9 +25,9 @@ export default function Puzzles(post) {
             {post.date[0]}.{post.date[1]}.{post.date[2]}
           <div class="post-name"> 
             {post.poster} 
-          <div class="post-content">
+          <pre class="post-content"> 
             {post.content}
-          </div>
+          </pre>
           {hasPicture(post)}
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function Puzzles(post) {
       // With the help of the 'helpChangeString' function each individual 
       // letter that is specified is modified by either it's color or
       // it's font.
-      <div class="post-content">
+      <pre class="post-content">
         {post.content.slice(0,sortedArray[0][0])}
         {helpChangeString(post, sortedArray[0])}
         {post.content.slice(sortedArray[0][0]+1,sortedArray[1][0])}
@@ -98,7 +98,7 @@ export default function Puzzles(post) {
         {post.content.slice(sortedArray[4][0]+1,sortedArray[5][0])}
         {helpChangeString(post, sortedArray[5])}
         {post.content.slice(sortedArray[5][0]+1)}
-      </div> 
+      </pre> 
       )
   }
 
@@ -268,9 +268,9 @@ export default function Puzzles(post) {
           {dateAsClue}
         <div class="post-name"> 
           {post.poster} 
-        <div class="post-content">
+        <pre class="post-content">
           {post.content}
-        </div>
+        </pre>
         {hasPicture(post)}
         </div>
       </div>
@@ -287,9 +287,9 @@ export default function Puzzles(post) {
           {post.date[0]}.{post.date[1]}.{post.date[2]}
         <div class="post-name"> 
           {post.poster} 
-        <div class="post-content">
+        <pre class="post-content">
           {post.content}
-        </div>
+        </pre>
         {hasPicture(post)}
         </div>
       </div>
