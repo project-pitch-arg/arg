@@ -22,9 +22,9 @@ export default function Home() {
         <div class='content content-home-1'>
           <div class="help-text">
             Welcome to Daily Thoughts Website
-            <br></br>
+            <br/>
             Home of {userName1} and {userName2}
-            <br></br>
+            <br/>
             Hope you enjoy your stay!
           </div>
 
@@ -37,7 +37,7 @@ export default function Home() {
 
           <div>
             Latest Post 
-            {PuzzleHandler(PostContent[PostContent.length - 1])}
+            {PuzzleHandler(PostContent[0])}
           </div>
         </div>
         
