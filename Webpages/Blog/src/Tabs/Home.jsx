@@ -6,7 +6,7 @@ import dino from '../img/babydino-removebg-preview.png';
 //import robot from '../img/Robot1312113.png';
 //import ceasar from '../img/CaesarSalad.jpeg';
 import helpbutton from '../img/helpTest.png'
-import PuzzleHandler from './PostPuzzles.js';
+import PuzzleHandler from './PostPuzzles.jsx';
 
 import { userName1, userName2, userPicture1, userPicture2, PostContent } from '../ChangeableVariables';
 

@@ -10,7 +10,7 @@
 */
 import React, { useState } from 'react';
 import './TabContent.css';
-import PuzzleHandler from './PostPuzzles.js';
+import PuzzleHandler from './PostPuzzles.jsx';
 import { userName1, userName2, userPicture1, userPicture2, PostContent, setPostContent } from '../ChangeableVariables';
 
 
