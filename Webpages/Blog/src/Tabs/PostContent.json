@@ -1,6 +1,6 @@
 [
     {
-        "date": [2022, 1, 1],
+        "date": [2022, 6, 18],
         "poster": "Robot1312113",
         "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinosaurs today. Unfortunately, the book did not include Ichthyosaurus, but Talarurus also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
         "pictures": [["puzzles/NumbersPuzzle.png","A numbers puzzle."], ["puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["puzzles/duros.jpg", "A package of duros."], ["puzzles/Computer.png", "A computer drinking coffee." ]],
@@ -9,7 +9,7 @@
         "comment": "This is the main post to puzzle 2c."
     },
     {
-        "date": [2022, 1, 19],
+        "date": [2022, 6, 19],
         "poster": "Robot1312113",
         "content": "I never told you, but my favorite dinosaurs are Aardonyx, Datanglong and Ichthyosaurus.",
         "isPuzzle": true,
@@ -17,7 +17,7 @@
         "comment": "This post is a helper to puzzle 2c."
     },
     {
-        "date": [2022, 1, 1],
+        "date": [2022, 5, 1],
         "poster": "Robot1312113",
         "content": "Man, this latest course of mine, LMA017, was so fun. Way too little math for my taste though.",
         "isPuzzle": true,
@@ -25,7 +25,7 @@
         "comment": "This post is a helper to puzzle 2c"
     },
     {
-        "date": [2022, 1, 10],
+        "date": [2022, 4, 10],
         "poster": "Robot1312113",
         "content": "I borrowed some pictures from Edwin to make these. What do you think it all means?",
         "pictures": [["puzzles/Skyline1.jpg", "A skyline."], ["puzzles/Skyline2.png", "A skyline"],  ["puzzles/Skyline3.jpg", "A skyline"], ["puzzles/Shapes.png", "Two rectangles and a triangle."],  ["puzzles/Lines.png", "Four underscores in different colours. Three with signs."], ["puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],

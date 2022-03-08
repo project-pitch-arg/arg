@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './TopBar.css';
 import {Link} from "react-router-dom";
 
@@ -7,7 +7,7 @@ export default function TopBar(props) {
 
     // This is to change the color of a highlighted and non-highlighted item
     // by changing their class for CSS.
-    const highlightActive = (path) => {
+    const HIGHLIGHT_ACTIVE = (path) => {
         var oldActiveElements = document.getElementsByClassName('active');
         if (oldActiveElements.length > 0) {
           for (let elem of oldActiveElements){
@@ -53,7 +53,7 @@ export default function TopBar(props) {
       useEffect(() => {
         var path = window.location.pathname.split("/")[1];
     
-        highlightActive(path)
+        HIGHLIGHT_ACTIVE(path)
       })
     
       return (
@@ -61,16 +61,16 @@ export default function TopBar(props) {
           // Various CSS classes help format and display the buttons available on the topbar.
             <div class="topbar">
               <ul id='topbar-ul'>
-                <li class='topbar-li'><Link id="tab-home" onClick={() => highlightActive('')} to ='/'> Home </Link></li>
-                <li class='topbar-li'><Link id="tab-posts" onClick={() => highlightActive('Posts')} to ='/Posts'> Posts</Link></li>
-                <li class='topbar-li'><Link id="tab-chat" onClick={() => highlightActive('Chat')} to ='/Chat'> Chat </Link></li>
-                {/* <li><Link id="tab-four" onClick={() => highlightActive('Four')} to = '/Four'> Four </Link></li> */}
+                <li class='topbar-li'><Link id="tab-home" onClick={() => HIGHLIGHT_ACTIVE('')} to ='/'> Home </Link></li>
+                <li class='topbar-li'><Link id="tab-posts" onClick={() => HIGHLIGHT_ACTIVE('Posts')} to ='/Posts'> Posts</Link></li>
+                <li class='topbar-li'><Link id="tab-chat" onClick={() => HIGHLIGHT_ACTIVE('Chat')} to ='/Chat'> Chat </Link></li>
+                {/* <li><Link id="tab-four" onClick={() => HIGHLIGHT_ACTIVE('Four')} to = '/Four'> Four </Link></li> */}
                 <li>
                     <div class="dropdown">
                     <button class="dropdown-button">Information</button>
                     <div class="dropdown-content">
-                        <Link id="tab-about" onClick={() => highlightActive('About')} to ='/About'> About </Link>
-                        <Link id="tab-QotD" onClick={() => highlightActive('QotD')} to ='/QotD'> Quotes of the day </Link>
+                        <Link id="tab-about" onClick={() => HIGHLIGHT_ACTIVE('About')} to ='/About'> About </Link>
+                        <Link id="tab-QotD" onClick={() => HIGHLIGHT_ACTIVE('QotD')} to ='/QotD'> Quotes of the day </Link>
                         </div>
                     </div> 
                 </li>
@@ -84,4 +84,4 @@ export default function TopBar(props) {
         document.getElementById("tab-faq").classList.add('active');
     break 
     
-    <Link id="tab-faq" onClick={() => highlightActive('FAQ')} to ='/FAQ'> FAQ </Link>   */
+    <Link id="tab-faq" onClick={() => HIGHLIGHT_ACTIVE('FAQ')} to ='/FAQ'> FAQ </Link>   */

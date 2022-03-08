@@ -7,8 +7,8 @@
 */
 import React, {useState, useEffect} from 'react';
 import '../TabContent.css';
-import QuotesContent from './QuotesContent.json';
-import { changeQuoteTime } from '../../ChangeableVariables';
+import quotesContent from './QuotesContent.json';
+import { QUOTE_TIME } from '../../ChangeableVariables';
 
 
 export default function printingQuotes() {
@@ -43,7 +43,7 @@ export default function printingQuotes() {
   }
 
     // Imported array is declared here.
-    const quotes = QuotesContent;
+    const quotes = quotesContent;
     shuffle(quotes);
     
     // Handler of timing and displaying the quotes.
@@ -60,7 +60,7 @@ export default function printingQuotes() {
         if (message < quotes.length - 1) {
 
           // Start timer for 1000 * quoteTime milliseconds.
-          delay = setTimeout(() => setMessage(message + 1), 1000 * changeQuoteTime);
+          delay = setTimeout(() => setMessage(message + 1), 1000 * QUOTE_TIME);
         } else {
 
             // Start over and shuffle array after reaching the end.

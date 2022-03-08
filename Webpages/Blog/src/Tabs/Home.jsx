@@ -1,14 +1,12 @@
 import React from 'react';
 import './TabContent.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Help from '../TopBar/TopBar';
 import dino from '../img/babydino-removebg-preview.png';
-//import robot from '../img/Robot1312113.png';
-//import ceasar from '../img/CaesarSalad.jpeg';
 import helpbutton from '../img/helpTest.png'
-import PuzzleHandler from './PostPuzzles.jsx';
+import puzzleHandler from './PostPuzzles.jsx';
 
-import { userName1, userName2, userPicture1, userPicture2, PostContent } from '../ChangeableVariables';
+import { USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent } from '../ChangeableVariables';
 
 // TODO! Make the Home page look nicer.
 
@@ -23,7 +21,7 @@ export default function Home() {
           <div class="help-text">
             Welcome to Daily Thoughts Website
             <br/>
-            Home of {userName1} and {userName2}
+            Home of {USER_NAME_1} and {USER_NAME_2}
             <br/>
             Hope you enjoy your stay!
           </div>
@@ -37,13 +35,13 @@ export default function Home() {
 
           <div>
             Latest Post 
-            {PuzzleHandler(PostContent[0])}
+            {puzzleHandler(postContent[0])}
           </div>
         </div>
         
         <div class='content content-home-2'>
           <div>
-            <img class="home-image" src={userPicture1} />
+            <img class="home-image" src={USER_PICTURE_1} />
           </div>
           
           <div>
@@ -51,7 +49,7 @@ export default function Home() {
           </div>
           
           <div >
-            <img class="home-image" src={userPicture2} />
+            <img class="home-image" src={USER_PICTURE_2} />
           </div>
         </div>
       </div>
