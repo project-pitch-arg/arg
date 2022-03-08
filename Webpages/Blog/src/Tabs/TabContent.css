@@ -221,7 +221,7 @@
     font-size: 3vh;
 }
 /* Displays the name of the person who said the quote. */
-.saidBy {
+.said-by {
     color: black;
     text-align: right;
 }
@@ -230,7 +230,7 @@
 
 /* Creates an area to place questions in.
     Has a scrollbar if necessary. */
-.questionlist {
+.question-list {
     height: 80vh;
     width: 70%;
     background-color: hsl(47, 34%, 74%);

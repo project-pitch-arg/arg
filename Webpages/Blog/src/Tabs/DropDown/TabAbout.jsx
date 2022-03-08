@@ -14,7 +14,7 @@ export default function DisplayAbout() {
 
     return (
     <div class="content">
-     <div class="questionlist">
+     <div class="question-list">
         {aboutContent.map(item => {
           return (
             <div class="question">

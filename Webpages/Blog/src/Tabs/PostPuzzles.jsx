@@ -44,9 +44,9 @@ export default function Puzzles(post) {
     var indexArray = new Array(letter.length);
     var counter = 0;
     for(let i = 0; i < letter.length; i++){
-      const n = (post.content.split(letter[i]).length - 1)
+      const NUMBER = (post.content.split(letter[i]).length - 1)
       var index = post.content.indexOf(letter[i]);
-      var count1 = count % n;
+      var count1 = count % NUMBER;
       while(count1 > 0) {
         index = post.content.indexOf(letter[i], index+1);
         count1--;
@@ -54,10 +54,10 @@ export default function Puzzles(post) {
       indexArray[counter] = index;
       counter++;
     }
-    const index1 = indexArray[0];
-    const index2 = indexArray[1];
-    const index3 = indexArray[2];
-    const finalArray = [[index1,"color"],[index2, "color"],[index3, "color"]];
+    const INDEX_1 = indexArray[0];
+    const INDEX_2 = indexArray[1];
+    const INDEX_3 = indexArray[2];
+    const finalArray = [[INDEX_1,"color"],[INDEX_2, "color"],[INDEX_2, "color"]];
     return finalArray;
   }
 

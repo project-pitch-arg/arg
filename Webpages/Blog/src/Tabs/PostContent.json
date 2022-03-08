@@ -3,7 +3,7 @@
         "date": [2022, 6, 18],
         "poster": "Robot1312113",
         "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinosaurs today. Unfortunately, the book did not include Ichthyosaurus, but Talarurus also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
-        "pictures": [["puzzles/NumbersPuzzle.png","A numbers puzzle."], ["puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["puzzles/duros.jpg", "A package of duros."], ["puzzles/Computer.png", "A computer drinking coffee." ]],
+        "pictures": [["Puzzles/NumbersPuzzle.png","A numbers puzzle."], ["Puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["Puzzles/duros.jpg", "A package of duros."], ["Puzzles/Computer.png", "A computer drinking coffee." ]],
         "isPuzzle": true,
         "puzzleNr": "2c",
         "comment": "This is the main post to puzzle 2c."
@@ -28,7 +28,7 @@
         "date": [2022, 4, 10],
         "poster": "Robot1312113",
         "content": "I borrowed some pictures from Edwin to make these. What do you think it all means?",
-        "pictures": [["puzzles/Skyline1.jpg", "A skyline."], ["puzzles/Skyline2.png", "A skyline"],  ["puzzles/Skyline3.jpg", "A skyline"], ["puzzles/Shapes.png", "Two rectangles and a triangle."],  ["puzzles/Lines.png", "Four underscores in different colours. Three with signs."], ["puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
+        "pictures": [["Puzzles/Skyline1.jpg", "A skyline."], ["Puzzles/Skyline2.png", "A skyline"],  ["Puzzles/Skyline3.jpg", "A skyline"], ["Puzzles/Shapes.png", "Two rectangles and a triangle."],  ["Puzzles/Lines.png", "Four underscores in different colours. Three with signs."], ["Puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
         "isPuzzle": true,
         "puzzleNr": "2b",
         "comment": "This is the main post to puzzle 2b."
@@ -47,7 +47,7 @@
     {
         "poster": "Robot1312113",
         "content": "Just a happy dinosaur to make your day better.",
-        "pictures": [["postImages/babydino-removebg-preview.png", "Dino!!!"]],
+        "pictures": [["PostImages/babydino-removebg-preview.png", "Dino!!!"]],
         "isPuzzle": false
     },
     {
@@ -58,7 +58,7 @@
     {
         "poster": "Robot1312113",
         "content": "Have you figured out what our usernames mean yet? I'll give you a hint for Fexjo. What is this?",
-        "pictures": [["postImages/Caesar.png", "Some nice salad."]],
+        "pictures": [["PostImages/Caesar.png", "Some nice salad."]],
         "isPuzzle": false
     },
     {
@@ -75,7 +75,7 @@
     {
         "poster": "Fexjo",
         "content": "Saw this nice-looking boat today. Somehow, it did not rain although the sky was grey all day.",
-        "pictures": [["postImages/Boat.jpg", "Picture of a boat."]],
+        "pictures": [["PostImages/Boat.jpg", "Picture of a boat."]],
         "isPuzzle": false
     },
     {
@@ -96,7 +96,7 @@
     {
         "poster": "Fexjo",
         "content": "I figured that we haven't really showed much presence for our school of choice lately and just thought I'd leave this here. To commemorate all the good times we've had.",
-        "pictures": [["postImages/ChalmersLogo.png", "Chalmers logo in gold."]],
+        "pictures": [["PostImages/ChalmersLogo.png", "Chalmers logo in gold."]],
         "isPuzzle": false
     },
     {
@@ -112,7 +112,7 @@
     {
         "poster": "Fexjo",
         "content": "Both our resident robot and I have been feeling a bit cooped up inside for a while. And we haven't really done much together lately. So we decided to take a bit of a walk. Just enjoy the sights and explore parts of the city. Even living in Gothenburg for an entire lifetime will still leave many places unexplored. Not to mention that i've only been here for a year. We saw many beautiful sights on our exploration, though one stuck out to me. We came across this as we were wandering aimlessly along a cycling route. The route is called 'Kattegattsleden' for the avid cyclists that are interested. Apparently it stretches for 390 km, quite a distance to be sure. Back on topic though, the bridge is truly a marvel of engineering. Even I can tell that much without much knowledge in structural architecture. Could do with a paint job but hey, i'm not in charge. ",
-        "pictures": [["postImages/kattegattleden.jpg", "Massive bridge by cycling route."]],
+        "pictures": [["PostImages/kattegattleden.jpg", "Massive bridge by cycling route."]],
         "isPuzzle": false
     },
     {

@@ -43,21 +43,21 @@ export default function printingQuotes() {
   }
 
     // Imported array is declared here.
-    const quotes = quotesContent;
-    shuffle(quotes);
+    const QUOTES = quotesContent;
+    shuffle(QUOTES);
     
     // Handler of timing and displaying the quotes.
     const QotD = timer => {
-      const { quotes } = timer;
+      const { QUOTES } = timer;
 
       // Start at random index in array.
-      const [message, setMessage] = useState(getRandomInt(0, quotes.length));
+      const [message, setMessage] = useState(getRandomInt(0, QUOTES.length));
 
       useEffect(() => {
         let delay;
 
         // If statement to check if the end of the array is reached.
-        if (message < quotes.length - 1) {
+        if (message < QUOTES.length - 1) {
 
           // Start timer for 1000 * quoteTime milliseconds.
           delay = setTimeout(() => setMessage(message + 1), 1000 * QUOTE_TIME);
@@ -65,23 +65,23 @@ export default function printingQuotes() {
 
             // Start over and shuffle array after reaching the end.
             setMessage(0);
-            shuffle(quotes);
+            shuffle(QUOTES);
         }
 
         // Reset timer so that next quote can be displayed and then counted down.
         return () => {clearTimeout(delay);};
       }, 
-        [quotes, message]
+        [QUOTES, message]
       );
 
-      // Display quotes and originators according to css classes "quote" and "saidBy".
+      // Display quotes and originators according to css classes "quote" and "said-by".
       return <div class="quote">
               <il>"</il>
-              {quotes[message].quote}
+              {QUOTES[message].quote}
               <il>"</il>
-              <div class="saidBy">
+              <div class="said-by">
                 <il>-</il>
-                {quotes[message].saidBy}
+                {QUOTES[message].saidBy}
               </div>
            </div>;
     };
@@ -89,7 +89,7 @@ export default function printingQuotes() {
     // Display entire page.
     return (
         <div class="content">
-          <QotD quotes={quotes} />
+          <QotD QUOTES={QUOTES} />
         </div>
     )
 }

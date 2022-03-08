@@ -11,23 +11,20 @@
 import React, { useState } from 'react';
 import './TabContent.css';
 import puzzleHandler from './PostPuzzles.jsx';
-import { USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent, setPostContent } from '../ChangeableVariables';
+import { POSTS_PER_PAGE, USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent, setPostContent } from '../ChangeableVariables';
 
 
 export default function Posts() {
-  
-  // Edit this variable to change the posts displayed on each page.
-  const postsPerPage = 5;
 
   // The variables for the indexes of the posts currently displayed
   const[start, startChange] = useState(0);
-  const[last, lastChange] = useState(postsPerPage);
+  const[last, lastChange] = useState(POSTS_PER_PAGE);
   
   // Get the contents for the posts from another file.
-  const content = changeDateAndSort(postContent);
+  const CONTENT = changeDateAndSort(postContent);
 
   // Set the global variable with the sorted and assigned dates.
-  setPostContent(content);
+  setPostContent(CONTENT);
 
   // Set up the buttons to change posts.
   const [disableF,setDF] = useState(false);
@@ -119,12 +116,12 @@ export default function Posts() {
 
   // Function which changes indexes to previous (newer) posts.
   function prevPage() {
-    if (start - postsPerPage < 0) {
+    if (start - POSTS_PER_PAGE < 0) {
       firstPage();
     } 
     else {
-      lastChange(last - postsPerPage);
-      startChange(start - postsPerPage);
+      lastChange(last - POSTS_PER_PAGE);
+      startChange(start - POSTS_PER_PAGE);
       setDL(false);
       setDN(false);
     }
@@ -132,12 +129,12 @@ export default function Posts() {
 
   // Function which changes indexes to following (older) posts.
   function nextPage() {
-    if(postContent.length < last + postsPerPage) {
+    if(postContent.length < last + POSTS_PER_PAGE) {
       lastPage();
     }
     else {
-      startChange(start+postsPerPage);
-      lastChange(last+postsPerPage);
+      startChange(start+POSTS_PER_PAGE);
+      lastChange(last+POSTS_PER_PAGE);
       setDF(false);
       setDP(false);
     } 
@@ -145,11 +142,11 @@ export default function Posts() {
 
   // Function to take you back to the first page of posts (the newest ones).
   function firstPage() {
-    lastChange(postsPerPage);
+    lastChange(POSTS_PER_PAGE);
     startChange(0);
     setDF(true);
     setDP(true);
-    if(postContent.length > postsPerPage){
+    if(postContent.length > POSTS_PER_PAGE){
       setDL(false);
       setDN(false);
     }
@@ -158,10 +155,10 @@ export default function Posts() {
   // Function to take the user to the last page of posts (the oldest ones).
   function lastPage(){
     lastChange(postContent.length);
-    startChange(postContent.length-postsPerPage);
+    startChange(postContent.length-POSTS_PER_PAGE);
     setDL(true);
     setDN(true);
-    if(postContent.length > postsPerPage){
+    if(postContent.length > POSTS_PER_PAGE){
       setDF(false);
       setDP(false);
     }

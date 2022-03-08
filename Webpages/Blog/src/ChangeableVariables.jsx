@@ -12,8 +12,8 @@
 
 // Import picutres you wish to use, with the relative
 // path as seen from this file.
-import Robot from './img/Robot1312113.png';
-import CaesarSalad from './img/Caesar.png';
+import Robot from './Img/Robot1312113.png';
+import CaesarSalad from './Img/Caesar.png';
 import content from './Tabs/PostContent.json';
 
 
@@ -57,7 +57,7 @@ export const ENCRYPTION_KEY = [["m", 11],["d", 28], ["o", 57], ["a", 80]];
 // with this clue.
 export const CLUE_DATE = "2022.80A.24";
 
-/* -------------------- PostContent -------------------- */
+/* -------------------- Tab Posts -------------------- */
 
 // Global list to access sorted posts through other tabs. 
 // Like the Home page for example.
@@ -67,4 +67,7 @@ export var postContent = content;
 export function setPostContent(content) {
     postContent = content;
 }
+
+// Edit this variable to change the posts displayed on each page.
+export const POSTS_PER_PAGE = 5;
 

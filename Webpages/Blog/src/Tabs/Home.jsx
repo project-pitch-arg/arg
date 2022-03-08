@@ -2,8 +2,8 @@ import React from 'react';
 import './TabContent.css';
 import { Link } from 'react-router-dom';
 import Help from '../TopBar/TopBar';
-import dino from '../img/babydino-removebg-preview.png';
-import helpbutton from '../img/helpTest.png'
+import dino from '../Img/babydino-removebg-preview.png';
+import helpbutton from '../Img/helpTest.png'
 import puzzleHandler from './PostPuzzles.jsx';
 
 import { USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent } from '../ChangeableVariables';
