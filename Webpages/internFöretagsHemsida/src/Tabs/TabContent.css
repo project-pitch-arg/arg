@@ -95,6 +95,7 @@ h3{
   left: 0;
 }
 
+
 .box {
   position: relative;
   width: 25%;
@@ -127,6 +128,9 @@ h3{
 }
 .box input[type=submit]:hover{
     background-color: #069ac6;
+}
+.box p{
+    margin-top: 10px;
 }
 .close-icon {
   content: 'x';

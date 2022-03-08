@@ -13,7 +13,8 @@ export default class Console extends Component{
         "/clear clears the console"
         ];
         this.adminCommands = [
-        "/changePassword [user] Changes the password of a user"
+        "/changePassword [user] Changes the password of a user",
+        "/currentAdmin Shows the current Admin User"
         ];
         this.securityAnswers = [
         "dog", "lifeguard", "barcelona"
@@ -67,6 +68,14 @@ export default class Console extends Component{
                         this.previousCommands.push("Invalid code!");
                     }
                 break;
+            case "/currentAdmin":
+                    if(this.adminOn){
+                        this.previousCommands.push("Current Admin: CEO");
+                    }
+                    else {
+                        this.defaultMessage(command);
+                    }
+                break;
             case "/changePassword":
                     if(this.adminOn && data === "CEO"){
                         if(answers.length === 3){
@@ -86,14 +95,15 @@ export default class Console extends Component{
                         }
                         else if(this.securityCheck && answers.length === 1){
                             this.previousCommands.push("CEO password changed");
+                            localStorage.setItem("newpassword", answers[0]);
                             break;
                         }
                         else {
                             this.previousCommands.push("Security Questions: ");
-                                                    this.previousCommands.push("First name of pet. ");
-                                                    this.previousCommands.push("First Job.");
-                                                    this.previousCommands.push("Hometown. ");
-                                                    this.previousCommands.push("Answer question in format /changePassword [user] [answer 1] [answer2] [answer3]");
+                            this.previousCommands.push("First name of pet. ");
+                            this.previousCommands.push("First Job.");
+                            this.previousCommands.push("Hometown. ");
+                            this.previousCommands.push("Answer question in format /changePassword [user] [answer 1] [answer2] [answer3]");
                         }
                     }
                     else if(this.adminOn){

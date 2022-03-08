@@ -8,6 +8,44 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
+var cypher = "";
+var encryptedCypher = "";
+
+setTimeout(generateCypher, 1000);
+
+function generateCypher(){
+    cypher = "";
+    encryptedCypher = "";
+    for(var i = 0; i < 9; i++){
+        var randomLetter = getRandomInt(69,118);
+        var encryptedRandomLetter = randomLetter + 4;
+        randomLetter = String.fromCharCode(randomLetter);
+        encryptedRandomLetter = String.fromCharCode(encryptedRandomLetter);
+        cypher += randomLetter;
+        encryptedCypher += encryptedRandomLetter;
+    }
+    console.log("Current cypher: " + cypher);
+    console.log("Current cypher encrypted: " + encryptedCypher);
+    setTimeout(generateCypher, 60000)
+}
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function checkToken(req){
+    const tokenFile = fs.readFileSync("./JsonFiles/Tokens.json");
+    var json = JSON.parse(tokenFile);
+    var ip_adress = req.socket.remoteAddress;
+    try{
+        json[ip_adress].token = json[ip_adress].token;
+        return true;
+    }
+    catch {
+        return false;
+    }
+}
+
 app.use(cors());
 
 // Parse URL-encoded bodies (as sent by HTML forms)
@@ -68,10 +106,52 @@ app.post("/getUser", (req, res) => {
   var data = JSON.parse(response);
   Object.keys(data[0]).forEach((key) => {
         if(data[0][key].username === username && data[0][key].password == password){
+            data[0][key].password = "";
             return res.send(data[0][key]);
         }
   })
   return res.send({error: "Wrong password or username!"});
+});
+app.post("/checkCypher", (req, res) => {
+  var response = req.body.cypher;
+  if(cypher === response){
+        const file = fs.readFileSync("./JsonFiles/Accounts.json");
+        var data = JSON.parse(file);
+        console.log(response);
+        const tokenFile = fs.readFileSync("./JsonFiles/Tokens.json");
+        var json = JSON.parse(tokenFile);
+        var ip_adress = req.socket.remoteAddress;
+        try{
+            json[ip_adress].token = json[ip_adress].token;
+        }
+        catch{
+            json[ip_adress] = { "token" : getRandomInt(100000000000000000000,1000000000000000000000)};
+        }
+        fs.writeFileSync("./JsonFiles/Tokens.json", JSON.stringify(json));
+        Object.keys(data[0]).forEach((key) => {
+              if(data[0][key].username === "CEO"){
+                    data[0][key].password = "";
+                    data[0][key].token = json[ip_adress].token;
+                    return res.send(data[0][key]);
+              }
+        })
+  }
+  //return res.send({error: "Wrong answer!"});
+});
+app.post("/checkToken", (req, res) => {
+  var token = req.body.token;
+
+  var ip_adress = req.socket.remoteAddress;
+  if(checkToken(ip_adress)){
+    return res.send({"token" : true})
+  }
+  else {
+    return res.send({"token" : true})
+  }
+});
+
+app.post("/getCypher", (req, res) => {
+    return res.send({data: encryptedCypher});
 });
 
 app.listen(process.env.PORT || 8080, () =>
