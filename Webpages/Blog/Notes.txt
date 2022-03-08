@@ -54,3 +54,5 @@
 - Ett pussel med ett citat. Antingen löst eller inte eller båda. 
 
 - Översätta de filerna till .jsx?
+
+- Fika inlägg.

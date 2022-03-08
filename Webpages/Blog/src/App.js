@@ -29,7 +29,7 @@ function App() {
     
     // An HTML statement that sets up our website according to 
     // the specifications in 'react-router-dom'.
-    <div className="App"> 
+    <div className="app"> 
       <BrowserRouter>
        <Header />
         <TopBar />

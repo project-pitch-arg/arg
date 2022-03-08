@@ -7,7 +7,7 @@
 */
 
 import React from 'react';
-import { answerToBeEncrypted, keyForEncryption, dateAsClue } from '../ChangeableVariables';
+import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE } from '../ChangeableVariables';
 
 export default function Puzzles(post) {
 
@@ -28,7 +28,7 @@ export default function Puzzles(post) {
           <pre class="post-content"> 
             {post.content}
           </pre>
-          {hasPicture(post)}
+            {hasPicture(post)}
           </div>
         </div>
       </div>
@@ -44,9 +44,9 @@ export default function Puzzles(post) {
     var indexArray = new Array(letter.length);
     var counter = 0;
     for(let i = 0; i < letter.length; i++){
-      const n = (post.content.split(letter[i]).length - 1)
+      const NUMBER = (post.content.split(letter[i]).length - 1)
       var index = post.content.indexOf(letter[i]);
-      var count1 = count % n;
+      var count1 = count % NUMBER;
       while(count1 > 0) {
         index = post.content.indexOf(letter[i], index+1);
         count1--;
@@ -54,10 +54,10 @@ export default function Puzzles(post) {
       indexArray[counter] = index;
       counter++;
     }
-    const index1 = indexArray[0];
-    const index2 = indexArray[1];
-    const index3 = indexArray[2];
-    const finalArray = [[index1,"color"],[index2, "color"],[index3, "color"]];
+    const INDEX_1 = indexArray[0];
+    const INDEX_2 = indexArray[1];
+    const INDEX_3 = indexArray[2];
+    const finalArray = [[INDEX_1,"color"],[INDEX_2, "color"],[INDEX_2, "color"]];
     return finalArray;
   }
 
@@ -171,14 +171,14 @@ export default function Puzzles(post) {
     var highestNumbers = [79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 , 99, 100, "", "", "", ""];
 
     // Find indexes for placements of all keys.
-    var letterIndexLow = letters.indexOf(keyForEncryption[0][0]);
-    var lowNumbersIndex = lowNumbers.indexOf(keyForEncryption[0][1]);
-    var letterIndexMedium = letters.indexOf(keyForEncryption[1][0]);
-    var mediumNumbersIndex = mediumNumbers.indexOf(keyForEncryption[1][1]);
-    var letterIndexLarge = letters.indexOf(keyForEncryption[2][0]);
-    var largeNumbersIndex = largeNumbers.indexOf(keyForEncryption[2][1]);
-    var letterIndexHighest = letters.indexOf(keyForEncryption[3][0]);
-    var highestNumbersIndex = highestNumbers.indexOf(keyForEncryption[3][1]);
+    var letterIndexLow = letters.indexOf(ENCRYPTION_KEY[0][0]);
+    var lowNumbersIndex = lowNumbers.indexOf(ENCRYPTION_KEY[0][1]);
+    var letterIndexMedium = letters.indexOf(ENCRYPTION_KEY[1][0]);
+    var mediumNumbersIndex = mediumNumbers.indexOf(ENCRYPTION_KEY[1][1]);
+    var letterIndexLarge = letters.indexOf(ENCRYPTION_KEY[2][0]);
+    var largeNumbersIndex = largeNumbers.indexOf(ENCRYPTION_KEY[2][1]);
+    var letterIndexHighest = letters.indexOf(ENCRYPTION_KEY[3][0]);
+    var highestNumbersIndex = highestNumbers.indexOf(ENCRYPTION_KEY[3][1]);
 
     // Shift the arrays to turn the rings according to the key.
     lowNumbers = shiftArrayWrap(lowNumbers, (lowNumbersIndex-letterIndexLow));
@@ -248,12 +248,12 @@ export default function Puzzles(post) {
       return (
         <div class="post">
           <div class="post-date">
-            {dateAsClue}
+            {CLUE_DATE}
           <div class="post-name"> 
             {post.poster} 
           {changeString(post,changeColor(post, "tda", 2),changeFont(post, "eda", 1))}
           <p id="test" style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
-              {encodedMsg(answerToBeEncrypted)}
+              {encodedMsg(ANSWER_TO_BE_ENCRYPTED)}
           </p>
           {hasPicture(post)}
           </div>
@@ -265,7 +265,7 @@ export default function Puzzles(post) {
     return (
       <div class="post">
         <div class="post-date">
-          {dateAsClue}
+          {CLUE_DATE}
         <div class="post-name"> 
           {post.poster} 
         <pre class="post-content">

@@ -89,7 +89,7 @@
 /* The color of the background outside
     of the posts. */
 .background {
-    height: fit-content;
+    height: 100vh;
     justify-content: left;
     display: flex;
     background: repeating-linear-gradient( 45deg,hsl(93, 40%, 60%), hsl(93, 27%, 45%), 1px,hsl(93, 40%, 60%) 1px);
@@ -221,7 +221,7 @@
     font-size: 3vh;
 }
 /* Displays the name of the person who said the quote. */
-.saidBy {
+.said-by {
     color: black;
     text-align: right;
 }
@@ -230,7 +230,7 @@
 
 /* Creates an area to place questions in.
     Has a scrollbar if necessary. */
-.questionlist {
+.question-list {
     height: 80vh;
     width: 70%;
     background-color: hsl(47, 34%, 74%);

@@ -7,22 +7,22 @@
 
 import React from 'react';
 import '../TabContent.css';
-import AboutContent from './AboutContent.json';
-import { userName1, userName2 } from '../../ChangeableVariables';
+import aboutContent from './AboutContent.json';
+import { USER_NAME_1, USER_NAME_2 } from '../../ChangeableVariables';
 
 export default function DisplayAbout() {
 
     return (
     <div class="content">
-     <div class="questionlist">
-        {AboutContent.map(item => {
+     <div class="question-list">
+        {aboutContent.map(item => {
           return (
             <div class="question">
                 {item.question} 
             <div class="answer"> 
-              <il class="about-names"> {userName1}: </il> {item.answerUser1} 
+              <il class="about-names"> {USER_NAME_1}: </il> {item.answerUser1} 
             <div class="answer">
-              <il class="about-names"> {userName2}: </il> {item.answerUser2}
+              <il class="about-names"> {USER_NAME_2}: </il> {item.answerUser2}
             </div>
             </div>
          </div>
