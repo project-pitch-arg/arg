@@ -24,25 +24,7 @@ export default function AboutUs() {
     useEffect(() => {
       window.scrollTo(0, 0)
     }, [])
-  /*
-    return (
-        <div>
-          <div class="header">
-            <a>About Us</a>
-          </div>
-          <div class="content">
-            <div id="team-content">
-              <h1>Who are we?</h1>
-              <div class="team-member"><img src={teamMember}/><a>Name LastName</a></div>
-              <div class="team-member"><img src={teamMember}/><a>Name LastName</a></div>
-              <div class="team-member"><img src={teamMember}/><a>Name LastName</a></div>
-              <div class="team-member"><img src={teamMember}/><a>Name LastName</a></div>
-            </div>   
-          </div>
-        </div>
-      
-    )
-    */
+
     return(
 
         <div>
@@ -56,7 +38,10 @@ export default function AboutUs() {
               <div id="aboutUs-goals-img"><img src={goalsImg} height='215px'/> </div>
               <div id="aboutUs-goals-desc">
                 <h1> Our Goals </h1>
-                <a> Our primary goal is for all customers, those with and without financial stability to feel safe. Listening to feedback and improving services is what we strive for. If you ever need us for anything we will be by your side ready to help.</a>
+                <a> Our primary goal is for all customers, those with and without financial stability
+                to feel safe. Listening to feedback and improving services is what we strive for.
+                 If you ever need us for anything we will be by your side ready to help.
+                 </a>
               </div>
             </div>
 
@@ -66,13 +51,21 @@ export default function AboutUs() {
              <div id="aboutUs-environment-img"><img src={environmentImg}/></div>
               <div id="aboutUs-env-desc">
                 <h1>Sustainable Practices</h1>
-                <a> We work hard to provide the best access to sustainable practices worldwide. Our internal workforce works diligently to innovate new types of renewable systems daily. To use or even participate in this movement use, only once per customer, the code “FUTURE” when purchasing from here or at any of our providers.</a>
+                <a> We work hard to provide the best access to sustainable practices internationally.
+                Our internal workforce works diligently to innovate new types of renewable systems.
+                 We then use these throughout our development.
+                 This means that from our code to our manufacturing, everything here is carefully
+                  coordinated to be sustainable.
+                  </a>
               </div>
             </div>
 
             <div id="tech-content">
               <h1>Why Work with us?</h1>
-              <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</a>
+              <a> At our company we value our employees and the ideas the they bring to the table.
+              We strive for a work environment that is safe from prejudice, open for new ideas and equal for everyone.
+              We guarantee you will love working for us, we hope to see you soon!
+              </a>
             </div>
           </div>
 
