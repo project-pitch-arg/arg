@@ -1,57 +1,56 @@
-Things to think about:
- - How to get the page to exactly fill the browser?
-    - Inte direkt nödvändigt, bara resten ser bra ut.
-    - Hellre lite för stor än en vit kant?
 
- - Bilder till About. Uppdatera text.
-    - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
-    - Ändra kontaktmetod till chatten (ändra också footer i chat)
-
- - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
-
- - Kommentera mer kod. Framförallt chatten.
-
- - Ett pussel med ett citat. Antingen löst eller inte eller båda. 
-
-- Variabel till nycklar, ID i chatten (Py).
-
-- Add logo to website
-
-- Blog design
-
-- Lägga in data i chat.
-    - Översätta de filerna till .jsx?
+--------------- Prio 1 ---------------
 
 - Logga in via blogg, ge inloggning. 
-
-- Bloggvy i mobilform (inte prioriterat)
-    - Det mesta ser konstigt ut just nu.
-
-- Ge alt="..." till alla bilder.
-
-- A solved puzzle on the blog could be about the usernames.
-
-- Documentation for puzzles, how they work and their names.
-
-- CSS-file. Add colour names to make it easier to change the overall impression.
-
-- Kommentarer!
-
-- Line break i JSON.
-
-- Allmän guide till Allt 
-    - kod.
-
-- Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
-    - Fråga på möte.
-
-- Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
-
-- Jämför med kodstandard.
 
 - Tillsammans? På olika platser.
     - Inlägg för detta.
     - Var bor Edwin?
 
+- Inlägg om Göteborg ('reklam')
+- Inlägg med Chalmersrykten (fråga)
+
+- Variabel till nycklar, ID i chatten (Py).
+
+- Jämför med kodstandard.
+
+- Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
+    - Fråga på möte.
+
+ - Bilder till About. Uppdatera text.
+    - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
+    - Ändra kontaktmetod till chatten (ändra också footer i chat)
+ - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
 
 
+--------------- Prio 2 ---------------
+
+ - Kommentera mer kod. Framförallt chatten.
+
+ - Add logo to website
+
+ - Lägga in data i chat.
+    - A solved puzzle on the blog could be about the usernames.
+
+- Organisera css-filer
+    - CSS-file. Add colour names to make it easier to change the overall impression.
+
+. Dokumentation
+    - Documentation for puzzles, how they work and their names.
+    - Allmän guide till Allt   
+    - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
+
+--------------- Prio 3 ---------------
+
+- Blog design
+
+ - How to get the page to exactly fill the browser?
+    - Inte direkt nödvändigt, bara resten ser bra ut.
+    - Hellre lite för stor än en vit kant?
+
+- Bloggvy i mobilform (inte prioriterat)
+    - Det mesta ser konstigt ut just nu.
+
+- Ett pussel med ett citat. Antingen löst eller inte eller båda. 
+
+- Översätta de filerna till .jsx?
