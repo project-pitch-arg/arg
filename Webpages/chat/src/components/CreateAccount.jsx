@@ -9,8 +9,7 @@ function exit() {
     return;
 }
 
-
-const Test = () => {
+const CreateAccount = () => {
     const [username, setUsername] = useState('');
     const [firstname, setFirstName] = useState('');
     const [lastname, setLastName] = useState('');
@@ -19,22 +18,33 @@ const Test = () => {
 
     const createUser = async (e) => {
         e.preventDefault();
-    
-        const authObject = { 'Project-ID': projectID, 'User-Name': username, 'User-Secret': "TempPassword" };
-    
-        try {
-          await axios.get('https://api.chatengine.io/chats', { headers: authObject });
-    
-          localStorage.setItem('username', username);
-          localStorage.setItem('password', "TempPassword");
-    
-          window.location.reload();
-          setError('');
-        } catch (err) {
-          setError('Oops, incorrect credentials.');
-        }
-      };
 
+        var userInfo =  {"first_name": firstname, "last_name": lastname, "username": username, 
+                            "secret": "pass123", "email": email} ;
+        
+        console.log(JSON.stringify(userInfo));
+        
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = false;
+
+        xhr.addEventListener("readystatechange", function() {
+            if(this.readyState === 4) {
+                var jsonResponse = JSON.parse(this.responseText);
+                if(this.status != 201) {
+                    setError(jsonResponse[Object.keys(jsonResponse)[0]]);
+                }
+                else {
+                    setError("Account created");
+                }
+            }
+        });
+        xhr.open("POST", "https://api.chatengine.io/users/");
+        xhr.setRequestHeader("PRIVATE-KEY", "9f6fd0d6-a58f-4be0-9d0a-b47516df6578");
+        xhr.setRequestHeader('Content-Type', 'application/json');
+
+        xhr.send(JSON.stringify(userInfo));
+
+    }
     return (
         <div className="wrapper">
             <div className="form">
@@ -62,4 +72,4 @@ const Test = () => {
     );
 };
 
-export default Test;
+export default CreateAccount;
