@@ -14,9 +14,7 @@ const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
 const App = () => {
 
   if (!localStorage.getItem('username')) {
-    console.log("check");
     if(localStorage.getItem('getAccount')) {
-      console.log("hi+");
       return <CreateAccount/>;
     }
     return <LoginForm/>;
