@@ -22,6 +22,7 @@
     - Ändra kontaktmetod till chatten (ändra också footer i chat)
  - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
 
+- Lägg till fält så att man kan ladda upp en avatarbild till chatten.
 
 --------------- Prio 2 ---------------
 
@@ -35,10 +36,17 @@
 - Organisera css-filer
     - CSS-file. Add colour names to make it easier to change the overall impression.
 
-. Dokumentation
+- Dokumentation
     - Documentation for puzzles, how they work and their names.
     - Allmän guide till Allt   
     - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
+
+- När man skapar konto på chatten gör error-meddelanden att fönstret får en vit kant i botten. 
+
+- Möjlighet att radera allt i chatten så man kan starta om.
+
+- Just nu får man fel när chatten laddas in om användare som skickat meddelanden tas bort.
+    - Tror det är på endast senaste meddelandet.
 
 --------------- Prio 3 ---------------
 
@@ -56,3 +64,6 @@
 - Översätta de filerna till .jsx?
 
 - Fika inlägg.
+
+- Ta bort våra nycklar till chatten när allt är klart så man inte hamnar på mitt konto.
+    - Dokumentera att detta måste fixas innan man starta bloggen.

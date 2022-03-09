@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { PROJECT_ID, PRIVATE_KEY, DEFAULT_CHATS } from '../changeableVariables';
 
-const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
 
+// Thanks to the internet.
 export function hashCode(string) {
         var hash = 0;
         if (string.length == 0) 
@@ -33,6 +34,7 @@ const CreateAccount = () => {
     const createUser = async (e) => {
         e.preventDefault();
 
+        // Create a user
         var hashPassword;
 
         console.log(hashPassword);
@@ -43,27 +45,67 @@ const CreateAccount = () => {
                             "secret": hashPassword, "email": email} ;
         
         
-        var xhr = new XMLHttpRequest();
-        xhr.withCredentials = false;
+        var xhrUser = new XMLHttpRequest();
+        xhrUser.withCredentials = false;
 
-        xhr.addEventListener("readystatechange", function() {
+        xhrUser.addEventListener("readystatechange", function() {
             if(this.readyState === 4) {
                 var jsonResponse = JSON.parse(this.responseText);
                 if(this.status != 201) {
                     setError(jsonResponse[Object.keys(jsonResponse)[0]]);
                 }
                 else {
+                    addDefaultChats();
                     setError("Account created");
                 }
             }
         });
-        xhr.open("POST", "https://api.chatengine.io/users/");
-        xhr.setRequestHeader("PRIVATE-KEY", "9f6fd0d6-a58f-4be0-9d0a-b47516df6578");
-        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhrUser.open("POST", "https://api.chatengine.io/users/");
+        xhrUser.setRequestHeader("PRIVATE-KEY", PRIVATE_KEY);
+        xhrUser.setRequestHeader('Content-Type', 'application/json');
 
-        xhr.send(JSON.stringify(userInfo));
-
+        xhrUser.send(JSON.stringify(userInfo));
     }
+
+function addDefaultChats() {
+    var xhrArray = [];
+    for (var i = 0; i < DEFAULT_CHATS.length; i++) {
+        xhrArray[i] = new XMLHttpRequest();
+    }
+               
+    for (var i = 0; i < DEFAULT_CHATS.length; i++) {
+        console.log(DEFAULT_CHATS[i]);
+        console.log("hello" + i);
+        console.log("https://api.chatengine.io/chats/" + DEFAULT_CHATS[i] + "/people/");
+
+        xhrArray[i].withCredentials = false;
+
+        //TODO remove these logs when done with testing this
+        xhrArray[i].addEventListener("readystatechange", function() {
+            if(this.readyState === 4) {
+                if(this.status != 201) {
+                    console.log(this.responseText + "hello")
+                }
+                else {
+                    console.log(this.responseText + "succeed!")
+                }
+            }
+        });
+            
+    var chatInfo =  {"username": username} ;
+        
+    xhrArray[i].open("POST", "https://api.chatengine.io/chats/" + DEFAULT_CHATS[i] + "/people/");
+            
+    xhrArray[i].setRequestHeader("Project-ID", PROJECT_ID);
+    xhrArray[i].setRequestHeader("User-Name", "Robot1312113");
+    xhrArray[i].setRequestHeader("User-Secret", "Imarobot");
+    
+    xhrArray[i].setRequestHeader('Content-Type', 'application/json');
+    
+    xhrArray[i].send(JSON.stringify(chatInfo));
+    }
+}
+
     return (
         <div className="wrapper">
             <div className="form">
