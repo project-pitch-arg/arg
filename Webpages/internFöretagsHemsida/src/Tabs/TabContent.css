@@ -64,14 +64,16 @@ img.graph{
 h3{
     font-size: 18px;
 }
-.console {
+.smallConsole {
     padding: 10px;
     color: white;
     background-color: black;
+    width: 200px;
 }
-.console:focus{
+.smallConsole:focus{
     color: white;
     background-color: black;
+
 }
 .switchAccount{
     font-size: 20px;

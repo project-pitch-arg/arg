@@ -24,6 +24,7 @@ export default class Console extends Component{
         this.securityCheck = false;
         this.messagesEnd = React.createRef();
     }
+    //Controls the scroll for the command prompt so that it always scrolls down to the newest command response
     componentDidMount() {
       this.scrollToBottom();
     }

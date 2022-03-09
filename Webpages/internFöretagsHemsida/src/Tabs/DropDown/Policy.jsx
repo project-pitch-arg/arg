@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../TabContent.css';
+import "../TabContent.css";
 import {basicFetchData} from "../../Client/Client";
 import axios from 'axios';
 
@@ -19,11 +19,9 @@ export default class Policy extends Component{
     async componentDidMount(){
         await this.getPolicy();
         document.addEventListener("keydown", this._handleKeyDown);
-        document.addEventListener("keyup", this._handleKeyUp);
     }
     componentWillUnmount(){
         document.removeEventListener("keydown", this._handleKeyDown);
-        document.removeEventListener("keyup", this._handleKeyUp);
     }
     componentDidUpdate(prevProps, prevState){
         this.reloadPage = this.props.reloadPage;
@@ -62,19 +60,19 @@ export default class Policy extends Component{
     //Called when a key is pressed
     _handleKeyDown = (event) => {
         this.keys.push(event.key);
+        if(event.key !== "o" && event.key !== "p" && event.key !== "e" && event.key !== "n" && event.key !== "Enter"){
+            this.keys = [];
+        }
         switch( event.key ) {
             case "Enter":
                 if(this.checkPressedKeys("o") && this.checkPressedKeys("p") && this.checkPressedKeys("e") && this.checkPressedKeys("n")){
                     this.setState({hidden: !this.state.hidden});
+                    this.keys = [];
                 }
                 break;
             default:
                 break;
         }
-    }
-    //Called when a key is released
-    _handleKeyUp = (event) => {
-        this.keys.pop(event.key);
     }
     //Checks if specific key is pressed down
     checkPressedKeys(key){
@@ -118,8 +116,7 @@ export default class Policy extends Component{
                     })
                   }
                   <form onSubmit={this.handleInput}>
-                    <label>Code: </label>
-                    <input class="console" type="text" name="name" id="command"/>
+                    <input class="smallConsole" placeholder="Enter code..." type="text" name="name" id="command"/>
                   </form>
                 </div>
             )

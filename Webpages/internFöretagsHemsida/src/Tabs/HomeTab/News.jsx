@@ -19,8 +19,8 @@ export default class News extends Component{
     }
 
     async getNews(){
-            this.news = await basicFetchData("/getNews");
-            this.setState({dataReceived: true});
+        this.news = await basicFetchData("/getNews");
+        this.setState({dataReceived: true});
     }
 
     render(){
