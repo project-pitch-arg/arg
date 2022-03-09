@@ -38,7 +38,7 @@ export default function AboutUs() {
               <div id="aboutUs-goals-img"><img src={goalsImg} height='215px'/> </div>
               <div id="aboutUs-goals-desc">
                 <h1> Our Goals </h1>
-                <a> Our primary goal is for all customers, those with and without financial stability
+                <a> Our primary goal is for all customers, those with and without financial stability,
                 to feel safe. Listening to feedback and improving services is what we strive for.
                  If you ever need us for anything we will be by your side ready to help.
                  </a>
@@ -51,8 +51,8 @@ export default function AboutUs() {
              <div id="aboutUs-environment-img"><img src={environmentImg}/></div>
               <div id="aboutUs-env-desc">
                 <h1>Sustainable Practices</h1>
-                <a> We work hard to provide the best access to sustainable practices internationally.
-                Our internal workforce works diligently to innovate new types of renewable systems.
+                <a> We work hard to provide the best access to completely renewable products.
+                Our central workforce works diligently to innovate new types of renewable systems.
                  We then use these throughout our development.
                  This means that from our code to our manufacturing, everything here is carefully
                   coordinated to be sustainable.
