@@ -171,7 +171,7 @@
     margin-right: 40px;
     justify-content: center;
     text-align: center;
-    background-color: hsl(93, 40%, 60%); /* Temporary? to see the area. */
+    /*background-color: hsl(93, 40%, 60%); *//* Temporary? to see the area. */
 }
 /* Keeps the buttons together at a certain place. */
 .buttongroup {

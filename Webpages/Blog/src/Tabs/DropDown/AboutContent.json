@@ -7,12 +7,22 @@
     {
         "question": "Who are we?", 
         "answerUser1": "I'm a 23-year old masters student who doesn't know what I'm suppsed to do with all the puzzles I make. Also, never EVER give me grapefruit!", 
-        "answerUser2": "An exchange student that went to Chalmers Institute of Technology a while back. I like to explore and take photos with my phone to remember places."
+        "answerUser2": "An exchange student that went to Chalmers Institute of Technology in Gothenburg, Sweden, a while back. I like to explore and take photos with my phone to remember places."
+    },
+    {
+        "question": "Where are you from?",
+        "answerUser1": "I was manufactured in Gothenburg. I have been situated here for all of my existence.",
+        "answerUser2": "I originate from Great Britain, but started this website with Robot1312113 after getting to know him during the period of time I spent studying in Sweden."
     },
     {
         "question": "Why do we have a blog?", 
         "answerUser1": "To keep in contact with each other and have someone solve my puzzles.", 
         "answerUser2": "It's nice to be able to upload what you think about and pictures you like."
+    },
+    {
+        "question": "How can you contact us?",
+        "answerUser1": "By sacrificing two goats and a llama to the eldritch overlords of our domain.",
+        "answerUser2": "We ocasionally check the chat. There's a special chat for contact with us. If you don't already have an account for the chat it is quite simple. Just go to the chat tab and click the 'Create Account' button. After that, simply fill in your information."
     },
     {
         "question": "What are these puzzles you keep mentioning?", 

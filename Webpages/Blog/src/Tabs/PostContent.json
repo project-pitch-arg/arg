@@ -67,6 +67,18 @@
         "isPuzzle": false
     },
     {
+        "date": [2022, 3, 14],
+        "poster": "Fexjo",
+        "content": "I made an assortment of delicious pies today. Included amongst them are apple pies, blueberry pies, rhubarb pies, and a bunch more. It truly was quite a treat.",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 3, 14],
+        "poster": "Robot1312113",
+        "content": "I think Fexjo went mad today. Out of nowhere he just suddenly spouted that he needed to make a bunch of pies. He then went on to create an entire buffet. Something has gotten into him, and i'm not quite sure what, or how I can fix him. ＼(〇_ｏ)／",
+        "isPuzzle": false
+    },
+    {
         "date": [2022, 5, 5],
         "poster": "Robot1312113",
         "content": "You ever experienced feeling like you fall and wake up with a start? Today, I also did that. And included the falling part. It hurt. (×_×#)",
@@ -137,16 +149,6 @@
     },
     {
         "poster": "Fexjo",
-        "content": "I saw the poster for a dinosaur exhibition today. My only thought was that Robot1312113 will probably invite me to this soon enough.",
-        "isPuzzle": false
-    },
-    {
-        "poster": "Robot1312113",
-        "content": "It would be a bit hard to invite you, you are in a different country. Besides, I went to one just the other day. I have some patience... and too few numbers in my bank account.(￣ヘ￣)",
-        "isPuzzle": false
-    },
-    {
-        "poster": "Fexjo",
         "content": "Have you heard of the butterfly effect? Where a single flap of a butterfly's wings can cause a tornado in another part of the world. A cascading series of events that causes something huge from the tiniest of things. My teacher did not accept that excuse to why I was late this morning.",
         "isPuzzle": false
     },
@@ -161,15 +163,18 @@
         "isPuzzle": false
     },
     {
-        "date": [2022, 3, 14],
         "poster": "Fexjo",
-        "content": "I made an assortment of delicious pies today. Included amongst them are apple pies, blueberry pies, rhubarb pies, and a bunch more. It truly was quite a treat.",
+        "content": "Today marks the day that I leave Sweden. It was nice while it lasted and i'm surely going to visit a lot in the future. But first, I need to finish my studies from home. I can't do everything abroad, some things has to be done in Great Britain. I've come to really enjoy this place, but there really is no place like home.",
         "isPuzzle": false
     },
     {
-        "date": [2022, 3, 14],
+        "poster": "Fexjo",
+        "content": "I saw the poster for a dinosaur exhibition today. My only thought was that Robot1312113 will probably invite me to this soon enough.",
+        "isPuzzle": false
+    },
+    {
         "poster": "Robot1312113",
-        "content": "I think Fexjo went mad today. Out of nowhere he just suddenly spouted that he needed to make a bunch of pies. He then went on to create an entire buffet. Something has gotten into him, and i'm not quite sure what, or how I can fix him. ＼(〇_ｏ)／",
+        "content": "It would be a bit hard to invite you, you are in a different country. Besides, I went to one just the other day. I have some patience... and too few numbers in my bank account.(￣ヘ￣)",
         "isPuzzle": false
     }
 ]
