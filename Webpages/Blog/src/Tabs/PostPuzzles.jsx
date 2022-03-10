@@ -57,7 +57,7 @@ export default function Puzzles(post) {
     const INDEX_1 = indexArray[0];
     const INDEX_2 = indexArray[1];
     const INDEX_3 = indexArray[2];
-    const finalArray = [[INDEX_1,"color"],[INDEX_2, "color"],[INDEX_2, "color"]];
+    const finalArray = [[INDEX_1,"color"],[INDEX_2, "color"],[INDEX_3, "color"]];
     return finalArray;
   }
 

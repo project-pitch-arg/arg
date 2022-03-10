@@ -12,8 +12,6 @@
 
 - Variabel till nycklar, ID i chatten (Py).
 
-- Jämför med kodstandard.
-
 - Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
     - Fråga på möte.
 
