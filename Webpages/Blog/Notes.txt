@@ -52,6 +52,8 @@
 - Fixa också då så att de man automatiskt gör i StartUp har avatarer.
 
 - JSON Schema
+    - Blogg - Ludvig
+    - Chat - Sara
 
 --------------- Prio 3 ---------------
 
