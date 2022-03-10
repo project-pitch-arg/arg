@@ -1,26 +1,24 @@
 
 --------------- Prio 1 ---------------
 
-- Logga in via blogg, ge inloggning. 
-
-- Tillsammans? På olika platser.
-    - Inlägg för detta.
-    - Var bor Edwin?
-
 - Inlägg om Göteborg ('reklam')
-- Inlägg med Chalmersrykten (fråga)
-
-- Variabel till nycklar, ID i chatten (Py).
+- Inlägg med Chalmersrykten
+- GU
 
 - Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
     - Fråga på möte.
 
  - Bilder till About. Uppdatera text.
     - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
-    - Ändra kontaktmetod till chatten (ändra också footer i chat)
  - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
 
-- Lägg till fält så att man kan ladda upp en avatarbild till chatten.
+- Fixa namn på saker i StartUp för chatten.
+
+- Välj så att vi antingen har ' eller " överallt.
+
+- Rensa chatten från alla användare/chattar
+
+- Fixa ikonen för fliken.
 
 --------------- Prio 2 ---------------
 
@@ -45,6 +43,13 @@
 
 - Just nu får man fel när chatten laddas in om användare som skickat meddelanden tas bort.
     - Tror det är på endast senaste meddelandet.
+
+- Errorhantering
+    - Framförallt om man lagt in felaktig data när chatten
+      skapas så att det inte går som det ska.
+
+- Lägg till fält så att man kan ladda upp en avatarbild till chatten.
+- Fixa också då så att de man automatiskt gör i StartUp har avatarer.
 
 --------------- Prio 3 ---------------
 
