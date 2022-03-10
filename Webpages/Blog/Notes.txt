@@ -3,10 +3,6 @@
 
 - Logga in via blogg, ge inloggning. 
 
-- Tillsammans? På olika platser.
-    - Inlägg för detta.
-    - Var bor Edwin?
-
 - Inlägg om Göteborg ('reklam')
 - Inlägg med Chalmersrykten (fråga)
 
