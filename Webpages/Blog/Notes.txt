@@ -11,12 +11,9 @@
 - Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
     - Fråga på möte.
 
- - Bilder till About. Uppdatera text.
-    - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
-    - Ändra kontaktmetod till chatten (ändra också footer i chat)
- - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
+- Ändra kontaktmetod till chatten (ändra också footer i chat)
 
-- Lägg till fält så att man kan ladda upp en avatarbild till chatten.
+- Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
 
 --------------- Prio 2 ---------------
 
@@ -61,3 +58,5 @@
 
 - Ta bort våra nycklar till chatten när allt är klart så man inte hamnar på mitt konto.
     - Dokumentera att detta måste fixas innan man starta bloggen.
+
+- Lägg till fält så att man kan ladda upp en avatarbild till chatten.

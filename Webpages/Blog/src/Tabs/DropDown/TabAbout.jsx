@@ -8,13 +8,13 @@
 import React from 'react';
 import '../TabContent.css';
 import aboutContent from './AboutContent.json';
-import { USER_NAME_1, USER_NAME_2 } from '../../ChangeableVariables';
+import { USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2 } from '../../ChangeableVariables';
 
 export default function DisplayAbout() {
 
     return (
     <div class="content">
-     <div class="question-list">
+      <div class="question-list">
         {aboutContent.map(item => {
           return (
             <div class="question">
@@ -29,6 +29,15 @@ export default function DisplayAbout() {
           )
         })}
       </div>
+      <div class="right-side">
+        <div class="author-pictures">
+            <img src={USER_PICTURE_1} class="image" ></img>
+            <p>I'm {USER_NAME_1}</p>
+            <img src={USER_PICTURE_2} class="image"></img>
+            <p>I'm {USER_NAME_2}</p>
+        </div>
+      </div>
+      
     </div> 
     )
 }

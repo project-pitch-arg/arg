@@ -2,7 +2,6 @@ import React from 'react';
 import './TabContent.css';
 import { Link } from 'react-router-dom';
 import Help from '../TopBar/TopBar';
-import dino from '../Img/babydino-removebg-preview.png';
 import helpbutton from '../Img/helpTest.png'
 import puzzleHandler from './PostPuzzles.jsx';
 
@@ -42,10 +41,6 @@ export default function Home() {
         <div class='content content-home-2'>
           <div>
             <img class="home-image" src={USER_PICTURE_1} />
-          </div>
-          
-          <div>
-            <img class="home-image" src={dino} />
           </div>
           
           <div >

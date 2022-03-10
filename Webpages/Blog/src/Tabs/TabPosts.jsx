@@ -36,26 +36,26 @@ export default function Posts() {
   // content using the function .map.
   return (
     <div class="background">
-         <div class="postlist">
+        <div class="postlist">
          {(postContent.slice(start,last)).map(post => {
            return (<div>{puzzleHandler(post)}</div>)
          } ) }
          </div>
          <div class="right-side">
-         <div class="buttongroup">
-          <button class="button" onClick={prevPage} disabled={disableP}> {"<"} </button> 
-          <button class="button" onClick={nextPage} disabled={disableN}> {">"} </button>  
-         </div>  
-         <div class="buttongroup">
-         <button class="button" onClick={firstPage} disabled={disableF}> {"<<"}</button>
-          <button class="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
-         </div>
-          <div class="author-pictures">
-           <img src={USER_PICTURE_1} class="image" ></img>
-           <p>Hello, I'm {USER_NAME_1}! Join us in the chat!</p>
-           <img src={USER_PICTURE_2} class="image"></img>
-           <p>Hello! I'm {USER_NAME_2}. If you want to know more about the authors, go to About.</p>
+          <div class="buttongroup">
+            <button class="button" onClick={prevPage} disabled={disableP}> {"<"} </button> 
+            <button class="button" onClick={nextPage} disabled={disableN}> {">"} </button>  
+          </div>  
+          <div class="buttongroup">
+          <button class="button" onClick={firstPage} disabled={disableF}> {"<<"}</button>
+            <button class="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
           </div>
+            <div class="author-pictures">
+            <img src={USER_PICTURE_1} class="image" ></img>
+            <p>Hello, I'm {USER_NAME_1}! Join us in the chat!</p>
+            <img src={USER_PICTURE_2} class="image"></img>
+            <p>Hello! I'm {USER_NAME_2}. If you want to know more about the authors, go to About.</p>
+            </div>
          </div>
       </div>
     )
@@ -120,7 +120,7 @@ export default function Posts() {
       firstPage();
       return;
     } else if (last - start < POSTS_PER_PAGE) {
-      lastChange(last - 1);
+      lastChange(start);
       startChange(start - POSTS_PER_PAGE);
     } else {
       lastChange(last - POSTS_PER_PAGE);
