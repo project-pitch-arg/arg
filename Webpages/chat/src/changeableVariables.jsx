@@ -30,4 +30,4 @@ export const PRIVATE_KEY = "9f6fd0d6-a58f-4be0-9d0a-b47516df6578";
 // The chat rooms a new user will be entered into.
 // The numbers can be found on your web page.
 // It would be good to edit this when all chosen default chats are created.
-export const DEFAULT_CHATS = [101894, 97379];
+export const DEFAULT_CHATS = [102115, 97379];
