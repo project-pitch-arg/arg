@@ -51,6 +51,8 @@
 - Lägg till fält så att man kan ladda upp en avatarbild till chatten.
 - Fixa också då så att de man automatiskt gör i StartUp har avatarer.
 
+- JSON Schema
+
 --------------- Prio 3 ---------------
 
 - Blog design
