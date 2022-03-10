@@ -20,7 +20,9 @@
     - Ändra kontaktmetod till chatten (ändra också footer i chat)
  - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
 
-- Lägg till fält så att man kan ladda upp en avatarbild till chatten.
+- Fixa namn i startUp för chatt.
+
+- Standardisera med antinge ' eller " överallt.
 
 --------------- Prio 2 ---------------
 
@@ -46,6 +48,12 @@
 - Just nu får man fel när chatten laddas in om användare som skickat meddelanden tas bort.
     - Tror det är på endast senaste meddelandet.
 
+- Errorhantering
+    - Skriv ut errormeddelanden om man har fel format i JSON eller liknande
+    - Tänker mest i StartUp för chatten
+
+- Avatarer till användare och de man laddar upp innan
+
 --------------- Prio 3 ---------------
 
 - Blog design
@@ -65,3 +73,5 @@
 
 - Ta bort våra nycklar till chatten när allt är klart så man inte hamnar på mitt konto.
     - Dokumentera att detta måste fixas innan man starta bloggen.
+
+

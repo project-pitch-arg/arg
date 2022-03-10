@@ -1,0 +1,15 @@
+[
+    {
+        "chat-name": "Welcome",
+        "text": "Hello world. I'm not a robot. But I like snow.",
+        "user": "Fexjo",
+        "password": "MynameisCaesar"
+    },
+    {
+        "chat-name": "WelcomeTest",
+        "text": "Hello world. I count like ! !! !!.",
+        "user": "Robot1312113",
+        "password": "Imarobot",
+        "custom_json": "https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png"
+    }
+]

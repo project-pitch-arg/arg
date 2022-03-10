@@ -21,13 +21,15 @@
 
 // --------------- Keys ---------------
 
-export const PROJECT_ID = "bdbda1a1-c263-40fc-ae88-02769813cdca";
+export const PROJECT_ID = "bd7ed9ec-9d77-4413-a5d3-0ee995f30015";
 
-export const PRIVATE_KEY = "9f6fd0d6-a58f-4be0-9d0a-b47516df6578";
+export const PRIVATE_KEY = "187bca6e-c11c-4815-9071-fbe87c45a3a6";
 
 // --------------- Default values ---------------
 
 // The chat rooms a new user will be entered into.
 // The numbers can be found on your web page.
 // It would be good to edit this when all chosen default chats are created.
-export const DEFAULT_CHATS = [101894, 97379];
+export const DEFAULT_CHATS = [102138];
+
+// The default users existing in the chat.

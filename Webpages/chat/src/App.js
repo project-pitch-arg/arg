@@ -7,8 +7,9 @@ import './App.css';
 //TEST
 import {haveAccount} from './components/LoginForm';
 import CreateAccount from './components/CreateAccount';
+import { PROJECT_ID } from './changeableVariables';
 
-const projectID = 'bdbda1a1-c263-40fc-ae88-02769813cdca';
+const projectID = PROJECT_ID;
 
 
 const App = () => {

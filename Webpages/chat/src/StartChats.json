@@ -1,0 +1,14 @@
+[
+    {
+        "admin": "Robot1312113",
+        "admin-secret": "Imarobot",
+        "chat-name": "Welcome",
+        "users": ["Fexjo"]
+    },
+    {
+        "admin": "Robot1312113",
+        "admin-secret": "Imarobot",
+        "chat-name": "WelcomeTest",
+        "users": ["Fexjo", "Tjena"]
+    }
+]

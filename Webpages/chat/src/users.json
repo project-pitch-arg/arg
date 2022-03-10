@@ -1,9 +1,18 @@
 [
     {
-        "first_name": "John",
-        "last_name": "Smith",
-        "username": "john@smith.co",
-        "secret": "pass123",
-        "email": "john@smith.co"
+        "first_name": "Hallo",
+        "last_name": "Hej",
+        "username": "Tjena",
+        "secret": "hejsan",
+        "email": "john@smith.com",
+        "avatar": null
+    },
+    {
+        "first_name": "Edwin",
+        "last_name": "Fairchild",
+        "username": "Fexjo",
+        "secret": "MynameisCaesar",
+        "email": "Edwin.Fair@nice.com",
+        "avatar": null
     }
 ]
