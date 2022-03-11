@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import axios from 'axios';
-import CreateAccount from './CreateAccount';
 import {hashCode} from './CreateAccount';
 import { PROJECT_ID } from '../changeableVariables';
 
 const projectID = PROJECT_ID;
 
-var haveAccount = true;
+//var haveAccount = true;
 
 export var haveAccount;
 
@@ -16,7 +15,7 @@ const Modal = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  haveAccount = false;
+  //haveAccount = false;
   //console.log("hill");
   //if (!haveAccount) {haveAccount=true; console.log("hello");return <CreateAccount />;} //TODO: fix
 

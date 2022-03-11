@@ -1,15 +1,36 @@
-import { useState } from 'react';
+/* 
+   This file contains the form which
+   is used to create an account.
 
+   When the user has entered their
+   credentials, the password is
+   encrypted and a message is sent to
+   the chat server to create the account.
+
+   THe account is then added to the 
+   chosen default chats. You can edit
+   these by changing the DEFAULT_CHATS
+   variable in changeableVariables.jsx.
+*/
+
+import { useState } from 'react';
 import { PROJECT_ID, PRIVATE_KEY, DEFAULT_CHATS } from '../changeableVariables';
     
-
+// Removes the 'getAccount' value from local
+// storage and reloads the window to return to 
+// the login form.
 function exit() {
     localStorage.removeItem('getAccount');
     window.location.reload();
     return;
 }
 
+// Function which uses the entered user
+// information to create the account and
+// add it to the default chats.
 const CreateAccount = () => {
+
+    // Initialize variables.
     const [username, setUsername] = useState('');
     const [firstname, setFirstName] = useState('');
     const [lastname, setLastName] = useState('');
@@ -17,72 +38,97 @@ const CreateAccount = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
 
+    // This creates the user from the entered
+    // information.
     const createUser = async (e) => {
         e.preventDefault();
 
-        // Create a user
-        var hashPassword;
 
-        console.log(hashPassword);
-        hashPassword = hashCode(password);
-        console.log(hashPassword);
-        console.log("password");
+        /* TODO var hashPassword;
+        hashPassword = hashCode(password);*/
 
+        // Encrypt the users password.
+        const hashPassword = hashCode(password);
+
+        // Organize userinformation with a JSON-format
         var userInfo =  {"first_name": firstname, "last_name": lastname, "username": username, 
                             "secret": hashPassword, "email": email} ;
         
-        
+        // Create the server request
         var xhrUser = new XMLHttpRequest();
         xhrUser.withCredentials = false;
 
+        // This will trigger when the xhrUser-request
+        // is finished.
         xhrUser.addEventListener("readystatechange", function() {
             if(this.readyState === 4) {
                 var jsonResponse = JSON.parse(this.responseText);
+                // Check if the account was not created
+                // and print the response.
                 if(this.status != 201) {
                     setError(jsonResponse[Object.keys(jsonResponse)[0]]);
                 }
+                // Account was created succesfully, add
+                // user to default chats.
                 else {
                     addDefaultChats();
                     setError("Account created");
                 }
             }
         });
+
+        // Open the psot request to the server,
+        // add headers and send the request.
         xhrUser.open("POST", "https://api.chatengine.io/users/");
         xhrUser.setRequestHeader("PRIVATE-KEY", PRIVATE_KEY);
-        xhrUser.setRequestHeader('Content-Type', 'application/json');
+        xhrUser.setRequestHeader('Content-Type', 'application/json'); //TODO needed?
 
         xhrUser.send(JSON.stringify(userInfo));
     }
 
+// Function to add new users to 
+// the chosen default chats.
 function addDefaultChats() {
+
+    // Create an array to contain the
+    // requests needed to be sent for
+    // each chat.
     var xhrArray = [];
     for (var i = 0; i < DEFAULT_CHATS.length; i++) {
         xhrArray[i] = new XMLHttpRequest();
     }
-               
+         
+    // GO through the array and 
     for (var i = 0; i < DEFAULT_CHATS.length; i++) {
+        
+        // TODO remove
         console.log(DEFAULT_CHATS[i]);
-        console.log("hello" + i);
-        console.log("https://api.chatengine.io/chats/" + DEFAULT_CHATS[i] + "/people/");
 
         xhrArray[i].withCredentials = false;
 
         //TODO remove these logs when done with testing this
+        // This will trigger when the xhrArray[i]-request
+        // is finished. It checks if the server request
+        // was successful.
         xhrArray[i].addEventListener("readystatechange", function() {
             if(this.readyState === 4) {
                 if(this.status != 201) {
-                    console.log(this.responseText + "hello")
+                    console.log(this.responseText + " Something went wrong.")
                 }
                 else {
-                    console.log(this.responseText + "succeed!")
+                    console.log(this.responseText + " The user was added to the chat.")
                 }
             }
         });
-            
+           
+    // Prepare the JSON payload for the request.
     var chatInfo =  {"username": username} ;
         
+    // Open the post, set the needed headers and
+    // send the request.
     xhrArray[i].open("POST", "https://api.chatengine.io/chats/" + DEFAULT_CHATS[i] + "/people/");
             
+    // TODO Should not always be Robot1312113 as admin!
     xhrArray[i].setRequestHeader("Project-ID", PROJECT_ID);
     xhrArray[i].setRequestHeader("User-Name", "Robot1312113");
     xhrArray[i].setRequestHeader("User-Secret", hashCode("Imarobot"));
@@ -92,7 +138,8 @@ function addDefaultChats() {
     xhrArray[i].send(JSON.stringify(chatInfo));
     }
 }
-
+    // Return the form that is used to 
+    // enter informtion.
     return (
         <div className="wrapper">
             <div className="form">
@@ -116,12 +163,20 @@ function addDefaultChats() {
                     </div>
                 <h1>{error}</h1>
             </div>
-
         </div>
     );
 };
 
-// Thanks to the internet.
+/* Below is the algorithm for 
+   encoding the passwords entered
+   by users into the registration
+   form.
+   It is not original code, but
+   from the internet where it was
+   statet that it is free to use.
+   It can be found here:
+   https://coursesweb.net/javascript/sha256-encrypt-hash_cs
+*/
 /**
 * Secure Hash Algorithm (SHA256)
 * http://www.webtoolkit.info/

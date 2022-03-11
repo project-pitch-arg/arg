@@ -6,17 +6,22 @@
     https://chatengine.io/. Starting a project
     here will give you the required
     project ID and private key used in this application.
-    Please edit ??? and ??? to use your keys.
+    Please edit PROJECT_ID and PRIVATE_KEY to use your keys.
 
-    To change the default chats, go to ???
+    For the JSON-files below, you can find their corresponding
+    shcemas ???, ??? and ??? in the folder for docuementaiton
+    found ???. It is also available in text if that is preferable.
+    In that case go to ???.
 
-    To change default users, go to ???
+    To change the default chats, change the variable DEFAULT_CHATS.
 
-    To change default messages, got to ??
+    To change default users, go to users.json.
+
+    To change default messages, got to ChatPosts.json
 
     To create the default chats and user
     as well as send the chat history,
-    run the file ???
+    run the file StartUp.py.
 */
 
 // --------------- Keys ---------------

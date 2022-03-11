@@ -20,6 +20,8 @@
 
 - Fixa ikonen för fliken.
 
+- Är just nu samma administratör på alla DEFAULT chattar.
+
 --------------- Prio 2 ---------------
 
  - Kommentera mer kod. Framförallt chatten.
@@ -28,6 +30,7 @@
 
  - Lägga in data i chat.
     - A solved puzzle on the blog could be about the usernames.
+    - Ändra de ursprungliga användarna.
 
 - Organisera css-filer
     - CSS-file. Add colour names to make it easier to change the overall impression.
@@ -54,6 +57,10 @@
 - JSON Schema
     - Blogg - Ludvig
     - Chat - Sara
+
+- Add an email in case the chat does not work?
+
+- Lägg till att man ska läsa CoC för att använda chatten.
 
 --------------- Prio 3 ---------------
 

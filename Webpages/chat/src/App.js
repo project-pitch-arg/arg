@@ -1,11 +1,14 @@
-import { ChatEngine } from 'react-chat-engine';
+/*
+  The basic file for the this application.
+  Can be described as the center of all
+  the files in the chat application.
+*/
 
+import { ChatEngine } from 'react-chat-engine';
 import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
 import './App.css';
 
-//TEST
-import {haveAccount} from './components/LoginForm';
 import CreateAccount from './components/CreateAccount';
 import { PROJECT_ID } from './changeableVariables';
 
@@ -14,6 +17,11 @@ const projectID = PROJECT_ID;
 
 const App = () => {
 
+  // Check if the local storage contians
+  // the variables that concern an 
+  // account or not.
+  // Returns different froms if the user needs
+  // to log in or create an account.
   if (!localStorage.getItem('username')) {
     if(localStorage.getItem('getAccount')) {
       return <CreateAccount/>;
@@ -21,6 +29,8 @@ const App = () => {
     return <LoginForm/>;
   }
 
+  // Log out by removing the relevant variables
+  // in the users local storage.
   function logOut () {
     localStorage.removeItem('username');
     localStorage.removeItem('password');
@@ -29,7 +39,6 @@ const App = () => {
 
   return (
     <div>
-      
     <ChatEngine
       height="90vh"
       projectID={projectID}
@@ -45,13 +54,9 @@ const App = () => {
         <p>
         Please contact us through the information on the About page.
         </p>
-        
       </div>
     </div>
-    
   );
 };
-
-// infinite scroll, logout, more customizations...
 
 export default App;
