@@ -56,8 +56,7 @@
 
 - JSON Schema
     - Blogg - Ludvig
-    - Chat - Sara
-        - Notera någonstans att chatnamn som skapas i början behöver vara unika. Kan inte fixas med JSON schema.
+    - Notera någonstans att chatnamn som skapas i början behöver vara unika. Kan inte fixas med JSON schema.
 
 - Add an email in case the chat does not work?
 

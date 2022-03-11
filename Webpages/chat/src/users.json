@@ -2,7 +2,7 @@
     {
         "first_name": "Hallo",
         "last_name": "Hej",
-        "username": "Tjena",
+        "username": "ThisIsMe",
         "secret": "hejsan",
         "email": "john@smith.com",
         "avatar": null
@@ -10,7 +10,7 @@
     {
         "first_name": "Edwin",
         "last_name": "Fairchild",
-        "username": "Fexjo",
+        "username": "Magic",
         "secret": "MynameisCaesar",
         "email": "Edwin.Fair@nice.com",
         "avatar": null
