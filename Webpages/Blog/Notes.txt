@@ -20,7 +20,7 @@
 
 - Fixa ikonen för fliken.
 
-- Är just nu samma administratör på alla DEFAULT chattar.
+- Är just nu samma administratör på alla DEFAULT chattar (CreateAccount).
 
 --------------- Prio 2 ---------------
 
@@ -81,3 +81,8 @@
 
 - Ta bort våra nycklar till chatten när allt är klart så man inte hamnar på mitt konto.
     - Dokumentera att detta måste fixas innan man starta bloggen.
+
+- Skriver vi Id eller ID överallt?
+
+- Ändra hur ofta resultatet skrivs ut när man skickar meddelanden i chatten.
+    - Kanske endast ett OK var tionde meddelande om inget skumt händer?
