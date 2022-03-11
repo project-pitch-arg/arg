@@ -57,10 +57,17 @@
 - JSON Schema
     - Blogg - Ludvig
     - Chat - Sara
+        - Notera någonstans att chatnamn som skapas i början behöver vara unika. Kan inte fixas med JSON schema.
 
 - Add an email in case the chat does not work?
 
 - Lägg till att man ska läsa CoC för att använda chatten.
+
+- Rensa filerna i chat. Gamla mindre Pythonfilerna.
+
+- Använd antingen secret eller password i chatten.
+
+- Fixa skickandet av bilder. Vilken länk ska man ge?
 
 --------------- Prio 3 ---------------
 

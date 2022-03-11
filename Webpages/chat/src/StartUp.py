@@ -77,14 +77,14 @@ f.close()
 for chat in chats:
     
     # Create a JSON-object with the chatname.
-    title = "{\"title\":" + "\"" + chat["chat-name"] + "\"" + "}"
+    title = "{\"title\":" + "\"" + chat["chat_name"] + "\"" + "}"
     title2 = json.loads(title)
     
     # Send the request to create a chat with payload and header.
     r = requests.post(
         'https://api.chatengine.io/chats/',
         data=title2,
-        headers={"Private-Key": PRIVATE_KEY, "User-Name": chat["admin"], "User-Secret": chat["admin-secret"]}
+        headers={"Private-Key": PRIVATE_KEY, "User-Name": chat["admin"], "User-Secret": chat["admin_secret"]}
     )
     # Print the result of the sent post request.
     print(r.status_code)
@@ -92,10 +92,10 @@ for chat in chats:
     # Add the id for the chat to the list of chat ids.
     getChatId = json.loads(r.text)
     chatId = str(getChatId["id"])
-    chatIds.append([chat["chat-name"], chatId])
+    chatIds.append([chat["chat_name"], chatId])
 
     # Get the password for the admin for this chat from the file and hash it.
-    password = chat["admin-secret"]
+    password = chat["admin_secret"]
     password = hashlib.sha256(password.encode('utf-8')).hexdigest()
 
     # Iterate the users that will be added to the newly created chat.
@@ -125,7 +125,7 @@ for message in messages:
 
     # Find the ID of the chat to send the message in
     # to have the right address for the server request.
-    chatID = findChatId(chatIds, message["chat-name"])
+    chatID = findChatId(chatIds, message["chat_name"])
 
     # Send the request to post a message with payload and header.
     r = requests.post(

@@ -1,14 +1,14 @@
 [
     {
         "admin": "Robot1312113",
-        "admin-secret": "Imarobot",
-        "chat-name": "Welcome",
+        "admin_secret": "Imarobot",
+        "chat_name": "Welcome",
         "users": ["Fexjo"]
     },
     {
         "admin": "Robot1312113",
-        "admin-secret": "Imarobot",
-        "chat-name": "WelcomeTest",
+        "admin_secret": "Imarobot",
+        "chat_name": "WelcomeTest",
         "users": ["Fexjo", "Tjena"]
     }
 ]

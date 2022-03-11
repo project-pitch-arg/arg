@@ -1,12 +1,12 @@
 [
     {
-        "chat-name": "Welcome",
+        "chat_name": "Welcome",
         "text": "Hello world. I'm not a robot. But I like snow.",
         "user": "Fexjo",
         "password": "MynameisCaesar"
     },
     {
-        "chat-name": "WelcomeTest",
+        "chat_name": "WelcomeTest",
         "text": "Hello world. I count like ! !! !!.",
         "user": "Robot1312113",
         "password": "Imarobot",

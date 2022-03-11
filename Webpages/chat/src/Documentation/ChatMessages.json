@@ -1,0 +1,36 @@
+{
+    "title": "The messages to be sent in the chat.",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "chat_name",
+            "text",
+            "user",
+            "password"
+        ],
+        "properties": {
+            "chat_name": {
+                "type": "string",
+                "title": "The name of the chat to send the message in."
+            },
+            "text": {
+                "type": "string",
+                "title": "The content of the message."
+            },
+            "user": {
+                "type": "string",
+                "title": "The user who sent the message."
+            },
+            "password": {
+                "type": "string",
+                "title": "The password of the user sending the message."
+            },
+            "custom_json": {
+                "type": "string",
+                "title": "The link to pictures sent in the message."
+            }
+        },
+        "additionalProperties": false
+    }
+}

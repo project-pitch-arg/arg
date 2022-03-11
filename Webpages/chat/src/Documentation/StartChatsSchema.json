@@ -1,0 +1,34 @@
+{
+    "title": "Chatrooms to create in the chat.",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "admin",
+            "admin_secret",
+            "chat_name",
+            "users"
+        ],
+        "properties": {
+            "admin": {
+                "type": "string",
+                "title": "The admin of the chatroom."
+            },
+            "admin_secret": {
+                "type": "string",
+                "title": "The secret (password) of the admin for the chat."
+            },
+            "chat_name": {
+                "type": "string",
+                "title": "The name of the chatroom."
+            },
+            "users": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        } 
+    },
+    "additionalProperties": false
+}
