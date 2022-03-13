@@ -27,9 +27,9 @@
 
 // --------------- Keys ---------------
 
-export const PROJECT_ID = "bd7ed9ec-9d77-4413-a5d3-0ee995f30015";
+export const PROJECT_ID = "aa2bb056-425d-4756-bb63-ab5b02585256";
 
-export const PRIVATE_KEY = "187bca6e-c11c-4815-9071-fbe87c45a3a6";
+export const PRIVATE_KEY = "ede1ace3-6939-44bf-9df8-c818978fc030";
 
 // --------------- Default values ---------------
 
@@ -37,7 +37,7 @@ export const PRIVATE_KEY = "187bca6e-c11c-4815-9071-fbe87c45a3a6";
 // The numbers can be found on your web page.
 // It would be good to edit this when all chosen default chats are created.
 // If you want to enter users into the chats with ID:s 1,2 and 3
-// the array would be [1, 2, 3].
-export const DEFAULT_CHATS = [102138];
+// the array would be [1, 2, 3]. TODO: EDIT
+export const DEFAULT_CHATS = [[102863, "Robot1312113"], [102890, "Fexjo"]];
 
 // The default users existing in the chat.

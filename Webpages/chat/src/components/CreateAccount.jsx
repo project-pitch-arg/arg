@@ -15,7 +15,23 @@
 
 import { useState } from 'react';
 import { PROJECT_ID, PRIVATE_KEY, DEFAULT_CHATS } from '../changeableVariables';
-    
+import accounts from '../users.json';
+
+function getPassword(user) {
+    var users = accounts;
+    for(var i = 0; i < users.length; i++) {
+        if(users[i].username == user) {
+            console.log("password" + users[i].secret)
+            console.log(hashCode(users[i].secret) + "create"); //TODO remove
+            return hashCode(users[i].secret);
+        }
+    }
+    //TODO Add ERROR code?
+    console.log("User not found");
+    return;
+}
+
+
 // Removes the 'getAccount' value from local
 // storage and reloads the window to return to 
 // the login form.
@@ -42,7 +58,6 @@ const CreateAccount = () => {
     // information.
     const createUser = async (e) => {
         e.preventDefault();
-
 
         /* TODO var hashPassword;
         hashPassword = hashCode(password);*/
@@ -102,7 +117,7 @@ function addDefaultChats() {
     for (var i = 0; i < DEFAULT_CHATS.length; i++) {
         
         // TODO remove
-        console.log(DEFAULT_CHATS[i]);
+        console.log(DEFAULT_CHATS[i][0]);
 
         xhrArray[i].withCredentials = false;
 
@@ -126,12 +141,14 @@ function addDefaultChats() {
         
     // Open the post, set the needed headers and
     // send the request.
-    xhrArray[i].open("POST", "https://api.chatengine.io/chats/" + DEFAULT_CHATS[i] + "/people/");
+    xhrArray[i].open("POST", "https://api.chatengine.io/chats/" + DEFAULT_CHATS[i][0] + "/people/");
             
     // TODO Should not always be Robot1312113 as admin!
     xhrArray[i].setRequestHeader("Project-ID", PROJECT_ID);
-    xhrArray[i].setRequestHeader("User-Name", "Robot1312113");
-    xhrArray[i].setRequestHeader("User-Secret", hashCode("Imarobot"));
+
+    xhrArray[i].setRequestHeader("User-Name", DEFAULT_CHATS[i][1]);
+    xhrArray[i].setRequestHeader("User-Secret", getPassword(DEFAULT_CHATS[i][1]));
+    console.log(getPassword(DEFAULT_CHATS[i][1]))
     
     xhrArray[i].setRequestHeader('Content-Type', 'application/json');
     

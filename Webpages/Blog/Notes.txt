@@ -68,6 +68,12 @@
 
 - Fixa skickandet av bilder. Vilken länk ska man ge?
 
+- Fixa så att man inte kan försöka lägga in eller skicka meddelanden med användare som inte finns
+    - Borde bara inte fungera med servern, men borde testas.
+
+- Dokumnetation som förkalrar gåtor och hur man ger ledtrådar till dem.
+    - Ledtrådar kan både vara Edwin och andra i chatten.
+
 --------------- Prio 3 ---------------
 
 - Blog design
@@ -92,3 +98,5 @@
 
 - Ändra hur ofta resultatet skrivs ut när man skickar meddelanden i chatten.
     - Kanske endast ett OK var tionde meddelande om inget skumt händer?
+
+- Ge riktig mejl till våra användare

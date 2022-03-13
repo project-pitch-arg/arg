@@ -20,8 +20,8 @@ import requests
 import hashlib
 
 # Change these to your own project!
-PROJECT_ID = "bd7ed9ec-9d77-4413-a5d3-0ee995f30015"
-PRIVATE_KEY = "187bca6e-c11c-4815-9071-fbe87c45a3a6"
+PROJECT_ID = "aa2bb056-425d-4756-bb63-ab5b02585256"
+PRIVATE_KEY = "ede1ace3-6939-44bf-9df8-c818978fc030"
 
 # Create and array to save the ID:s of the
 # created chats.

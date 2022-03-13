@@ -10,5 +10,11 @@
         "admin_secret": "Imarobot",
         "chat_name": "WelcomeTest",
         "users": ["Fexjo", "Tjena"]
+    },
+    {
+        "admin": "Fexjo",
+        "admin_secret": "MynameisCaesar",
+        "chat_name": "I like salad",
+        "users": ["Robot1312113", "Mr X"]
     }
 ]

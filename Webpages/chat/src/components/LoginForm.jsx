@@ -15,14 +15,11 @@ const Modal = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  //haveAccount = false;
-  //console.log("hill");
-  //if (!haveAccount) {haveAccount=true; console.log("hello");return <CreateAccount />;} //TODO: fix
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const hashPassword = hashCode(password);
-    console.log(hashPassword);
+    //TODO REmove
+    console.log(hashPassword + "login");
 
     const authObject = { 'Project-ID': projectID, 'User-Name': username, 'User-Secret': hashPassword };
 
