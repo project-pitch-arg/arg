@@ -48,17 +48,14 @@ f.close()
 
 # Go through all the users to be created
 for user in users:
-    
-    # TODO Rename this so it looks better.
-    # Fix the format of the JSON-date so that
-    # the password can be hashed.
-    users = str(user).replace("'", "\"")
-    users2 = str(users).replace("None", "null")
-    json_object = json.loads((users2))
+
+    # Fix the format of the JSON-date so that the password can be hashed.
+    userString = str(user).replace("'", "\"")
+    userString = str(userString).replace("None", "null")
+    json_object = json.loads((userString))
     json_object["secret"] = hashlib.sha256(str(json_object["secret"]).encode('utf-8')).hexdigest()
 
-    # Send the request to create a user with
-    # payload and header.
+    # Send the request to create a user with payload and header.
     r = requests.post(
         'https://api.chatengine.io/users/',
         data=json_object,
@@ -129,6 +126,8 @@ for message in messages:
     # Find the ID of the chat to send the message in
     # to have the right address for the server request.
     chatID = findChatId(chatIds, message["chat_name"])
+    print(chatID)
+    print(message["chat_name"])
 
     # Send the request to post a message with payload and header.
     r = requests.post(

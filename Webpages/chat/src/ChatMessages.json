@@ -6,10 +6,40 @@
         "password": "MynameisCaesar"
     },
     {
-        "chat_name": "WelcomeTest",
+        "chat_name": "Daily thoughts about Daily Thoughts",
         "text": "Hello world. I count like ! !! !!.",
         "user": "Robot1312113",
         "password": "Imarobot",
         "custom_json": "https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "So, I saw the discussion about what the inspiration for Robot1312113's poem the other day could be about. But don't you find it strange? Could it not mean something else?",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Agreed. It is most peculiar. We should initialize an investigation.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Right. But were to start? No letters seem odd. Did not find any hidden letters at all.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "If there is nothing hidden, it is simply in plain sight. I shall procced in this direction.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "But the text is all over the place? It is a pleasant temperature, but not how you like it to be at the same time? Does this guy like to be hot or cold?",
+        "user": "icniVad",
+        "password": "daVinciCode"
     }
 ]

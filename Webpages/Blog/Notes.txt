@@ -1,4 +1,3 @@
-
 --------------- Prio 1 ---------------
 
 - Inlägg om Göteborg ('reklam')
@@ -12,15 +11,12 @@
     - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
  - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
 
-- Fixa namn på saker i StartUp för chatten.
-
 - Välj så att vi antingen har ' eller " överallt.
 
 - Rensa chatten från alla användare/chattar
+    - Kan göras enkelt från hemsidan med projektet, så skippar detta så länge.
 
 - Fixa ikonen för fliken.
-
-- Är just nu samma administratör på alla DEFAULT chattar (CreateAccount).
 
 --------------- Prio 2 ---------------
 
@@ -41,8 +37,6 @@
     - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
 
 - När man skapar konto på chatten gör error-meddelanden att fönstret får en vit kant i botten. 
-
-- Möjlighet att radera allt i chatten så man kan starta om.
 
 - Just nu får man fel när chatten laddas in om användare som skickat meddelanden tas bort.
     - Tror det är på endast senaste meddelandet.
@@ -100,3 +94,5 @@
     - Kanske endast ett OK var tionde meddelande om inget skumt händer?
 
 - Ge riktig mejl till våra användare
+
+- Fungerar att använda StartUp.py, men hemsidan blir skum.

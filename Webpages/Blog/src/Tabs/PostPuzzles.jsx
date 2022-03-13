@@ -17,6 +17,8 @@ export default function Puzzles(post) {
     switch (post.puzzleNr) {
       case "2b": return puzzle2b(post);
       case "2c": return puzzle2c(post);
+      case "c1": return puzzleChat(post); //This is just an ordinary post. Nothing to add.
+      case "c2": return puzzleChat(post);
     }  
   } else {
     return (
@@ -295,5 +297,22 @@ export default function Puzzles(post) {
       </div>
     </div>
    )
+  }
+
+  function puzzleChat(post) {
+    return (
+      <div class="post">
+        <div class="post-date">
+          {post.date[0]}.{post.date[1]}.{post.date[2]}
+        <div class="post-name"> 
+          {post.poster} 
+        <pre class="post-content"> 
+          {post.content}
+        </pre>
+          {hasPicture(post)}
+        </div>
+      </div>
+    </div>
+  )
   }
 }

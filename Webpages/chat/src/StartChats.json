@@ -6,15 +6,28 @@
         "users": ["Fexjo"]
     },
     {
-        "admin": "Robot1312113",
-        "admin_secret": "Imarobot",
-        "chat_name": "WelcomeTest",
-        "users": ["Fexjo", "Tjena"]
-    },
-    {
         "admin": "Fexjo",
         "admin_secret": "MynameisCaesar",
-        "chat_name": "I like salad",
-        "users": ["Robot1312113", "Mr X"]
+        "chat_name": "Daily thoughts about Daily Thoughts",
+        "users": ["Robot1312113", "Mr X", "icniVad", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+    },
+    {
+        "admin": "Mr X",
+        "admin_secret": "ILovePuzzles",
+        "chat_name": "Usernames?",
+        "users": ["Robot1312113", "Fexjo", "icniVad", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+    },
+    {
+        "admin": "icniVad",
+        "admin_secret": "daVinciCode",
+        "chat_name": "Simply a poem?",
+        "users": ["Robot1312113", "Fexjo", "Mr X", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+    },
+    {
+        "admin": "Pinnipedia",
+        "admin_secret": "SealPupsAreCute",
+        "chat_name": "Where is this?",
+        "users": ["Robot1312113", "Fexjo", "Mr X", "icniVad", "Tree123", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
     }
+
 ]
