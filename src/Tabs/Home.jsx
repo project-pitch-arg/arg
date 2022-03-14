@@ -6,7 +6,7 @@ import 'react-slideshow-image/dist/styles.css';
 import header from '../img/header.jpg';
 import introImg from '../img/intro-img.jpg';
 
-import goalImg from '../img/goal-img.jpg';
+import AIImg from '../img/AI_Image.jpg';
 import techImg1 from '../img/eye-tech.jpg';
 import techImg2 from '../img/brain-tech.jpg';
 import techImg3 from '../img/thinking-ai.jpg';
@@ -22,38 +22,58 @@ export default function Home() {
     return (
         <div>
           <div class="header" style={{backgroundImage: `url(${header})`}}>
-            <a>Evil Company</a>
+            <a>Rozk AI</a>
           </div>
 
           <div class="content">
             
             <div id="intro-content">
               <div id="intro-img">
-                <img src={introImg} height='215px'/>
+                <img  src={introImg} height='215px'/>
               </div>
               <div id="intro-desc">
-                <h1> We are the future </h1>
-                <a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
+                <h1> What we do </h1>
+                <a>
+                    We combine the latest AI and surveillance technology to provide our customers with the
+                    highest levels of security.
+
+                </a>
               </div>
             </div>
 
             <div id="goal-content">
-              <div id="goal-img"><img src={goalImg}/></div>
+              <div id="goal-img"><img src={AIImg}/></div>
           
               <div id="goal-desc">
-                <h1>We are working on global domination</h1>
-                <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
+                <h1>How does AI integrate with surveillance?</h1>
+                <a>
+
+                </a>
               </div>
             </div>
             <div id="tech-content">
               <h1>Technology is power</h1>
               <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</a>
-              <div class="tech-img"><img src={techImg1}/></div>
-              <div class="tech-img"><img src={techImg2}/></div>
-              <div class="tech-img"><img src={techImg3}/></div>
+              <div class="tech-img"><img onClick={clickFirstImg} src={techImg1}/></div>
+              <div class="tech-img"><img onClick={clickSecondImg} src={techImg2}/></div>
+              <div class="tech-img"><img onClick={clickThirdImg} src={techImg3}/></div>
             </div>
           </div>
         </div>
-      
+
       )
+
     }
+    function clickFirstImg(){
+        console.clear();
+        console.log("tzj");
+    }
+    function clickSecondImg(){
+        console.clear();
+        console.log("myq");
+    }
+    function clickThirdImg(){
+        console.clear();
+        console.log("/kpx");
+    }
+
