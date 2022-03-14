@@ -1,0 +1,58 @@
+{
+    "title": "Content under the 'Posts' tab.",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "poster",
+            "content",
+            "isPuzzle"
+        ],
+        "properties": {
+            "date": {
+                "title": "Date of posting.",
+                "type": "array",
+                "items": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                },
+                "minItems": 3,
+                "maxItems": 3
+            },
+            "poster": {
+                "title": "Originator of the post.",
+                "type": "string"
+            },
+            "content": {
+                "title": "Text to include in the post.",
+                "type": "string"
+            },
+            "pictures": {
+                "title": "Pictures included in the post after the text.",
+                "type": "array",
+                "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                        "title": "Two strings per picture, one link and one alternative text.",
+                        "type": "string"
+                    }
+                }
+            },
+            "isPuzzle": {
+                "title": "If the post is included in a puzzle or not.",
+                "type": "boolean"
+            },
+            "puzzleNr": {
+                "title": "Which puzzle the post belongs to.",
+                "type": "string"
+            },
+            "comment": {
+                "title": "General comment, usually for info about puzzle.",
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
+    }
+}

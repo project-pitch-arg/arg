@@ -1,6 +1,6 @@
 Notes of the users we have created and some of their personalities as well 
 as how they ended up on the blog.
-Some of the informtion is repeated in users.json.
+Some of the information is repeated in users.json.
 Avatars are currently not used, but ideas of what they
 could be are added.
 Currently, all emails are fake.

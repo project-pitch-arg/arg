@@ -1,0 +1,22 @@
+{
+    "title": "Quotes for the 'Quotes of the day' tab.",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "quote",
+            "saidBy"
+        ],
+        "properties": {
+            "quote": {
+                "title": "Text content of the quote.",
+                "type": "string"
+            },
+            "saidBy": {
+                "title": "Orginator of the quote.",
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
+    }
+}
