@@ -11,7 +11,10 @@ import techImg1 from '../img/eye-tech.jpg';
 import techImg2 from '../img/brain-tech.jpg';
 import techImg3 from '../img/thinking-ai.jpg';
 
-
+{
+    var passphrase = "3121";
+    var attempt = "";
+}
 
 export default function Home() {
     
@@ -29,7 +32,7 @@ export default function Home() {
             
             <div id="intro-content">
               <div id="intro-img">
-                <img  src={introImg} height='215px'/>
+                <img  onClick={() => clickFirstImg("1")} src={introImg} height='215px'/>
               </div>
               <div id="intro-desc">
                 <h1> What we do </h1>
@@ -42,21 +45,28 @@ export default function Home() {
             </div>
 
             <div id="goal-content">
-              <div id="goal-img"><img src={AIImg}/></div>
-          
-              <div id="goal-desc">
-                <h1>How does AI integrate with surveillance?</h1>
-                <a>
+                <div id="home-left-desc">
+                  <h1>Why choose us?</h1>
+                  <a>
 
-                </a>
-              </div>
+                  </a>
+                </div>
+
+          
+              <div id="home-right-desc">
+                  <h1>How does AI integrate with surveillance?</h1>
+                  <a>
+
+                  </a>
+                </div>
             </div>
+
             <div id="tech-content">
               <h1>Technology is power</h1>
               <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</a>
-              <div class="tech-img"><img onClick={clickFirstImg} src={techImg1}/></div>
-              <div class="tech-img"><img onClick={clickSecondImg} src={techImg2}/></div>
-              <div class="tech-img"><img onClick={clickThirdImg} src={techImg3}/></div>
+              <div class="tech-img"><img onClick={() => clickImg("1")} src={techImg1}/></div>
+              <div class="tech-img"><img onClick={() => clickImg("2")} src={techImg2}/></div>
+              <div class="tech-img"><img onClick={() => clickImg("3")} src={techImg3}/></div>
             </div>
           </div>
         </div>
@@ -64,16 +74,20 @@ export default function Home() {
       )
 
     }
+    function clickImg(string){
+        console.clear();
+        console.log(string);
+        attempt = attempt + string;
+        if(attempt.charAt(attempt.length - 1) != passphrase.charAt(attempt.length -1)){
+            attempt = "";
+        }
+
+        if (attempt == passphrase ){
+                console.log("/kpxtzjmyq");
+        }
+    }
     function clickFirstImg(){
         console.clear();
-        console.log("tzj");
-    }
-    function clickSecondImg(){
-        console.clear();
-        console.log("myq");
-    }
-    function clickThirdImg(){
-        console.clear();
-        console.log("/kpx");
+        console.log(passphrase);
     }
 

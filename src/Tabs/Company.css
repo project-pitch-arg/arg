@@ -62,13 +62,17 @@
 
 #intro-img {
     float: left;
-    width: 40%;
+    width: 50%;
     text-align: center;
+}
+#intro-img img{
+    width:600px;
+    height: 400px;
 }
 
 #intro-desc {
     float: right;
-    width: 60%;
+    width: 50%;
 }
 
 #intro-desc h1 {
@@ -93,15 +97,25 @@
     width: 600px;
     /* object-fit: scale-down; */
 }
-
-#goal-desc {
+#home-left-desc {
     /* background-color: blue; */
-    float: right;
-    width: 39%;
-    padding-left: 1%;
+    float: left;
+    width: 50%;
 }
 
-#goal-desc h1 {
+#home-left-desc h1 {
+    font-weight: normal;
+    color: #246f94;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+}
+#home-right-desc {
+    /* background-color: blue; */
+    float: right;
+    width: 50%;
+}
+
+#home-right-desc h1 {
     font-weight: normal;
     color: #246f94;
     font-family: 'Lato', sans-serif;
