@@ -1,0 +1,27 @@
+{
+    "title": "Info for the 'About' tab.",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "question",
+            "answerUser1",
+            "answerUser2"
+        ],
+        "properties": {
+            "question": {
+                "title": "Question being asked.",
+                "type": "string"
+            },
+            "answerUser1": {
+                "title": "Answer from 'USER_NAME_1' from ChangeableVariables.jsx",
+                "type": "string"
+            },
+            "answerUser2": {
+                "title": "Answer from 'USER_NAME_2' from ChangeableVariables.jsx",
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
+    }
+}

@@ -63,7 +63,6 @@
 - Fixa också då så att de man automatiskt gör i StartUp har avatarer.
 
 - JSON Schema
-    - Blogg - Ludvig
     - Notera någonstans att chatnamn som skapas i början behöver vara unika. Kan inte fixas med JSON schema.
 
 - Add an email in case the chat does not work?
