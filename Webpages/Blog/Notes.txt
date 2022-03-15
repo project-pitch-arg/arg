@@ -18,6 +18,20 @@
 
 - Fixa ikonen för fliken.
 
+- Lägg in kurskoder i ChangeableVariables
+    - Också vilken font och färg de får
+
+- Göm en nolla i varje bild så kan man välja om man vill ha den eller inte.
+    - Fixa byte med ChangeableVariables
+
+- Fixa så man kan skicka bilder i chatt.
+
+- Ändra förnamn/efternamn till username "".
+
+- Ge gåtor samma namn som dokument om dem.
+
+- Redigera svårighetsgrad på main gåta.
+
 --------------- Prio 2 ---------------
 
  - Kommentera mer kod. Framförallt chatten.
@@ -68,6 +82,16 @@
 - Dokumnetation som förkalrar gåtor och hur man ger ledtrådar till dem.
     - Ledtrådar kan både vara Edwin och andra i chatten.
 
+- Dokumnetation med användarprofiler.
+    - Typ kopiera txt dokumentet som redan finns.
+
+- Testa med nytt chattprojekt och se om sidan fungera.
+
+- Ändra struktur och innehåll i Possible Modifications i dokumentation om gåtor när alla variabler
+    har namn och liknande.
+
+- Beskriv hela historien.
+
 --------------- Prio 3 ---------------
 
 - Blog design
@@ -96,3 +120,5 @@
 - Ge riktig mejl till våra användare
 
 - Fungerar att använda StartUp.py, men hemsidan blir skum.
+
+- Lägg in alternativa skylines.
