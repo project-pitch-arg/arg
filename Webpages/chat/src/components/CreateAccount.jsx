@@ -190,7 +190,7 @@ function addDefaultChats() {
    form.
    It is not original code, but
    from the internet where it was
-   statet that it is free to use.
+   stated that it is free to use.
    It can be found here:
    https://coursesweb.net/javascript/sha256-encrypt-hash_cs
 */

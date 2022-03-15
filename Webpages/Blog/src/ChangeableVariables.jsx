@@ -57,6 +57,24 @@ export const ENCRYPTION_KEY = [["m", 11],["d", 28], ["o", 57], ["a", 80]];
 // with this clue.
 export const CLUE_DATE = "2022.80A.24";
 
+// Specified font to change certain letters for
+// the puzzle. See documentation for explanation.
+export const LETTER_FONT = "monaco";
+
+// Specified color to change certain letters for
+// the puzzle. See documentation for explanation.
+export const LETTER_COLOR = "rgb(0,0,51)";
+
+// First of two course codes to be included. This
+// Will have a changed color. See documentation 
+// for details.
+export const COURSE_CODE_1 = "tda";
+
+// Second of two course codes to be included. This
+// Will have a changed font. See documentation 
+// for details.
+export const COURSE_CODE_2 = "eda";
+
 /* -------------------- Tab Posts -------------------- */
 
 // Global list to access sorted posts through other tabs. 

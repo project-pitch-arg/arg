@@ -7,7 +7,7 @@
 */
 
 import React from 'react';
-import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE } from '../ChangeableVariables';
+import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2 } from '../ChangeableVariables';
 
 export default function Puzzles(post) {
 
@@ -109,9 +109,9 @@ export default function Puzzles(post) {
   // in a proper HTML format.
   function helpChangeString(post, element) {
     if (element[1] == "color") {
-      return (<font color="rgb(0,0,51)">{post.content[element[0]]}</font>)
+      return (<font color={LETTER_COLOR}>{post.content[element[0]]}</font>)
     } else if (element[1] == "font") {
-      return (<font face="monaco">{post.content[element[0]]}</font>)
+      return (<font face={LETTER_FONT}>{post.content[element[0]]}</font>)
     } else {
       return
     }
@@ -164,6 +164,19 @@ export default function Puzzles(post) {
   // The encoding is according to the Mexican Army Wheel Cipher.
   function encodedMsg(toBeEncoded) {
     toBeEncoded = toBeEncoded.toLowerCase();
+
+    if (ENCRYPTION_KEY[0][1] < 1 || ENCRYPTION_KEY[0][1] > 26) {
+      throw "First number of encryption key must be within bounds [1,26].";
+    } 
+    if (ENCRYPTION_KEY[1][1] < 27 || ENCRYPTION_KEY[1][1] > 52) {
+      throw "Second number of encryption key must be within bounds [27,53].";
+    }
+    if (ENCRYPTION_KEY[2][1] < 53 || ENCRYPTION_KEY[1][1] > 78) {
+      throw "Third number of encryption key must be within bounds [53,78].";
+    }
+    if (ENCRYPTION_KEY[3][1] < 79 || ENCRYPTION_KEY[1][1] > 100) {
+      throw "Fourth number of encryption key must be within bounds [79,100].";
+    }
 
     // The different rings on a mexican wheel.
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -253,7 +266,7 @@ export default function Puzzles(post) {
             {CLUE_DATE}
           <div class="post-name"> 
             {post.poster} 
-          {changeString(post,changeColor(post, "tda", 2),changeFont(post, "eda", 1))}
+          {changeString(post,changeColor(post, COURSE_CODE_1, 2),changeFont(post, COURSE_CODE_2, 1))}
           <p id="test" style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
               {encodedMsg(ANSWER_TO_BE_ENCRYPTED)}
           </p>
