@@ -1,5 +1,15 @@
 /* -------------------- Shared styles -------------------- */
 
+:root {
+    --post-list-background: hsl(47, 34%, 74%);
+    --post-background: hsl(47, 28%, 66%);
+    --quote-background: #aa9a84;
+}
+
+:export {
+    postBackground: var(--post-background);
+}
+
 /* The colour of the background often used.*/
 .content {
     height: 85vh;
@@ -100,7 +110,7 @@
     height: 100vh;
     width: 90%;
     min-width: 50vw;
-    background-color: hsl(47, 34%, 74%);
+    background-color: var(--post-list-background);
     margin-left: 40px;
     text-align: center;
     overflow-x: hidden;
@@ -119,7 +129,7 @@
     margin-top: 10px;  
     margin-bottom: 5px;
     padding: 10px;
-    background-color: hsl(47, 28%, 66%);
+    background-color: var(--post-background);
     text-align: left;
     position: center;
     overflow-y: visible;
@@ -216,7 +226,7 @@
 .quote {
     width: 50vw;
     padding: 2vh;
-    background-color: #aa9a84;
+    background-color: var(--quote-background);
     color: black;
     font-size: 3vh;
 }
@@ -233,7 +243,7 @@
 .question-list {
     height: 80vh;
     width: 70%;
-    background-color: hsl(47, 34%, 74%);
+    background-color: var(--post-list-background);
     justify-content: center;
     text-align: center;
     position: center;

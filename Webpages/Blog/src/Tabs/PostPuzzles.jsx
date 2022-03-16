@@ -7,7 +7,8 @@
 */
 
 import React from 'react';
-import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS } from '../ChangeableValues';
+import colors from './TabContent.css'
+import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS } from '../ChangeableValues';
 
 export default function Puzzles(post) {
 
@@ -265,9 +266,9 @@ export default function Puzzles(post) {
 
   function checkForHelper(post){
     if(post.comment == "This post is helper post 1 to puzzle 2c."){
-      return "I Wonder why ichthyosaurus isn't capitalized.";
+      return HINT_DINOS;
     } else if (post.comment == "This post is helper post 2 to puzzle 2c") {
-      return "What other canvas codes can you find? Go take a visit, I'm sure something interesting is there.";
+      return HINT_COURSES;
     }
     return;
   }
@@ -286,7 +287,7 @@ export default function Puzzles(post) {
           <div class="post-name"> 
             {post.poster} 
           {changeString(post,changeColor(post, COURSE_CODE_1, 2),changeFont(post, COURSE_CODE_2, 1))}
-          <p style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
+          <p style={{margin: '0', color: colors.postBackground}}> 
               {encodedMsg(ANSWER_TO_BE_ENCRYPTED)}
           </p>
           {hasPicture(post)}
@@ -305,7 +306,7 @@ export default function Puzzles(post) {
         <pre class="post-content">
           {post.content}
         </pre>
-        <p style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
+        <p style={{margin: '0', color: colors.postBackground}}>
           {checkForHelper(post)}
         </p>
         {hasPicture(post)}

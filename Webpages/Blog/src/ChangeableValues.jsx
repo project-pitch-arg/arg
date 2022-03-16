@@ -79,6 +79,10 @@ export const COURSE_CODE_2 = "eda";
 // documentation for details.
 export const THREE_DINOS = ["Aardonyx", "Datanglong", "Talarurus"];
 
+export const HINT_DINOS = "I wonder why ichthyosaurus isn't capitalized.";
+
+export const HINT_COURSES = "What other canvas codes can you find? Go take a visit, I'm sure something interesting is there.";
+
 /* -------------------- Tab Posts -------------------- */
 
 // Global list to access sorted posts through other tabs. 
