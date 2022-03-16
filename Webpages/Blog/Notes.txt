@@ -1,3 +1,6 @@
+Ludvig: Robot1312113, icniVad, SpiekyTike, Pinnipedia
+Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
+
 --------------- Prio 1 ---------------
 
 - Hämta färg från CSS och lägg till i pussel
@@ -51,6 +54,18 @@
 - Ge gåtor samma namn som dokument om dem.
 
 - Redigera svårighetsgrad på main gåta.
+
+- Namnge bilder bättre.
+
+- Robot1312113 besökte Universeum innan dikt.
+
+- Ha med Cake i chatten om allt så att man kan nämna om dikten
+    att det är cakew för att skilja från det.
+
+- Lägg till att Mr X och icniVad inte kommer delta på ett tag.
+    - Mr X ger ingen anledning. Säger bara att han kommer vara borta.
+    - icniVad "Real life came knocking... sad"
+    - Sedan sent i allt om allo chatten.
 
 --------------- Prio 2 ---------------
 
@@ -110,6 +125,8 @@
     har namn och liknande.
 
 - Beskriv hela historien.
+
+- Ta med diskussion kring vad dikten betyder i chatt med allt möjigt.
 
 --------------- Prio 3 ---------------
 
