@@ -8,7 +8,7 @@
 import React from 'react';
 import '../TabContent.css';
 import aboutContent from './AboutContent.json';
-import { USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2 } from '../../ChangeableVariables';
+import { USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2 } from '../../ChangeableValues';
 
 export default function DisplayAbout() {
 

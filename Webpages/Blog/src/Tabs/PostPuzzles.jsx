@@ -7,7 +7,7 @@
 */
 
 import React from 'react';
-import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2 } from '../ChangeableVariables';
+import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2 } from '../ChangeableValues';
 
 export default function Puzzles(post) {
 

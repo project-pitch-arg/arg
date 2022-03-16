@@ -11,7 +11,7 @@
 import React, { useState } from 'react';
 import './TabContent.css';
 import puzzleHandler from './PostPuzzles.jsx';
-import { POSTS_PER_PAGE, USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent, setPostContent } from '../ChangeableVariables';
+import { POSTS_PER_PAGE, USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent, setPostContent } from '../ChangeableValues';
 
 
 export default function Posts() {
@@ -19,7 +19,7 @@ export default function Posts() {
   // The variables for the indexes of the posts currently displayed
   const[start, startChange] = useState(0);
   const[last, lastChange] = useState(POSTS_PER_PAGE);
-  
+
   // Get the contents for the posts from another file.
   const CONTENT = changeDateAndSort(postContent);
 

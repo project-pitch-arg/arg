@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import {hashCode} from './CreateAccount';
-import { PROJECT_ID } from '../changeableVariables';
+import { PROJECT_ID } from '../ChangeableValues';
 
 const projectID = PROJECT_ID;
 

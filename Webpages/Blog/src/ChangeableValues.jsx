@@ -75,6 +75,10 @@ export const COURSE_CODE_1 = "tda";
 // for details.
 export const COURSE_CODE_2 = "eda";
 
+// Three dinosaur names for the puzzle. See 
+// documentation for details.
+export const THREE_DINOS = ["Aardonyx", "Datanglong", "Talarurus"];
+
 /* -------------------- Tab Posts -------------------- */
 
 // Global list to access sorted posts through other tabs. 

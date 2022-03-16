@@ -5,7 +5,7 @@ import Help from '../TopBar/TopBar';
 import helpbutton from '../Img/helpTest.png'
 import puzzleHandler from './PostPuzzles.jsx';
 
-import { USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent } from '../ChangeableVariables';
+import { USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent } from '../ChangeableValues';
 
 // TODO! Make the Home page look nicer.
 

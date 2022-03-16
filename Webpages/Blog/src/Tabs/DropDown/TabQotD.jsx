@@ -8,7 +8,7 @@
 import React, {useState, useEffect} from 'react';
 import '../TabContent.css';
 import quotesContent from './QuotesContent.json';
-import { QUOTE_TIME } from '../../ChangeableVariables';
+import { QUOTE_TIME } from '../../ChangeableValues';
 
 
 export default function printingQuotes() {
