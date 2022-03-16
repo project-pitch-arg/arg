@@ -1,5 +1,25 @@
 --------------- Prio 1 ---------------
 
+- Hämta färg från CSS och lägg till i pussel
+
+- "What other canvas codes can you find? Go take a visit, I'm sure something interesting is there."
+    - Gömd i pusselmeddelande
+        - Samma färg
+        - Canvas meddelande
+        - Ha i ChangeableValues
+
+- "Wonder why ichthyosaurus isn't capitalized."
+    - Gömd i pusselmeddelande
+        - Samma färg
+        - Dino meddelande
+        - Ha i ChangeableValues
+
+- Ny post med några olika schiffer
+
+- Lägg till ^ i solution B-p1 i dokumentation.
+- Skicka gruppmeddelande i discord.
+
+
 - Inlägg om Göteborg ('reklam')
 - Inlägg med Chalmersrykten
 - GU

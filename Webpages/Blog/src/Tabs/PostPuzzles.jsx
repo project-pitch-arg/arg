@@ -7,7 +7,7 @@
 */
 
 import React from 'react';
-import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2 } from '../ChangeableValues';
+import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS } from '../ChangeableValues';
 
 export default function Puzzles(post) {
 
@@ -253,11 +253,21 @@ export default function Puzzles(post) {
     return Math.floor(Math.random(2) * (max - min) + min); 
   }
 
+  function changeDinos(post){
+    const dino1 = THREE_DINOS[0][0].toUpperCase() + THREE_DINOS[0].slice(1);
+    const dino2 = THREE_DINOS[1][0].toLocaleUpperCase() + THREE_DINOS[1].slice(1);
+    const dino3 = THREE_DINOS[2][0].toLocaleUpperCase() + THREE_DINOS[2].slice(1);
+    post.content = post.content.replace("XXDINO1XX", dino1);
+    post.content = post.content.replace("XXDINO2XX", dino2);
+    post.content = post.content.replace("XXDINO3XX", dino3);
+    return post;
+  }
+
   // Function to encode the puzzle 2c.
   // See documentation for an explanation of the puzzle.
   // TODO: add name of document.
   function puzzle2c(post) {
-
+    post = changeDinos(post);
     // This post has the puzzle in it.
     if (post.comment == "This is the main post to puzzle 2c.") {
       return (
