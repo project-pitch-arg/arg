@@ -263,6 +263,15 @@ export default function Puzzles(post) {
     return post;
   }
 
+  function checkForHelper(post){
+    if(post.comment == "This post is helper post 1 to puzzle 2c."){
+      return "I Wonder why ichthyosaurus isn't capitalized.";
+    } else if (post.comment == "This post is helper post 2 to puzzle 2c") {
+      return "What other canvas codes can you find? Go take a visit, I'm sure something interesting is there.";
+    }
+    return;
+  }
+
   // Function to encode the puzzle 2c.
   // See documentation for an explanation of the puzzle.
   // TODO: add name of document.
@@ -277,7 +286,7 @@ export default function Puzzles(post) {
           <div class="post-name"> 
             {post.poster} 
           {changeString(post,changeColor(post, COURSE_CODE_1, 2),changeFont(post, COURSE_CODE_2, 1))}
-          <p id="test" style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
+          <p style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
               {encodedMsg(ANSWER_TO_BE_ENCRYPTED)}
           </p>
           {hasPicture(post)}
@@ -296,6 +305,9 @@ export default function Puzzles(post) {
         <pre class="post-content">
           {post.content}
         </pre>
+        <p style={{margin: '0', color:'hsl(47, 28%, 66%)'}}>
+          {checkForHelper(post)}
+        </p>
         {hasPicture(post)}
         </div>
       </div>

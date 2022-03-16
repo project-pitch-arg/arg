@@ -14,7 +14,7 @@
         "content": "I never told you, but my favorite dinosaurs are XXDINO1XX, XXDINO2XX and ichthyosaurus.",
         "isPuzzle": true,
         "puzzleNr": "2c",
-        "comment": "This post is a helper to puzzle 2c."
+        "comment": "This post is helper post 1 to puzzle 2c."
     },
     {
         "date": [2022, 5, 1],
@@ -22,7 +22,7 @@
         "content": "Man, this latest course of mine, LMA017, was so fun. Way too little math for my taste though.",
         "isPuzzle": true,
         "puzzleNr": "2c",
-        "comment": "This post is a helper to puzzle 2c"
+        "comment": "This post is helper post 2 to puzzle 2c"
     },
     {
         "date": [2022, 4, 10],
