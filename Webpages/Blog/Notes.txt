@@ -41,9 +41,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Fixa ikonen för fliken.
 
-- Lägg in kurskoder i ChangeableVariables
-    - Också vilken font och färg de får
-
 - Göm en nolla i varje bild så kan man välja om man vill ha den eller inte.
     - Fixa byte med ChangeableVariables
 
