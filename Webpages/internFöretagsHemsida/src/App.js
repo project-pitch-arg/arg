@@ -27,8 +27,8 @@ export default class App extends Component {
 
   render(){
       return (
-        <div className="App" style={{height: this.state.height, overflowY: 'scroll'}}>
-            <div class="Login-component">
+        <div className="App">
+            <div class="Login-component" style={{height: this.state.height, overflowY: 'scroll'}}>
                 <TopBar />
              </div>
         </div>

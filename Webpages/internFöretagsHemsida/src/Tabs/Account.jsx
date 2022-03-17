@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './TabContent.css';
 import {basicFetchDataJson} from "../Client/Client";
+import progressBar from "../images/progress bar.jpg";
 
 export default class Account extends Component{
 
@@ -9,7 +10,9 @@ export default class Account extends Component{
     constructor(props){
         super(props);
         this.account = JSON.parse(localStorage.getItem("user"));
-        this.cypher = "";
+        this.cipher = "";
+        this.currentTimer = "";
+        this.timerActivated = false;
     }
 
     async getAccountData(json){
@@ -41,9 +44,10 @@ export default class Account extends Component{
 
     logIn = async (event) => {
         event.preventDefault();
-        if(event.target.cypher){
-            var json = {"cypher": event.target.cypher.value};
-            var response  = await basicFetchDataJson("/checkCypher", json);
+        console.log("Yes");
+        if(event.target.cipher){
+            var json = {"cipher": event.target.cipher.value};
+            var response  = await basicFetchDataJson("/checkCipher", json);
             if(response.error){
                 alert(response.error)
             }
@@ -53,7 +57,12 @@ export default class Account extends Component{
             }
         }
         else if(event.target.username.value.toUpperCase() === "CEO" && localStorage.getItem("password") === event.target.password.value){
-            this.activateCypher();
+            if(!this.timerActivated){
+                this.reloadPage();
+                this.timerActivated = true;
+                this.activatecipher();
+            }
+
         }
         else {
             json = {
@@ -63,12 +72,22 @@ export default class Account extends Component{
             this.getAccountData(json);
         }
     }
-
-    activateCypher = async () => {
+    getTimeLeft() {
+        return Math.round((this.currentTimer - new Date().getTime())/1000);
+    }
+    getTimeInPercentage(){
+        return (100 - (this.currentTimer - new Date().getTime())/60000 * 100) + "%";
+    }
+    activatecipher = async () => {
         var json = {"data": "placeholder"};
-        var response  = await basicFetchDataJson("/getCypher", json);
-        this.cypher = response.data;
-        setTimeout(this.activateCypher, 60000);
+        var response  = await basicFetchDataJson("/getCipher", json);
+        this.cipher = await response.data;
+        const delay = 60000;
+        setTimeout(this.activatecipher, delay);
+        this.currentTimer = new Date().getTime() + delay;
+    }
+    reloadPage = () => {
+        setTimeout(this.reloadPage, 1000);
         this.setState({dataReceived: true});
     }
 
@@ -76,18 +95,22 @@ export default class Account extends Component{
             return (<div className="popup-box">
               <div className="box">
                 <h1>Account</h1>
-                <span className="close-icon" onClick={this.popup} >x</span>
+                <span className="close-icon" onClick={this.popup}>x</span>
                 <form onSubmit={this.logIn}>
                     <label>Username:</label>
                     <input type="text" id="username"/>
                     <label>Password:</label>
                     <input type="password" id="password"/>
-                    {this.cypher !== "" ? (<div><label>Cypher:</label><input type="text" id="cypher"/>
-                    <p>Solve cypher to prove you are not a robot. You have 60 seconds.</p>
-                    <p style={{color: "red"}}>{this.cypher}</p></div>) : (null) }
+                    {this.cipher !== "" ? (<div><label>cipher:</label><input type="text" id="cipher"/>
+                    <p>Solve security cipher to prove you are not a robot. You have {this.getTimeLeft()} seconds.</p>
+                    <p style={{color: "lightgray"}}><i>Hint: Answer should be an animal</i></p>
+                    <p style={{color: "red"}}>{this.cipher}</p><div class="progress-bar-div">
+                    <img class="progress-bar-image" src={progressBar} alt="Progress bar"/>
+                    <div class="progress-bar-removal" style={{width: this.getTimeInPercentage(this.currentTimer)}}></div>
+                    </div>
+                    </div>) : (null) }
                     <input type="submit" id="submit" value="Log in"/>
                 </form>
-
               </div>
             </div>)
     }

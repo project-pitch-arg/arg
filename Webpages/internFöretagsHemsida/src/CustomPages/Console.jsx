@@ -18,7 +18,7 @@ export default class Console extends Component{
         "/currentAdmin Shows the current Admin User"
         ];
         this.securityAnswers = [
-        "Lexi", "lifeguard", "barcelona"
+        "Lexi", "lifeguard", "Comillas"
         ]
         this.adminCode = "3186";
         this.adminOn = false;

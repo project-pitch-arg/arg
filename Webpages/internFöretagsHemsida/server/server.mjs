@@ -8,23 +8,57 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-var cypher = "";
-var encryptedCypher = "";
+var cipher = "";
+var encryptedCipher = "";
+var activateCypherGenerator = false;
 
-setTimeout(generateCypher, 1000);
+const caesarCipher = function(s, k) {
+  let result = '';
 
-function generateCypher(){
-    cypher = "";
-    encryptedCypher = "";
-    for(var i = 0; i < 9; i++){
-        var randomLetter = getRandomInt(69,118);
-        var encryptedRandomLetter = randomLetter + 4;
-        randomLetter = String.fromCharCode(randomLetter);
-        encryptedRandomLetter = String.fromCharCode(encryptedRandomLetter);
-        cypher += randomLetter;
-        encryptedCypher += encryptedRandomLetter;
+  for (let i = 0; i < s.length; i++) {
+
+    let charCode = s[i].charCodeAt();
+    // check that charCode is a lowercase letter; automatically ignores non-letters
+    if (charCode > 96 && charCode < 123) {
+
+      charCode += k % 26 // makes it work with numbers greater than 26 to maintain correct shift
+      // if shift passes 'z', resets to 'a' to maintain looping shift
+      if (charCode > 122) {
+        charCode = (charCode - 122) + 96;
+      // same as previous, but checking shift doesn't pass 'a' when shifting negative numbers
+      } else if (charCode < 97) {
+        charCode = (charCode - 97) + 123;
+      }
     }
-    setTimeout(generateCypher, 60000)
+
+    if (charCode > 64 && charCode < 91) {
+
+      charCode += k % 26
+
+      if (charCode > 90) {
+        charCode = (charCode - 90) + 64;
+      } else if (charCode < 65) {
+        charCode = (charCode - 65) + 91;
+      }
+    }
+
+    result += String.fromCharCode(charCode);
+  }
+  return result
+}
+function generateCipher(){
+    cipher = "";
+    encryptedCipher = "";
+    var randomLetter = getRandomInt(69,118);
+    var word = fs.readFileSync("./JsonFiles/cipherWords.json");
+    var json = JSON.parse(word);
+    var animal = json[getRandomInt(0,json.length)];
+    cipher += animal;
+    encryptedCipher += caesarCipher(animal,141);
+    setTimeout(clearCipher, 60000)
+}
+function clearCipher(){
+    cipher = "823048234923";
 }
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -112,9 +146,9 @@ app.post("/getUser", (req, res) => {
   })
   return res.send({error: "Wrong password or username!"});
 });
-app.post("/checkCypher", (req, res) => {
-  var response = req.body.cypher;
-  if(cypher === response){
+app.post("/checkCipher", (req, res) => {
+  var response = req.body.cipher;
+  if(cipher === response){
         const file = fs.readFileSync("./JsonFiles/Accounts.json");
         var data = JSON.parse(file);
         const tokenFile = fs.readFileSync("./JsonFiles/Tokens.json");
@@ -135,7 +169,7 @@ app.post("/checkCypher", (req, res) => {
               }
         })
   }
-  //return res.send({error: "Wrong answer!"});
+  return res.send({error: "Wrong answer!"});
 });
 app.post("/checkToken", (req, res) => {
   var token = req.body.token;
@@ -149,8 +183,9 @@ app.post("/checkToken", (req, res) => {
   }
 });
 
-app.post("/getCypher", (req, res) => {
-    return res.send({data: encryptedCypher});
+app.post("/getCipher", (req, res) => {
+    generateCipher();
+    return res.send({data: encryptedCipher});
 });
 
 app.listen(process.env.PORT || 8080, () =>
