@@ -38,7 +38,7 @@ export default class News extends Component{
                                  <List.Item>
                                    <List.Item.Meta
                                      title={this.news[item].title + " - " + this.news[item].date}
-                                     description={this.news[item].text}
+                                     description={this.news[item].img ? (<div><img class="news" src={require("../../images/CEO.jpg")} alt={"CEO" }/><p>{this.news[item].text}</p></div>) : (<p>{this.news[item].text}</p>)}
                                    />
                                  </List.Item>
                                )}

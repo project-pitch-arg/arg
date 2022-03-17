@@ -13,6 +13,7 @@ export default class TopBar extends Component {
         this.locations = [];
         this.dropdownLocations = [];
         this.customLocations = [];
+        this.addCustomTabs("Quiz");
     }
 
     async componentDidMount(){
@@ -25,8 +26,8 @@ export default class TopBar extends Component {
         if (oldActiveElements.length > 0) {
           for (let elem of oldActiveElements){
               elem.classList.remove('active');
-            }
           }
+        }
         try {
             document.getElementById(path.file).classList.add('active');
         }
@@ -63,13 +64,21 @@ export default class TopBar extends Component {
            }
       }
 
+      getComponent = (file, Tag) => {
+            return (<Route key={file} exact path={"/" + file} element={
+                  <Suspense fallback={<Wrong />}>
+                      <Tag reloadPage={this.reloadPage}/>
+                  </Suspense>
+              }/>);
+      }
+
       render(){
-            if(localStorage.getItem('Console') === "true"){
-                this.addCustomTabs("Console");
-            }
-            else {
-                this.removeCustomTabs("Console");
-            }
+          if(localStorage.getItem('Console') === "true"){
+            this.addCustomTabs("Console");
+          }
+          else {
+            this.removeCustomTabs("Console");
+          }
           return (
                 <div class="topbar">
                     <BrowserRouter>
@@ -102,32 +111,19 @@ export default class TopBar extends Component {
                           {
                             this.locations.map((file) => {
                                 const Tag = lazy(() => import("../Tabs/" + file));
-                                    return (<Route key={file} exact path={"/" + file} element={
-                                      <Suspense fallback={<Wrong />}>
-                                          <Tag reloadPage={this.reloadPage}/>
-                                      </Suspense>
-                                  }/>);
-                                }
-                            )}
+                                return this.getComponent(file, Tag);
+                            })
+                          }
                           {
                             this.dropdownLocations.map((file) => {
                                 const Tag = lazy(() => import("../Tabs/DropDown/" + file));
-                                    return (<Route exact path={"/" + file} element={
-                                      <Suspense fallback={<Wrong />}>
-                                          <Tag reloadPage={this.reloadPage}/>
-                                      </Suspense>
-                                  }/>);
+                                return this.getComponent(file, Tag);
                             })
-
                           }
                           {
                             this.customLocations.map((file) => {
                                 const Tag = lazy(() => import("../CustomPages/" + file));
-                                    return (<Route exact path={"/" + file} element={
-                                      <Suspense fallback={<Wrong />}>
-                                          <Tag reloadPage={this.reloadPage}/>
-                                      </Suspense>
-                                  }/>);
+                                return this.getComponent(file, Tag);
                             })
                           }
                       }

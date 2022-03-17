@@ -1,0 +1,29 @@
+.questionForm{
+    text-align: left;
+    padding: 20px;
+
+}
+.questionForm input[type=radio]{
+    padding: 10px;
+    margin-right: 10px;
+    font: inherit;
+      color: currentColor;
+      width: 1.15em;
+      height: 1.15em;
+      border: 0.15em solid currentColor;
+      border-radius: 50%;
+
+}
+.questionForm input[type=submit]{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding: 10px;
+    width: 200px;
+
+
+}
+.questionForm input[type=submit]:hover{
+    background-color: #069ac6;
+
+}

@@ -61,6 +61,10 @@ img.graph{
     max-height: 100%;
     border-radius: 10px;
 }
+img.news{
+    width: 20%;
+    border-radius: 0;
+}
 h3{
     font-size: 18px;
 }

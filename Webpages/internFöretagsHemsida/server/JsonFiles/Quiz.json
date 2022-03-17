@@ -1,0 +1,29 @@
+[{
+  "q1" : {
+    "text": "Our CEO founded the company in 1998, but what job did he have before?",
+    "alternatives" : {
+        "1" : "Property Manager",
+        "2" : "Lifeguard",
+        "3" : "Salesman",
+        "4" : "Janitor"
+    }
+  },
+  "q2" : {
+    "text": "Google's motto is ''Don't be evil!'', but what is our company's motto?",
+    "alternatives" : {
+      "1" : "Think Different",
+      "2" : "Just Do It",
+      "3" : "Say Hello to the Future",
+      "4" : "Live in your world. Play in ours."
+    }
+  },
+  "q3" : {
+    "text": "Everybody knows that our company has a great pet culture, but does anyone know the name of the CEO's dog?",
+    "alternatives" : {
+      "1" : "Lexi",
+      "2" : "Sally",
+      "3" : "Hannah",
+      "4" : "Dream"
+    }
+  }
+}]

@@ -93,7 +93,7 @@ export default class Policy extends Component{
     }
 
     render(){
-        if(this.state.dataReceived && this.state.hidden) {
+        if(this.state.dataReceived) {
             return (
                 <div class="standardDivList">
                     <h1 class="underline">Policy Documents</h1>
@@ -101,23 +101,10 @@ export default class Policy extends Component{
                     this.location.map((file) => {
                         return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
                     })
-                  }
-
-                </div>
-            )
-        }
-        else if(this.state.dataReceived) {
-            return (
-                <div class="standardDivList">
-                    <h1 class="underline">Policy Documents</h1>
-                  {
-                    this.location.map((file) => {
-                        return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
-                    })
-                  }
-                  <form onSubmit={this.handleInput}>
-                    <input class="smallConsole" placeholder="Enter code..." type="text" name="name" id="command"/>
-                  </form>
+                  }{!this.state.hidden ? (
+                      <form onSubmit={this.handleInput}>
+                        <input class="smallConsole" placeholder="Enter code..." type="text" name="name" id="command"/>
+                      </form>) : (null)}
                 </div>
             )
         }

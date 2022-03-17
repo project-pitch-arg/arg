@@ -1,8 +1,8 @@
 [{
   "t1" : {
-    "title": "Progress",
-    "text": "Today has been a good day my dear sir!",
-    "date": "2022/02/25"
+    "title": "Company retreat",
+    "text": "It's time again for the company's yearly retreat. We will be traveling to our usual spot where we will enjoy a delightful weekend. Activities start on friday at 6 pm ",
+    "date": "2022/03/11"
   },
   "t2" : {
     "title": "Happy Birthday",
@@ -10,8 +10,9 @@
     "date" : "2022/02/25"
   },
   "t3" : {
-    "title": "Happy Birthday",
-    "text" : "",
-    "date" : "2022/02/25"
+    "title": "Our CEO",
+    "img" : "CEO",
+    "text" : "Our CEO has been with us since the start in 1998.",
+    "date" : "2022/03/10"
   }
 }]

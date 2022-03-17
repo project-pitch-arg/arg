@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Console.css';
 
+
 export default class Console extends Component{
 
     state = { dataReceived: false, }
@@ -17,7 +18,7 @@ export default class Console extends Component{
         "/currentAdmin Shows the current Admin User"
         ];
         this.securityAnswers = [
-        "dog", "lifeguard", "barcelona"
+        "Lexi", "lifeguard", "barcelona"
         ]
         this.adminCode = "420";
         this.adminOn = false;

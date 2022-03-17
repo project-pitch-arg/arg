@@ -24,8 +24,6 @@ function generateCypher(){
         cypher += randomLetter;
         encryptedCypher += encryptedRandomLetter;
     }
-    console.log("Current cypher: " + cypher);
-    console.log("Current cypher encrypted: " + encryptedCypher);
     setTimeout(generateCypher, 60000)
 }
 function getRandomInt(min, max) {
@@ -39,10 +37,10 @@ function checkToken(req){
     var ip_adress = req.socket.remoteAddress;
     try{
         json[ip_adress].token = json[ip_adress].token;
-        return true;
+        return {"token": true};
     }
     catch {
-        return false;
+        return {"token": false};
     }
 }
 
@@ -77,12 +75,14 @@ app.post('/getFiles', (req, res) => {
     })
 });
 app.post('/getNews', (req, res) => {
-  var list = [];
   const data = fs.readFileSync("./JsonFiles/News.json");
   return res.send(data);
 });
+app.post('/getQuiz', (req, res) => {
+  const data = fs.readFileSync("./JsonFiles/Quiz.json");
+  return res.send(data);
+});
 app.post('/getHR', (req, res) => {
-  var list = [];
   const data = fs.readFileSync("./JsonFiles/HR.json");
   return res.send(data);
 });
@@ -117,7 +117,6 @@ app.post("/checkCypher", (req, res) => {
   if(cypher === response){
         const file = fs.readFileSync("./JsonFiles/Accounts.json");
         var data = JSON.parse(file);
-        console.log(response);
         const tokenFile = fs.readFileSync("./JsonFiles/Tokens.json");
         var json = JSON.parse(tokenFile);
         var ip_adress = req.socket.remoteAddress;

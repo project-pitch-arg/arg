@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './TabContent.css';
 import {basicFetchDataJson} from "../Client/Client";
 
-
 export default class Account extends Component{
 
     state = { dataReceived: false, popup: false}
@@ -20,10 +19,15 @@ export default class Account extends Component{
         }
         else {
             this.account = data;
-            localStorage.setItem("user", JSON.stringify(data));
             if(data.username === "CEO"){
-                var json = {"token" : JSON.parse(localStorage.getItem("user")).token};
+                json = {"token" : JSON.parse(localStorage.getItem("user")).token};
                 var response  = await basicFetchDataJson("/checkToken", json);
+                if(response.token === true){
+                    localStorage.setItem("user", JSON.stringify(data));
+                }
+                else {
+                    alert("Nice try");
+                }
 
             }
             this.popup();
@@ -69,7 +73,6 @@ export default class Account extends Component{
     }
 
     popupWindow = () => {
-        if(this.cypher !== ""){
             return (<div className="popup-box">
               <div className="box">
                 <h1>Account</h1>
@@ -79,30 +82,14 @@ export default class Account extends Component{
                     <input type="text" id="username"/>
                     <label>Password:</label>
                     <input type="password" id="password"/>
-                    <label>Cypher:</label>
-                    <input type="text" id="cypher"/>
+                    {this.cypher !== "" ? (<div><label>Cypher:</label><input type="text" id="cypher"/>
+                    <p>Solve cypher to prove you are not a robot. You have 60 seconds.</p>
+                    <p style={{color: "red"}}>{this.cypher}</p></div>) : (null) }
                     <input type="submit" id="submit" value="Log in"/>
                 </form>
-                <p>Solve cypher to prove you are not a robot. You have 60 seconds.</p>
-                <p>{this.cypher}</p>
+
               </div>
             </div>)
-        }
-        else {
-            return (<div className="popup-box">
-              <div className="box">
-                <h1>Account</h1>
-                <span className="close-icon" onClick={this.popup} >x</span>
-                <form onSubmit={this.logIn}>
-                    <label>Username:</label>
-                    <input type="text" id="username"/>
-                    <label>Password:</label>
-                    <input type="password" id="password"/>
-                    <input type="submit" id="submit" value="Log in"/>
-                </form>
-              </div>
-            </div>)
-        }
     }
 
     render(){
