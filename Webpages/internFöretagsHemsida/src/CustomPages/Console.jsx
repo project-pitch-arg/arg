@@ -20,7 +20,7 @@ export default class Console extends Component{
         this.securityAnswers = [
         "Lexi", "lifeguard", "barcelona"
         ]
-        this.adminCode = "420";
+        this.adminCode = "3186";
         this.adminOn = false;
         this.securityCheck = false;
         this.messagesEnd = React.createRef();
