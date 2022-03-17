@@ -14,31 +14,523 @@
     },
     {
         "chat_name": "Simply a poem?",
-        "text": "So, I saw the discussion about what the inspiration for Robot1312113's poem the other day could be about. But don't you find it strange? Could it not mean something else?",
+        "text": "Anyone else found Robot1312113's poem strange? I'm thinking it might mean something else. I smell a puzzle brewing!",
         "user": "icniVad",
         "password": "daVinciCode"
     },
     {
         "chat_name": "Simply a poem?",
-        "text": "Agreed. It is most peculiar. We should initialize an investigation.",
+        "text": "I concur. It is a most peculiar poem. We should initialize an investigation immediately.",
         "user": "Mr X",
         "password": "ILovePuzzles"
     },
     {
         "chat_name": "Simply a poem?",
-        "text": "Right. But were to start? No letters seem odd. Did not find any hidden letters at all.",
+        "text": "Righto. But where to start? I tried looking for hidden letters and stuff but couldn't find anything. No letters seem odd either.",
         "user": "icniVad",
         "password": "daVinciCode"
     },
     {
         "chat_name": "Simply a poem?",
-        "text": "If there is nothing hidden, it is simply in plain sight. I shall procced in this direction.",
+        "text": "If there is nothing hidden, it is simply in plain sight. I shall procced with this thought in mind.",
         "user": "Mr X",
         "password": "ILovePuzzles"
     },
     {
         "chat_name": "Simply a poem?",
-        "text": "But the text is all over the place? It is a pleasant temperature, but not how you like it to be at the same time? Does this guy like to be hot or cold?",
+        "text": "This text is all over the place, I can't make sense of it at all. Pleasant temperature, but that's not how he likes it? What's up with the guy? I think he needs to repair his temp-sensors or something.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Do calm down. I believe we should not interpret this as meaning something on the whole. Maybe we should take it apart into pieces?",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Pieces ey? Alright, let's start with this place he talks about. Where has he been recently? Maybe some of his other posts will  shed some light on this.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "I believe he visited 'Universeum' the other day. I found this website of theirs which contain more information https://www.universeum.se/en/",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Interesting, very interesting. I see they have a restaurant and café. He did mention drinks and simple foodstuff. I'm thinking we're onto something here. You remember how Fexjo's avatar is a salad? They even made a post about it earlier. It's all coming back to me now, and it's all connected! They seem to have reused the good ol' ceasar cipher.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Whatever do you mean? I do not follow your train of thought. Please elaborate",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "In addition, it is 'Caesar'. Not 'Ceasar'.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Don't you see? Food, salad, caesar cipher, it's all part of a larger scheme! They must have planned this for ages. Now, get this, he included that the place had food and drink available right? And what food have we seen before in a post? That's right! Salad! And don't you remember where that lead us? That was a ceasar cipher for Fexjo's name! This must be something similar! Now we just got to figure out how we use the caesar cipher for this poem. If it's just a part of the puzzle or if this will lead us down another path of clues. Man i'm excited!!",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Oh yeah, Caesar*, my bad.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "I understand your speculation. What do you suppose is the word to decrypt with the cipher? I have found no such clue and wonder if this is the correct path to take.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Shouldn't it be like, victory? That's the final word of the poem and what seems to be the conclusion of the entire experience.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "The more I think about this the more it makes sense! Continuous humming sound? Bunch of people talking in a restaurant! Particular variety? The food he's eating! It's all coming back to the salad!",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Hey, you there? Come on, you gotta help me on this, we're so close! If we just figure this out I know we're gonna find something interesting.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "You can't just leave me hanging like this.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Earth to X?",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Anyone alive?",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Ah, I see. The salad got to you. A classic case of overeating.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "No, that is obviously a flawed conclusion. I was simply otherwise occupied. However, I have considered this problem during the day and firmly believe that the salad is not relevant. Instead, I am attempting to find another angle to this problem.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Let's agree to disagree then. As you said, we'll divide up the work. I'll continue on the salad clue and you can work out something else. Maybe the first part? Seems to me that the salad is mostly focused on in the second half of the poem.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "That is acceptable. I shall follow your suggestion for the moment.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Or wait… Maybe the salad is an object in the first half and the second half is about where you buy the salad! Now we get back to universum or whatever it was called. It's probably also involved in some way.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Scarcely a moment ago, we agreed to divide the work and now you wish to work together again? Be that as it may, I have found another direction I believe the soluion of this puzzle is located in.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Yeah? Please share, any clue is a good clue.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Definitions and synonyms may be highly relevant. Do yo not think that a mistake is an error and a victory is the same as a win?",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Pretty smart, like how The process of gaining this could be Experience? Now just to figure out how this relates to the salad…",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Your fixation on the salad is incomprehensible.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "In any case, I believe 'a particular variety or type' is kind, sort or race.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "I'm telling you, it's all connected, it has to be!",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "But continuing on that track, standard that seems perfect is probably Ideal. And Pleasant temperature is probably Temperate or Comfortable or Warm or something similar. Actually the more I think about it the more options it could be. It'll be a pain to nail down one answer to each of these.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Your attitude needs adjusmtents. It is not 'a pain', but a challenge. I am going to undertake this test and return triumphant. Farewell.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Wait, seriously? You're just leaving me in the dust? And here I thought we were doing this together.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Okay, I can do this. Let's just review what words have already been deciphered and see if there's some pattern. Win, Error, Ideal, (Kind, Sort, Race), (Temperate, Comfortable, Warm). Hmm.. Win and Error, definitely reminds me of Windows. Ideal could also be along those tracks what with not having errors. Sort is probably it. Not sure about the last one but at the same time a bunch of words are missing so maybe they will shed some light on things. But again, what would windows have to do with a salad? This is convoluted to the extreme but I always knew Robot1312113 was a secret mastermind.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Hello! See youre working on puzzles as always. Are you close?",
+        "user": "Tree123",
+        "password": "TreesAndFlowers"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Extremely so. This is the most advanced puzzle yet but I believe it'll be cracked in mere moments. Now I just need to figure out the salad. Any thoughts mr Tree?",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "It is Ms Tree. But amazing! Are you sure the salad is relevant? Wasnt that a clue for the old puzzle?",
+        "user": "Tree123",
+        "password": "TreesAndFlowers"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Exactly! A good puzzle draws on ambient environments and what better way to increase interest and complexity of a puzzle but to use what is already available on the website. Not only does it simplify the work put into the puzzle but it also brings out relevance and keeps the interest of the participants. Quite a classic trick but one that works quite well. I've seen it done many times before.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Well. That sounds reasonable. I dont think Ill be able to help",
+        "user": "Tree123",
+        "password": "TreesAndFlowers"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "I'll keep you updated on my progress.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Thanks! Gotta go, so good luck!",
+        "user": "Tree123",
+        "password": "TreesAndFlowers"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "cakew",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Wait, what?",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "It is the answer.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Woah there, slow down. How the heck did you reach that conclusion? It's nowhere close to where I'm at!",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "It is simply because I am not obsessed with the salad that I arrived at this outcome faster.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Alright whatever. Please explain your reasoning. I wanna hear how you figured this one out. If it's even the answer, which I doubt.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Congratulations Mr X, you figured it out. I'll send you your reward in a dm.",
+        "user": "Robot1312113",
+        "password": "Imarobot"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Thank you, Robot. You have been refuted, Mr DaVinci",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Woah, wait. You were right? And a reward as well? Now I'm jealous. Come on, tell me how you solved it. I'm dying of curiosity right now.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Actually, before that, lemme try something.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "SaladW.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "No? Nothing? Oh well it was worth a try.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "You need to develop your patience, Mr DaVinci. As such, I will tell you the process tomorrow.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Tomorrow? wait wait wait. Come on man, don't do this to me. I can't wait that long, this is my life's work man, I've been at this for at least a couple of days you know!",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Okay it's now tomorrow. Explain now please.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "It follows the pattern that we agreed on previously. To solve this puzzle, it is necessary to replace each line with another word. So, in order from top to bottom:",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Warm",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Reality",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Ideal!",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Ideal",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Tight",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Error",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Café",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Restaurant.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Wait I meant café.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Abuzz",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Of course you did. Continuting on:",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Kind",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Experience and then win.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "That is correct.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Then simply follow these instrutions.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Okay. Warm, Reality, Ideal, Tight, Error, Café, Abuzz, Kind, Experience, Win. Seems simple enough to me, first letter of each gives me 'write cakew'.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "But I also know that this has a second part, and probably a second reward for that as well.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "I assume you will mention the salad next.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "It's something to do with the salad. I'm telling you.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "So what did you get?",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Three recipes. Both Fexjo's and Robot's favorite cakes were included. Although I find myself reluctant to admit this, the last recipe was of a salad.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "AHA! Told you it was relevant.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Well that's that then. It was fun while it lasted. Can't wait for the next one.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "For your participation and enthusiasm you will get the salad recipe as well icniVad.",
+        "user": "Robot1312113",
+        "password": "Imarobot"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "Heck yeah, that's awesome.",
+        "user": "icniVad",
+        "password": "daVinciCode"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "I see you have solve it. Amazing!",
+        "user": "Tree123",
+        "password": "TreesAndFlowers"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "I completely agree with your assesment of my intellectual capabilites.",
+        "user": "Mr X",
+        "password": "ILovePuzzles"
+    },
+    {
+        "chat_name": "Simply a poem?",
+        "text": "I'll get the next one though, trust me on this.",
         "user": "icniVad",
         "password": "daVinciCode"
     }
