@@ -54,7 +54,7 @@ function generateCipher(){
     var json = JSON.parse(word);
     var animal = json[getRandomInt(0,json.length)];
     cipher += animal;
-    encryptedCipher += caesarCipher(animal,141);
+    encryptedCipher += caesarCipher(animal,241);
     setTimeout(clearCipher, 60000)
 }
 function clearCipher(){
@@ -169,7 +169,9 @@ app.post("/checkCipher", (req, res) => {
               }
         })
   }
-  return res.send({error: "Wrong answer!"});
+  else {
+    return res.send({error: "Wrong answer!"});
+  }
 });
 app.post("/checkToken", (req, res) => {
   var token = req.body.token;

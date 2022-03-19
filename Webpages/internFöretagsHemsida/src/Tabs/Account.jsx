@@ -60,7 +60,7 @@ export default class Account extends Component{
             if(!this.timerActivated){
                 this.reloadPage();
                 this.timerActivated = true;
-                this.activatecipher();
+                this.activateCipher();
             }
 
         }
@@ -78,12 +78,12 @@ export default class Account extends Component{
     getTimeInPercentage(){
         return (100 - (this.currentTimer - new Date().getTime())/60000 * 100) + "%";
     }
-    activatecipher = async () => {
+    activateCipher = async () => {
         var json = {"data": "placeholder"};
         var response  = await basicFetchDataJson("/getCipher", json);
         this.cipher = await response.data;
         const delay = 60000;
-        setTimeout(this.activatecipher, delay);
+        setTimeout(this.activateCipher, delay);
         this.currentTimer = new Date().getTime() + delay;
     }
     reloadPage = () => {
@@ -116,18 +116,18 @@ export default class Account extends Component{
     }
 
     render(){
-            return (
-                <div>
-                    {this.state.popup ? (this.popupWindow()) : (null)}
-                    <div class="standardDivList">
-                        <h1>{this.account.username}</h1>
-                        <img src={require('../images/'+ this.account.username +".jpg")} alt=""/>
-                        <h2>PhoneNumber:{this.account.phoneNumber}</h2>
-                        <h2>Email:{this.account.email}</h2>
-                        <button class="switchAccount" onClick={this.popup}>SwitchAccount</button>
-                    </div>
-
+        return (
+            <div>
+                {this.state.popup ? (this.popupWindow()) : (null)}
+                <div class="standardDivList">
+                    <h1>{this.account.username}</h1>
+                    <img src={require('../images/'+ this.account.username +".jpg")} alt=""/>
+                    <h2>PhoneNumber:{this.account.phoneNumber}</h2>
+                    <h2>Email:{this.account.email}</h2>
+                    <button class="switchAccount" onClick={this.popup}>SwitchAccount</button>
                 </div>
-            )
+
+            </div>
+        )
     }
 }
