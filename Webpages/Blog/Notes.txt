@@ -14,8 +14,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - Uppdatera About med mer info och undvik Edwin och Wilfreds namn.
  - Lägg till i About vad de pluggar? Eller spara till sidospår och hur de träffades? Ges hint i sista frågan. Lite.
 
-- Välj så att vi antingen har ' eller " överallt.
-
 - Rensa chatten från alla användare/chattar
     - Kan göras enkelt från hemsidan med projektet, så skippar detta så länge.
 
@@ -29,10 +27,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Ändra förnamn/efternamn till username "".
 
 - Ge gåtor samma namn som dokument om dem.
-
-- Redigera svårighetsgrad på main gåta.
-
-- Namnge bilder bättre.
 
 - Robot1312113 besökte Universeum innan dikt.
 

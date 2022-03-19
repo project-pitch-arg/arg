@@ -3,7 +3,7 @@
         "date": [2022, 6, 18],
         "poster": "Robot1312113",
         "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinosaurs today. Unfortunately, the book did not include ichthyosaurus, but XXDINO3XX also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
-        "pictures": [["Puzzles/NumbersPuzzle.png","A numbers puzzle."], ["Puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["Puzzles/duros.jpg", "A package of duros."], ["Puzzles/Computer.png", "A computer drinking coffee." ]],
+        "pictures": [["Puzzles/NumbersPuzzle.png","A numbers puzzle."], ["Puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["Puzzles/Duros.jpg", "A package of duros."], ["Puzzles/Computer.png", "A computer drinking coffee." ]],
         "isPuzzle": true,
         "puzzleNr": "2c",
         "comment": "This is the main post to puzzle 2c."
@@ -72,7 +72,7 @@
     {
         "poster": "Robot1312113",
         "content": "Just a happy dinosaur to make your day better.",
-        "pictures": [["PostImages/babydino-removebg-preview.png", "Dino!!!"]],
+        "pictures": [["PostImages/BabyDino.png", "Dino!!!"]],
         "isPuzzle": false
     },
     {
@@ -100,7 +100,7 @@
     {
         "date": [2022, 5, 5],
         "poster": "Robot1312113",
-        "content": "You ever experienced feeling like you fall and wake up with a start? Today, I also did that. And included the falling part. It hurt. (×_×#)",
+        "content": "You ever experienced feeling like you fall and wake up with a start? Today, I also did that. Including the falling part. It hurt. (×_×#)",
         "isPuzzle": false
     },
     {
@@ -148,7 +148,7 @@
     {
         "poster": "Fexjo",
         "content": "Both our resident robot and I have been feeling a bit cooped up inside for a while. And we haven't really done much together lately. So we decided to take a bit of a walk. Just enjoy the sights and explore parts of the city. Even living in Gothenburg for an entire lifetime will still leave many places unexplored. Not to mention that I've only been here for a year. We saw many beautiful sights on our exploration, though one stuck out to me. We came across this as we were wandering aimlessly along a cycling route. The route is called 'Kattegattsleden' for the avid cyclists that are interested. Apparently it stretches for 390 km, quite a distance to be sure. Back on topic though, the bridge is truly a marvel of engineering. Even I can tell that much without much knowledge in structural architecture. Could do with a paint job but hey, I'm not in charge. ",
-        "pictures": [["PostImages/kattegattleden.jpg", "Massive bridge by cycling route."]],
+        "pictures": [["PostImages/Kattegattleden.jpg", "Massive bridge by cycling route."]],
         "isPuzzle": false
     },
     {
@@ -168,7 +168,7 @@
     },
     {
         "poster": "Robot1312113",
-        "content": "So I was listening calmly to music just yesterday and thought 'Why not create some myself?' ヾ(⌐■_■)ノ♪. I was incredibly motivated and found an old guitar at my parents' place. I downloaded an app to learn. I think it went well and pracitce makes perfect, but after half an hour or so the people around me wildly protested. Why? ┐(￣ヘ￣;)┌. The guitar was confiscated during my protests to this decision.",
+        "content": "So I was listening calmly to music just yesterday and thought 'Why not create some myself?' ヾ(⌐■_■)ノ♪. I was incredibly motivated and found an old guitar at my parents' place. I downloaded an app to learn. I think it went well and practice makes perfect, but after half an hour or so the people around me wildly protested. Why? ┐(￣ヘ￣;)┌. The guitar was confiscated during my protests to this decision.",
         "isPuzzle": false
     },
     {

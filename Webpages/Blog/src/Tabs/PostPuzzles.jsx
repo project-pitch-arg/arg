@@ -6,9 +6,9 @@
   in the file ChangeableVariables.jsx.
 */
 
-import React from 'react';
-import colors from './TabContent.css'
-import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS } from '../ChangeableValues';
+import React from "react";
+import colors from "./TabContent.css"
+import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS } from "../ChangeableValues";
 
 export default function Puzzles(post) {
 
@@ -66,7 +66,7 @@ export default function Puzzles(post) {
 
   // This function changes the font of the letters in a post, where the 
   // argument count is the "x":th letter of that type. It does this 
-  // with the help of the previous 'changeColor' function that works
+  // with the help of the previous "changeColor" function that works
   // in a similar way.
   function changeFont(post,letter, count) {
     var col = changeColor(post, letter, count);
@@ -76,15 +76,15 @@ export default function Puzzles(post) {
     return col;
   }
 
-  // This function takes two results from either 'changeColor' or
-  // 'changeFont' or both and appends them together to then return it in
+  // This function takes two results from either "changeColor" or
+  // "changeFont" or both and appends them together to then return it in
   // a HTML format appropriate for the post itself.
   function changeString(post, array1, array2) {
     var totalArray = array1.concat(array2);
     var sortedArray = totalArray.sort(function(a,b){return (a[0]-b[0])});
     
     return (
-      // With the help of the 'helpChangeString' function each individual 
+      // With the help of the "helpChangeString" function each individual 
       // letter that is specified is modified by either it's color or
       // it's font.
       <pre class="post-content">
@@ -121,7 +121,7 @@ export default function Puzzles(post) {
   // Check if the post has picture(s) and
   // if it does, return it/them in proper HTML format.
   function hasPicture(post) {
-    if(post.hasOwnProperty('pictures')) {
+    if(post.hasOwnProperty("pictures")) {
       return (<div class="post-images">
               {post.pictures.map (picture => {
                     return (
@@ -147,16 +147,6 @@ export default function Puzzles(post) {
     for (var a = 0; a < amount; a++) {
         tempNr = array.shift();
         array.push(tempNr);
-
-        // Old code that is both slower and non-functional.
-      /*for (var i = array.length-1; i >= 0; i--) {
-          if(i == 0) {
-            tempArray[array.length - 1] = array[i];
-          }  else {
-            tempArray[i-1]=array[i];
-          }
-        }
-        array = tempArray; */
     }
     return array;
   }
@@ -254,6 +244,9 @@ export default function Puzzles(post) {
     return Math.floor(Math.random(2) * (max - min) + min); 
   }
 
+  // Replaces the dinosaurs in the puzzle post with the 
+  // specified names from ChangeableValues. Also makes
+  // sure that they are all capitalized. See documentation.
   function changeDinos(post){
     const dino1 = THREE_DINOS[0][0].toUpperCase() + THREE_DINOS[0].slice(1);
     const dino2 = THREE_DINOS[1][0].toLocaleUpperCase() + THREE_DINOS[1].slice(1);
@@ -264,6 +257,7 @@ export default function Puzzles(post) {
     return post;
   }
 
+  // Detection function to know which post should lead to which function.
   function checkForHelper(post){
     if(post.comment == "This post is helper post 1 to puzzle 2c."){
       return HINT_DINOS;
@@ -287,7 +281,7 @@ export default function Puzzles(post) {
           <div class="post-name"> 
             {post.poster} 
           {changeString(post,changeColor(post, COURSE_CODE_1, 2),changeFont(post, COURSE_CODE_2, 1))}
-          <p style={{margin: '0', color: colors.postBackground}}> 
+          <p style={{margin: "0", color: colors.postBackground}}> 
               {encodedMsg(ANSWER_TO_BE_ENCRYPTED)}
           </p>
           {hasPicture(post)}
@@ -306,7 +300,7 @@ export default function Puzzles(post) {
         <pre class="post-content">
           {post.content}
         </pre>
-        <p style={{margin: '0', color: colors.postBackground}}>
+        <p style={{margin: "0", color: colors.postBackground}}>
           {checkForHelper(post)}
         </p>
         {hasPicture(post)}
@@ -335,6 +329,8 @@ export default function Puzzles(post) {
    )
   }
 
+  // Placeholder function for a future puzzle function.
+  // Currently displays the post like any of the non-puzzle posts.
   function puzzleChat(post) {
     return (
       <div class="post">

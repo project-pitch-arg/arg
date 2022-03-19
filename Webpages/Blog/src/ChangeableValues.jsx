@@ -12,9 +12,9 @@
 
 // Import picutres you wish to use, with the relative
 // path as seen from this file.
-import Robot from './Img/Robot1312113.png';
-import CaesarSalad from './Img/Caesar.png';
-import content from './Tabs/PostContent.json';
+import Robot from "./Img/Robot1312113.png";
+import CaesarSalad from "./Img/Caesar.png";
+import content from "./Tabs/PostContent.json";
 
 
 

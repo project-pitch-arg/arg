@@ -8,10 +8,10 @@
   the amount of posts, edit the variable postsPerPage
   to the wished for amount.
 */
-import React, { useState } from 'react';
-import './TabContent.css';
-import puzzleHandler from './PostPuzzles.jsx';
-import { POSTS_PER_PAGE, USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent, setPostContent } from '../ChangeableValues';
+import React, { useState } from "react";
+import "./TabContent.css";
+import puzzleHandler from "./PostPuzzles.jsx";
+import { POSTS_PER_PAGE, USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2, postContent, setPostContent } from "../ChangeableValues";
 
 
 export default function Posts() {
@@ -73,7 +73,7 @@ export default function Posts() {
     var nextDay = new Date(day);
 
     {posts.map(post => {
-      if (!post.hasOwnProperty('date')) {
+      if (!post.hasOwnProperty("date")) {
         nextDay.setDate(day.getDate() + 1); //Set date to next day.
         post.date = [nextDay.getFullYear(), nextDay.getMonth(), nextDay.getDate()];
       }
@@ -90,29 +90,14 @@ export default function Posts() {
 
   }
 
+  // Simple function to compare the dates with emphasis on
+  // years and then months and then days.
+
   function compareDates(date1, date2) {
     
     return (5000*(date2[0]-date1[0])+100*(date2[1]-date1[1])+(date2[2]-date1[2]));
   
   }
-
-  // Old redundant code.
-/*
-    // Compare the years.
-    if(date1[0] > date2[0]) {
-      return 100*(date2[0]-date1[0]);
-    }
-    // Compare the months.
-    if(date1[1] > date2[1]) {
-      return 10*(date2[1]-date1[1]);
-    }
-    // Compare the days.
-    if(date1[2] > date2[2]) {
-      return (date2[2]-date1[2]);
-    }
-    // The second date is larger. Thus returning a negative value.
-    return 1;
-  }*/
 
   // Function which changes indexes to previous (newer) posts.
   function prevPage() {
