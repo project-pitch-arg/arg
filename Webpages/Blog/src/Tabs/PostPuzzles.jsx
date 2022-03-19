@@ -16,10 +16,10 @@ export default function Puzzles(post) {
   // Depending on the result it will return different displays.
   if(post.isPuzzle) {
     switch (post.puzzleNr) {
-      case "2b": return puzzle2b(post);
-      case "2c": return puzzle2c(post);
-      case "c1": return puzzleChat(post); //This is just an ordinary post. Nothing to add.
-      case "c2": return puzzleChat(post);
+      case "B-p2": return puzzleBp2(post);
+      case "B-p1": return puzzleBp1(post);
+      case "B-c1": return puzzleChat(post); //This is just an ordinary post. Nothing to add.
+      case "B-c2": return puzzleChat(post);
     }  
   } else {
     return (
@@ -259,21 +259,21 @@ export default function Puzzles(post) {
 
   // Detection function to know which post should lead to which function.
   function checkForHelper(post){
-    if(post.comment == "This post is helper post 1 to puzzle 2c."){
+    if(post.comment == "This post is helper post 1 to puzzle B-p1."){
       return HINT_DINOS;
-    } else if (post.comment == "This post is helper post 2 to puzzle 2c") {
+    } else if (post.comment == "This post is helper post 2 to puzzle B-p1") {
       return HINT_COURSES;
     }
     return;
   }
 
-  // Function to encode the puzzle 2c.
+  // Function to encode the puzzle B-p1.
   // See documentation for an explanation of the puzzle.
   // TODO: add name of document.
-  function puzzle2c(post) {
+  function puzzleBp1(post) {
     post = changeDinos(post);
     // This post has the puzzle in it.
-    if (post.comment == "This is the main post to puzzle 2c.") {
+    if (post.comment == "This is the main post to puzzle B-p1.") {
       return (
         <div class="post">
           <div class="post-date">
@@ -312,7 +312,7 @@ export default function Puzzles(post) {
 
   //TODO! Puzzle is implemented but doesn't require it's own function.
   // Not sure what to do here.
-  function puzzle2b(post) {
+  function puzzleBp2(post) {
     return (
       <div class="post">
         <div class="post-date">

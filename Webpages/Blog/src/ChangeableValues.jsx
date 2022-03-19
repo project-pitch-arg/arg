@@ -40,7 +40,7 @@ export const USER_PICTURE_2 = CaesarSalad;
 // Edit this to change the time each quote is displayed.
 export const QUOTE_TIME = 30;
 
-/* -------------------- Puzzle 2c -------------------- */
+/* -------------------- Puzzle B-p1 -------------------- */
 
 export const ANSWER_TO_BE_ENCRYPTED = "http://ThisWillBeAWebSiteAddress.later";
 
@@ -53,7 +53,7 @@ export const ENCRYPTION_KEY = [["m", 11],["d", 28], ["o", 57], ["a", 80]];
 
 // See documentation (TODO: write this) for what
 // meaning this clue has. It replaces the date in
-// PostContent.json for the post belonging to puzzle 2c
+// PostContent.json for the post belonging to puzzle B-p1
 // with this clue.
 export const CLUE_DATE = "2022.80A.24";
 

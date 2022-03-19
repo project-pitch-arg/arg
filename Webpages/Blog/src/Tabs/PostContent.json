@@ -5,32 +5,32 @@
         "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinosaurs today. Unfortunately, the book did not include ichthyosaurus, but XXDINO3XX also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
         "pictures": [["Puzzles/NumbersPuzzle.png","A numbers puzzle."], ["Puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["Puzzles/Duros.jpg", "A package of duros."], ["Puzzles/Computer.png", "A computer drinking coffee." ]],
         "isPuzzle": true,
-        "puzzleNr": "2c",
-        "comment": "This is the main post to puzzle 2c."
+        "puzzleNr": "B-p1",
+        "comment": "This is the main post to puzzle B-p1."
     },
     {
         "date": [2022, 6, 19],
         "poster": "Robot1312113",
         "content": "I never told you, but my favorite dinosaurs are XXDINO1XX, XXDINO2XX and ichthyosaurus.",
         "isPuzzle": true,
-        "puzzleNr": "2c",
-        "comment": "This post is helper post 1 to puzzle 2c."
+        "puzzleNr": "B-p1",
+        "comment": "This post is helper post 1 to puzzle B-p1."
     },
     {
         "date": [2022, 5, 1],
         "poster": "Robot1312113",
         "content": "Man, this latest course of mine, LMA017, was so fun. Way too little math for my taste though.",
         "isPuzzle": true,
-        "puzzleNr": "2c",
-        "comment": "This post is helper post 2 to puzzle 2c"
+        "puzzleNr": "B-p1",
+        "comment": "This post is helper post 2 to puzzle B-p1"
     },
     {
         "date": [2022, 5, 1],
         "poster": "Robot1312113",
         "content": "There's a bunch of interesting ciphers out there. The famous ones, like Caesar, Alberti, or Vigenère. But also some more obscure ones, like Phaistos, Voynich, or Bellaso. Personally, I favor variants of the famous ones. (￣▽￣)ノ Alberti is the most famous Cipher Disk as an example, but there's also so many more Cipher Disks out there. Take the Aeneas, which existed 5th century BC, way before Alberti! Σ(O_O) For some more modern alternatives we have the Union Cipher disk or the Mexican Army Wheel. This is such a fascinating topic, I could talk about them all day. I recommend checking out a physical cipher, something to play around with in your hands, it's very interactive and loads of fun. ヽ(o^ ^o)ﾉ",
         "isPuzzle": true,
-        "puzzleNr": "2c",
-        "comment": "This post is a helper post to puzzle 2c"
+        "puzzleNr": "B-p1",
+        "comment": "This post is a helper post to puzzle B-p1"
     },
     {
         "date": [2022, 4, 10],
@@ -38,8 +38,8 @@
         "content": "I borrowed some pictures from Fexjo to make these. What do you think all of it adds up to?",
         "pictures": [["Puzzles/Skyline1.jpg", "A skyline."], ["Puzzles/Skyline2.png", "A skyline"],  ["Puzzles/Skyline3.jpg", "A skyline"], ["Puzzles/Shapes.png", "Two rectangles and a triangle."],  ["Puzzles/Lines.png", "Four underscores in different colours. Three with signs."], ["Puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
         "isPuzzle": true,
-        "puzzleNr": "2b",
-        "comment": "This is the main post to puzzle 2b."
+        "puzzleNr": "B-p2",
+        "comment": "This is the main post to puzzle B-p2."
     },
     {
         "date": [2022, 1, 7],
@@ -47,7 +47,7 @@
         "content": "Have you figured out what our usernames mean yet? I'll give you a hint for Fexjo. What is this?",
         "pictures": [["PostImages/Caesar.png", "Some nice salad."]],
         "isPuzzle": true,
-        "puzzleNr": "c1",
+        "puzzleNr": "B-c1",
         "comment": "This puzzle is solved in the chat."
     },
     {
@@ -55,7 +55,7 @@
         "poster": "Robot1312113",
         "content": "I composed a poem for everyone today. What do you think? \n \n At pleasant temperature, \n in contrast to how you would like life to be, \n an idea that seems perfect, \n held or fixed in position securely, \n a mistake. \n \n A place where you can buy drinks and simple meals, \n filled with a continuous humming sound, \n a particular variety or type, \n the process of gaining this, \n a victory.",
         "isPuzzle": true,
-        "puzzleNr": "c2",
+        "puzzleNr": "B-c2",
         "comment": "This puzzle is solved in the chat."
     },
     {
