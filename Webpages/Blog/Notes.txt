@@ -26,8 +26,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Ändra förnamn/efternamn till username "".
 
-- Ge gåtor samma namn som dokument om dem.
-
 - Robot1312113 besökte Universeum innan dikt.
 
 - Ha med Cake i chatten om allt så att man kan nämna om dikten
