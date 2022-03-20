@@ -38,16 +38,23 @@ export default function Home() {
                 <h1> What we do </h1>
                 <a>
                     We combine the latest AI and surveillance technology to provide our customers with the
-                    highest levels of security.
+                    highest levels of security. We start by setting up equipment around your area which then connects to our servers here at
+                    Rozk AI. This equipment lets us monitor and observe potential threats against you or your company. If a threat
+                    is deemed actionable our elite security guards will be at your location before the perpetrators do anything.
 
                 </a>
               </div>
             </div>
 
-            <div id="goal-content">
+            <div id="home-content">
                 <div id="home-left-desc">
                   <h1>Why choose us?</h1>
                   <a>
+                    In Rozk AI our customers safety is our top priority and we have the data to back it up.
+                    Since our launch in 2013 all attempted robberies, while using our service, got stopped
+                     or the people involved got caught and prosecuted. Our unique technology allows for methods of identification
+                     that no other company possesses. We also use advanced behavioural methods that let us predict dangerous
+                     situations ahead of time.
 
                   </a>
                 </div>
@@ -56,17 +63,25 @@ export default function Home() {
               <div id="home-right-desc">
                   <h1>How does AI integrate with surveillance?</h1>
                   <a>
+                    Artificial intelligence is complicated but our engineers here at Rozk AI have come up with a method
+                    of collaboration that lets our technology utilize AI to analyze captured footage. This analysis lets us know if
+                    there is any unusual activity going on and if we should act upon it.
 
                   </a>
                 </div>
             </div>
 
             <div id="tech-content">
-              <h1>Technology is power</h1>
-              <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</a>
-              <div class="tech-img"><img onClick={() => clickImg("1")} src={techImg1}/></div>
-              <div class="tech-img"><img onClick={() => clickImg("2")} src={techImg2}/></div>
-              <div class="tech-img"><img onClick={() => clickImg("3")} src={techImg3}/></div>
+              <h1>Indirect Protection</h1>
+              <a>
+              Ever since our launch crime rates have steadily been going down for companies that fly our banner outside. The
+              results speak for themselves. Criminals are starting to become aware of our success rate and no longer want to take
+              the risk. As our reputation grows crime rates will fall.
+
+              </a>
+              <div class="tech-img"><img  onClick={() => clickImg("1")} src={techImg1}/></div>
+              <div class="tech-img"><img  onClick={() => clickImg("2")} src={techImg2}/></div>
+              <div class="tech-img"><img  onClick={() => clickImg("3")} src={techImg3}/></div>
             </div>
           </div>
         </div>
@@ -78,11 +93,11 @@ export default function Home() {
         console.clear();
         console.log(string);
         attempt = attempt + string;
-        if(attempt.charAt(attempt.length - 1) != passphrase.charAt(attempt.length -1)){
+        if(attempt.charAt(attempt.length - 1) !== passphrase.charAt(attempt.length -1)){
             attempt = "";
         }
 
-        if (attempt == passphrase ){
+        if (attempt === passphrase ){
                 console.log("/kpxtzjmyq");
         }
     }
