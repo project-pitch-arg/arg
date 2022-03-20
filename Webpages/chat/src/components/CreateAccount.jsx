@@ -48,8 +48,6 @@ const CreateAccount = () => {
 
     // Initialize variables.
     const [username, setUsername] = useState('');
-    const [firstname, setFirstName] = useState('');
-    const [lastname, setLastName] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
@@ -66,7 +64,7 @@ const CreateAccount = () => {
         const hashPassword = hashCode(password);
 
         // Organize userinformation with a JSON-format
-        var userInfo =  {"first_name": firstname, "last_name": lastname, "username": username, 
+        var userInfo =  {"first_name": username, "last_name": "", "username": username, 
                             "secret": hashPassword, "email": email} ;
         
         // Create the server request
@@ -162,8 +160,6 @@ function addDefaultChats() {
             <div className="form">
                 <h1 className="title">Create Account</h1>
                     <form onSubmit={createUser}>
-                        <input type="text" value={firstname} onChange={(e) => setFirstName(e.target.value)} className="input" placeholder="First Name"/>
-                        <input type="text" value={lastname} onChange={(e) => setLastName(e.target.value)}className="input" placeholder="Last Name"/>
                         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required/>
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}className="input" placeholder="Password"/>
                         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}className="input" placeholder="Email"/>
