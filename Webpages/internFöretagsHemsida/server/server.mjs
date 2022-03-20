@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import imap from './emailListener.js';
-import {generateCipher,cipher,encryptedCipher} from "./cipherController.mjs";
+import {generateCipher,cipher,encryptedCipher,getRandomInt} from "./cipherController.mjs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -70,13 +70,15 @@ app.post("/getUser", (req, res) => {
   var password = req.body.password;
   const response = fs.readFileSync("./JsonFiles/Accounts.json");
   var data = JSON.parse(response);
+  var check = false;
   Object.keys(data[0]).forEach((key) => {
-        if(data[0][key].username === username && data[0][key].password == password){
-            data[0][key].password = "";
+        if(data[0][key].username === username && data[0][key].password == password && !check){
+            check = true;
             return res.send(data[0][key]);
         }
-  })
-  return res.send({error: "Wrong password or username!"});
+  });
+  if(!check)
+    return res.send({error: "Wrong password or username!"});
 });
 
 app.post("/checkCipher", (req, res) => {
@@ -107,29 +109,25 @@ app.post("/checkCipher", (req, res) => {
   }
 });
 
-function checkToken(req){
+app.post("/checkToken", (req, res) => {
     const tokenFile = fs.readFileSync("./JsonFiles/Tokens.json");
     var json = JSON.parse(tokenFile);
     var ip_adress = req.socket.remoteAddress;
-    try{
-        json[ip_adress].token = json[ip_adress].token;
-        return {"token": true};
+    var token = req.body.token;
+    try {
+        if(token === json[ip_adress].token){
+            console.log("Valid token/ip_adress combo");
+            return res.send({"token" : true})
+        }
+        else {
+            console.log("Invalid token and/or ip_adress combo");
+            return res.send({"token" : false})
+        }
     }
     catch {
-        return {"token": false};
+        console.log("Invalid token and/or ip_adress combo");
+        return res.send({"token" : false})
     }
-}
-
-app.post("/checkToken", (req, res) => {
-  var token = req.body.token;
-
-  var ip_adress = req.socket.remoteAddress;
-  if(checkToken(ip_adress)){
-    return res.send({"token" : true})
-  }
-  else {
-    return res.send({"token" : true})
-  }
 });
 
 app.post("/getCipher", (req, res) => {

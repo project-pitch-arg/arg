@@ -13,7 +13,7 @@ var mailListener = new MailListener({
   tls: true,
   connTimeout: 10000, // Default by node-imap
   authTimeout: 5000, // Default by node-imap,
-  debug: console.log, // Or your custom function with only one incoming argument. Default: null
+  debug: null, // Or your custom function with only one incoming argument. Default: null
   tlsOptions: { rejectUnauthorized: false },
   mailbox: "INBOX", // mailbox to monitor
   searchFilter: ["UNSEEN"], // the search filter being used after an IDLE notification has been retrieved
@@ -26,15 +26,12 @@ var mailListener = new MailListener({
 
 mailListener.start(); // start listening
 
-// stop listening
-//mailListener.stop();
-
 mailListener.on("server:connected", function(){
-  console.log("imapConnected");
+  console.log("Mail listener active");
 });
 
 mailListener.on("server:disconnected", function(){
-  console.log("imapDisconnected");
+  console.log("Mail listener inactive");
 });
 
 mailListener.on("error", function(err){
@@ -70,9 +67,8 @@ function sendMail(subject, to,message){
 }
 mailListener.on("mail", function(mail, seqno, attributes){
 
-    if(mail.subject === "Y"){
+    if(mail.subject.includes("okaj") || mail.text.includes("okaj")){
         sendMail("Hello", mail.from, "Where did you get this information? \nI will check with my boss and return to you. \n//Helena");
-
     }
     else {
         sendMail("Hello", mail.from, "Hello, i'm out of the office for a two week vacation i will be back on the 1st of April \nBest Regards Helena :)");
