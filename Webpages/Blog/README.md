@@ -16,4 +16,4 @@ Now you should have access to the blog and the chat on tab 2.
 
 Write { $ npm install } if you get an error for node_modules.
 
-Write { $ npm install --global yarn } and then { $ yarn add stream-chat stream-chat-react } if you get an error message about yarn.
+Write { $ npm install react-chat-engine } or { $ npm install --global yarn } and then { $ yarn add react-chat-engine } if you get an error for the chat.
