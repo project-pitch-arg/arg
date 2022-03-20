@@ -54,6 +54,14 @@ const App = () => {
         <p>
         Please contact us through the information on the About page.
         </p>
+       
+       {/* Temporarily have upload profile picture button in footer just for testing purposes. */}
+        <form name="form" method="post" action="UploadProfilePicture.php" enctype="multipart/form-data" >
+          Upload Profile Picture: 
+          <input type="file" name="my_file" />
+          <input type="submit" name="submit" value="Change Profile Image"/>
+        </form>
+
       </div>
     </div>
   );

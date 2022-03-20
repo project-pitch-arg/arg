@@ -3,6 +3,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 1 ---------------
 
+- Kolla chatten så att all historik i Simply a poem? visas
+
 - Inlägg om Göteborg ('reklam')
 - Inlägg med Chalmersrykten
 - GU
@@ -80,7 +82,7 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Fixa så att man inte kan försöka lägga in eller skicka meddelanden med användare som inte finns
     - Borde bara inte fungera med servern, men borde testas.
 
-- Dokumnetation som förkalrar gåtor och hur man ger ledtrådar till dem.
+- Dokumentation som förklarar gåtor och hur man ger ledtrådar till dem.
     - Ledtrådar kan både vara Edwin och andra i chatten.
 
 - Dokumnetation med användarprofiler.
