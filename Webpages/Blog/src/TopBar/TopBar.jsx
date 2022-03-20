@@ -43,9 +43,6 @@ export default function TopBar(props) {
             case "QotD":
                 document.getElementById("tab-QotD").classList.add("active");
             break    
-          
-            default:
-                console.log("no such path")
         }
       }
     

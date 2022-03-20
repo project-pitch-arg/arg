@@ -334,17 +334,17 @@ export default function Puzzles(post) {
   function puzzleChat(post) {
     return (
       <div class="post">
-        <div class="post-date">
-          {post.date[0]}.{post.date[1]}.{post.date[2]}
-        <div class="post-name"> 
-          {post.poster} 
-        <pre class="post-content"> 
-          {post.content}
-        </pre>
-          {hasPicture(post)}
+          <div class="post-date">
+            {post.date[0]}.{post.date[1]}.{post.date[2]}
+          <div class="post-name"> 
+            {post.poster} 
+          <pre class="post-content"> 
+            {post.content}
+          </pre>
+            {hasPicture(post)}
+          </div>
         </div>
       </div>
-    </div>
   )
   }
 }

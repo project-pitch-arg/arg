@@ -101,7 +101,7 @@ export default function Posts() {
 
   // Function which changes indexes to previous (newer) posts.
   function prevPage() {
-    if (start - POSTS_PER_PAGE < 0) {
+    if (start - POSTS_PER_PAGE <= 0) {
       firstPage();
       return;
     } else if (last - start < POSTS_PER_PAGE) {
@@ -117,7 +117,7 @@ export default function Posts() {
 
   // Function which changes indexes to following (older) posts.
   function nextPage() {
-    if(postContent.length < last + POSTS_PER_PAGE) {
+    if(postContent.length <= last + POSTS_PER_PAGE) {
       lastPage();
     }
     else {
@@ -134,7 +134,7 @@ export default function Posts() {
     startChange(0);
     setDF(true);
     setDP(true);
-    if(postContent.length > POSTS_PER_PAGE){
+    if(postContent.length >= POSTS_PER_PAGE){
       setDL(false);
       setDN(false);
     }
@@ -143,8 +143,11 @@ export default function Posts() {
   // Function to take the user to the last page of posts (the oldest ones).
   function lastPage(){
     lastChange(postContent.length);
-    startChange(postContent.length - (postContent.length % POSTS_PER_PAGE));
-    console.log(postContent.length);
+    if(postContent.length - (postContent.length % POSTS_PER_PAGE) == postContent.length) {
+      startChange(postContent.length - POSTS_PER_PAGE);
+    } else {
+      startChange(postContent.length - (postContent.length % POSTS_PER_PAGE));
+    }
     setDL(true);
     setDN(true);
     if(postContent.length > POSTS_PER_PAGE){
