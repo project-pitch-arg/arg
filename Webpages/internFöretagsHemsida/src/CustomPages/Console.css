@@ -3,11 +3,11 @@
     color: white;
     background-color: black;
     width: 600px;
-    border: 1px solid gray;
 }
 .console:focus{
     color: white;
     background-color: black;
+    border-radius: none;
 }
 .commandBlock{
     text-align: left;

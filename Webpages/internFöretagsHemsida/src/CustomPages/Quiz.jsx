@@ -38,7 +38,7 @@ export default class Quiz extends Component{
                         <form class="questionForm" onSubmit={this.quizDone}>
                             {
                                 Object.keys(this.quiz).map((key) => {
-                                    return (<div class="hrObject">
+                                    return (<div class="quizObject">
                                         <h2>{this.quiz[key].text}</h2>
                                         {
                                             Object.entries(this.quiz[key].alternatives).map(([name,value], index) => {

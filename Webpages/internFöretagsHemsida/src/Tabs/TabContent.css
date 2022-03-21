@@ -8,13 +8,19 @@
     height: 90%;
     margin: 10px;
     text-align: left;
-    background-color: lightgray;
+    background-color: white;
     padding: 10px;
     border-radius: 10px;
     overflow-y: scroll;
 }
 .listItem{
     border-bottom: 1px dashed gray;
+    border-top: 1px dashed gray;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.newsHeader{
+    margin-left: 10px;
 }
 .quiz button{
     padding: 10px;
@@ -26,15 +32,28 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
-    background-color: lightgray;
+    width: 30%;
+    max-height: 80%;
+    background-color: white;
     margin-top: 10px;
-    border-radius: 10px;
+    border-radius: 5%;
+    position: relative;
+    display: block;
+    border: 3px solid white;
+    padding: 5px;
 }
 .hrObject{
-    background-color: lightgray;
-    padding: 10px;
+    background-color: lightblue;
     margin: 10px;
+    height: 60%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px gray;
+    padding: 10px;
 }
 .pdfItemDiv{
     padding: 1px;
@@ -47,15 +66,35 @@
     min-width: 200px;
     margin-bottom: 20px;
 }
+.pdfItem {
+  background-color: lightblue;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  min-width: 300px;
+  border-radius: 2px;
+  box-shadow: 4px 4px black;
+}
+.pdfItem:hover{
+    background-color: #33adff;
+}
 h1.underline{
-    text-decoration: underline;
+    font-family: Verdana,serif;
+    font-size: 35px;
 }
 h1 {
     color: #246f94;
+    font-family: Verdana,serif;
+    font-size: 35px;
 }
 img{
     max-width: 80%;
     border-radius: 50px;
+    box-shadow: 2px 2px gray;
 }
 img.graph{
     max-width: 100%;
@@ -70,6 +109,7 @@ img.progress-bar-image{
     padding: 5px;
     min-width: 100%;
     height: 40px;
+    box-shadow: none;
 }
 div.progress-bar-div{
     width: 80%;
@@ -90,6 +130,8 @@ div.progress-bar-removal{
 }
 p.newsText{
     margin-top: 10px;
+    font-size: 15px;
+    color: black;
 }
 h3{
     font-size: 18px;
@@ -99,6 +141,8 @@ h3{
     color: white;
     background-color: black;
     width: 200px;
+    border: none;
+    border-radius: 5px;
 }
 .smallConsole:focus{
     color: white;
@@ -162,19 +206,9 @@ h3{
 .box p{
     margin-top: 10px;
 }
-.close-icon {
-  content: 'x';
-  cursor: pointer;
-  position: fixed;
-  top: 14%;
-  left: 59.8%;
-  background: #ededed;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  line-height: 20px;
-  text-align: center;
-  font-size: 20px;
+button{
+    background-color: #0d5d92;
 }
+
 
 

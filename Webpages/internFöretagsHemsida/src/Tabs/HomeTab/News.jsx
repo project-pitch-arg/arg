@@ -27,7 +27,7 @@ export default class News extends Component{
         if(this.state.dataReceived){
             return (
                 <div class="newsBlock" style={{overflowY: 'scroll'}}>
-                    <h1>News</h1>
+                    <h1 class="newsHeader">News</h1>
                     {
                         Object.keys(this.news).map((key) => {
                             return (<List
@@ -37,8 +37,11 @@ export default class News extends Component{
                                renderItem={item => (
                                  <List.Item>
                                    <List.Item.Meta
-                                     title={this.news[item].title + " - " + this.news[item].date}
-                                     description={this.news[item].img ? (<div><img class="news" src={require("../../images/" + this.news[item].img + ".jpg")} alt={"CEO" }/><p class="newsText">{this.news[item].text}</p></div>) : (<p>{this.news[item].text}</p>)}
+                                     title={<h2>{this.news[item].title + " - " + this.news[item].date}</h2>}
+                                     description={this.news[item].img ?
+                                     (<div><img class="news" src={require("../../images/" + this.news[item].img + ".jpg")} alt={"CEO" }/><p class="newsText">{this.news[item].text}</p></div>)
+                                     :
+                                     (<p class="newsText">{this.news[item].text}</p>)}
                                    />
                                  </List.Item>
                                )}

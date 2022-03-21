@@ -15,7 +15,8 @@ export default class Console extends Component{
         ];
         this.adminCommands = [
         "/changePassword [user] Changes the password of a user",
-        "/currentAdmin Shows the current Admin User"
+        "/currentAdmin Shows the current Admin User",
+        "/clear clears the console"
         ];
         this.securityAnswers = [
         "Lexi", "lifeguard", "Comillas"
@@ -97,7 +98,7 @@ export default class Console extends Component{
                         }
                         else if(this.securityCheck && answers.length === 1){
                             this.previousCommands.push("CEO password changed");
-                            localStorage.setItem("newpassword", answers[0]);
+                            localStorage.setItem("password", answers[0]);
                             break;
                         }
                         else {

@@ -72,7 +72,6 @@ export default class LogInPage extends Component{
         return (<div className="popup-box">
           <div className="box">
             <h1>Account</h1>
-            <span className="close-icon" onClick={this.popup}>x</span>
             <form onSubmit={this.logIn}>
                 <label>Username:</label>
                 <input type="text" id="username"/>
