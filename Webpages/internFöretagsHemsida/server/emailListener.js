@@ -67,8 +67,11 @@ function sendMail(subject, to,message){
 }
 mailListener.on("mail", function(mail, seqno, attributes){
 
-    if(mail.subject.includes("okaj") || mail.text.includes("okaj")){
+    if((mail.subject.includes("code") && mail.subject.includes("241")) || (mail.text.includes("code") && mail.text.includes("241"))){
         sendMail("Hello", mail.from, "Where did you get this information? \nI will check with my boss and return to you. \n//Helena");
+        setTimeout(function() {
+            sendMail("Hello", mail.from, "I talked with my boss and he agreed to talk? \n Here is his email. \n//Helena")
+        }, 600000);
     }
     else {
         sendMail("Hello", mail.from, "Hello, i'm out of the office for a two week vacation i will be back on the 1st of April \nBest Regards Helena :)");
