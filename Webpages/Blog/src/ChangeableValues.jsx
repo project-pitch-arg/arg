@@ -98,16 +98,17 @@ export const HINT_DINOS = "I wonder why ichthyosaurus isn't capitalized.";
 // A hint to allude to the courses part of the puzzle.
 export const HINT_COURSES = "What other canvas codes can you find? Go take a visit, I'm sure something interesting is there.";
 
-// Image of duros.
-export const DUROS_IMAGE = DurosBasic;
+// Choice of having zero or not. As well as what shading.
+export const DUROS_IMAGE = DurosLight;
 
-// Image of sea-dino.
+// Choice of having zero or not. As well as what shading.
 export const ICHTI_IMAGE = IchthyosaurusBasic;
 
-// Image of caffeinated PC.
+// Choice of having zero or not. As well as what shading.
 export const COMPUTER_IMAGE = ComputerBasic;
 
-// Image of weird sudoku.
+// Image of chosen Jigsaw sukoku with rings. According
+// to the wanted course codes.
 export const JIGSAW_IMAGE = Jigsaw;
 
 /* -------------------- Tab Posts -------------------- */
