@@ -23,9 +23,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Fixa ikonen för fliken.
 
-- Göm en nolla i varje bild så kan man välja om man vill ha den eller inte.
-    - Fixa byte med ChangeableVariables
-
 - Fixa så man kan skicka bilder i chatt.
 
 - Ha med Cake i chatten om allt så att man kan nämna om dikten
