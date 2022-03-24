@@ -62,8 +62,24 @@
         "poster": "Robot1312113",
         "content": "Gothenburg has this nice place that's not quite a zoo but somewhat close enough. It's called Universeum, I visited today. They have a bunch of animals and fish and all sorts of creatures. I especially like the rainforest section. The differences to a regular zoo comes from the fact that this is all inside one building. Nothing is left to the open sky, which is why they don't have Lions and Antelopes I assume. They also have some sections where you can play kids-friendly games and learn about the human body or learn about space. Definitely a recommendation to visit at least once if you're ever in Gothenburg.",
         "isPuzzle": true,
-        "puzzleNr": "B-c1",
+        "puzzleNr": "B-c2",
         "comment": "This puzzle is a helper post to puzzle B-c2"
+    },
+    {
+        "date": [2023, 1, 8],
+        "poster": "Fexjo",
+        "content": "These are some images from Spain.",
+        "isPuzzle": true,
+        "puzzleNr": "B-c4",
+        "comment": "This is the main post to puzzle B-c4."
+    },
+    {
+        "date": [2023, 1, 9],
+        "poster": "Robot1312113",
+        "content": "I've been hard at work today. It's the time of year when the entire home is cleaned. ┬─┬ノ( º _ ºノ) It's quite backbreaking work but definitely necessary. Just ask any student living alone. (; -_-) But it's not all hard work, there's some fun as well. (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ When going through all my old stuff I found quite a few items that I had misplaced over the years. There were 20 lego characters, 3 old school books, ...",
+        "isPuzzle": true,
+        "puzzleNr": "B-c4",
+        "comment": "This post is a helper post to puzzle B-c4"
     },
     {
         "date": [2022, 1, 5],

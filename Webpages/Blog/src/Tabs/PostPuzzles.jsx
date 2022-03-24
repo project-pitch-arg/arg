@@ -16,27 +16,31 @@ export default function Puzzles(post) {
   // Depending on the result it will return different displays.
   if(post.isPuzzle) {
     switch (post.puzzleNr) {
-      case "B-p2": return puzzleBp2(post);
       case "B-p1": return puzzleBp1(post);
-      case "B-c1": return puzzleChat(post); //This is just an ordinary post. Nothing to add.
-      case "B-c2": return puzzleChat(post);
+      case "B-p2": break;
+      case "B-c1": break; 
+      case "B-c2": break;
+      case "B-c3": break; // This is a work in progress.
+      case "B-c4": return puzzleBc4(post);
     }  
-  } else {
-    return (
-        <div class="post">
-          <div class="post-date">
-            {post.date[0]}.{post.date[1]}.{post.date[2]}
-          <div class="post-name"> 
-            {post.poster} 
-          <pre class="post-content"> 
-            {post.content}
-          </pre>
-            {hasPicture(post)}
-          </div>
+  }
+
+  return (
+    <div class="post">
+      <div class="post-date">
+          {post.date[0]}.{post.date[1]}.{post.date[2]}
+        <div class="post-name"> 
+          {post.poster} 
+        <pre class="post-content"> 
+          {post.content}
+        </pre>
+          {hasPicture(post)}
         </div>
       </div>
-    )
-  }
+    </div>
+  )
+    
+  
 
 
 /* -------------------- Functions -------------------- */  
@@ -118,24 +122,46 @@ export default function Puzzles(post) {
     }
   }
 
-  function insertPuzzlePics(post) {
+  // Insert correct images with zeroes according to 
+  // ChangeableValues.jsx
+  function insertPuzzlePics() {
     return (
     <div class="post-images">
         <div>
-          <img src={JIGSAW_IMAGE} alt={"A numbers puzzle."} class="post-image"/>
+          <img src={JIGSAW_IMAGE} alt="A numbers puzzle." class="post-image"/>
           </div>
           <div>
-          <img src={ICHTI_IMAGE} alt={"A picture of the dinosaur Ichthyosaurus."} class="post-image"/>
+          <img src={ICHTI_IMAGE} alt="A picture of the dinosaur Ichthyosaurus." class="post-image"/>
           </div>
           <div>
-          <img src={DUROS_IMAGE} alt={"A package of duros."} class="post-image"/>
+          <img src={DUROS_IMAGE} alt="A package of duros." class="post-image"/>
           </div>
           <div>
-          <img src={COMPUTER_IMAGE} alt={"A computer drinking coffee."} class="post-image"/>
+          <img src={COMPUTER_IMAGE} alt="A computer drinking coffee." class="post-image"/>
           </div>
         
     </div>  
     )
+  }
+
+  // Set different pictures for different sized screens.
+  function multiPicture() {
+    return (
+      <div class="post-images">
+          <div>
+            <picture>
+              <source media="(min-width: 800px)" srcSet={COMPUTER_IMAGE} class="post-image"/> {/* Fix images here */}
+              <img src={ICHTI_IMAGE} alt="Image of a fountain." class="post-image"/>
+            </picture>
+          </div>
+          <div>
+            <picture>
+              <source media="(min-width: 800px)" srcSet={JIGSAW_IMAGE} class="post-image"/> {/* Fix image here */}
+              <img src="" alt="32 237N, 100 192S" class="post-image"/>
+            </picture>
+          </div>
+      </div>  
+      )
   }
 
   // Check if the post has picture(s) and
@@ -304,7 +330,7 @@ export default function Puzzles(post) {
           <p style={{margin: "0", color: colors.postBackground}}> 
               {encodedMsg(ANSWER_TO_BE_ENCRYPTED)}
           </p>
-          {insertPuzzlePics(post)}
+          {insertPuzzlePics()}
           </div>
         </div>
       </div>
@@ -330,32 +356,30 @@ export default function Puzzles(post) {
    )
   }
 
-  //TODO! Puzzle is implemented but doesn't require it's own function.
-  // Not sure what to do here.
-  function puzzleBp2(post) {
+  // Function to set up puzzle B-c4.
+  // See documentation for explanation.
+  function puzzleBc4(post) {
+    if (post.comment == "This is the main post to puzzle B-c4.") {
+      return (
+        <div class="post">
+          <div class="post-date">
+              {post.date[0]}.{post.date[1]}.{post.date[2]}
+            <div class="post-name"> 
+              {post.poster} 
+            <pre class="post-content"> 
+              {post.content}
+            </pre>
+              {multiPicture()}
+            </div>
+          </div>
+        </div>
+      )
+    }
+    // If not the main post then it'll be displayed as a regular post.
     return (
       <div class="post">
         <div class="post-date">
           {post.date[0]}.{post.date[1]}.{post.date[2]}
-        <div class="post-name"> 
-          {post.poster} 
-        <pre class="post-content">
-          {post.content}
-        </pre>
-        {hasPicture(post)}
-        </div>
-      </div>
-    </div>
-   )
-  }
-
-  // Placeholder function for a future puzzle function.
-  // Currently displays the post like any of the non-puzzle posts.
-  function puzzleChat(post) {
-    return (
-      <div class="post">
-          <div class="post-date">
-            {post.date[0]}.{post.date[1]}.{post.date[2]}
           <div class="post-name"> 
             {post.poster} 
           <pre class="post-content"> 
@@ -365,6 +389,6 @@ export default function Puzzles(post) {
           </div>
         </div>
       </div>
-  )
+    )
   }
 }
