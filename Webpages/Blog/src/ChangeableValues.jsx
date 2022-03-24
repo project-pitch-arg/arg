@@ -15,6 +15,22 @@
 import Robot from "./Img/Robot1312113.png";
 import CaesarSalad from "./Img/Caesar.png";
 import content from "./Tabs/PostContent.json";
+import DurosBasic from "./Img/duros.jpg";
+import DurosLight from "";
+import DurosMedium from "";
+import DurosDark from "";
+import ComputerBasic from "./Img/Computer.png";
+import ComputerLight from "";
+import ComputerMedium from "";
+import ComputerDark from "";
+import IchthyosaurusBasic from "./Img/Ichthyosaurus.png";
+import IchthyosaurusLight from "";
+import IchthyosaurusMedium from "";
+import IchthyosaurusDark from "";
+import JigsawBasic from "./Img/NumbersPuzzle.png";
+import JigsawLight from "";
+import JigsawMedium from "";
+import JigsawDark from "";
 
 
 
@@ -79,9 +95,23 @@ export const COURSE_CODE_2 = "eda";
 // documentation for details.
 export const THREE_DINOS = ["Aardonyx", "Datanglong", "Talarurus"];
 
+// A hint to allude to the dino part of the puzzle.
 export const HINT_DINOS = "I wonder why ichthyosaurus isn't capitalized.";
 
+// A hint to allude to the courses part of the puzzle.
 export const HINT_COURSES = "What other canvas codes can you find? Go take a visit, I'm sure something interesting is there.";
+
+// Image of duros.
+export const DUROS_IMAGE = DurosBasic;
+
+// Image of sea-dino.
+export const ICHTI_IMAGE = IchthyosaurusBasic;
+
+// Image of caffeinated PC.
+export const COMPUTER_IMAGE = ComputerBasic;
+
+// Image of weird sudoku.
+export const JIGSAW_IMAGE = JigsawBasic;
 
 /* -------------------- Tab Posts -------------------- */
 

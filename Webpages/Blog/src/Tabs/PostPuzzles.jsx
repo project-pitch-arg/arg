@@ -8,7 +8,7 @@
 
 import React from "react";
 import colors from "./TabContent.css"
-import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS } from "../ChangeableValues";
+import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS, DUROS_IMAGE, ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE } from "../ChangeableValues";
 
 export default function Puzzles(post) {
 
@@ -116,6 +116,26 @@ export default function Puzzles(post) {
     } else {
       return
     }
+  }
+
+  function insertPuzzlePics(post) {
+    return (
+    <div class="post-images">
+        <div>
+          <img src={JIGSAW_IMAGE} alt={"A numbers puzzle."} class="post-image"/>
+          </div>
+          <div>
+          <img src={ICHTI_IMAGE} alt={"A picture of the dinosaur Ichthyosaurus."} class="post-image"/>
+          </div>
+          <div>
+          <img src={DUROS_IMAGE} alt={"A package of duros."} class="post-image"/>
+          </div>
+          <div>
+          <img src={COMPUTER_IMAGE} alt={"A computer drinking coffee."} class="post-image"/>
+          </div>
+        
+    </div>  
+    )
   }
 
   // Check if the post has picture(s) and
@@ -284,7 +304,7 @@ export default function Puzzles(post) {
           <p style={{margin: "0", color: colors.postBackground}}> 
               {encodedMsg(ANSWER_TO_BE_ENCRYPTED)}
           </p>
-          {hasPicture(post)}
+          {insertPuzzlePics(post)}
           </div>
         </div>
       </div>

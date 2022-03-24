@@ -3,7 +3,6 @@
         "date": [2022, 6, 18],
         "poster": "Robot1312113",
         "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinosaurs today. Unfortunately, the book did not include ichthyosaurus, but XXDINO3XX also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
-        "pictures": [["Puzzles/NumbersPuzzle.png","A numbers puzzle."], ["Puzzles/Ichthyosaurus.png", "A picture of the dinosaur Ichthyosaurus."], ["Puzzles/Duros.jpg", "A package of duros."], ["Puzzles/Computer.png", "A computer drinking coffee." ]],
         "isPuzzle": true,
         "puzzleNr": "B-p1",
         "comment": "This is the main post to puzzle B-p1."
