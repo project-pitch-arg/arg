@@ -14,6 +14,7 @@ import techImg3 from '../img/thinking-ai.jpg';
 {
     var passphrase = "3121";
     var attempt = "";
+    var URL = "/kpxtzjmyq";
 }
 
 export default function Home() {
@@ -40,7 +41,7 @@ export default function Home() {
                     We combine the latest AI and surveillance technology to provide our customers with the
                     highest levels of security. We start by setting up equipment around your area which then connects to our servers here at
                     Rozk AI. This equipment lets us monitor and observe potential threats against you or your company. If a threat
-                    is deemed actionable our elite security guards will be at your location before the perpetrators do anything.
+                    is deemed actionable our elite security guards will be at your location before the perpetrators can do anything.
 
                 </a>
               </div>
@@ -50,9 +51,10 @@ export default function Home() {
                 <div id="home-left-desc">
                   <h1>Why choose us?</h1>
                   <a>
-                    In Rozk AI our customers safety is our top priority and we have the data to back it up.
-                    Since our launch in 2013 all attempted robberies, while using our service, got stopped
-                     or the people involved got caught and prosecuted. Our unique technology allows for methods of identification
+                    At Rozk AI our customers safety is our top priority and we have the data to back it up.
+                    All attempted robberies of our customers, since our launch in 2013, have either been stopped or
+                    the people involved have been caught and prosecuted. In either situation our customers have been able to claim insurance
+                    leaving them in a beneficial situation. Our unique technology allows for methods of identification
                      that no other company possesses. We also use advanced behavioural methods that let us predict dangerous
                      situations ahead of time.
 
@@ -74,9 +76,11 @@ export default function Home() {
             <div id="tech-content">
               <h1>Indirect Protection</h1>
               <a>
-              Ever since our launch crime rates have steadily been going down for companies that fly our banner outside. The
-              results speak for themselves. Criminals are starting to become aware of our success rate and no longer want to take
-              the risk. As our reputation grows crime rates will fall.
+              Companies that fly our banner have noticed a steady decrease in crime ever since they partnered with us.
+              The results speak for themselves.
+              Criminals are starting to become aware of our success rate and no longer willing to take
+              the risk of going against us.
+              As our reputation grows crime rates fall and will continue to fall.
 
               </a>
               <div class="tech-img"><img  onClick={() => clickImg("1")} src={techImg1}/></div>
@@ -98,7 +102,7 @@ export default function Home() {
         }
 
         if (attempt === passphrase ){
-                console.log("/kpxtzjmyq");
+                console.log(URL);
         }
     }
     function clickFirstImg(){
