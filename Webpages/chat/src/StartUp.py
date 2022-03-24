@@ -129,11 +129,13 @@ for message in messages:
     print(chatID)
     print(message["chat_name"])
 
+    password = hashlib.sha256(message["password"].encode('utf-8')).hexdigest()
+
     # Send the request to post a message with payload and header.
     r = requests.post(
         'https://api.chatengine.io/chats/' + chatID  +'/messages/',
         data=message,
-        headers={"Private-Key": PRIVATE_KEY, "User-Name": message["user"], "User-Secret": message["password"]}
+        headers={"Project-ID": PROJECT_ID, "User-Name": message["user"], "User-Secret": password}
     )
     # Print the result of the post request.
     print(r.status_code)
