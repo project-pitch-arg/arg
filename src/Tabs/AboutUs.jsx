@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 import teamMember from '../img/team-member.png';
 
-import aboutUsHeaderImg from '../img/about-us.jpg';
+import aboutUsHeaderImg from '../img/aboutUsBackground.jpg';
 import environmentImg from '../img/environment.jpg';
 import goalsImg from '../img/goals.jpg';
 
