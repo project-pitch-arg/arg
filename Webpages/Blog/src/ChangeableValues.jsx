@@ -15,22 +15,19 @@
 import Robot from "./Img/Robot1312113.png";
 import CaesarSalad from "./Img/Caesar.png";
 import content from "./Tabs/PostContent.json";
-import DurosBasic from "./Img/duros.jpg";
-import DurosLight from "";
-import DurosMedium from "";
-import DurosDark from "";
+import DurosBasic from "./Img/Duros.jpg";
+import DurosLight from "./Img/DurosLightRed.jpg";
+import DurosMedium from "./Img/DurosRed.jpg";
+import DurosDark from "./Img/DurosDarkRed.jpg";
 import ComputerBasic from "./Img/Computer.png";
-import ComputerLight from "";
-import ComputerMedium from "";
-import ComputerDark from "";
+import ComputerLight from "./Img/ComputerLightGreen.png";
+import ComputerMedium from "./Img/ComputerGreen.png";
+import ComputerDark from "./Img/ComputerDarkGreen.png";
 import IchthyosaurusBasic from "./Img/Ichthyosaurus.png";
-import IchthyosaurusLight from "";
-import IchthyosaurusMedium from "";
-import IchthyosaurusDark from "";
-import JigsawBasic from "./Img/NumbersPuzzle.png";
-import JigsawLight from "";
-import JigsawMedium from "";
-import JigsawDark from "";
+import IchthyosaurusLight from "./Img/IchthyosaurusLightBlue.png";
+import IchthyosaurusMedium from "./Img/IchthyosaurusBlue.png";
+import IchthyosaurusDark from "./Img/IchthyosaurusDarkBlue.png";
+import Jigsaw from "./Img/NumbersPuzzle.png";
 
 
 
@@ -111,7 +108,7 @@ export const ICHTI_IMAGE = IchthyosaurusBasic;
 export const COMPUTER_IMAGE = ComputerBasic;
 
 // Image of weird sudoku.
-export const JIGSAW_IMAGE = JigsawBasic;
+export const JIGSAW_IMAGE = Jigsaw;
 
 /* -------------------- Tab Posts -------------------- */
 
