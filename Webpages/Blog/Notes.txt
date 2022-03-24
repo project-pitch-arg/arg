@@ -3,6 +3,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 1 ---------------
 
+- Lägg till sista pussel (B-c3)
+
 - Ändra café till cafe
 
 - Inlägg om Göteborg ('reklam')
@@ -26,8 +28,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Fixa så man kan skicka bilder i chatt.
 
-- Ändra förnamn/efternamn till username "".
-
 - Ha med Cake i chatten om allt så att man kan nämna om dikten
     att det är cakew för att skilja från det.
 
@@ -42,10 +42,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
  - Add logo to website
 
- - Lägga in data i chat.
-    - A solved puzzle on the blog could be about the usernames.
-    - Ändra de ursprungliga användarna.
-
 - Organisera css-filer
     - CSS-file. Add colour names to make it easier to change the overall impression.
 
@@ -54,11 +50,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - Allmän guide till Allt   
     - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
 
-- När man skapar konto på chatten gör error-meddelanden att fönstret får en vit kant i botten. 
-
-- Just nu får man fel när chatten laddas in om användare som skickat meddelanden tas bort.
-    - Tror det är på endast senaste meddelandet.
-
 - Errorhantering
     - Framförallt om man lagt in felaktig data när chatten
       skapas så att det inte går som det ska.
@@ -66,29 +57,26 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Lägg till fält så att man kan ladda upp en avatarbild till chatten.
 - Fixa också då så att de man automatiskt gör i StartUp har avatarer.
 
-- JSON Schema
-    - Notera någonstans att chatnamn som skapas i början behöver vara unika. Kan inte fixas med JSON schema.
+- Notera någonstans att chatnamn som skapas i början behöver vara unika. Kan inte fixas med JSON schema.
+    - Gäller StartUp filer.
 
 - Add an email in case the chat does not work?
+    - I About
 
 - Lägg till att man ska läsa CoC för att använda chatten.
+    - Create Account sidan.
 
 - Rensa filerna i chat. Gamla mindre Pythonfilerna.
 
 - Använd antingen secret eller password i chatten.
-
-- Fixa skickandet av bilder. Vilken länk ska man ge?
+    - Bli mer konsekvent.
 
 - Fixa så att man inte kan försöka lägga in eller skicka meddelanden med användare som inte finns
     - Borde bara inte fungera med servern, men borde testas.
 
-- Dokumentation som förklarar gåtor och hur man ger ledtrådar till dem.
-    - Ledtrådar kan både vara Edwin och andra i chatten.
-
-- Dokumnetation med användarprofiler.
+- Dokumentation med användarprofiler.
     - Typ kopiera txt dokumentet som redan finns.
-
-- Testa med nytt chattprojekt och se om sidan fungera.
+    - Appendix till allmän guide.
 
 - Ändra struktur och innehåll i Possible Modifications i dokumentation om gåtor när alla variabler
     har namn och liknande.
@@ -99,18 +87,13 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 3 ---------------
 
-- Blog design
+- Blogg design
 
  - How to get the page to exactly fill the browser?
     - Inte direkt nödvändigt, bara resten ser bra ut.
     - Hellre lite för stor än en vit kant?
 
-- Bloggvy i mobilform (inte prioriterat)
-    - Det mesta ser konstigt ut just nu.
-
 - Ett pussel med ett citat. Antingen löst eller inte eller båda. 
-
-- Översätta de filerna till .jsx?
 
 - Fika inlägg.
 
@@ -121,9 +104,3 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Ändra hur ofta resultatet skrivs ut när man skickar meddelanden i chatten.
     - Kanske endast ett OK var tionde meddelande om inget skumt händer?
-
-- Ge riktig mejl till våra användare
-
-- Fungerar att använda StartUp.py, men hemsidan blir skum.
-
-- Lägg in alternativa skylines.
