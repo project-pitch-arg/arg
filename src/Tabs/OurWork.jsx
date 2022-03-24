@@ -72,7 +72,7 @@ export default function OurWork() {
 
             
               <div id="slideshow-container">
-              <Slide easing="ease" autoplay={false} indicators={true}>
+              <Slide easing="ease" autoplay={true} indicators={true}>
               <div class="slide-img">
                 <div onClick={() => setCountFirst(countFirst + 1)} style={{'backgroundImage': `url(${slideImage1})`}}>
                   <span>{firstVar}</span>
