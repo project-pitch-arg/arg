@@ -1,3 +1,7 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 .header {
     height: 400px;
     width: 100%;
@@ -8,42 +12,33 @@
     margin-top: -50px;
     background-image: url("../img/header.jpg");
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 85%;
 }
 
-.header a {
+h1 {
     width: 100%;
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
-    font-size: 64px;
-    color: white;
+    font-size: 70px;
+    color: #246f94;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-weight: 400;
 }
 
-.aboutUs-header {
-    height: 400px;
-    width: 100%;
+h2 {
+    font-size: 28px;
+    font-weight: normal;
+    color: #246f94;
+    font-weight: normal;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -50px;
-    background-image: url("../img/aboutUsBackground.jpg");
-    background-attachment: fixed;
-    border: 2px solid black;
-     padding: 25px;
-
-     background-repeat: no-repeat;
-     background-size: 100% 85%;
-}
-.aboutUs-header a {
-    width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-    font-size: 64px;
-    color: lightseagreen;
 }
 
+a {
+    font-size: 18px;
+}
 
 .content {
     background-color: #e6e6e6;
@@ -53,103 +48,28 @@
     flex-direction: column;
 }
 
-/* ------------------------------- Home Page CSS ------------------------------- */
 
-
-#intro-content {
-    margin-top: 30px;
-}
-
-#intro-img {
-    float: left;
+.center-content {
     width: 50%;
-    text-align: center;
-}
-#intro-img img{
-    width:600px;
-    height: 400px;
-}
-
-#intro-desc {
-    float: right;
-    width: 50%;
-}
-
-#intro-desc h1 {
-    font-weight: normal;
-    color: #246f94;
-}
-
-
-#goal-img {
-    /* background-color: red; */
-    float: left;
-    width: 60%;
+    margin: auto;
     text-align: center;
 }
 
-#goal-img img {
-    height: 400px;
-    width: 600px;
-    /* object-fit: scale-down; */
-}
-#home-left-desc {
-    /* background-color: blue; */
-    float: left;
+.center-content a {
+    font-weight: normal;
+    margin: 0 0% 30px;
     width: 50%;
 }
 
-#home-left-desc h1 {
-    font-weight: normal;
-    color: #246f94;
-    font-family: 'Lato', sans-serif;
-    font-weight: normal;
-}
-#home-right-desc {
-    /* background-color: blue; */
-    float: right;
-    width: 50%;
-}
-
-#home-right-desc h1 {
-    font-weight: normal;
-    color: #246f94;
-    font-family: 'Lato', sans-serif;
-    font-weight: normal;
-}
-
-#tech-content {
-    /* background-color: lightseagreen; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 60px auto 30px;
-}
-
-#tech-content h1 {
-    font-weight: normal;
-    margin-bottom: 20;
-    width: 100%;
-    text-align: center;
-    color: #246f94;
-}
-#tech-content a {
-    font-weight: normal;
-    margin: 0 25% 30px;
-    width: 50%;
-    text-align: center;
-}
-
-.tech-img {
+.homepage-img {
     width: 33%;
     height: 600px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
 }
 
-.tech-img img {
+.homepage-img img {
     width: 90%;
     height: 100%;
     object-fit: cover;
@@ -157,9 +77,12 @@
     margin-right: auto;
 }
 
-
-
-/* ------------------------------- Our Work CSS ------------------------------- */
+#center-homepage-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 60px auto 30px;
+}
 
 .content-right-content {
     margin-top: 50px;
@@ -185,11 +108,6 @@
     margin-right: 5%;
 }
 
-.content-right-desc h1 {
-    font-weight: normal;
-    color: #246f94;
-}
-
 .content-left-content {
     margin-top: 100px;
 }
@@ -198,13 +116,6 @@
     float: left;
     width: 39%;
     padding-left: 50px;
-}
-
-.content-left-desc h1 {
-    font-weight: normal;
-    color: #246f94;
-    font-family: 'Lato', sans-serif;
-    font-weight: normal;
 }
 
 .content-left-img img {
@@ -217,11 +128,9 @@
     float: right;
     width: 50%;
     margin: auto;
-    /* margin-right: 5%; */
 }
 
 #slideshow-container {
-    /* background-color: lightseagreen; */
     height: 100%;
     width: 50%;
     float: right;
@@ -239,8 +148,6 @@
 
 .slide-img div {
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
     background-size: 100% 100%;
     width: 100%;
     height: 500px;
@@ -251,47 +158,6 @@
 .slide-img span {
     color: transparent;
     user-select: none;
-}
-
-/* #slideshow-container {
-    height: 100%;
-    width: 50%;
-    float: right;
-    margin: auto;
-    margin-right: 50px;
-}
-
-#slideshow-slide {
-    display: flex;
-    width: 100%;
-}
-
-#slideshow-slide img {
-    height: 100%;
-    width: 100%;
-} */
-
-
-#future-content {
-    /* background-color: lightseagreen; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 60px auto 30px;
-}
-
-#future-content h1 {
-    font-weight: normal;
-    margin-bottom: 20;
-    width: 100%;
-    text-align: center;
-    color: #246f94;
-}
-#future-content a {
-    font-weight: normal;
-    margin: 0 25% 30px;
-    width: 50%;
-    text-align: center;
 }
 
 #future-right {
@@ -322,59 +188,6 @@
     height: 50%;
 }
 
-
-/* ------------------------------- About Us CSS ------------------------------- */
-.aboutUs-section {
-    background-color: lightgray; /*Temp background color*/
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    flex-direction: column;
-}
-#aboutUs-goals-img{
-    margin-left:10%;
-    float: left;
-    text-align: center;
-}
-#aboutUs-goals-img img{
-    height: 300px;
-    width: 500px;
-}
-#aboutUs-environment-img{
-    margin-right:10%;
-    float: right;
-    text-align: center;
-}
-#aboutUs-environment-img img{
-     height: 300px;
-     width: 500px;
-}
-
-.aboutUs-content{
-    margin-top: 50px;
-}
-.aboutUs-content a {
-    /*margin-left: 50px;*/
-}
-.aboutUs-content h1{
-    font-weight: normal;
-    width: 100%;
-    text-align: left;
-    color: #246f94;
-    font-size:41px;
-}
-#aboutUs-goals-desc{
-    position:relative;
-    margin-left:2%;
-    float:left;
-    width:500px;
-}
-#aboutUs-env-desc{
-    margin-right:2%;
-    position:relative;
-    float:right;
-    width:500px;
-}
 
 #team-content {
     display: flex;
@@ -408,23 +221,4 @@
 
 .team-member a {
     margin-top: 15px;
-}
-
-
-/* ------------------------------- Tab FourOne CSS ------------------------------- */
-
-
-/* ------------------------------- Tab FourTwo CSS ------------------------------- */
-
-
-/* ------------------------------- Tab FourThree CSS ------------------------------- */
-
-
-/* ------------------------------- Temporary CSS ------------------------------- */
-.temp {
-    font-weight: bold;
-    text-align: center;
-    font-size: 24px;
-    height: 500px;
-    margin-top: 100px;
 }

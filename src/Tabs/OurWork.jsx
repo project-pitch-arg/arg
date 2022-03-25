@@ -48,8 +48,8 @@ export default function OurWork() {
 
     return (
         <div>
-          <div class="header" style={{backgroundImage: `url(${header})`, backgroundSize: '100% 85%', opacity: '60%', height: '400px', backgroundRepeat: 'no-repeat'}}>
-            <a>Our Work</a>
+          <div class="header" style={{backgroundImage: `url(${header})`, opacity: '60%'}}>
+            <h1>Our Work</h1>
           </div>
 
           <div class="content">
@@ -58,14 +58,14 @@ export default function OurWork() {
                 <img src={programming} alt="" height='215px'/>
               </div>
               <div class="content-right-desc">
-                <h1> Current work </h1>
+                <h2> Current work </h2>
                 <a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias sunt fugiat, repudiandae vel ea veritatis nihil et nobis aperiam officia voluptates accusamus at excepturi est! Quam harum earum tenetur.</a>
               </div>
             </div>
 
             <div class="content-left-content">
                 <div class="content-left-desc">
-                <h1>What we have done</h1>
+                <h2>What we have done</h2>
                 <a> We have made it possible for our customers to stay securly connected wherever they may be. This was done using the modern technologies as well as AI's in order to obtain ultimate security, which is important for us. Examples on where this has been implemented are in drones, smartphones, smartwatches and even Virtual Reality (VR). 
                 </a>
               </div>
@@ -96,17 +96,19 @@ export default function OurWork() {
               </Slide>
             </div>
           </div>
-            
-            <div id="future-content">
-              <h1>Future Plans</h1>
+         
+            <div class="center-content">
+              <h2>Future Plans</h2>
               <a>For future plans, we plan to reach the sky with our technology and security. Which can happen by the use of artifical intelligent and advanced programming with help from our professional programmers. We plan on broadening our research area even more to reach every aspect of it and obtain complete security.</a>
+            </div>
+
+            <div>
               <div id="future-left">
                 <div id="future-left-top"><img src={futurePlans3} alt="" height='100%' width='100%'/></div>
                 <div id="future-left-bottom"><img src={futurePlans1} alt="" height='100%' width='100%'/></div>
               </div>
               <div id="future-right"><img src={futurePlans2} alt="" height='100%' width='100%'/></div>
             </div>
-
           </div>
         </div>
       

@@ -26,7 +26,7 @@ export default function Home() {
     return (
         <div>
           <div class="header" style={{backgroundImage: `url(${header})`}}>
-            <a>Rozk AI</a>
+            <h1>Rozk AI</h1>
           </div>
 
           <div class="content">
@@ -36,7 +36,7 @@ export default function Home() {
                 <img  onClick={() => clickFirstImg("1")} src={introImg} height='215px'/>
               </div>
               <div class="content-right-desc">
-                <h1> What we do </h1>
+                <h2> What we do </h2>
                 <a>
                     We combine the latest AI and surveillance technology to provide our customers with the
                     highest levels of security. We start by setting up equipment around your area which then connects to our servers here at
@@ -49,7 +49,7 @@ export default function Home() {
 
             <div class="content-right-content">
                 <div class="content-left-desc">
-                  <h1>Why choose us?</h1>
+                  <h2>Why choose us?</h2>
                   <a>
                     Our customers safety is our top priority and we have the data to back it up.
                     All attempted robberies of our customers, since our launch in 2013, have either been stopped or
@@ -63,7 +63,7 @@ export default function Home() {
 
           
               <div class="content-right-desc">
-                  <h1>How does AI integrate with surveillance?</h1>
+                  <h2>How does AI integrate with surveillance?</h2>
                   <a>
                     Artificial intelligence is complicated but our engineers here at Rozk AI have come up with a method
                     of collaboration that lets our technology utilize AI to analyze captured footage. This analysis lets us know if
@@ -73,8 +73,8 @@ export default function Home() {
                 </div>
             </div>
 
-            <div id="tech-content">
-              <h1>Indirect Protection</h1>
+            <div class="center-content">
+              <h2>Indirect Protection</h2>
               <a>
               Companies that fly our banner have noticed a steady decrease in crime ever since they partnered with us.
               The results speak for themselves.
@@ -83,10 +83,13 @@ export default function Home() {
               As our reputation grows crime rates fall and will continue to fall.
 
               </a>
-              <div class="tech-img"><img  onClick={() => clickImg("1")} src={techImg1}/></div>
-              <div class="tech-img"><img  onClick={() => clickImg("2")} src={techImg2}/></div>
-              <div class="tech-img"><img  onClick={() => clickImg("3")} src={techImg3}/></div>
             </div>
+              <div id="center-homepage-img">
+                <div class="homepage-img"><img  onClick={() => clickImg("1")} src={techImg1}/></div>
+                <div class="homepage-img"><img  onClick={() => clickImg("2")} src={techImg2}/></div>
+                <div class="homepage-img"><img  onClick={() => clickImg("3")} src={techImg3}/></div>
+              </div>
+            
           </div>
         </div>
 

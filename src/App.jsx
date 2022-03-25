@@ -8,9 +8,6 @@ import Home from './Tabs/Home';
 import OurWork from './Tabs/OurWork';
 import AboutUs from './Tabs/AboutUs';
 
-import TabFourOne from './Tabs/DropDown/TabFourOne';
-import TabFourTwo from './Tabs/DropDown/TabFourTwo';
-import TabFourThree from './Tabs/DropDown/TabFourThree';
 import Footer from './Footer/Footer';
 
 function App() {
@@ -25,9 +22,6 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/OurWork" element={<OurWork />} />
           <Route exact path="/AboutUs" element={<AboutUs />} />
-            <Route exact path="/FourOne" element={<TabFourOne />} />
-            <Route exact path="/FourTwo" element={<TabFourTwo />} />
-            <Route exact path="/FourThree" element={<TabFourThree />} />
         </Routes>
         <Footer />
       </BrowserRouter>

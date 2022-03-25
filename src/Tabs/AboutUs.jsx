@@ -28,16 +28,16 @@ export default function AboutUs() {
     return(
 
         <div>
-          <div class="aboutUs-header"style={{backgroundImage: `url(${aboutUsHeaderImg})`}}>
-            <a>About Us</a>
+          <div class="header"style={{backgroundImage: `url(${aboutUsHeaderImg})`, opacity: '60%'}}>
+            <h1>About Us</h1>
           </div>
 
-          <div class="aboutUs-section">
+          <div class="content">
 
             <div class="content-right-content">
               <div class="content-right-img"><img src={goalsImg} height='215px'/> </div>
               <div class="content-right-desc">
-                <h1> Our Goals </h1>
+                <h2> Our Goals </h2>
                 <a> Our primary goal is for all customers, those with and without financial stability,
                 to feel safe. Listening to feedback and improving services is what we strive for.
                  If you ever need us for anything we will be by your side ready to help.
@@ -50,7 +50,7 @@ export default function AboutUs() {
             <div class="content-left-content">
              <div class="content-left-img"><img src={environmentImg}/></div>
               <div class="content-left-desc">
-                <h1>Sustainable Practices</h1>
+                <h2>Sustainable Practices</h2>
                 <a> We work hard to provide the best access to completely renewable products.
                 Our central workforce works diligently to innovate new types of renewable systems.
                  We then use these throughout our development.
@@ -60,8 +60,8 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div id="tech-content">
-              <h1>Why Work with us?</h1>
+            <div class="center-content">
+              <h2>Why Work with us?</h2>
               <a> At our company we value our employees and the ideas the they bring to the table.
               We strive for a work environment that is safe from prejudice, open for new ideas and equal for everyone.
               We guarantee you will love working for us, we hope to see you soon!
@@ -71,8 +71,8 @@ export default function AboutUs() {
 
           <div class="content">
 
+                <h2>Who are we?</h2>
               <div id="team-content">
-                <h1>Who are we?</h1>
                 <div class="team-member"><img src={markImg}/><a>Mark Roswell</a></div>
                 <div class="team-member"><img src={manuelImg}/><a>Manuel Mallory</a></div>
                 <div class="team-member"><img src={georgeImg}/><a>George Caroll</a></div>
