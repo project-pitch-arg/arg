@@ -51,7 +51,7 @@ export default function Home() {
                 <div id="home-left-desc">
                   <h1>Why choose us?</h1>
                   <a>
-                    At Rozk AI our customers safety is our top priority and we have the data to back it up.
+                    Our customers safety is our top priority and we have the data to back it up.
                     All attempted robberies of our customers, since our launch in 2013, have either been stopped or
                     the people involved have been caught and prosecuted. In either situation our customers have been able to claim insurance
                     leaving them in a beneficial situation. Our unique technology allows for methods of identification
