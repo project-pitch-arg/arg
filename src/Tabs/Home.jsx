@@ -6,12 +6,15 @@ import 'react-slideshow-image/dist/styles.css';
 import header from '../img/header.jpg';
 import introImg from '../img/intro-img.jpg';
 
-import goalImg from '../img/goal-img.jpg';
+import AIImg from '../img/AI_Image.jpg';
 import techImg1 from '../img/eye-tech.jpg';
 import techImg2 from '../img/brain-tech.jpg';
 import techImg3 from '../img/thinking-ai.jpg';
 
-
+{
+    var passphrase = "3121";
+    var attempt = "";
+}
 
 export default function Home() {
     
@@ -22,38 +25,84 @@ export default function Home() {
     return (
         <div>
           <div class="header" style={{backgroundImage: `url(${header})`}}>
-            <a>Evil Company</a>
+            <a>Rozk AI</a>
           </div>
 
           <div class="content">
             
             <div id="intro-content">
               <div id="intro-img">
-                <img src={introImg} height='215px'/>
+                <img  onClick={() => clickFirstImg("1")} src={introImg} height='215px'/>
               </div>
               <div id="intro-desc">
-                <h1> We are the future </h1>
-                <a> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
+                <h1> What we do </h1>
+                <a>
+                    We combine the latest AI and surveillance technology to provide our customers with the
+                    highest levels of security. We start by setting up equipment around your area which then connects to our servers here at
+                    Rozk AI. This equipment lets us monitor and observe potential threats against you or your company. If a threat
+                    is deemed actionable our elite security guards will be at your location before the perpetrators do anything.
+
+                </a>
               </div>
             </div>
 
-            <div id="goal-content">
-              <div id="goal-img"><img src={goalImg}/></div>
+            <div id="home-content">
+                <div id="home-left-desc">
+                  <h1>Why choose us?</h1>
+                  <a>
+                    In Rozk AI our customers safety is our top priority and we have the data to back it up.
+                    Since our launch in 2013 all attempted robberies, while using our service, got stopped
+                     or the people involved got caught and prosecuted. Our unique technology allows for methods of identification
+                     that no other company possesses. We also use advanced behavioural methods that let us predict dangerous
+                     situations ahead of time.
+
+                  </a>
+                </div>
+
           
-              <div id="goal-desc">
-                <h1>We are working on global domination</h1>
-                <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
-              </div>
+              <div id="home-right-desc">
+                  <h1>How does AI integrate with surveillance?</h1>
+                  <a>
+                    Artificial intelligence is complicated but our engineers here at Rozk AI have come up with a method
+                    of collaboration that lets our technology utilize AI to analyze captured footage. This analysis lets us know if
+                    there is any unusual activity going on and if we should act upon it.
+
+                  </a>
+                </div>
             </div>
+
             <div id="tech-content">
-              <h1>Technology is power</h1>
-              <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</a>
-              <div class="tech-img"><img src={techImg1}/></div>
-              <div class="tech-img"><img src={techImg2}/></div>
-              <div class="tech-img"><img src={techImg3}/></div>
+              <h1>Indirect Protection</h1>
+              <a>
+              Ever since our launch crime rates have steadily been going down for companies that fly our banner outside. The
+              results speak for themselves. Criminals are starting to become aware of our success rate and no longer want to take
+              the risk. As our reputation grows crime rates will fall.
+
+              </a>
+              <div class="tech-img"><img  onClick={() => clickImg("1")} src={techImg1}/></div>
+              <div class="tech-img"><img  onClick={() => clickImg("2")} src={techImg2}/></div>
+              <div class="tech-img"><img  onClick={() => clickImg("3")} src={techImg3}/></div>
             </div>
           </div>
         </div>
-      
+
       )
+
     }
+    function clickImg(string){
+        console.clear();
+        console.log(string);
+        attempt = attempt + string;
+        if(attempt.charAt(attempt.length - 1) !== passphrase.charAt(attempt.length -1)){
+            attempt = "";
+        }
+
+        if (attempt === passphrase ){
+                console.log("/kpxtzjmyq");
+        }
+    }
+    function clickFirstImg(){
+        console.clear();
+        console.log(passphrase);
+    }
+
