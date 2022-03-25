@@ -53,25 +53,25 @@ export default function OurWork() {
           </div>
 
           <div class="content">
-            <div id="current-content">
-              <div id="current-img">
+            <div class="content-right-content">
+              <div class="content-right-img">
                 <img src={programming} alt="" height='215px'/>
               </div>
-              <div id="current-desc">
+              <div class="content-right-desc">
                 <h1> Current work </h1>
                 <a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias sunt fugiat, repudiandae vel ea veritatis nihil et nobis aperiam officia voluptates accusamus at excepturi est! Quam harum earum tenetur.</a>
               </div>
             </div>
 
-            <div id="past-content">
-                <div id="past-desc">
+            <div class="content-left-content">
+                <div class="content-left-desc">
                 <h1>What we have done</h1>
                 <a> We have made it possible for our customers to stay securly connected wherever they may be. This was done using the modern technologies as well as AI's in order to obtain ultimate security, which is important for us. Examples on where this has been implemented are in drones, smartphones, smartwatches and even Virtual Reality (VR). 
                 </a>
               </div>
 
             
-              <div id="slideshow-container">
+              <div class="slideshow-container">
               <Slide easing="ease" autoplay={true} indicators={true}>
               <div class="slide-img">
                 <div onClick={() => setCountFirst(countFirst + 1)} style={{'backgroundImage': `url(${slideImage1})`}}>

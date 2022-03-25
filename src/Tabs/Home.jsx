@@ -30,11 +30,11 @@ export default function Home() {
 
           <div class="content">
             
-            <div id="intro-content">
-              <div id="intro-img">
+            <div class="content-right-content">
+              <div class="content-right-img">
                 <img  onClick={() => clickFirstImg("1")} src={introImg} height='215px'/>
               </div>
-              <div id="intro-desc">
+              <div class="content-right-desc">
                 <h1> What we do </h1>
                 <a>
                     We combine the latest AI and surveillance technology to provide our customers with the
@@ -46,8 +46,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div id="home-content">
-                <div id="home-left-desc">
+            <div class="content-right-content">
+                <div class="content-left-desc">
                   <h1>Why choose us?</h1>
                   <a>
                     In Rozk AI our customers safety is our top priority and we have the data to back it up.
@@ -60,7 +60,7 @@ export default function Home() {
                 </div>
 
           
-              <div id="home-right-desc">
+              <div class="content-right-desc">
                   <h1>How does AI integrate with surveillance?</h1>
                   <a>
                     Artificial intelligence is complicated but our engineers here at Rozk AI have come up with a method

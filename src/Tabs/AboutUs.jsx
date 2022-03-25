@@ -34,9 +34,9 @@ export default function AboutUs() {
 
           <div class="aboutUs-section">
 
-            <div class="aboutUs-content">
-              <div id="aboutUs-goals-img"><img src={goalsImg} height='215px'/> </div>
-              <div id="aboutUs-goals-desc">
+            <div class="content-right-content">
+              <div class="content-right-img"><img src={goalsImg} height='215px'/> </div>
+              <div class="content-right-desc">
                 <h1> Our Goals </h1>
                 <a> Our primary goal is for all customers, those with and without financial stability,
                 to feel safe. Listening to feedback and improving services is what we strive for.
@@ -47,9 +47,9 @@ export default function AboutUs() {
 
 
 
-            <div class="aboutUs-content">
-             <div id="aboutUs-environment-img"><img src={environmentImg}/></div>
-              <div id="aboutUs-env-desc">
+            <div class="content-left-content">
+             <div class="content-left-img"><img src={environmentImg}/></div>
+              <div class="content-left-desc">
                 <h1>Sustainable Practices</h1>
                 <a> We work hard to provide the best access to completely renewable products.
                 Our central workforce works diligently to innovate new types of renewable systems.
