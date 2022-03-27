@@ -35,7 +35,7 @@ export default function AboutUs() {
           <div class="content">
 
             <div class="content-right-content">
-              <div class="content-right-img"><img src={goalsImg} height='215px'/> </div>
+              <div class="content-right-img"><img src={goalsImg}/> </div>
               <div class="content-right-desc">
                 <h2> Our Goals </h2>
                 <a> Our primary goal is for all customers, those with and without financial stability,

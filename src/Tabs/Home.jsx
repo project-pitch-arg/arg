@@ -7,9 +7,9 @@ import header from '../img/header.jpg';
 import introImg from '../img/intro-img.jpg';
 
 import AIImg from '../img/AI_Image.jpg';
-import techImg1 from '../img/eye-tech.jpg';
-import techImg2 from '../img/brain-tech.jpg';
-import techImg3 from '../img/thinking-ai.jpg';
+import techImg1 from '../img/homepage-img1.jpg';
+import techImg2 from '../img/homepage-img2.jpg';
+import techImg3 from '../img/homepage-img3.jpg';
 
 {
     var passphrase = "3121";
@@ -26,7 +26,7 @@ export default function Home() {
     return (
         <div>
           <div class="header" style={{backgroundImage: `url(${header})`}}>
-            <h1>Rozk AI</h1>
+            <h1>Difax</h1>
           </div>
 
           <div class="content">
@@ -40,7 +40,7 @@ export default function Home() {
                 <a>
                     We combine the latest AI and surveillance technology to provide our customers with the
                     highest levels of security. We start by setting up equipment around your area which then connects to our servers here at
-                    Rozk AI. This equipment lets us monitor and observe potential threats against you or your company. If a threat
+                    Difax. This equipment lets us monitor and observe potential threats against you or your company. If a threat
                     is deemed actionable our elite security guards will be at your location before the perpetrators can do anything.
 
                 </a>
@@ -65,7 +65,7 @@ export default function Home() {
               <div class="content-right-desc">
                   <h2>How does AI integrate with surveillance?</h2>
                   <a>
-                    Artificial intelligence is complicated but our engineers here at Rozk AI have come up with a method
+                    Artificial intelligence is complicated but our engineers here at Difax have come up with a method
                     of collaboration that lets our technology utilize AI to analyze captured footage. This analysis lets us know if
                     there is any unusual activity going on and if we should act upon it.
 
