@@ -1,21 +1,22 @@
-import React, {useEffect} from 'react';
+import React, {useEffect} from "react";
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import TopBar from './TopBar/TopBar';
-import Wrong from './Wrong';
-import Home from './Tabs/Home';
-import Chat from './Tabs/TabChat';
-import Posts from './Tabs/TabPosts';
-// import TabFour from './Tabs/TabFour';
-// import FAQ from './Tabs/DropDown/TabFAQ';
-import About from './Tabs/DropDown/TabAbout';
-import QotD from './Tabs/DropDown/TabQotD';
-// import Footer from './Footer/Footer';
-import Header from './Header/Header';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TopBar from "./TopBar/TopBar";
+import Wrong from "./Wrong";
+import Home from "./Tabs/Home";
+import Chat from "./Tabs/TabChat";
+import Posts from "./Tabs/TabPosts";
+import ChangeableValues from "./ChangeableValues";
+// import TabFour from "./Tabs/TabFour";
+// import FAQ from "./Tabs/DropDown/TabFAQ";
+import About from "./Tabs/DropDown/TabAbout";
+import QotD from "./Tabs/DropDown/TabQotD";
+// import Footer from "./Footer/Footer";
+import Header from "./Header/Header";
 
-// import Images from './img';
+// import Images from "./img";
 
-import logo from './logo.svg';
+import logo from "./logo.svg";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
   // without having to seperately load the Posts tab first.
   try {
     Posts();
+    ChangeableValues();
   }
   catch (error) {
     return (
@@ -38,7 +40,7 @@ function App() {
   return (
     
     // An HTML statement that sets up our website according to 
-    // the specifications in 'react-router-dom'.
+    // the specifications in "react-router-dom".
     <div className="app"> 
       <BrowserRouter>
        <Header />

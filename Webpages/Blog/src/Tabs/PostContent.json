@@ -66,17 +66,17 @@
         "comment": "This puzzle is a helper post to puzzle B-c2"
     },
     {
-        "date": [2023, 1, 8],
+        "date": [2022, 6, 8],
         "poster": "Fexjo",
-        "content": "These are some images from Spain. WORK IN PROGRESS! IGNORE THIS POST!",
+        "content": "These are some images from back when I was on my vacation in Spain. I forgot to post them then so I'm doing it now. Robot reminded me after he had done his big house cleaning.",
         "isPuzzle": true,
         "puzzleNr": "B-c4",
         "comment": "This is the main post to puzzle B-c4."
     },
     {
-        "date": [2023, 1, 9],
+        "date": [2022, 6, 8],
         "poster": "Robot1312113",
-        "content": "WORK IN PROGRESS! IGNORE THIS POST! I've been hard at work today. It's the time of year when the entire home is cleaned. ┬─┬ノ( º _ ºノ) It's quite backbreaking work but definitely necessary. Just ask any student living alone. (; -_-) But it's not all hard work, there's some fun as well. (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ When going through all my old stuff I found quite a few items that I had misplaced over the years. There were 20 lego characters, 3 old school books, ...",
+        "content": "I've been hard at work today. It's the time of year when the entire home is cleaned. ┬─┬ノ( º _ ºノ) It's quite backbreaking work but definitely necessary. Just ask any student living alone. (; -_-) But it's not all hard work, there's some fun as well. (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ When going through all my old stuff I found quite a few items that I had misplaced over the years. There were 20 lego characters, 5 old school books, 2 different retro game systems, 12 pencils, and 269 marbles. I might have had a marble obsession once upon a time. (￣▽￣*)ゞ The fact that I counted them out just now might mean I still do...",
         "isPuzzle": true,
         "puzzleNr": "B-c4",
         "comment": "This post is a helper post to puzzle B-c4"
@@ -118,6 +118,18 @@
         "date": [2022, 3, 14],
         "poster": "Robot1312113",
         "content": "I think Fexjo went mad today. Out of nowhere he just suddenly spouted that he needed to make a bunch of pies. He then went on to create an entire buffet. Something has gotten into him, and I'm not quite sure what, or how I can fix him. ＼(〇_ｏ)／",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 4, 1],
+        "poster": "Fexjo",
+        "content": "I'm quite excited for tomorrow. I'm going for a month-long vacation to Spain. I bet it's going to be loads of fun.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I was going to listen to some music and maybe an audiobook on the flight today. Only once we were in the air did I notice that it hadn't downloaded. It turned out to be quite a long trip after that.",
+        "pictures": [["PostImages/PlaneWing.jpg", "A plane wing."]],
         "isPuzzle": false
     },
     {

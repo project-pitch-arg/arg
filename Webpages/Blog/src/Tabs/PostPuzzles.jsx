@@ -8,6 +8,7 @@
 
 import React from "react";
 import colors from "./TabContent.css"
+import ParkEntrance from "../Img/ParkEntrance.png";
 import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS, DUROS_IMAGE, ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE } from "../ChangeableValues";
 
 export default function Puzzles(post) {
@@ -150,14 +151,14 @@ export default function Puzzles(post) {
       <div class="post-images">
           <div>
             <picture>
-              <source media="(min-width: 800px)" srcSet={COMPUTER_IMAGE} class="post-image"/> {/* Fix images here */}
-              <img src={ICHTI_IMAGE} alt="Image of a fountain." class="post-image"/>
+              <source media="(min-width: 800px)" srcSet="PostImages/SunsetView.jpg" class="post-image"/> 
+              <img src={ParkEntrance} alt="Image of park entrance." class="post-image"/>
             </picture>
           </div>
           <div>
             <picture>
-              <source media="(min-width: 800px)" srcSet={JIGSAW_IMAGE} class="post-image"/> {/* Fix image here */}
-              <img src="" alt="32 237N, 100 192S" class="post-image"/>
+              <source media="(min-width: 800px)" srcSet="PostImages/RedSkyAndPool.JPG" class="post-image"/> 
+              <img src="" alt="20 steps 34N, 25 steps 150SE, 115 steps 71E, 88 steps 336NW, 72 steps 354N, 35 steps 53NE, 60 steps 6N, 60 steps 310NW, 55 steps 33NE, 80 steps 14N, 24 steps 73E, 125 steps 116SE, 62 steps 84E, 112 steps 16N, 155 steps 18N, 30 steps 260W, 34 steps 303NW, 73 steps 280W, 227 steps 104E, 110 steps 351N, 5 steps 38NE, 25 steps 155SE, F23" class="post-image"/>
             </picture>
           </div>
       </div>  

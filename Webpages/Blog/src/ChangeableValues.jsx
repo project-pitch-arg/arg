@@ -55,16 +55,17 @@ export const QUOTE_TIME = 30;
 
 /* -------------------- Puzzle B-p1 -------------------- */
 
+// Solution to B-p1, this is an address to the next
+// website. See documentation for more detail.
 export const ANSWER_TO_BE_ENCRYPTED = "http://ThisWillBeAWebSiteAddress.later";
 
 // This key needs to be an array with smaller arrays
 // each containing first a letter as a string and
 // then an integer. The number can at most be 100.
 // Example: [["m", 11],["d", 28], ["o", 57], ["a", 80]]
-// TODO: Include number limits for each subset.
 export const ENCRYPTION_KEY = [["m", 11],["d", 28], ["o", 57], ["a", 80]];
 
-// See documentation (TODO: write this) for what
+// See documentation for what
 // meaning this clue has. It replaces the date in
 // PostContent.json for the post belonging to puzzle B-p1
 // with this clue.
@@ -72,10 +73,13 @@ export const CLUE_DATE = "2022.80A.24";
 
 // Specified font to change certain letters for
 // the puzzle. See documentation for explanation.
-export const LETTER_FONT = "monaco";
+// This should be a web safe font that's 
+// properly capitalized.
+export const LETTER_FONT = "Monaco";
 
 // Specified color to change certain letters for
 // the puzzle. See documentation for explanation.
+// If color name then capitalize.
 export const LETTER_COLOR = "rgb(0,0,51)";
 
 // First of two course codes to be included. This
@@ -125,3 +129,53 @@ export function setPostContent(content) {
 // Edit this variable to change the posts displayed on each page.
 export const POSTS_PER_PAGE = 5;
 
+const DIFFERENT_COLORS = ["AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure", "Beige", "Bisque", "Black", "BlanchedAlmond", "Blue", "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse", "Chocolate", "Coral", "CornflowerBlue", "Cornsilk", "Crimson", "Cyan", "DarkBlue", "DarkCyan", "DarkGoldenRod", "DarkGray", "DarkGrey", "DarkGreen", "DarkKhaki", "DarkMagenta", "DarkOliveGreen", "DarkOrange", "DarkOrchid", "DarkRed", "DarkSalmon", "DarkSeaGreen", "DarkSlateBlue", "DarkSlateGray", "DarkSlateGrey", "DarkTurquoise", "DarkViolet", "DeepPink", "DeepSkyBlue", "DimGray", "DimGrey", "DodgerBlue", "FireBrick", "FloralWhite", "ForestGreen", "Fuchsia", "Gainsboro", "GhostWhite", "Gold", "GoldenRod", "Gray", "Grey", "Green", "GreenYellow", "HoneyDew", "HotPink", "IndianRed", "Indigo", "Ivory", "Khaki", "Lavender", "LavenderBlush", "LawnGreen", "LemonChiffon", "LightBlue", "LightCoral", "LightCyan", "LightGoldenRodYellow", "LightGray", "LightGrey", "LightGreen", "LightPink", "LightSalmon", "LightSeaGreen", "LightSkyBlue", "LightSlateGray", "LightSlateGrey", "LightSteelBlue", "LightYellow", "Lime", "LimeGreen", "Linen", "Magenta", "Maroon", "MediumAquaMarine", "MediumBlue", "MediumOrchid", "MediumPurple", "MediumSeaGreen", "MediumSlateBlue", "MediumSpringGreen", "MediumTurquoise", "MediumVioletRed", "MidnightBlue", "MintCream", "MistyRose", "Moccasin", "NavajoWhite", "Navy", "OldLace", "Olive", "OliveDrab", "Orange", "OrangeRed", "Orchid", "PaleGoldenRod", "PaleGreen", "PaleTurquoise", "PaleVioletRed", "PapayaWhip", "PeachPuff", "Peru", "Pink", "Plum", "PowderBlue", "Purple", "RebeccaPurple", "Red", "RosyBrown", "RoyalBlue", "SaddleBrown", "Salmon", "SandyBrown", "SeaGreen", "SeaShell", "Sienna", "Silver", "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow", "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle", "Tomato", "Turquoise", "Violet", "Wheat", "White", "WhiteSmoke", "Yellow", "YellowGreen"];
+
+const DIFFERENT_FONTS = ["Arial", "Arial Black", "Verdana", "Tahoma", "Trebuchet MS", "Impact", "Times New Roman", "Didot", "Georgia", "American Typewriter", "Andalé Mono", "Courier", "Lucida Console", "Monaco", "Bradley Hand", "Brush Script MT", "Luminari", "Comic Sans MS"];
+
+export default function errorChecker() {
+
+    if (QUOTE_TIME < 1) {
+        throw "Delay for quotes has to be a positive number.";
+    }
+
+    if (ENCRYPTION_KEY[0][0].length != 1) {
+        throw "First encryption key has to be a single letter.";
+    }
+
+    if (ENCRYPTION_KEY[1][0].length != 1) {
+        throw "Second encryption key has to be a single letter.";
+    }
+
+    if (ENCRYPTION_KEY[2][0].length != 1) {
+        throw "Third encryption key has to be a single letter.";
+    }
+
+    if (ENCRYPTION_KEY[3][0].length != 1) {
+        throw "Fourth encryption key has to be a single letter.";
+    }
+
+    if (COURSE_CODE_1.length != 3) {
+        throw "First course code has to be three letters.";
+    }
+
+    if (COURSE_CODE_2.length != 3) {
+        throw "Second course code has to be three letters.";
+    }
+
+    if (THREE_DINOS.length != 3) {
+        throw "There has to be exactly three dinosaurs.";
+    }
+
+    if (POSTS_PER_PAGE < 1) {
+        throw "1 or more posts has to be displayed.";
+    }
+
+    if (!(!DIFFERENT_COLORS.includes(LETTER_COLOR) && !(LETTER_COLOR.slice(0,3) == "rbg") && !(LETTER_COLOR.slice(0,1) == "#") && !(LETTER_COLOR.slice(0,3) == "hsl") && !(LETTER_COLOR.slice(0,4) == "rgba") && !(LETTER_COLOR.slice(0,4) == "hsla"))) {
+        throw "The specified color should be a color in a correct format.";
+    }
+
+    if (!DIFFERENT_FONTS.includes(LETTER_FONT)) {
+        throw "The specified font should be an existing web safe font.";
+    }
+}
