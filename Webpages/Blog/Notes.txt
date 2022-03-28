@@ -23,8 +23,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Fixa ikonen för fliken.
 
-- Fixa så man kan skicka bilder i chatt.
-
 - Ha med Cake i chatten om allt så att man kan nämna om dikten
     att det är cakew för att skilja från det.
 
@@ -33,11 +31,15 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - icniVad "Real life came knocking... sad"
     - Sedan sent i allt om allo chatten.
 
+- Lägg till att man behöver ändra address till chatten när man lagt upp allt på en server i dokuemntation.
+
 --------------- Prio 2 ---------------
 
  - Kommentera mer kod. Framförallt chatten.
 
  - Add logo to website
+
+ - Fixa så man kan skicka bilder i chatt.
 
 - Organisera css-filer
     - CSS-file. Add colour names to make it easier to change the overall impression.

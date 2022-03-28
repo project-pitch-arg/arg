@@ -45,6 +45,30 @@
   --beige: hsl(47, 34%, 74%);
 }
 
+/* Remove dates and times */
+
+.ce-message-date-text {
+  color: transparent !important;
+}
+.ce-message-timestamp {
+  color: transparent !important;
+}
+
+/* Change colours */
+.ce-chat-subtitle-text {
+  color: black !important; 
+}
+.ce-chat-title-text {
+  color: black !important;
+}
+#ce-send-message-button {
+  background-color: var(--lightGreen) !important;
+}
+.ce-my-message-bubble {
+  background-color: var(--lightGreen) !important;
+  color: black !important;
+}
+
 .web-chat-title {
   height: 10vh;
   font-style: bold;
@@ -90,10 +114,6 @@
     background-color: var(--lightGreen) !important;
     border: 4px solid var(--lightGreen) !important;
     border-radius: 0px !important;
-  }
-  
-  .ce-chat-subtitle-text {
-    color: #595959 !important;
   }
 
   .ce-chat-subtitle-date {
