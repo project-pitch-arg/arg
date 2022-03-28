@@ -105,6 +105,17 @@
     },
     {
         "poster": "Robot1312113",
+        "content": "Did you know that the telescope wasn't inveted until roughly 300 years after glasses? (⊙_⊙) Both are lenses, so I expected it to be more similar. It is basically the same thing, after all.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "If you ever feel lost, just look at this sign I found at my university. It is trying to help, but somehow makes you feel all the more confused. It did work out in the end though, and I found the direction for my goal.",
+        "pictures": [["PostImages/GUSign.jpg", "Sign with many provided directions."]],
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
         "content": "How can someone be so unlucky? My alarm did not go off. I missed the tram despite skipping breakfast. It was even raining. Of course I was late after all that. When I arrived I even discovered I forgot my charger. So my computer died. To top it all off I spilled my drink during lunch. And that is were we are now. What is this? (◞‸◟；) This sad robot hopes the rest of the day will be better. Please. ",
         "isPuzzle": false
     },
@@ -161,13 +172,19 @@
     },
     {
         "poster": "Fexjo",
-        "content": "I figured that we haven't really showed much presence for our school of choice lately and just thought I'd leave this here. To commemorate all the good times we've had.",
-        "pictures": [["PostImages/ChalmersLogo.png", "Chalmers logo in gold."]],
+        "content": "I figured that we haven't really showed much presence for our schools of choice lately and just thought I'd leave this here. To commemorate all the good times we've had.",
+        "pictures": [["PostImages/ChalmersLogo.png", "Chalmers logo in gold."], ["PostImages/GUBuilding.jpg", "An old building belonging to Gothenburg University"]],
         "isPuzzle": false
     },
     {
         "poster": "Robot1312113",
         "content": "You know, one of my friends is working part time as a programmer at a lesser known company. He has developed a routine of multiple cups of coffee a day from the extra hours he works on top of studying. He keeps telling me he is a staunch supporter of python code but I know that his heart lies with java. (￣ω￣)",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I have heard a lot about how beautiful the nature is in Sweden even before I became an exchange student. So of course I had to check it out! And I believe it is true, just look at these pictures from norhtern Sweden, isn't it really nice? The picture on the right is inside a national park and the U-shape is named 'Lapporten'. Just don't ask me to pronounce it.",
+        "pictures": [["PostImages/NatureSweden.png", "Picture of a lake with a mountain in the distance."], ["PostImages/NatureSweden2.png", "Picture of mountains"]],
         "isPuzzle": false
     },
     {
