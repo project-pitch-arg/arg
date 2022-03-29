@@ -10,11 +10,14 @@ import AIImg from '../img/AI_Image.jpg';
 import techImg1 from '../img/homepage-img1.jpg';
 import techImg2 from '../img/homepage-img2.jpg';
 import techImg3 from '../img/homepage-img3.jpg';
+const jsonData= require('../data.json');
+
 
 {
-    var passphrase = "3121";
+
+    var passphrase = jsonData.home_passphrase;
+    var URL = jsonData.home_URL;
     var attempt = "";
-    var URL = "/kpxtzjmyq";
 }
 
 export default function Home() {
@@ -99,6 +102,7 @@ export default function Home() {
     function clickImg(string){
         console.clear();
         console.log(string);
+
         attempt = attempt + string;
         if(attempt.charAt(attempt.length - 1) !== passphrase.charAt(attempt.length -1)){
             attempt = "";
