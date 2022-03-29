@@ -53,6 +53,9 @@ export default function Puzzles(post) {
     var counter = 0;
     for(let i = 0; i < letter.length; i++){
       const NUMBER = (post.content.split(letter[i]).length - 1)
+      if (NUMBER < 1) {
+        throw "One of the course code letters doesn't exist in the content text.";
+      }
       var index = post.content.indexOf(letter[i]);
       var count1 = count % NUMBER;
       while(count1 > 0) {
