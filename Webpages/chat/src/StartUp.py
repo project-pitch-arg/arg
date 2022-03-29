@@ -42,7 +42,7 @@ def findChatId(chatArray, chatToFind):
 
 print("Creating users")
 # Load values from file
-f = open('users.json',)
+f = open('users.json')
 users = json.load(f)
 f.close()
 
