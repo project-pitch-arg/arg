@@ -49,7 +49,7 @@ f.close()
 # Go through all the users to be created
 for user in users:
 
-    # Fix the format of the JSON-date so that the password can be hashed.
+    # Fix the format of the JSON-date so that the secret can be hashed.
     userString = str(user).replace("'", "\"")
     userString = str(userString).replace("None", "null")
     json_object = json.loads((userString))
@@ -95,9 +95,9 @@ for chat in chats:
     chatId = str(getChatId["id"])
     chatIds.append([chat["chat_name"], chatId])
 
-    # Get the password for the admin for this chat from the file and hash it.
-    password = chat["admin_secret"]
-    password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+    # Get the secret for the admin for this chat from the file and hash it.
+    secret = chat["admin_secret"]
+    secret = hashlib.sha256(secret.encode('utf-8')).hexdigest()
 
     # Iterate the users that will be added to the newly created chat.
     for user in chat["users"]:
@@ -109,7 +109,7 @@ for chat in chats:
         r = requests.post(
             'https://api.chatengine.io/chats/' + chatId + '/people/',
             data=user,
-            headers={"Project-ID": PROJECT_ID, "User-Name": chat["admin"], "User-Secret": password}
+            headers={"Project-ID": PROJECT_ID, "User-Name": chat["admin"], "User-Secret": secret}
         )
     # Print the result of the sent post request.
     print(r.status_code)
@@ -131,20 +131,20 @@ for message in messages:
     # to have the right address for the server request.
     chatID = findChatId(chatIds, message["chat_name"])
 
-    password = hashlib.sha256(message["password"].encode('utf-8')).hexdigest()
+    secret = hashlib.sha256(message["secret"].encode('utf-8')).hexdigest()
 
     # Send the request to post a message with payload and header.
     r = requests.post(
         'https://api.chatengine.io/chats/' + chatID  +'/messages/',
         data=message,
-        headers={"Project-ID": PROJECT_ID, "User-Name": message["user"], "User-Secret": password}
+        headers={"Project-ID": PROJECT_ID, "User-Name": message["user"], "User-Secret": secret}
     )
     # Print the result of the post request every 10 messages if nothing goes wrong.
     if(r.status_code != 201):
         print(r.status_code)
-        print("Something went wrong when printing a message in " + message["chat_name"] + ". Check the ChatMessages.json file." )
-    elif(counter == 10):
-        print("Sent 10 messages, currently sending messages in " + message["chat_name"] + ".")
+        print("Something went wrong when printing a message in '" + message["chat_name"] + "'." )
+    elif(counter >= 10):
+        print("Sent 10 messages, currently sending messages in '" + message["chat_name"] + "'.")
         counter = 0
     
     counter = counter + 1
