@@ -56,7 +56,7 @@ export default function TopBar(props) {
       }
 
       window.addEventListener('scroll', hideBackground);
-    
+
       return (
             <div class='topbar'>
               <ul id='topbar-ul'>

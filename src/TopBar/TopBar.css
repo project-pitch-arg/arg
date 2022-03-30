@@ -1,7 +1,7 @@
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   background: transparent;
 }
 
@@ -10,10 +10,12 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+   margin-left:10%;
 }
 
 .topbar-li {
   float: left;
+
 }  
   
 .topbar a {
