@@ -1,44 +1,9 @@
 [
     {
-        "date": [2022, 6, 18],
+        "date": [2022, 1, 5],
         "poster": "Robot1312113",
-        "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinosaurs today. Unfortunately, the book did not include ichthyosaurus, but XXDINO3XX also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
-        "isPuzzle": true,
-        "puzzleNr": "B-p1",
-        "comment": "This is the main post to puzzle B-p1."
-    },
-    {
-        "date": [2022, 6, 19],
-        "poster": "Robot1312113",
-        "content": "I never told you, but my favorite dinosaurs are XXDINO1XX, XXDINO2XX and ichthyosaurus.",
-        "isPuzzle": true,
-        "puzzleNr": "B-p1",
-        "comment": "This post is helper post 1 to puzzle B-p1."
-    },
-    {
-        "date": [2022, 5, 1],
-        "poster": "Robot1312113",
-        "content": "Man, this latest course of mine, LMA017, was so fun. Way too little math for my taste though.",
-        "isPuzzle": true,
-        "puzzleNr": "B-p1",
-        "comment": "This post is helper post 2 to puzzle B-p1"
-    },
-    {
-        "date": [2022, 5, 1],
-        "poster": "Robot1312113",
-        "content": "There's a bunch of interesting ciphers out there. The famous ones, like Caesar, Alberti, or Vigenère. But also some more obscure ones, like Phaistos, Voynich, or Bellaso. Personally, I favor variants of the famous ones. (￣▽￣)ノ Alberti is the most famous Cipher Disk as an example, but there's also so many more Cipher Disks out there. Take the Aeneas, which existed 5th century BC, way before Alberti! Σ(O_O) For some more modern alternatives we have the Union Cipher disk or the Mexican Army Wheel. This is such a fascinating topic, I could talk about them all day. I recommend checking out a physical cipher, something to play around with in your hands, it's very interactive and loads of fun. ヽ(o^ ^o)ﾉ",
-        "isPuzzle": true,
-        "puzzleNr": "B-p1",
-        "comment": "This post is a helper post to puzzle B-p1"
-    },
-    {
-        "date": [2022, 4, 10],
-        "poster": "Robot1312113",
-        "content": "I borrowed some pictures from Fexjo to make these. What do you think all of it adds up to?",
-        "pictures": [["Puzzles/Skyline1.jpg", "A skyline."], ["Puzzles/Skyline2.png", "A skyline"],  ["Puzzles/Skyline3.jpg", "A skyline"], ["Puzzles/Shapes.png", "Two rectangles and a triangle."],  ["Puzzles/Lines.png", "Four underscores in different colours. Three with signs."], ["Puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
-        "isPuzzle": true,
-        "puzzleNr": "B-p2",
-        "comment": "This is the main post to puzzle B-p2."
+        "content": "WIP: Starting post",
+        "isPuzzle": false
     },
     {
         "date": [2022, 1, 7],
@@ -50,54 +15,13 @@
         "comment": "This puzzle is solved in the chat."
     },
     {
-        "date": [2022, 2, 11],
         "poster": "Robot1312113",
-        "content": "I composed a poem for everyone today. What do you think? \n \n At pleasant temperature, \n in contrast to how you would like life to be, \n an idea that seems perfect, \n held or fixed in position securely, \n a mistake. \n \n A place where you can buy drinks and simple meals, \n filled with a continuous humming sound, \n a particular variety or type, \n the process of gaining this, \n a victory.",
-        "isPuzzle": true,
-        "puzzleNr": "B-c2",
-        "comment": "This puzzle is solved in the chat."
-    },
-    {
-        "date": [2022, 2, 7],
-        "poster": "Robot1312113",
-        "content": "Gothenburg has this nice place that's not quite a zoo but somewhat close enough. It's called Universeum, I visited today. They have a bunch of animals and fish and all sorts of creatures. I especially like the rainforest section. The differences to a regular zoo comes from the fact that this is all inside one building. Nothing is left to the open sky, which is why they don't have Lions and Antelopes I assume. They also have some sections where you can play kids-friendly games and learn about the human body or learn about space. Definitely a recommendation to visit at least once if you're ever in Gothenburg.",
-        "isPuzzle": true,
-        "puzzleNr": "B-c2",
-        "comment": "This puzzle is a helper post to puzzle B-c2"
-    },
-    {
-        "date": [2022, 3, 19],
-        "poster": "Robot1312113",
-        "content": "So today I have a message for you all through the words of our betters. Can you figure it out? \n \n Kathryn Davis 3 \n Nelson Mandela 7 \n Dr. Who 12 \n Eleanor Roosevelt 8 \n Margaret Mead 9 \n Steve Miller 1, \n Jay Leno 20 \n John D Rockefeller 13! \n \n Good luck! (￣▽￣)ノ",
-        "isPuzzle": true,
-        "puzzleNr": "B-c3",
-        "comment": "This is the main post to puzzle B-c3."
-    },
-    {
-        "date": [2022, 6, 8],
-        "poster": "Fexjo",
-        "content": "These are some images from back when I was on my vacation in Spain. I forgot to post them then so I'm doing it now. Robot reminded me after he had done his big house cleaning.",
-        "isPuzzle": true,
-        "puzzleNr": "B-c4",
-        "comment": "This is the main post to puzzle B-c4."
-    },
-    {
-        "date": [2022, 6, 8],
-        "poster": "Robot1312113",
-        "content": "I've been hard at work today. It's the time of year when the entire home is cleaned. ┬─┬ノ( º _ ºノ) It's quite backbreaking work but definitely necessary. Just ask any student living alone. (; -_-) But it's not all hard work, there's some fun as well. (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ When going through all my old stuff I found quite a few items that I had misplaced over the years. There were 20 lego characters, 5 old school books, 2 different retro game systems, 12 pencils, and 269 marbles. I might have had a marble obsession once upon a time. (￣▽￣*)ゞ The fact that I counted them out just now might mean I still do...",
-        "isPuzzle": true,
-        "puzzleNr": "B-c4",
-        "comment": "This post is a helper post to puzzle B-c4"
-    },
-    {
-        "date": [2022, 1, 5],
-        "poster": "Fexjo",
-        "content": "Have you read the book 'A Short History of Nearly Everything'? I learned quite a lot of odd things from that. Also, this made me feel quite special: \n \n 'Not one of your pertinent ancestors was squashed, devoured, drowned, starved, stranded, stuck fast, untimely wounded, or otherwise deflected from its life's quest of delivering a tiny charge of genetic material to the right partner at the right moment in order to perpetuate the only possible sequence of hereditary combinations that could result -- eventually, astoundingly, and all too briefly -- in you.' \n \n And this is just way to true: \n \n 'There are three stages in scientific discovery. First, people deny that it is true, then they deny that it is important; finally they credit the wrong person.'",
+        "content": "Have you ever sort of sang in your bad no-one-can-hear-me-so-it-doesn't-matter-voice in the shower only to remember that you have guests? Then you know how I felt today. (－‸ლ)",
         "isPuzzle": false
     },
     {
-        "poster": "Robot1312113",
-        "content": "Have you ever sort of sang in your bad no-one-can-hear-me-so-it-doesn't-matter-voice in the shower only to remember that you have guests? Then you know how I felt today. (－‸ლ)",
+        "poster": "Fexjo",
+        "content": "Do you ever think about life on other planets? I certainly hope they, on whatever planet they may be, are not as destructive as we are.",
         "isPuzzle": false
     },
     {
@@ -108,12 +32,51 @@
     },
     {
         "poster": "Fexjo",
-        "content": "Do you ever think about life on other planets? I certainly hope they, on whatever planet they may be, are not as destructive as we are.",
+        "content": "The LMS (Learning Management System) that Gothenburg University uses is Canvas. It is quite straightforward and easy to log in to. Many times, the course book is available at the online library. It saves you both the money of buying it and the effort of carrying a thick book around!",
         "isPuzzle": false
     },
     {
+        "poster": "Fexjo",
+        "content": "Many trams in Gothenburg have names on them and I have started collecting them. Every time I see a new name, I find out who they are and what they did and add them to my list. Let's see how many I can find before I leave Sweden!",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "My camera just got smashed after I stumbled and dropped it. Now I'm in the market for a new one. I only have one issue. Cameras are so expensive! It's been so long since I had to buy a new one that I had forgotten the price of quality. I might just have to stick to my guns and go with a cheaper alternative. I'm not made of money after all, especially not for what is, ultimately, just a hobby.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I figured that we haven't really showed much presence for our schools of choice lately and just thought I'd leave this here. To commemorate all the good times we've had.",
+        "pictures": [["PostImages/ChalmersLogo.png", "Chalmers logo in gold."], ["PostImages/GUBuilding.jpg", "An old building belonging to Gothenburg University"]],
+        "isPuzzle": false
+    },
+    
+    {
+        "date": [2022, 2, 7],
         "poster": "Robot1312113",
-        "content": "Did you know that the telescope wasn't inveted until roughly 300 years after glasses? (⊙_⊙) Both are lenses, so I expected it to be more similar. It is basically the same thing, after all.",
+        "content": "Gothenburg has this nice place that's not quite a zoo but somewhat close enough. It's called Universeum, I visited today. They have a bunch of animals and fish and all sorts of creatures. I especially like the rainforest section. The differences to a regular zoo comes from the fact that this is all inside one building. Nothing is left to the open sky, which is why they don't have Lions and Antelopes I assume. They also have some sections where you can play kids-friendly games and learn about the human body or learn about space. Definitely a recommendation to visit at least once if you're ever in Gothenburg.",
+        "isPuzzle": true,
+        "puzzleNr": "B-c2",
+        "comment": "This puzzle is a helper post to puzzle B-c2"
+    },
+    {
+        "date": [2022, 2, 11],
+        "poster": "Robot1312113",
+        "content": "I composed a poem for everyone today. What do you think? \n \n At pleasant temperature, \n in contrast to how you would like life to be, \n an idea that seems perfect, \n held or fixed in position securely, \n a mistake. \n \n A place where you can buy drinks and simple meals, \n filled with a continuous humming sound, \n a particular variety or type, \n the process of gaining this, \n a victory.",
+        "isPuzzle": true,
+        "puzzleNr": "B-c2",
+        "comment": "This puzzle is solved in the chat."
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "Did you know that the telescope wasn't invented until roughly 300 years after glasses? (⊙_⊙) Both are lenses, so I expected it to be more similar. It is basically the same thing, after all.",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 3, 2],
+        "poster": "Fexjo",
+        "content": "WIP: Why few content",
         "isPuzzle": false
     },
     {
@@ -123,8 +86,13 @@
         "isPuzzle": false
     },
     {
-        "poster": "Robot1312113",
-        "content": "How can someone be so unlucky? My alarm did not go off. I missed the tram despite skipping breakfast. It was even raining. Of course I was late after all that. When I arrived I even discovered I forgot my charger. So my computer died. To top it all off I spilled my drink during lunch. And that is were we are now. What is this? (◞‸◟；) This sad robot hopes the rest of the day will be better. Please. ",
+        "poster": "Fexjo",
+        "content": "I watched an old TED talk the other day about the sound of black holes. It was performed by a woman named Janna Levin in 2011 if anyone is interested in attending. To liken a black hole to a drum and to hear the sound and composition of objects existing in a noiseless vacuum, it's truly something I recommend other people take a gander at as well. Revisiting topics like this, even if they're a few years old now, is often an interesting and fascinating experience. Surmise to say, I think i'm going to go through a bunch of old TED talks over the coming week. It just struck me as in the mood.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "A common stereotype of students is that they are quite lazy. They come late to class, they don't do all the work assigned to them, and they constantly complain about everything they have to do. Thus, I feel justified in complaining about my latest essay assignment. It feels like I just ran a marathon, and not in a good way. On to better news though, highest grade in class. I'm still amazed with how fast the teacher grades the assignments in this course, I mean, it's barely been three hours. Simply incredible.",
         "isPuzzle": false
     },
     {
@@ -140,9 +108,39 @@
         "isPuzzle": false
     },
     {
+        "poster": "Robot1312113",
+        "content": "You know, one of my friends is working part time as a programmer at a lesser known company. He has developed a routine of multiple cups of coffee a day from the extra hours he works on top of studying. He keeps telling me he is a staunch supporter of python code but I know that his heart lies with java. (￣ω￣)",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 3, 19],
+        "poster": "Robot1312113",
+        "content": "So today I have a message for you all through the words of our betters. Can you figure it out? \n \n Kathryn Davis 3 \n Nelson Mandela 7 \n Dr. Who 12 \n Eleanor Roosevelt 8 \n Margaret Mead 9 \n Steve Miller 1, \n Jay Leno 20 \n John D Rockefeller 13! \n \n Good luck! (￣▽￣)ノ",
+        "isPuzzle": true,
+        "puzzleNr": "B-c3",
+        "comment": "This is the main post to puzzle B-c3."
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Both our resident robot and I have been feeling a bit cooped up inside for a while. And we haven't really done much together lately. So we decided to take a bit of a walk. Just enjoy the sights and explore parts of the city. Even living in Gothenburg for an entire lifetime will still leave many places unexplored. Not to mention that I've only been here for a year. We saw many beautiful sights on our exploration, though one stuck out to me. We came across this as we were wandering aimlessly along a cycling route. The route is called 'Kattegattsleden' for the avid cyclists that are interested. Apparently it stretches for 390 km, quite a distance to be sure. Back on topic though, the bridge is truly a marvel of engineering. Even I can tell that much without much knowledge in structural architecture. Could do with a paint job but hey, I'm not in charge. ",
+        "pictures": [["PostImages/Kattegattleden.jpg", "Massive bridge by cycling route."]],
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "How can someone be so unlucky? My alarm did not go off. I missed the tram despite skipping breakfast. It was even raining. Of course I was late after all that. When I arrived I even discovered I forgot my charger. So my computer died. To top it all off I spilled my drink during lunch. And that is were we are now. What is this? (◞‸◟；) This sad robot hopes the rest of the day will be better. Please. ",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 4, 1],
+        "poster": "Robot1312113",
+        "content": "WIP: April fools",
+        "isPuzzle": false
+    },
+    {
         "date": [2022, 4, 1],
         "poster": "Fexjo",
-        "content": "I'm quite excited for tomorrow. I'm going for a month-long vacation to Spain. I bet it's going to be loads of fun.",
+        "content": "I'm quite excited for tomorrow. I'm going for a two week-long vacation to Spain. I bet it's going to be loads of fun.",
         "isPuzzle": false
     },
     {
@@ -151,21 +149,16 @@
         "pictures": [["PostImages/PlaneWing.jpg", "A plane wing."]],
         "isPuzzle": false
     },
+    
     {
-        "date": [2022, 5, 5],
+        "date": [2022, 4, 4],
         "poster": "Robot1312113",
-        "content": "You ever experienced feeling like you fall and wake up with a start? Today, I also did that. Including the falling part. It hurt. (×_×#)",
+        "content": "WIP: April Fools cont",
         "isPuzzle": false
     },
     {
         "poster": "Fexjo",
-        "content": "Saw this nice-looking boat today. Somehow, it did not rain although the sky was grey all day.",
-        "pictures": [["PostImages/Boat.jpg", "Picture of a boat."]],
-        "isPuzzle": false
-    },
-    {
-        "poster": "Fexjo",
-        "content": "I watched an old TED talk the other day about the sound of black holes. It was performed by a woman named Janna Levin in 2011 if anyone is interested in attending. To liken a black hole to a drum and to hear the sound and composition of objects existing in a noiseless vacuum, it's truly something I recommend other people take a gander at as well. Revisiting topics like this, even if they're a few years old now, is often an interesting and fascinating experience. Surmise to say, I think i'm going to go through a bunch of old TED talks over the coming week. It just struck me as in the mood.",
+        "content": "Have you read the book 'A Short History of Nearly Everything'? I learned quite a lot of odd things from that. Also, this made me feel quite special: \n \n 'Not one of your pertinent ancestors was squashed, devoured, drowned, starved, stranded, stuck fast, untimely wounded, or otherwise deflected from its life's quest of delivering a tiny charge of genetic material to the right partner at the right moment in order to perpetuate the only possible sequence of hereditary combinations that could result -- eventually, astoundingly, and all too briefly -- in you.' \n \n And this is just way to true: \n \n 'There are three stages in scientific discovery. First, people deny that it is true, then they deny that it is important; finally they credit the wrong person.'",
         "isPuzzle": false
     },
     {
@@ -179,36 +172,78 @@
         "isPuzzle": false
     },
     {
+        "date": [2022, 4, 10],
+        "poster": "Robot1312113",
+        "content": "I borrowed some pictures from Fexjo to make these. What do you think all of it adds up to?",
+        "pictures": [["Puzzles/Skyline1.jpg", "A skyline."], ["Puzzles/Skyline2.png", "A skyline"],  ["Puzzles/Skyline3.jpg", "A skyline"], ["Puzzles/Shapes.png", "Two rectangles and a triangle."],  ["Puzzles/Lines.png", "Four underscores in different colours. Three with signs."], ["Puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
+        "isPuzzle": true,
+        "puzzleNr": "B-p2",
+        "comment": "This is the main post to puzzle B-p2."
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "I entered a hacker competition last week and today was finally the day to perform. <(￣︶￣)> Honestly, kind of disappointed in the kind of tests and work we had to do. It's not something I could see being of actual use in a real situation. ┐(￣ヘ￣;)┌ And i'm not just saying that because I lost. (」＞＜)」",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 4, 16],
         "poster": "Fexjo",
-        "content": "I figured that we haven't really showed much presence for our schools of choice lately and just thought I'd leave this here. To commemorate all the good times we've had.",
-        "pictures": [["PostImages/ChalmersLogo.png", "Chalmers logo in gold."], ["PostImages/GUBuilding.jpg", "An old building belonging to Gothenburg University"]],
+        "content": "WIP: Back from Spain",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Have you heard of the butterfly effect? Where a single flap of a butterfly's wings can cause a tornado in another part of the world. A cascading series of events that causes something huge from the tiniest of things. My teacher did not accept that excuse to why I was late this morning.",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 4, 18],
+        "poster": "Fexjo",
+        "content": "WIP: Minigolf",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Saw this nice-looking boat today. Somehow, it did not rain although the sky was grey all day.",
+        "pictures": [["PostImages/Boat.jpg", "Picture of a boat."]],
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 4, 22],
+        "poster": "Fexjo",
+        "content": "WIP: Skärgård",
         "isPuzzle": false
     },
     {
         "poster": "Robot1312113",
-        "content": "You know, one of my friends is working part time as a programmer at a lesser known company. He has developed a routine of multiple cups of coffee a day from the extra hours he works on top of studying. He keeps telling me he is a staunch supporter of python code but I know that his heart lies with java. (￣ω￣)",
+        "content": "You ever experienced feeling like you fall and wake up with a start? Today, I also did that. Including the falling part. It hurt. (×_×#)",
         "isPuzzle": false
     },
     {
-        "poster": "Fexjo",
-        "content": "I have heard a lot about how beautiful the nature is in Sweden even before I became an exchange student. So of course I had to check it out! And I believe it is true, just look at these pictures from norhtern Sweden, isn't it really nice? The picture on the right is inside a national park and the U-shape is named 'Lapporten'. Just don't ask me to pronounce it.",
-        "pictures": [["PostImages/NatureSweden.png", "Picture of a lake with a mountain in the distance."], ["PostImages/NatureSweden2.png", "Picture of mountains"]],
+        "date": [2022, 4, 26],
+        "poster": "Robot1312113",
+        "content": "WIP: Robot birthday",
         "isPuzzle": false
     },
     {
-        "poster": "Fexjo",
-        "content": "Many trams in Gothenburg have names on them and I have started collecting them. Every time I see a new name, I find out who they are and what they did and add them to my list. Let's see how many I can find before I leave Sweden!",
-        "isPuzzle": false
+        "date": [2022, 5, 1],
+        "poster": "Robot1312113",
+        "content": "There's a bunch of interesting ciphers out there. The famous ones, like Caesar, Alberti, or Vigenère. But also some more obscure ones, like Phaistos, Voynich, or Bellaso. Personally, I favor variants of the famous ones. (￣▽￣)ノ Alberti is the most famous Cipher Disk as an example, but there's also so many more Cipher Disks out there. Take the Aeneas, which existed 5th century BC, way before Alberti! Σ(O_O) For some more modern alternatives we have the Union Cipher disk or the Mexican Army Wheel. This is such a fascinating topic, I could talk about them all day. I recommend checking out a physical cipher, something to play around with in your hands, it's very interactive and loads of fun. ヽ(o^ ^o)ﾉ",
+        "isPuzzle": true,
+        "puzzleNr": "B-p1",
+        "comment": "This post is a helper post to puzzle B-p1"
+    },
+    {
+        "date": [2022, 5, 3],
+        "poster": "Robot1312113",
+        "content": "Man, this latest course of mine, LMA017, was so fun. Way too little math for my taste though.",
+        "isPuzzle": true,
+        "puzzleNr": "B-p1",
+        "comment": "This post is helper post 2 to puzzle B-p1"
     },
     {
         "poster": "Robot1312113",
         "content": "When people tell me to learn R, they say I should familiarize myself with an entirely new programming language. When they tell a baby to learn R, they just want them to pronounce a letter correctly. Life is unfair. (╥﹏╥)",
-        "isPuzzle": false
-    },
-    {
-        "poster": "Fexjo",
-        "content": "Both our resident robot and I have been feeling a bit cooped up inside for a while. And we haven't really done much together lately. So we decided to take a bit of a walk. Just enjoy the sights and explore parts of the city. Even living in Gothenburg for an entire lifetime will still leave many places unexplored. Not to mention that I've only been here for a year. We saw many beautiful sights on our exploration, though one stuck out to me. We came across this as we were wandering aimlessly along a cycling route. The route is called 'Kattegattsleden' for the avid cyclists that are interested. Apparently it stretches for 390 km, quite a distance to be sure. Back on topic though, the bridge is truly a marvel of engineering. Even I can tell that much without much knowledge in structural architecture. Could do with a paint job but hey, I'm not in charge. ",
-        "pictures": [["PostImages/Kattegattleden.jpg", "Massive bridge by cycling route."]],
         "isPuzzle": false
     },
     {
@@ -218,17 +253,7 @@
     },
     {
         "poster": "Fexjo",
-        "content": "My camera just got smashed after I stumbled and dropped it. Now I'm in the market for a new one. I only have one issue. Cameras are so expensive! It's been so long since I had to buy a new one that I had forgotten the price of quality. I might just have to stick to my guns and go with a cheaper alternative. I'm not made of money after all, especially not for what is, ultimately, just a hobby.",
-        "isPuzzle": false
-    },
-    {
-        "poster": "Fexjo",
         "content": "I really experienced Newton's first law this morning. 'A body at rest wants to stay at rest.' But in the end, I won and got out of bed.",
-        "isPuzzle": false
-    },
-    {
-        "poster": "Fexjo",
-        "content": "The LMS (Learning Management System) that Gothenburg University uses is Canvas. It is quite straightforward and easy to log in to. Many times, the course book is available at the online library. It saves you both the money of buying it and the effort of carrying a thick book around!",
         "isPuzzle": false
     },
     {
@@ -237,24 +262,34 @@
         "isPuzzle": false
     },
     {
-        "poster": "Fexjo",
-        "content": "Have you heard of the butterfly effect? Where a single flap of a butterfly's wings can cause a tornado in another part of the world. A cascading series of events that causes something huge from the tiniest of things. My teacher did not accept that excuse to why I was late this morning.",
-        "isPuzzle": false
-    },
-    {
-        "poster": "Fexjo",
-        "content": "A common stereotype of students is that they are quite lazy. They come late to class, they don't do all the work assigned to them, and they constantly complain about everything they have to do. Thus, I feel justified in complaining about my latest essay assignment. It feels like I just ran a marathon, and not in a good way. On to better news though, highest grade in class. I'm still amazed with how fast the teacher grades the assignments in this course, I mean, it's barely been three hours. Simply incredible.",
-        "isPuzzle": false
-    },
-    {
+        "date": [2022, 6, 4],
         "poster": "Robot1312113",
-        "content": "I entered a hacker competition last week and today was finally the day to perform. <(￣︶￣)> Honestly, kind of disappointed in the kind of tests and work we had to do. It's not something I could see being of actual use in a real situation. ┐(￣ヘ￣;)┌ And i'm not just saying that because I lost. (」＞＜)」",
-        "isPuzzle": false
+        "content": "I've been hard at work today. It's the time of year when the entire home is cleaned. ┬─┬ノ( º _ ºノ) It's quite backbreaking work but definitely necessary. Just ask any student living alone. (; -_-) But it's not all hard work, there's some fun as well. (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ When going through all my old stuff I found quite a few items that I had misplaced over the years. There were 20 lego characters, 5 old school books, 2 different retro game systems, 12 pencils, and 269 marbles. I might have had a marble obsession once upon a time. (￣▽￣*)ゞ The fact that I counted them out just now might mean I still do...",
+        "isPuzzle": true,
+        "puzzleNr": "B-c4",
+        "comment": "This post is a helper post to puzzle B-c4"
     },
     {
+        "date": [2022, 6, 5],
+        "poster": "Fexjo",
+        "content": "These are some images from back when I was on my vacation in Spain. I forgot to post them then so I'm doing it now. Robot reminded me after he had done his big house cleaning.",
+        "isPuzzle": true,
+        "puzzleNr": "B-c4",
+        "comment": "This is the main post to puzzle B-c4."
+    },
+    {
+        "date": [2022, 6, 9],
         "poster": "Fexjo",
         "content": "Today marks the day that I leave Sweden. It was nice while it lasted and I'm surely going to visit a lot in the future. But first, I need to finish my studies from home. I can't do everything abroad, some things has to be done in Great Britain. I've come to really enjoy this place, but there really is no place like home.",
         "isPuzzle": false
+    },
+    {
+        "date": [2022, 6, 11],
+        "poster": "Robot1312113",
+        "content": "I never told you, but my favorite dinosaurs are XXDINO1XX, XXDINO2XX and ichthyosaurus.",
+        "isPuzzle": true,
+        "puzzleNr": "B-p1",
+        "comment": "This post is helper post 1 to puzzle B-p1."
     },
     {
         "poster": "Fexjo",
@@ -264,6 +299,20 @@
     {
         "poster": "Robot1312113",
         "content": "It would be a bit hard to invite you, you are in a different country. Besides, I went to one just the other day. I have some patience to not visit another right away... and too few numbers in my bank account.(￣ヘ￣)",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 6, 19],
+        "poster": "Robot1312113",
+        "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinosaurs today. Unfortunately, the book did not include ichthyosaurus, but XXDINO3XX also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
+        "isPuzzle": true,
+        "puzzleNr": "B-p1",
+        "comment": "This is the main post to puzzle B-p1."
+    },
+    {
+        "date": [2022, 6, 23],
+        "poster": "Fexjo",
+        "content": "WIP: Robot is missing",
         "isPuzzle": false
     }
 ]
