@@ -9,7 +9,7 @@
 import React from "react";
 import colors from "./TabContent.css"
 import ParkEntrance from "../Img/ParkEntrance.png";
-import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS, DUROS_IMAGE, ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE } from "../ChangeableValues";
+import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS, DUROS_IMAGE, ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE, CC_1_INDEX, CC_2_INDEX } from "../ChangeableValues";
 
 export default function Puzzles(post) {
 
@@ -90,6 +90,11 @@ export default function Puzzles(post) {
   function changeString(post, array1, array2) {
     var totalArray = array1.concat(array2);
     var sortedArray = totalArray.sort(function(a,b){return (a[0]-b[0])});
+    for (var i = 0; i < sortedArray.length - 1; i++) {
+      if (sortedArray[i][0] == sortedArray[i+1][0]) {
+        throw "Index chosen for course codes make a double letter. Please choose another index or another course code.";
+      }
+    }
     
     return (
       // With the help of the "helpChangeString" function each individual 
@@ -330,7 +335,7 @@ export default function Puzzles(post) {
             {CLUE_DATE}
           <div class="post-name"> 
             {post.poster} 
-          {changeString(post,changeColor(post, COURSE_CODE_1, 2),changeFont(post, COURSE_CODE_2, 1))}
+          {changeString(post,changeColor(post, COURSE_CODE_1, CC_1_INDEX),changeFont(post, COURSE_CODE_2, CC_2_INDEX))}
           <p style={{margin: "0", color: colors.postBackground}}> 
               {encodedMsg(ANSWER_TO_BE_ENCRYPTED)}
           </p>

@@ -79,7 +79,7 @@ export const LETTER_FONT = "Monaco";
 
 // Specified color to change certain letters for
 // the puzzle. See documentation for explanation.
-// If color name then capitalize.
+// If color name then capitalize. Example: Red.
 export const LETTER_COLOR = "rgb(0,0,51)";
 
 // First of two course codes to be included. This
@@ -87,10 +87,20 @@ export const LETTER_COLOR = "rgb(0,0,51)";
 // for details.
 export const COURSE_CODE_1 = "tda";
 
+// Which index number to use for COURSE_CODE_1. 
+// Example: An index number of 2 would mean that
+// the second instance of each letter in the 
+// course code would be changed in the puzzle post.
+export const CC_1_INDEX = 2;
+
 // Second of two course codes to be included. This
 // Will have a changed font. See documentation 
 // for details.
 export const COURSE_CODE_2 = "eda";
+
+// Works the same as CC_1_INDEX but this one is
+// for COURSE_CODE_2.
+export const CC_2_INDEX = 1;
 
 // Three dinosaur names for the puzzle. See 
 // documentation for details.
