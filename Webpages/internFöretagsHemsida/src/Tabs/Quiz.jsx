@@ -32,14 +32,15 @@ export default class Quiz extends Component{
     render(){
         if(this.state.dataReceived){
             return (
-                <div class="standardDivList">
+                <div class="newsBlock">
                     {!this.state.quizDone ? (
                         <div><h1 class="underline">This week's quiz contest</h1>
+                        <p style={{color: "#24647f", margin: "0"}}>Correct Answers are 2,3,1</p>
                         <form class="questionForm" onSubmit={this.quizDone}>
                             {
                                 Object.keys(this.quiz).map((key) => {
                                     return (<div class="quizObject">
-                                        <h2>{this.quiz[key].text}</h2>
+                                        <h2 style={{color: "black"}}>{this.quiz[key].text}</h2>
                                         {
                                             Object.entries(this.quiz[key].alternatives).map(([name,value], index) => {
                                                 return (<div>

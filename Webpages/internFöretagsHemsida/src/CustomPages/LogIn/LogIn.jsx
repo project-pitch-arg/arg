@@ -1,6 +1,5 @@
 import {basicFetchDataJson} from "../../Client/Client";
 
-
 async function checkToken(){
     var json = {"token" : JSON.parse(localStorage.getItem("user")).token};
     var response  = await basicFetchDataJson("/checkToken", json);

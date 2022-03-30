@@ -11,14 +11,12 @@ export default class TopBar extends Component {
     constructor(props) {
         super(props);
         this.locations = [];
-        this.dropdownLocations = [];
         this.customLocations = [];
         this.addCustomTabs("Quiz");
     }
 
     async componentDidMount(){
         await this.addTabs("/src/Tabs/", this.locations);
-        await this.addTabs("/src/Tabs/DropDown/",this.dropdownLocations);
     }
 
     highlightActive = (path) => {
@@ -81,7 +79,9 @@ export default class TopBar extends Component {
           }
           return (
                 <div class="topbar">
+                    <header><h1 class="header">Hello</h1></header>
                     <BrowserRouter>
+                      <div class="menyDiv">
                       <ul id='topbar-ul'>
                       {
                         this.locations.map((file, index) => {
@@ -93,30 +93,14 @@ export default class TopBar extends Component {
                             }
                         })
                       }
-                        <li id="Dropdown" key="Dropdown">
-                            <div class="dropdown">
-                            <button class="dropdown-button">Information</button>
-                            <div class="dropdown-content">{
-                                this.dropdownLocations.map((file) => {
-                                        return (<Link id={file} key={file.toString()} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link>);
-                                })
-                                }
-                                </div>
-                            </div>
-                        </li>
                       </ul>
+                      </div>
                       <Routes>
                           <Route path="" element={<Home/>}/>
                           <Route path="*" element={<Wrong />} />
                           {
                             this.locations.map((file) => {
                                 const Tag = lazy(() => import("../Tabs/" + file));
-                                return this.getComponent(file, Tag);
-                            })
-                          }
-                          {
-                            this.dropdownLocations.map((file) => {
-                                const Tag = lazy(() => import("../Tabs/DropDown/" + file));
                                 return this.getComponent(file, Tag);
                             })
                           }

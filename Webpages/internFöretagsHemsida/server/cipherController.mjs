@@ -41,7 +41,7 @@ export function generateCipher(){
     var json = JSON.parse(word);
     var animal = json[getRandomInt(0,json.length)];
     cipher += animal;
-    encryptedCipher += caesarCipher(animal,241);
+    encryptedCipher += caesarCipher(animal,231);
     setTimeout(clearCipher, 60000)
 }
 function clearCipher(){

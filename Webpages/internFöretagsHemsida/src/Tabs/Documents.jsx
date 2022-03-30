@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import "../TabContent.css";
-import {basicFetchData} from "../../Client/Client";
+import "./TabContent.css";
+import {basicFetchData} from "../Client/Client";
 import axios from 'axios';
 
 
@@ -95,7 +95,7 @@ export default class Policy extends Component{
     render(){
         if(this.state.dataReceived) {
             return (
-                <div class="standardDivList">
+                <div class="newsBlock">
                     <h1 class="underline">Policy Documents</h1>
                   {
                     this.location.map((file) => {

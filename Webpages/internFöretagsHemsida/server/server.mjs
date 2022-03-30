@@ -116,16 +116,13 @@ app.post("/checkToken", (req, res) => {
     var token = req.body.token;
     try {
         if(token === json[ip_adress].token){
-            console.log("Valid token/ip_adress combo");
             return res.send({"token" : true})
         }
         else {
-            console.log("Invalid token and/or ip_adress combo");
             return res.send({"token" : false})
         }
     }
     catch {
-        console.log("Invalid token and/or ip_adress combo");
         return res.send({"token" : false})
     }
 });

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {basicFetchDataJson} from "../../Client/Client";
 import progressBar from "../../images/progress bar.jpg";
 import {getAccountData} from "./LogIn";
-import "../../Tabs/TabContent.css";
+import "./LogInPage.css";
 import 'antd/dist/antd.css';
 
 export default class LogInPage extends Component{
