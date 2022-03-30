@@ -21,13 +21,9 @@ function getPassword(user) {
     var users = accounts;
     for(var i = 0; i < users.length; i++) {
         if(users[i].username == user) {
-            console.log("password" + users[i].secret)
-            console.log(hashCode(users[i].secret) + "create"); //TODO remove
             return hashCode(users[i].secret);
         }
     }
-    //TODO Add ERROR code?
-    console.log("User not found");
     return;
 }
 
@@ -56,9 +52,6 @@ const CreateAccount = () => {
     // information.
     const createUser = async (e) => {
         e.preventDefault();
-
-        /* TODO var hashPassword;
-        hashPassword = hashCode(password);*/
 
         // Encrypt the users password.
         const hashPassword = hashCode(password);
@@ -94,7 +87,7 @@ const CreateAccount = () => {
         // add headers and send the request.
         xhrUser.open("POST", "https://api.chatengine.io/users/");
         xhrUser.setRequestHeader("PRIVATE-KEY", PRIVATE_KEY);
-        xhrUser.setRequestHeader('Content-Type', 'application/json'); //TODO needed?
+        xhrUser.setRequestHeader('Content-Type', 'application/json');
 
         xhrUser.send(JSON.stringify(userInfo));
     }
@@ -113,9 +106,6 @@ function addDefaultChats() {
          
     // GO through the array and 
     for (var i = 0; i < DEFAULT_CHATS.length; i++) {
-        
-        // TODO remove
-        console.log(DEFAULT_CHATS[i][0]);
 
         xhrArray[i].withCredentials = false;
 
@@ -125,12 +115,7 @@ function addDefaultChats() {
         // was successful.
         xhrArray[i].addEventListener("readystatechange", function() {
             if(this.readyState === 4) {
-                if(this.status != 201) {
-                    console.log(this.responseText + " Something went wrong.")
-                }
-                else {
-                    console.log(this.responseText + " The user was added to the chat.")
-                }
+                console.log(this.responseText)
             }
         });
            
@@ -159,6 +144,10 @@ function addDefaultChats() {
         <div className="wrapper">
             <div className="form">
                 <h1 className="title">Create Account</h1>
+                    <div className="subtitle">
+                    Read the code of conduct on the About tab
+                    before creating an account!
+                    </div>
                     <form onSubmit={createUser}>
                         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required/>
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}className="input" placeholder="Password"/>

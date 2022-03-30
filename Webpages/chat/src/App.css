@@ -69,6 +69,14 @@
   color: black !important;
 }
 
+.subtitle {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 1em;;
+}
+
 .web-chat-title {
   height: 10vh;
   font-style: bold;

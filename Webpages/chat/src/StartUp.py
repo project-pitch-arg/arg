@@ -55,6 +55,8 @@ for user in users:
     json_object = json.loads((userString))
     json_object["secret"] = hashlib.sha256(str(json_object["secret"]).encode('utf-8')).hexdigest()
 
+    json_object["first_name"] = json_object["username"]
+    json_object["last_name"] = ""
     # Send the request to create a user with payload and header.
     r = requests.post(
         'https://api.chatengine.io/users/',
@@ -120,14 +122,14 @@ f = open('ChatMessages.json',)
 messages = json.load(f)
 f.close()
 
+counter = 0
+
 # Iterate through all messages to send
 for message in messages:
 
     # Find the ID of the chat to send the message in
     # to have the right address for the server request.
     chatID = findChatId(chatIds, message["chat_name"])
-    print(chatID)
-    print(message["chat_name"])
 
     password = hashlib.sha256(message["password"].encode('utf-8')).hexdigest()
 
@@ -137,8 +139,16 @@ for message in messages:
         data=message,
         headers={"Project-ID": PROJECT_ID, "User-Name": message["user"], "User-Secret": password}
     )
-    # Print the result of the post request.
-    print(r.status_code)
+    # Print the result of the post request every 10 messages if nothing goes wrong.
+    if(r.status_code != 201):
+        print(r.status_code)
+        print("Something went wrong when printing a message in " + message["chat_name"] + ". Check the ChatMessages.json file." )
+    elif(counter == 10):
+        print("Sent 10 messages, currently sending messages in " + message["chat_name"] + ".")
+        counter = 0
+    
+    counter = counter + 1
+
 
 
     

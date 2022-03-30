@@ -18,8 +18,6 @@ const Modal = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const hashPassword = hashCode(password);
-    //TODO REmove
-    console.log(hashPassword + "login");
 
     const authObject = { 'Project-ID': projectID, 'User-Name': username, 'User-Secret': hashPassword };
 
