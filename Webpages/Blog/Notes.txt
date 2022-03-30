@@ -3,13 +3,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 1 ---------------
 
-- Ludvig;
-    Fixa B-p1 pussel med course codes så att de inte blir dubbletter
-
-- Lägg till sista pussel (B-c3)
-
-- Ändra café till cafe
-
 - Inlägg om Göteborg ('reklam')
 - Inlägg med Chalmersrykten
 - GU
