@@ -298,6 +298,14 @@
         "comment": "This is the main post to puzzle B-c4."
     },
     {
+        "date": [2022, 6, 7],
+        "poster": "Robot1312113",
+        "content": "Have you found something odd with a post lately? If you can arrive at the 8-letter answer, I'll give you a reward. Perhaps you should keep this in mind while trying to figure it out: \n ___ like us",
+        "isPuzzle": true,
+        "puzzleNr": "B-c4",
+        "comment": "This post is a helper post to puzzle B-c4"
+    },
+    {
         "date": [2022, 6, 9],
         "poster": "Fexjo",
         "content": "Today marks the day that I leave Sweden. It was nice while it lasted and I'm surely going to visit a lot in the future. But first, I need to finish my studies from home. I can't do everything abroad, some things has to be done in Great Britain. I've come to really enjoy this place, but there really is no place like home.",
