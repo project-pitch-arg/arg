@@ -2,7 +2,12 @@
     {
         "date": [2022, 1, 5],
         "poster": "Robot1312113",
-        "content": "WIP: Starting post",
+        "content": "Welcome to the blog Daily thoughts! You can read more about it on the About page, but basically it will just be me and my friend, Fexjo, writing about random things we think about during the day. We will check out the chat regularly, so please use it if you want to ask us something. Let's start writing, Fexjo! ＼(＾∀＾)メ(＾∀＾)ノ",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I had the thought that I should warn you ahead of time that Robot1312113 likes dinosaurs and puzzles. So you can expect to see a lot of that here.",
         "isPuzzle": false
     },
     {
@@ -47,7 +52,7 @@
     },
     {
         "poster": "Fexjo",
-        "content": "I figured that we haven't really showed much presence for our schools of choice lately and just thought I'd leave this here. To commemorate all the good times we've had.",
+        "content": "I figured that we haven't really showed much presence for our schools of choice lately and just thought I'd leave this here. To commemorate all the good times we've had and will have in the future.",
         "pictures": [["PostImages/ChalmersLogo.png", "Chalmers logo in gold."], ["PostImages/GUBuilding.jpg", "An old building belonging to Gothenburg University"]],
         "isPuzzle": false
     },
@@ -59,6 +64,16 @@
         "isPuzzle": true,
         "puzzleNr": "B-c2",
         "comment": "This puzzle is a helper post to puzzle B-c2"
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "Did you know... \n \n ...the dinosaur with the longest name is Micropachycephalosaurus? \n ...it is speculated that dinosaurs could live for 200 years? \n ...Elasmosaurus is up to 14 meters long, but half of the length comes from it's neck? \n ...the first dinosaur to be named is the Megalosaurus in 1824? \n \n I know all this by heart. As well as many other things, as is only proper for an enthusiast.(￣^￣)ゞ",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "How much memory do you think Robot1312113 has? And how much of it is used to store facts about dinosaurs?",
+        "isPuzzle": false
     },
     {
         "date": [2022, 2, 11],
@@ -77,6 +92,11 @@
         "date": [2022, 3, 2],
         "poster": "Fexjo",
         "content": "WIP: Why few content",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "It has been quite some time since I taught you something new about dinosaurs so of course it is time for more (o^ ^o)/! \n \n The blue whale is larger than most dinosaurs ever were. I would really like to see one in real life. (←_←) \n The smallest dinosaur, the Baby Mussarus, would fit in a shopping bag. \n Dinousaurs dominated for 165 million years, while humans have been here for only 2 million. What a difference. \n \n Did you learn anything new from my pool of knowledge today?",
         "isPuzzle": false
     },
     {

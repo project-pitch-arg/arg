@@ -22,6 +22,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Lägg till att man behöver ändra address till chatten när man lagt upp allt på en server i dokuemntation.
 
+- Design på Home
+
 --------------- Prio 2 ---------------
 
  - Kommentera mer kod. Framförallt chatten.
