@@ -15,9 +15,12 @@ export default function Home() {
     // along with a button to reach the "About"
     // page as well as the latest Post from "Posts".
     return (
-      <div>
-        <div class="content content-home-1">
-          <div class="help-text">
+      <div class="content">
+        <img src="RightFacingOrangeDino.png" class="home-dino"/>
+
+        <div class="homelist">
+
+          <div class="title-text">
             Welcome to Daily Thoughts Website
             <br/>
             Home of {USER_NAME_1} and {USER_NAME_2}
@@ -25,28 +28,20 @@ export default function Home() {
             Hope you enjoy your stay!
           </div>
 
-          <div class="help-text">
-            Is this your first time here? Click here:
+          <div class="shift-right">
+            The latest Post;
+            {puzzleHandler(postContent[0])}
+          </div>
+
+          <div align="center">
             <Link onClick={Help} to="/About">
               <img class="help-button" src={helpbutton}/>
             </Link>
           </div>
 
-          <div>
-            Latest Post 
-            {puzzleHandler(postContent[0])}
-          </div>
         </div>
-        
-        <div class="content content-home-2">
-          <div>
-            <img class="home-image" src={USER_PICTURE_1} />
-          </div>
-          
-          <div >
-            <img class="home-image" src={USER_PICTURE_2} />
-          </div>
-        </div>
+
+        <img src="LeftFacingOrangeDino.png" class="home-dino"/>
       </div>
     )
 }

@@ -59,29 +59,13 @@
 
 /* --------------------TabHome -------------------- */
 
-.content-home-1 {
-    height: 85vh;
-    position: relative;
-    width: 80%;
-    float: left;
-    flex-direction: column;
+.homelist {
+    background-color: var(--post-list-background);
+    overflow-x: hidden;   
+    overflow-y: auto;
 }
 
-.content-home-2 {
-    height: 85vh;  
-    position: relative;
-    width: 20%;
-    float: left;
-    flex-direction: column;
-}
-
-.help-button {
-    height: 50px;
-    width: 100px;
-    position: absolute;
-}
-
-.help-text {
+.title-text {
     font-size: xx-large;
     text-align: center;
     margin-bottom: 5%;
@@ -89,9 +73,19 @@
     position: relative;
 }
 
-.home-image {
-    width: 100%;
+.shift-right {
+    text-indent: 1vw;
+}
+
+.home-dino {
+    width: 25vw;
     height: auto;
+}
+
+.help-button {
+    height: 10vh;
+    width: 12vw;
+    margin-top: 5vh;
 }
 
 /* --------------------TabPosts -------------------- */
