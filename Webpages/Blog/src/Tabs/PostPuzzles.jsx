@@ -13,7 +13,10 @@ import ParkEntrance from "../Img/ParkEntrance.png";
 import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS, DUROS_IMAGE, ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE, CC_1_INDEX, CC_2_INDEX } from "../ChangeableValues";
 
 export default function Puzzles(post) {
-  const [password, setPassword] = useState("");
+
+  //const [password, setPassword] = useState("");
+
+
   // Checks if a post is a puzzle and in that case which puzzle it is.
   // Depending on the result it will return different displays.
   if(post.isPuzzle) {
@@ -36,7 +39,7 @@ export default function Puzzles(post) {
             <pre class="post-content">
               {post.content} 
               <form onSubmit={submitPassword(post)}>
-              <input type="text" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="???" required />
+              <input type="text" /*value={password} onChange={(e) => setPassword(e.target.value)}*/ className="input" placeholder="???" required />
               <div type="submit" />
               </form>
             </pre>
@@ -71,9 +74,9 @@ export default function Puzzles(post) {
   // Function to reveal passwordprotected content
   // when the password is correct.
   function submitPassword(post) {
-    if(password == post.secret) {
+    //if(password == post.secret) {
       post.hasSecret = false
-      }
+    //  }
   }
   // This function changes the color of the letters in a post, where the 
   // argument count is the "x":th letter of that type.
