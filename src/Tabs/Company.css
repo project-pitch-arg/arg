@@ -130,12 +130,13 @@ a {
     margin: auto;
 }
 
-#slideshow-container {
+.slideshow-container {
     height: 100%;
     width: 50%;
     float: right;
     margin: auto;
     margin-right: 50px;
+    align-items: center;
 
 }
 

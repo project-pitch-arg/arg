@@ -28,7 +28,7 @@ export default function AboutUs() {
     return(
 
         <div>
-          <div class="header"style={{backgroundImage: `url(${aboutUsHeaderImg})`, opacity: '60%'}}>
+          <div class="header"style={{backgroundImage: `url(${aboutUsHeaderImg})`}}>
             <h1>About Us</h1>
           </div>
 

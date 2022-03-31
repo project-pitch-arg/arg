@@ -31,25 +31,61 @@ export default function OurWork() {
     const thirdVar  = 2;
     const fourthVar = 6;
 
-    // console.log("First: " + countFirst + ", Second: " + countSecond + ", Third: " + countThird + ", Fourth: " + countFourth);
+    const counted = [countFirst, countSecond, countThird, countFourth];
+    const countCode = [firstVar, secondVar, thirdVar, fourthVar];
+
     
     var codeCracked = false;
-    if (countFirst === firstVar && countSecond === secondVar && countThird === thirdVar && countFourth === fourthVar) {
-      codeCracked = true;
+    
+    const checkCodeCracked = () => {
+      if (JSON.stringify(counted) === JSON.stringify(countCode)) {
+        codeCracked = true;
+      }
+
+      if (codeCracked) {
+        console.log(617264);
+        setTimeout(function() {
+          console.clear();
+        }, 5000)
+      }
+
+    }
+    
+    const checkHigherBound = () => {
+      var n = 0;
+      
+      for (let i = 0; i < counted.length; i++) {
+        if (counted[i] > countCode[i]) {
+          n++;
+        } 
+      }
+
+      if (n >= 1) {
+        resetCount();
+      }
+    }    
+    
+    const onClickFirst = () => {
+      if (countSecond >= 1 || countThird >= 1 || countFourth >= 1) {
+        resetCount();
+      }
+      setCountFirst(countFirst + 1);
     }
 
-    if (codeCracked) {
-      console.log(617264);
-      setTimeout(function() {
-        console.clear();
-      }, 2000)
-    } 
+    const resetCount = () => {
+        setCountFirst(0);
+        setCountSecond(0);
+        setCountThird(0);
+        setCountFourth(0);
+    }
 
-
+    checkCodeCracked();
+    checkHigherBound();    
+    
     return (
         <div>
-          <div class="header" style={{backgroundImage: `url(${header})`, opacity: '60%'}}>
-            <h1>Our Work</h1>
+          <div class="header" style={{backgroundImage: `url(${header})`}}>
+            <h1 style={{opacity: '100%'}}>Our Work</h1>
           </div>
 
           <div class="content">
@@ -74,7 +110,7 @@ export default function OurWork() {
               <div class="slideshow-container">
               <Slide easing="ease" autoplay={true} indicators={true}>
               <div class="slide-img">
-                <div onClick={() => setCountFirst(countFirst + 1)} style={{'backgroundImage': `url(${slideImage1})`}}>
+                <div onClick={() => onClickFirst()} style={{'backgroundImage': `url(${slideImage1})`}}>
                   <span>{firstVar}</span>
                 </div>
               </div>
