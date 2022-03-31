@@ -327,12 +327,14 @@ export default function Puzzles(post) {
   // TODO: add name of document.
   function puzzleBp1(post) {
     post = changeDinos(post);
+    post.date[1] = CLUE_DATE;
+
     // This post has the puzzle in it.
     if (post.comment == "This is the main post to puzzle B-p1.") {
       return (
         <div class="post">
           <div class="post-date">
-            {CLUE_DATE}
+            {post.date[0]}.{post.date[1]}.{post.date[2]}
           <div class="post-name"> 
             {post.poster} 
           {changeString(post,changeColor(post, COURSE_CODE_1, CC_1_INDEX),changeFont(post, COURSE_CODE_2, CC_2_INDEX))}
@@ -349,7 +351,7 @@ export default function Puzzles(post) {
     return (
       <div class="post">
         <div class="post-date">
-          {CLUE_DATE}
+          {post.date[0]}.{post.date[1]}.{post.date[2]}
         <div class="post-name"> 
           {post.poster} 
         <pre class="post-content">
