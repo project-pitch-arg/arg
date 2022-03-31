@@ -217,10 +217,10 @@ export default function Puzzles(post) {
     if (ENCRYPTION_KEY[1][1] < 27 || ENCRYPTION_KEY[1][1] > 52) {
       throw "Second number of encryption key must be within bounds [27,53].";
     }
-    if (ENCRYPTION_KEY[2][1] < 53 || ENCRYPTION_KEY[1][1] > 78) {
+    if (ENCRYPTION_KEY[2][1] < 53 || ENCRYPTION_KEY[2][1] > 78) {
       throw "Third number of encryption key must be within bounds [53,78].";
     }
-    if (ENCRYPTION_KEY[3][1] < 79 || ENCRYPTION_KEY[1][1] > 100) {
+    if (ENCRYPTION_KEY[3][1] < 79 || ENCRYPTION_KEY[3][1] > 100) {
       throw "Fourth number of encryption key must be within bounds [79,100].";
     }
 
