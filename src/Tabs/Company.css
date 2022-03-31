@@ -1,3 +1,5 @@
+
+
 body {
     font-family: 'Lato', sans-serif;
     background-color:#a6a6a6;
@@ -15,9 +17,9 @@ body {
     margin-left: 10%;
     margin-right: 10%;
 
-    background-attachment:scroll;
+    background-attachment:fixed;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 1600px 600px;
 }
 
 h1 {
