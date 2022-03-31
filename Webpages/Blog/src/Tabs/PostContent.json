@@ -342,5 +342,13 @@
         "poster": "Fexjo",
         "content": "WIP: Robot is missing",
         "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Example of post with password",
+        "isPuzzle": false,
+        "hasSecret": true,
+        "secret": "password123",
+        "secretContent": "You solved it!"
     }
 ]

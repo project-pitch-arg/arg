@@ -28,6 +28,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
  - Kommentera mer kod. Framförallt chatten.
 
+ - Titta på error i console och kommandotolken
+
  - Add logo to website
 
 - Organisera css-filer
