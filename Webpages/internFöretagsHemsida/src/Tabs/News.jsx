@@ -31,7 +31,7 @@ export default class News extends Component{
                     {
                         Object.keys(this.news).map((key) => {
                             return (<List
-                               class="listItem"
+                               class="list"
                                itemLayout="horizontal"
                                dataSource={key}
                                renderItem={item => (
@@ -39,9 +39,9 @@ export default class News extends Component{
                                    <List.Item.Meta
                                      title={<h2>{this.news[item].title + " - " + this.news[item].date}</h2>}
                                      description={this.news[item].img ?
-                                     (<div><img class="news" src={require("../images/" + this.news[item].img + ".jpg")} alt={"CEO" }/><p class="newsText">{this.news[item].text}</p></div>)
+                                     (<div class="listItem"><img class="news" src={require("../images/" + this.news[item].img + ".jpg")} alt={"CEO" }/><p class="newsText">{this.news[item].text}</p></div>)
                                      :
-                                     (<p class="newsText">{this.news[item].text}</p>)}
+                                     (<div class="listItem"><p class="newsText">{this.news[item].text}</p></div>)}
                                    />
                                  </List.Item>
                                )}

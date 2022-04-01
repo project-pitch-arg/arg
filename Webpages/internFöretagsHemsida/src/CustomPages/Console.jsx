@@ -19,7 +19,7 @@ export default class Console extends Component{
         "/clear clears the console"
         ];
         this.securityAnswers = [
-        "Lexi", "lifeguard", "Comillas"
+        "Lexi", "Frederick", "Comillas"
         ]
         this.adminCode = "3186";
         this.adminOn = false;
@@ -103,8 +103,8 @@ export default class Console extends Component{
                         }
                         else {
                             this.previousCommands.push("Security Questions: ");
-                            this.previousCommands.push("First name of pet. ");
-                            this.previousCommands.push("First Job.");
+                            this.previousCommands.push("Name of pet. ");
+                            this.previousCommands.push("Name of childhood friend");
                             this.previousCommands.push("Hometown. ");
                             this.previousCommands.push("Answer question in format /changePassword [user] [answer 1] [answer2] [answer3]");
                         }
