@@ -51,6 +51,18 @@
             "comment": {
                 "title": "General comment, usually for info about puzzle.",
                 "type": "string"
+            },
+            "secret": {
+                "title": "A password to access the secretContent.",
+                "type": "string"
+            },
+            "hasSecret": {
+                "title": "Check if a password is present in the post.",
+                "type": "boolean"
+            },
+            "secretContent": {
+                "title": "The hidden text that can only be accessed through the password.",
+                "type": "string"
             }
         },
         "additionalProperties": false
