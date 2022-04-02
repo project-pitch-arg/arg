@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './TabContent.css';
-import News from './News';
 
 export default class Home extends Component{
     render(){

@@ -44,7 +44,6 @@ export default class App extends Component {
     }
     logOut = () =>{
             localStorage.removeItem("user");
-            console.log("logOut");
             this.setState({loggedIn: false});
     }
     loadComponent(Tag){
@@ -54,14 +53,12 @@ export default class App extends Component {
     }
   render(){
       var Tag = Login;
-      console.log(this.state.loggedIn);
       if(this.state.loggedIn){
-          console.log("loggedIn");
           Tag = lazy(() => import("./TopBar/TopBar"));
       }
       return (
         <div className="App">
-            <div class="Login-component" style={{height: this.state.height, overflowY: 'scroll'}}>
+            <div className="Login-component" style={{height: this.state.height, overflowY: 'scroll'}}>
                 <Suspense fallback={<Login/>}>
                      <Tag logIn={this.logIn} logOut={this.logOut} loggedIn={this.state.loggedIn}/>
                 </Suspense>

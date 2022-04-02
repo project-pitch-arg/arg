@@ -99,7 +99,7 @@ export default class Policy extends Component{
                     <h1 class="underline">Policy Documents</h1>
                   {
                     this.location.map((file) => {
-                        return <div class="pdfItemDiv"><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
+                        return <div class="pdfItemDiv" key={file}><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
                     })
                   }{!this.state.hidden ? (
                       <form onSubmit={this.handleInput}>

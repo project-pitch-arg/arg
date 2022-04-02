@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {basicFetchData} from "../Client/Client";
-import 'antd/dist/antd.css';
 import './TabContent.css';
 import {List} from "antd";
 
@@ -34,10 +33,11 @@ export default class News extends Component{
                                class="list"
                                itemLayout="horizontal"
                                dataSource={key}
+                               key={key}
                                renderItem={item => (
                                  <List.Item>
                                    <List.Item.Meta
-                                     title={<h2>{this.news[item].title + " - " + this.news[item].date}</h2>}
+                                     title={this.news[item].title + " - " + this.news[item].date}
                                      description={this.news[item].img ?
                                      (<div class="listItem"><img class="news" src={require("../images/" + this.news[item].img + ".jpg")} alt={"CEO" }/><p class="newsText">{this.news[item].text}</p></div>)
                                      :

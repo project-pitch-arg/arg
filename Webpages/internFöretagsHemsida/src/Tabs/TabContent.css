@@ -1,9 +1,4 @@
-h3{
-    font-size: 18px;
-}
-h2{
-    color: white;
-}
+
 .homeDiv{
     display:flex;
     height: 90%;
@@ -99,7 +94,6 @@ img{
     max-width: 80%;
     border-radius: 50px;
     box-shadow: 2px 2px gray;
-
 }
 img.graph{
     max-width: 40%;
@@ -108,7 +102,7 @@ img.graph{
     margin: 10px;
 }
 img.news{
-    width: 100%;
+    width: 80%;
     border-radius: 0;
     object-fit: cover;
 }
@@ -138,9 +132,19 @@ p.newsText{
     padding: 10px;
     border-radius: 40px;
     margin-bottom: 10px;
-    background-color: #0d5d92;
-    color: white;
+    background-color: white;
+    color: black;
 }
 .switchAccount:hover{
     background-color: #069ac6;
+}
+h2{
+    color: white;
+    font-size: 22px;
+}
+h3{
+    color: black;
+}
+li {
+    list-style-type: none;
 }

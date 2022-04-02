@@ -12,7 +12,6 @@ export default class TopBar extends Component {
         super(props);
         this.locations = [];
         this.customLocations = [];
-        this.addCustomTabs("Quiz");
     }
 
     async componentDidMount(){
@@ -78,18 +77,18 @@ export default class TopBar extends Component {
             this.removeCustomTabs("Console");
           }
           return (
-                <div class="topbar">
-                    <header><h1 class="header">The Company</h1></header>
+                <div className="topbar">
+                    <header><h1 className="header">The Company</h1></header>
                     <BrowserRouter>
-                      <div class="menyDiv">
+                      <div className="menyDiv">
                       <ul id='topbar-ul'>
                       {
                         this.locations.map((file, index) => {
                             if(file === "Account"){
-                                return (<li id='topbar-li-Right' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
+                                return (<li id='topbar-li-Right' className='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
                             }
                             else {
-                                return (<li id='topbar-li' class='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
+                                return (<li id='topbar-li' className='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
                             }
                         })
                       }
