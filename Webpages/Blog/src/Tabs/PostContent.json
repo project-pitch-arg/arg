@@ -161,6 +161,17 @@
         "comment": "This is the main post to puzzle B-c3."
     },
     {
+        "date": [2022, 3, 21],
+        "poster": "Fexjo",
+        "content": "I remember last year around this time when we made a bunch of pancakes for Pancake Day. I wonder if Swedes celebrate Pancake day as well?",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "So I asked around and apparently in Sweden they don't do pancakes for this holiday. They instead eat 'Semlor' which is a kind of bun with whipped cream and almond paste. Surprisingly good, though don't talk about it when in Sweden. For some people it's a very controversial topic. I got dragged into this large debate of the question if a semla is a sandwich. It then transitioned into if hamburgers are sandwiches and then all manner of food. I did actually get a bit too involved in the argument in the end. Though I don't think I should revisit that topic and open up that can of worms.",
+        "isPuzzle": false
+    },
+    {
         "poster": "Fexjo",
         "content": "Both our resident robot and I have been feeling a bit cooped up inside for a while. And we haven't really done much together lately. So we decided to take a bit of a walk. Just enjoy the sights and explore parts of the city. Even living in Gothenburg for an entire lifetime will still leave many places unexplored. Not to mention that I've only been here for a year. We saw many beautiful sights on our exploration, though one stuck out to me. We came across this as we were wandering aimlessly along a cycling route. The route is called 'Kattegattsleden' for the avid cyclists that are interested. Apparently it stretches for 390 km, quite a distance to be sure. Back on topic though, the bridge is truly a marvel of engineering. Even I can tell that much without much knowledge in structural architecture. Could do with a paint job but hey, I'm not in charge. ",
         "pictures": [["PostImages/Kattegattleden.jpg", "Massive bridge by cycling route."]],
@@ -315,6 +326,12 @@
         "comment": "This post is helper post 2 to puzzle B-p1"
     },
     {
+        "date": [2022, 5, 4],
+        "poster": "Robot1312113",
+        "content": "Today is the day to rewatch the old Star Wars movies. My favorite one is A New Hope, which I know isn't that original of me but I think the nostalgia is getting to me. (─‿‿─)",
+        "isPuzzle": false
+    },
+    {
         "poster": "Robot1312113",
         "content": "When people tell me to learn R, they say I should familiarize myself with an entirely new programming language. When they tell a baby to learn R, they just want them to pronounce a letter correctly. Life is unfair. (╥﹏╥)",
         "isPuzzle": false
@@ -342,6 +359,31 @@
     {
         "poster": "Fexjo",
         "content": "I feel that lately Robot1312113 has been in a peculiar mood. I'm not sure what's causing it but hopefully he'll turn around soon. On another note the weirdest thing happened today. I was about to eat lunch and grabbed my salad from the fridge like usual. But when I sat down imagine my surprise when I noticed that there was no grapefruit in my salad! I thought I had done a regular grapefruit and avocado salad, something I don't eat often but that can be quite delicious when I'm in the mood. Something must have happened to it, I will have to keep an eye out but it will remain a mystery for now.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I got into a particular mood yesterday and thus decided to look up what kinds of museums were available in Gothenburg. There were surprisingly many that sounded interesting. We have the classic art museums, other ones for the history of the city, and we already mentioned Universeum earlier on this website. Though it was a couple of months ago. One that i'm really interested in is the Natural History Museum, it just seem to have so many of the things that really speak to me. Then we have the Volvo museum. Not really my thing but yet another sign of how some of the people here really love that brand. It's really a staple of Sweden I feel like. Then there's tens more that I haven't mentioned yet as well. Some of them include some old boats, with some of them even being old boats. That does seem quite interesting to me. Though maybe that's just todays mood speaking.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "Fexjo, me, and a bunch of people from school got together for a game night. ٩(◕‿◕｡)۶ Plenty of board games and snacks. I'm writing this to argue my point that Settlers of Catan is better than Carcassonne. That's right Fredrik, I'll get the people on my side. ヾ(￣ー￣(≧ω≦*)ゝ",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Today I saw some geese and it got me thinking. What separates a goose from a duck? I know, I'm asking the important questions here. So I decided to find out and then display it here so more people know. I feel kind of like a teacher with this. Maybe being in all those classrooms has rubbed off on me, who knows. The main difference between the birds are that geese are bigger. Not too much bigger, but enough to make a noticeable difference. Another is that ducks are more colorful. Which sidetracked me into searching for all the different colors a duck can have. An interesting topic for another time. The other differences are that geese live longer and are herbivores. Yes, you read that correct, ducks are bloodthirsty killers who feast on meat of the weak. Well, they do eat meat but maybe not to that extent.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I was walking on town near the park today and saw a bunch of people on a segway tour. It honestly looked like a lot of fun. I'm going to look into it and see if I can maybe participate sometime.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "My friends are lunatics. They don't like The Office. How can you not like The Office! (o_O) I'm frankly left speechless.",
         "isPuzzle": false
     },
     {
