@@ -20,6 +20,11 @@
         "comment": "This puzzle is solved in the chat."
     },
     {
+        "poster": "Fexjo",
+        "content": "As an exchange student I'm keen to learn interesting facts about Sweden. I've noticed some international aspects that I never really thought about but now realize are a staple of Sweden and it's culture. For one, we have the Nobel prize. The prestigious award that originated from Alfred Nobel who was, you guessed it, Swedish. I guess we can't go through this list without mentioning IKEA. A major furniture store that also sells some delicious meatballs. Although I did know that it came from Sweden I did not know the origin of the name. In fact, I just learnt that the other day. Turns out the founders name is Ingvar Kamprad, which constitutes the first two letters, and he grew up on a farm named Elmtaryd near a village called Agunnaryd. Very interesting stuff, though I'm very happy that I don't have to pronounce any of those names. Spotify is apparently Swedish as well, which I had no idea of. For those who don't know Spotify is a service that provides music on your computer or your phone. Kind of like Apple Music but better. And yes, I use Apple products, though we certainly don't endorse any brands on this website. The famous clothing store H&M is apparently also Swedish, the more you know. And I've never seen so many Volvo's in my life in one place. Probably because it's the classic Swedish vehicle brand. Some other things worth a mention is Pirate Bay, Minecraft, and a bunch of pop music composing. Look up some of the famous pop songs and you'll be surprised with how many were done with the help of a Swede.",
+        "isPuzzle": false
+    },
+    {
         "poster": "Robot1312113",
         "content": "Have you ever sort of sang in your bad no-one-can-hear-me-so-it-doesn't-matter-voice in the shower only to remember that you have guests? Then you know how I felt today. (－‸ლ)",
         "isPuzzle": false
@@ -46,8 +51,18 @@
         "isPuzzle": false
     },
     {
+        "poster": "Robot1312113",
+        "content": "Today I discovered something truly horrible, an injustice that can't be left untreated. Fexjo has been in Sweden for some time but he's never had Fika! Σ(°ロ°) Obviously I set out to fix this crime against nature as soon as I found out and he's now experienced the pinnacle of Swedish culture. My work here is done. (⌐■_■)",
+        "isPuzzle": false
+    },
+    {
         "poster": "Fexjo",
         "content": "My camera just got smashed after I stumbled and dropped it. Now I'm in the market for a new one. I only have one issue. Cameras are so expensive! It's been so long since I had to buy a new one that I had forgotten the price of quality. I might just have to stick to my guns and go with a cheaper alternative. I'm not made of money after all, especially not for what is, ultimately, just a hobby.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "I've been struggling to think of what to include on this website. It seems to me that weeks can pass before anything interesting happens. Thus I asked Fexjo what I should include and he told me to just write whatever comes to mind. So here goes: strain, salesperson, sigh, simplicity, sheet, substitute. Today my mind was focused on the letter S. I'm hoping for W tomorrow but we'll see.",
         "isPuzzle": false
     },
     {
@@ -133,6 +148,11 @@
         "isPuzzle": false
     },
     {
+        "poster": "Fexjo",
+        "content": "I'm sure that a lot of people are familiar with shower thoughts. Or at least the idea of them, they don't necessarily have to happen in the shower. They're just random thoughts that pop into your mind and when you think a bit deeper on them they make a lot of sense. Mine today was how people usually say to 'Sleep something off' which is equivalent to when Robot tells me to turn a device off and on again to solve the tech issue I'm having. The crazy thing is that most of the time this works for both my devices and humans.",
+        "isPuzzle": false
+    },
+    {
         "date": [2022, 3, 19],
         "poster": "Robot1312113",
         "content": "So today I have a message for you all through the words of our betters. Can you figure it out? \n \n Kathryn Davis 3 \n Nelson Mandela 7 \n Dr. Who 12 \n Eleanor Roosevelt 8 \n Margaret Mead 9 \n Steve Miller 1, \n Jay Leno 20 \n John D Rockefeller 13! \n \n Good luck! (￣▽￣)ノ",
@@ -152,10 +172,23 @@
         "isPuzzle": false
     },
     {
+        "poster": "Fexjo",
+        "content": "Have you heard of the butterfly effect? Where a single flap of a butterfly's wings can cause a tornado in another part of the world. A cascading series of events that causes something huge from the tiniest of things. My teacher did not accept that excuse to why I was late this morning.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I've heard a lot of nice things about the 'Skärgård', the collection of islands outside Gothenburg. I would love to go on a boat trip and explore but it will probably have to wait for like a month for the weather to improve. I've been thinking about it for a while now actually but now that it feels so close to proper spring I feel even more drawn to it. I'll definitely post something here if the trip ever takes place.",
+        "isPuzzle": false
+    },
+    {
         "date": [2022, 4, 1],
         "poster": "Robot1312113",
         "content": "WIP: April fools",
-        "isPuzzle": false
+        "isPuzzle": false,
+        "hasSecret": true,
+        "secret": "WIP",
+        "secretContent": "WIP"
     },
     {
         "date": [2022, 4, 1],
@@ -233,7 +266,7 @@
     },
     {
         "poster": "Fexjo",
-        "content": "Have you heard of the butterfly effect? Where a single flap of a butterfly's wings can cause a tornado in another part of the world. A cascading series of events that causes something huge from the tiniest of things. My teacher did not accept that excuse to why I was late this morning.",
+        "content": "It's Easter time around now and I've been buying some chickens and eggs for decoration. But it got me thinking about holidays in general. I'm more of a christmas guy myself but I do enjoy most holidays. I was asking some of my friends about their favorite holidays and some of them mentioned Midsummer. I didn't know this was a thing but apparently Swedish people dance around a giant green pole that's supposed to depict a phallus during the middle of summer. To each their own I guess. Though if history and details of holidays in general are discussed I'm sure that many similar elements will come up for the other holidays.",
         "isPuzzle": false
     },
     {
@@ -366,6 +399,11 @@
         "isPuzzle": true,
         "puzzleNr": "B-p1",
         "comment": "This is the main post to puzzle B-p1."
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I've had a lot less contact with Robot after he started working. The frustrating thing is that he won't even tell me where he's working, only that it's at some kind of company. I've never really been that good at solving his puzzles but he's really keen on letting me figure this out on my own. Not sure I'll even bother, I'm sure he'll cave eventually and just tell me. I'm also thinking to schedule some talks or gaming session with him soon. I do miss the amount of time we spent together while we were still in the same country.",
+        "isPuzzle": false
     },
     {
         "date": [2022, 6, 23],
