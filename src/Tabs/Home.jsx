@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './Company.css';
 import 'react-slideshow-image/dist/styles.css';
 
-import header from '../img/header.jpg';
+import header from '../img/header.png';
 import introImg from '../img/intro-img.jpg';
 
 import AIImg from '../img/AI_Image.jpg';
