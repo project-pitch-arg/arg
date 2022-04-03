@@ -30,14 +30,24 @@
         "isPuzzle": false
     },
     {
+        "poster": "Robot1312113",
+        "content": "Just a happy dinosaur to make your day better.",
+        "pictures": [["PostImages/BabyDino.png", "Dino!!!"]],
+        "isPuzzle": false
+    },
+    {
         "poster": "Fexjo",
         "content": "Do you ever think about life on other planets? I certainly hope they, on whatever planet they may be, are not as destructive as we are.",
         "isPuzzle": false
     },
     {
+        "poster": "Fexjo",
+        "content": "I've been talking to some friends recently and it seems that most people have some sort of pet. Mostly cats and dogs but some have interesting ones like iguanas or hamsters. One even has a collection of spiders and another collects snakes. For my part, although a pet sounds appealing, I have my hands full taking care of Robot. I think an update to his operating system would be prudent soon.",
+        "isPuzzle": false
+    },
+    {
         "poster": "Robot1312113",
-        "content": "Just a happy dinosaur to make your day better.",
-        "pictures": [["PostImages/BabyDino.png", "Dino!!!"]],
+        "content": "I just saw your post from yesterday Fexjo. Why are you being so mean? (ಡ‸ಡ) I mean, if anything, we're doing a cooperative effort here. I remember just two days ago when I had to take an hour-long trip to make sure that you had the right school books for your exercise session. (≖ ͜ʖ≖)",
         "isPuzzle": false
     },
     {
@@ -101,6 +111,11 @@
     {
         "poster": "Robot1312113",
         "content": "Did you know that the telescope wasn't invented until roughly 300 years after glasses? (⊙_⊙) Both are lenses, so I expected it to be more similar. It is basically the same thing, after all.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Robot and I tried karaoke today. I think it's best to simply say, never again... (￢_￢;)",
         "isPuzzle": false
     },
     {
