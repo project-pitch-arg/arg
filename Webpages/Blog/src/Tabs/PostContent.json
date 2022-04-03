@@ -21,7 +21,7 @@
     },
     {
         "poster": "Fexjo",
-        "content": "As an exchange student I'm keen to learn interesting facts about Sweden. I've noticed some international aspects that I never really thought about but now realize are a staple of Sweden and it's culture. For one, we have the Nobel prize. The prestigious award that originated from Alfred Nobel who was, you guessed it, Swedish. I guess we can't go through this list without mentioning IKEA. A major furniture store that also sells some delicious meatballs. Although I did know that it came from Sweden I did not know the origin of the name. In fact, I just learnt that the other day. Turns out the founders name is Ingvar Kamprad, which constitutes the first two letters, and he grew up on a farm named Elmtaryd near a village called Agunnaryd. Very interesting stuff, though I'm very happy that I don't have to pronounce any of those names. Spotify is apparently Swedish as well, which I had no idea of. For those who don't know Spotify is a service that provides music on your computer or your phone. Kind of like Apple Music but better. And yes, I use Apple products, though we certainly don't endorse any brands on this website. The famous clothing store H&M is apparently also Swedish, the more you know. And I've never seen so many Volvo's in my life in one place. Probably because it's the classic Swedish vehicle brand. Some other things worth a mention is Pirate Bay, Minecraft, and a bunch of pop music composing. Look up some of the famous pop songs and you'll be surprised with how many were done with the help of a Swede.",
+        "content": "As an exchange student I'm keen to learn interesting facts about Sweden. I've noticed some international aspects that I never really thought about but now realize are a staple of Sweden and it's culture. For one, we have the Nobel prize. The prestigious award that originated from Alfred Nobel who was, you guessed it, Swedish. I guess we can't go through this list without mentioning IKEA. A major furniture store that also sells some delicious meatballs. Although I did know that it came from Sweden I did not know the origin of the name. In fact, I just learnt that the other day. Turns out the founder's name is Ingvar Kamprad, which constitutes the first two letters, and he grew up on a farm named Elmtaryd near a village called Agunnaryd. Very interesting stuff, though I'm very happy that I don't have to pronounce any of those names. Spotify is apparently Swedish as well, which I had no idea of. For those who don't know Spotify is a service that provides music on your computer or your phone. Kind of like Apple Music but better. And yes, I use Apple products, though we certainly don't endorse any brands on this website. The famous clothing store H&M is apparently also Swedish, the more you know. And I've never seen so many Volvo's in my life in one place. Probably because it's the classic Swedish vehicle brand. Some other things worth a mention is Pirate Bay, Minecraft, and a bunch of pop music composing. Look up some of the famous pop songs and you'll be surprised with how many were done with the help of a Swede.",
         "isPuzzle": false
     },
     {
@@ -109,6 +109,16 @@
         "comment": "This puzzle is solved in the chat."
     },
     {
+        "poster": "Fexjo",
+        "content": "Recently, my collection of the names of trams have not gone well. I keep encountering those I already have.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Someone once told me that counting the brush strokes when brushing your teeth in the morning will wake you up. So I tried that today. It just made me brush slower so that my brain could catch up...",
+        "isPuzzle": false
+    },
+    {
         "poster": "Robot1312113",
         "content": "Did you know that the telescope wasn't invented until roughly 300 years after glasses? (⊙_⊙) Both are lenses, so I expected it to be more similar. It is basically the same thing, after all.",
         "isPuzzle": false
@@ -141,6 +151,16 @@
         "isPuzzle": false
     },
     {
+        "poster": "Robot1312113",
+        "content": "I rarely read books unless I really have to (except those about dinosaurs, of course!). But the other day, I found one introduciong more advanced physics in terms a layman would know. I thought I could give it a try to understand what Fexjo's talking about, but forgot to note down the title. And I can't find it again (￣ ￣|||).",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "So I know I said I wanted to see a whale the other day to get an idea of the size dinosaurs have.  And how could I have missed this (⊙_⊙)! There is one, here in Gothenburg! Appaerantly, it washed up close to here in 1865 and can now be found in the natural history museum. I need to go and see it! ─=≡Σ((( つ＞＜)つ",
+        "isPuzzle": false
+    },
+    {
         "poster": "Fexjo",
         "content": "A common stereotype of students is that they are quite lazy. They come late to class, they don't do all the work assigned to them, and they constantly complain about everything they have to do. Thus, I feel justified in complaining about my latest essay assignment. It feels like I just ran a marathon, and not in a good way. On to better news though, highest grade in class. I'm still amazed with how fast the teacher grades the assignments in this course, I mean, it's barely been three hours. Simply incredible.",
         "isPuzzle": false
@@ -168,12 +188,22 @@
         "isPuzzle": false
     },
     {
+        "poster": "Robot1312113",
+        "content": "Did you feel that the website is a bit unfamiliar? Then you're right! We changed some design to make it easier to read things. And it looks quite a lot better than before if I do say so myself. <(￣︶￣)>",
+        "isPuzzle": false
+    },
+    {
         "date": [2022, 3, 19],
         "poster": "Robot1312113",
         "content": "So today I have a message for you all through the words of our betters. Can you figure it out? \n \n Kathryn Davis 3 \n Nelson Mandela 7 \n Dr. Who 12 \n Eleanor Roosevelt 8 \n Margaret Mead 9 \n Steve Miller 1, \n Jay Leno 20 \n John D Rockefeller 13! \n \n Good luck! (￣▽￣)ノ",
         "isPuzzle": true,
         "puzzleNr": "B-c3",
         "comment": "This is the main post to puzzle B-c3."
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "Exam week is over!!! ヽ(*⌒▽⌒*)ﾉ",
+        "isPuzzle": false
     },
     {
         "date": [2022, 3, 21],
@@ -192,9 +222,16 @@
         "pictures": [["PostImages/Kattegattleden.jpg", "Massive bridge by cycling route."]],
         "isPuzzle": false
     },
+
     {
+        "poster": "Fexjo",
+        "content": "Robot talked me into tasting 'fil' today. It's a dairy product, with a texture similar to yoghurt. I was a bit hesitant, as it is made by fermenting cow's milk which doesn't sound tasty at all. But it was not to bad. With some nice cereals, it could be a new addition to my breakfast table. As a side note, it is apparently a dairy product lactose intolerants can tolerate better than usual.",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 3, 25],
         "poster": "Robot1312113",
-        "content": "How can someone be so unlucky? My alarm did not go off. I missed the tram despite skipping breakfast. It was even raining. Of course I was late after all that. When I arrived I even discovered I forgot my charger. So my computer died. To top it all off I spilled my drink during lunch. And that is were we are now. What is this? (◞‸◟；) This sad robot hopes the rest of the day will be better. Please. ",
+        "content": "Today is waffle day! It is a thing that swedes do. We have days for all types of things. Pancake day, muffin day, burger day, fruit day, egg day, cinnamon bun day... The list is really long. Anyway, it menas that I will get Fexjo to make som waffles today. The ones he makes are awesome (っ˘ڡ˘ς).",
         "isPuzzle": false
     },
     {
@@ -325,6 +362,22 @@
         "isPuzzle": false
     },
     {
+        "poster": "Fexjo",
+        "content": "As Robot really likes puzzles and stuff, so I gave him one with a lot of pieces as a present. I think a puzzle with 5 000 pieces will keep him occupied for a while. There was one with 10 000 pieces as well, but the 5 000 pieces one look way more fun, so I went with that.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "We walked up and up and up and up to a lookout with view over Gothenburg today. It was a long way up in the warm weather but the view was awesome. You'll have to take my word for it though, as couldn't take any pictures to share because both our phones were out of battery ╮(︶︿︶)╭.",
+        "isPuzzle": false
+    },
+    {
+        "date": [2022, 4, 30],
+        "poster": "Fexjo",
+        "content": "WIP: Something about Valborg",
+        "isPuzzle": false
+    },
+    {
         "date": [2022, 5, 1],
         "poster": "Robot1312113",
         "content": "There's a bunch of interesting ciphers out there. The famous ones, like Caesar, Alberti, or Vigenère. But also some more obscure ones, like Phaistos, Voynich, or Bellaso. Personally, I favor variants of the famous ones. (￣▽￣)ノ Alberti is the most famous Cipher Disk as an example, but there's also so many more Cipher Disks out there. Take the Aeneas, which existed 5th century BC, way before Alberti! Σ(O_O) For some more modern alternatives we have the Union Cipher disk or the Mexican Army Wheel. This is such a fascinating topic, I could talk about them all day. I recommend checking out a physical cipher, something to play around with in your hands, it's very interactive and loads of fun. ヽ(o^ ^o)ﾉ",
@@ -347,8 +400,23 @@
         "isPuzzle": false
     },
     {
+        "poster": "Fexjo",
+        "content": "I challeged myself to cook something I haven't done before today. It was a fairly complicated recipe. It turned out really tasty, but didn't really look like the picture. Is it just me, or do others also never get it to look like the version in the recipe?",
+        "isPuzzle": false
+    },
+    {
         "poster": "Robot1312113",
         "content": "When people tell me to learn R, they say I should familiarize myself with an entirely new programming language. When they tell a baby to learn R, they just want them to pronounce a letter correctly. Life is unfair. (╥﹏╥)",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "Fexjo made me jealous with his vacation in Spain, so I went on a trip! It was only during the weekend. And only to Stockholm, the capital of Sweden. So it was not much compared to Spain, but I had really fun. I took some friends with me and we explored all sorts of places none of us hade been to before.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I got a haircut today. It was a different experience compared to back home.",
         "isPuzzle": false
     },
     {
@@ -367,6 +435,16 @@
         "isPuzzle": false
     },
     {
+        "poster": "Fexjo",
+        "content": "Eyes are really fascinating. They can be so many colours and sometimes they even seem to change with the lighting. It is even possible to have different coloured eyes, or even parts of a different colour in the same eye!",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Robot suggested that we should do some more outdoor activities now that it is getting warmer outside. But did it have to be swimming? I shudder just thinking about it. It is not something I like to do much and it is still way to cold for me to consider it at all.",
+        "isPuzzle": false
+    },
+    {
         "poster": "Robot1312113",
         "content": "My god, I almost had a heart attack today during lunch. Someone, I still don't know who, had put grapefruit, I reiterate, GRAPEFRUIT, in my salad. (‡▼益▼) Is there any worse crime a man can commit? I doubt it. Luckily I was observant enough to not have to suffer through something as terrifying as, and it pains me to even imagine it, eat it. ..・ヾ(。＞＜)シ",
         "isPuzzle": false
@@ -374,6 +452,11 @@
     {
         "poster": "Fexjo",
         "content": "I feel that lately Robot1312113 has been in a peculiar mood. I'm not sure what's causing it but hopefully he'll turn around soon. On another note the weirdest thing happened today. I was about to eat lunch and grabbed my salad from the fridge like usual. But when I sat down imagine my surprise when I noticed that there was no grapefruit in my salad! I thought I had done a regular grapefruit and avocado salad, something I don't eat often but that can be quite delicious when I'm in the mood. Something must have happened to it, I will have to keep an eye out but it will remain a mystery for now.",
+        "isPuzzle": false
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "How can someone be so unlucky? My alarm did not go off. I missed the tram despite skipping breakfast. It was even raining. Of course I was late after all that. When I arrived I even discovered I forgot my charger. So my computer died. To top it all off I spilled my drink during lunch. And that is were we are now. What is this? (◞‸◟；) This sad robot hopes the rest of the day will be better. Please. ",
         "isPuzzle": false
     },
     {
@@ -392,8 +475,13 @@
         "isPuzzle": false
     },
     {
+        "poster": "Robot1312113",
+        "content": "Do you have a playlist you use while studying? Well I do, and today I updated it ♪(/_ _ )/♪! It has more upbeat music, which gives me way more motivation. __〆(．．;)",
+        "isPuzzle": false
+    },
+    {
         "poster": "Fexjo",
-        "content": "I was walking on town near the park today and saw a bunch of people on a segway tour. It honestly looked like a lot of fun. I'm going to look into it and see if I can maybe participate sometime.",
+        "content": "I was walking in town near the park today and saw a bunch of people on a segway tour. It honestly looked like a lot of fun. I'm going to look into it and see if I can maybe participate sometime.",
         "isPuzzle": false
     },
     {
@@ -418,12 +506,23 @@
         "comment": "This is the main post to puzzle B-c4."
     },
     {
+        "date": [2022, 6, 5],
+        "poster": "Robot1312113",
+        "content": "Do you think dogs, dinosaurs and any other animal have languages just like humans? Or can any dog understand any other dog just fine?",
+        "isPuzzle": false
+    },
+    {
         "date": [2022, 6, 7],
         "poster": "Robot1312113",
         "content": "Have you found something odd with a post lately? If you can arrive at the 8-letter answer, I'll give you a reward. Perhaps you should keep this in mind while trying to figure it out: \n ___ like us",
         "isPuzzle": true,
         "puzzleNr": "B-c4",
         "comment": "This post is a helper post to puzzle B-c4"
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Why is it so hard to stop thinking about things when you started, such as counting how many times you blink or breathe? But other things are so easy to forget?",
+        "isPuzzle": false
     },
     {
         "date": [2022, 6, 9],
@@ -438,6 +537,11 @@
         "isPuzzle": true,
         "puzzleNr": "B-p1",
         "comment": "This post is helper post 1 to puzzle B-p1."
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "Today, I had classic regret of which program I chose to study. At Fexjo's uni, there's one called 'Game design and technology'. Doesn't that sound really fun? I would definitely have made a game with dinosaurs in it.",
+        "isPuzzle": false
     },
     {
         "poster": "Fexjo",
@@ -470,7 +574,7 @@
     },
     {
         "poster": "Fexjo",
-        "content": "Example of post with password",
+        "content": "WIP: Example of post with password",
         "isPuzzle": false,
         "hasSecret": true,
         "secret": "password123",

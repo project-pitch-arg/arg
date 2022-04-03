@@ -24,6 +24,12 @@
         "users": ["Robot1312113", "Fexjo", "Mr X", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
     },
     {
+        "admin": "Mr X",
+        "admin_secret": "ILovePuzzles",
+        "chat_name": "A new puzzle",
+        "users": ["Robot1312113", "Fexjo", "icniVad", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+    },
+    {
         "admin": "Pinnipedia",
         "admin_secret": "SealPupsAreCute",
         "chat_name": "Where is this?",

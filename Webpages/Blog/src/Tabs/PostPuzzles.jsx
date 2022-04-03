@@ -78,6 +78,7 @@ export default function Puzzles(post) {
       post.hasSecret = false
     //  }
   }
+  
   // This function changes the color of the letters in a post, where the 
   // argument count is the "x":th letter of that type.
   function changeColor(post, letter, count) {
@@ -197,7 +198,7 @@ export default function Puzzles(post) {
           </div>
           <div>
             <picture>
-              <source media="(min-width: 600px)" srcSet="PostImages/RedSkyAndPool.JPG" class="post-image"/> 
+              <source media="(min-width: 500px)" srcSet="PostImages/RedSkyAndPool.JPG" class="post-image"/> 
               <img src="" alt="20 34N, 25 150SE, 115 71E, 88 336NW, 72 354N, 35 53NE, 60 6N, 60 310NW, 55 33NE, 80 14N, 24 73E, 125 116SE, 62 84E, 112 16N, 155 18N, 30 260W, 34 303NW, 73 280W, 227 104E, 110 351N, 5 38NE, 25 155SE, F23" class="post-image"/>
             </picture>
           </div>
@@ -249,10 +250,10 @@ export default function Puzzles(post) {
     if (ENCRYPTION_KEY[1][1] < 27 || ENCRYPTION_KEY[1][1] > 52) {
       throw "Second number of encryption key must be within bounds [27,53].";
     }
-    if (ENCRYPTION_KEY[2][1] < 53 || ENCRYPTION_KEY[2][1] > 78) {
+    if (ENCRYPTION_KEY[2][1] < 53 || ENCRYPTION_KEY[1][1] > 78) {
       throw "Third number of encryption key must be within bounds [53,78].";
     }
-    if (ENCRYPTION_KEY[3][1] < 79 || ENCRYPTION_KEY[3][1] > 100) {
+    if (ENCRYPTION_KEY[3][1] < 79 || ENCRYPTION_KEY[1][1] > 100) {
       throw "Fourth number of encryption key must be within bounds [79,100].";
     }
 
@@ -383,7 +384,7 @@ export default function Puzzles(post) {
     return (
       <div class="post">
         <div class="post-date">
-          {post.date[0]}.{post.date[1]}.{post.date[2]}
+          {CLUE_DATE}
         <div class="post-name"> 
           {post.poster} 
         <pre class="post-content">

@@ -24,6 +24,14 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Design på Home
 
+- Notera att försa inlägget i PostContent måste ha ett datum
+
+- Bugg för sista sidan i posts
+
+- Uppdatera JSON scheman
+
+- Ha alt texten och bilden på botaniska i ChangeableValues.jsx
+
 --------------- Prio 2 ---------------
 
  - Kommentera mer kod. Framförallt chatten.
