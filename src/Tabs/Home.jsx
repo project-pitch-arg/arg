@@ -110,7 +110,9 @@ export default function Home() {
 
         if (attempt === passphrase ){
                 console.log(URL);
+                attempt = "";
         }
+        console.log(attempt);
     }
     function clickFirstImg(){
         console.clear();
