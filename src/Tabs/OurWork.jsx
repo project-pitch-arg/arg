@@ -3,8 +3,8 @@ import {Slide} from 'react-slideshow-image';
 import './Company.css';
 import { useEffect, useState } from 'react';
 
-import header from '../img/work-header.jpg'
-import programming from '../img/programming.jpg'
+import header from '../img/work-header.jpg';
+import programming from '../img/programming.jpg';
 
 import slideImage1 from '../img/slideImage1.jpg';
 import slideImage2 from '../img/slideImage2.jpg';
@@ -14,6 +14,17 @@ import slideImage4 from '../img/slideImage4.jpg';
 import futurePlans1 from '../img/future-ai.jpg'
 import futurePlans2 from '../img/space-shuttle.jpg'
 import futurePlans3 from '../img/robotic-future.jpg'
+const jsonData= require('../data.json');
+
+{
+  var firstVar  = jsonData['our-work'].puzzle_var.first_var;
+  var secondVar = jsonData['our-work'].puzzle_var.second_var;
+  var thirdVar  = jsonData['our-work'].puzzle_var.third_var;
+  var fourthVar = jsonData['our-work'].puzzle_var.fourth_var;
+
+  var crackedPassword = jsonData['our-work'].cracked_password;
+}
+
 
 export default function OurWork() {
   
@@ -25,11 +36,6 @@ export default function OurWork() {
     const [countSecond, setCountSecond] = useState(0);
     const [countThird, setCountThird]   = useState(0);
     const [countFourth, setCountFourth] = useState(0);
-
-    const firstVar  = 8;
-    const secondVar = 9;
-    const thirdVar  = 2;
-    const fourthVar = 6;
 
     const counted = [countFirst, countSecond, countThird, countFourth];
     const countCode = [firstVar, secondVar, thirdVar, fourthVar];
@@ -43,12 +49,8 @@ export default function OurWork() {
       }
 
       if (codeCracked) {
-        console.log(617264);
-        setTimeout(function() {
-          console.clear();
-        }, 5000)
+        console.log(crackedPassword);
       }
-
     }
     
     const checkHigherBound = () => {

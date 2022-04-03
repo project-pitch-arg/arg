@@ -15,8 +15,8 @@ const jsonData= require('../data.json');
 
 {
 
-    var passphrase = jsonData.home_passphrase;
-    var URL = jsonData.home_URL;
+    var passphrase = jsonData.home.passphrase;
+    var URL = jsonData.home.URL;
     var attempt = "";
 }
 
