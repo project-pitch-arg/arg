@@ -5,8 +5,7 @@
         "type": "object",
         "required": [
             "poster",
-            "content",
-            "isPuzzle"
+            "content"
         ],
         "properties": {
             "date": {
@@ -40,10 +39,6 @@
                     }
                 }
             },
-            "isPuzzle": {
-                "title": "If the post is included in a puzzle or not.",
-                "type": "boolean"
-            },
             "puzzleNr": {
                 "title": "Which puzzle the post belongs to.",
                 "type": "string"
@@ -55,10 +50,6 @@
             "secret": {
                 "title": "A password to access the secretContent.",
                 "type": "string"
-            },
-            "hasSecret": {
-                "title": "Check if a password is present in the post.",
-                "type": "boolean"
             },
             "secretContent": {
                 "title": "The hidden text that can only be accessed through the password.",

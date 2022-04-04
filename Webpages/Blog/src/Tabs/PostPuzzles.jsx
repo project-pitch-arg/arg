@@ -19,7 +19,7 @@ export default function Puzzles(post) {
 
   // Checks if a post is a puzzle and in that case which puzzle it is.
   // Depending on the result it will return different displays.
-  if(post.isPuzzle) {
+  if(post.hasOwnProperty("puzzleNr")) {
     switch (post.puzzleNr) {
       case "B-p1": return puzzleBp1(post);
       case "B-p2": break;
@@ -29,7 +29,7 @@ export default function Puzzles(post) {
       case "B-c4": return puzzleBc4(post);
     }  
   }
-  if(post.hasOwnProperty("hasSecret") && post.hasSecret) {
+  if(post.hasOwnProperty("secret")) {
     return (
       <div class="post">
           <div class="post-date">
@@ -74,9 +74,7 @@ export default function Puzzles(post) {
   // Function to reveal passwordprotected content
   // when the password is correct.
   function submitPassword(post) {
-    //if(password == post.secret) {
-      post.hasSecret = false
-    //  }
+    //if(password == post.secret) {}
   }
   
   // This function changes the color of the letters in a post, where the 
