@@ -36,6 +36,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
  - Kommentera mer kod. Framförallt chatten.
 
+ - Kolla så att allt rensans från localstorage på lämpliga ställen så inget sparas.
+
  - Titta på error i console och kommandotolken
 
  - Add logo to website

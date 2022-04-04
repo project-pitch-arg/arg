@@ -6,17 +6,19 @@
   in the file ChangeableVariables.jsx.
 */
 
-import React, {useState} from "react";
 import colors from "./TabContent.css"
 import ParkEntrance from "../Img/ParkEntrance.png";
 
 import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS, DUROS_IMAGE, ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE, CC_1_INDEX, CC_2_INDEX } from "../ChangeableValues";
 
+
+
 export default function Puzzles(post) {
 
-  //const [password, setPassword] = useState("");
-
-
+  if(localStorage.getItem('solvedPasswords') === null) {
+    var passwords = [""];
+    localStorage.setItem('solvedPasswords', JSON.stringify(passwords));
+  }
   // Checks if a post is a puzzle and in that case which puzzle it is.
   // Depending on the result it will return different displays.
   if(post.hasOwnProperty("puzzleNr")) {
@@ -29,7 +31,7 @@ export default function Puzzles(post) {
       case "B-c4": return puzzleBc4(post);
     }  
   }
-  if(post.hasOwnProperty("secret")) {
+  if(post.hasOwnProperty("secret") && !(JSON.parse(localStorage.getItem('solvedPasswords'))).includes(post.secret)) {
     return (
       <div class="post">
           <div class="post-date">
@@ -39,11 +41,11 @@ export default function Puzzles(post) {
             <pre class="post-content">
               {post.content} 
               <form onSubmit={submitPassword(post)}>
-              <input type="text" /*value={password} onChange={(e) => setPassword(e.target.value)}*/ className="input" placeholder="???" required />
+              <input type="text" value={localStorage.getItem('postSecret')} onChange={(e) => localStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
               <div type="submit" />
               </form>
             </pre>
-              {hasPicture(post)}
+            {hasPicture(post)}
             </div>
           </div>
         </div>
@@ -74,7 +76,13 @@ export default function Puzzles(post) {
   // Function to reveal passwordprotected content
   // when the password is correct.
   function submitPassword(post) {
-    //if(password == post.secret) {}
+    if(localStorage.getItem('postSecret') == post.secret) {
+      var passwords = JSON.parse(localStorage.getItem('solvedPasswords'))
+      passwords.push(post.secret)
+      localStorage.setItem('solvedPasswords', JSON.stringify(passwords))
+    }
+    localStorage.removeItem('postSecret');
+    return;
   }
   
   // This function changes the color of the letters in a post, where the 
