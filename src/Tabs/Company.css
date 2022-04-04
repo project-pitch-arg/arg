@@ -158,6 +158,7 @@ a {
 
 .slide-img span {
     color: transparent;
+    opacity: 30%;
     user-select: none;
 }
 
