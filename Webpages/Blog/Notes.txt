@@ -10,8 +10,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
     - Fråga på möte.
 
-- Fixa ikonen för fliken.
-
 - Ha med Cake i chatten om allt så att man kan nämna om dikten
     att det är cakew för att skilja från det.
 
@@ -29,6 +27,9 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Bugg för sista sidan i posts
 
 - Uppdatera JSON scheman
+
+- Kuggen-inlägg som ledtråd till SKyline. Kan ta med andra bilder från Campus
+    för att visa upp det lite
 
 - Ha alt texten och bilden på botaniska i ChangeableValues.jsx
 
