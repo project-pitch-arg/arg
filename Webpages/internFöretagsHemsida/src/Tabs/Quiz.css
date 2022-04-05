@@ -1,17 +1,15 @@
 .questionForm{
     text-align: left;
-    padding: 20px;
     color: black;
+    margin-top: 20px;
 }
 .questionForm input[type=radio]{
-    padding: 10px;
-    margin-right: 10px;
     font: inherit;
-      color: currentColor;
-      width: 1.15em;
-      height: 1.15em;
-      border: 0.15em solid currentColor;
-      border-radius: 50%;
+    color: currentColor;
+    border: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
 }
 .questionForm input[type=submit]{
     margin-right: auto;
@@ -30,7 +28,6 @@
 .quizObject{
     background-color: white;
     margin: 10px;
-    height: 20%;
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;

@@ -78,7 +78,7 @@ export default class TopBar extends Component {
           }
           return (
                 <div className="topbar">
-                    <header><h1 className="header">The Company</h1></header>
+                    <header><h1 className="header">Difax</h1></header>
                     <BrowserRouter>
                       <div className="menyDiv">
                       <ul id='topbar-ul'>

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './Console.css';
 
-
 export default class Console extends Component{
 
     state = { dataReceived: false, }
@@ -56,7 +55,6 @@ export default class Console extends Component{
                     this.helpCommands.forEach((command) => {
                         this.previousCommands.push(command);
                     })
-
                 }
                 break;
             case "/clear":
@@ -141,7 +139,7 @@ export default class Console extends Component{
                             ref={this.messagesEnd}>
                         </div>
                    </div>
-                    <input class="console" type="text" name="name" id="command"/>
+                    <input class="console" type="text" name="name" id="command" focus/>
                   </form>
                 </div>
             )

@@ -8,15 +8,13 @@ export default class App extends Component {
       super(props);
       this.state = { width: 0, height: 0,loggedIn: false };
       this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-
     }
 
     async componentDidMount() {
       this.updateWindowDimensions();
       window.addEventListener('resize', this.updateWindowDimensions);
-      document.title = "Rozk AI";
+      document.title = "Difax";
       document.body.style.overflow = "hidden"
-
       try {
             var json = JSON.parse(localStorage.getItem("user"));
             if(json !== null && await getAccountData(json)){
@@ -32,26 +30,28 @@ export default class App extends Component {
     }
 
     componentWillUnmount() {
-      window.removeEventListener('resize', this.updateWindowDimensions);
+        window.removeEventListener('resize', this.updateWindowDimensions);
     }
 
     updateWindowDimensions() {
-      this.setState({ width: window.innerWidth, height: window.innerHeight });
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
     logIn = () =>{
         this.setState({loggedIn: true});
     }
+
     logOut = () =>{
-            localStorage.removeItem("user");
-            this.setState({loggedIn: false});
+        localStorage.removeItem("user");
+        this.setState({loggedIn: false});
     }
+
     loadComponent(Tag){
         <Suspense fallback={Tag = Login}>
            Tag = lazy(() => import("./TopBar/TopBar"));
         </Suspense>
     }
-  render(){
+    render(){
       var Tag = Login;
       if(this.state.loggedIn){
           Tag = lazy(() => import("./TopBar/TopBar"));

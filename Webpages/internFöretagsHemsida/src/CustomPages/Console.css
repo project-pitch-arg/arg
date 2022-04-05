@@ -2,23 +2,27 @@
     padding: 10px;
     color: white;
     background-color: black;
-    width: 600px;
+    width: 40%;
+    border-radius: none;
+    border: 1px solid gray;
+    border-top: none;
 }
 .console:focus{
     color: white;
     background-color: black;
     border-radius: none;
+    outline: none;
 }
 .commandBlock{
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    height: 400px;
+    height: 40vh;
     background-color: black;
-    width: 600px;
+    width: 40%;
     color: white;
-    border: 1px solid gray;
-    padding: 5px;
+    border-bottom: 1px solid white;
+    padding: 10px;
     line-height: 60%;
     overflow: scroll;
     margin-top: 20px;
