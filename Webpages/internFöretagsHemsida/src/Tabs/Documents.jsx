@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import "./TabContent.css";
 import {basicFetchData} from "../Client/Client";
 import axios from 'axios';
+import Variables from "../JSONFiles/Variables";
 
 
 export default class Policy extends Component{
@@ -84,7 +85,7 @@ export default class Policy extends Component{
     //Called when input is submitted
     handleInput = (event) => {
         event.preventDefault();
-        if(event.target.command.value === "352"){
+        if(event.target.command.value === Variables.smallConsoleCode){
             localStorage.setItem('Console', true);
             this.reloadPage();
             window.history.replaceState(null, "New Page Title", "/Console");

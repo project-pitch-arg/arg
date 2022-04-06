@@ -1,12 +1,10 @@
 [{
   "e1" : {
     "name": "Helena Godspeed",
-    "phoneNumber": "",
     "email" : "helena.godspeed@gmail.com"
   },
   "e2" : {
     "name": "Mark Ryan",
-    "phoneNumber": "",
     "email" : ""
   }
 }]

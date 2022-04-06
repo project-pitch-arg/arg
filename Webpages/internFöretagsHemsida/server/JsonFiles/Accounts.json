@@ -2,19 +2,16 @@
   "u1" : {
     "username": "Edmund Schmidt",
     "password": "password123",
-    "phoneNumber": "070-4502355",
     "email" : "Hello@gmail.com"
   },
   "u2" : {
     "username": "Mark Ryan",
     "password": "password123",
-    "phoneNumber": "070-4502355",
     "email" : "Hello@gmail.com"
   },
   "u3" : {
     "username": "",
     "password": "jer2fjer,oifjer534534!",
-    "phoneNumber": "070-4502355",
     "email" : "Hello@gmail.com"
   }
 }]

@@ -139,7 +139,7 @@ export default class Console extends Component{
                             ref={this.messagesEnd}>
                         </div>
                    </div>
-                    <input class="console" type="text" name="name" id="command" focus/>
+                    <input class="console" type="text" name="name" id="command" autoFocus/>
                   </form>
                 </div>
             )
