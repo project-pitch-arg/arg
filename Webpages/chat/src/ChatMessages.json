@@ -2,1280 +2,859 @@
     {
         "chat_name": "Welcome",
         "text": "Hello world. I'm not a robot. But I like snow.",
-        "user": "Fexjo",
-        "secret": "MynameisCaesar"
+        "user": "Fexjo"
     },
     {
         "chat_name": "Daily thoughts about Daily Thoughts",
         "text": "Hello world. I count like ! !! !!.",
         "user": "Robot1312113",
-        "secret": "Imarobot",
         "custom_json": "https://upload.wikimedia.org/wikipedia/commons/8/88/Mini-Robot.png"
     },
     {
         "chat_name": "Simply a poem?",
         "text": "Anyone else found Robot1312113's poem strange? I'm thinking it might mean something else. I smell a puzzle brewing!",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "I concur. It is a most peculiar poem. We should initialize an investigation immediately.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Righto. But where to start? I tried looking for hidden letters and stuff but couldn't find anything. No letters seem odd either.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "If there is nothing hidden, it is simply in plain sight. I shall procced with this thought in mind.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "This text is all over the place, I can't make sense of it at all. Pleasant temperature, but that's not how he likes it? What's up with the guy? I think he needs to repair his temp-sensors or something.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Do calm down. I believe we should not interpret this as meaning something on the whole. Maybe we should take it apart into pieces?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Pieces ey? Alright, let's start with this place he talks about. Where has he been recently? Maybe some of his other posts will  shed some light on this.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "I believe he visited 'Universeum' the other day. I found this website of theirs which contain more information https://www.universeum.se/en/",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Interesting, very interesting. I see they have a restaurant and cafe. He did mention drinks and simple foodstuff. I'm thinking we're onto something here. You remember how Fexjo's avatar is a salad? They even made a post about it earlier. It's all coming back to me now, and it's all connected! They seem to have reused the good ol' ceasar cipher.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Whatever do you mean? I do not follow your train of thought. Please elaborate",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "In addition, it is 'Caesar'. Not 'Ceasar'.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Don't you see? Food, salad, caesar cipher, it's all part of a larger scheme! They must have planned this for ages. Now, get this, he included that the place had food and drink available right? And what food have we seen before in a post? That's right! Salad! And don't you remember where that lead us? That was a ceasar cipher for Fexjo's name! This must be something similar! Now we just got to figure out how we use the caesar cipher for this poem. If it's just a part of the puzzle or if this will lead us down another path of clues. Man i'm excited!!",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Oh yeah, Caesar*, my bad.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "I understand your speculation. What do you suppose is the word to decrypt with the cipher? I have found no such clue and wonder if this is the correct path to take.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Shouldn't it be like, victory? That's the final word of the poem and what seems to be the conclusion of the entire experience.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "The more I think about this the more it makes sense! Continuous humming sound? Bunch of people talking in a restaurant! Particular variety? The food he's eating! It's all coming back to the salad!",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Hey, you there? Come on, you gotta help me on this, we're so close! If we just figure this out I know we're gonna find something interesting.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "You can't just leave me hanging like this.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Earth to X?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Anyone alive?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Ah, I see. The salad got to you. A classic case of overeating.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "No, that is obviously a flawed conclusion. I was simply otherwise occupied. However, I have considered this problem during the day and firmly believe that the salad is not relevant. Instead, I am attempting to find another angle to this problem.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Let's agree to disagree then. As you said, we'll divide up the work. I'll continue on the salad clue and you can work out something else. Maybe the first part? Seems to me that the salad is mostly focused on in the second half of the poem.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "That is acceptable. I shall follow your suggestion for the moment.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Or wait… Maybe the salad is an object in the first half and the second half is about where you buy the salad! Now we get back to universum or whatever it was called. It's probably also involved in some way.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Scarcely a moment ago, we agreed to divide the work and now you wish to work together again? Be that as it may, I have found another direction I believe the soluion of this puzzle is located in.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Yeah? Please share, any clue is a good clue.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Definitions and synonyms may be highly relevant. Do yo not think that a mistake is an error and a victory is the same as a win?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Pretty smart, like how The process of gaining this could be Experience? Now just to figure out how this relates to the salad…",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Your fixation on the salad is incomprehensible.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "In any case, I believe 'a particular variety or type' is kind, sort or race.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "I'm telling you, it's all connected, it has to be!",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "But continuing on that track, standard that seems perfect is probably Ideal. And Pleasant temperature is probably Temperate or Comfortable or Warm or something similar. Actually the more I think about it the more options it could be. It'll be a pain to nail down one answer to each of these.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Your attitude needs adjusmtents. It is not 'a pain', but a challenge. I am going to undertake this test and return triumphant. Farewell.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Wait, seriously? You're just leaving me in the dust? And here I thought we were doing this together.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Okay, I can do this. Let's just review what words have already been deciphered and see if there's some pattern. Win, Error, Ideal, (Kind, Sort, Race), (Temperate, Comfortable, Warm). Hmm.. Win and Error, definitely reminds me of Windows. Ideal could also be along those tracks what with not having errors. Sort is probably it. Not sure about the last one but at the same time a bunch of words are missing so maybe they will shed some light on things. But again, what would windows have to do with a salad? This is convoluted to the extreme but I always knew Robot1312113 was a secret mastermind.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Hello! See youre working on puzzles as always. Are you close?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Extremely so. This is the most advanced puzzle yet but I believe it'll be cracked in mere moments. Now I just need to figure out the salad. Any thoughts mr Tree?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "It is Ms Tree. But amazing! Are you sure the salad is relevant? Wasnt that a clue for the old puzzle?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Exactly! A good puzzle draws on ambient environments and what better way to increase interest and complexity of a puzzle but to use what is already available on the website. Not only does it simplify the work put into the puzzle but it also brings out relevance and keeps the interest of the participants. Quite a classic trick but one that works quite well. I've seen it done many times before.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Well. That sounds reasonable. I dont think Ill be able to help",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "I'll keep you updated on my progress.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Thanks! Gotta go, so good luck!",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "cakew",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Wait, what?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "It is the answer.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Woah there, slow down. How the heck did you reach that conclusion? It's nowhere close to where I'm at!",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "It is simply because I am not obsessed with the salad that I arrived at this outcome faster.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Alright whatever. Please explain your reasoning. I wanna hear how you figured this one out. If it's even the answer, which I doubt.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Congratulations Mr X, you figured it out. I'll send you your reward in a dm.",
-        "user": "Robot1312113",
-        "secret": "Imarobot"
+        "user": "Robot1312113"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Thank you, Robot. You have been refuted, Mr DaVinci",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Woah, wait. You were right? And a reward as well? Now I'm jealous. Come on, tell me how you solved it. I'm dying of curiosity right now.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Actually, before that, lemme try something.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "SaladW.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "No? Nothing? Oh well it was worth a try.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "You need to develop your patience, Mr DaVinci. As such, I will tell you the process tomorrow.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Tomorrow? wait wait wait. Come on man, don't do this to me. I can't wait that long, this is my life's work man, I've been at this for at least a couple of days you know!",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Okay it's now tomorrow. Explain now please.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "It follows the pattern that we agreed on previously. To solve this puzzle, it is necessary to replace each line with another word. So, in order from top to bottom:",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Warm",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Reality",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Ideal!",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Ideal",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Tight",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Error",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Cafe",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Restaurant.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Wait I meant cafe.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Abuzz",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Of course you did. Continuing on:",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Kind",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Experience and then win.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "That is correct.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Then simply follow these instrutions.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Okay. Warm, Reality, Ideal, Tight, Error, Cafe, Abuzz, Kind, Experience, Win. Seems simple enough to me, first letter of each gives me 'write cakew'.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "But I also know that this has a second part, and probably a second reward for that as well.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "I assume you will mention the salad next.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "It's something to do with the salad. I'm telling you.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "So what did you get?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Three recipes. Both Fexjo's and Robot's favorite cakes were included. Although I find myself reluctant to admit this, the last recipe was of a salad.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "AHA! Told you it was relevant.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Well that's that then. It was fun while it lasted. Can't wait for the next one.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "For your participation and enthusiasm you will get the salad recipe as well icniVad.",
-        "user": "Robot1312113",
-        "secret": "Imarobot"
+        "user": "Robot1312113"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "Heck yeah, that's awesome.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "I see you have solve it. Amazing!",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "I completely agree with your assesment of my intellectual capabilites.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "Simply a poem?",
         "text": "I'll get the next one though, trust me on this.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
         "chat_name": "Usernames?",
         "text": "Hey, so, I'm guessing you all saw the post about the usernames as well right? Didn't realize they had a deeper meaning but I'm always up for a challenge. Anyone interested in figuring it out with me?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Fexjo was hinted at with a salad so that could be an avenue to go down. But I kinda wanna start with Robot. I'm thinking the numbers are what's up, might be some letter to number converter or something similar there.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Hello! I've never talked with you before or done many puzzles but let's try! Can it be the number of a machine? They have article numbers right?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Machine article numbers you say? Interesting approach. Then what machines are we talking? We know he's a robot but not what kind. If we could find his model then we could probably find some details on article numbers and the like.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "That's true. But it is only a cute drawn avatar. Is it really possible to find out?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Hmm, good point. Maybe there's something hidden in the image? I'll try to run it through some image processing software and see if I can get some info.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "I don't know anything about that so I can't really help. Good luck!",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "No dice i'm afraid. Looks like a normal image. No hidden info there. I ran the salad pic as well just to be sure.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Maybe it's time to go back to the basics. I'm loath to admit it but i'm known to overcomplicate matters.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Too bad. What salad do you think it is anyway? Looks tasty.",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Don't really know much about salads. Seems to be some sort of bacon salad?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "For the numbers i'm thinking we'll just start on some easy feet. How about the alphabet? 1 is A and 2 is B and so on.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Can't really see more than bacon. What are those round things? But back to the robot I guess",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "1312113 would be ACABAAC.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "That does not really work. Maybe it starts with 13? That would be M right?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Or maybe they're separate numbers and it's like 1 31 21 1 3 or something.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Ah, you're on to something.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "MLKC?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Doesn't sound right.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "What if we group them another way? We don't know which number is the loner, so maybe we should try other combinations as well. Let me see... MALM or MLAM I guess? Doesn't really make sense either.",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "He's from Gothenburg right? Says so in the About page. Maybe it's his last name and his first name is Robot?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Some quick googling shows that Malm is a relatively common Swedish last name.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Well. I know Fexji from being am exchange student together, but noone was called robot",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Fexjo*",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Might be he just didn't want to share his first name then. I think we're basically done here. Might be time to move on to the salad.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Then let's go back to figuring out what type it is. What salads do you know?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "As said, not a lot. But we saw bacon and maybe some crusty bread or something right? I googled that and got Panzanella. Which apparently is a kind of salad with wet bread. Doesn't match the image though so I think that's a bust.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Decided to be smart and do an image search instead. It's a Caesar salad. Should have done that first smh.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Well, that's surprisingly ordinary. There's nothing special it contains so now we are a bit lost again. Or at least I am. Maybe the type was not relevant at all? Maybe we just need to know that it is a salad. Which is basically a mix of things.",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Should we try to blend the letters and move then around?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Caesar, caesar, where have I heard that before? Hmm. Sure, we can move them around a bit. Fojex? Or maybe it's some word inside? Fox, Foe, maybe something like that?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "What else is there but 'et tu Brutus'. Anyway, I don't think his name is Fox or Foe. How would we even know when we find the right combination?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Good question. Hmm. I know there's something about Caesar, it's just at the tip of my tongue but I can't quite remember.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "That's right! Caesar cipher! My god it's so obvious, how could I have forgotten. This is like the basic of basics of encoding. Okay, let's check the name through a Caesar cipher and see what we find.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Through a quick brute force method I can confidently say that the only logical result is Edwin, ergo, that's his name.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "I'm amazing at this, I know. Hehehe. I'm looking forward to future puzzles like this. It was loads of fun.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "I also know that one! Caesar cipher is the one we're you shift letters right?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Do you think we have figured out everything?",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Yes exactly. As for the solution, RobotMalm and Edwin seems like the extent we can figure out right now. Then again, we can't count our chickens before they catch. Let's wait and see if Robot or Fexjo deems the answer correct.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Well, I actually now Fexjo's real name is Edwin. So I guess it is everything, but let's wait and see.",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Nice, seems we at least got that one right then.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "That's correct. Good job. As a reward, I'll tell you that my first name is Wilfred.",
-        "user": "Robot1312113",
-        "secret": "Imarobot"
+        "user": "Robot1312113"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Very nice! This was fun, I like the idea that some puzzles are included in the posts. Made the website more interactive in my opinion.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "I think its hard. But maybe I can help with discussions sometimes",
-        "user": "Tree123",
-        "secret": "TreesAndFlowers"
+        "user": "Tree123"
     },
     {
-        "chat_name": "Usernames?",
         "text": "Happy to have company :)",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "Usernames?",
         "text": "I see a puzzle has been solved. Unfortunately, I joined too late. I greatly anticipate the next one.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
         "chat_name": "A new puzzle",
         "text": "This is obviously a puzzle. We should start examining this immediately!",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Let's go! Another one so soon. Any thoughts yet? These names are very interesting. Some famous people but also some that I don't quite recognise. Nothing a quick internet search can't fix.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "How can you not recognize most of them? This is clearly common knowledge.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Hey. Don't be rude now X. <(￣ ﹌ ￣)>",
-        "user": "Pinnipedia",
-        "secret": "SealPupsAreCute"
+        "user": "Pinnipedia"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Well, hello. I wish to clarify my statement. It was in no way to be rude, but simply to express my surprise at Da Vinci's ignorance.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "How am I supposed to recognise some dude from the 1800s or a stand-up comedian? I guess we just had very different experiences growing up. Whatever, forget that! Let's focus on the puzzle itself. Any idea what to do with the numbers maybe?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "All of them are different. Perhaps we could order the names by the numbers?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "If it was just that then why have those specific numbers? The order would be Miller, Davis, Mandela, Roosevelt, Mead, Who, Rockefeller, Leno.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "A valid question. It can not be the letter at a certain position either, as Jay Leno is less than 20 characters.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "Maybe the number signifies something else? The number of children they have or something? That Leno guy must've gotten real frisky in that case.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "Please keep your language civilized. Are you still present, Pinn? I believe you have vast knowledge of all matter of things. Do you know any way the numbers are related to each other?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "I don't know what the numbers mean. But I recognise some of the names from the Quotes of the day page. Maybe that's relevant?",
-        "user": "Pinnipedia",
-        "secret": "SealPupsAreCute" 
+        "user": "Pinnipedia" 
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "That is most probably a significant discovery. I will try to find the corresponding quotes.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "The waiting is taking ages. I found the one by Mandela but then it disappeared before I even realised it. There are so many quotes too…",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "Huh? Simply keep refreshing the page and youll see all the nice quotes way faster.",
-        "user": "DiggerTigger",
-        "secret": "WinnieHasNiceQuotes"
+        "user": "DiggerTigger"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "Wait, who are you? Regardless, thank you! This makes things so much easier. Now just to not refresh past the correct quotes…",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "Me? I'm simply the best person there is of course.",
-        "user": "DiggerTigger",
-        "secret": "WinnieHasNiceQuotes"
+        "user": "DiggerTigger"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "Don't listen to my sister. She's  always full of it.",
-        "user": "SpikeyTike",
-        "secret": "TomAndJerry"
+        "user": "SpikeyTike"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "Hey! You got the person wrong. That's not me, it's you!",
-        "user": "DiggerTigger",
-        "secret": "WinnieHasNiceQuotes"
+        "user": "DiggerTigger"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "Uhuh, keep telling yourself that.",
-        "user": "SpikeyTike",
-        "secret": "TomAndJerry"
+        "user": "SpikeyTike"
     },    
     {
-        "chat_name": "A new puzzle",
         "text": "Please continue your quibbling somewhere else. We were making continous progress before you showed up.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I will because I'm right!",
-        "user": "DiggerTigger",
-        "secret": "WinnieHasNiceQuotes"
+        "user": "DiggerTigger"
     },
     {
-        "chat_name": "A new puzzle",
         "text": " Sure sure. Whatever helps you sleep at night.",
-        "user": "SpikeyTike",
-        "secret": "TomAndJerry"
+        "user": "SpikeyTike"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Moving on… The numbers, what do they mean? Is it the order of the quotes instead of the order of the people?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "But I can't sleep. Because of your loud music that is on even now! I'll go give you a piece of my mind.",
-        "user": "DiggerTigger",
-        "secret": "WinnieHasNiceQuotes"
+        "user": "DiggerTigger"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I believe she has left. So we can continue thinking in peace.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Wait a moment? Seriously? You're on your way? Shit, gotta go!",
-        "user": "SpikeyTike",
-        "secret": "TomAndJerry"
+        "user": "SpikeyTike"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Okay, they're gone now. Let's get back to it.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "The order of the quotes you said. Have you found them all?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I, myself, am still missing Dr Who's and Jay Leno's.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I know, I know! They are Scientists are complaining that the new Dinosaur movie shows dinosaurs with lemurs, who didn't evolve for another million years. They're afraid the movie will give kids a mistaken impression. What about the fact that the dinosaurs are singing and dancing? and There's no point in being grown up if you can't be childish sometimes.",
-        "user": "DiggerTigger",
-        "secret": "WinnieHasNiceQuotes"
+        "user": "DiggerTigger"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Didn't you go hunt down your brother?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I was tricking him.",
-        "user": "DiggerTigger",
-        "secret": "WinnieHasNiceQuotes"
+        "user": "DiggerTigger"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Ah! He's coming!",
-        "user": "DiggerTigger",
-        "secret": "WinnieHasNiceQuotes"
+        "user": "DiggerTigger"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Bye!",
-        "user": "DiggerTigger",
-        "secret": "WinnieHasNiceQuotes"
+        "user": "DiggerTigger"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Well, that was certainly something… Anyways, since you have the quotes can you figure out what the numbers have to do with them? What happens if you put them in order?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
-        "text": "I do not think that is correct, as the first couple of quotes becomes:",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "text": "I do not think that is correct, as the first couple of quotes becomes",
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Dinosaurs may be extinct from the face of the planet, but they are alive and well in our imaginations. (Steve Miller)",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Everybody thinks it's going to be different for them.... The dinosaurs thought so too. (Davis)",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "The greatest glory in living lies not in never falling, but in rising every time we fall. (Mandela)",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I have finally found Jay Leno's quote, as I wished to confirm DiggerTiggers statement. Have you acquired the last one?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
-        "text": "I found it! It's: “There's no point in being grown up if you can't be childish sometimes.”",
-        "user": "Pinnipedia",
-        "secret": "SealPupsAreCute"
+        "text": "I found it! It's 'There's no point in being grown up if you can't be childish sometimes.'",
+        "user": "Pinnipedia"
     },
-    {
-        "chat_name": "A new puzzle",
+    {     
         "text": "I'm sure I was just about to find it. When they're in order from what you just showed me could give something. The first letter of each quote turns into IDET. This could be a clue, maybe an acronym?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Though of course we should include all the quotes mentioned.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
-        "text": "The first letters of all quotes in order is: IDETATDS. It does not seem to tell us anything significant. Is it a cipher?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "text": "The first letters of all quotes in order is IDETATDS. It does not seem to tell us anything significant. Is it a cipher?",
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Just a moment ago, I found something odd in our reasoning. How come we order them by number when the numbers are not sequential? Would it not be more obvious if they were 1, 2, in that case? But these are 1, 3, 7 and so on with no obvious pattern.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Good point, what do you suggest it means? At first I thought it was prime numbers with the 1, 3, and 7 but then we have numbers like 12 which doesn't quite fit.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I have inspected the numbers for any kind of mathematical sequence. However, I have found no such thing.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
-        "text": "Hmm. The numbers has to mean something, otherwise he wouldn't have included them. Maybe the numbers aren't a count between the quotes but instead within them? And that the order was right from the beginning. I can’t help but notice the comma and exclamation mark as well. I didn't think of those before but they might indicate that the order is already fixed.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "text": "Hmm. The numbers has to mean something, otherwise he wouldn't have included them. Maybe the numbers aren't a count between the quotes but instead within them? And that the order was right from the beginning. I can't help but notice the comma and exclamation mark as well. I didn't think of those before but they might indicate that the order is already fixed.",
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "We previously just used the first letter of every quote. Perhaps the number indicates which letter to use and, as you suggseted, the order is to remain the same.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Makes sense to me. What does it give us?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "E A N E M D, N T!",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "It certainly seems like I am doing all the work recently. Have you not gathered all the sayings yet?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Well, I kinda stopped looking after all of them were found… Seemed like a lot of wasted effort you know. Anyways, those letters didn't give us much. Should we think of some other approach?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "What else is possible to count?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Well, we've done characters, how about words or sentences?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Certainly not sentences at least, as no quote has 20 of them. I will try words.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Ah, that makes sense… Dunno what I was thinking.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Do you believe 'it's' is one word, or two?",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Try both and see what we get maybe?",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I will do so later today, so either wait a moment or try it out yourself in the meantime.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I'll be refreshing the quotes page a lot in the meantime then.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "As usual, your patience is limited. I must be going. Farewell, for now.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Byebye, good luck.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "And now, the grind continues.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "'It's not childish to like dinosaurs, they're great!' I believe this to be the answer.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Did someone say dinosaurs? I'm in!",
-        "user": "Daemonosaurus",
-        "secret": "IAmNotADemon"
+        "user": "Daemonosaurus"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Seems good to me. Good work!",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I'm glad you agree with my statement. Dinosaurs are truly a mans best friend.",
-        "user": "Robot1312113",
-        "secret": "Imarobot"
+        "user": "Robot1312113"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Yes, you really get it! It's obviously not dogs, though I have to admit they have their own charm.",
-        "user": "Daemonosaurus",
-        "secret": "IAmNotADemon"
+        "user": "Daemonosaurus"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Yet more people. I will once more take my leave and return when the next puzzle is found.",
-        "user": "Mr X",
-        "secret": "ILovePuzzles"
+        "user": "Mr X"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "You know what, me too. I'll see you when there's another puzzle.",
-        "user": "icniVad",
-        "secret": "daVinciCode"
+        "user": "icniVad"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I would definitely have a small dinosaur instead of a dog if I could. Imagine a tiny planteating creature from a time long past. That would be a dream come true.",
-        "user": "Robot1312113",
-        "secret": "Imarobot"
+        "user": "Robot1312113"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Oh. My. God. That sounds so awesome!",
-        "user": "Daemonosaurus",
-        "secret": "IAmNotADemon"
+        "user": "Daemonosaurus"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "I know right?",
-        "user": "Robot1312113",
-        "secret": "Imarobot"
+        "user": "Robot1312113"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "You know what creature I would love to have as a pet? A baby seal. They're so cute and cuddly and just plain adorable. Best thing is, they still exist. Maybe one day I'll get to have one. In the meantime zoo's will fulfill my heart.",
-        "user": "Pinnipedia",
-        "secret": "SealPupsAreCute"
+        "user": "Pinnipedia"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Excuse me, everyone? This conversation is better done in another chat room. This also goes for DiggerTigger and SpikeyTike, as this room mainly seems to be for solving the puzzle.",
-        "user": "Fexjo",
-        "secret": "MynameisCaesar"
+        "user": "Fexjo"
     },
     {
-        "chat_name": "A new puzzle",
         "text": "Right, yeah, okay. Let's move to the Daily thoughts on daily thoughts chat. That seems to be where most miscellaneous conversation happens anyways. Good job solving the puzzle!",
-        "user": "Robot1312113",
-        "secret": "Imarobot"
+        "user": "Robot1312113"
     }
 ]

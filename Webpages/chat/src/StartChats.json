@@ -1,37 +1,31 @@
 [
     {
         "admin": "Robot1312113",
-        "admin_secret": "Imarobot",
         "chat_name": "Welcome",
         "users": ["Fexjo"]
     },
     {
         "admin": "Fexjo",
-        "admin_secret": "MynameisCaesar",
         "chat_name": "Daily thoughts about Daily Thoughts",
         "users": ["Robot1312113", "Mr X", "icniVad", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
     },
     {
         "admin": "icniVad",
-        "admin_secret": "daVinciCode",
         "chat_name": "Usernames?",
         "users": ["Robot1312113", "Fexjo", "Mr X", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
     },
     {
         "admin": "icniVad",
-        "admin_secret": "daVinciCode",
         "chat_name": "Simply a poem?",
         "users": ["Robot1312113", "Fexjo", "Mr X", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
     },
     {
         "admin": "Mr X",
-        "admin_secret": "ILovePuzzles",
         "chat_name": "A new puzzle",
         "users": ["Robot1312113", "Fexjo", "icniVad", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
     },
     {
         "admin": "Pinnipedia",
-        "admin_secret": "SealPupsAreCute",
         "chat_name": "Where is this?",
         "users": ["Robot1312113", "Fexjo", "Mr X", "icniVad", "Tree123", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
     }

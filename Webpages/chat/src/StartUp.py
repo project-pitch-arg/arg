@@ -29,25 +29,29 @@ PRIVATE_KEY = "ede1ace3-6939-44bf-9df8-c818978fc030"
 # TODO Move this?
 chatIds = []
 
-# Find the corresponding chatId from 
-# the name. It takes the array of arrays
-# and the name of the chat as arguments
+# Find the corresponding chatId from the name of the chat. 
+# It takes the array of arrays and the name of the chat as arguments
 # and returns the ID.
 def findChatId(chatArray, chatToFind):
-  for chat in chatArray:
-      if(chat[0] == chatToFind):
-        return chat[1]
+    for chat in chatArray:
+        if(chat[0] == chatToFind):
+            return chat[1]
+
+def findUserSecret(userArray, userName):
+    for user in userArray:
+        if(user["username"] == userName):
+            return user["secret"]
 
 #--------------- Create users --------------
 
 print("Creating users")
 # Load values from file
-f = open('users.json')
-users = json.load(f)
+f = open('Users.json')
+accounts = json.load(f)
 f.close()
 
 # Go through all the users to be created
-for user in users:
+for user in accounts:
 
     # Fix the format of the JSON-date so that the secret can be hashed.
     userString = str(user).replace("'", "\"")
@@ -78,14 +82,17 @@ f.close()
 for chat in chats:
     
     # Create a JSON-object with the chatname.
-    title = "{\"title\":" + "\"" + chat["chat_name"] + "\"" + "}"
-    title2 = json.loads(title)
+    title = json.loads("{\"title\":" + "\"" + chat["chat_name"] + "\"" + "}")
     
+    # Get the secret for the admin for this chat from the file and hash it.
+    secret = findUserSecret(accounts, chat["admin"])
+    secret = hashlib.sha256(secret.encode('utf-8')).hexdigest()
+
     # Send the request to create a chat with payload and header.
     r = requests.post(
         'https://api.chatengine.io/chats/',
-        data=title2,
-        headers={"Private-Key": PRIVATE_KEY, "User-Name": chat["admin"], "User-Secret": chat["admin_secret"]}
+        data=title,
+        headers={"Project-ID": PROJECT_ID, "User-Name": chat["admin"], "User-Secret": secret}
     )
     # Print the result of the sent post request.
     print(r.status_code)
@@ -94,10 +101,6 @@ for chat in chats:
     getChatId = json.loads(r.text)
     chatId = str(getChatId["id"])
     chatIds.append([chat["chat_name"], chatId])
-
-    # Get the secret for the admin for this chat from the file and hash it.
-    secret = chat["admin_secret"]
-    secret = hashlib.sha256(secret.encode('utf-8')).hexdigest()
 
     # Iterate the users that will be added to the newly created chat.
     for user in chat["users"]:
@@ -123,32 +126,36 @@ messages = json.load(f)
 f.close()
 
 counter = 0
+currentChatID = -1
 
 # Iterate through all messages to send
 for message in messages:
 
     # Find the ID of the chat to send the message in
     # to have the right address for the server request.
-    chatID = findChatId(chatIds, message["chat_name"])
+    if "chat_name" in message:
+        currentChatID = findChatId(chatIds, message["chat_name"])
 
-    secret = hashlib.sha256(message["secret"].encode('utf-8')).hexdigest()
+    secret = findUserSecret(accounts, message["user"])
+    secret = hashlib.sha256(secret.encode('utf-8')).hexdigest()
 
     # Send the request to post a message with payload and header.
     r = requests.post(
-        'https://api.chatengine.io/chats/' + chatID  +'/messages/',
+        'https://api.chatengine.io/chats/' + currentChatID  +'/messages/',
         data=message,
         headers={"Project-ID": PROJECT_ID, "User-Name": message["user"], "User-Secret": secret}
     )
     # Print the result of the post request every 10 messages if nothing goes wrong.
     if(r.status_code != 201):
         print(r.status_code)
-        print("Something went wrong when printing a message in '" + message["chat_name"] + "'." )
+        print("Something went wrong when printing a message in chat with ID " + currentChatID + "." )
     elif(counter >= 10):
-        print("Sent 10 messages, currently sending messages in '" + message["chat_name"] + "'.")
+        print("Sent 10 messages, currently sending messages in chat with ID " + currentChatID + ".")
         counter = 0
     
     counter = counter + 1
 
-
+# A final confirmation message
+print("Startup is finished. Remember to add the ID:s to the constant DEFAULT_CHATS in ChangeableValues.jsx.")
 
     

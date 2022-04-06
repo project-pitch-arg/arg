@@ -24,8 +24,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Notera att försa inlägget i PostContent måste ha ett datum
 
-- Bugg för sista sidan i posts
-
 - Uppdatera JSON scheman
 
 - Kuggen-inlägg som ledtråd till SKyline. Kan ta med andra bilder från Campus
@@ -33,7 +31,19 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Ha alt texten och bilden på botaniska i ChangeableValues.jsx
 
+- Users.json till stort U. Vill inte ändras i Git
+
+- Testa CreateAccount igen. En del har ändrats sedan det gjordes senast.
+    - Med fungerande Default Chats
+
+- Ta bort filuppladning och avatarer i chatten.
+
+- Ta bort tid och datum i chatten.
+
 --------------- Prio 2 ---------------
+
+ - Kan direkt validera JSON med schema i pythin till chatten.
+    - Går ej i javascript
 
  - Kommentera mer kod. Framförallt chatten.
 
