@@ -31,12 +31,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Ha alt texten och bilden på botaniska i ChangeableValues.jsx
 
-- Users.json till stort U. Vill inte ändras i Git
-
 - Testa CreateAccount igen. En del har ändrats sedan det gjordes senast.
     - Med fungerande Default Chats
-
-- Ta bort filuppladning och avatarer i chatten.
 
 - Ta bort tid och datum i chatten.
 
