@@ -6,7 +6,6 @@ import 'react-slideshow-image/dist/styles.css';
 import header from '../img/header.png';
 import introImg from '../img/intro-img.jpg';
 
-import AIImg from '../img/AI_Image.jpg';
 import techImg1 from '../img/homepage-img1.jpg';
 import techImg2 from '../img/homepage-img2.jpg';
 import techImg3 from '../img/homepage-img3.jpg';
