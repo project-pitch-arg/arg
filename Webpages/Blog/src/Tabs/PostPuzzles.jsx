@@ -7,9 +7,11 @@
 */
 
 import colors from "./TabContent.css"
-import ParkEntrance from "../Img/ParkEntrance.png";
 
-import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT, COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS, DUROS_IMAGE, ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE, CC_1_INDEX, CC_2_INDEX } from "../ChangeableValues";
+import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT,
+          COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS, DUROS_IMAGE,
+          ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE, CC_1_INDEX, CC_2_INDEX, 
+          PARK_ENTRANCE_IMAGE, DIRECTIONS } from "../ChangeableValues";
 
 
 
@@ -199,13 +201,13 @@ export default function Puzzles(post) {
           <div>
             <picture>
               <source media="(min-width: 800px)" srcSet="PostImages/SunsetView.jpg" class="post-image"/> 
-              <img src={ParkEntrance} alt="Image of park entrance." class="post-image"/>
+              <img src={PARK_ENTRANCE_IMAGE} alt="Image of park entrance." class="post-image"/>
             </picture>
           </div>
           <div>
             <picture>
               <source media="(min-width: 600px)" srcSet="PostImages/RedSkyAndPool.JPG" class="post-image"/> 
-              <img src="" alt="20 34N, 25 150SE, 115 71E, 88 336NW, 72 354N, 35 53NE, 60 6N, 60 310NW, 55 33NE, 80 14N, 24 73E, 125 116SE, 62 84E, 112 16N, 155 18N, 30 260W, 34 303NW, 73 280W, 227 104E, 110 351N, 5 38NE, 25 155SE, F23" class="post-image"/>
+              <img src="" alt={DIRECTIONS} class="post-image"/>
             </picture>
           </div>
       </div>  

@@ -3,10 +3,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 1 ---------------
 
-- Inlägg om Göteborg ('reklam')
-- Inlägg med Chalmersrykten
-- GU
-
 - Inlägg som nämner Lyra. Vid namn eller "bara" att han har en kontakt/handledare?
     - Fråga på möte.
 
@@ -29,19 +25,19 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Kuggen-inlägg som ledtråd till SKyline. Kan ta med andra bilder från Campus
     för att visa upp det lite
 
-- Ha alt texten och bilden på botaniska i ChangeableValues.jsx
-
 - Testa CreateAccount igen. En del har ändrats sedan det gjordes senast.
     - Med fungerande Default Chats
 
 - Ta bort tid och datum i chatten.
 
+- Flytta på ReadMe
+
+- Inkludera fakta från dokumentet om GU på Drive.
+
 --------------- Prio 2 ---------------
 
- - Kan direkt validera JSON med schema i pythin till chatten.
+ - Kan direkt validera JSON med schema i python till chatten.
     - Går ej i javascript
-
- - Kommentera mer kod. Framförallt chatten.
 
  - Kolla så att allt rensans från localstorage på lämpliga ställen så inget sparas.
 
@@ -79,11 +75,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - Typ kopiera txt dokumentet som redan finns.
     - Appendix till allmän guide.
 
-- Ändra struktur och innehåll i Possible Modifications i dokumentation om gåtor när alla variabler
-    har namn och liknande.
-
-- Beskriv hela historien.
-
 - Ta med diskussion kring vad dikten betyder i chatt med allt möjigt.
 
 --------------- Prio 3 ---------------
@@ -94,17 +85,10 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - Inte direkt nödvändigt, bara resten ser bra ut.
     - Hellre lite för stor än en vit kant?
 
-- Ett pussel med ett citat. Antingen löst eller inte eller båda. 
-
-- Fika inlägg.
-
 - Ta bort våra nycklar till chatten när allt är klart så man inte hamnar på mitt konto.
     - Dokumentera att detta måste fixas innan man starta bloggen.
 
 - Skriver vi Id eller ID överallt?
-
-- Ändra hur ofta resultatet skrivs ut när man skickar meddelanden i chatten.
-    - Kanske endast ett OK var tionde meddelande om inget skumt händer?
 
 - Rensa chatten från alla användare/chattar
 - Kan göras enkelt från hemsidan med projektet, så skippar detta så länge.

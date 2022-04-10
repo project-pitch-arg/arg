@@ -1,74 +1,47 @@
 [
     {
-        "first_name": "Wilfred",
-        "last_name": "Malm",
         "username": "Robot1312113",
         "secret": "Imarobot",
-        "email": "wilf@example.com",
-        "avatar": null
+        "email": "wilf@example.com"
     },
     {
-        "first_name": "Edwin",
-        "last_name": "Fairchild",
         "username": "Fexjo",
         "secret": "MynameisCaesar",
-        "email": "dwin@example.com",
-        "avatar": null
+        "email": "edwin@example.com"
     },
     {
-        "first_name": "Kayden",
-        "last_name": "Oakeley",
         "username": "Mr X",
         "secret": "ILovePuzzles",
-        "email": "kayden@example.com",
-        "avatar": null
+        "email": "kayden@example.com"
     },
     {
-        "first_name": "Alejandro",
-        "last_name": "Rhys",
         "username": "icniVad",
         "secret": "daVinciCode",
-        "email": "alejandro@example.com",
-        "avatar": null
+        "email": "alejandro@example.com"
     },
     {
-        "first_name": "Martina",
-        "last_name": "Christie",
         "username": "Tree123",
         "secret": "TreesAndFlowers",
-        "email": "martina@example.com",
-        "avatar": null
+        "email": "martina@example.com"
     },
     {
-        "first_name": "Lynn",
-        "last_name": "Lauren",
         "username": "Pinnipedia",
         "secret": "SealPupsAreCute",
-        "email": "lynn@example.com",
-        "avatar": null
+        "email": "lynn@example.com"
     },
     {
-        "first_name": "Kaj",
-        "last_name": "Holmberg",
         "username": "Daemonosaurus",
         "secret": "IAmNotADemon",
-        "email": "kaj@example.com",
-        "avatar": null
+        "email": "kaj@example.com"
     },
     {
-        "first_name": "Taylor",
-        "last_name": "Stevenson",
         "username": "SpikeyTike",
         "secret": "TomAndJerry",
-        "email": "taylor@example.com",
-        "avatar": null
+        "email": "taylor@example.com"
     },
     {
-        "first_name": "Elisabeth",
-        "last_name": "Stevenson",
         "username": "DiggerTigger",
         "secret": "WinnieHasNiceQuotes",
-        "email": "eli@example.com",
-        "avatar": null
+        "email": "eli@example.com"
     }
 ]
