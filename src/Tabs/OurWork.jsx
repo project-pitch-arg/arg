@@ -3,8 +3,8 @@ import {Slide} from 'react-slideshow-image';
 import './Company.css';
 import { useEffect, useState } from 'react';
 
-import header from '../img/work-header.jpg'
-import programming from '../img/programming.jpg'
+import header from '../img/work-header.jpg';
+import programming from '../img/programming.jpg';
 
 import slideImage1 from '../img/slide-image-1.jpg';
 import slideImage2 from '../img/slide-image-2.jpg';
@@ -15,13 +15,15 @@ import slideImage5 from '../img/slide-image-5.jpg';
 import futurePlans1 from '../img/future-ai.jpg'
 import futurePlans2 from '../img/space-shuttle.jpg'
 import futurePlans3 from '../img/robotic-future.jpg'
+const jsonData= require('../data.json');
 
 {
-  var firstVar  = 8;
-  var secondVar = 9;
-  var thirdVar  = 2;
-  var fourthVar = 6;
+  var firstVar  = jsonData['our-work'].puzzle_var.first_var;
+  var secondVar = jsonData['our-work'].puzzle_var.second_var;
+  var thirdVar  = jsonData['our-work'].puzzle_var.third_var;
+  var fourthVar = jsonData['our-work'].puzzle_var.fourth_var;
 
+  var crackedPassword = jsonData['our-work'].cracked_password;
   var puzzleUnlocked = false;
 }
 
@@ -36,6 +38,7 @@ import futurePlans3 from '../img/robotic-future.jpg'
     const [countThird, setCountThird]   = useState(0);
     const [countFourth, setCountFourth] = useState(0);
     
+
     const counted = [countFirst, countSecond, countThird, countFourth];
     const countCode = [firstVar, secondVar, thirdVar, fourthVar];
 
@@ -48,7 +51,7 @@ import futurePlans3 from '../img/robotic-future.jpg'
       }
 
       if (codeCracked) {
-        console.log(617264);
+        console.log(crackedPassword);
       }
     }
     

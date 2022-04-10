@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './Company.css';
 import 'react-slideshow-image/dist/styles.css';
 
-import header from '../img/header.jpg';
+import header from '../img/header.png';
 import introImg from '../img/intro-img.jpg';
 
 import AIImg from '../img/AI_Image.jpg';
@@ -15,8 +15,8 @@ const jsonData= require('../data.json');
 
 {
 
-    var passphrase = jsonData.home_passphrase;
-    var URL = jsonData.home_URL;
+    var passphrase = jsonData.home.passphrase;
+    var URL = jsonData.home.URL;
     var attempt = "";
 }
 
@@ -110,7 +110,9 @@ export default function Home() {
 
         if (attempt === passphrase ){
                 console.log(URL);
+                attempt = "";
         }
+        console.log(attempt);
     }
     function clickFirstImg(){
         console.clear();

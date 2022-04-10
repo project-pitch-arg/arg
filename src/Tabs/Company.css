@@ -1,19 +1,26 @@
+
+
 body {
     font-family: 'Lato', sans-serif;
+    background-color:#a6a6a6;
 }
 
 .header {
-    height: 400px;
-    width: 100%;
+    opacity:90%;
+    height: 700px;
+    width:1500px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -50px;
-    background-image: url("../img/header.jpg");
-    background-attachment: fixed;
+    background-image: url("../img/header.png");
+    margin-left: auto;
+    margin-right:auto;
+    background-attachment:scroll;
     background-repeat: no-repeat;
-    background-size: 100% 85%;
+
+    background-size: 1500px 700px;
 }
 
 h1 {
@@ -21,11 +28,12 @@ h1 {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
-    font-size: 70px;
+    font-size: 100px;
     color: #246f94;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
     font-weight: 400;
+
 }
 
 h2 {
@@ -42,16 +50,19 @@ a {
 
 .content {
     background-color: #e6e6e6;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: auto;
+    margin-right:auto;
+    width:1500px;
     display: flex;
     flex-direction: column;
 }
 
 
 .center-content {
+    margin-top:50px;
+    margin-left:auto;
+    margin-right:auto;
     width: 50%;
-    margin: auto;
     text-align: center;
 }
 
@@ -91,21 +102,19 @@ a {
 .content-right-img {
     float: left;
     width: 40%;
-    height: 100%;
-    text-align: center;
+    margin-left: 5%;
 }
 
 .content-right-img img {
-    width: 90%;
-    margin-left: 50px;
+    width: 100%;
+
     height:auto;
 }
 
 .content-right-desc {
     float: right;
-    width: 50%;
-    margin: auto;
-    margin-right: 5%;
+    width: 40%;
+    margin-right:5%;
 }
 
 .content-left-content {
@@ -114,21 +123,20 @@ a {
 
 .content-left-desc {
     float: left;
-    width: 39%;
-    padding-left: 50px;
+    width: 40%;
+    margin-left:5%;
 }
-
+.content-left-img {
+    float: right;
+    width: 40%;
+    margin-right: 5%;
+}
 .content-left-img img {
-    width: 90%;
-    margin-right: 50px;
+    width: 100%;
     height: auto;
 }
 
-.content-left-img {
-    float: right;
-    width: 50%;
-    margin: auto;
-}
+
 
 .slideshow-container {
     height: 100%;
