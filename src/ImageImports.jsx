@@ -36,6 +36,11 @@ import MarkImg from './img/mark-roswell.jpg';
 import SummerImg from './img/summer-morton.jpg';
 
 
+// Wrong Imports
+
+import WrongHeader from './img/wrong-header.jpg';
+import HomeIcon from './img/home-icon.png'
+
 
 /* -------------------- Home Page -------------------- */
 
@@ -66,3 +71,10 @@ export const ENVIRONMENT_IMAGE = EnvironmentImg;
 export const GOALS_IMAGE = GoalsImg;
 
 export const EMPLOYEES_IMAGES = [ChristianImg, EloiseImg, GeorgeImg, LyraImg, MadeleineImg, ManuelImg, MarkImg, SummerImg];
+
+
+/* -------------------- Wrong Page -------------------- */
+
+export const WRONG_HEADER = WrongHeader;
+
+export const HOME_ICON = HomeIcon;
