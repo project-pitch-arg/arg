@@ -20,7 +20,7 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Notera att försa inlägget i PostContent måste ha ett datum
 
-- Uppdatera JSON scheman
+- Uppdatera JSON scheman till bloggen
 
 - Kuggen-inlägg som ledtråd till SKyline. Kan ta med andra bilder från Campus
     för att visa upp det lite
@@ -32,12 +32,9 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Flytta på ReadMe
 
-- Inkludera fakta från dokumentet om GU på Drive.
+- Inkludera fakta från dokumentet om GU som finns på Drive.
 
 --------------- Prio 2 ---------------
-
- - Kan direkt validera JSON med schema i python till chatten.
-    - Går ej i javascript
 
  - Kolla så att allt rensans från localstorage på lämpliga ställen så inget sparas.
 

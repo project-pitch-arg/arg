@@ -6,8 +6,7 @@
         "required": [
             "username", 
             "secret", 
-            "email", 
-            "avatar"
+            "email"
         ],
         "properties": {
             "username": {
@@ -21,10 +20,6 @@
             "email": {
                 "type": "string",
                 "title": "The email of the user. Needs to follow standard email formats (example@ex.com)."
-            },
-            "avatar": {
-                "anyOf": [ {"type": "string"}, {"type": "null"}],
-                "title": "The picture used as an avatar. Not implemented at the moment."
             }
         },
         "additionalProperties": false
