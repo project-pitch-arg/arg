@@ -1,24 +1,26 @@
 import React from 'react';
-import './Company.css';
 import { useEffect } from 'react';
+import './Company.css';
 
-import teamMember from '../img/team-member.png';
+import { ABOUT_US_HEADER, ENVIRONMENT_IMAGE, GOALS_IMAGE, EMPLOYEES_IMAGES} from '../ImageImports';
 
-import aboutUsHeaderImg from '../img/aboutUsBackground.jpg';
-import environmentImg from '../img/environment.jpg';
-import goalsImg from '../img/goals.jpg';
+const jsonData = require('../data.json');
 
+{
+  var aboutUs = jsonData.about_us;
 
-import christianImg from '../img/christian-yates.jpg';
-import eloiseImg from '../img/eloise-christensen.jpg';
-import georgeImg from '../img/george-caroll.jpg';
-import lyraImg from '../img/lyra-bell.jpg';
-import madeleineImg from '../img/madeleine-baldwin.jpg';
-import manuelImg from '../img/manuel-mallory.jpg';
-import markImg from '../img/mark-roswell.jpg';
-import summerImg from '../img/summer-morton.jpg';
-
-
+  var aboutUsHeaderImg = ABOUT_US_HEADER;
+  var environmentImg = ENVIRONMENT_IMAGE;
+  var goalsImg = GOALS_IMAGE;
+  var christianImg = EMPLOYEES_IMAGES[0];
+  var eloiseImg = EMPLOYEES_IMAGES[1];
+  var georgeImg = EMPLOYEES_IMAGES[2];
+  var lyraImg = EMPLOYEES_IMAGES[3];
+  var madeleineImg  = EMPLOYEES_IMAGES[4];
+  var manuelImg = EMPLOYEES_IMAGES[5];
+  var markImg = EMPLOYEES_IMAGES[6];
+  var summerImg = EMPLOYEES_IMAGES[7];
+}
 export default function AboutUs() {
     
     useEffect(() => {
@@ -87,6 +89,5 @@ export default function AboutUs() {
                </div>
           </div>
         </div>
-
     )
 }

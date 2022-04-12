@@ -3,21 +3,22 @@ import { useEffect } from 'react';
 import './Company.css';
 import 'react-slideshow-image/dist/styles.css';
 
-import header from '../img/header.png';
-import introImg from '../img/intro-img.jpg';
+import { HOME_HEADER, INTRO_IMAGE, TECH_IMAGES } from '../ImageImports';
 
-import AIImg from '../img/AI_Image.jpg';
-import techImg1 from '../img/homepage-img1.jpg';
-import techImg2 from '../img/homepage-img2.jpg';
-import techImg3 from '../img/homepage-img3.jpg';
-const jsonData= require('../data.json');
+const jsonData = require('../data.json');
 
 
 {
-
-    var passphrase = jsonData.home.passphrase;
-    var URL = jsonData.home.URL;
+    var home = jsonData.home
+    var passphrase = home.passphrase;
+    var URL = home.URL;
     var attempt = "";
+
+    var header = HOME_HEADER;
+    var introImg = INTRO_IMAGE;
+    var techImg1 = TECH_IMAGES[0];
+    var techImg2 = TECH_IMAGES[1];
+    var techImg3 = TECH_IMAGES[2];
 }
 
 export default function Home() {

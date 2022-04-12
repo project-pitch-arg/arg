@@ -1,26 +1,23 @@
-
-
 body {
     font-family: 'Lato', sans-serif;
     background-color:#a6a6a6;
 }
 
 .header {
-    opacity:90%;
-    height: 700px;
-    width:1500px;
+    opacity: 90%;
+    height: 500px;
+    width: 1400px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -50px;
-    background-image: url("../img/header.png");
+    background-image: url("../img/header.png"); /* Standard header if nothing is assigned */
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
-    background-size: 1500px 700px;
+    background-size: cover;
 }
 
 h1 {
@@ -33,7 +30,6 @@ h1 {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
     font-weight: 400;
-
 }
 
 h2 {
@@ -52,11 +48,10 @@ a {
     background-color: #e6e6e6;
     margin-left: auto;
     margin-right:auto;
-    width:1500px;
+    width: 1400px;
     display: flex;
     flex-direction: column;
 }
-
 
 .center-content {
     margin-top:50px;
@@ -136,8 +131,6 @@ a {
     height: auto;
 }
 
-
-
 .slideshow-container {
     height: 100%;
     width: 50%;
@@ -145,7 +138,6 @@ a {
     margin: auto;
     margin-right: 50px;
     align-items: center;
-
 }
 
 .slide-img {

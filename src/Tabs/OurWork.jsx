@@ -3,28 +3,31 @@ import {Slide} from 'react-slideshow-image';
 import './Company.css';
 import { useEffect, useState } from 'react';
 
-import header from '../img/work-header.jpg';
-import programming from '../img/programming.jpg';
+import { OUR_WORK_HEADER, PROGRAMMING, SLIDE_IMAGES, FUTURE_PLANS } from '../ImageImports';
 
-import slideImage1 from '../img/slide-image-1.jpg';
-import slideImage2 from '../img/slide-image-2.jpg';
-import slideImage3 from '../img/slide-image-3.jpg';
-import slideImage4 from '../img/slide-image-4.jpg';
-import slideImage5 from '../img/slide-image-5.jpg';
-
-import futurePlans1 from '../img/future-ai.jpg'
-import futurePlans2 from '../img/space-shuttle.jpg'
-import futurePlans3 from '../img/robotic-future.jpg'
-const jsonData= require('../data.json');
+const jsonData = require('../data.json');
 
 {
-  var firstVar  = jsonData['our-work'].puzzle_var.first_var;
-  var secondVar = jsonData['our-work'].puzzle_var.second_var;
-  var thirdVar  = jsonData['our-work'].puzzle_var.third_var;
-  var fourthVar = jsonData['our-work'].puzzle_var.fourth_var;
+  var ourWork = jsonData.our_work;
 
-  var crackedPassword = jsonData['our-work'].cracked_password;
+  var firstVar  = ourWork.puzzle_var.first_var;
+  var secondVar = ourWork.puzzle_var.second_var;
+  var thirdVar  = ourWork.puzzle_var.third_var;
+  var fourthVar = ourWork.puzzle_var.fourth_var;
+
+  var crackedPassword = ourWork.cracked_password;
   var puzzleUnlocked = false;
+
+  var header        = OUR_WORK_HEADER;
+  var programming   = PROGRAMMING;
+  var slideImage1   = SLIDE_IMAGES[0];
+  var slideImage2   = SLIDE_IMAGES[1];
+  var slideImage3   = SLIDE_IMAGES[2];
+  var slideImage4   = SLIDE_IMAGES[3];
+  var slideImage5   = SLIDE_IMAGES[4];
+  var futurePlans1  = FUTURE_PLANS[0];
+  var futurePlans2  = FUTURE_PLANS[1];
+  var futurePlans3  = FUTURE_PLANS[2];
 }
 
   export default function OurWork() {

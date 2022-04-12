@@ -1,9 +1,4 @@
 import './Footer.css';
-import facebook from '../img/facebook-icon.png';
-import instagram from '../img/instagram-icon.png';
-import twitter from '../img/twitter-icon.png';
-import icons from '../img/icons.png';
-
 
 export default function Footer() {
 
@@ -22,7 +17,6 @@ export default function Footer() {
                 <br/>
                 developed by Lyra Bell </a>
             </div>
-
         </div>
     ) 
 }
