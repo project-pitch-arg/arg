@@ -50,13 +50,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - Allmän guide till Allt   
     - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
 
-- Errorhantering
-    - Framförallt om man lagt in felaktig data när chatten
-      skapas så att det inte går som det ska.
-
-- Lägg till fält så att man kan ladda upp en avatarbild till chatten.
-- Fixa också då så att de man automatiskt gör i StartUp har avatarer.
-
 - Notera någonstans att chatnamn som skapas i början behöver vara unika. Kan inte fixas med JSON schema.
     - Gäller StartUp filer.
 
@@ -87,7 +80,12 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Skriver vi Id eller ID överallt?
 
-- Rensa chatten från alla användare/chattar
-- Kan göras enkelt från hemsidan med projektet, så skippar detta så länge.
+--------------- Prio 100 ---------------
 
-- Fixa så man kan skicka bilder i chatt.
+- Rensa chatten från alla användare/chattar
+    - Kan göras enkelt från hemsidan med projektet, så skippar detta så länge.
+
+- Fixa så man kan skicka bilder i chatt via fil.
+
+- Lägg till fält så att man kan ladda upp en avatarbild till chatten.
+- Fixa också då så att de man automatiskt gör i StartUp har avatarer.

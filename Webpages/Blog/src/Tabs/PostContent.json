@@ -211,9 +211,9 @@
     {
         "date": [2022, 4, 1],
         "poster": "Robot1312113",
-        "content": "WIP: April fools",
-        "secret": "WIP",
-        "secretContent": "WIP"
+        "content": "It's a new month and what better way to celebrate than with a puzzle! \n Here's a little something to get you started: ndXiONetoDWWcrLS",
+        "secret": "AReallyLongPasswordToMakeItHardToFigureOutAndDinosaursAreTheBest!",
+        "secretContent": "If you really figured this out on your own, I'm impressed. You were not supposed to."
     },
     {
         "date": [2022, 4, 1],
@@ -363,6 +363,10 @@
     },
     {
         "poster": "Robot1312113",
+        "content": "The weather was awesome so I took some friends with me and went shopping! We had a great time and ended the day with some fika at a really nice cafe with few people that we found. Chocolate is so tasty. (　’ω’)旦~~"
+    },
+    {
+        "poster": "Robot1312113",
         "content": "So I was listening calmly to music just yesterday and thought 'Why not create some myself?' ヾ(⌐■_■)ノ♪. I was incredibly motivated and found an old guitar at my parents' place. I downloaded an app to learn. I think it went well and practice makes perfect, but after half an hour or so the people around me wildly protested. Why? ┐(￣ヘ￣;)┌. The guitar was confiscated during my protests to this decision."
     },
     {
@@ -445,6 +449,10 @@
         "content": "Today marks the day that I leave Sweden. It was nice while it lasted and I'm surely going to visit a lot in the future. But first, I need to finish my studies from home. I can't do everything abroad, some things has to be done in Great Britain. I've come to really enjoy this place, but there really is no place like home."
     },
     {
+        "poster": "Fexjo",
+        "content": "I'm guessing noones surprised that rain greated me upon my return to Britain. That's just how it is, I suppose."
+    },
+    {
         "date": [2022, 6, 11],
         "poster": "Robot1312113",
         "content": "I never told you, but my favorite dinosaurs are XXDINO1XX, XXDINO2XX and ichthyosaurus.",
@@ -454,6 +462,10 @@
     {
         "poster": "Robot1312113",
         "content": "Today, I had classic regret of which program I chose to study. At Fexjo's uni, there's one called 'Game design and technology'. Doesn't that sound really fun? I would definitely have made a game with dinosaurs in it."
+    },
+    {
+        "poster": "Robot1312113",
+        "content": "Apparently, it is a time for regrets. Today, I really regret not getting Fexjo to swim with me a single time. I would really have liked to do it today. The weather is sunny, warm and just right. But the crucial piece of Fexjo is missing." 
     },
     {
         "poster": "Fexjo",
