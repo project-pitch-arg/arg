@@ -1,4 +1,4 @@
-import "./App.css";
+import "./internal.css";
 import React, { lazy, Suspense,Component } from 'react';
 import Login from "./CustomPages/LogIn/LogInPage";
 import {getAccountData} from "./CustomPages/LogIn/LogIn";
@@ -48,16 +48,16 @@ export default class App extends Component {
 
     loadComponent(Tag){
         <Suspense fallback={Tag = Login}>
-           Tag = lazy(() => import("./TopBar/TopBar"));
+           Tag = lazy(() => import("./InternalTopBar/BarOnTop"));
         </Suspense>
     }
     render(){
       var Tag = Login;
       if(this.state.loggedIn){
-          Tag = lazy(() => import("./TopBar/TopBar"));
+          Tag = lazy(() => import("./InternalTopBar/BarOnTop"));
       }
       return (
-        <div className="App">
+        <div className="InternalApp">
             <div className="Login-component" style={{height: this.state.height, overflowY: 'scroll'}}>
                 <Suspense fallback={<Login/>}>
                      <Tag logIn={this.logIn} logOut={this.logOut} loggedIn={this.state.loggedIn}/>

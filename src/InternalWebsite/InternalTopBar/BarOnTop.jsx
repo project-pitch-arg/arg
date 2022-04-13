@@ -1,8 +1,8 @@
 import React, {  lazy, Suspense, Component } from 'react';
-import './TopBar.css';
+import './BarOnTop.css';
 import {Link} from "react-router-dom";
 import Wrong from '../Wrong';
-import Home from '../Tabs/Home';
+import Home from '../InternalTabs/Home';
 import {fetchData} from '../Client/Client.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ export default class TopBar extends Component {
     }
 
     async componentDidMount(){
-        await this.addTabs("/src/Tabs/", this.locations);
+        await this.addTabs("/InternalTabs/", this.locations);
     }
 
     highlightActive = (path) => {
@@ -78,7 +78,7 @@ export default class TopBar extends Component {
           }
           return (
                 <div className="topbar">
-                    <header><h1 className="header">Difax</h1></header>
+                    <header><h1 className="internalHeader">Difax</h1></header>
                     <BrowserRouter>
                       <div className="menyDiv">
                       <ul id='topbar-ul'>
@@ -99,7 +99,7 @@ export default class TopBar extends Component {
                           <Route path="*" element={<Wrong />} />
                           {
                             this.locations.map((file) => {
-                                const Tag = lazy(() => import("../Tabs/" + file));
+                                const Tag = lazy(() => import("../InternalTabs/" + file));
                                 return this.getComponent(file, Tag);
                             })
                           }

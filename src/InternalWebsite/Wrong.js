@@ -1,5 +1,5 @@
 import React from 'react';
-import './Tabs/TabContent.css';
+import './InternalTabs/TabContent.css';
 
 export default function Walk() {
     return (
