@@ -108,10 +108,10 @@ export const CC_2_INDEX = 1;
 export const THREE_DINOS = ["Aardonyx", "Datanglong", "Talarurus"];
 
 // A hint to allude to the dino part of the puzzle.
-export const HINT_DINOS = "I wonder why ichthyosaurus isn't capitalized.";
+export const HINT_DINOS = "I wonder why only two dinosaurs are capitalized? Maybe you can find another one that's capitalized as well?";
 
 // A hint to allude to the courses part of the puzzle.
-export const HINT_COURSES = "What other canvas codes can you find? Go take a visit, I'm sure something interesting is there.";
+export const HINT_COURSES = "See if you can build some other course codes from pieces you find here and there. I'm sure they'll lead to interesting results.";
 
 // Choice of having zero or not. As well as what shading.
 export const DUROS_IMAGE = DurosLight;
