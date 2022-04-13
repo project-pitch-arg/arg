@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './TopBar.css';
 import {Link} from "react-router-dom";
+import './TopBar.css';
 
 
 export default function TopBar(props) {
@@ -25,13 +25,9 @@ export default function TopBar(props) {
             case 'AboutUs':
                 document.getElementById("tab-about-us").classList.add('active');
             break;
-            
-            case 'Four':
-                document.getElementById("tab-four").classList.add('active');
-            break;
           
             default:
-                console.log("no such path")
+              break;
         }
       }
     

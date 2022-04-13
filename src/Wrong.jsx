@@ -1,22 +1,22 @@
+import {Link} from "react-router-dom";
 import './Tabs/Company.css';
+import './Wrong.css';
+import { WRONG_HEADER, HOME_ICON } from "./ImageImports";
+
+{
+  var wrongHeader = WRONG_HEADER;
+  var homeIcon = HOME_ICON;
+}
 
 export default function Wrong() {
 
-    var wrongStyle = {
-      fontWeight: 'bold',
-      textAlign: 'center',
-      fontSize: '24px',
-      height: '58.4vh',
-      marginTop: '-50px',
-      background: "lightGray",
-      paddingTop: '200px'
-    }
-
     return (
       <div>
-        <div style={wrongStyle}>
-          <a>The page you requested could not be found.</a>         
-        </div>
+        <div class="header header-style" style={{backgroundImage: `url(${wrongHeader})`}}>
+            <h1>The page you requested <br /> could not be found!<br/>
+              <div id="home-button"><Link to="/"><img src={homeIcon} alt="" height="50px" width="50px"/></Link></div>
+            </h1>
+          </div>
       </div>
       
     )

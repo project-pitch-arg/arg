@@ -3,39 +3,44 @@ import {Slide} from 'react-slideshow-image';
 import './Company.css';
 import { useEffect, useState } from 'react';
 
-import header from '../img/work-header.jpg';
-import programming from '../img/programming.jpg';
+import { OUR_WORK_HEADER, PROGRAMMING, SLIDE_IMAGES, FUTURE_PLANS } from '../ImageImports';
 
-import slideImage1 from '../img/slideImage1.jpg';
-import slideImage2 from '../img/slideImage2.jpg';
-import slideImage3 from '../img/slideImage3.jpg';
-import slideImage4 from '../img/slideImage4.jpg';
-
-import futurePlans1 from '../img/future-ai.jpg'
-import futurePlans2 from '../img/space-shuttle.jpg'
-import futurePlans3 from '../img/robotic-future.jpg'
-const jsonData= require('../data.json');
+const jsonData = require('../data.json');
 
 {
-  var firstVar  = jsonData['our-work'].puzzle_var.first_var;
-  var secondVar = jsonData['our-work'].puzzle_var.second_var;
-  var thirdVar  = jsonData['our-work'].puzzle_var.third_var;
-  var fourthVar = jsonData['our-work'].puzzle_var.fourth_var;
+  var ourWork = jsonData.our_work;
 
-  var crackedPassword = jsonData['our-work'].cracked_password;
+  var firstVar  = ourWork.puzzle_var.first_var;
+  var secondVar = ourWork.puzzle_var.second_var;
+  var thirdVar  = ourWork.puzzle_var.third_var;
+  var fourthVar = ourWork.puzzle_var.fourth_var;
+
+  var crackedPassword = ourWork.cracked_password;
+  var puzzleUnlocked = false;
+
+  var header        = OUR_WORK_HEADER;
+  var programming   = PROGRAMMING;
+  var slideImage1   = SLIDE_IMAGES[0];
+  var slideImage2   = SLIDE_IMAGES[1];
+  var slideImage3   = SLIDE_IMAGES[2];
+  var slideImage4   = SLIDE_IMAGES[3];
+  var slideImage5   = SLIDE_IMAGES[4];
+  var futurePlans1  = FUTURE_PLANS[0];
+  var futurePlans2  = FUTURE_PLANS[1];
+  var futurePlans3  = FUTURE_PLANS[2];
 }
 
-
-export default function OurWork() {
-  
+  export default function OurWork() {
+    
     useEffect(() => {
       window.scrollTo(0, 0)
     }, []);
-
+    
     const [countFirst, setCountFirst]   = useState(0);
     const [countSecond, setCountSecond] = useState(0);
     const [countThird, setCountThird]   = useState(0);
     const [countFourth, setCountFourth] = useState(0);
+    
 
     const counted = [countFirst, countSecond, countThird, countFourth];
     const countCode = [firstVar, secondVar, thirdVar, fourthVar];
@@ -66,12 +71,38 @@ export default function OurWork() {
         resetCount();
       }
     }    
-    
-    const onClickFirst = () => {
-      if (countSecond >= 1 || countThird >= 1 || countFourth >= 1) {
-        resetCount();
+
+    const onSlideClick = (slide) => {
+      if (slide == "fifth") {
+        puzzleUnlocked = true;
       }
-      setCountFirst(countFirst + 1);
+      else if (puzzleUnlocked) {
+        var currentSpan = document.getElementById(slide +"-span");
+  
+        currentSpan.style.color = "aqua";
+        setTimeout(function() {
+          currentSpan.style.color = "transparent";
+        }, 300)
+        
+        switch (slide) {
+          case "first":
+            setCountFirst(countFirst+1);
+            break;
+        
+          case "second":
+            setCountSecond(countSecond+1);
+            break;
+            
+          case "third":
+            setCountThird(countThird+1);
+            break;
+            
+          case "fourth":
+            setCountFourth(countFourth+1);
+            break;
+              
+        }
+      }
     }
 
     const resetCount = () => {
@@ -104,7 +135,7 @@ export default function OurWork() {
             <div class="content-left-content">
                 <div class="content-left-desc">
                 <h2>What we have done</h2>
-                <a> We have made it possible for our customers to stay securly connected wherever they may be. This was done using the modern technologies as well as AI's in order to obtain ultimate security, which is important for us. Examples on where this has been implemented are in drones, smartphones, smartwatches and even Virtual Reality (VR). 
+                <a> We have made it possible for our customers to stay securly connected wherever they may be. This was done using the modern technologies as well as AI's in order to obtain ultimate security, which is important for us. Examples on where this has been implemented are in drones, smartphones, smartwatches and even computers. 
                 </a>
               </div>
 
@@ -112,23 +143,27 @@ export default function OurWork() {
               <div class="slideshow-container">
               <Slide easing="ease" autoplay={true} indicators={true}>
               <div class="slide-img">
-                <div onClick={() => onClickFirst()} style={{'backgroundImage': `url(${slideImage1})`}}>
-                  <span>{firstVar}</span>
+                <div onClick={() => onSlideClick("first")} style={{'backgroundImage': `url(${slideImage1})`}}>
+                  <span id="first-span">{firstVar-countFirst}</span>
                 </div>
               </div>
               <div class="slide-img">
-                <div onClick={() => setCountSecond(countSecond + 1)} style={{'backgroundImage': `url(${slideImage2})`}}>
-                  <span>{secondVar}</span>
+                <div onClick={() => onSlideClick("second")} style={{'backgroundImage': `url(${slideImage2})`}}>
+                  <span id="second-span">{secondVar-countSecond}</span>
                 </div>
               </div>
               <div class="slide-img">
-                <div onClick={() => setCountThird(countThird + 1)} style={{'backgroundImage': `url(${slideImage3})`}}>
-                  <span>{thirdVar}</span>
+                <div onClick={() => onSlideClick("third")} style={{'backgroundImage': `url(${slideImage3})`}}>
+                  <span id="third-span">{thirdVar-countThird}</span>
                 </div>
               </div>
               <div class="slide-img">
-                <div onClick={() => setCountFourth(countFourth + 1)} style={{'backgroundImage': `url(${slideImage4})`}}>
-                  <span>{fourthVar}</span>
+                <div onClick={() => onSlideClick("fourth")} style={{'backgroundImage': `url(${slideImage4})`}}>
+                  <span id="fourth-span">{fourthVar-countFourth}</span>
+                </div>
+              </div>
+              <div class="slide-img">
+                <div onClick={() => onSlideClick("fifth")} style={{'backgroundImage': `url(${slideImage5})`}}>
                 </div>
               </div>
               </Slide>
