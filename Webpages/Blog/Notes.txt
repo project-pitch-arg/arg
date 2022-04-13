@@ -26,7 +26,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 2 ---------------
 
- - Titta på error i console och kommandotolken
+ - Titta på error i console 
+    - Fixat kommandotolken
 
  - Add logo to website
 
@@ -42,7 +43,7 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - Gäller StartUp filer.
 
 - Add an email in case the chat does not work?
-    - I About
+    - I About, endast för Edwin i så fall. För Wilfreds får man senare.
 
 - Rensa filerna i chat. Gamla mindre Pythonfilerna.
 
