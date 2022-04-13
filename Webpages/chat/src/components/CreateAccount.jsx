@@ -96,20 +96,19 @@ const CreateAccount = () => {
 // the chosen default chats.
 function addDefaultChats() {
 
-    // Create an array to contain the
-    // requests needed to be sent for
-    // each chat.
+    // Create an array to contain the requests needed
+    // to be sent for each chat.
     var xhrArray = [];
     for (var i = 0; i < DEFAULT_CHATS.length; i++) {
         xhrArray[i] = new XMLHttpRequest();
     }
          
-    // GO through the array and 
+    // Go through the array and 
     for (var i = 0; i < DEFAULT_CHATS.length; i++) {
 
         xhrArray[i].withCredentials = false;
 
-        //TODO remove these logs when done with testing this
+        // TODO remove these logs when done with testing this
         // This will trigger when the xhrArray[i]-request
         // is finished. It checks if the server request
         // was successful.
@@ -126,7 +125,6 @@ function addDefaultChats() {
     // send the request.
     xhrArray[i].open("POST", "https://api.chatengine.io/chats/" + DEFAULT_CHATS[i][0] + "/people/");
             
-    // TODO Should not always be Robot1312113 as admin!
     xhrArray[i].setRequestHeader("Project-ID", PROJECT_ID);
 
     xhrArray[i].setRequestHeader("User-Name", DEFAULT_CHATS[i][1]);

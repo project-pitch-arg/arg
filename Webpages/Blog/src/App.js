@@ -31,7 +31,7 @@ function App() {
   catch (error) {
     return (
       <div>
-        Error: {error}
+        Error: {error.message}
       </div>
     )
   }

@@ -14,16 +14,14 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - icniVad "Real life came knocking... sad"
     - Sedan sent i allt om allo chatten.
 
-- Lägg till att man behöver ändra address till chatten när man lagt upp allt på en server i dokuemntation.
+- Lägg till att man behöver ändra address till chatten när man lagt upp allt på en server i dokumentation.
 
 - Design på Home
 
 - Notera att försa inlägget i PostContent måste ha ett datum
 
-- Testa CreateAccount igen. En del har ändrats sedan det gjordes senast.
-    - Med fungerande Default Chats
-
-- Ta bort tid och datum i chatten.
+- Kuggen-inlägg som ledtråd till SKyline. Kan ta med andra bilder från Campus
+    för att visa upp det lite
 
 - Flytta på ReadMe
 
@@ -32,8 +30,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Flytta address till chatt till ChangeableValues
 
 --------------- Prio 2 ---------------
-
- - Kolla så att allt rensans från localstorage på lämpliga ställen så inget sparas.
 
  - Titta på error i console och kommandotolken
 

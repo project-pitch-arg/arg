@@ -138,6 +138,11 @@ export const PARK_ENTRANCE_IMAGE = ParkEntrance;
 export const DIRECTIONS = "20 34N, 25 150SE, 115 71E, 88 336NW, 72 354N, 35 53NE, 60 6N, 60 310NW, 55 33NE, 80 14N, 24 73E, 125 116SE" +
                             "62 84E, 112 16N, 155 18N, 30 260W, 34 303NW, 73 280W, 227 104E, 110 351N, 5 38NE, 25 155SE, F23";
 
+/* -------------------- Tab Chat -------------------- */
+
+// The webaddress for the chat. Should be entered as a string.
+export const CHAT_ADDRESS = "http://localhost:3001/"
+
 /* -------------------- Tab Posts -------------------- */
 
 // Global list to access sorted posts through other tabs. 
@@ -175,46 +180,47 @@ const DIFFERENT_FONTS = ["Arial", "Arial Black", "Verdana", "Tahoma", "Trebuchet
 export default function errorChecker() {
 
     if (QUOTE_TIME < 1) {
-        throw "Delay for quotes has to be a positive number.";
+        throw new Error("Delay for quotes has to be a positive number.");
     }
 
-    if (ENCRYPTION_KEY[0][0].length != 1) {
-        throw "First encryption key has to be a single letter.";
+    if (ENCRYPTION_KEY[0][0].length !== 1) {
+        throw new Error("First encryption key has to be a single letter.");
     }
 
-    if (ENCRYPTION_KEY[1][0].length != 1) {
-        throw "Second encryption key has to be a single letter.";
+    if (ENCRYPTION_KEY[1][0].length !== 1) {
+        throw new Error("Second encryption key has to be a single letter.");
     }
 
-    if (ENCRYPTION_KEY[2][0].length != 1) {
-        throw "Third encryption key has to be a single letter.";
+    if (ENCRYPTION_KEY[2][0].length !== 1) {
+        throw new Error("Third encryption key has to be a single letter.");
     }
 
-    if (ENCRYPTION_KEY[3][0].length != 1) {
-        throw "Fourth encryption key has to be a single letter.";
+    if (ENCRYPTION_KEY[3][0].length !== 1) {
+        throw new Error("Fourth encryption key has to be a single letter.");
     }
 
-    if (COURSE_CODE_1.length != 3) {
-        throw "First course code has to be three letters.";
+    if (COURSE_CODE_1.length !== 3) {
+        throw new Error("First course code has to be three letters.");
     }
 
-    if (COURSE_CODE_2.length != 3) {
-        throw "Second course code has to be three letters.";
+    if (COURSE_CODE_2.length !== 3) {
+        throw new Error("Second course code has to be three letters.");
     }
 
-    if (THREE_DINOS.length != 3) {
-        throw "There has to be exactly three dinosaurs.";
+    if (THREE_DINOS.length !== 3) {
+        throw new Error("There has to be exactly three dinosaurs.");
     }
 
     if (POSTS_PER_PAGE < 1) {
-        throw "1 or more posts has to be displayed.";
+        throw new Error("1 or more posts has to be displayed.");
     }
 
-    if (!(!DIFFERENT_COLORS.includes(LETTER_COLOR) && !(LETTER_COLOR.slice(0,3) == "rbg") && !(LETTER_COLOR.slice(0,1) == "#") && !(LETTER_COLOR.slice(0,3) == "hsl") && !(LETTER_COLOR.slice(0,4) == "rgba") && !(LETTER_COLOR.slice(0,4) == "hsla"))) {
-        throw "The specified color should be a color in a correct format.";
+    if (!(!DIFFERENT_COLORS.includes(LETTER_COLOR) && !(LETTER_COLOR.slice(0,3) === "rbg") && !(LETTER_COLOR.slice(0,1) === "#")
+            && !(LETTER_COLOR.slice(0,3) === "hsl") && !(LETTER_COLOR.slice(0,4) === "rgba") && !(LETTER_COLOR.slice(0,4) === "hsla"))) {
+        throw new Error("The specified color should be a color in a correct format.");
     }
 
     if (!DIFFERENT_FONTS.includes(LETTER_FONT)) {
-        throw "The specified font should be an existing web safe font.";
+        throw new Error("The specified font should be an existing web safe font.");
     }
 }
