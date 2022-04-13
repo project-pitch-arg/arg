@@ -1,0 +1,19 @@
+{
+      "home":{
+            "passphrase": "3121",
+            "URL": "/tempURL.com"
+      },
+
+      "our_work": {
+            "puzzle_var" : {  "first_var": 8,
+                              "second_var": 9,
+                              "third_var": 2,
+                              "fourth_var": 6
+            },
+            "cracked_password": "617264"
+      },
+
+      "about_us": {
+
+      }
+}
