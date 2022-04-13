@@ -15,8 +15,8 @@ export default class Extra extends Component{
                     <h1>Company Financials</h1>
                     <h2>Company Stock Price</h2>
                     <img class="graph" src={graph} alt="" onClick={this.imageClick}/>
-                    <h2>Last Quarters revenue Y/Y increase: 20%</h2>
-                    <h2>Last Quarters net income Y/Y increase: 50%</h2>
+                    <h2>Q1 revenue Y/Y increase: +20%</h2>
+                    <h2>Q1 net income Y/Y increase: +50%</h2>
                 </div>
             )
     }

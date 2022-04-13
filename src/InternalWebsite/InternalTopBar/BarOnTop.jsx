@@ -62,7 +62,6 @@ export default class TopBar extends Component {
       }
 
       getComponent = (file, Tag) => {
-
             return (<Route key={file} path={"/" + file} element={
                   <Suspense fallback={<InternalWrong />}>
                       <Tag reloadPage={this.reloadPage} logOut={this.props.logOut}/>

@@ -88,7 +88,7 @@ export default class Policy extends Component{
         if(event.target.command.value === Variables.smallConsoleCode){
             localStorage.setItem('Console', true);
             this.reloadPage();
-            window.history.replaceState(null, "New Page Title", "/Console");
+            window.history.replaceState(null, "New Page Title", "/Internal/Console");
             window.location.reload(false);
         }
     }

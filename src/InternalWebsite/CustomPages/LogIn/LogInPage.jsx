@@ -19,7 +19,7 @@ export default class LogInPage extends Component{
         event.preventDefault();
         if(event.target.cipher){
             var json = {"cipher": event.target.cipher.value};
-            var response  = await basicFetchDataJson("/checkCipher", json);
+            var response = await basicFetchDataJson("/checkCipher", json);
             if(response.error){
                 alert(response.error)
             }
@@ -76,8 +76,8 @@ export default class LogInPage extends Component{
                 <input type="text" id="username"/>
                 <label>Password</label>
                 <input type="password" id="password"/>
-                {this.cipher !== "" ? (<div><label>cipher:</label><input type="text" id="cipher"/>
-                <p>Solve security cipher to prove you are not a robot. You have {this.getTimeLeft()} seconds.</p>
+                {this.cipher !== "" ? (<div><label>Cipher</label><input type="text" id="cipher"/>
+                <p>Solve security cipher to prove your identity. You have {this.getTimeLeft()} seconds.</p>
                 <p style={{color: "white"}}><i>Hint: Answer should be an animal</i></p>
                 <p style={{color: "red"}}>{this.cipher}</p><div class="progress-bar-div">
                 <img class="progress-bar-image" src={progressBar} alt="Progress bar"/>

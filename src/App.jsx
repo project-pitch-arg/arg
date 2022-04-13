@@ -42,7 +42,11 @@ export default class App extends Component{
                       <Route exact path="/AboutUs" element={<AboutUs />} />
                       <Route exact path="/Internal/*" element={<Internal/>} />
                     </Routes>
-                    <Footer />
+                    {!window.location.pathname.includes("/Internal") ? (
+                        <div>
+                            <Footer />
+                        </div>
+                    ) : (null)}
                   </BrowserRouter>
                 </div>
               );

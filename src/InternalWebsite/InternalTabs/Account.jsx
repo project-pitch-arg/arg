@@ -16,7 +16,6 @@ export default class Account extends Component{
                 <div class="newsBlock">
                     <h1>{this.account.username}</h1>
                     <img style={{width: "30vh"}}src={require('../images/'+ this.account.username +".jpg")} alt=""/>
-                    <h2>Email:{this.account.email}</h2>
                     <button class="switchAccount" onClick={this.props.logOut}>Sign out</button>
                 </div>
             </div>

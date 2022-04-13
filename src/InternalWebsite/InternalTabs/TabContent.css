@@ -1,4 +1,3 @@
-
 .homeDiv{
     display:flex;
     height: 90%;
@@ -131,9 +130,12 @@ p.newsText{
     border: none;
     padding: 10px;
     border-radius: 40px;
-    margin-bottom: 10px;
+    margin-top: 10px;
     background-color: white;
     color: black;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
 }
 .switchAccount:hover{
     background-color: #069ac6;

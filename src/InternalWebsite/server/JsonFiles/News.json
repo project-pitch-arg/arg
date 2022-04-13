@@ -2,7 +2,7 @@
   "t1" : {
     "title": "Company retreat",
     "img" : "hometown",
-    "text": "It's time again for the company's yearly retreat. We will be traveling to our usual spot where we will enjoy a delightful weekend. Activities start on friday March 18 at 6 pm. Our CEO was kind enough to provide a beautiful image of the landscape.",
+    "text": "It's time again for the company's yearly retreat. We will be traveling to our usual spot where we will enjoy a delightful weekend. Activities start on March 18 at 6 pm. Our CEO was kind enough to provide a beautiful image of the landscape.",
     "date": "2022/04/11"
   },
   "t2" : {
@@ -20,5 +20,10 @@
     "title": "We are hiring",
     "text" : "Good people tend to know good people - help us fill the new role of security specialist.\nRefer someone you know, share it on social media, or apply for the job yourself.\nAs a bonus, we're also offering 2000 kr for successful hires! Email HR for more information.",
     "date" : "2022/03/19"
+  },
+  "t5" : {
+    "title": "Welcome our new hire!",
+    "text" : "This week we have added another person to our great team, please welcome Mark Ryan which is our new HR representative. Feel free to ask any HR related questions to him.",
+    "date" : "2022/03/23"
   }
 }]
