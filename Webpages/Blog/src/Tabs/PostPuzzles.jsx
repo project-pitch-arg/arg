@@ -17,9 +17,9 @@ import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER
 
 export default function Puzzles(post) {
 
-  if(localStorage.getItem('solvedPasswords') === null) {
+  if(sessionStorage.getItem('solvedPasswords') === null) {
     var passwords = [""];
-    localStorage.setItem('solvedPasswords', JSON.stringify(passwords));
+    sessionStorage.setItem('solvedPasswords', JSON.stringify(passwords));
   }
   // Checks if a post is a puzzle and in that case which puzzle it is.
   // Depending on the result it will return different displays.
@@ -33,7 +33,7 @@ export default function Puzzles(post) {
       case "B-c4": return puzzleBc4(post);
     }  
   }
-  if(post.hasOwnProperty("secret") && !(JSON.parse(localStorage.getItem('solvedPasswords'))).includes(post.secret)) {
+  if(post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem('solvedPasswords'))).includes(post.secret)) {
     return (
       <div class="post">
           <div class="post-date">
@@ -43,7 +43,7 @@ export default function Puzzles(post) {
             <pre class="post-content">
               {post.content} 
               <form onSubmit={submitPassword(post)}>
-              <input type="text" value={localStorage.getItem('postSecret')} onChange={(e) => localStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
+              <input type="text" value={sessionStorage.getItem('postSecret')} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
               <div type="submit" />
               </form>
             </pre>
@@ -78,12 +78,12 @@ export default function Puzzles(post) {
   // Function to reveal passwordprotected content
   // when the password is correct.
   function submitPassword(post) {
-    if(localStorage.getItem('postSecret') == post.secret) {
-      var passwords = JSON.parse(localStorage.getItem('solvedPasswords'))
+    if(sessionStorage.getItem('postSecret') == post.secret) {
+      var passwords = JSON.parse(sessionStorage.getItem('solvedPasswords'))
       passwords.push(post.secret)
-      localStorage.setItem('solvedPasswords', JSON.stringify(passwords))
+      sessionStorage.setItem('solvedPasswords', JSON.stringify(passwords))
     }
-    localStorage.removeItem('postSecret');
+    sessionStorage.removeItem('postSecret');
     return;
   }
   
