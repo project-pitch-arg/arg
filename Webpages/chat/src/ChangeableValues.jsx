@@ -35,9 +35,7 @@ export const PRIVATE_KEY = "ede1ace3-6939-44bf-9df8-c818978fc030";
 
 // The chat rooms a new user will be entered into.
 // The numbers can be found on your web page.
-// It would be good to edit this when all chosen default chats are created.
-// If you want to enter users into the chats with ID:s 1,2 and 3
-// the array would be [1, 2, 3]. TODO: EDIT
-export const DEFAULT_CHATS = [[102863, "Robot1312113"], [102890, "Fexjo"]];
-
-// The default users existing in the chat.
+// It would be good to edit this after running StartUp.py, where chats are created.
+// If you want to enter users into the chats with ID:s 1, 2 and 3 with corresponding
+// admins admin1, admin2 and admin3 the array would be [[1, admin1], [2, admin2], [3, admin3]].
+export const DEFAULT_CHATS = [[109444, "Robot1312113"], [109445, "Fexjo"], [109446, "icniVad"], [109448, "icniVad"], [109449, "Mr X"]];

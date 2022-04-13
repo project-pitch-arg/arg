@@ -72,7 +72,6 @@ export default function Puzzles(post) {
     </div>
   )
   
-
 /* -------------------- Functions -------------------- */  
 
   // Function to reveal passwordprotected content
