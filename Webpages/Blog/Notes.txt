@@ -20,14 +20,9 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Notera att försa inlägget i PostContent måste ha ett datum
 
-- Kuggen-inlägg som ledtråd till SKyline. Kan ta med andra bilder från Campus
-    för att visa upp det lite
-
 - Flytta på ReadMe
 
 - Inkludera fakta från dokumentet om GU som finns på Drive.
-
-- Flytta address till chatt till ChangeableValues
 
 --------------- Prio 2 ---------------
 
