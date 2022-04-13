@@ -16,8 +16,6 @@ import Header from "./Header/Header";
 
 // import Images from "./img";
 
-import logo from "./logo.svg";
-
 function App() {
 
   // This is to ensure that PostContent is sorted 
