@@ -24,6 +24,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Inkludera fakta från dokumentet om GU som finns på Drive.
 
+- Fixa Next Jigsaw knappen på Home sidan.
+
 --------------- Prio 2 ---------------
 
  - Titta på error i console och kommandotolken

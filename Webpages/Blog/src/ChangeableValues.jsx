@@ -54,6 +54,11 @@ export const USER_PICTURE_2 = CaesarSalad;
 // Edit this to change the time each quote is displayed.
 export const QUOTE_TIME = 30;
 
+/* -------------------- Tab HOME -------------------- */
+
+export const IFRAME_LIST = ["https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93d3cudGVrbmlrbWFnYXNpbmV0LnNlL3N0b3JhZ2UvbWEvOWM4NjViZDJjYzQyNGMxN2JjYTM0Y2VjYjhjODI5NzEvZGQ3NmQ5MGVlYzQ0NDNiOGE3ODAyMDkwNzIyZTA0YTkvODAwLTk2MS0wLXBuZy5QbmcvNjlCRENGRTZCNUFGNkM4MEVCMUY4MzVGNkY5MzZCMkE5M0JFMkVFRS8xMDcxMTMucG5nXyhub19wcmV2aWV3XzQpXw~~", 
+                            "https://Google.com"]
+
 /* -------------------- Puzzle B-p1 -------------------- */
 
 // Solution to B-p1, this is an address to the next
