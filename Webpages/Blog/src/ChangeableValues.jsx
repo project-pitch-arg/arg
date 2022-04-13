@@ -111,7 +111,7 @@ export const THREE_DINOS = ["Aardonyx", "Datanglong", "Talarurus"];
 export const HINT_DINOS = "I wonder why only two dinosaurs are capitalized? Maybe you can find another one that's capitalized as well?";
 
 // A hint to allude to the courses part of the puzzle.
-export const HINT_COURSES = "See if you can build some other course codes from pieces you find here and there. I'm sure they'll lead to interesting results.";
+export const HINT_COURSES = "See if you can build some other course codes from pieces you find here and there. I'm sure you'll find something interesting on their canvas course pages.";
 
 // Choice of having zero or not. As well as what shading.
 export const DUROS_IMAGE = DurosLight;
