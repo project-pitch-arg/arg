@@ -7,7 +7,7 @@ import Wrong from './Wrong';
 import Home from './Tabs/Home';
 import OurWork from './Tabs/OurWork';
 import AboutUs from './Tabs/AboutUs';
-import Internal from './InternalWebsite/internal';
+import Internal from './InternalWebsite/Internal';
 
 import Footer from './Footer/Footer';
 

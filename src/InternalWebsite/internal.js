@@ -3,7 +3,7 @@ import React, { lazy, Suspense,Component } from 'react';
 import Login from "./CustomPages/LogIn/LogInPage";
 import {getAccountData} from "./CustomPages/LogIn/LogIn";
 
-export default class App extends Component {
+export default class Internal extends Component {
     constructor(props) {
       super(props);
       this.state = { width: 0, height: 0,loggedIn: false };
