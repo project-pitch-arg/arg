@@ -20,11 +20,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Notera att försa inlägget i PostContent måste ha ett datum
 
-- Uppdatera JSON scheman till bloggen
-
-- Kuggen-inlägg som ledtråd till SKyline. Kan ta med andra bilder från Campus
-    för att visa upp det lite
-
 - Testa CreateAccount igen. En del har ändrats sedan det gjordes senast.
     - Med fungerande Default Chats
 
@@ -33,6 +28,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Flytta på ReadMe
 
 - Inkludera fakta från dokumentet om GU som finns på Drive.
+
+- Flytta address till chatt till ChangeableValues
 
 --------------- Prio 2 ---------------
 
