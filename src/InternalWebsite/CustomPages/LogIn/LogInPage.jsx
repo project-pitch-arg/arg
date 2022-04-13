@@ -70,11 +70,11 @@ export default class LogInPage extends Component{
     render(){
         return (<div className="popup-box">
           <div className="box">
-            <h1>Account</h1>
+            <h1 style={{color: "black", fontSize: "45px"}}>Account</h1>
             <form onSubmit={this.logIn}>
-                <label>Username:</label>
+                <label>Username</label>
                 <input type="text" id="username"/>
-                <label>Password:</label>
+                <label>Password</label>
                 <input type="password" id="password"/>
                 {this.cipher !== "" ? (<div><label>cipher:</label><input type="text" id="cipher"/>
                 <p>Solve security cipher to prove you are not a robot. You have {this.getTimeLeft()} seconds.</p>

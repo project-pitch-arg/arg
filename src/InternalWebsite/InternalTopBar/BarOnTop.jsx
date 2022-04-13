@@ -1,7 +1,7 @@
 import React, {  lazy, Suspense, Component } from 'react';
 import './BarOnTop.css';
 import {Link} from "react-router-dom";
-import Wrong from '../Wrong';
+import InternalWrong from '../Wrong';
 import Home from '../InternalTabs/Home';
 import {fetchData} from '../Client/Client.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -62,8 +62,9 @@ export default class TopBar extends Component {
       }
 
       getComponent = (file, Tag) => {
-            return (<Route key={file} exact path={"/" + file} element={
-                  <Suspense fallback={<Wrong />}>
+
+            return (<Route key={file} path={"/" + file} element={
+                  <Suspense fallback={<InternalWrong />}>
                       <Tag reloadPage={this.reloadPage} logOut={this.props.logOut}/>
                   </Suspense>
               }/>);
@@ -79,7 +80,7 @@ export default class TopBar extends Component {
           return (
                 <div className="topbar">
                     <header><h1 className="internalHeader">Difax</h1></header>
-                    <BrowserRouter>
+
                       <div className="menyDiv">
                       <ul id='topbar-ul'>
                       {
@@ -95,8 +96,8 @@ export default class TopBar extends Component {
                       </ul>
                       </div>
                       <Routes>
-                          <Route path="" element={<Home/>}/>
-                          <Route path="*" element={<Wrong />} />
+                          <Route exact path="/" element={<Home/>}/>
+                          <Route exact path="/*" element={<InternalWrong />} />
                           {
                             this.locations.map((file) => {
                                 const Tag = lazy(() => import("../InternalTabs/" + file));
@@ -111,7 +112,6 @@ export default class TopBar extends Component {
                           }
                       }
                       </Routes>
-                   </BrowserRouter>
                 </div>
             )
           }

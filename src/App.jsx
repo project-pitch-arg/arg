@@ -13,31 +13,40 @@ import Footer from './Footer/Footer';
 
 export default class App extends Component{
 
+  constructor(props){
+    super(props)
+    this.internalCheck = localStorage.getItem("internalCheck");
+  }
 
   render(){
-    if(window.location.pathname === "/Internal"){
+    /*if(window.location.pathname === "/Internal" || this.internalCheck){
+        localStorage.setItem("internalCheck", true);
         return (<div>
                   <Internal/>
                 </div>);
-    }
-    else {
+    }*/
+    //else {
         return (
                 <div className="App">
                   <BrowserRouter>
-                    <TopBar />
-                    <ScrollToTop smooth color='blue' style={{background:'#e2e2e2'}}/>
+                    {!window.location.pathname.includes("/Internal") ? (
+                    <div>
+                        <TopBar />
+                        <ScrollToTop smooth color='blue' style={{background:'#e2e2e2'}}/>
+                    </div>
+                    ) : (null)}
                     <Routes>
                       <Route path="*" element={<Wrong />} /> {/*Default when path doesn't match any of the ones listed below*/}
                       <Route exact path="/" element={<Home />} />
                       <Route exact path="/OurWork" element={<OurWork />} />
                       <Route exact path="/AboutUs" element={<AboutUs />} />
-                      <Route exact path="/Internal" element={<Internal/>} />
+                      <Route exact path="/Internal/*" element={<Internal/>} />
                     </Routes>
                     <Footer />
                   </BrowserRouter>
                 </div>
               );
-    }
+    //}
   }
 }
 
