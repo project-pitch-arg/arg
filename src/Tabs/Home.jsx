@@ -13,7 +13,7 @@ const jsonData = require('../data.json');
 {
     var home = jsonData.home
     var passphrase = home.passphrase;
-    var URL = home.URL;
+    var encryptedEmail = home.encrypted_email;
     var attempt = "";
 
     var header = HOME_HEADER;
@@ -112,7 +112,7 @@ export default function Home() {
         }
 
         if (attempt === passphrase ){
-                console.log(URL);
+                console.log(encryptedEmail);
                 attempt = "";
         }
         console.log(attempt);
