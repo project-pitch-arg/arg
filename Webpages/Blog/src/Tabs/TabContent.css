@@ -59,10 +59,44 @@
 
 /* --------------------TabHome -------------------- */
 
-.homelist {
-    background-color: var(--post-list-background);
-    overflow-x: hidden;   
-    overflow-y: auto;
+#home {
+    overflow: scroll;
+}
+
+#home-wrapper {
+    margin-top: 80vh;
+    margin-left: 10vw;
+    width: 80vw;
+    height: 30vh;
+    overflow: hidden;
+}
+
+#home-left {
+    width: 50vw;
+    height: auto;
+    float:left; /* add this */
+    overflow: hidden;
+}
+
+#home-right {
+    overflow: hidden;
+}
+
+#home-logo {
+    margin-top: 3vh;
+}
+
+#home-iframe-container {
+    width: 98vw;
+    height: 100vh;
+    overflow: hidden;     
+}
+
+#home-iframe {
+    width: 100vw;     
+    height: 100vh;     
+    margin-top: -5vh; 
+    overflow:hidden;
 }
 
 .title-text {
@@ -73,19 +107,9 @@
     position: relative;
 }
 
-.shift-right {
-    text-indent: 1vw;
-}
-
-.home-dino {
-    width: 25vw;
-    height: auto;
-}
-
 .help-button {
-    height: 10vh;
-    width: 12vw;
-    margin-top: 5vh;
+    height: 5vh;
+    width: 6vw;
 }
 
 /* --------------------TabPosts -------------------- */
