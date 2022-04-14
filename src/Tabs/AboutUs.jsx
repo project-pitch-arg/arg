@@ -4,7 +4,7 @@ import './Company.css';
 
 import { ABOUT_US_HEADER, ENVIRONMENT_IMAGE, GOALS_IMAGE, EMPLOYEES_IMAGES} from '../ImageImports';
 
-const jsonData = require('../data.json');
+const jsonData = require('../json/companyWebsite.json');
 
 {
   var aboutUs = jsonData.about_us;

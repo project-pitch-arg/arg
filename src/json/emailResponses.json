@@ -1,0 +1,18 @@
+{
+  "helena":{
+    "first_reply" :"Where did you get this code? \n I will ask IT what it is about. \n//Helena" ,
+    "second_reply" : "I talked with IT and they say it's for a restricted page and we thank you for not sharing it.  \n//Helena",
+    "no_reply" : "Hello, i'm out of the office for a two week vacation i will be back on the 1st of April \nBest Regards Helena :)"
+  },
+
+  "lyra": {
+    "first_reply" :"Hello, \n I haven’t heard from Wilfred in a while but he did leave me a message saying to tell it to anyone looking for him. The message is, \n \n 'To access what cannot be seen, you must seek three disjoint keys' \n \n I don't know what that means but I hope he's alright. \n \n Lyra" ,
+    "second_reply" : "",
+    "no_reply" : "Hello, \n I am currently not available and cannot respond to you right now.\n \n Lyra Bell"
+  },
+
+  "wilfred": {
+    "first_reply" :"Hello, \n So...you really are trying to help. Ok then. I need your help accessing documents. But first you must navigate to /Internal" ,
+    "no_reply" : "Username and password required"
+  }
+}

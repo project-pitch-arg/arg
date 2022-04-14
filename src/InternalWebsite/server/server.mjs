@@ -41,15 +41,15 @@ app.post('/getFiles', (req, res) => {
     })
 });
 app.post('/getNews', (req, res) => {
-  const data = fs.readFileSync("./JsonFiles/News.json");
+  const data = fs.readFileSync("../../json/News.json");
   return res.send(data);
 });
 app.post('/getQuiz', (req, res) => {
-  const data = fs.readFileSync("./JsonFiles/Quiz.json");
+  const data = fs.readFileSync("../../json/Quiz.json");
   return res.send(data);
 });
 app.post('/getHR', (req, res) => {
-  const data = fs.readFileSync("./JsonFiles/HR.json");
+  const data = fs.readFileSync("../../json/HR.json");
   return res.send(data);
 });
 app.post("/getPolicy", (req, res) => {
@@ -68,7 +68,7 @@ app.post("/getPDF", (req, res) => {
 app.post("/getUser", (req, res) => {
   var username = req.body.username;
   var password = req.body.password;
-  const response = fs.readFileSync("./JsonFiles/Accounts.json");
+  const response = fs.readFileSync("../../json/Accounts.json");
   var data = JSON.parse(response);
   var check = false;
   Object.keys(data[0]).forEach((key) => {
@@ -84,9 +84,9 @@ app.post("/getUser", (req, res) => {
 app.post("/checkCipher", (req, res) => {
   var response = req.body.cipher;
   if(cipher === response){
-        const file = fs.readFileSync("./JsonFiles/Accounts.json");
+        const file = fs.readFileSync("../../json/Accounts.json");
         var data = JSON.parse(file);
-        const tokenFile = fs.readFileSync("./JsonFiles/Tokens.json");
+        const tokenFile = fs.readFileSync("../../json/Tokens.json");
         var json = JSON.parse(tokenFile);
         var ip_adress = req.socket.remoteAddress;
         try{
@@ -95,7 +95,7 @@ app.post("/checkCipher", (req, res) => {
         catch{
             json[ip_adress] = { "token" : getRandomInt(100000000000000000000,1000000000000000000000)};
         }
-        fs.writeFileSync("./JsonFiles/Tokens.json", JSON.stringify(json));
+        fs.writeFileSync("../../json/Tokens.json", JSON.stringify(json));
         Object.keys(data[0]).forEach((key) => {
               if(data[0][key].username === "CEO"){
                     data[0][key].password = "";
@@ -110,7 +110,7 @@ app.post("/checkCipher", (req, res) => {
 });
 
 app.post("/checkToken", (req, res) => {
-    const tokenFile = fs.readFileSync("./JsonFiles/Tokens.json");
+    const tokenFile = fs.readFileSync("../../json/Tokens.json");
     var json = JSON.parse(tokenFile);
     var ip_adress = req.socket.remoteAddress;
     var token = req.body.token;

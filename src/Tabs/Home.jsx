@@ -6,7 +6,7 @@ import 'react-slideshow-image/dist/styles.css';
 import { HOME_HEADER, INTRO_IMAGE, TECH_IMAGES } from '../ImageImports';
 
 
-const jsonData = require('../data.json');
+const jsonData = require('../json/companyWebsite.json');
 
 
 

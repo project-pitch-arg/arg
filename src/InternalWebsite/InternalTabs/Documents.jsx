@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import "./TabContent.css";
 import {basicFetchData} from "../Client/Client";
 import axios from 'axios';
-import Variables from "../JSONFiles/Variables";
+import Variables from "../../json/Variables";
 
 
 export default class Policy extends Component{

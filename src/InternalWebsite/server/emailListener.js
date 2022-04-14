@@ -1,13 +1,34 @@
 //------------- JSON
 
-var jsonData = require('../../data.json');
+var jsonData1 = require('../../json/companyWebsite.json');
+var jsonData = require('../../json/emailResponses.json');
+
+var helena_temp = jsonData.helena;
+var lyra_temp = jsonData.lyra;
+var wilfred_temp = jsonData.wilfred;
+
+//--------------Helena
+
+var helena_first_reply = helena_temp.first_reply;
+var helena_second_reply = helena_temp.second_reply;
+var helena_no_reply = helena_temp.no_reply;
+
+
+//------------ Lyra
+
+var lyra_first_reply = lyra_temp.first_reply;
+var lyra_no_reply = lyra_temp.no_reply;
+
+//------------ Wilfred
+var wilfred_first_reply = wilfred_temp.first_reply;
+var wilfred_no_reply = wilfred_temp.no_reply;
 
 //our work password
-var temp = jsonData.our_work;
+var temp = jsonData1.our_work;
 var ourWorkPassword = temp.cracked_password;
 
 //about us password
-var temp = jsonData.about_us;
+var temp = jsonData1.about_us;
 var aboutUsPassword = temp.password;
 //--------------
 
@@ -16,6 +37,8 @@ var Imap = require('imap'),
     inspect = require('util').inspect;
 
 var MailListener = require("mail-listener2");
+
+//------------- Creation of MailListeners
 
 var helena_mailListener = new MailListener({
   username: 'helena.godspeed@gmail.com',
@@ -71,6 +94,7 @@ var wilfred_mailListener = new MailListener({
   attachments: true, // download attachments as they are encountered to the project directory
   attachmentOptions: { directory: "attachments/" } // specify a download directory for attachments
 });
+
 //-------------- start listening
 
 helena_mailListener.start();
@@ -203,19 +227,13 @@ function wilfred_sendMail(subject, to,message){
 helena_mailListener.on("mail", function(mail, seqno, attributes){
     try {
         if(mail.text.includes("231")){
-            helena_sendMail("Hello", mail.from, "Where did you get this code? \n I will ask IT what it is about. \n//Helena");
+            helena_sendMail("Hello", mail.from, helena_first_reply);
             setTimeout(function() {
-                helena_sendMail("Hello", mail.from, "I talked with IT and they say it's for a restricted page and we thank you for not sharing it.  \n//Helena")
-            }, 60000);
-        }
-        if(mail.text.includes("231")){
-            helena_sendMail("Hello", mail.from, "Where did you get this code? \n I will ask IT what it is about. \n//Helena");
-            setTimeout(function() {
-                helena_sendMail("Hello", mail.from, "I talked with IT and they say it's for a restricted page and we thank you for not sharing it.  \n//Helena")
+                helena_sendMail("Hello", mail.from, helena_second_reply)
             }, 60000);
         }
         else {
-            helena_sendMail("Hello", mail.from, "Hello, i'm out of the office for a two week vacation i will be back on the 1st of April \nBest Regards Helena :)");
+            helena_sendMail("Hello", mail.from, helena_no_reply);
         }
     }
     catch {
@@ -229,16 +247,10 @@ lyra_mailListener.on("mail", function(mail, seqno, attributes){
         var text = mail.text.toUpperCase();
         var key = "wilfred";
         if(text.includes(key.toUpperCase())){
-            lyra_sendMail("Hello", mail.from,
-             "Hello, \n"+
-             "I haven’t heard from Wilfred in a while but he did leave me a message saying to tell it to anyone looking for him. The message is, 'To access what cannot be seen, you must seek three disjoint keys' I don't know what that means but I hope he's alright.");
+            lyra_sendMail("Hello", mail.from, lyra_first_reply );
         }
         else {
-          lyra_sendMail("Hello", mail.from,
-           "Hello, \n"+
-           "I am currently not available and cannot respond to you right now.\n \n"  +
-           "Lyra Bell"
-           );
+          lyra_sendMail("Hello", mail.from, lyra_no_reply);
         }
 
     }
@@ -252,14 +264,10 @@ wilfred_mailListener.on("mail", function(mail, seqno, attributes){
     try {
         var text = mail.text.toUpperCase();
         if(text.includes(ourWorkPassword.toUpperCase()) && text.includes(aboutUsPassword.toUpperCase()) ){
-            wilfred_sendMail("Hello", mail.from,
-             "Hello, \n"+
-             "So...you really are trying to help. Ok then. I need your help accessing documents. But first you must navigate to /Internal");
-        }
+            wilfred_sendMail("Hello", mail.from, wilfred_first_reply)
+            }
         else {
-          wilfred_sendMail("Hello", mail.from,
-           "Username and password required"
-           );
+          wilfred_sendMail("Hello", mail.from, wilfred_no_reply);
         }
 
     }
