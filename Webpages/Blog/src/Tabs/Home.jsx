@@ -3,27 +3,23 @@ import "./TabContent.css";
 import { Link } from "react-router-dom";
 import Help from "../TopBar/TopBar";
 import helpbutton from "../Img/HelpButton.png"
+import { useState } from "react";
 
 import { USER_NAME_1, USER_NAME_2, IFRAME_LIST } from "../ChangeableValues";
 
 // TODO! Make the Home page look nicer.
 
 export default function Home() {
+    const[index, setIndex] = useState(0);
 
-    var currentIframe = IFRAME_LIST[0];
-    var iframe = document.getElementById('#home-iframe');
-
-    // This button is currently not working
+    // Change to the next puzzle in the IFRAME_LIST.
     function switchJigsaw() {
-      currentIframe = (IFRAME_LIST.indexOf(currentIframe) + 1) % IFRAME_LIST.length;
-      iframe.load(currentIframe);           // Either this
-      iframe.attr('src', currentIframe);    // or this. Neither works
-      document.getElementById('#home-iframe').contentWindow.location.reload()
+      setIndex((index + 1 ) % IFRAME_LIST.length);  
+      console.log(index)
     }
     
     // Returns the appearance of the Home page
-    // along with a button to reach the "About"
-    // page as well as the latest Post from "Posts".
+    // along with a button to change jigsaw puzzle.
     return (
       <div class="content" id="home">
         <div class="title-text">
@@ -49,12 +45,9 @@ export default function Home() {
                 <img src="favicon.ico" alt="Logo"/>
               </div>
             </div>
-            
           </div>
-
-
           <div id="home-iframe-container">
-            <iframe id="home-iframe" src={currentIframe} />
+            <iframe id="home-iframe" src={IFRAME_LIST[index]} />
           </div>
 
           <div>
@@ -62,7 +55,6 @@ export default function Home() {
               Next Jigsaw
             </button>
           </div>
-          
         </div>
       </div>
     )

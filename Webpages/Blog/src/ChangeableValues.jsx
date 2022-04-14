@@ -57,7 +57,7 @@ export const QUOTE_TIME = 30;
 /* -------------------- Tab HOME -------------------- */
 
 export const IFRAME_LIST = ["https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93d3cudGVrbmlrbWFnYXNpbmV0LnNlL3N0b3JhZ2UvbWEvOWM4NjViZDJjYzQyNGMxN2JjYTM0Y2VjYjhjODI5NzEvZGQ3NmQ5MGVlYzQ0NDNiOGE3ODAyMDkwNzIyZTA0YTkvODAwLTk2MS0wLXBuZy5QbmcvNjlCRENGRTZCNUFGNkM4MEVCMUY4MzVGNkY5MzZCMkE5M0JFMkVFRS8xMDcxMTMucG5nXyhub19wcmV2aWV3XzQpXw~~", 
-                            "https://Google.com"]
+                            "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9wMi5waXFzZWxzLmNvbS9wcmV2aWV3LzgzMS84NzEvODIyL2Rpbm9zYXVyLXBzaXR0YWNvc2F1cnVzLXBzaXR0YWNvc2F1cnVzLW1vbmdvbGllbnNpcy1jaG9yZGF0YS5qcGdfKG5vX3ByZXZpZXdfNClf"]
 
 /* -------------------- Puzzle B-p1 -------------------- */
 
