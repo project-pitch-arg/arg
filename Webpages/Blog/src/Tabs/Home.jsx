@@ -38,9 +38,11 @@ export default function Home() {
             </div>
             
             <div id="home-right"> 
-              <Link onClick={Help} to="/About">
-                <img class="help-button" src={helpbutton}/>
+              If you're new to the website we recommend you check out our&nbsp;
+              <Link class="link" onClick={Help} to="/About">
+                About 
               </Link>
+              &nbsp;page.
               <div id="home-logo">
                 <img src="favicon.ico" alt="Logo"/>
               </div>
