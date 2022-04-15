@@ -221,7 +221,13 @@ function wilfred_sendMail(subject, to,message){
     wilfred_mailOptions.to = to;
     wilfred_mailOptions.text = message;
     wilfred_transporter.sendMail(wilfred_mailOptions, function(error, info){
-
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
+}
 
 //------------- helena mail listener arguments
 helena_mailListener.on("mail", function(mail, seqno, attributes){
@@ -290,7 +296,7 @@ lyra_mailListener.on("mail", function(mail, seqno, attributes){
         }
         else {
           lyra_sendMail("Hello", mail.from, lyra_no_reply);
-
+        }
 
     }
     catch {
@@ -326,10 +332,8 @@ lyra_mailListener.on("attachment", function(attachment){
 });
 wilfred_mailListener.on("attachment", function(attachment){
   console.log(attachment.path);
-
-    }
-
 });
+
 function readPDF(callback){
     var dir = arguments[1];
     fs.readdir(dir, function(err, filenames) {
@@ -394,6 +398,8 @@ function compareTexts(text1, text2){
     secretText = "";
 }
 
+// There is no one mail listener at the moment but we fix
+/*
 mailListener.on("attachment", function(attachment){
 
     var pathAttachments = path.join(__dirname, "/attachments/")
@@ -403,3 +409,4 @@ mailListener.on("attachment", function(attachment){
     setTimeout(readPDF, 20000, collectSecretTexts,secretDirectory);
 
 });
+*/
