@@ -1,14 +1,50 @@
+
+//------------- JSON
+
+var jsonData1 = require('../../json/companyWebsite.json');
+var jsonData = require('../../json/emailResponses.json');
+
+var helena_temp = jsonData.helena;
+var lyra_temp = jsonData.lyra;
+var wilfred_temp = jsonData.wilfred;
+
+//--------------Helena
+
+var helena_first_reply = helena_temp.first_reply;
+var helena_second_reply = helena_temp.second_reply;
+var helena_no_reply = helena_temp.no_reply;
+
+
+//------------ Lyra
+
+var lyra_first_reply = lyra_temp.first_reply;
+var lyra_hint = lyra_temp.hint;
+var lyra_no_reply = lyra_temp.no_reply;
+
+//------------ Wilfred
+var wilfred_first_reply = wilfred_temp.first_reply;
+var wilfred_second_reply = wilfred_temp.second_reply;
+
+//our work password
+var temp = jsonData1.our_work;
+var ourWorkPassword = temp.cracked_password;
+
+//about us password
+var temp = jsonData1.about_us;
+var aboutUsPassword = temp.password;
+//--------------
 const path = require('path');
 const fs = require('fs');
 const PdfReader = require('pdfreader').PdfReader;
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-
 var Imap = require('imap'),
     inspect = require('util').inspect;
 
 var MailListener = require("mail-listener2");
 
-var mailListener = new MailListener({
+//------------- Creation of MailListeners
+
+var helena_mailListener = new MailListener({
   username: 'helena.godspeed@gmail.com',
   password: 'Speed241',
   host: 'imap.gmail.com',
@@ -26,49 +62,141 @@ var mailListener = new MailListener({
   attachments: true, // download attachments as they are encountered to the project directory
   attachmentOptions: { directory: "attachments/" } // specify a download directory for attachments
 });
-
-mailListener.start(); // start listening
-
-mailListener.on("server:connected", function(){
-  console.log("Mail listener active");
+var lyra_mailListener = new MailListener({
+  username: 'LyraBell.Difax@gmail.com',
+  password: 'ColoradoSprings532',
+  host: 'imap.gmail.com',
+  port: 993, // imap port
+  tls: true,
+  connTimeout: 10000, // Default by node-imap
+  authTimeout: 5000, // Default by node-imap,
+  debug: null, // Or your custom function with only one incoming argument. Default: null
+  tlsOptions: { rejectUnauthorized: false },
+  mailbox: "INBOX", // mailbox to monitor
+  searchFilter: ["UNSEEN"], // the search filter being used after an IDLE notification has been retrieved
+  markSeen: true, // all fetched email willbe marked as seen and not fetched next time
+  fetchUnreadOnStart: true, // use it only if you want to get all unread email on lib start. Default is `false`,
+  mailParserOptions: {streamAttachments: true}, // options to be passed to mailParser lib.
+  attachments: true, // download attachments as they are encountered to the project directory
+  attachmentOptions: { directory: "attachments/" } // specify a download directory for attachments
+});
+var wilfred_mailListener = new MailListener({
+  username: 'wilfredmalm285@gmail.com',
+  password: 'yellowstoneCaldera916',
+  host: 'imap.gmail.com',
+  port: 993, // imap port
+  tls: true,
+  connTimeout: 10000, // Default by node-imap
+  authTimeout: 5000, // Default by node-imap,
+  debug: null, // Or your custom function with only one incoming argument. Default: null
+  tlsOptions: { rejectUnauthorized: false },
+  mailbox: "INBOX", // mailbox to monitor
+  searchFilter: ["UNSEEN"], // the search filter being used after an IDLE notification has been retrieved
+  markSeen: true, // all fetched email willbe marked as seen and not fetched next time
+  fetchUnreadOnStart: true, // use it only if you want to get all unread email on lib start. Default is `false`,
+  mailParserOptions: {streamAttachments: true}, // options to be passed to mailParser lib.
+  attachments: true, // download attachments as they are encountered to the project directory
+  attachmentOptions: { directory: "attachments/" } // specify a download directory for attachments
 });
 
-mailListener.on("server:disconnected", function(){
-  console.log("Mail listener inactive");
+//-------------- start listening
+
+helena_mailListener.start();
+lyra_mailListener.start();
+wilfred_mailListener.start();
+
+//-------------
+
+helena_mailListener.on("server:connected", function(){
+  console.log("helena_mailListener listener active");
+});
+lyra_mailListener.on("server:connected", function(){
+  console.log("lyra_mailListener listener active");
+});
+wilfred_mailListener.on("server:connected", function(){
+  console.log("wilfred_mailListener listener active");
 });
 
-mailListener.on("error", function(err){
+
+//----------------
+
+helena_mailListener.on("server:disconnected", function(){
+  console.log("helena_mailListener listener inactive");
+});
+lyra_mailListener.on("server:disconnected", function(){
+  console.log("lyra_mailListener listener inactive");
+});
+wilfred_mailListener.on("server:disconnected", function(){
+  console.log("wilfred_mailListener listener inactive");
+});
+
+//----------------
+
+helena_mailListener.on("error", function(err){
+  console.log(err);
+});
+lyra_mailListener.on("error", function(err){
+  console.log(err);
+});
+wilfred_mailListener.on("error", function(err){
   console.log(err);
 });
 
+//----------------
+
 var nodemailer = require('nodemailer');
 
-var transporter = nodemailer.createTransport({
+var helena_transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'helena.godspeed@gmail.com',
     pass: 'Speed241'
   }
 });
-var mailOptions = {
-  from: '',
+
+var lyra_transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'LyraBell.Difax@gmail.com',
+    pass: 'ColoradoSprings532'
+  }
+});
+var wilfred_transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'WilfredMalm285@gmail.com',
+    pass: 'yellowstoneCaldera916'
+  }
+});
+
+//---------------------
+
+var helena_mailOptions = {
+  from: 'helena.godspeed@gmail.com',
+  to: 'fhemfhem55@gmail.com',
+  subject: 'Tjebbatjona',
+  text: 'Ditt lösenord är: ',
+};
+var lyra_mailOptions = {
+  from: 'LyraBell.Difax@gmail.com',
+  to: '',
+  subject: '',
+  text: '',
+};
+var wilfred_mailOptions = {
+  from: 'WilfredMalm285@gmail.com',
   to: '',
   subject: '',
   text: '',
 };
 
-function sendMail(subject,from, to, message){
-    var mailSettings = {
-      from: '',
-      to: '',
-      subject: '',
-      text: '',
-    };
-    mailSettings.from = from;
-    mailSettings.subject = subject;
-    mailSettings.to = to;
-    mailSettings.text = message;
-    transporter.sendMail(mailSettings, function(error, info){
+//--------------------
+
+function helena_sendMail(subject, to,message){
+    helena_mailOptions.subject = subject;
+    helena_mailOptions.to = to;
+    helena_mailOptions.text = message;
+    helena_transporter.sendMail(helena_mailOptions, function(error, info){
         if (error) {
             console.log(error);
         } else {
@@ -76,33 +204,129 @@ function sendMail(subject,from, to, message){
         }
     });
 }
-mailListener.on("mail", function(mail, seqno, attributes){
+function lyra_sendMail(subject, to,message){
+    lyra_mailOptions.subject = subject;
+    lyra_mailOptions.to = to;
+    lyra_mailOptions.text = message;
+    lyra_transporter.sendMail(lyra_mailOptions, function(error, info){
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
+}
+function wilfred_sendMail(subject, to,message){
+    wilfred_mailOptions.subject = subject;
+    wilfred_mailOptions.to = to;
+    wilfred_mailOptions.text = message;
+    wilfred_transporter.sendMail(wilfred_mailOptions, function(error, info){
+
+
+//------------- helena mail listener arguments
+helena_mailListener.on("mail", function(mail, seqno, attributes){
     try {
+
+        if(mail.text.includes("231")){
+            helena_sendMail("Hello", mail.from, helena_first_reply);
+            setTimeout(function() {
+                helena_sendMail("Hello again", mail.from, helena_second_reply)
+            }, 60000);
+        }
+        else {
+            helena_sendMail("Hello", mail.from, helena_no_reply);
+        }
+      
+      //---------BILBOS KOD
+      
         if(mail.attachments !== undefined && mail.to[0].address === "wilfred@gmail.com"){
-            mailOptions.to = mail.from;
-            mailOptions.from = "wilfred@gmail.com";
+           helena_mailOptions.to = mail.from;
+            helena_mailOptions.from = "wilfred@gmail.com";
         }
         else if(mail.text.includes("231") && mail.to[0].address === "helena.godspeed@gmail.com"){
-            sendMail("Hello", mail.to[0] , mail.from, "Where did you get this code? \n I will ask IT what it is about. \n//Helena");
+            helena_sendMail("Hello", mail.to[0] , mail.from, "Where did you get this code? \n I will ask IT what it is about. \n//Helena");
             setTimeout(function() {
-                sendMail("Hello",mail.to[0], mail.from, "I talked with IT and they say it's for a restricted page and we thank you for not sharing it.  \n//Helena")
+               helena_sendMail("Hello",mail.to[0], mail.from, "I talked with IT and they say it's for a restricted page and we thank you for not sharing it.  \n//Helena")
             }, 60000);
         }
         else if(mail.text.includes("3186") && mail.to[0].address === "helena.godspeed@gmail.com"){
-            sendMail("Hello", mail.from, "Where did you get this code? \n I will ask IT what it is about. \n//Helena");
+            helena_sendMail("Hello", mail.from, "Where did you get this code? \n I will ask IT what it is about. \n//Helena");
             setTimeout(function() {
-                sendMail("Hello", mail.to[0], mail.from, "I talked with IT and they say it's for a restricted command and we thank you for not sharing it.  \n//Helena")
+                helena_sendMail("Hello", mail.to[0], mail.from, "I talked with IT and they say it's for a restricted command and we thank you for not sharing it.  \n//Helena")
             }, 60000);
         }
         else if(mail.to[0].address === "helena.godspeed@gmail.com"){
-            sendMail("Hello", mail.to[0], mail.from, "Hello, i'm out of the office for a two week vacation i will be back on the 1st of April \nBest Regards Helena :)");
+            helena_sendMail("Hello", mail.to[0], mail.from, "Hello, i'm out of the office for a two week vacation i will be back on the 1st of April \nBest Regards Helena :)");
         }
         else if(mail.to[0].address === "wilfred@gmail.com"){
-            sendMail("Hello", mail.to[0], mail.from, "Please use the code phrase");
+            helena_sendMail("Hello", mail.to[0], mail.from, "Please use the code phrase");
+
         }
+      //------------
     }
     catch {
-        sendMail("Hello", mail.to[0], mail.from, "Hello, i'm out of the office for a two week vacation i will be back on the 1st of April \nBest Regards Helena :)");
+        console.log("Helena email error");
+     }
+
+});
+//------------- lyra mail listener arguments
+lyra_mailListener.on("mail", function(mail, seqno, attributes){
+    try {
+        var text = mail.text.toUpperCase();
+        var key = "wilfred";
+        //checks if the email contains any words that match hint keys
+        var hintKeys = ["help", "advice", "guidance", "hand", "support", "assist", "hint"];
+        var doesContain = false;
+        for(let i = 0; i<hintKeys.length;i++){
+             if(text.includes(hintKeys[i].toUpperCase())){
+                doesContain = true;
+             }
+         }
+        if(text.includes(key.toUpperCase())){
+            lyra_sendMail("Hello", mail.from, lyra_first_reply );
+        }
+        else if(doesContain){
+            lyra_sendMail("An introduction to Difax", mail.from, lyra_hint);
+        }
+        else {
+          lyra_sendMail("Hello", mail.from, lyra_no_reply);
+
+
+    }
+    catch {
+
+        console.log("Lyra email error");
+    }
+
+});
+//------------- wilfred mail listener arguments
+wilfred_mailListener.on("mail", function(mail, seqno, attributes){
+    try {
+        var text = mail.text.toUpperCase();
+        if(text.includes(ourWorkPassword.toUpperCase()) && text.includes(aboutUsPassword.toUpperCase()) ){
+            wilfred_sendMail("Hello again", mail.from, wilfred_second_reply)
+            }
+        else {
+          wilfred_sendMail("Hello", mail.from, wilfred_first_reply);
+        }
+
+    }
+    catch {
+        console.log("wilfred email error");
+    }
+
+});
+//----------------
+
+helena_mailListener.on("attachment", function(attachment){
+  console.log(attachment.path);
+});
+lyra_mailListener.on("attachment", function(attachment){
+  console.log(attachment.path);
+});
+wilfred_mailListener.on("attachment", function(attachment){
+  console.log(attachment.path);
+
     }
 
 });
@@ -177,4 +401,5 @@ mailListener.on("attachment", function(attachment){
 
     var secretDirectory = path.join(__dirname, "/SecretFiles/")
     setTimeout(readPDF, 20000, collectSecretTexts,secretDirectory);
+
 });

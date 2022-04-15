@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 import { OUR_WORK_HEADER, PROGRAMMING, SLIDE_IMAGES, FUTURE_PLANS } from '../ImageImports';
 
-const jsonData = require('../data.json');
+const jsonData = require('../json/companyWebsite.json');
 
 {
   var ourWork = jsonData.our_work;

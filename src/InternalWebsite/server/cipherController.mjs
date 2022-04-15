@@ -37,7 +37,7 @@ export function generateCipher(){
     cipher = "";
     encryptedCipher = "";
     var randomLetter = getRandomInt(69,118);
-    var word = fs.readFileSync("./JsonFiles/cipherWords.json");
+    var word = fs.readFileSync("../../json/cipherWords.json");
     var json = JSON.parse(word);
     var animal = json[getRandomInt(0,json.length)];
     cipher += animal;
