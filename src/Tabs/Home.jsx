@@ -58,7 +58,7 @@ export default function Home() {
                   <h2>Why choose us?</h2>
                   <a>
                     Our customers safety is our top priority and we have the data to back it up.
-                    All attempted robberies of our customers, since our launch in 2013, have either been stopped or
+                    All attempted robberies of our customers, since our launch in 1998, have either been stopped or
                     the people involved have been caught and prosecuted. In either situation our customers have been able to claim insurance
                     leaving them in a beneficial situation. Our unique technology allows for methods of identification
                      that no other company possesses. We also use advanced behavioural methods that let us predict dangerous

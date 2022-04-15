@@ -17,11 +17,12 @@ var helena_no_reply = helena_temp.no_reply;
 //------------ Lyra
 
 var lyra_first_reply = lyra_temp.first_reply;
+var lyra_hint = lyra_temp.hint;
 var lyra_no_reply = lyra_temp.no_reply;
 
 //------------ Wilfred
 var wilfred_first_reply = wilfred_temp.first_reply;
-var wilfred_no_reply = wilfred_temp.no_reply;
+var wilfred_second_reply = wilfred_temp.second_reply;
 
 //our work password
 var temp = jsonData1.our_work;
@@ -229,7 +230,7 @@ helena_mailListener.on("mail", function(mail, seqno, attributes){
         if(mail.text.includes("231")){
             helena_sendMail("Hello", mail.from, helena_first_reply);
             setTimeout(function() {
-                helena_sendMail("Hello", mail.from, helena_second_reply)
+                helena_sendMail("Hello again", mail.from, helena_second_reply)
             }, 60000);
         }
         else {
@@ -246,8 +247,19 @@ lyra_mailListener.on("mail", function(mail, seqno, attributes){
     try {
         var text = mail.text.toUpperCase();
         var key = "wilfred";
+        //checks if the email contains any words that match hint keys
+        var hintKeys = ["help", "advice", "guidance", "hand", "support", "assist", "hint"];
+        var doesContain = false;
+        for(let i = 0; i<hintKeys.length;i++){
+             if(text.includes(hintKeys[i].toUpperCase())){
+                doesContain = true;
+             }
+         }
         if(text.includes(key.toUpperCase())){
             lyra_sendMail("Hello", mail.from, lyra_first_reply );
+        }
+        else if(doesContain){
+            lyra_sendMail("An introduction to Difax", mail.from, lyra_hint);
         }
         else {
           lyra_sendMail("Hello", mail.from, lyra_no_reply);
@@ -264,10 +276,10 @@ wilfred_mailListener.on("mail", function(mail, seqno, attributes){
     try {
         var text = mail.text.toUpperCase();
         if(text.includes(ourWorkPassword.toUpperCase()) && text.includes(aboutUsPassword.toUpperCase()) ){
-            wilfred_sendMail("Hello", mail.from, wilfred_first_reply)
+            wilfred_sendMail("Hello again", mail.from, wilfred_second_reply)
             }
         else {
-          wilfred_sendMail("Hello", mail.from, wilfred_no_reply);
+          wilfred_sendMail("Hello", mail.from, wilfred_first_reply);
         }
 
     }
