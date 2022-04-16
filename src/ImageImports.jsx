@@ -10,15 +10,15 @@ import TechImg3 from './img/homepage-img3.jpg';
 // Our Work Imports
 
 import OurWorkheader from './img/work-header.jpg';
-import Programming from './img/programming.jpg';
+import Interaction from './img/interaction.jpg';
 import SlideImage1 from './img/slide-image-1.jpg';
 import SlideImage2 from './img/slide-image-2.jpg';
 import SlideImage3 from './img/slide-image-3.jpg';
 import SlideImage4 from './img/slide-image-4.jpg';
 import SlideImage5 from './img/slide-image-5.jpg';
 import FuturePlans1 from './img/future-ai.jpg';
-import FuturePlans2 from './img/space-shuttle.jpg';
-import FuturePlans3 from './img/robotic-future.jpg';
+import FuturePlans2 from './img/robotic-future.jpg';
+import FuturePlans3 from './img/future-security.jpg';
 
 
 // About Us Imports
@@ -55,7 +55,7 @@ export const TECH_IMAGES = [TechImg1, TechImg2, TechImg3];
 
 export const OUR_WORK_HEADER = OurWorkheader;
 
-export const PROGRAMMING = Programming;
+export const INTERACTION = Interaction;
 
 export const SLIDE_IMAGES = [SlideImage1, SlideImage2, SlideImage3, SlideImage4, SlideImage5];
 

@@ -3,7 +3,7 @@ import {Slide} from 'react-slideshow-image';
 import './Company.css';
 import { useEffect, useState } from 'react';
 
-import { OUR_WORK_HEADER, PROGRAMMING, SLIDE_IMAGES, FUTURE_PLANS } from '../ImageImports';
+import { OUR_WORK_HEADER, INTERACTION, SLIDE_IMAGES, FUTURE_PLANS } from '../ImageImports';
 
 const jsonData = require('../json/companyWebsite.json');
 
@@ -15,11 +15,11 @@ const jsonData = require('../json/companyWebsite.json');
   var thirdVar  = ourWork.puzzle_var.third_var;
   var fourthVar = ourWork.puzzle_var.fourth_var;
 
-  var crackedPassword = ourWork.cracked_password;
+  var crackedUsername = ourWork.username;
   var puzzleUnlocked = false;
 
   var header        = OUR_WORK_HEADER;
-  var programming   = PROGRAMMING;
+  var interaction   = INTERACTION;
   var slideImage1   = SLIDE_IMAGES[0];
   var slideImage2   = SLIDE_IMAGES[1];
   var slideImage3   = SLIDE_IMAGES[2];
@@ -54,7 +54,8 @@ const jsonData = require('../json/companyWebsite.json');
       }
 
       if (codeCracked) {
-        console.log(crackedPassword);
+        console.log(crackedUsername);
+        resetCount();
       }
     }
     
@@ -124,11 +125,11 @@ const jsonData = require('../json/companyWebsite.json');
           <div class="content">
             <div class="content-right-content">
               <div class="content-right-img">
-                <img src={programming} alt="" height='215px'/>
+                <img src={interaction} alt="" height='215px'/>
               </div>
               <div class="content-right-desc">
                 <h2> Current work </h2>
-                <a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis alias sunt fugiat, repudiandae vel ea veritatis nihil et nobis aperiam officia voluptates accusamus at excepturi est! Quam harum earum tenetur.</a>
+                <a> We aim to contribute a maximum security for our users, which is what we are working on at the moment. By researching how to obtain a secure connection for our users we are able to expand on it. That way our usrs can stay safely connected wherever they may be. </a>
               </div>
             </div>
 
