@@ -62,18 +62,12 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div class="center-content">
-              <h2>Why Work with us?</h2>
-              <a> At our company we value our employees and the ideas the they bring to the table.
-              We strive for a work environment that is safe from prejudice, open for new ideas and equal for everyone.
-              We guarantee you will love working for us, we hope to see you soon!
-              </a>
-            </div>
+
           </div>
 
           <div class="content">
 
-                <h2>Who are we?</h2>
+                <h2 style={{"margin-top": "70px"}}>Who are we?</h2>
               <div id="team-content">
                 <div class="team-member"><img src={markImg}/><a>Mark Roswell</a></div>
                 <div class="team-member"><img src={manuelImg}/><a>Manuel Mallory</a></div>
