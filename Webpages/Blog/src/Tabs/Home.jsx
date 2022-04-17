@@ -2,7 +2,6 @@ import React from "react";
 import "./TabContent.css";
 import { Link } from "react-router-dom";
 import Help from "../TopBar/TopBar";
-import helpbutton from "../Img/HelpButton.png"
 import { useState } from "react";
 
 import { USER_NAME_1, USER_NAME_2, IFRAME_LIST } from "../ChangeableValues";
