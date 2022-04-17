@@ -19,13 +19,12 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Design på Home
     Öka storlek på loggan
 
-- Notera att försa inlägget i PostContent måste ha ett datum
+- Notera att första inlägget i PostContent måste ha ett datum
 
 - Flytta på ReadMe
 
 - Inkludera fakta från dokumentet om GU som finns på Drive.
-
-- Fixa Next Jigsaw knappen på Home sidan.
+    - Har lagt till en. Vet inte hur mycket vi ska lägga till. Idéer?
 
 --------------- Prio 2 ---------------
 
