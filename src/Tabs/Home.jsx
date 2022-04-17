@@ -104,8 +104,6 @@ export default function Home() {
     }
     function clickImg(string){
         console.clear();
-        console.log(string);
-
         attempt = attempt + string;
         if(attempt.charAt(attempt.length - 1) !== passphrase.charAt(attempt.length -1)){
             attempt = "";
@@ -115,7 +113,6 @@ export default function Home() {
                 console.log(encryptedEmail);
                 attempt = "";
         }
-        console.log(attempt);
     }
     function clickFirstImg(){
         console.clear();
