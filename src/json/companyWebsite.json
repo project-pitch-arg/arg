@@ -1,19 +1,26 @@
 {
-      "home":{
-            "passphrase": "3121",
-            "encrypted_email": "087 105 108 102 114 101 100 077 097 108 109 050 056 053 064 103 109 097 105 108 046 099 111 109"
-      },
+    "home":{
+          "passphrase": "3121",
+          "encrypted_email": "087 105 108 102 114 101 100 077 097 108 109 050 056 053 064 103 109 097 105 108 046 099 111 109",
+          "first_paragraph_text" : "We combine the latest AI and surveillance technology to provide our customers with the highest levels of security. We start by setting up equipment around your area which then connects to our servers here at Difax. This equipment lets us monitor and observe potential threats against you or your company. If a threat is deemed actionable our elite security guards will be at your location before the perpetrators can do anything.",
+          "second_paragraph_text" : "Our customers safety is our top priority and we have the data to back it up. All attempted robberies of our customers, since our launch in 1998, have either been stopped or the people involved have been caught and prosecuted. In either situation our customers have been able to claim insurance leaving them in a beneficial situation. Our unique technology allows for methods of identification that no other company possesses. We also use advanced behavioural methods that let us predict dangerous situations ahead of time.",
+          "third_paragraph_text" : "Artificial intelligence is complicated but our engineers here at Difax have come up with a method of collaboration that lets our technology utilize AI to analyze captured footage. This analysis lets us know if there is any unusual activity going on and if we should act upon it.",
+          "fourth_paragraph_text" : "Companies that fly our banner have noticed a steady decrease in crime ever since they partnered with us. The results speak for themselves. Criminals are starting to become aware of our success rate and no longer willing to take the risk of going against us. As our reputation grows crime rates fall and will continue to fall."
+    },
 
-      "our_work": {
-            "puzzle_var" : {  "first_var": 8,
-                              "second_var": 9,
-                              "third_var": 2,
-                              "fourth_var": 6
-            },
-            "username": "617264"
-      },
+    "our_work": {
+        "puzzle_var" : {  "first_var": 8,
+                          "second_var": 9,
+                          "third_var": 2,
+                          "fourth_var": 6
+        },
+        "username": "617264",
+        "first_paragraph_text" : "Our team of engineers are not only working on new ways to improve security but also finding methods in which customers can be more active in their own security. One of these ongoing projects aims to provide detailed information and visuals summarizing activity in and around their area on a weekly or monthly basis. We believe this will provide the customer with a sense of calm, reassuring them that their business is safe while out on a holiday.",
+        "second_paragraph_text" :"We have created applications across multiple platforms (smartphones, computers and smart watches) that allow customers to access their security cameras wherever they may be. We use unique technologies such as patrolling drones capable of dynamic automated security unlike any normal camera is able to do. However impressive these technologies may sound, our true ‘ace up the sleeve’ lies in our software, our Artificial Intelligence. ",
+        "third_paragraph_text" :"For future work we want to continue expanding on the technologies we already have and develop new methods of surveillance unlike any that exist today. Our engineers have expressed interest in ideas such as linking up our systems to the customers doors, elevators, computer hardware and wireless systems. We believe this will help us achieve our dream of a 0% crime rate."
+    },
 
-      "about_us": {
-          "password": "26873444"
-      }
+    "about_us": {
+        "password": "26873444"
+    }
 }

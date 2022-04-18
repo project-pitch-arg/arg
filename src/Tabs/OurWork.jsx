@@ -8,26 +8,37 @@ import { OUR_WORK_HEADER, INTERACTION, SLIDE_IMAGES, FUTURE_PLANS } from '../Ima
 const jsonData = require('../json/companyWebsite.json');
 
 {
-  var ourWork = jsonData.our_work;
+    var ourWork = jsonData.our_work;
 
-  var firstVar  = ourWork.puzzle_var.first_var;
-  var secondVar = ourWork.puzzle_var.second_var;
-  var thirdVar  = ourWork.puzzle_var.third_var;
-  var fourthVar = ourWork.puzzle_var.fourth_var;
+    //----------- puzzle related strings
 
-  var crackedUsername = ourWork.username;
-  var puzzleUnlocked = false;
+    var firstVar  = ourWork.puzzle_var.first_var;
+    var secondVar = ourWork.puzzle_var.second_var;
+    var thirdVar  = ourWork.puzzle_var.third_var;
+    var fourthVar = ourWork.puzzle_var.fourth_var;
 
-  var header        = OUR_WORK_HEADER;
-  var interaction   = INTERACTION;
-  var slideImage1   = SLIDE_IMAGES[0];
-  var slideImage2   = SLIDE_IMAGES[1];
-  var slideImage3   = SLIDE_IMAGES[2];
-  var slideImage4   = SLIDE_IMAGES[3];
-  var slideImage5   = SLIDE_IMAGES[4];
-  var futurePlans1  = FUTURE_PLANS[0];
-  var futurePlans2  = FUTURE_PLANS[1];
-  var futurePlans3  = FUTURE_PLANS[2];
+    var crackedUsername = ourWork.username;
+    var puzzleUnlocked = false;
+
+    //-------------paragraph texts
+
+    var firstParagraph = ourWork.first_paragraph_text;
+    var secondParagraph = ourWork.second_paragraph_text;
+    var thirdParagraph = ourWork.third_paragraph_text;
+
+
+    //----------- images
+
+    var header        = OUR_WORK_HEADER;
+    var interaction   = INTERACTION;
+    var slideImage1   = SLIDE_IMAGES[0];
+    var slideImage2   = SLIDE_IMAGES[1];
+    var slideImage3   = SLIDE_IMAGES[2];
+    var slideImage4   = SLIDE_IMAGES[3];
+    var slideImage5   = SLIDE_IMAGES[4];
+    var futurePlans1  = FUTURE_PLANS[0];
+    var futurePlans2  = FUTURE_PLANS[1];
+    var futurePlans3  = FUTURE_PLANS[2];
 }
 
   export default function OurWork() {
@@ -129,15 +140,14 @@ const jsonData = require('../json/companyWebsite.json');
               </div>
               <div class="content-right-desc">
                 <h2> Current work </h2>
-                <a> We aim to contribute a maximum security for our users, which is what we are working on at the moment. By researching how to obtain a secure connection for our users we are able to expand on it. That way our usrs can stay safely connected wherever they may be. </a>
+                <a> {firstParagraph} </a>
               </div>
             </div>
 
             <div class="content-left-content">
                 <div class="content-left-desc">
                 <h2>What we have done</h2>
-                <a> We have made it possible for our customers to stay securly connected wherever they may be. This was done using the modern technologies as well as AI's in order to obtain ultimate security, which is important for us. Examples on where this has been implemented are in drones, smartphones, smartwatches and even computers. 
-                </a>
+                <a> {secondParagraph}</a>
               </div>
 
             
@@ -172,8 +182,8 @@ const jsonData = require('../json/companyWebsite.json');
           </div>
          
             <div class="center-content">
-              <h2>Future Plans</h2>
-              <a>For future plans, we plan to reach the sky with our technology and security. Which can happen by the use of artifical intelligent and advanced programming with help from our professional programmers. We plan on broadening our research area even more to reach every aspect of it and obtain complete security.</a>
+              <h2>Future Work</h2>
+              <a>{thirdParagraph}</a>
             </div>
 
             <div>
