@@ -36,7 +36,7 @@ import ParkEntrance from "./Img/ParkEntrance.png";
 
 // Keep in mind that these are in a puzzle and connected to the 
 // real names. EXPLAIN MORE WHEN PUZZLE IS ADDED AND SOLVED IN CHAT.
-export const USER_NAME_1 = "Robot1312113";
+export const USER_NAME_1 = "Robot1311213";
 export const USER_NAME_2 = "Fexjo";
 
 const REAL_FIRST_NAME_1 = "Wilfred";

@@ -41,15 +41,11 @@ export default function Home() {
               <Link onClick={Help} to="/About">
                 <img class="help-button" src={helpbutton}/>
               </Link>
-              <div id="home-logo">
-                <img src="favicon.ico" alt="Logo"/>
-              </div>
             </div>
           </div>
           <div id="home-iframe-container">
             <iframe id="home-iframe" src={IFRAME_LIST[index]} />
           </div>
-
           <div>
             <button class="button" onClick={switchJigsaw}>
               Next Jigsaw
@@ -59,6 +55,12 @@ export default function Home() {
       </div>
     )
 }
+
+/*
+              <div id="home-logo">
+                <img src="favicon-2.png" alt="Logo" height="100px"/>
+              </div>
+*/
 
 // Old Home content
 /*

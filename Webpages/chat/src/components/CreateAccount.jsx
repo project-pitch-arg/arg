@@ -140,12 +140,13 @@ function addDefaultChats() {
     // enter informtion.
     return (
         <div className="wrapper">
+            <div className="subtitle">
+                Read the code of conduct on the About tab
+                before creating an account!
+            </div>
             <div className="form">
                 <h1 className="title">Create Account</h1>
-                    <div className="subtitle">
-                    Read the code of conduct on the About tab
-                    before creating an account!
-                    </div>
+                    
                     <form onSubmit={createUser}>
                         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required/>
                         <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}className="input" placeholder="Password"/>
@@ -161,6 +162,8 @@ function addDefaultChats() {
                             <span>Exit</span>
                         </button>
                     </div>
+            </div>
+            <div className="subtitle">
                 <h1>{error}</h1>
             </div>
         </div>

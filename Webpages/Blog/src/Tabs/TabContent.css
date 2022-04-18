@@ -64,7 +64,7 @@
 }
 
 #home-wrapper {
-    margin-top: 80vh;
+    margin-top: 60vh;
     margin-left: 10vw;
     width: 80vw;
     height: 30vh;
@@ -74,12 +74,13 @@
 #home-left {
     width: 50vw;
     height: auto;
-    float:left; /* add this */
+    float: left; /* add this */
     overflow: hidden;
 }
 
 #home-right {
     overflow: hidden;
+    margin-top: 5vh;
 }
 
 #home-logo {
@@ -88,7 +89,7 @@
 
 #home-iframe-container {
     width: 98vw;
-    height: 100vh;
+    height: 85vh;
     overflow: hidden;     
 }
 
@@ -96,7 +97,7 @@
     width: 90vw;     
     height: 80vh;     
     margin-top: -5vh; 
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .title-text {
@@ -108,8 +109,8 @@
 }
 
 .help-button {
-    height: 5vh;
-    width: 6vw;
+    height: 10vh;
+    width: 12vw;
 }
 
 /* --------------------TabPosts -------------------- */
