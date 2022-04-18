@@ -42,7 +42,7 @@ export default class App extends Component{
                       <Route exact path="/AboutUs" element={<AboutUs />} />
                       <Route exact path="/Internal/*" element={<Internal/>} />
                     </Routes>
-                    {!window.location.pathname.includes("/Internal") ? (
+                    {!window.location.pathname.toUpperCase() === "/Internal".toUpperCase() ? (
                         <div>
                             <Footer />
                         </div>
