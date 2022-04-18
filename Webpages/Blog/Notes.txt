@@ -17,15 +17,16 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Lägg till att man behöver ändra address till chatten när man lagt upp allt på en server i dokumentation.
 
 - Design på Home
+    Öka storlek på loggan
 
-- Notera att försa inlägget i PostContent måste ha ett datum
+- Notera att första inlägget i PostContent måste ha ett datum
 
 - Flytta på ReadMe
 
 - Inkludera fakta från dokumentet om GU som finns på Drive.
+    - Har lagt till en. Vet inte hur mycket vi ska lägga till. Idéer?
 
 - Rename tab information?
-
 --------------- Prio 2 ---------------
 
  - Titta på error i console 

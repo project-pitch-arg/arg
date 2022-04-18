@@ -59,6 +59,10 @@
 
 /* --------------------TabHome -------------------- */
 
+.link {
+    color: black;
+}
+
 #home {
     overflow: scroll;
 }

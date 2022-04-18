@@ -2,7 +2,6 @@ import React from "react";
 import "./TabContent.css";
 import { Link } from "react-router-dom";
 import Help from "../TopBar/TopBar";
-import helpbutton from "../Img/HelpButton.png"
 import { useState } from "react";
 
 import { USER_NAME_1, USER_NAME_2, IFRAME_LIST } from "../ChangeableValues";
@@ -38,8 +37,9 @@ export default function Home() {
             </div>
             
             <div id="home-right"> 
-              <Link onClick={Help} to="/About">
-                <img class="help-button" src={helpbutton}/>
+              If you're new to the website we recommend you check out our&nbsp;
+              <Link class="link" onClick={Help} to="/About">
+                About 
               </Link>
             </div>
           </div>
