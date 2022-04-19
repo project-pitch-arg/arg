@@ -105,7 +105,28 @@ img.news{
     border-radius: 0;
     object-fit: cover;
 }
-
+img.lock{
+    width: 5vh;
+    box-shadow: none;
+}
+img.lock:hover{
+    content: url(../images/LockGray.png);
+}
+.underlineDiv{
+    border: 1px solid white;
+    margin-bottom: 10px;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lockedArchiveDiv{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lockedArchive{
+    color: white;
+}
 p.newsText{
     margin-top: 10px;
     font-size: 15px;

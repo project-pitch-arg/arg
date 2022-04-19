@@ -61,10 +61,24 @@ app.post("/getPolicy", (req, res) => {
           return res.send(JSON.stringify({files: list}));
       })
 });
+app.post("/getSecretDocuments", (req, res) => {
+  var list = [];
+  fs.readdir("./SecretFiles/", (err,files) =>  {
+        files.forEach((file) => {
+            list.push(file);
+        })
+          return res.send(JSON.stringify({files: list}));
+      })
+});
 app.post("/getPDF", (req, res) => {
   var data = req.body.fileName;
   res.sendFile(__dirname + "/PDF/" + data);
 });
+app.post("/getSecretPDF", (req, res) => {
+  var data = req.body.fileName;
+  res.sendFile(__dirname + "/SecretFiles/" + data);
+});
+
 app.post("/getUser", (req, res) => {
   var username = req.body.username;
   var password = req.body.password;
