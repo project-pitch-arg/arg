@@ -20,11 +20,21 @@ const jsonData = require('../json/companyWebsite.json');
     var crackedUsername = ourWork.username;
     var puzzleUnlocked = false;
 
-    //-------------paragraph texts
 
-    var firstParagraph = ourWork.first_paragraph_text;
-    var secondParagraph = ourWork.second_paragraph_text;
-    var thirdParagraph = ourWork.third_paragraph_text;
+    //---------- header title
+
+    var headerTitle = ourWork.header_title;
+
+    
+    //-------------paragraph title and text
+
+    var firstParagraphTitle = ourWork.first_paragraph.title;
+    var secondParagraphTitle = ourWork.second_paragraph.title;
+    var thirdParagraphTitle = ourWork.third_paragraph.title;
+
+    var firstParagraphText = ourWork.first_paragraph.text;
+    var secondParagraphText = ourWork.second_paragraph.text;
+    var thirdParagraphText = ourWork.third_paragraph.text;
 
 
     //----------- images
@@ -85,7 +95,7 @@ const jsonData = require('../json/companyWebsite.json');
     }    
 
     const onSlideClick = (slide) => {
-      if (slide == "fifth") {
+      if (slide === "fifth") {
         puzzleUnlocked = true;
       }
       else if (puzzleUnlocked) {
@@ -130,7 +140,7 @@ const jsonData = require('../json/companyWebsite.json');
     return (
         <div>
           <div class="header" style={{backgroundImage: `url(${header})`}}>
-            <h1 style={{opacity: '100%'}}>Our Work</h1>
+            <h1> {headerTitle} </h1>
           </div>
 
           <div class="content">
@@ -139,15 +149,15 @@ const jsonData = require('../json/companyWebsite.json');
                 <img src={interaction} alt="" height='215px'/>
               </div>
               <div class="content-right-desc">
-                <h2> Current work </h2>
-                <a> {firstParagraph} </a>
+                <h2> {firstParagraphTitle} </h2>
+                <a> {firstParagraphText} </a>
               </div>
             </div>
 
             <div class="content-left-content">
                 <div class="content-left-desc">
-                <h2>What we have done</h2>
-                <a> {secondParagraph}</a>
+                <h2> {secondParagraphTitle} </h2>
+                <a> {secondParagraphText} </a>
               </div>
 
             
@@ -182,8 +192,8 @@ const jsonData = require('../json/companyWebsite.json');
           </div>
          
             <div class="center-content">
-              <h2>Future Work</h2>
-              <a>{thirdParagraph}</a>
+              <h2> {thirdParagraphTitle} </h2>
+              <a> {thirdParagraphText} </a>
             </div>
 
             <div>

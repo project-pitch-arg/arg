@@ -15,12 +15,22 @@ const jsonData = require('../json/companyWebsite.json');
     var encryptedEmail = home.encrypted_email;
     var attempt = "";
 
-    //---------- paragraph texts
+    //---------- header title
 
-    var firstParagraph = home.first_paragraph_text;
-    var secondParagraph = home.second_paragraph_text;
-    var thirdParagraph = home.third_paragraph_text;
-    var fourthParagraph = home.fourth_paragraph_text;
+    var headerTitle = home.header_title;
+
+
+    //---------- paragraph titles and texts
+
+    var firstParagraphTitle = home.first_paragraph.title;
+    var secondParagraphTitle = home.second_paragraph.title;
+    var thirdParagraphTitle = home.third_paragraph.title;
+    var fourthParagraphTitle = home.fourth_paragraph.title;
+
+    var firstParagraphText = home.first_paragraph.text;
+    var secondParagraphText = home.second_paragraph.text;
+    var thirdParagraphText = home.third_paragraph.text;
+    var fourthParagraphText = home.fourth_paragraph.text;
 
     //------------ images from imageImport file
 
@@ -41,7 +51,7 @@ export default function Home() {
     return (
         <div>
           <div class="header" style={{backgroundImage: `url(${header})`}}>
-            <h1>Difax</h1>
+            <h1> {headerTitle} </h1>
           </div>
 
           <div class="content">
@@ -51,27 +61,27 @@ export default function Home() {
                 <img  onClick={() => clickFirstImg("1")} src={introImg} height='215px'/>
               </div>
               <div class="content-right-desc">
-                <h2> What we do </h2>
-                <a> {firstParagraph} </a>
+                <h2> {firstParagraphTitle} </h2>
+                <a> {firstParagraphText} </a>
               </div>
             </div>
 
             <div class="content-right-content">
                 <div class="content-left-desc">
-                  <h2>Why choose us?</h2>
-                  <a> {secondParagraph} </a>
+                  <h2> {secondParagraphTitle} </h2>
+                  <a> {secondParagraphText} </a>
                 </div>
 
           
               <div class="content-right-desc">
-                  <h2>How does AI integrate with surveillance?</h2>
-                  <a> {thirdParagraph} </a>
+                  <h2> {thirdParagraphTitle} </h2>
+                  <a> {thirdParagraphText} </a>
                 </div>
             </div>
 
             <div class="center-content">
-              <h2>Indirect Protection</h2>
-              <a> {fourthParagraph}</a>
+              <h2>{fourthParagraphTitle} </h2>
+              <a> {fourthParagraphText} </a>
             </div>
               <div id="center-homepage-img">
                 <div class="homepage-img"><img  onClick={() => clickImg("1")} src={techImg1}/></div>
