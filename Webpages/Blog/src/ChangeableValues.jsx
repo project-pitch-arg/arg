@@ -63,7 +63,7 @@ export const IFRAME_LIST = ["https://www.jigsawexplorer.com/online-jigsaw-puzzle
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9Cb2F0LmpwZw~~",
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9HVVNpZ24uanBn",
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9CYWJ5RGluby5wbmc~"]
-                            
+
 /* -------------------- Puzzle B-p1 -------------------- */
 
 // Solution to B-p1, this is an address to the next
