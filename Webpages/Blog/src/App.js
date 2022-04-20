@@ -10,7 +10,7 @@ import ChangeableValues from "./ChangeableValues";
 // import TabFour from "./Tabs/TabFour";
 // import FAQ from "./Tabs/DropDown/TabFAQ";
 import About from "./Tabs/DropDown/TabAbout";
-import QotD from "./Tabs/DropDown/TabQotD";
+import Quotes from "./Tabs/DropDown/TabQuotes";
 // import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 
@@ -48,11 +48,9 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Chat" element={<Chat />} />
           <Route exact path="/Posts" element={<Posts />} />
-          {/* <Route exact path="/Four" element={<TabFour />} /> */}
             <Route exact path="/About" element={<About />} />
-            <Route exact path="/QotD" element={<QotD />} />
+            <Route exact path="/Quotes" element={<Quotes />} />
         </Routes>
-     {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

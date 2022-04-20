@@ -47,7 +47,7 @@ export default function printingQuotes() {
     shuffle(QUOTES);
     
     // Handler of timing and displaying the quotes.
-    const QotD = timer => {
+    const Quotes = timer => {
       const { QUOTES } = timer;
 
       // Start at random index in array.
@@ -89,7 +89,9 @@ export default function printingQuotes() {
     // Display entire page.
     return (
         <div class="content">
-          <QotD QUOTES={QUOTES} />
+
+        <Quotes QUOTES={QUOTES} />
+
         </div>
     )
 }

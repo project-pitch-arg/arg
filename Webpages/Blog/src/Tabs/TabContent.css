@@ -75,14 +75,14 @@
     overflow: hidden;
 }
 
-#home-left {
+.home-left {
     width: 50vw;
     height: auto;
     float: left; /* add this */
     overflow: hidden;
 }
 
-#home-right {
+.home-right {
     overflow: hidden;
     margin-top: 5vh;
 }
@@ -110,11 +110,6 @@
     margin-bottom: 5%;
     padding: 10px;
     position: relative;
-}
-
-.help-button {
-    height: 10vh;
-    width: 12vw;
 }
 
 /* --------------------TabPosts -------------------- */
@@ -257,6 +252,14 @@
 .said-by {
     color: black;
     text-align: right;
+}
+
+.qotd-title {
+    font-size: xx-large;
+    position: absolute;
+    height: 70vh;
+    margin-top: 40vh;
+    margin-bottom: 40vh;
 }
 
 /* -------------------- TabAbout -------------------- */

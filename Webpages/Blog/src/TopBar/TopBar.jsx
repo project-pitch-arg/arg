@@ -31,17 +31,13 @@ export default function TopBar(props) {
             case "Posts":
                 document.getElementById("tab-posts").classList.add("active");
             break;
-            
-            case "Four":
-                document.getElementById("tab-four").classList.add("active");
-            break;
 
             case "About":
                 document.getElementById("tab-about").classList.add("active");
             break    
                 
-            case "QotD":
-                document.getElementById("tab-QotD").classList.add("active");
+            case "Quotes":
+                document.getElementById("tab-Quotes").classList.add("active");
             break    
         }
       }
@@ -62,15 +58,8 @@ export default function TopBar(props) {
                 <li class="topbar-li"><Link id="tab-posts" onClick={() => HIGHLIGHT_ACTIVE("Posts")} to ="/Posts"> Posts</Link></li>
                 <li class="topbar-li"><Link id="tab-chat" onClick={() => HIGHLIGHT_ACTIVE("Chat")} to ="/Chat"> Chat </Link></li>
                 {/* <li><Link id="tab-four" onClick={() => HIGHLIGHT_ACTIVE("Four")} to = "/Four"> Four </Link></li> */}
-                <li>
-                    <div class="dropdown">
-                    <button class="dropdown-button">Information</button>
-                    <div class="dropdown-content">
-                        <Link id="tab-about" onClick={() => HIGHLIGHT_ACTIVE("About")} to ="/About"> About </Link>
-                        <Link id="tab-QotD" onClick={() => HIGHLIGHT_ACTIVE("QotD")} to ="/QotD"> Quotes of the day </Link>
-                        </div>
-                    </div> 
-                </li>
+                <li class="topbar-li"><Link id="tab-Quotes" onClick={() => HIGHLIGHT_ACTIVE("Quotes")} to ="/Quotes"> Quotes </Link></li>
+                <li class="topbar-li"><Link id="tab-about" onClick={() => HIGHLIGHT_ACTIVE("About")} to ="/About"> About </Link></li>
               </ul>
             </div>
         )

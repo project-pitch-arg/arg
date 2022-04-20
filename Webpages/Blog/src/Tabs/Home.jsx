@@ -25,7 +25,7 @@ export default function Home() {
           
           <div id="home-wrapper">
 
-            <div id="home-left">
+            <div class="home-left">
               Welcome to Daily Thoughts Website
               <br/>
               Home of {USER_NAME_1} and {USER_NAME_2}
