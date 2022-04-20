@@ -15,6 +15,7 @@ const jsonData = require('../json/companyWebsite.json');
     var encryptedEmail = home.encrypted_email;
     var attempt = "";
 
+
     //---------- header title
 
     var headerTitle = home.header_title;
@@ -107,7 +108,18 @@ export default function Home() {
         }
     }
     function clickFirstImg(){
+        var text = "";
+        for (let i = 0; i < passphrase.length; i++) {
+            if(i == passphrase.length - 1){
+            text += passphrase.slice(i, i + 1);
+            }
+            else{
+            text += passphrase.slice(i, i + 1) + " - ";
+            }
+
+        }
         console.clear();
-        console.log(passphrase);
+        console.log(text);
+        //console.log(passphrase);
     }
 
