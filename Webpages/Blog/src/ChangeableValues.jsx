@@ -57,8 +57,9 @@ export const QUOTE_TIME = 30;
 /* -------------------- Tab HOME -------------------- */
 
 export const IFRAME_LIST = ["https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9TdW5zZXRQb29sLmpwZw~~",
-                            "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9DYXRSZXN0aW5nT25DaGFpci5qcGc~",
+"https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9VbWJyZWxsYXMuanBn",
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9BbGhhbWJyYVBvb2wuanBn",
+                            "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9DYXRSZXN0aW5nT25DaGFpci5qcGc~",
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9naXRodWIuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL2Jsb2IvbWFzdGVyL05hdHVyZVN3ZWRlbi5wbmc_cmF3PXRydWU~", 
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9Cb2F0LmpwZw~~",
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9HVVNpZ24uanBn",

@@ -6,9 +6,9 @@
   This value sets the time in seconds.
 */
 import React, {useState, useEffect} from "react";
-import "../TabContent.css";
+import "./TabContent.css";
 import quotesContent from "./QuotesContent.json";
-import { QUOTE_TIME } from "../../ChangeableValues";
+import { QUOTE_TIME } from "../ChangeableValues";
 
 
 export default function printingQuotes() {

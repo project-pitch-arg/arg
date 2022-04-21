@@ -57,17 +57,9 @@ export default function TopBar(props) {
                 <li class="topbar-li"><Link id="tab-home" onClick={() => HIGHLIGHT_ACTIVE("")} to ="/"> Home </Link></li>
                 <li class="topbar-li"><Link id="tab-posts" onClick={() => HIGHLIGHT_ACTIVE("Posts")} to ="/Posts"> Posts</Link></li>
                 <li class="topbar-li"><Link id="tab-chat" onClick={() => HIGHLIGHT_ACTIVE("Chat")} to ="/Chat"> Chat </Link></li>
-                {/* <li><Link id="tab-four" onClick={() => HIGHLIGHT_ACTIVE("Four")} to = "/Four"> Four </Link></li> */}
                 <li class="topbar-li"><Link id="tab-Quotes" onClick={() => HIGHLIGHT_ACTIVE("Quotes")} to ="/Quotes"> Quotes </Link></li>
                 <li class="topbar-li"><Link id="tab-about" onClick={() => HIGHLIGHT_ACTIVE("About")} to ="/About"> About </Link></li>
               </ul>
             </div>
         )
     }
-
-/* Not needed
-    case "FAQ":
-        document.getElementById("tab-faq").classList.add("active");
-    break 
-    
-    <Link id="tab-faq" onClick={() => HIGHLIGHT_ACTIVE("FAQ")} to ="/FAQ"> FAQ </Link>   */
