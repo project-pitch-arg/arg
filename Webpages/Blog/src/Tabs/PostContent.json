@@ -292,17 +292,37 @@
     {
         "date": [2022, 4, 18],
         "poster": "Fexjo",
-        "content": "WIP: Minigolf"
+        "content": "It's now officially spring. The way to know that is the fact that minigolf opens up for customers. Seeing a prime opportunity and not willing to miss it, I took Robot out for a match. It was beautiful weather outside, warm enough to not have to bother with jackets or even sweatshirts. We played very evenly, sometimes there was just a difference of one hit between us and usually we had the exact same score. Robot did manage to do a hole-in-one though, which is always nice when it happens, though I do wish I could have had that as well. I did end up winning in the end, so I'm kind of happy for that at least.",
+        "pictures": [["PostImages/Minigolf1.jpg", "A minigolf course."],["PostImages/Minigolf2.jpg", "A minigolf course."]]
+    },
+    {
+        "poster": "Fexjo",
+        "content": "This time of year I have convinced Robot to do some activities around Gothenburg. It's spring and beautiful weather. I want to enjoy it while it lasts. Just yesterday we played some minigolf, but that's just the start, we'll do a few more fun things before Robot starts digging his feet in the ground. Maybe he'll even find some of it fun."
+    },
+    {
+        "poster": "Robot1311213",
+        "content": "We visited the Natural History Museum in Gothenburg today. And what a blast it was! ＼(٥⁀▽⁀ )／ We got to see so many different specimens of birds, mammals, insects, and of course, dinosaurs. They had a lot of cool stuff to go through, they even had a hedge maze outside which we went through. I highly recommend going there for yourself. I made Fexjo take some images that I included here, can't let everyone else be remiss of some of the experience.",
+        "pictures": [["PostImages/MuseumDino.jpg", "Skeleton of an Ichtyosaurus."],["PostImages/MuseumMaze.jpg", "A hedge maze."],["PostImages/MuseumSeal.jpg", "Statues of some seals."],["PostImages/MuseumWhale.jpg", "Skeleton of a whale."]]
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I'm happy that Robot enjoyed the visit to the museum yesterday but enough's enough. He's starting pulling out random quotes or information about any creature we encounter through conversion or in person. I'ts kind of starting to annoy me. What's worse is that I know he's probably doing it so extensively on purpose just because he's seen how it riles me up."
+    },
+    {
+        "date": [2022, 4, 22],
+        "poster": "Fexjo",
+        "content": "Today was quite a special treat. I have known for a while about the archipelago of islands surrounding Gothenburg and how beautiful they can be. Today was the day where the weather was nice enough and Robot had enough free time to show me around. And what a sight it was! We saw some beautiful views and encountered many interesting peculiarities. One of which was some sort of resting or camping site in the middle of the woods. We did spend most of the time along the coast though, there was a nice coastal trail to follow which really helped us navigate. Although Robot is a native he hasn't really been around the islands much himself. It was a wonderful time though and I've enclosed some images below to show some of the things we saw.",
+        "pictures": [["PostImages/IslandDock.jpg", "A dock with boats."],["PostImages/IslandRocks.jpg", "A nice rocky view."],["PostImages/IslandView.jpg", "A nice sunny view."],["PostImages/IslandHuts.jpg", "Some huts in a forest."]]
+    },
+    {
+        "poster": "Robot1311213",
+        "content": "Yesterday Fexjo convinced me that we should go out to the archipelago. This did seem like a pretty fun idea but I don't know if I would do it again. I mean, the views were nice and all but some of the stuff really sealed the deal for me. For one we had to spend an hour on the bus to get there, and then a while more on the ferry over to the island itself. Then when we were there Fexjo had us walking along a trail all day. So much walking. (￣ ￣|||) Other than that I have to admit that it was quite a nice time. I even saw some interesting stuff on our meandering path to nowhere. They're below if anyone is interested.",
+        "pictures": [["PostImages/IslandWindmill.jpg", "A windmill."],["PostImages/IslandAnchor.jpg", "An anchor and a ball on a rock."],["PostImages/IslandShip.jpg", "A yellow ship in the distance."],["PostImages/IslandDeer.jpg", "A deer."]]
     },
     {
         "poster": "Fexjo",
         "content": "Saw this nice-looking boat today. Somehow, it did not rain although the sky was grey all day.",
         "pictures": [["PostImages/Boat.jpg", "Picture of a boat."]]
-    },
-    {
-        "date": [2022, 4, 22],
-        "poster": "Fexjo",
-        "content": "WIP: Skärgård"
     },
     {
         "poster": "Robot1311213",
@@ -458,7 +478,7 @@
     },
     {
         "poster": "Fexjo",
-        "content": "I'm guessing noones surprised that rain greated me upon my return to Britain. That's just how it is, I suppose."
+        "content": "I'm guessing no-one is surprised that rain greeted me upon my return to Britain. That's just how it is, I suppose."
     },
     {
         "date": [2022, 6, 11],
