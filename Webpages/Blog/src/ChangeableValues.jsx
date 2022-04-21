@@ -37,13 +37,7 @@ import ParkEntrance from "./Img/ParkEntrance.png";
 // Keep in mind that these are in a puzzle and connected to the 
 // real names. EXPLAIN MORE WHEN PUZZLE IS ADDED AND SOLVED IN CHAT.
 export const USER_NAME_1 = "Robot1311213";
-export const USER_NAME_2 = "Fexjo";
-
-const REAL_FIRST_NAME_1 = "Wilfred";
-const REAL_LAST_NAME_1 = "Malm";
-
-const REAL_FIRST_NAME_2 = "Edwin";
-const REAL_LAST_NAME_2 = "Fairchild";
+export const USER_NAME_2 = "Fexjo";;
 
 export const USER_PICTURE_1 = Robot;
 export const USER_PICTURE_2 = CaesarSalad;
@@ -57,7 +51,7 @@ export const QUOTE_TIME = 30;
 /* -------------------- Tab HOME -------------------- */
 
 export const IFRAME_LIST = ["https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9TdW5zZXRQb29sLmpwZw~~",
-"https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9VbWJyZWxsYXMuanBn",
+                            "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9VbWJyZWxsYXMuanBn",
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9BbGhhbWJyYVBvb2wuanBn",
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL21hc3Rlci9DYXRSZXN0aW5nT25DaGFpci5qcGc~",
                             "https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9naXRodWIuY29tL1NhcmE5OTc0L0FSR1BpY3R1cmVzL2Jsb2IvbWFzdGVyL05hdHVyZVN3ZWRlbi5wbmc_cmF3PXRydWU~", 

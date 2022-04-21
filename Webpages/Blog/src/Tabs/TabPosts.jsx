@@ -3,9 +3,9 @@
   posts from the two authors and buttons to go furhter
   backwards in time or return to the present.
 
-  At the moment, 10 posts are displayed on each
+  At the moment, 5 posts are displayed on each
   group that you change with the buttons. To change
-  the amount of posts, edit the variable postsPerPage
+  the amount of posts, edit the variable POSTS_PER_PAGE
   to the wished for amount.
 */
 import React, { useState } from "react";
@@ -65,7 +65,6 @@ export default function Posts() {
   // Function to add 1 day to previous date if post.date = "",
   // else the date stated is used.
   // The posts are then sorted by date.
-
   function changeDateAndSort(posts) {
     
     // The month starts at index 0.
@@ -92,7 +91,6 @@ export default function Posts() {
 
   // Simple function to compare the dates with emphasis on
   // years and then months and then days.
-
   function compareDates(date1, date2) {
     
     return (5000*(date2[0]-date1[0])+100*(date2[1]-date1[1])+(date2[2]-date1[2]));

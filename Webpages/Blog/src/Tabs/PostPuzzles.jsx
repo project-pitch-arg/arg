@@ -17,6 +17,7 @@ import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER
 
 export default function Puzzles(post) {
 
+  // Create a list for solved passwords if it does not exist.
   if(sessionStorage.getItem('solvedPasswords') === null) {
     var passwords = [""];
     sessionStorage.setItem('solvedPasswords', JSON.stringify(passwords));
@@ -33,6 +34,7 @@ export default function Puzzles(post) {
       case "B-c4": return puzzleBc4(post);
     }  
   }
+  // Pasword not solved, display input area.
   if(post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem('solvedPasswords'))).includes(post.secret)) {
     return (
       <div class="post">
@@ -53,7 +55,7 @@ export default function Puzzles(post) {
         </div>
     )
   }
-  
+  // Password solved, display secret content.
   return (
     <div class="post">
       <div class="post-date">
@@ -74,7 +76,7 @@ export default function Puzzles(post) {
   
 /* -------------------- Functions -------------------- */  
 
-  // Function to reveal passwordprotected content
+  // Function to reveal content protcetec by password
   // when the password is correct.
   function submitPassword(post) {
     if(sessionStorage.getItem('postSecret') == post.secret) {
@@ -163,12 +165,11 @@ export default function Puzzles(post) {
   // in a proper HTML format.
   function helpChangeString(post, element) {
     if (element[1] == "color") {
-      return (<font color={LETTER_COLOR}>{post.content[element[0]]}</font>)
+      return (<font color={LETTER_COLOR}>{post.content[element[0]]}</font>);
     } else if (element[1] == "font") {
-      return (<font face={LETTER_FONT}>{post.content[element[0]]}</font>)
-    } else {
-      return
+      return (<font face={LETTER_FONT}>{post.content[element[0]]}</font>);
     }
+    return;
   }
 
   // Insert correct images with zeroes according to 
@@ -176,19 +177,18 @@ export default function Puzzles(post) {
   function insertPuzzlePics() {
     return (
     <div class="post-images">
-        <div>
-          <img src={JIGSAW_IMAGE} alt="A numbers puzzle." class="post-image"/>
-          </div>
-          <div>
-          <img src={ICHTI_IMAGE} alt="A picture of the dinosaur Ichthyosaurus." class="post-image"/>
-          </div>
-          <div>
-          <img src={DUROS_IMAGE} alt="A package of duros." class="post-image"/>
-          </div>
-          <div>
-          <img src={COMPUTER_IMAGE} alt="A computer drinking coffee." class="post-image"/>
-          </div>
-        
+      <div>
+        <img src={JIGSAW_IMAGE} alt="A numbers puzzle." class="post-image"/>
+      </div>
+      <div>
+        <img src={ICHTI_IMAGE} alt="A picture of the dinosaur Ichthyosaurus." class="post-image"/>
+      </div>
+      <div>
+        <img src={DUROS_IMAGE} alt="A package of duros." class="post-image"/>
+      </div>
+      <div>
+        <img src={COMPUTER_IMAGE} alt="A computer drinking coffee." class="post-image"/>
+      </div>
     </div>  
     )
   }
@@ -197,18 +197,18 @@ export default function Puzzles(post) {
   function multiPicture() {
     return (
       <div class="post-images">
-          <div>
-            <picture>
-              <source media="(min-width: 800px)" srcSet="PostImages/SunsetView.jpg" class="post-image"/> 
-              <img src={PARK_ENTRANCE_IMAGE} alt="Image of park entrance." class="post-image"/>
-            </picture>
-          </div>
-          <div>
-            <picture>
-              <source media="(min-width: 600px)" srcSet="PostImages/RedSkyAndPool.JPG" class="post-image"/> 
-              <img src="" alt={DIRECTIONS} class="post-image"/>
-            </picture>
-          </div>
+        <div>
+          <picture>
+            <source media="(min-width: 800px)" srcSet="PostImages/SunsetView.jpg" class="post-image"/> 
+            <img src={PARK_ENTRANCE_IMAGE} alt="Image of park entrance." class="post-image"/>
+          </picture>
+        </div>
+        <div>
+          <picture>
+            <source media="(min-width: 600px)" srcSet="PostImages/RedSkyAndPool.JPG" class="post-image"/> 
+            <img src="" alt={DIRECTIONS} class="post-image"/>
+          </picture>
+        </div>
       </div>  
       )
   }
@@ -219,14 +219,14 @@ export default function Puzzles(post) {
     if(post.hasOwnProperty("pictures")) {
       return (<div class="post-images">
               {post.pictures.map (picture => {
-                    return (
-                      <div>
-                       <img src={picture[0]} alt={picture[1]} class="post-image"/>
-                      </div>
-                    )
-                  })}
-                </div>  
+                return (
+                  <div>
+                    <img src={picture[0]} alt={picture[1]} class="post-image"/>
+                  </div>
                 )
+                })}
+              </div>  
+              )
     }
     return true;
   }
@@ -363,8 +363,7 @@ export default function Puzzles(post) {
   }
 
   // Function to encode the puzzle B-p1.
-  // See documentation for an explanation of the puzzle.
-  // TODO: add name of document.
+  // See more in the puzzle docuemntation for the blog.
   function puzzleBp1(post) {
     post = changeDinos(post);
     post.date[1] = CLUE_DATE;

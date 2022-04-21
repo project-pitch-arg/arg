@@ -49,12 +49,44 @@
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: hsl(93, 27%, 45%); 
 }
+/* Set the area on the right side */
+.right-side {
+    margin-left: 40px;
+    margin-right: 40px;
+    justify-content: center;
+    text-align: center;
+}
 
+.author-pictures {
+    padding-top: 10vh;
+    position: relative;
+}
 
-/* --------------------TabChat -------------------- */
-
-.chat-area {
-    overflow: hidden;
+.image {
+    height: 12vh;
+    max-width: 20vw;
+    position: center;
+    border: 5px solid #555;
+    background-color: hsl(93, 27%, 45%);
+}
+/* Design of the buttons used to change
+    the page of posts currently viewed. */
+.button {
+    width: 150px;
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 1px;
+    font-size: 10px;
+    cursor: pointer;
+}
+/* The design of the buttons when you
+    cannot click them because you reach the
+    end of the posts. */
+.button[disabled] {
+    color: grey;
+    opacity: 0.7;
+    cursor: default;
 }
 
 /* --------------------TabHome -------------------- */
@@ -85,10 +117,6 @@
 .home-right {
     overflow: hidden;
     margin-top: 5vh;
-}
-
-#home-logo {
-    margin-top: 3vh;
 }
 
 #home-iframe-container {
@@ -132,8 +160,6 @@
     margin-left: 40px;
     text-align: center;
     overflow-x: hidden;
-    /* position: sticky; */
-   
     overflow-y: auto;
 }
 /* The style for individual posts. The posts
@@ -193,52 +219,23 @@
     max-height: 500px;
     padding: 5px;
 }
-/* Set the area on the right side */
-.right-side {
-    margin-left: 40px;
-    margin-right: 40px;
-    justify-content: center;
-    text-align: center;
-    /*background-color: hsl(93, 40%, 60%); *//* Temporary? to see the area. */
-}
 /* Keeps the buttons together at a certain place. */
 .buttongroup {
     margin-top: 2vh;
 }
-/* Design of the buttons used to change
-    the page of posts currently viewed. */
-.button {
-    width: 150px;
-    background-color: black;
-    color: white;
-    padding: 20px 40px;
-    border-radius: 1px;
-    font-size: 10px;
-    cursor: pointer;
+
+/* -------------------- Tab Chat -------------------- */
+
+.chat-area {
+    overflow: hidden;
 }
-/* The design of the buttons when you
-    cannot click them because you reach the
-    end of the posts. */
-.button[disabled]{
-    color: grey;
-    opacity: 0.7;
-    cursor: default;
+/* Fits the chat to the window. */
+.chat {
+    height: 79vh;
+    width: 100vw;
 }
 
-.author-pictures {
-    padding-top: 10vh;
-    position: relative;
-}
-
-.image {
-    height: 12vh;
-    max-width: 20vw;
-    position: center;
-    border: 5px solid #555;
-    background-color: hsl(93, 27%, 45%);
-}
-
-/* -------------------- TabQotD -------------------- */
+/* -------------------- Tab Quotes -------------------- */
 
 /* Makes a block and sets the text for the quotes */
 .quote {
@@ -254,15 +251,7 @@
     text-align: right;
 }
 
-.qotd-title {
-    font-size: xx-large;
-    position: absolute;
-    height: 70vh;
-    margin-top: 40vh;
-    margin-bottom: 40vh;
-}
-
-/* -------------------- TabAbout -------------------- */
+/* -------------------- Tab About -------------------- */
 
 /* Creates an area to place questions in.
     Has a scrollbar if necessary. */
@@ -292,16 +281,4 @@
 /* Font for formatting of questions and answer text. */
 .answer {
     font-weight: normal;
-}
-
-.about-names {
-    font-weight: bold;
-}
-
-/* -------------------- TabChat -------------------- */
-
-/* Fits the chat to the window. */
-.chat {
-    height: 79vh;
-    width: 100vw;
 }

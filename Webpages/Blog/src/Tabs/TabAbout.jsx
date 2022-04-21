@@ -20,9 +20,9 @@ export default function DisplayAbout() {
             <div class="question">
                 {item.question} 
             <div class="answer"> 
-              <il class="about-names"> {USER_NAME_1}: </il> {item.answerUser1} 
+              <b> {USER_NAME_1}: </b> {item.answerUser1} 
             <div class="answer">
-              <il class="about-names"> {USER_NAME_2}: </il> {item.answerUser2}
+              <b> {USER_NAME_2}: </b> {item.answerUser2}
             </div>
             </div>
          </div>

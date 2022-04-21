@@ -2,9 +2,10 @@
   Tab with daily quotes that periodically change.
   One quote is displayed at a time. 
   Along with the originator of the quote.
-  Change the interval of the changes between quotes with the value quoteTime.
+  Change the interval of the changes between quotes with the value quoteTime in ChangeableValues.
   This value sets the time in seconds.
 */
+
 import React, {useState, useEffect} from "react";
 import "./TabContent.css";
 import quotesContent from "./QuotesContent.json";
@@ -14,30 +15,24 @@ import { QUOTE_TIME } from "../ChangeableValues";
 export default function printingQuotes() {
 
   // Function to get a random integer between two limits.
+  // The maximum is exclusive and the minimum is inclusive.
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-
-    // The maximum is exclusive and the minimum is inclusive.
     return Math.floor(Math.random(2) * (max - min) + min); 
   }
   
   // Fisher-Yates shuffle function.
   function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
-  
     // While there remain elements to shuffle...
     while (currentIndex != 0) {
-  
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
-  
       // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
+      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
     }
-  
     // Returns a shuffled array.
     return array;
   }
@@ -56,7 +51,7 @@ export default function printingQuotes() {
       useEffect(() => {
         let delay;
 
-        // If statement to check if the end of the array is reached.
+        // If-statement to check if the end of the array is reached.
         if (message < QUOTES.length - 1) {
 
           // Start timer for 1000 * quoteTime milliseconds.
@@ -89,9 +84,7 @@ export default function printingQuotes() {
     // Display entire page.
     return (
         <div class="content">
-
-        <Quotes QUOTES={QUOTES} />
-
+          <Quotes QUOTES={QUOTES} />
         </div>
     )
 }

@@ -1,3 +1,8 @@
+/*
+  Home page of the blog,
+  the page you see when you begin browsing.
+*/
+
 import React from "react";
 import "./TabContent.css";
 import { Link } from "react-router-dom";
@@ -6,15 +11,12 @@ import { useState } from "react";
 
 import { USER_NAME_1, USER_NAME_2, IFRAME_LIST } from "../ChangeableValues";
 
-// TODO! Make the Home page look nicer.
-
 export default function Home() {
     const[index, setIndex] = useState(0);
 
     // Change to the next puzzle in the IFRAME_LIST.
     function switchJigsaw() {
       setIndex((index + 1 ) % IFRAME_LIST.length);  
-      console.log(index)
     }
     
     // Returns the appearance of the Home page
@@ -22,9 +24,7 @@ export default function Home() {
     return (
       <div class="content" id="home">
         <div class="title-text">
-          
           <div id="home-wrapper">
-
             <div class="home-left">
               Welcome to Daily Thoughts Website
               <br/>
