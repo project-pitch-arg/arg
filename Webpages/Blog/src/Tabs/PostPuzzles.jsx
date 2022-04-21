@@ -29,7 +29,7 @@ export default function Puzzles(post) {
       case "B-p2": break;
       case "B-c1": break; 
       case "B-c2": break;
-      case "B-c3": break; // This is a work in progress.
+      case "B-c3": break;
       case "B-c4": return puzzleBc4(post);
     }  
   }

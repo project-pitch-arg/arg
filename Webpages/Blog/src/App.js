@@ -7,14 +7,9 @@ import Home from "./Tabs/Home";
 import Chat from "./Tabs/TabChat";
 import Posts from "./Tabs/TabPosts";
 import ChangeableValues from "./ChangeableValues";
-// import TabFour from "./Tabs/TabFour";
-// import FAQ from "./Tabs/DropDown/TabFAQ";
-import About from "./Tabs/DropDown/TabAbout";
-import Quotes from "./Tabs/DropDown/TabQuotes";
-// import Footer from "./Footer/Footer";
+import About from "./Tabs//TabAbout";
+import Quotes from "./Tabs//TabQuotes";
 import Header from "./Header/Header";
-
-// import Images from "./img";
 
 function App() {
 
@@ -57,5 +52,3 @@ function App() {
 }
 
 export default App;
-
-// Not needed <Route exact path="/FAQ" element={<FAQ />} />

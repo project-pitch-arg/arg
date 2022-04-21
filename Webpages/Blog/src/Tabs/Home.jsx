@@ -55,39 +55,3 @@ export default function Home() {
       </div>
     )
 }
-
-/*
-              <div id="home-logo">
-                <img src="favicon-2.png" alt="Logo" height="100px"/>
-              </div>
-*/
-
-// Old Home content
-/*
-<img src="RightFacingOrangeDino.png" class="home-dino"/>
-
-        <div class="homelist">
-
-          <div class="title-text">
-            Welcome to Daily Thoughts Website
-            <br/>
-            Home of {USER_NAME_1} and {USER_NAME_2}
-            <br/>
-            Hope you enjoy your stay!
-          </div>
-
-          <div class="shift-right">
-            The latest Post;
-            {puzzleHandler(postContent[0])}
-          </div>
-
-          <div align="center">
-            <Link onClick={Help} to="/About">
-              <img class="help-button" src={helpbutton}/>
-            </Link>
-          </div>
-
-        </div>
-
-        <img src="LeftFacingOrangeDino.png" class="home-dino"/>
-*/
