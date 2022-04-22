@@ -37,29 +37,29 @@ export default function Posts() {
   var identifierKey = -1;
   return (
     <div className="background">
-        <div className="postlist">
-         {(postContent.slice(start,last)).map(post => {
-           identifierKey++;
-           return (<div key={identifierKey}>{puzzleHandler(post)}</div>)
-         } ) }
-         </div>
-         <div className="right-side">
-          <div className="buttongroup">
-            <button className="button" onClick={prevPage} disabled={disableP}> {"<"} </button> 
-            <button className="button" onClick={nextPage} disabled={disableN}> {">"} </button>  
-          </div>  
-          <div className="buttongroup">
+      <div className="postlist">
+        {(postContent.slice(start,last)).map(post => {
+          identifierKey++;
+          return (<div key={identifierKey}>{puzzleHandler(post)}</div>)
+        })}
+        </div>
+        <div className="right-side">
+        <div className="buttongroup">
+          <button className="button" onClick={prevPage} disabled={disableP}> {"<"} </button> 
+          <button className="button" onClick={nextPage} disabled={disableN}> {">"} </button>  
+        </div>  
+        <div className="buttongroup">
           <button className="button" onClick={firstPage} disabled={disableF}> {"<<"}</button>
-            <button className="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
-          </div>
-            <div className="author-pictures">
-            <img src={USER_PICTURE_1} className="image" ></img>
-            <p>Hello, I'm {USER_NAME_1}! Join us in the chat!</p>
-            <img src={USER_PICTURE_2} className="image"></img>
-            <p>Hello! I'm {USER_NAME_2}. If you want to know more about the authors, go to About.</p>
-            </div>
-         </div>
+          <button className="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
+        </div>
+        <div className="author-pictures">
+          <img src={USER_PICTURE_1} className="image" ></img>
+          <p>Hello, I'm {USER_NAME_1}! Join us in the chat!</p>
+          <img src={USER_PICTURE_2} className="image"></img>
+          <p>Hello! I'm {USER_NAME_2}. If you want to know more about the authors, go to About.</p>
+        </div>
       </div>
+    </div>
     )
 
 /* -------------------- Functions -------------------- */ 
@@ -94,9 +94,7 @@ export default function Posts() {
   // Simple function to compare the dates with emphasis on
   // years and then months and then days.
   function compareDates(date1, date2) {
-    
     return (5000*(date2[0]-date1[0])+100*(date2[1]-date1[1])+(date2[2]-date1[2]));
-  
   }
 
   // Function which changes indexes to previous (newer) posts.
@@ -141,7 +139,7 @@ export default function Posts() {
   }
 
   // Function to take the user to the last page of posts (the oldest ones).
-  function lastPage(){
+  function lastPage() {
     lastChange(postContent.length);
     if(postContent.length - (postContent.length % POSTS_PER_PAGE) == postContent.length) {
       startChange(postContent.length - POSTS_PER_PAGE);

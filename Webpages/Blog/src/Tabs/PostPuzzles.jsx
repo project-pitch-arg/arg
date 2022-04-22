@@ -80,9 +80,9 @@ export default function Puzzles(post) {
   // when the password is correct.
   function submitPassword(post) {
     if(sessionStorage.getItem('postSecret') == post.secret) {
-      var passwords = JSON.parse(sessionStorage.getItem('solvedPasswords'))
-      passwords.push(post.secret)
-      sessionStorage.setItem('solvedPasswords', JSON.stringify(passwords))
+      var passwords = JSON.parse(sessionStorage.getItem('solvedPasswords'));
+      passwords.push(post.secret);
+      sessionStorage.setItem('solvedPasswords', JSON.stringify(passwords));
     }
     sessionStorage.removeItem('postSecret');
     return;
@@ -93,8 +93,8 @@ export default function Puzzles(post) {
   function changeColor(post, letter, count) {
     var indexArray = new Array(letter.length);
     var counter = 0;
-    for(let i = 0; i < letter.length; i++){
-      const NUMBER = (post.content.split(letter[i]).length - 1)
+    for(let i = 0; i < letter.length; i++) {
+      const NUMBER = (post.content.split(letter[i]).length - 1);
       if (NUMBER < 1) {
         throw "One of the course code letters doesn't exist in the content text.";
       }
@@ -264,7 +264,7 @@ export default function Puzzles(post) {
       throw "Fourth number of encryption key must be within bounds [79,100].";
     }
 
-    // The different rings on a mexican wheel.
+    // The different rings on a mexican army wheel.
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var lowNumbers = ["01", "02", "03", "04", "05", "06", "07", "08", "09", 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
     var mediumNumbers = [27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52];
@@ -342,7 +342,7 @@ export default function Puzzles(post) {
   // Replaces the dinosaurs in the puzzle post with the 
   // specified names from ChangeableValues. Also makes
   // sure that they are all capitalized. See documentation.
-  function changeDinos(post){
+  function changeDinos(post) {
     const dino1 = THREE_DINOS[0][0].toUpperCase() + THREE_DINOS[0].slice(1);
     const dino2 = THREE_DINOS[1][0].toLocaleUpperCase() + THREE_DINOS[1].slice(1);
     const dino3 = THREE_DINOS[2][0].toLocaleUpperCase() + THREE_DINOS[2].slice(1);
@@ -353,8 +353,8 @@ export default function Puzzles(post) {
   }
 
   // Detection function to know which post should lead to which function.
-  function checkForHelper(post){
-    if(post.comment == "This post is helper post 1 to puzzle B-p1."){
+  function checkForHelper(post) {
+    if(post.comment == "This post is helper post 1 to puzzle B-p1.") {
       return HINT_DINOS;
     } else if (post.comment == "This post is helper post 2 to puzzle B-p1") {
       return HINT_COURSES;

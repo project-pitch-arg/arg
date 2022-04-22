@@ -1,33 +1,23 @@
 /* -------------------- Shared styles -------------------- */
 
+/* The main colours used. */
 :root {
     --post-list-background: hsl(47, 34%, 74%);
     --post-background: hsl(47, 28%, 66%);
     --quote-background: #aa9a84;
 }
-
+/* Export the background to hide text for puzzle B-p1.
+    See documentation for information about this puzzle. */
 :export {
     postBackground: var(--post-background);
 }
-
 /* The colour of the background often used.*/
 .content {
     height: 85vh;
     background: repeating-linear-gradient( 45deg,hsl(93, 40%, 60%), hsl(93, 27%, 45%), 1px,hsl(93, 40%, 60%) 1px);
-   /* background-color: #c9b394; */
     justify-content: center;
     align-items: center;
     display: flex;
-}
-/* More specifications for general use,
-    this is for text. */
-.content a {
-    text-align: center;
-    font-weight: bold;
-    font-size: 24px;
-}
-.tab {
-    text-decoration: underline;
 }
 /* Style of all scrollbars (does not work in all browsers). */
 ::-webkit-scrollbar {
@@ -47,18 +37,19 @@
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: hsl(93, 27%, 45%); 
 }
-/* Set the area on the right side */
+/* Create an area on the right side */
 .right-side {
     margin-left: 40px;
     margin-right: 40px;
     justify-content: center;
     text-align: center;
 }
+/* The profile pictures placement. */
 .author-pictures {
     padding-top: 10vh;
     position: relative;
 }
-
+/* How images are usually placed. */
 .image {
     height: 12vh;
     max-width: 20vw;
@@ -67,7 +58,8 @@
     background-color: hsl(93, 27%, 45%);
 }
 /* Design of the buttons used to change
-    the page of posts currently viewed. */
+    the page of posts currently viewed.
+    Also to change jigsaw puzzle on the Home tab. */
 .button {
     width: 150px;
     background-color: black;
@@ -91,11 +83,9 @@
 .link {
     color: black;
 }
-
 #home {
     overflow: scroll;
 }
-
 #home-wrapper {
     margin-top: 60vh;
     margin-left: 10vw;
@@ -103,32 +93,27 @@
     height: 30vh;
     overflow: hidden;
 }
-
 .home-left {
     width: 50vw;
     height: auto;
     float: left; /* add this */
     overflow: hidden;
 }
-
 .home-right {
     overflow: hidden;
     margin-top: 5vh;
 }
-
 #home-iframe-container {
     width: 98vw;
     height: 85vh;
     overflow: hidden;     
 }
-
 #home-iframe {
     width: 90vw;     
     height: 80vh;     
     margin-top: -5vh; 
     overflow: hidden;
 }
-
 .title-text {
     font-size: xx-large;
     text-align: center;
