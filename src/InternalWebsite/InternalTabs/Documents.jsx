@@ -157,7 +157,7 @@ export default class Policy extends Component{
                   }
                   { this.state.ceo ?
                     (<div><div class="underlineDiv"></div>
-                        {!this.state.secret ? (<div class="lockedArchiveDiv"><h3 class="lockedArchive">Encrypted Archive</h3><img src={require("../images/Lock.png")} class="lock" onClick={this.unlock}/>
+                        {!this.state.secret ? (<div class="lockedArchiveDiv"><h3 class="lockedArchive">Encrypted Archive</h3><img src={require("../images/Lock.png")} class="lock" alt="Lock" onClick={this.unlock}/>
                             {this.state.unlockConsole ? (<form onSubmit={this.handleInputDecrypt}>
                              <input class="smallConsole" placeholder="Enter key..." type="text" name="name" id="command"/>
                            </form> ) : (null)}</div>)
@@ -177,6 +177,5 @@ export default class Policy extends Component{
         else {
             return (<div>Loading...</div>)
         }
-
     }
 }

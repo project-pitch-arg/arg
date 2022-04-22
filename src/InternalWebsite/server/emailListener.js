@@ -3,6 +3,7 @@
 
 var jsonData1 = require('../../json/companyWebsite.json');
 var jsonData = require('../../json/emailResponses.json');
+var variables = require('../../json/Variables.json');
 
 var helena_temp = jsonData.helena;
 var lyra_temp = jsonData.lyra;
@@ -34,6 +35,7 @@ var ourWorkPassword = temp.username;
 //about us password
 var temp = jsonData1.about_us;
 var aboutUsPassword = temp.password;
+
 //--------------
 const path = require('path');
 const fs = require('fs');
@@ -224,13 +226,13 @@ function wilfred_sendMail(subject, to,message){
 //------------- helena mail listener arguments
 helena_mailListener.on("mail", function(mail, seqno, attributes){
     try {
-        if(mail.text.includes("231")){
+        if(mail.text.includes(Variables.smallConsoleCode)){
             helena_sendMail("Hello", mail.from, helena_first_reply);
             setTimeout(function() {
                 helena_sendMail("Hello again", mail.from, helena_second_reply)
             }, 60000);
         }
-        else if(mail.text.includes("3186")){
+        else if(mail.text.includes(Variables.adminCode)){
             helena_sendMail("Hello", mail.from, helena_first_reply);
             setTimeout(function() {
                 helena_sendMail("Hello", mail.to[0], mail.from, helena_third_reply)
@@ -243,7 +245,6 @@ helena_mailListener.on("mail", function(mail, seqno, attributes){
     catch {
         console.log("Helena email error");
      }
-
 });
 //------------- lyra mail listener arguments
 lyra_mailListener.on("mail", function(mail, seqno, attributes){
@@ -257,7 +258,7 @@ lyra_mailListener.on("mail", function(mail, seqno, attributes){
              if(text.includes(hintKeys[i].toUpperCase())){
                 doesContain = true;
              }
-         }
+        }
         if(text.includes(key.toUpperCase())){
             lyra_sendMail("Hello", mail.from, lyra_first_reply );
         }
@@ -289,7 +290,6 @@ wilfred_mailListener.on("mail", function(mail, seqno, attributes){
     catch {
         console.log("wilfred email error");
     }
-
 });
 //---------------- Attachment handler for mail listeners
 
@@ -306,7 +306,7 @@ wilfred_mailListener.on("attachment", function(attachment){
       var secretDirectory = path.join(__dirname, "/SecretFiles/")
       setTimeout(readPDF, 20000, collectSecretTexts,secretDirectory);
 });
-
+//Reads pdf attachments and check if they include the necessary secret information for wilfred
 function readPDF(callback){
     var dir = arguments[1];
     fs.readdir(dir, function(err, filenames) {
