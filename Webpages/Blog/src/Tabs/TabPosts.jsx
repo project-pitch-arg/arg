@@ -34,26 +34,28 @@ export default function Posts() {
 
   // Return the quotes and display them one by one by iterating the array of
   // content using the function .map.
+  var identifierKey = -1;
   return (
-    <div class="background">
-        <div class="postlist">
+    <div className="background">
+        <div className="postlist">
          {(postContent.slice(start,last)).map(post => {
-           return (<div>{puzzleHandler(post)}</div>)
+           identifierKey++;
+           return (<div key={identifierKey}>{puzzleHandler(post)}</div>)
          } ) }
          </div>
-         <div class="right-side">
-          <div class="buttongroup">
-            <button class="button" onClick={prevPage} disabled={disableP}> {"<"} </button> 
-            <button class="button" onClick={nextPage} disabled={disableN}> {">"} </button>  
+         <div className="right-side">
+          <div className="buttongroup">
+            <button className="button" onClick={prevPage} disabled={disableP}> {"<"} </button> 
+            <button className="button" onClick={nextPage} disabled={disableN}> {">"} </button>  
           </div>  
-          <div class="buttongroup">
-          <button class="button" onClick={firstPage} disabled={disableF}> {"<<"}</button>
-            <button class="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
+          <div className="buttongroup">
+          <button className="button" onClick={firstPage} disabled={disableF}> {"<<"}</button>
+            <button className="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
           </div>
-            <div class="author-pictures">
-            <img src={USER_PICTURE_1} class="image" ></img>
+            <div className="author-pictures">
+            <img src={USER_PICTURE_1} className="image" ></img>
             <p>Hello, I'm {USER_NAME_1}! Join us in the chat!</p>
-            <img src={USER_PICTURE_2} class="image"></img>
+            <img src={USER_PICTURE_2} className="image"></img>
             <p>Hello! I'm {USER_NAME_2}. If you want to know more about the authors, go to About.</p>
             </div>
          </div>

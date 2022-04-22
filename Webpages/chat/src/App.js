@@ -45,8 +45,8 @@ const App = () => {
       userSecret={localStorage.getItem('password')}
       onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
     />
-     <div class="web-chat-title">
-     <button class="log-out-button" onClick={logOut}>Log out</button>
+     <div className="web-chat-title">
+     <button className="log-out-button" onClick={logOut}>Log out</button>
         <p>
         Is something not working? </p>
         <p>

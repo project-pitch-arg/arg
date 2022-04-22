@@ -37,12 +37,12 @@ export default function Puzzles(post) {
   // Pasword not solved, display input area.
   if(post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem('solvedPasswords'))).includes(post.secret)) {
     return (
-      <div class="post">
-          <div class="post-date">
+      <div className="post">
+          <div className="post-date">
               {post.date[0]}.{post.date[1]}.{post.date[2]}
-            <div class="post-name"> 
+            <div className="post-name"> 
               {post.poster} 
-            <pre class="post-content">
+            <pre className="post-content">
               {post.content} 
               <form onSubmit={submitPassword(post)}>
               <input type="text" value={sessionStorage.getItem('postSecret')} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
@@ -57,12 +57,12 @@ export default function Puzzles(post) {
   }
   // Password solved, display secret content.
   return (
-    <div class="post">
-      <div class="post-date">
+    <div className="post">
+      <div className="post-date">
         {post.date[0]}.{post.date[1]}.{post.date[2]}
-        <div class="post-name"> 
+        <div className="post-name"> 
           {post.poster} 
-          <pre class="post-content"> 
+          <pre className="post-content"> 
             {post.content}
             <pre>
               {post.secretContent}
@@ -142,7 +142,7 @@ export default function Puzzles(post) {
       // With the help of the "helpChangeString" function each individual 
       // letter that is specified is modified by either it's color or
       // it's font.
-      <pre class="post-content">
+      <pre className="post-content">
         {post.content.slice(0,sortedArray[0][0])}
         {helpChangeString(post, sortedArray[0])}
         {post.content.slice(sortedArray[0][0]+1,sortedArray[1][0])}
@@ -176,18 +176,18 @@ export default function Puzzles(post) {
   // ChangeableValues.jsx
   function insertPuzzlePics() {
     return (
-    <div class="post-images">
+    <div className="post-images">
       <div>
-        <img src={JIGSAW_IMAGE} alt="A numbers puzzle." class="post-image"/>
+        <img src={JIGSAW_IMAGE} alt="A numbers puzzle." className="post-image"/>
       </div>
       <div>
-        <img src={ICHTI_IMAGE} alt="A picture of the dinosaur Ichthyosaurus." class="post-image"/>
+        <img src={ICHTI_IMAGE} alt="A picture of the dinosaur Ichthyosaurus." className="post-image"/>
       </div>
       <div>
-        <img src={DUROS_IMAGE} alt="A package of duros." class="post-image"/>
+        <img src={DUROS_IMAGE} alt="A package of duros." className="post-image"/>
       </div>
       <div>
-        <img src={COMPUTER_IMAGE} alt="A computer drinking coffee." class="post-image"/>
+        <img src={COMPUTER_IMAGE} alt="A computer drinking coffee." className="post-image"/>
       </div>
     </div>  
     )
@@ -196,17 +196,17 @@ export default function Puzzles(post) {
   // Set different pictures for different sized screens.
   function multiPicture() {
     return (
-      <div class="post-images">
+      <div className="post-images">
         <div>
           <picture>
-            <source media="(min-width: 800px)" srcSet="PostImages/SunsetView.jpg" class="post-image"/> 
-            <img src={PARK_ENTRANCE_IMAGE} alt="Image of park entrance." class="post-image"/>
+            <source media="(min-width: 800px)" srcSet="PostImages/SunsetView.jpg" className="post-image"/> 
+            <img src={PARK_ENTRANCE_IMAGE} alt="Image of park entrance." className="post-image"/>
           </picture>
         </div>
         <div>
           <picture>
-            <source media="(min-width: 600px)" srcSet="PostImages/RedSkyAndPool.JPG" class="post-image"/> 
-            <img src="" alt={DIRECTIONS} class="post-image"/>
+            <source media="(min-width: 600px)" srcSet="PostImages/RedSkyAndPool.JPG" className="post-image"/> 
+            <img src="" alt={DIRECTIONS} className="post-image"/>
           </picture>
         </div>
       </div>  
@@ -217,11 +217,11 @@ export default function Puzzles(post) {
   // if it does, return it/them in proper HTML format.
   function hasPicture(post) {
     if(post.hasOwnProperty("pictures")) {
-      return (<div class="post-images">
+      return (<div className="post-images">
               {post.pictures.map (picture => {
                 return (
                   <div>
-                    <img src={picture[0]} alt={picture[1]} class="post-image"/>
+                    <img src={picture[0]} alt={picture[1]} className="post-image"/>
                   </div>
                 )
                 })}
@@ -371,10 +371,10 @@ export default function Puzzles(post) {
     // This post has the puzzle in it.
     if (post.comment == "This is the main post to puzzle B-p1.") {
       return (
-        <div class="post">
-          <div class="post-date">
+        <div className="post">
+          <div className="post-date">
             {post.date[0]}.{post.date[1]}.{post.date[2]}
-          <div class="post-name"> 
+          <div className="post-name"> 
             {post.poster} 
           {changeString(post,changeColor(post, COURSE_CODE_1, CC_1_INDEX),changeFont(post, COURSE_CODE_2, CC_2_INDEX))}
           <p style={{margin: "0", color: colors.postBackground}}> 
@@ -388,12 +388,12 @@ export default function Puzzles(post) {
     }
     // Else, it is one of the helper posts which also has a strange date as clue.
     return (
-      <div class="post">
-        <div class="post-date">
+      <div className="post">
+        <div className="post-date">
           {post.date[0]}.{post.date[1]}.{post.date[2]}
-        <div class="post-name"> 
+        <div className="post-name"> 
           {post.poster} 
-        <pre class="post-content">
+        <pre className="post-content">
           {post.content}
         </pre>
         <p style={{margin: "0", color: colors.postBackground}}>
@@ -411,12 +411,12 @@ export default function Puzzles(post) {
   function puzzleBc4(post) {
     if (post.comment == "This is the main post to puzzle B-c4.") {
       return (
-        <div class="post">
-          <div class="post-date">
+        <div className="post">
+          <div className="post-date">
               {post.date[0]}.{post.date[1]}.{post.date[2]}
-            <div class="post-name"> 
+            <div className="post-name"> 
               {post.poster} 
-            <pre class="post-content"> 
+            <pre className="post-content"> 
               {post.content}
             </pre>
               {multiPicture()}
@@ -427,12 +427,12 @@ export default function Puzzles(post) {
     }
     // If not the main post then it'll be displayed as a regular post.
     return (
-      <div class="post">
-        <div class="post-date">
+      <div className="post">
+        <div className="post-date">
           {post.date[0]}.{post.date[1]}.{post.date[2]}
-          <div class="post-name"> 
+          <div className="post-name"> 
             {post.poster} 
-          <pre class="post-content"> 
+          <pre className="post-content"> 
             {post.content}
           </pre>
             {hasPicture(post)}

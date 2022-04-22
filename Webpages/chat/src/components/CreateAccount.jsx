@@ -114,7 +114,7 @@ function addDefaultChats() {
         // was successful.
         xhrArray[i].addEventListener("readystatechange", function() {
             if(this.readyState === 4) {
-                console.log(this.responseText)
+                console.log(this.status)
             }
         });
            
@@ -129,7 +129,6 @@ function addDefaultChats() {
 
     xhrArray[i].setRequestHeader("User-Name", DEFAULT_CHATS[i][1]);
     xhrArray[i].setRequestHeader("User-Secret", getPassword(DEFAULT_CHATS[i][1]));
-    console.log(getPassword(DEFAULT_CHATS[i][1]))
     
     xhrArray[i].setRequestHeader('Content-Type', 'application/json');
     

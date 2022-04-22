@@ -22,10 +22,10 @@ export default function Home() {
     // Returns the appearance of the Home page
     // along with a button to change jigsaw puzzle.
     return (
-      <div class="content" id="home">
-        <div class="title-text">
+      <div className="content" id="home">
+        <div className="title-text">
           <div id="home-wrapper">
-            <div class="home-left">
+            <div className="home-left">
               Welcome to Daily Thoughts Website
               <br/>
               Home of {USER_NAME_1} and {USER_NAME_2}
@@ -38,7 +38,7 @@ export default function Home() {
             
             <div id="home-right"> 
               If you're new to the website we recommend you check out our&nbsp;
-              <Link class="link" onClick={Help} to="/About">
+              <Link className="link" onClick={Help} to="/About">
                 About 
               </Link>
             </div>
@@ -47,7 +47,7 @@ export default function Home() {
             <iframe id="home-iframe" src={IFRAME_LIST[index]} />
           </div>
           <div>
-            <button class="button" onClick={switchJigsaw}>
+            <button className="button" onClick={switchJigsaw}>
               Next Jigsaw
             </button>
           </div>

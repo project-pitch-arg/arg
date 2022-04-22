@@ -52,13 +52,13 @@ export default function TopBar(props) {
       return (
           // This is a HTML statement to display the topbar and at the same time implement the above functions.
           // Various CSS classes help format and display the buttons available on the topbar.
-            <div class="topbar">
+            <div className="topbar">
               <ul id="topbar-ul">
-                <li class="topbar-li"><Link id="tab-home" onClick={() => HIGHLIGHT_ACTIVE("")} to ="/"> Home </Link></li>
-                <li class="topbar-li"><Link id="tab-posts" onClick={() => HIGHLIGHT_ACTIVE("Posts")} to ="/Posts"> Posts</Link></li>
-                <li class="topbar-li"><Link id="tab-chat" onClick={() => HIGHLIGHT_ACTIVE("Chat")} to ="/Chat"> Chat </Link></li>
-                <li class="topbar-li"><Link id="tab-Quotes" onClick={() => HIGHLIGHT_ACTIVE("Quotes")} to ="/Quotes"> Quotes </Link></li>
-                <li class="topbar-li"><Link id="tab-about" onClick={() => HIGHLIGHT_ACTIVE("About")} to ="/About"> About </Link></li>
+                <li className="topbar-li"><Link id="tab-home" onClick={() => HIGHLIGHT_ACTIVE("")} to ="/"> Home </Link></li>
+                <li className="topbar-li"><Link id="tab-posts" onClick={() => HIGHLIGHT_ACTIVE("Posts")} to ="/Posts"> Posts</Link></li>
+                <li className="topbar-li"><Link id="tab-chat" onClick={() => HIGHLIGHT_ACTIVE("Chat")} to ="/Chat"> Chat </Link></li>
+                <li className="topbar-li"><Link id="tab-Quotes" onClick={() => HIGHLIGHT_ACTIVE("Quotes")} to ="/Quotes"> Quotes </Link></li>
+                <li className="topbar-li"><Link id="tab-about" onClick={() => HIGHLIGHT_ACTIVE("About")} to ="/About"> About </Link></li>
               </ul>
             </div>
         )

@@ -8,7 +8,7 @@ export default function Header(props) {
     return (
         <div className="header-content">
             <Link onClick={home} to="/">
-            <div class="image-text-logo">
+            <div className="image-text-logo">
                 <img src={textLogo}></img>
             </div>       
             </Link>

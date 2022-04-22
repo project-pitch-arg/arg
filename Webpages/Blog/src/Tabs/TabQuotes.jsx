@@ -70,20 +70,17 @@ export default function printingQuotes() {
       );
 
       // Display quotes and originators according to css classes "quote" and "said-by".
-      return <div class="quote">
-              <il>"</il>
-              {QUOTES[message].quote}
-              <il>"</il>
-              <div class="said-by">
-                <il>-</il>
-                {QUOTES[message].saidBy}
+      return <div className="quote">
+              "{QUOTES[message].quote}"
+              <div className="said-by">
+                -{QUOTES[message].saidBy}
               </div>
-           </div>;
+            </div>;
     };
 
     // Display entire page.
     return (
-        <div class="content">
+        <div className="content">
           <Quotes QUOTES={QUOTES} />
         </div>
     )

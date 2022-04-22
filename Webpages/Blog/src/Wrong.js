@@ -3,7 +3,7 @@ import './Tabs/TabContent.css';
 
 export default function Walk() {
     return (
-        <div class="content">
+        <div className="content">
           <a>The page you requested could not be found.</a>         
         </div>
       
