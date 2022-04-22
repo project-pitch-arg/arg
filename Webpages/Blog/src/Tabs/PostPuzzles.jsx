@@ -13,8 +13,6 @@ import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER
           ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE, CC_1_INDEX, CC_2_INDEX, 
           PARK_ENTRANCE_IMAGE, DIRECTIONS } from "../ChangeableValues";
 
-
-
 export default function Puzzles(post) {
 
   // Create a list for solved passwords if it does not exist.

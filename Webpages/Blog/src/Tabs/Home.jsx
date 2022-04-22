@@ -35,7 +35,6 @@ export default function Home() {
               <br/>
               Feel free to try the Jigsaws below
             </div>
-            
             <div id="home-right"> 
               If you're new to the website we recommend you check out our&nbsp;
               <Link className="link" onClick={Help} to="/About">

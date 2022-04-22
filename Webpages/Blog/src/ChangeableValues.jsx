@@ -9,12 +9,10 @@
     To change quotes, got to QuotesContent.json.
 */
 
-
 // Import picutres you wish to use, with the relative
 // path as seen from this file.
 import Robot from "./Img/Robot1312113.png";
 import CaesarSalad from "./Img/Caesar.png";
-import content from "./Tabs/PostContent.json";
 import DurosBasic from "./Img/Duros.jpg";
 import DurosLight from "./Img/DurosLightRed.jpg";
 import DurosMedium from "./Img/DurosRed.jpg";
@@ -29,8 +27,6 @@ import IchthyosaurusMedium from "./Img/IchthyosaurusBlue.png";
 import IchthyosaurusDark from "./Img/IchthyosaurusDarkBlue.png";
 import Jigsaw from "./Img/NumbersPuzzle.png";
 import ParkEntrance from "./Img/ParkEntrance.png";
-
-
 
 /* -------------------- Creators of the blog -------------------- */
 
@@ -149,15 +145,6 @@ export const DIRECTIONS = "20 34N, 25 150SE, 115 71E, 88 336NW, 72 354N, 35 53NE
 export const CHAT_ADDRESS = "http://localhost:3001/"
 
 /* -------------------- Tab Posts -------------------- */
-
-// Global list to access sorted posts through other tabs. 
-// Like the Home page for example.
-export var postContent = content;
-
-// Function that is needed to change the list in other tabs than this one.
-export function setPostContent(content) {
-    postContent = content;
-}
 
 // Edit this variable to change the posts displayed on each page.
 export const POSTS_PER_PAGE = 5;

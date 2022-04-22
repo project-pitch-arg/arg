@@ -1,5 +1,4 @@
 import React from "react";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TopBar from "./TopBar/TopBar";
 import Wrong from "./Wrong";
@@ -12,9 +11,7 @@ import Quotes from "./Tabs//TabQuotes";
 import Header from "./Header/Header";
 
 function App() {
-    
-  return (
-    
+  return (  
     // An HTML statement that sets up our website according to 
     // the specifications in "react-router-dom".
     <div className="app"> 

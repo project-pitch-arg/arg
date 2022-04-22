@@ -92,7 +92,7 @@ def findUserSecret(userArray, userName):
 
 # Load data from files and validate it.
 # Load users from file
-f = open('Users.json')
+f = open('JSONDocuments/Users.json')
 accounts = json.load(f)
 f.close()
 
@@ -103,7 +103,7 @@ if (not isValid):
     sys.exit("ERROR: Given JSON data is Invalid. Change Users.json to follow the schema.")
 
 # Load startchats from file.
-f = open('StartChats.json',)
+f = open('JSONDocuments/StartChats.json',)
 chats = json.load(f)
 f.close()
 
@@ -114,7 +114,7 @@ if (not isValid):
     sys.exit("ERROR: Given JSON data is Invalid. Change StartChats.json to follow the schema.")
 
 # Load messages from file
-f = open('ChatMessages.json',)
+f = open('JSONDocuments/ChatMessages.json',)
 messages = json.load(f)
 f.close()
 
