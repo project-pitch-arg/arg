@@ -113,12 +113,13 @@
         "content": "I've been trying to look up some cooking recipes and tips. I feel like ever since I moved away from my parents I have been progressively getting worse with the food I eat. So I decided to try to learn some new recipes and get a more varied diet. I think it's been going pretty well, I even found out that frying pans get ruined when you use soap to wash them out. Who knew right? In other news I need to buy a new frying pan."
     },
     {
-        "poster": "Robot1311213",
-        "content": "Did you know that the telescope wasn't invented until roughly 300 years after glasses? (⊙_⊙) Both are lenses, so I expected it to be more similar. It is basically the same thing, after all."
-    },
-    {
         "poster": "Fexjo",
         "content": "Robot and I tried karaoke today. I think it's best to simply say, never again... (￢_￢;)"
+    },
+    {
+        "date": [2002, 2, 23],
+        "poster": "Robot1311213",
+        "content": "WIP: Gösta Labor Market"
     },
     {
         "date": [2022, 3, 2],
@@ -194,6 +195,10 @@
         "content": "I remember last year around this time when we made a bunch of pancakes for Pancake Day. I wonder if Swedes celebrate Pancake day as well?"
     },
     {
+        "poster": "Robot1311213",
+        "content": "WIP: Lectures and new courses"
+    },
+    {
         "poster": "Fexjo",
         "content": "So I asked around and apparently in Sweden they don't do pancakes for this holiday. They instead eat 'Semlor' which is a kind of bun with whipped cream and almond paste. Surprisingly good, though don't talk about it when in Sweden. For some people it's a very controversial topic. I got dragged into this large debate of the question if a semla is a sandwich. It then transitioned into if hamburgers are sandwiches and then all manner of food. I did actually get a bit too involved in the argument in the end. Though I don't think I should revisit that topic and open up that can of worms."
     },
@@ -202,11 +207,6 @@
         "content": "Both our resident robot and I have been feeling a bit cooped up inside for a while. And we haven't really done much together lately. So we decided to take a bit of a walk. Just enjoy the sights and explore parts of the city. Even living in Gothenburg for an entire lifetime will still leave many places unexplored. Not to mention that I've only been here for a year. We saw many beautiful sights on our exploration, though one stuck out to me. We came across this as we were wandering aimlessly along a cycling route. The route is called 'Kattegattsleden' for the avid cyclists that are interested. Apparently it stretches for 390 km, quite a distance to be sure. Back on topic though, the bridge is truly a marvel of engineering. Even I can tell that much without much knowledge in structural architecture. Could do with a paint job but hey, I'm not in charge. ",
         "pictures": [["PostImages/Kattegattleden.jpg", "Massive bridge by cycling route."]]
     },
-
-    {
-        "poster": "Fexjo",
-        "content": "Robot talked me into tasting 'fil' today. It's a dairy product, with a texture similar to yoghurt. I was a bit hesitant, as it is made by fermenting cow's milk which doesn't sound tasty at all. But it was not to bad. With some nice cereals, it could be a new addition to my breakfast table. As a side note, it is apparently a dairy product lactose intolerants can tolerate better than usual."
-    },
     {
         "date": [2022, 3, 25],
         "poster": "Robot1311213",
@@ -214,7 +214,7 @@
     },
     {
         "poster": "Fexjo",
-        "content": "Have you heard of the butterfly effect? Where a single flap of a butterfly's wings can cause a tornado in another part of the world. A cascading series of events that causes something huge from the tiniest of things. My teacher did not accept that excuse to why I was late this morning."
+        "content": "Robot talked me into tasting 'fil' today. It's a dairy product, with a texture similar to yoghurt. I was a bit hesitant, as it is made by fermenting cow's milk which doesn't sound tasty at all. But it was not to bad. With some nice cereals, it could be a new addition to my breakfast table. As a side note, it is apparently a dairy product lactose intolerants can tolerate better than usual."
     },
     {
         "poster": "Fexjo",
@@ -228,7 +228,7 @@
         "secretContent": "If you really figured this out on your own, I'm amazed. You were not supposed to."
     },
     {
-        "date": [2022, 4, 1],
+        "date": [2022, 4, 2],
         "poster": "Fexjo",
         "content": "I'm quite excited for tomorrow. I'm going for a two week-long vacation to Spain. I bet it's going to be loads of fun."
     },
@@ -339,21 +339,25 @@
         "content": "Well, that was a lot longer than I expected. But I will only have Happy Birthday, as I would have gone back to Britain when my birtday is, 17/9. On another note, as Robot really likes puzzles and stuff, so I gave him one with a lot of pieces as a present. I think a puzzle with 5 000 pieces will keep him occupied for a while. There was one with 10 000 pieces as well, but the 5 000 pieces one look way more fun, so I went with that."
     },
     {
-        "poster": "Fexjo",
-        "content": "I think Robot has finally decided to return to his inside life. We did get a lot of nice activities done before though so I'm very happy with that. I'd love to repeat some of them in the future and also to try some new things. And even if Robot may act otherwise, I know he enjoyed himself immensely as well. Just read his post of when we went to the natural history museum and you'll see his true feelings."
-    },
-    {
         "poster": "Robot1311213",
         "content": "We walked up and up and up and up to a lookout with view over Gothenburg today. It was a long way up in the warm weather but the view was awesome. You'll have to take my word for it though, as couldn't take any pictures to share because both our phones were out of battery ╮(︶︿︶)╭."
     },
     {
         "date": [2022, 4, 30],
         "poster": "Fexjo",
-        "content": "It's always fun with different cultural holidays. I've never really thought about it but it's kind of obvious that different countries have different holidays. Though obviously some share Christmas and similar ones. Now it's the time for Valborg, which is some kind of Swedish holiday. I don't quite get it, apparently it's supposed to just be a big bonfire, but it seems fun and Robot is excited. It's gonna be fun to find out more about it this evening."
+        "content": "It's always fun with different cultural holidays. Now it's the time for another Swedish one, this one is called Valborg. I don't quite get it, apparently it's supposed to just be a big bonfire, but it seems fun and Robot is excited. It's gonna be fun to find out more about it this evening."
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I think Robot has finally decided to return to his inside life. We did get a lot of nice activities done before though so I'm very happy with that. I'd love to repeat some of them in the future and also to try some new things. And even if Robot may act otherwise, I know he enjoyed himself immensely as well. Just read his post of when we went to the natural history museum and you'll see his true feelings."
     },
     {
         "poster": "Fexjo",
         "content": "Today, it seems I have no idea of what to write. So I'll try Robot's tactic of just writing what I think about. Tessallation, fulcrum, vector, fractals and vinculum. How come it is all math or physics terms?"
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Why is it so hard to stop thinking about things when you started, such as counting how many times you blink or breathe? But other things are so easy to forget?"
     },
     {
         "date": [2022, 5, 3],
@@ -385,16 +389,16 @@
         "content": "I got a haircut today. It was a different experience compared to back home."
     },
     {
-        "poster": "Robot1311213",
-        "content": "Today, I have a simple query. (⌐■_■) Do you think dinosaurs were hot-blooded or cold-blooded? There are theories pointing toward either case so I would urge you to think about it yourself. What makes most sense to you? "
-    },
-    {
         "poster": "Fexjo",
         "content": "I really experienced Newton's first law this morning. 'A body at rest wants to stay at rest.' But in the end, I won and got out of bed."
     },
     {
         "poster": "Robot1311213",
         "content": "The weather was awesome so I took some friends with me and went shopping! We had a great time and ended the day with some fika at a really nice cafe with few people that we found. Chocolate is so tasty. (　’ω’)旦~~"
+    },
+    {
+        "poster": "Fexjo",
+        "content": "Have you heard of the butterfly effect? Where a single flap of a butterfly's wings can cause a tornado in another part of the world. A cascading series of events that causes something huge from the tiniest of things. My teacher did not accept that excuse to why I was late this morning."
     },
     {
         "poster": "Robot1311213",
@@ -449,7 +453,23 @@
     },
     {
         "poster": "Robot1311213",
+        "content": "Today, I had some regret of which program I chose to study. At Fexjo's uni, there's one called 'Game design and technology'. Doesn't that sound really fun? I would definitely have made a game with dinosaurs in it."
+    },
+    {
+        "poster": "Robot1311213",
+        "content": "Did you know that the telescope wasn't invented until roughly 300 years after glasses? (⊙_⊙) Both are lenses, so I expected it to be more similar. It is basically the same thing, after all."
+    },
+    {
+        "poster": "Fexjo",
+        "content": "WIP: Dinner party"
+    },
+    {
+        "poster": "Robot1311213",
         "content": "My friends are lunatics. They don't like The Office. How can you not like The Office! (o_O) I'm frankly left speechless."
+    },
+    {
+        "poster": "Fexjo",
+        "content": "WIP: Mother's day is around now"
     },
     {
         "date": [2022, 6, 4],
@@ -471,24 +491,32 @@
         "content": "Do you think dogs, dinosaurs and any other animal have languages just like humans? Or can any dog understand any other dog just fine?"
     },
     {
-        "date": [2022, 6, 7],
+        "date": [2022, 6, 6],
+        "poster": "Fexjo",
+        "content": "WIP: National day for Sweden"
+    },
+    {
+        "poster": "Robot1311213",
+        "content": "Today, I have a simple query. (⌐■_■) Do you think dinosaurs were hot-blooded or cold-blooded? There are theories pointing toward either case so I would urge you to think about it yourself. What makes most sense to you? "
+    },
+    {
+        "date": [2022, 6, 8],
         "poster": "Robot1311213",
         "content": "Have you found something odd with a post lately? If you can arrive at the 8-letter answer, I'll give you a reward. Perhaps you should keep this in mind while trying to figure it out: \n ___ like us",
         "puzzleNr": "B-c4",
         "comment": "This post is a helper post to puzzle B-c4"
     },
     {
+        "date": [2022, 6, 9],
         "poster": "Robot1311213",
         "content": "I have a friend who recently suffered an accident. This meant that he got temporarily deaf in one ear, luckily he's soon to recover full hearing. We played some games together though and sometimes he got really surprised because he wouldn't hear the sound from one side of his headphones. This got me thinking of accessibility in general in games. How much do games consider accessibility for various conditions? This search led to a few interesting results, not only informative of games but also something else. If you know what I'm talking about then I'm sure you'll be able to input the correct solution below.",
         "secret": "ABCCABAC",
-        "secretContent": "Congratulations for solving this newest puzzle. It's my most complex one yet.\nAs a reward you will receive a 200kr gift card that applies to a variety of stores,\nboth online and physical. 200kr translates roughly to 20$.\nJust send 'Stegosaurus solved the riddle' to me in a private chat and I'll make sure you get your prize.\nOnly the first person to discover this gets it though, so my apologies if you're here later,\nbut good job still!"
+        "secretContent": "Congratulations for solving this newest puzzle. It's my most complex one yet.\nAs a reward you will receive a 200kr gift card that applies to a variety of stores,\nboth online and physical. 200kr translates roughly to 20$.\nJust send 'Stegosaurus solved the riddle' to me in a private chat and I'll make sure you get your prize.\nOnly the first person to discover this gets it though, so my apologies if you're here later,\nbut good job still!",
+        "puzzleNr": "B-c4",
+        "comment": "This post is a helper post to puzzle B-c4"
     },
     {
-        "poster": "Fexjo",
-        "content": "Why is it so hard to stop thinking about things when you started, such as counting how many times you blink or breathe? But other things are so easy to forget?"
-    },
-    {
-        "date": [2022, 6, 9],
+        "date": [2022, 6, 10],
         "poster": "Fexjo",
         "content": "Today marks the day that I leave Sweden. It was nice while it lasted and I'm surely going to visit a lot in the future. But first, I need to finish my studies from home. I can't do everything abroad, some things has to be done in Great Britain. I've come to really enjoy this place, but there really is no place like home."
     },
@@ -497,31 +525,35 @@
         "content": "I'm guessing no-one is surprised that rain greeted me upon my return to Britain. That's just how it is, I suppose."
     },
     {
-        "date": [2022, 6, 11],
+        "date": [2022, 6, 12],
         "poster": "Robot1311213",
         "content": "I never told you, but my favorite dinosaurs are XXDINO1XX, XXDINO2XX and ichthyosaurus.",
         "puzzleNr": "B-p1",
         "comment": "This post is helper post 1 to puzzle B-p1."
     },
     {
+        "poster": "Fexjo",
+        "content": "WIP: Game Design and Technology"
+    },
+    {
         "poster": "Robot1311213",
-        "content": "Today, I had some regret of which program I chose to study. At Fexjo's uni, there's one called 'Game design and technology'. Doesn't that sound really fun? I would definitely have made a game with dinosaurs in it."
+        "content": "WIP: Game Design and Technology"
     },
     {
         "poster": "Robot1311213",
         "content": "Apparently, it is a time for regrets. Today, I really regret not getting Fexjo to swim with me a single time. I would really have liked to do it today. The weather is sunny, warm and just right. But the crucial piece of Fexjo is missing." 
     },
     {
-        "poster": "Fexjo",
-        "content": "I saw the poster for a dinosaur exhibition today. My only thought was that Robot1311213 will probably invite me to this soon enough."
-    },
-    {
-        "date": [2022, 6, 15],
+        "date": [2022, 6, 16],
         "poster": "Robot1311213",
         "content": "I borrowed some pictures from Fexjo to make these. What do you think all of it adds up to?",
         "pictures": [["Puzzles/Skyline1.jpg", "A skyline."], ["Puzzles/Skyline2.png", "A skyline"],  ["Puzzles/Skyline3.jpg", "A skyline"], ["Puzzles/Shapes.png", "Two rectangles and a triangle."],  ["Puzzles/Lines.png", "Four underscores in different colours. Three with signs."], ["Puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
         "puzzleNr": "B-p2",
         "comment": "This is the main post to puzzle B-p2."
+    },
+    {
+        "poster": "Fexjo",
+        "content": "I saw the poster for a dinosaur exhibition today. My only thought was that Robot1311213 will probably invite me to this soon enough."
     },
     {
         "poster": "Robot1311213",
@@ -533,6 +565,10 @@
         "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinosaurs today. Unfortunately, the book did not include ichthyosaurus, but XXDINO3XX also seems really cool. It was nice. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
         "puzzleNr": "B-p1",
         "comment": "This is the main post to puzzle B-p1."
+    },
+    {
+        "poster": "Robot1311213",
+        "content": "WIP: Lyra"
     },
     {
         "poster": "Fexjo",
