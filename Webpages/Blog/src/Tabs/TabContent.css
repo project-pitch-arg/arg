@@ -80,12 +80,18 @@
 
 /* --------------------TabHome -------------------- */
 
+/* Link to a different page. This is a text segment.
+   On the home page this is a link to the About page. */
 .link {
     color: black;
 }
+
+/* ID to make sure that the entire home page is scrollable. */
 #home {
     overflow: scroll;
 }
+
+/* Formatting for the text above the jigsaw on the home page. */
 #home-wrapper {
     margin-top: 60vh;
     margin-left: 10vw;
@@ -93,27 +99,37 @@
     height: 30vh;
     overflow: hidden;
 }
+
+/* Two classes to make sure that segments are next to each other. */
 .home-left {
     width: 50vw;
     height: auto;
-    float: left; /* add this */
+    float: left;
     overflow: hidden;
 }
 .home-right {
     overflow: hidden;
     margin-top: 5vh;
 }
+
+/* ID to show the appropriate amount of the 
+   iframe of the jigsaw on the home page.*/
 #home-iframe-container {
     width: 98vw;
     height: 85vh;
     overflow: hidden;     
 }
+
+/* ID to show part of the ifram and not
+   show the options bar. */
 #home-iframe {
     width: 90vw;     
     height: 80vh;     
     margin-top: -5vh; 
     overflow: hidden;
 }
+
+/* Class for formatting large text */
 .title-text {
     font-size: xx-large;
     text-align: center;
