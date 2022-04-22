@@ -5,8 +5,6 @@ import { PROJECT_ID } from '../ChangeableValues';
 
 const projectID = PROJECT_ID;
 
-//var haveAccount = true;
-
 export var haveAccount;
 
 const Modal = () => {

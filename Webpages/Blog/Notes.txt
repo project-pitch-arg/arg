@@ -30,18 +30,11 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Organisera css-filer (bloggen fixad)
     - CSS-file. Add colour names to make it easier to change the overall impression.
 
-- Dokumentation
-    - Documentation for puzzles, how they work and their names.
-    - Allmän guide till Allt   
-    - Ett dokument som beskriver innehållet i JSON-filer och kort om vad som ska stå var och format.
-
 - Notera någonstans att chatnamn som skapas i början behöver vara unika. Kan inte fixas med JSON schema.
     - Gäller StartUp filer.
 
 - Add an email in case the chat does not work?
     - I About, endast för Edwin i så fall. För Wilfreds får man senare.
-
-- Rensa filerna i chat. Gamla mindre Pythonfilerna.
 
 - Fixa så att man inte kan försöka lägga in eller skicka meddelanden med användare som inte finns
     - Borde bara inte fungera med servern, men borde testas.
@@ -54,23 +47,5 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 3 ---------------
 
-- Blogg design
-
- - How to get the page to exactly fill the browser?
-    - Inte direkt nödvändigt, bara resten ser bra ut.
-    - Hellre lite för stor än en vit kant?
-
 - Ta bort våra nycklar till chatten när allt är klart så man inte hamnar på mitt konto.
     - Dokumentera att detta måste fixas innan man starta bloggen.
-
-- Skriver vi Id eller ID överallt?
-
---------------- Prio 100 ---------------
-
-- Rensa chatten från alla användare/chattar
-    - Kan göras enkelt från hemsidan med projektet, så skippar detta så länge.
-
-- Fixa så man kan skicka bilder i chatt via fil.
-
-- Lägg till fält så att man kan ladda upp en avatarbild till chatten.
-- Fixa också då så att de man automatiskt gör i StartUp har avatarer.

@@ -10,19 +10,18 @@
     Also, change them in StartUp.py.
 
     For the JSON-files below, you can find their corresponding
-    shcemas ???, ??? and ??? in the folder for docuementaiton
-    found ???. It is also available in text if that is preferable.
-    In that case go to ???.
+    shcemas UsersSchema.json, ChatMessagesSchema.json and 
+    StartChatsSchema.json in the folder for documentation.
 
-    To change the default chats, change the variable DEFAULT_CHATS.
+    To change default users, go to Users.json.
 
-    To change default users, go to users.json.
-
-    To change default messages, got to ChatPosts.json
+    To change default messages, got to ChatMessages.json
 
     To create the default chats and user
     as well as send the chat history,
     run the file StartUp.py.
+
+    To change the default chats, change the variable DEFAULT_CHATS.
 */
 
 // --------------- Keys ---------------

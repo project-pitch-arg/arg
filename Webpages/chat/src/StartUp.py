@@ -75,7 +75,6 @@ def validateJson(jsonData, jsonSchema):
 # Create and array to save the ID:s of the
 # created chats.
 # Uses the format of [[chatName, chatId], [chatName, chatId]]
-# TODO Move this?
 chatIds = []
 
 # Find the corresponding chatId from the name of the chat. 

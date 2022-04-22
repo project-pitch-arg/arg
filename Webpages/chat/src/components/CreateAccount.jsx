@@ -107,16 +107,6 @@ function addDefaultChats() {
     for (i = 0; i < DEFAULT_CHATS.length; i++) {
 
         xhrArray[i].withCredentials = false;
-
-        // TODO remove these logs when done with testing this
-        // This will trigger when the xhrArray[i]-request
-        // is finished. It checks if the server request
-        // was successful.
-        xhrArray[i].addEventListener("readystatechange", function() {
-            if(this.readyState === 4) {
-                console.log(this.status)
-            }
-        });
            
     // Prepare the JSON payload for the request.
     var chatInfo =  {"username": username} ;
@@ -145,22 +135,21 @@ function addDefaultChats() {
             </div>
             <div className="form">
                 <h1 className="title">Create Account</h1>
-                    
-                    <form onSubmit={createUser}>
-                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required/>
-                        <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}className="input" placeholder="Password"/>
-                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}className="input" placeholder="Email"/>
-                        <div align="center">
-                            <button type="submit" className="button">
-                            <span>Create account</span>
-                            </button>
-                        </div>
-                    </form>
+                <form onSubmit={createUser}>
+                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required/>
+                    <input type="text" value={password} onChange={(e) => setPassword(e.target.value)}className="input" placeholder="Password"/>
+                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}className="input" placeholder="Email"/>
                     <div align="center">
-                        <button onClick={exit} className="button">
-                            <span>Exit</span>
+                        <button type="submit" className="button">
+                        <span>Create account</span>
                         </button>
                     </div>
+                </form>
+                <div align="center">
+                    <button onClick={exit} className="button">
+                        <span>Exit</span>
+                    </button>
+                </div>
             </div>
             <div className="subtitle">
                 <h1>{error}</h1>
