@@ -21,12 +21,13 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Inkludera fakta från dokumentet om GU som finns på Drive.
     - Har lagt till en. Vet inte hur mycket vi ska lägga till. Idéer?
 
+- Chatthistorik för allmän chatt och aprilpusslet.
+
+- Mer om universitet och programmet i fler inlägg. Tror vi vill vara tydligare med marknadsföringen än var vi är nu. Är mest Sverige generellt.
+
 --------------- Prio 2 ---------------
 
- - Titta på error i console 
-    - Fixat kommandotolken
-
-- Organisera css-filer
+- Organisera css-filer (bloggen fixad)
     - CSS-file. Add colour names to make it easier to change the overall impression.
 
 - Dokumentation
