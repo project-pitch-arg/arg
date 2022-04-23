@@ -7,11 +7,7 @@
 */
 
 import colors from "./TabContent.css"
-
-import { ANSWER_TO_BE_ENCRYPTED, ENCRYPTION_KEY, CLUE_DATE, LETTER_COLOR, LETTER_FONT,
-          COURSE_CODE_1, COURSE_CODE_2, THREE_DINOS, HINT_COURSES, HINT_DINOS, DUROS_IMAGE,
-          ICHTI_IMAGE, COMPUTER_IMAGE, JIGSAW_IMAGE, CC_1_INDEX, CC_2_INDEX, 
-          PARK_ENTRANCE_IMAGE, DIRECTIONS } from "../ChangeableValues";
+import Variables from "../JSONDocuments/ChangeableValues.json";
 
 export default function Puzzles(post) {
 
@@ -165,9 +161,9 @@ export default function Puzzles(post) {
   // in a proper HTML format.
   function helpChangeString(post, element) {
     if (element[1] == "color") {
-      return (<font color={LETTER_COLOR}>{post.content[element[0]]}</font>);
+      return (<font color={Variables.letterColour}>{post.content[element[0]]}</font>);
     } else if (element[1] == "font") {
-      return (<font face={LETTER_FONT}>{post.content[element[0]]}</font>);
+      return (<font face={Variables.letterFont}>{post.content[element[0]]}</font>);
     }
     return;
   }
@@ -178,16 +174,16 @@ export default function Puzzles(post) {
     return (
     <div className="post-images">
       <div>
-        <img src={JIGSAW_IMAGE} alt="A numbers puzzle." className="post-image"/>
+        <img src={require("../Img/" + Variables.jigsawSudoku)} alt="A numbers puzzle." className="post-image"/>
       </div>
       <div>
-        <img src={ICHTI_IMAGE} alt="A picture of the dinosaur Ichthyosaurus." className="post-image"/>
+        <img src={require("../Img/" + Variables.blueHintPicture[1][Variables.blueHintPicture[0]])} alt="A picture of the dinosaur Ichthyosaurus." className="post-image"/>
       </div>
       <div>
-        <img src={DUROS_IMAGE} alt="A package of duros." className="post-image"/>
+        <img src={require("../Img/" + Variables.redHintPicture[1][Variables.redHintPicture[0]])} alt="A package of duros." className="post-image"/>
       </div>
       <div>
-        <img src={COMPUTER_IMAGE} alt="A computer drinking coffee." className="post-image"/>
+        <img src={require("../Img/" + Variables.greenHintPicture[1][Variables.greenHintPicture[0]])} alt="A computer drinking coffee." className="post-image"/>
       </div>
     </div>  
     )
@@ -200,13 +196,13 @@ export default function Puzzles(post) {
         <div>
           <picture>
             <source media="(min-width: 800px)" srcSet="PostImages/SunsetView.jpg" className="post-image"/> 
-            <img src={PARK_ENTRANCE_IMAGE} alt="Image of park entrance." className="post-image"/>
+            <img src={require("../Img/" + Variables.parkEntrance)} alt="Image of park entrance." className="post-image"/>
           </picture>
         </div>
         <div>
           <picture>
             <source media="(min-width: 600px)" srcSet="PostImages/RedSkyAndPool.JPG" className="post-image"/> 
-            <img src="" alt={DIRECTIONS} className="post-image"/>
+            <img src="" alt={Variables.directions} className="post-image"/>
           </picture>
         </div>
       </div>  
@@ -252,16 +248,16 @@ export default function Puzzles(post) {
   function encodedMsg(toBeEncoded) {
     toBeEncoded = toBeEncoded.toLowerCase();
 
-    if (ENCRYPTION_KEY[0][1] < 1 || ENCRYPTION_KEY[0][1] > 26) {
+    if (Variables.encryptionKey[0][1] < 1 || Variables.encryptionKey[0][1] > 26) {
       throw "First number of encryption key must be within bounds [1,26].";
     } 
-    if (ENCRYPTION_KEY[1][1] < 27 || ENCRYPTION_KEY[1][1] > 52) {
+    if (Variables.encryptionKey[1][1] < 27 || Variables.encryptionKey[1][1] > 52) {
       throw "Second number of encryption key must be within bounds [27,53].";
     }
-    if (ENCRYPTION_KEY[2][1] < 53 || ENCRYPTION_KEY[2][1] > 78) {
+    if (Variables.encryptionKey[2][1] < 53 || Variables.encryptionKey[2][1] > 78) {
       throw "Third number of encryption key must be within bounds [53,78].";
     }
-    if (ENCRYPTION_KEY[3][1] < 79 || ENCRYPTION_KEY[3][1] > 100) {
+    if (Variables.encryptionKey[3][1] < 79 || Variables.encryptionKey[3][1] > 100) {
       throw "Fourth number of encryption key must be within bounds [79,100].";
     }
 
@@ -273,14 +269,14 @@ export default function Puzzles(post) {
     var highestNumbers = [79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98 , 99, 100, "", "", "", ""];
 
     // Find indexes for placements of all keys.
-    var letterIndexLow = letters.indexOf(ENCRYPTION_KEY[0][0]);
-    var lowNumbersIndex = lowNumbers.indexOf(ENCRYPTION_KEY[0][1]);
-    var letterIndexMedium = letters.indexOf(ENCRYPTION_KEY[1][0]);
-    var mediumNumbersIndex = mediumNumbers.indexOf(ENCRYPTION_KEY[1][1]);
-    var letterIndexLarge = letters.indexOf(ENCRYPTION_KEY[2][0]);
-    var largeNumbersIndex = largeNumbers.indexOf(ENCRYPTION_KEY[2][1]);
-    var letterIndexHighest = letters.indexOf(ENCRYPTION_KEY[3][0]);
-    var highestNumbersIndex = highestNumbers.indexOf(ENCRYPTION_KEY[3][1]);
+    var letterIndexLow = letters.indexOf(Variables.encryptionKey[0][0]);
+    var lowNumbersIndex = lowNumbers.indexOf(Variables.encryptionKey[0][1]);
+    var letterIndexMedium = letters.indexOf(Variables.encryptionKey[1][0]);
+    var mediumNumbersIndex = mediumNumbers.indexOf(Variables.encryptionKey[1][1]);
+    var letterIndexLarge = letters.indexOf(Variables.encryptionKey[2][0]);
+    var largeNumbersIndex = largeNumbers.indexOf(Variables.encryptionKey[2][1]);
+    var letterIndexHighest = letters.indexOf(Variables.encryptionKey[3][0]);
+    var highestNumbersIndex = highestNumbers.indexOf(Variables.encryptionKey[3][1]);
 
     // Shift the arrays to turn the rings according to the key.
     lowNumbers = shiftArrayWrap(lowNumbers, (lowNumbersIndex-letterIndexLow));
@@ -344,9 +340,9 @@ export default function Puzzles(post) {
   // specified names from ChangeableValues. Also makes
   // sure that they are all capitalized. See documentation.
   function changeDinos(post) {
-    const dino1 = THREE_DINOS[0][0].toUpperCase() + THREE_DINOS[0].slice(1);
-    const dino2 = THREE_DINOS[1][0].toLocaleUpperCase() + THREE_DINOS[1].slice(1);
-    const dino3 = THREE_DINOS[2][0].toLocaleUpperCase() + THREE_DINOS[2].slice(1);
+    const dino1 = Variables.threeDinosaurs[0][0].toUpperCase() + Variables.threeDinosaurs[0].slice(1);
+    const dino2 = Variables.threeDinosaurs[1][0].toLocaleUpperCase() + Variables.threeDinosaurs[1].slice(1);
+    const dino3 = Variables.threeDinosaurs[2][0].toLocaleUpperCase() + Variables.threeDinosaurs[2].slice(1);
     post.content = post.content.replace("XXDINO1XX", dino1);
     post.content = post.content.replace("XXDINO2XX", dino2);
     post.content = post.content.replace("XXDINO3XX", dino3);
@@ -356,9 +352,9 @@ export default function Puzzles(post) {
   // Detection function to know which post should lead to which function.
   function checkForHelper(post) {
     if(post.comment == "This post is helper post 1 to puzzle B-p1.") {
-      return HINT_DINOS;
+      return Variables.hintDinosaurs;
     } else if (post.comment == "This post is helper post 2 to puzzle B-p1") {
-      return HINT_COURSES;
+      return Variables.hintCourses;
     }
     return;
   }
@@ -367,7 +363,7 @@ export default function Puzzles(post) {
   // See more in the puzzle docuemntation for the blog.
   function puzzleBp1(post) {
     post = changeDinos(post);
-    post.date[1] = CLUE_DATE;
+    post.date[1] = Variables.clueDate;
 
     // This post has the puzzle in it.
     if (post.comment == "This is the main post to puzzle B-p1.") {
@@ -377,9 +373,9 @@ export default function Puzzles(post) {
             {post.date[0]}.{post.date[1]}.{post.date[2]}
           <div className="post-name"> 
             {post.poster} 
-          {changeString(post,changeColor(post, COURSE_CODE_1, CC_1_INDEX),changeFont(post, COURSE_CODE_2, CC_2_INDEX))}
+          {changeString(post,changeColor(post, Variables.courseCode1, Variables.courseCode1Index),changeFont(post, Variables.courseCode2, Variables.courseCode2Index))}
           <p style={{margin: "0", color: colors.postBackground}}> 
-              {encodedMsg(ANSWER_TO_BE_ENCRYPTED)}
+              {encodedMsg(JSON.stringify(Variables.answerToBeEncrypted))}
           </p>
           {insertPuzzlePics()}
           </div>

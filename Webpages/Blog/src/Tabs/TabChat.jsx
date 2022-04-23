@@ -1,13 +1,13 @@
 import React from "react";
 import "./TabContent.css";
-import { CHAT_ADDRESS } from "../ChangeableValues";
+import Variables from "../JSONDocuments/ChangeableValues.json";
 
 export default function displayChat() {
     return (
         // Implements the chat according to the seperate system "chat".
         // See the chat folder's code for details.
        <div className="chat-area">
-         <iframe className="chat" src={CHAT_ADDRESS}></iframe>
+         <iframe className="chat" src={Variables.chatAddress}></iframe>
         </div> 
       
     )

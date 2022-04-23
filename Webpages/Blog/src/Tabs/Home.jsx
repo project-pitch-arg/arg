@@ -8,15 +8,14 @@ import "./TabContent.css";
 import { Link } from "react-router-dom";
 import Help from "../TopBar/TopBar";
 import { useState } from "react";
-
-import { USER_NAME_1, USER_NAME_2, IFRAME_LIST } from "../ChangeableValues";
+import Variables from "../JSONDocuments/ChangeableValues.json";
 
 export default function Home() {
     const[index, setIndex] = useState(0);
 
-    // Change to the next puzzle in the IFRAME_LIST.
+    // Change to the next puzzle in the iframeList.
     function switchJigsaw() {
-      setIndex((index + 1 ) % IFRAME_LIST.length);  
+      setIndex((index + 1 ) % Variables.iframeList.length);  
     }
     
     // Returns the appearance of the Home page
@@ -28,7 +27,7 @@ export default function Home() {
             <div className="home-left">
               Welcome to Daily Thoughts Website
               <br/>
-              Home of {USER_NAME_1} and {USER_NAME_2}
+              Home of {Variables.username1} and {Variables.username2}
               <br/>
               Hope you enjoy your stay!
               <br/>
@@ -43,7 +42,7 @@ export default function Home() {
             </div>
           </div>
           <div id="home-iframe-container">
-            <iframe id="home-iframe" src={IFRAME_LIST[index]} />
+            <iframe id="home-iframe" src={Variables.iframeList[index]} />
           </div>
           <div>
             <button className="button" onClick={switchJigsaw}>

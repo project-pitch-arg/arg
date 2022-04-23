@@ -5,20 +5,20 @@
 
   At the moment, 5 posts are displayed on each
   group that you change with the buttons. To change
-  the amount of posts, edit the variable POSTS_PER_PAGE
+  the amount of posts, edit the variable Variables.postsPerPage
   to the wished for amount.
 */
 import React, { useState } from "react";
 import "./TabContent.css";
 import puzzleHandler from "./PostPuzzles.jsx";
 import postContent from "../JSONDocuments/PostContent.json";
-import { POSTS_PER_PAGE, USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2 } from "../ChangeableValues";
+import Variables from "../JSONDocuments/ChangeableValues.json"
 
 export default function Posts() {
 
   // The variables for the indexes of the posts currently displayed
   const[start, startChange] = useState(0);
-  const[last, lastChange] = useState(POSTS_PER_PAGE);
+  const[last, lastChange] = useState(Variables.postsPerPage);
 
   // Get the contents for the posts from another file.
   const CONTENT = changeDateAndSort(postContent);
@@ -50,10 +50,10 @@ export default function Posts() {
           <button className="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
         </div>
         <div className="author-pictures">
-          <img src={USER_PICTURE_1} className="image" ></img>
-          <p>Hello, I'm {USER_NAME_1}! Join us in the chat!</p>
-          <img src={USER_PICTURE_2} className="image"></img>
-          <p>Hello! I'm {USER_NAME_2}. If you want to know more about the authors, go to About.</p>
+          <img src={require("../Img/" + Variables.userPicture1)} className="image" ></img>
+          <p>Hello, I'm {Variables.username1}! Join us in the chat!</p>
+          <img src={require("../Img/" + Variables.userPicture2)} className="image"></img>
+          <p>Hello! I'm {Variables.username2}. If you want to know more about the authors, go to About.</p>
         </div>
       </div>
     </div>
@@ -96,15 +96,15 @@ export default function Posts() {
 
   // Function which changes indexes to previous (newer) posts.
   function prevPage() {
-    if (start - POSTS_PER_PAGE <= 0) {
+    if (start - Variables.postsPerPage <= 0) {
       firstPage();
       return;
-    } else if (last - start < POSTS_PER_PAGE) {
+    } else if (last - start < Variables.postsPerPage) {
       lastChange(start);
-      startChange(start - POSTS_PER_PAGE);
+      startChange(start - Variables.postsPerPage);
     } else {
-      lastChange(last - POSTS_PER_PAGE);
-      startChange(start - POSTS_PER_PAGE);
+      lastChange(last - Variables.postsPerPage);
+      startChange(start - Variables.postsPerPage);
     }
     setDL(false);
     setDN(false);
@@ -112,12 +112,12 @@ export default function Posts() {
 
   // Function which changes indexes to following (older) posts.
   function nextPage() {
-    if(postContent.length <= last + POSTS_PER_PAGE) {
+    if(postContent.length <= last + Variables.postsPerPage) {
       lastPage();
     }
     else {
-      startChange(start+POSTS_PER_PAGE);
-      lastChange(last+POSTS_PER_PAGE);
+      startChange(start+Variables.postsPerPage);
+      lastChange(last+Variables.postsPerPage);
       setDF(false);
       setDP(false);
     } 
@@ -125,11 +125,11 @@ export default function Posts() {
 
   // Function to take you back to the first page of posts (the newest ones).
   function firstPage() {
-    lastChange(POSTS_PER_PAGE);
+    lastChange(Variables.postsPerPage);
     startChange(0);
     setDF(true);
     setDP(true);
-    if(postContent.length >= POSTS_PER_PAGE){
+    if(postContent.length >= Variables.postsPerPage){
       setDL(false);
       setDN(false);
     }
@@ -138,14 +138,14 @@ export default function Posts() {
   // Function to take the user to the last page of posts (the oldest ones).
   function lastPage() {
     lastChange(postContent.length);
-    if(postContent.length - (postContent.length % POSTS_PER_PAGE) == postContent.length) {
-      startChange(postContent.length - POSTS_PER_PAGE);
+    if(postContent.length - (postContent.length % Variables.postsPerPage) == postContent.length) {
+      startChange(postContent.length - Variables.postsPerPage);
     } else {
-      startChange(postContent.length - (postContent.length % POSTS_PER_PAGE));
+      startChange(postContent.length - (postContent.length % Variables.postsPerPage));
     }
     setDL(true);
     setDN(true);
-    if(postContent.length > POSTS_PER_PAGE){
+    if(postContent.length > Variables.postsPerPage){
       setDF(false);
       setDP(false);
     }
