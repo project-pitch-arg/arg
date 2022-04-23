@@ -34,9 +34,9 @@ export default function DisplayAbout() {
       </div>
       <div className="right-side">
         <div className="author-pictures">
-          <img src={require("../Img/" + Variables.userPicture2)} className="image" ></img>
+          <img src={require("../Img/" + Variables.userPicture2)} alt="Profile picture of a blog creator." className="image" ></img>
           <p>I'm {Variables.username1}</p>
-          <img src={require("../Img/" + Variables.userPicture2)} className="image"></img>
+          <img src={require("../Img/" + Variables.userPicture2)} alt="Profile picture of a blog creator." className="image"></img>
           <p>I'm {Variables.username2}</p>
         </div>
       </div>

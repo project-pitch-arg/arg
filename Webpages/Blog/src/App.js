@@ -42,50 +42,31 @@ function App() {
   }
   
   function errorChecker() {
-      if (Variables.quoteTime < 1) {
+      if (Variables.quoteTime < 1)
           throw new Error("Delay for quotes has to be a positive number.");
-      }
-  /*
-      if (ENCRYPTION_KEY[0][0].length !== 1) {
+      if (Variables.encryptionKey[0][0].length !== 1)
           throw new Error("First encryption key has to be a single letter.");
-      }
-  
-      if (ENCRYPTION_KEY[1][0].length !== 1) {
+      if (Variables.encryptionKey[1][0].length !== 1)
           throw new Error("Second encryption key has to be a single letter.");
-      }
-  
-      if (ENCRYPTION_KEY[2][0].length !== 1) {
+      if (Variables.encryptionKey[2][0].length !== 1)
           throw new Error("Third encryption key has to be a single letter.");
-      }
-  
-      if (ENCRYPTION_KEY[3][0].length !== 1) {
+      if (Variables.encryptionKey[3][0].length !== 1)
           throw new Error("Fourth encryption key has to be a single letter.");
-      } 
-  
-      if (COURSE_CODE_1.length !== 3) {
+      if (Variables.courseCode1.length !== 3)
           throw new Error("First course code has to be three letters.");
-      }
-  
-      if (COURSE_CODE_2.length !== 3) {
+      if (Variables.courseCode2.length !== 3)
           throw new Error("Second course code has to be three letters.");
-      }
-  
-      if (THREE_DINOS.length !== 3) {
+      if (Variables.threeDinosaurs.length !== 3)
           throw new Error("There has to be exactly three dinosaurs.");
-      }
-  
-      if (POSTS_PER_PAGE < 1) {
+      if (Variables.postsPerPage < 1)
           throw new Error("1 or more posts has to be displayed.");
-      }
-  
-      if (!(!DIFFERENT_COLORS.includes(LETTER_COLOR) && !(LETTER_COLOR.slice(0,3) === "rbg") && !(LETTER_COLOR.slice(0,1) === "#")
-              && !(LETTER_COLOR.slice(0,3) === "hsl") && !(LETTER_COLOR.slice(0,4) === "rgba") && !(LETTER_COLOR.slice(0,4) === "hsla"))) {
+      if (!(!DIFFERENT_COLORS.includes(Variables.letterColour) && !(Variables.letterColour.slice(0,3) === "rbg") && 
+            !(Variables.letterColour.slice(0,1) === "#") && !(Variables.letterColour.slice(0,3) === "hsl") && 
+            !(Variables.letterColour.slice(0,4) === "rgba") && !(Variables.letterColour.slice(0,4) === "hsla"))) {
           throw new Error("The specified color should be a color in a correct format.");
       }
-  
-      if (!DIFFERENT_FONTS.includes(LETTER_FONT)) {
+      if (!DIFFERENT_FONTS.includes(Variables.letterFont))
           throw new Error("The specified font should be an existing web safe font.");
-      } */
   }
   
   return (  

@@ -7,7 +7,7 @@ export default function displayChat() {
         // Implements the chat according to the seperate system "chat".
         // See the chat folder's code for details.
        <div className="chat-area">
-         <iframe className="chat" src={Variables.chatAddress}></iframe>
+         <iframe title="chat" className="chat" src={Variables.chatAddress}></iframe>
         </div> 
       
     )

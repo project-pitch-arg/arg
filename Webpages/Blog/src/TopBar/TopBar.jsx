@@ -21,24 +21,20 @@ export default function TopBar(props) {
         switch (path) {
             case "":
                 document.getElementById("tab-home").classList.add("active");
-        
             break;
-            
             case "Chat":
                 document.getElementById("tab-chat").classList.add("active");
             break;
-            
             case "Posts":
                 document.getElementById("tab-posts").classList.add("active");
             break;
-
             case "About":
                 document.getElementById("tab-about").classList.add("active");
-            break    
-                
+            break;    
             case "Quotes":
                 document.getElementById("tab-Quotes").classList.add("active");
-            break    
+            break ;
+            default: break;   
         }
       }
     

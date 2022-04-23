@@ -26,6 +26,7 @@ export default function Puzzles(post) {
       case "B-c2": break;
       case "B-c3": break;
       case "B-c4": return puzzleBc4(post);
+      default: break;
     }  
   }
   // Pasword not solved, display input area.
@@ -73,7 +74,7 @@ export default function Puzzles(post) {
   // Function to reveal content protcetec by password
   // when the password is correct.
   function submitPassword(post) {
-    if(sessionStorage.getItem('postSecret') == post.secret) {
+    if(sessionStorage.getItem('postSecret') === post.secret) {
       var passwords = JSON.parse(sessionStorage.getItem('solvedPasswords'));
       passwords.push(post.secret);
       sessionStorage.setItem('solvedPasswords', JSON.stringify(passwords));
@@ -90,7 +91,7 @@ export default function Puzzles(post) {
     for(let i = 0; i < letter.length; i++) {
       const NUMBER = (post.content.split(letter[i]).length - 1);
       if (NUMBER < 1) {
-        throw "One of the course code letters doesn't exist in the content text.";
+        throw new Error("One of the course code letters doesn't exist in the content text.");
       }
       var index = post.content.indexOf(letter[i]);
       var count1 = count % NUMBER;
@@ -127,8 +128,8 @@ export default function Puzzles(post) {
     var totalArray = array1.concat(array2);
     var sortedArray = totalArray.sort(function(a,b){return (a[0]-b[0])});
     for (var i = 0; i < sortedArray.length - 1; i++) {
-      if (sortedArray[i][0] == sortedArray[i+1][0]) {
-        throw "Index chosen for course codes make a double letter. Please choose another index or another course code.";
+      if (sortedArray[i][0] === sortedArray[i+1][0]) {
+        throw new Error("Index chosen for course codes make a double letter. Please choose another index or another course code.");
       }
     }
     
@@ -158,9 +159,9 @@ export default function Puzzles(post) {
   // font or a change in color and then help return that
   // in a proper HTML format.
   function helpChangeString(post, element) {
-    if (element[1] == "color") {
+    if (element[1] === "color") {
       return (<font color={Variables.letterColour}>{post.content[element[0]]}</font>);
-    } else if (element[1] == "font") {
+    } else if (element[1] === "font") {
       return (<font face={Variables.letterFont}>{post.content[element[0]]}</font>);
     }
     return;
@@ -246,16 +247,16 @@ export default function Puzzles(post) {
     toBeEncoded = toBeEncoded.toLowerCase();
 
     if (Variables.encryptionKey[0][1] < 1 || Variables.encryptionKey[0][1] > 26) {
-      throw "First number of encryption key must be within bounds [1,26].";
+      throw new Error("First number of encryption key must be within bounds [1,26].");
     } 
     if (Variables.encryptionKey[1][1] < 27 || Variables.encryptionKey[1][1] > 52) {
-      throw "Second number of encryption key must be within bounds [27,53].";
+      throw new Error("Second number of encryption key must be within bounds [27,53].");
     }
     if (Variables.encryptionKey[2][1] < 53 || Variables.encryptionKey[2][1] > 78) {
-      throw "Third number of encryption key must be within bounds [53,78].";
+      throw new Error("Third number of encryption key must be within bounds [53,78].");
     }
     if (Variables.encryptionKey[3][1] < 79 || Variables.encryptionKey[3][1] > 100) {
-      throw "Fourth number of encryption key must be within bounds [79,100].";
+      throw new Error("Fourth number of encryption key must be within bounds [79,100].");
     }
 
     // The different rings on a mexican army wheel.
@@ -293,7 +294,7 @@ export default function Puzzles(post) {
 
         // If the character isn't a letter,
         // keep it as it is without encoding it.
-        if(tempIndex == -1) {
+        if(tempIndex === -1) {
             encodedArray[i] = toBeEncoded[i];
             continue;
         }
@@ -302,14 +303,14 @@ export default function Puzzles(post) {
 
         // Choose a random ring to take the encoding from
         // and apply it to the output.
-        if(whichArray == 1) {
+        if(whichArray === 1) {
             encodedArray[i] = lowNumbers[tempIndex];   
-        } else if (whichArray == 2) {
+        } else if (whichArray === 2) {
             encodedArray[i] = mediumNumbers[tempIndex];
-        } else if (whichArray == 3) {
+        } else if (whichArray === 3) {
             encodedArray[i] = largeNumbers[tempIndex];
-        } else if (whichArray == 4) {
-            if (highestNumbers[i] == "") {
+        } else if (whichArray === 4) {
+            if (highestNumbers[i] === "") {
                 i--;
             } else {
                 encodedArray[i] = highestNumbers[tempIndex];
@@ -348,9 +349,9 @@ export default function Puzzles(post) {
 
   // Detection function to know which post should lead to which function.
   function checkForHelper(post) {
-    if(post.comment == "This post is helper post 1 to puzzle B-p1.") {
+    if(post.comment === "This post is helper post 1 to puzzle B-p1.") {
       return Variables.hintDinosaurs;
-    } else if (post.comment == "This post is helper post 2 to puzzle B-p1") {
+    } else if (post.comment === "This post is helper post 2 to puzzle B-p1") {
       return Variables.hintCourses;
     }
     return;
@@ -363,7 +364,7 @@ export default function Puzzles(post) {
     post.date[1] = Variables.clueDate;
 
     // This post has the puzzle in it.
-    if (post.comment == "This is the main post to puzzle B-p1.") {
+    if (post.comment === "This is the main post to puzzle B-p1.") {
       return (
         <div className="post">
           <div className="post-date">
@@ -403,7 +404,7 @@ export default function Puzzles(post) {
   // Function to set up puzzle B-c4.
   // See documentation for explanation.
   function puzzleBc4(post) {
-    if (post.comment == "This is the main post to puzzle B-c4.") {
+    if (post.comment === "This is the main post to puzzle B-c4.") {
       return (
         <div className="post">
           <div className="post-date">

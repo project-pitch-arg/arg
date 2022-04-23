@@ -9,7 +9,7 @@ export default function Header(props) {
         <div className="header-content">
             <Link onClick={home} to="/">
             <div className="image-text-logo">
-                <img src={textLogo}></img>
+                <img src={textLogo} alt="Blog title Daily Thoughts"></img>
             </div>       
             </Link>
        </div>

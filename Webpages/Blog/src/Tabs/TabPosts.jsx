@@ -20,8 +20,8 @@ export default function Posts() {
   const[start, startChange] = useState(0);
   const[last, lastChange] = useState(Variables.postsPerPage);
 
-  // Get the contents for the posts from another file.
-  const CONTENT = changeDateAndSort(postContent);
+  // Add dates to all posts
+  changeDateAndSort(postContent);
 
   // Set up the buttons to change posts.
   const [disableF,setDF] = useState(false);
@@ -50,9 +50,9 @@ export default function Posts() {
           <button className="button" onClick={lastPage} disabled={disableL}>{">>"}</button>
         </div>
         <div className="author-pictures">
-          <img src={require("../Img/" + Variables.userPicture1)} className="image" ></img>
+          <img src={require("../Img/" + Variables.userPicture1)} alt="Profile picture of a blog creator." className="image" ></img>
           <p>Hello, I'm {Variables.username1}! Join us in the chat!</p>
-          <img src={require("../Img/" + Variables.userPicture2)} className="image"></img>
+          <img src={require("../Img/" + Variables.userPicture2)} alt="Profile picture of a blog creator." className="image"></img>
           <p>Hello! I'm {Variables.username2}. If you want to know more about the authors, go to About.</p>
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function Posts() {
     var day = new Date(posts[0].date[0], posts[0].date[1], posts[0].date[2]);
     var nextDay = new Date(day);
 
-    {posts.map(post => {
+    posts.map(post => {
       if (!post.hasOwnProperty("date")) {
         nextDay.setDate(day.getDate() + 1); //Set date to next day.
         post.date = [nextDay.getFullYear(), nextDay.getMonth(), nextDay.getDate()];
@@ -79,8 +79,8 @@ export default function Posts() {
         nextDay = new Date(post.date[0], post.date[1], post.date[2]); 
       }
       day = nextDay;
-      return;
-    })}
+      return true;
+    })
 
     posts.sort(function(post1,post2){return compareDates(post1.date, post2.date)});
 
@@ -138,7 +138,7 @@ export default function Posts() {
   // Function to take the user to the last page of posts (the oldest ones).
   function lastPage() {
     lastChange(postContent.length);
-    if(postContent.length - (postContent.length % Variables.postsPerPage) == postContent.length) {
+    if(postContent.length - (postContent.length % Variables.postsPerPage) === postContent.length) {
       startChange(postContent.length - Variables.postsPerPage);
     } else {
       startChange(postContent.length - (postContent.length % Variables.postsPerPage));

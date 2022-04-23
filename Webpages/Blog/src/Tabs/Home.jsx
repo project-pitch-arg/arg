@@ -42,7 +42,7 @@ export default function Home() {
             </div>
           </div>
           <div id="home-iframe-container">
-            <iframe id="home-iframe" src={Variables.iframeList[index]} />
+            <iframe title="jigsaw" id="home-iframe" src={Variables.iframeList[index]} />
           </div>
           <div>
             <button className="button" onClick={switchJigsaw}>
