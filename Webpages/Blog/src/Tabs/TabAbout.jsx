@@ -8,7 +8,7 @@
 import React from "react";
 import "./TabContent.css";
 import aboutContent from "../JSONDocuments/AboutContent.json"
-import { USER_NAME_1, USER_NAME_2, USER_PICTURE_1, USER_PICTURE_2 } from "../ChangeableValues";
+import Variables from "../JSONDocuments/ChangeableValues.json";
 
 export default function DisplayAbout() {
   var identifierKey = -1;
@@ -22,9 +22,9 @@ export default function DisplayAbout() {
             <div className="question">
                 {item.question} 
             <div className="answer"> 
-              <b> {USER_NAME_1}: </b> {item.answerUser1} 
+              <b> {Variables.username1}: </b> {item.answerUser1} 
               <div className="answer">
-                <b> {USER_NAME_2}: </b> {item.answerUser2}
+                <b> {Variables.username2}: </b> {item.answerUser2}
               </div>
             </div>
           </div>
@@ -34,10 +34,10 @@ export default function DisplayAbout() {
       </div>
       <div className="right-side">
         <div className="author-pictures">
-            <img src={USER_PICTURE_1} className="image" ></img>
-            <p>I'm {USER_NAME_1}</p>
-            <img src={USER_PICTURE_2} className="image"></img>
-            <p>I'm {USER_NAME_2}</p>
+          <img src={require("../Img/" + Variables.userPicture2)} className="image" ></img>
+          <p>I'm {Variables.username1}</p>
+          <img src={require("../Img/" + Variables.userPicture2)} className="image"></img>
+          <p>I'm {Variables.username2}</p>
         </div>
       </div>
       

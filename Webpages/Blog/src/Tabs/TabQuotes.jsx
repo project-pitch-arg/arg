@@ -9,8 +9,7 @@
 import React, {useState, useEffect} from "react";
 import "./TabContent.css";
 import quotesContent from "../JSONDocuments/QuotesContent.json";
-import { QUOTE_TIME } from "../ChangeableValues";
-
+import Variables from "../JSONDocuments/ChangeableValues.json";
 
 export default function printingQuotes() {
 
@@ -55,7 +54,7 @@ export default function printingQuotes() {
         if (message < QUOTES.length - 1) {
 
           // Start timer for 1000 * quoteTime milliseconds.
-          delay = setTimeout(() => setMessage(message + 1), 1000 * QUOTE_TIME);
+          delay = setTimeout(() => setMessage(message + 1), 1000 * Variables.quoteTime);
         } else {
 
             // Start over and shuffle array after reaching the end.
