@@ -8,11 +8,13 @@ const options = {
         'Content-Type': 'application/json',
     },
 }
+
 //Used the path + parameter data to send fetch request to server
 export function fetchData(postPath, data){
         options.body = JSON.stringify(data);
       return fetch(path + postPath, options);
 }
+
 //Handles the most used way to request and use data
 export async function basicFetchData(path){
     var json = {}
@@ -33,6 +35,7 @@ export async function basicFetchData(path){
     }
     return array;
 }
+
 //Handles cases when the server needs information from the client
 export async function basicFetchDataJson(path, json){
     const response = await fetchData(path, json);

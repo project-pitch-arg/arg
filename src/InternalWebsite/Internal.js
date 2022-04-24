@@ -4,12 +4,14 @@ import Login from "./CustomPages/LogIn/LogInPage";
 import {getAccountData} from "./CustomPages/LogIn/LogIn";
 
 export default class Internal extends Component {
+
     constructor(props) {
       super(props);
       this.state = { width: 0, height: 0,loggedIn: false };
       this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
+    //When componentmounts check if logged in.
     async componentDidMount() {
       this.updateWindowDimensions();
       window.addEventListener('resize', this.updateWindowDimensions);
@@ -37,6 +39,7 @@ export default class Internal extends Component {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
+
     logIn = () =>{
         this.setState({loggedIn: true});
     }
@@ -46,11 +49,13 @@ export default class Internal extends Component {
         this.setState({loggedIn: false});
     }
 
+    //Tries to load BarOnTop component if it can't it switches to Login component
     loadComponent(Tag){
         <Suspense fallback={Tag = Login}>
            Tag = lazy(() => import("./InternalTopBar/BarOnTop"));
         </Suspense>
     }
+
     render(){
       var Tag = Login;
       if(this.state.loggedIn){
