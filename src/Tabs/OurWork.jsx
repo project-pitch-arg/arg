@@ -55,8 +55,8 @@ const jsonData = require('../json/companyWebsite.json');
 {
 
   // Variables used within the code (will be moved to json later)
-  var counted = "";
-  var countCode = firstVar + secondVar + thirdVar + fourthVar + fifthVar;
+  var attempt = firstVar;
+  var code = firstVar + secondVar + thirdVar + fourthVar + fifthVar;
   var prevSlideIndex = 0;
   var currentSlideIndex = 0;
   var timerActive = false;
@@ -74,7 +74,7 @@ const jsonData = require('../json/companyWebsite.json');
 
     
     return (
-        <div>
+        <div id = "firstDiv">
           <div class="header" style={{backgroundImage: `url(${header})`}}>
             <h1> {headerTitle} </h1>
           </div>
@@ -97,7 +97,7 @@ const jsonData = require('../json/companyWebsite.json');
               </div>
 
             
-              <div onClick={() => onslideShowClick()} id="slideshow-container">
+              <div /*onClick={() => onslideShowClick()}*/ id="slideshow-container">
               <Slide easing="ease" autoplay={false} indicators={true}>
               <div class="slide-img">
                 <div style={{'backgroundImage': `url(${slideImage1})`}}>
@@ -144,13 +144,75 @@ const jsonData = require('../json/companyWebsite.json');
       
     )
 }
+document.body.addEventListener('click', mouseUp, true);
+function mouseUp() {
+    try {
+          var currentSlide1 = document.getElementById("slideshow-container").getElementsByClassName("active")[0].getAttribute("data-index");
+    } catch (error) {
+    }
+    if(currentSlide1 === null){
+        currentSlide1 = 0;
+    }
+    var currentSlide = parseInt(currentSlide1) + 1;
+    var codePrevIndex = code.charAt(attempt.length -1);
+    var codeCurIndex = code.charAt(attempt.length);
+
+    /* Debugging logs
+    console.log("codeCharAt - 1 = " + code.charAt(attempt.length - 1));
+    console.log("codeCharAt = " + code.charAt(attempt.length ));
+    console.log("current slide " + currentSlide);
+    console.log("sliced code:" + code.slice(0,attempt.length ));
+    console.log("length:" + attempt.length);
+    */
+
+    if(attempt == code.slice(0,attempt.length )){
+            if(codePrevIndex < codeCurIndex ){ //changes depending on if the player goes forward or backwards
+                if(currentSlide >= codePrevIndex && currentSlide <= codeCurIndex ){
+                    if(codeCurIndex == currentSlide){
+                        attempt += currentSlide;
+                    }
+                }
+                else{
+                    attempt = String(currentSlide);
+                }
+            }
+            else if(codePrevIndex > codeCurIndex ){
+                if(currentSlide <= codePrevIndex && currentSlide >= codeCurIndex ){
+                    if(codeCurIndex == currentSlide){
+                        attempt += currentSlide;
+                    }
+                }
+                else{
+                    attempt = String(currentSlide);
+                }
+            }
+    }
+    else{
+        attempt = String(currentSlide);
+    }
+
+    if (attempt === code) {
+      console.log("Edmund Schmidt")
+    }
+}
+/*
+function checkCodeCracked() {
+if (attempt == code) {
+    codeCracked = true;
+  }
+
+  if (codeCracked) {
+    //console.log(crackedUsername);
+    // resetCount();
+  }
+}
 
 function resetCount() {
   counted = [];
 }
 
 function startTimer() {
-  console.log("Timer started");
+  //console.log("Timer started");
   if (!timerActive) {
     timerActive = true;
     timer = setTimeout(callOnTimeout, 5000);
@@ -158,39 +220,30 @@ function startTimer() {
 }
 
 function stopTimer() {
-  console.log("Timer stopped");
+  //console.log("Timer stopped");
   clearTimeout(timer);
   timerActive = false;
 }
 
-function checkCodeCracked() {
-  if (JSON.stringify(counted) === JSON.stringify(countCode)) {
-    codeCracked = true;
-  }
 
-  if (codeCracked) {
-    console.log(crackedUsername);
-    // resetCount();
-  }
-}
 
 function callOnTimeout() {
-  console.log("Timer reached 0");
+  //console.log("Timer reached 0");
 }
 
 function checkSlideChanged() {
   var currentSlide = document.getElementById("slideshow-container").getElementsByClassName("active")[0].getAttribute("data-index");
   
-  console.log("Slide Changed to: " + (currentSlide === null ? 0 : currentSlide));
+  //console.log("Slide Changed to: " + (currentSlide === null ? 0 : currentSlide));
 
   if (parseInt(currentSlide)+1 == countCode[counted.length]) {
     stopTimer(myTimeout);
-    console.log("Timer stopped!");
+    //console.log("Timer stopped!");
     timerActive = false;
     // const time
 
     counted += parseInt(currentSlide)+1;
-    console.log("CorrectList: ("+ counted + ")");
+    //console.log("CorrectList: ("+ counted + ")");
     checkCodeCracked();
   }
 }
@@ -204,15 +257,16 @@ function onslideShowClick() {
   }
 
   if (currentSlideIndex === prevSlideIndex) {
-    console.log("Still on the same slide (" + currentSlideIndex + ")");
+    //console.log("Still on the same slide (" + currentSlideIndex + ")");
     stopTimer();
     checkSlideChanged();
     setTimeout(function() { checkSlideChanged() }, 3000);
   }
   else {
-    console.log("Switched slides")
+    //console.log("Switched slides")
     checkSlideChanged()
     // startTimer();
     prevSlideIndex = currentSlideIndex;
   }
 }
+*/

@@ -22,11 +22,11 @@
       },
       "our_work": {
             "puzzle_var": {
-                  "first_var": "3",
-                  "second_var": "2",
-                  "third_var": "5",
-                  "fourth_var": "4",
-                  "fifth_var": "1"
+                  "first_var": "1",
+                  "second_var": "4",
+                  "third_var": "2",
+                  "fourth_var": "5",
+                  "fifth_var": "3"
             },
             "username": "Wilfred213",
             "header_title": "Our Work",
@@ -52,7 +52,7 @@
             },
             "second_paragraph": {
                   "title": "Sustainable Practices",
-                  "text": "We work hard to provide the best access to completely renewable products. Our central workforce works diligently to innovate new types of renewable systems. We then use these throughout our development. This means that from our code to our manufacturing, everything here is carefully coordinated to be sustainable."
+                  "text": "We work hard to provide the best access to completely renewable products. Our internal workforce works diligently to innovate new types of renewable systems. We then use these throughout our development. This means that from our code to our manufacturing, everything here is carefully coordinated to be sustainable."
             }
       },
       "wrong": {
