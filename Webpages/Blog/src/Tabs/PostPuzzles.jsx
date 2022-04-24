@@ -11,6 +11,8 @@ import Variables from "../JSONDocuments/ChangeableValues.json";
 
 export default function Puzzles(post) {
 
+  var imageIdentifierKey = -1;
+
   // Create a list for solved passwords if it does not exist.
   if(sessionStorage.getItem('solvedPasswords') === null) {
     var passwords = [""];
@@ -40,7 +42,7 @@ export default function Puzzles(post) {
             <pre className="post-content">
               {post.content} 
               <form onSubmit={submitPassword(post)}>
-              <input type="text" value={sessionStorage.getItem('postSecret')} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
+              <input type="text" value={sessionStorage.getItem('postSecret') || ''} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
               <div type="submit" />
               </form>
             </pre>
@@ -214,8 +216,9 @@ export default function Puzzles(post) {
     if(post.hasOwnProperty("pictures")) {
       return (<div className="post-images">
               {post.pictures.map (picture => {
+                imageIdentifierKey++;
                 return (
-                  <div>
+                  <div key={imageIdentifierKey}>
                     <img src={picture[0]} alt={picture[1]} className="post-image"/>
                   </div>
                 )
@@ -420,16 +423,40 @@ export default function Puzzles(post) {
         </div>
       )
     }
-    // If not the main post then it'll be displayed as a regular post.
+    // Pasword not solved, display input area.
+    if(post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem('solvedPasswords'))).includes(post.secret)) {
+      return (
+        <div className="post">
+            <div className="post-date">
+                {post.date[0]}.{post.date[1]}.{post.date[2]}
+              <div className="post-name"> 
+                {post.poster} 
+              <pre className="post-content">
+                {post.content} 
+                <form onSubmit={submitPassword(post)}>
+                <input type="text" value={sessionStorage.getItem('postSecret') || ''} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
+                <div type="submit" />
+                </form>
+              </pre>
+              {hasPicture(post)}
+              </div>
+            </div>
+          </div>
+      )
+    }
+    // Password solved, display secret content.
     return (
       <div className="post">
         <div className="post-date">
           {post.date[0]}.{post.date[1]}.{post.date[2]}
           <div className="post-name"> 
             {post.poster} 
-          <pre className="post-content"> 
-            {post.content}
-          </pre>
+            <pre className="post-content"> 
+              {post.content}
+              <pre>
+                {post.secretContent}
+              </pre>
+            </pre>
             {hasPicture(post)}
           </div>
         </div>
