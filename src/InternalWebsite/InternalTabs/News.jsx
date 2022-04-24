@@ -17,6 +17,7 @@ export default class News extends Component{
         this.getNews();
     }
 
+    //Sorts the lists by date descending with newest first
     sortByDate(list){
         var check = true;
         while(check){
@@ -32,6 +33,7 @@ export default class News extends Component{
         }
     }
 
+    //Requests news data from server
     async getNews(){
         this.news = await basicFetchData("/getNews");
         this.sortByDate(this.news);

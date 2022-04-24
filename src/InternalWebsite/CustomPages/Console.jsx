@@ -19,6 +19,7 @@ export default class Console extends Component{
         this.securityCheck = false;
         this.messagesEnd = React.createRef();
     }
+
     //Controls the scroll for the command prompt so that it always scrolls down to the newest command response
     componentDidMount() {
       this.scrollToBottom();
@@ -27,6 +28,11 @@ export default class Console extends Component{
     componentDidUpdate() {
       this.scrollToBottom();
     }
+
+    scrollToBottom = () => {
+      this.messagesEnd.current.scrollIntoView({ behavior: "smooth" });
+    }
+
     //Called when input is submitted
     handleInput = (event) =>{
         event.preventDefault();
@@ -115,27 +121,26 @@ export default class Console extends Component{
         this.setState({dataReceived: true});
         event.target.reset();
     }
+
     defaultMessage(message){
         this.previousCommands.push("The command " + message + " does not exist!");
     }
-    scrollToBottom = () => {
-      this.messagesEnd.current.scrollIntoView({ behavior: "smooth" });
-    }
+
     render(){
-            return (
-                <div>
-                  <form onSubmit={this.handleInput}>
-                    <div class="commandBlock">{
-                        this.previousCommands.map((command) => {
-                            return (<p>{command + "\n"}</p>)
-                        })}
-                        <div style= {{float: "left", clear:"both"}}
-                            ref={this.messagesEnd}>
-                        </div>
-                   </div>
-                    <input class="console" type="text" name="name" id="command" autoFocus/>
-                  </form>
-                </div>
-            )
+        return (
+            <div>
+              <form onSubmit={this.handleInput}>
+                <div class="commandBlock">{
+                    this.previousCommands.map((command) => {
+                        return (<p>{command + "\n"}</p>)
+                    })}
+                    <div style= {{float: "left", clear:"both"}}
+                        ref={this.messagesEnd}>
+                    </div>
+               </div>
+                <input class="console" type="text" name="name" id="command" autoFocus/>
+              </form>
+            </div>
+        )
     }
 }

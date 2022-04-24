@@ -43,7 +43,6 @@ const PdfReader = require('pdfreader').PdfReader;
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 var Imap = require('imap'),
     inspect = require('util').inspect;
-
 var MailListener = require("mail-listener2");
 
 //------------- Creation of MailListeners
@@ -341,6 +340,7 @@ var secretText = "";
 var secretTextLoaded = false;
 var normalTextLoaded = false;
 
+//Counts the number of sent files read. If all files are read proceed to compare texts.
 function collectNormalTexts(text, filenames){
     iText++;
     totalText += text;
@@ -352,6 +352,7 @@ function collectNormalTexts(text, filenames){
     }
 }
 
+//Counts the number of secret files read. If all files are read proceed to compare texts.
 function collectSecretTexts(text,filenames){
     secretText += text;
     secretTextLoaded = true;
@@ -360,6 +361,7 @@ function collectSecretTexts(text,filenames){
     }
 }
 
+//Compares the sent attachments text and those stored in "SecretFiles"-
 function compareTexts(text1, text2){
     if(text1.includes(text2)){
         wilfred_sendMail("Hello", wilfred_mailOptions.to, wilfred_fourth_reply);

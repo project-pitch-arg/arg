@@ -14,10 +14,13 @@ export default class Quiz extends Component{
         await this.getQuiz();
     }
 
+    //Requests quiz data from server.
     async getQuiz(){
         this.quiz = await basicFetchData("/getQuiz");
         this.setState({dataReceived: true});
     }
+
+    //Checks if all questions have a selected answer. If not the user is alerted to finish it.
     quizDone = (event) => {
         event.preventDefault();
         if(event.target.answer0.value !== "" && event.target.answer1.value !== "" && event.target.answer2.value !== ""){
@@ -27,6 +30,7 @@ export default class Quiz extends Component{
             alert("Please answer all questions");
         }
     }
+
     render(){
         if(this.state.dataReceived){
             return (

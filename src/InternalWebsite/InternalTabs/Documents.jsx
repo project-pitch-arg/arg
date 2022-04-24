@@ -17,6 +17,7 @@ export default class Policy extends Component{
         this.keys = [];
         this.input = "";
     }
+
     //Adds eventListeners for key presses
     async componentDidMount(){
         await this.getPolicy();
@@ -29,18 +30,22 @@ export default class Policy extends Component{
         }
         document.addEventListener("keydown", this._handleKeyDown);
     }
+
+    //Removes eventListeners for key presses
     componentWillUnmount(){
         document.removeEventListener("keydown", this._handleKeyDown);
     }
+
     componentDidUpdate(prevProps, prevState){
         this.reloadPage = this.props.reloadPage;
     }
+
     //Requests and displays specific pdf file from server
-    async getPDF(fileName){
+    async getPDF(fileName, path){
         var json = {
             "fileName" : fileName
         }
-        axios(`http://localhost:8080/getPDF `, {
+        axios(`http://localhost:8080/` + path, {
                 method: "POST",
                 responseType: "blob",
                 data: json
@@ -61,40 +66,19 @@ export default class Policy extends Component{
                 });
         this.setState({dataReceived: true});
     }
-    async getSecretDocument(fileName){
-            var json = {
-                "fileName" : fileName
-            }
-            axios(`http://localhost:8080/getSecretPDF`, {
-                    method: "POST",
-                    responseType: "blob",
-                    data: json
-                    //Force to receive data in a Blob Format
-                  })
-                    .then(response => {
-                      //Create a Blob from the PDF Stream
-                      const file = new Blob([response.data], {
-                        type: "application/pdf"
-                      });
-                      //Build a URL from the file
-                      const fileURL = URL.createObjectURL(file);
-                      //Open the URL on new Window
-                      window.open(fileURL);
-                    })
-                    .catch(error => {
-                      console.log(error);
-                    });
-            this.setState({dataReceived: true});
-        }
+
     //Requests pdf file names from server
     async getPolicy(){
             this.normalPDF = await basicFetchData("/getPolicy");
             this.setState({dataReceived: true});
     }
+
+    //Requests secret pdf file names from server
     async getSecret(){
             this.secretPDF = await basicFetchData("/getSecretDocuments");
             this.setState({dataReceived: true});
     }
+
     //Called when a key is pressed
     _handleKeyDown = (event) => {
         this.keys.push(event.key);
@@ -112,6 +96,7 @@ export default class Policy extends Component{
                 break;
         }
     }
+
     //Checks if specific key is pressed down
     checkPressedKeys(key){
         if(this.keys.some(item => key === item)){
@@ -119,6 +104,7 @@ export default class Policy extends Component{
         }
         return false;
     }
+
     //Called when input is submitted into "open" console
     handleInput = (event) => {
         event.preventDefault();
@@ -129,17 +115,21 @@ export default class Policy extends Component{
             window.location.reload(false);
         }
     }
+
     //Called when input is submitted into decrypt console
     handleInputDecrypt = (event) => {
         event.preventDefault();
         this.checkKey(event.target.command.value);
     }
+
+    //Checks if the key entered is correct
     checkKey(value){
         if(value === Variables.smallDecryptConsole){
             this.setState({secret: true});
             localStorage.setItem("keyForFiles", value);
         }
     }
+
     //Called when lock is pressed
     unlock = () => {
         this.setState({unlockConsole: !this.state.unlockConsole});
@@ -152,7 +142,7 @@ export default class Policy extends Component{
                     <h1 class="underline">Policy Documents</h1>
                   {
                     this.normalPDF.map((file) => {
-                        return <div class="pdfItemDiv" key={file}><button class="pdfItem" onClick={() => this.getPDF(file)}>{file.split(".")[0]}</button></div>
+                        return <div class="pdfItemDiv" key={file}><button class="pdfItem" onClick={() => this.getPDF(file, "getPDF")}>{file.split(".")[0]}</button></div>
                     })
                   }
                   { this.state.ceo ?
@@ -163,7 +153,7 @@ export default class Policy extends Component{
                            </form> ) : (null)}</div>)
                            :
                            (this.secretPDF.map((file) => {
-                              return <div class="pdfItemDiv" key={file}><button class="pdfItem" onClick={() => this.getSecretDocument(file)}>{file.split(".")[0]}</button></div>
+                              return <div class="pdfItemDiv" key={file}><button class="pdfItem" onClick={() => this.getPDF(file, "getSecretPDF")}>{file.split(".")[0]}</button></div>
                           }))
                         }</div>) : (null)
                   }

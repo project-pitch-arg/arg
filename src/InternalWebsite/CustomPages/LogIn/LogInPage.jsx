@@ -15,6 +15,7 @@ export default class LogInPage extends Component{
         this.timerActivated = false;
     }
 
+    //Is called log in button is pressed
     logIn = async (event) => {
         event.preventDefault();
         if(event.target.cipher){
@@ -46,14 +47,16 @@ export default class LogInPage extends Component{
         }
     }
 
+    //Handles the time related to the CEO security cipher
     getTimeLeft() {
         return Math.round((this.currentTimer - new Date().getTime())/1000);
     }
-
+    //Describes the time passed from the beginning in percentage for the cipher.
     getTimeInPercentage(){
         return (100 - (this.currentTimer - new Date().getTime())/60000 * 100) + "%";
     }
 
+    //Client asks the server for the cipher and starts the clock
     activateCipher = async () => {
         var json = {"data": "placeholder"};
         var response  = await basicFetchDataJson("/getCipher", json);
@@ -62,6 +65,8 @@ export default class LogInPage extends Component{
         setTimeout(this.activateCipher, delay);
         this.currentTimer = new Date().getTime() + delay;
     }
+
+    //Simply reloads the page every second
     reloadPage = () => {
         setTimeout(this.reloadPage, 1000);
         this.setState({dataReceived: true});

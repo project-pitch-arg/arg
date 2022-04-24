@@ -7,7 +7,9 @@ import {fetchData} from '../Client/Client.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default class TopBar extends Component {
+
     state = {files: [], dataReceived: false}
+
     constructor(props) {
         super(props);
         this.locations = [];
@@ -18,6 +20,7 @@ export default class TopBar extends Component {
         await this.addTabs("/InternalTabs/", this.locations);
     }
 
+    //Changes the selected button in the topbar.
     highlightActive = (path) => {
         var oldActiveElements = document.getElementsByClassName('active');
         if (oldActiveElements.length > 0) {
@@ -33,6 +36,7 @@ export default class TopBar extends Component {
         }
       }
 
+      //Request for all tabs from the server and adds them to the list.
       addTabs = async (path, location) => {
             var json = {
                 data: path
@@ -49,6 +53,7 @@ export default class TopBar extends Component {
             this.setState({dataReceived: true});
       }
 
+      //Adds custom tab to the list. Custom tabs are in the "CustomPages" folder.
       addCustomTabs = (fileName) => {
             if(!this.customLocations.includes(fileName)){
                 this.customLocations.push(fileName);
@@ -61,6 +66,7 @@ export default class TopBar extends Component {
            }
       }
 
+      //Tries to create component using specific component name.
       getComponent = (file, Tag) => {
             return (<Route key={file} path={"/" + file} element={
                   <Suspense fallback={<InternalWrong />}>
