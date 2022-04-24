@@ -16,6 +16,7 @@ const jsonData = require('../json/companyWebsite.json');
     var secondVar = ourWork.puzzle_var.second_var;
     var thirdVar  = ourWork.puzzle_var.third_var;
     var fourthVar = ourWork.puzzle_var.fourth_var;
+    var fifthVar = ourWork.puzzle_var.fifth_var;
 
     var crackedUsername = ourWork.username;
     var puzzleUnlocked = false;
@@ -51,91 +52,26 @@ const jsonData = require('../json/companyWebsite.json');
     var futurePlans3  = FUTURE_PLANS[2];
 }
 
+{
+
+  // Variables used within the code (will be moved to json later)
+  var counted = "";
+  var countCode = firstVar + secondVar + thirdVar + fourthVar + fifthVar;
+  var prevSlideIndex = 0;
+  var currentSlideIndex = 0;
+  var timerActive = false;
+  var codeCracked = false;
+  var timer = 5;
+  var myTimeout;
+  
+}
+
   export default function OurWork() {
     
     useEffect(() => {
       window.scrollTo(0, 0)
     }, []);
-    
-    const [countFirst, setCountFirst]   = useState(0);
-    const [countSecond, setCountSecond] = useState(0);
-    const [countThird, setCountThird]   = useState(0);
-    const [countFourth, setCountFourth] = useState(0);
-    
 
-    const counted = [countFirst, countSecond, countThird, countFourth];
-    const countCode = [firstVar, secondVar, thirdVar, fourthVar];
-
-    
-    var codeCracked = false;
-    
-    const checkCodeCracked = () => {
-      if (JSON.stringify(counted) === JSON.stringify(countCode)) {
-        codeCracked = true;
-      }
-
-      if (codeCracked) {
-        console.log(crackedUsername);
-        resetCount();
-      }
-    }
-    
-    const checkHigherBound = () => {
-      var n = 0;
-      
-      for (let i = 0; i < counted.length; i++) {
-        if (counted[i] > countCode[i]) {
-          n++;
-        } 
-      }
-
-      if (n >= 1) {
-        resetCount();
-      }
-    }    
-
-    const onSlideClick = (slide) => {
-      if (slide === "fifth") {
-        puzzleUnlocked = true;
-      }
-      else if (puzzleUnlocked) {
-        var currentSpan = document.getElementById(slide +"-span");
-  
-        currentSpan.style.color = "aqua";
-        setTimeout(function() {
-          currentSpan.style.color = "transparent";
-        }, 300)
-        
-        switch (slide) {
-          case "first":
-            setCountFirst(countFirst+1);
-            break;
-        
-          case "second":
-            setCountSecond(countSecond+1);
-            break;
-            
-          case "third":
-            setCountThird(countThird+1);
-            break;
-            
-          case "fourth":
-            setCountFourth(countFourth+1);
-            break;
-              
-        }
-      }
-    }
-
-    const resetCount = () => {
-        setCountFirst(0);
-        setCountSecond(0);
-        setCountThird(0);
-        setCountFourth(0);
-    }
-
-    checkCodeCracked();
-    checkHigherBound();    
     
     return (
         <div>
@@ -161,30 +97,30 @@ const jsonData = require('../json/companyWebsite.json');
               </div>
 
             
-              <div class="slideshow-container">
-              <Slide easing="ease" autoplay={true} indicators={true}>
+              <div onClick={() => onslideShowClick()} id="slideshow-container">
+              <Slide easing="ease" autoplay={false} indicators={true}>
               <div class="slide-img">
-                <div onClick={() => onSlideClick("first")} style={{'backgroundImage': `url(${slideImage1})`}}>
-                  <span id="first-span">{firstVar-countFirst}</span>
+                <div style={{'backgroundImage': `url(${slideImage1})`}}>
+                  {/* <span id="first-span">{firstVar-countFirst}</span> */}
                 </div>
               </div>
               <div class="slide-img">
-                <div onClick={() => onSlideClick("second")} style={{'backgroundImage': `url(${slideImage2})`}}>
-                  <span id="second-span">{secondVar-countSecond}</span>
+                <div style={{'backgroundImage': `url(${slideImage2})`}}>
+                  {/* <span id="second-span">{secondVar-countSecond}</span> */}
                 </div>
               </div>
               <div class="slide-img">
-                <div onClick={() => onSlideClick("third")} style={{'backgroundImage': `url(${slideImage3})`}}>
-                  <span id="third-span">{thirdVar-countThird}</span>
+                <div style={{'backgroundImage': `url(${slideImage3})`}}>
+                  {/* <span id="third-span">{thirdVar-countThird}</span> */}
                 </div>
               </div>
               <div class="slide-img">
-                <div onClick={() => onSlideClick("fourth")} style={{'backgroundImage': `url(${slideImage4})`}}>
-                  <span id="fourth-span">{fourthVar-countFourth}</span>
+                <div style={{'backgroundImage': `url(${slideImage4})`}}>
+                  {/* <span id="fourth-span">{fourthVar-countFourth}</span> */}
                 </div>
               </div>
               <div class="slide-img">
-                <div onClick={() => onSlideClick("fifth")} style={{'backgroundImage': `url(${slideImage5})`}}>
+                <div style={{'backgroundImage': `url(${slideImage5})`}}>
                 </div>
               </div>
               </Slide>
@@ -207,4 +143,76 @@ const jsonData = require('../json/companyWebsite.json');
         </div>
       
     )
+}
+
+function resetCount() {
+  counted = [];
+}
+
+function startTimer() {
+  console.log("Timer started");
+  if (!timerActive) {
+    timerActive = true;
+    timer = setTimeout(callOnTimeout, 5000);
+  }
+}
+
+function stopTimer() {
+  console.log("Timer stopped");
+  clearTimeout(timer);
+  timerActive = false;
+}
+
+function checkCodeCracked() {
+  if (JSON.stringify(counted) === JSON.stringify(countCode)) {
+    codeCracked = true;
+  }
+
+  if (codeCracked) {
+    console.log(crackedUsername);
+    // resetCount();
+  }
+}
+
+function callOnTimeout() {
+  console.log("Timer reached 0");
+}
+
+function checkSlideChanged() {
+  var currentSlide = document.getElementById("slideshow-container").getElementsByClassName("active")[0].getAttribute("data-index");
+  
+  console.log("Slide Changed to: " + (currentSlide === null ? 0 : currentSlide));
+
+  if (parseInt(currentSlide)+1 == countCode[counted.length]) {
+    stopTimer(myTimeout);
+    console.log("Timer stopped!");
+    timerActive = false;
+    // const time
+
+    counted += parseInt(currentSlide)+1;
+    console.log("CorrectList: ("+ counted + ")");
+    checkCodeCracked();
+  }
+}
+
+function onslideShowClick() {
+  var slideContainer = document.getElementById("slideshow-container");
+  
+  if (slideContainer !== null) {
+    currentSlideIndex = slideContainer.getElementsByClassName("active")[0].getAttribute("data-index");
+    if (currentSlideIndex == null) currentSlideIndex = 0;
+  }
+
+  if (currentSlideIndex === prevSlideIndex) {
+    console.log("Still on the same slide (" + currentSlideIndex + ")");
+    stopTimer();
+    checkSlideChanged();
+    setTimeout(function() { checkSlideChanged() }, 3000);
+  }
+  else {
+    console.log("Switched slides")
+    checkSlideChanged()
+    // startTimer();
+    prevSlideIndex = currentSlideIndex;
+  }
 }
