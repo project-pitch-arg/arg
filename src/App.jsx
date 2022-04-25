@@ -19,17 +19,11 @@ export default class App extends Component{
   }
 
   render(){
-    /*if(window.location.pathname === "/Internal" || this.internalCheck){
-        localStorage.setItem("internalCheck", true);
-        return (<div>
-                  <Internal/>
-                </div>);
-    }*/
-    //else {
+        console.log(!window.location.pathname.toUpperCase() === "/Internal".toUpperCase());
         return (
                 <div className="App">
                   <BrowserRouter>
-                    {!window.location.pathname.toUpperCase() === "/Internal".toUpperCase() ? (
+                    {window.location.pathname.toUpperCase() !== "/Internal".toUpperCase() ? (
                     <div>
                         <TopBar />
                         <ScrollToTop smooth color='blue' style={{background:'#e2e2e2'}}/>
@@ -42,7 +36,7 @@ export default class App extends Component{
                       <Route exact path="/AboutUs" element={<AboutUs />} />
                       <Route exact path="/Internal/*" element={<Internal/>} />
                     </Routes>
-                    {!window.location.pathname.toUpperCase() === "/Internal".toUpperCase() ? (
+                    {window.location.pathname.toUpperCase() !== "/Internal".toUpperCase() ? (
                         <div>
                             <Footer />
                         </div>
