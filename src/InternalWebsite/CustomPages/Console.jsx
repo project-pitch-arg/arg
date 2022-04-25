@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Console.css';
+import Variables from "../../json/Variables.json";
 
 export default class Console extends Component{
 
@@ -8,23 +9,17 @@ export default class Console extends Component{
     constructor(props){
         super(props);
         this.previousCommands = [""];
-        this.helpCommands = [
-        "/admin [code] Activates admin commands",
-        "/clear clears the console"
-        ];
-        this.adminCommands = [
-        "/changePassword [user] Changes the password of a user",
-        "/currentAdmin Shows the current Admin User",
-        "/clear clears the console"
-        ];
+        this.helpCommands = Variables.helpCommands;
+        this.adminCommands = Variables.adminCommands;
         this.securityAnswers = [
-        "Lexi", "two-face", "Comillas"
+            Variables.firstSecurityAnswer, Variables.secondSecurityAnswer, Variables.thirdSecurityAnswer
         ]
-        this.adminCode = "3186";
+        this.adminCode = Variables.adminCode;
         this.adminOn = false;
         this.securityCheck = false;
         this.messagesEnd = React.createRef();
     }
+
     //Controls the scroll for the command prompt so that it always scrolls down to the newest command response
     componentDidMount() {
       this.scrollToBottom();
@@ -33,6 +28,11 @@ export default class Console extends Component{
     componentDidUpdate() {
       this.scrollToBottom();
     }
+
+    scrollToBottom = () => {
+      this.messagesEnd.current.scrollIntoView({ behavior: "smooth" });
+    }
+
     //Called when input is submitted
     handleInput = (event) =>{
         event.preventDefault();
@@ -101,9 +101,9 @@ export default class Console extends Component{
                         }
                         else {
                             this.previousCommands.push("Security Questions: ");
-                            this.previousCommands.push("Name of pet. ");
-                            this.previousCommands.push("Name of favorite movie villain");
-                            this.previousCommands.push("Hometown. ");
+                            this.previousCommands.push(Variables.firstSecurityQuestion);
+                            this.previousCommands.push(Variables.secondSecurityQuestion);
+                            this.previousCommands.push(Variables.thirdSecurityQuestion);
                             this.previousCommands.push("Answer question in format /changePassword [user] [answer 1] [answer2] [answer3]");
                         }
                     }
@@ -121,27 +121,26 @@ export default class Console extends Component{
         this.setState({dataReceived: true});
         event.target.reset();
     }
+
     defaultMessage(message){
         this.previousCommands.push("The command " + message + " does not exist!");
     }
-    scrollToBottom = () => {
-      this.messagesEnd.current.scrollIntoView({ behavior: "smooth" });
-    }
+
     render(){
-            return (
-                <div>
-                  <form onSubmit={this.handleInput}>
-                    <div class="commandBlock">{
-                        this.previousCommands.map((command) => {
-                            return (<p>{command + "\n"}</p>)
-                        })}
-                        <div style= {{float: "left", clear:"both"}}
-                            ref={this.messagesEnd}>
-                        </div>
-                   </div>
-                    <input class="console" type="text" name="name" id="command" autoFocus/>
-                  </form>
-                </div>
-            )
+        return (
+            <div>
+              <form onSubmit={this.handleInput}>
+                <div class="commandBlock">{
+                    this.previousCommands.map((command) => {
+                        return (<p>{command + "\n"}</p>)
+                    })}
+                    <div style= {{float: "left", clear:"both"}}
+                        ref={this.messagesEnd}>
+                    </div>
+               </div>
+                <input class="console" type="text" name="name" id="command" autoFocus/>
+              </form>
+            </div>
+        )
     }
 }

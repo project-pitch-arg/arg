@@ -33,6 +33,8 @@ const caesarCipher = function(s, k) {
     }
         return result
 }
+
+//Generates cipher and start timer on for 60 seconds
 export function generateCipher(){
     cipher = "";
     encryptedCipher = "";
@@ -44,12 +46,14 @@ export function generateCipher(){
     encryptedCipher += caesarCipher(animal,231);
     setTimeout(clearCipher, 60000)
 }
+
+//Resets cipher
 function clearCipher(){
     cipher = "823048234923";
 }
+
 export function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-

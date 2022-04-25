@@ -11,14 +11,17 @@ export default class HR extends Component{
         super(props);
         this.hr = {};
     }
+
     async componentDidMount(){
-        await this.getNews();
+        await this.getHR();
     }
 
-    async getNews(){
-            this.hr = await basicFetchData("/getHR");
-            this.setState({dataReceived: true});
+    //Requests HR staff information from server.
+    async getHR(){
+        this.hr = await basicFetchData("/getHR");
+        this.setState({dataReceived: true});
     }
+
     render(){
         if(this.state.dataReceived){
             return (

@@ -2,6 +2,7 @@
   "helena":{
     "first_reply" :"Where did you get this code? \n I will ask IT what it is about. \n//Helena" ,
     "second_reply" : "I talked with IT and they say it's for a restricted page and we thank you for not sharing it.  \n//Helena",
+    "third_reply" : "I talked with IT and they say it's for a restricted command and we thank you for not sharing it. \n//Helena",
     "no_reply" : "Hello, i'm out of the office for a two week vacation i will be back on the 1st of April \nBest Regards Helena :)"
   },
 
@@ -13,6 +14,8 @@
 
   "wilfred": {
     "first_reply" :"You found me, good.\n \n Lyra has hidden the intranet access details somewhere in the website, however I do not know where they are located. You must find these credentials and mail them to me. I will then provide you with a URL. \n \n Wilfred" ,
-    "second_reply" : "You found the credentials! Well done \n \n Here is the URL: /Internal"
+    "second_reply" : "You found the credentials! Well done \n \n Here is the URL: /Internal. I believe the information is stored in hidden documents, please send them to me if you find them.",
+    "third_reply" : "This is good information but i don't think it is enough, see if you could find out anything more. \\n//Wilfred",
+    "fourth_reply" : "This is exactly the information i need, i will content the authorities immediately. Thank you so much for the help,  i don't know how to thank you :). \n//Wilfred"
   }
 }

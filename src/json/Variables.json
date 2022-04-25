@@ -1,3 +1,20 @@
 {
-  "smallConsoleCode" : "231"
+  "smallConsoleCode" : "231",
+  "adminCode" : "3186",
+  "smallDecryptConsole" : "2FUaiv5Dq4SLlZ2KD9OI",
+  "firstSecurityQuestion" : "Name of pet",
+  "firstSecurityAnswer" : "Lexi",
+  "secondSecurityQuestion" : "Name of favorite movie villain",
+  "secondSecurityAnswer" : "two-face",
+  "thirdSecurityQuestion" : "Hometown",
+  "thirdSecurityAnswer" : "Comillas",
+  "helpCommands" : [
+      "/admin [code] Activates admin commands",
+      "/clear clears the console"
+  ],
+  "adminCommands" : [
+    "/changePassword [user] Changes the password of a user",
+    "/currentAdmin Shows the current Admin User",
+    "/clear clears the console"
+  ]
 }
