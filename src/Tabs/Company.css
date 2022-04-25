@@ -135,7 +135,7 @@ a {
     height: auto;
 }
 
-.slideshow-container {
+#slideshow-container {
     height: 100%;
     width: 44%;
     float: right;
