@@ -5,22 +5,42 @@ import 'react-slideshow-image/dist/styles.css';
 
 import { HOME_HEADER, INTRO_IMAGE, TECH_IMAGES } from '../ImageImports';
 
-
 const jsonData = require('../json/companyWebsite.json');
 
-
-
 {
+    //---------- puzzle related strings
+
     var home = jsonData.home
     var passphrase = home.passphrase;
     var encryptedEmail = home.encrypted_email;
     var attempt = "";
+
+
+    //---------- header title
+
+    var headerTitle = home.header_title;
+
+
+    //---------- paragraph titles and texts
+
+    var firstParagraphTitle = home.first_paragraph.title;
+    var secondParagraphTitle = home.second_paragraph.title;
+    var thirdParagraphTitle = home.third_paragraph.title;
+    var fourthParagraphTitle = home.fourth_paragraph.title;
+
+    var firstParagraphText = home.first_paragraph.text;
+    var secondParagraphText = home.second_paragraph.text;
+    var thirdParagraphText = home.third_paragraph.text;
+    var fourthParagraphText = home.fourth_paragraph.text;
+
+    //------------ images from imageImport file
 
     var header = HOME_HEADER;
     var introImg = INTRO_IMAGE;
     var techImg1 = TECH_IMAGES[0];
     var techImg2 = TECH_IMAGES[1];
     var techImg3 = TECH_IMAGES[2];
+
 }
 
 export default function Home() {
@@ -32,7 +52,7 @@ export default function Home() {
     return (
         <div>
           <div class="header" style={{backgroundImage: `url(${header})`}}>
-            <h1>Difax</h1>
+            <h1> {headerTitle} </h1>
           </div>
 
           <div class="content">
@@ -42,62 +62,35 @@ export default function Home() {
                 <img  onClick={() => clickFirstImg("1")} src={introImg} height='215px'/>
               </div>
               <div class="content-right-desc">
-                <h2> What we do </h2>
-                <a>
-                    We combine the latest AI and surveillance technology to provide our customers with the
-                    highest levels of security. We start by setting up equipment around your area which then connects to our servers here at
-                    Difax. This equipment lets us monitor and observe potential threats against you or your company. If a threat
-                    is deemed actionable our elite security guards will be at your location before the perpetrators can do anything.
-
-                </a>
+                <h2> {firstParagraphTitle} </h2>
+                <a> {firstParagraphText} </a>
               </div>
             </div>
 
             <div class="content-right-content">
                 <div class="content-left-desc">
-                  <h2>Why choose us?</h2>
-                  <a>
-                    Our customers safety is our top priority and we have the data to back it up.
-                    All attempted robberies of our customers, since our launch in 1998, have either been stopped or
-                    the people involved have been caught and prosecuted. In either situation our customers have been able to claim insurance
-                    leaving them in a beneficial situation. Our unique technology allows for methods of identification
-                     that no other company possesses. We also use advanced behavioural methods that let us predict dangerous
-                     situations ahead of time.
-
-                  </a>
+                  <h2> {secondParagraphTitle} </h2>
+                  <a> {secondParagraphText} </a>
                 </div>
 
           
               <div class="content-right-desc">
-                  <h2>How does AI integrate with surveillance?</h2>
-                  <a>
-                    Artificial intelligence is complicated but our engineers here at Difax have come up with a method
-                    of collaboration that lets our technology utilize AI to analyze captured footage. This analysis lets us know if
-                    there is any unusual activity going on and if we should act upon it.
-
-                  </a>
+                  <h2> {thirdParagraphTitle} </h2>
+                  <a> {thirdParagraphText} </a>
                 </div>
             </div>
 
             <div class="center-content">
-              <h2>Indirect Protection</h2>
-              <a>
-              Companies that fly our banner have noticed a steady decrease in crime ever since they partnered with us.
-              The results speak for themselves.
-              Criminals are starting to become aware of our success rate and no longer willing to take
-              the risk of going against us.
-              As our reputation grows crime rates fall and will continue to fall.
-
-              </a>
+              <h2>{fourthParagraphTitle} </h2>
+              <a> {fourthParagraphText} </a>
             </div>
               <div id="center-homepage-img">
-                <div class="homepage-img"><img  onClick={() => clickImg("1")} src={techImg1}/></div>
-                <div class="homepage-img"><img  onClick={() => clickImg("2")} src={techImg2}/></div>
-                <div class="homepage-img"><img  onClick={() => clickImg("3")} src={techImg3}/></div>
+                <div class="homepage-img"><img  onClick={() => clickImg("1")} src={techImg1}/><i style={{"padding-top": "10px"}}>Image 1. A security camera</i></div>
+                <div class="homepage-img"><img  onClick={() => clickImg("2")} src={techImg2}/><i style={{"padding-top": "10px"}}>Image 2. A front door camera</i></div>
+                <div class="homepage-img"><img  onClick={() => clickImg("3")} src={techImg3}/><i style={{"padding-top": "10px"}}> Image 3. A security guard</i></div>
               </div>
-            
-          </div>
         </div>
+    </div>
 
       )
 
@@ -115,7 +108,18 @@ export default function Home() {
         }
     }
     function clickFirstImg(){
+        var text = "";
+        for (let i = 0; i < passphrase.length; i++) {
+            if(i == passphrase.length - 1){
+            text += passphrase.slice(i, i + 1);
+            }
+            else{
+            text += passphrase.slice(i, i + 1) + " - ";
+            }
+
+        }
         console.clear();
-        console.log(passphrase);
+        console.log(text);
+        //console.log(passphrase);
     }
 

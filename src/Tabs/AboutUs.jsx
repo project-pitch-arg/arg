@@ -9,6 +9,23 @@ const jsonData = require('../json/companyWebsite.json');
 {
   var aboutUs = jsonData.about_us;
 
+
+  //---------- header title
+
+  var headerTitle = aboutUs.header_title;
+
+  
+  //----------- paragraph title and text
+
+  var firstParagraphTitle = aboutUs.first_paragraph.title;
+  var secondParagraphTitle = aboutUs.second_paragraph.title;
+
+  var firstParagraphText = aboutUs.first_paragraph.text;
+  var secondParagraphText = aboutUs.second_paragraph.text;
+
+
+  //----------- images
+
   var aboutUsHeaderImg = ABOUT_US_HEADER;
   var environmentImg = ENVIRONMENT_IMAGE;
   var goalsImg = GOALS_IMAGE;
@@ -31,7 +48,7 @@ export default function AboutUs() {
 
         <div>
           <div class="header"style={{backgroundImage: `url(${aboutUsHeaderImg})`}}>
-            <h1>About Us</h1>
+            <h1> {headerTitle} </h1>
           </div>
 
           <div class="content">
@@ -39,11 +56,8 @@ export default function AboutUs() {
             <div class="content-right-content">
               <div class="content-right-img"><img src={goalsImg}/> </div>
               <div class="content-right-desc">
-                <h2> Our Goals </h2>
-                <a> Our primary goal is for all customers, those with and without financial stability,
-                to feel safe. Listening to feedback and improving services is what we strive for.
-                 If you ever need us for anything we will be by your side ready to help.
-                 </a>
+                <h2> {firstParagraphTitle} </h2>
+                <a> {firstParagraphText} </a>
               </div>
             </div>
 
@@ -52,13 +66,8 @@ export default function AboutUs() {
             <div class="content-left-content">
              <div class="content-left-img"><img src={environmentImg}/></div>
               <div class="content-left-desc">
-                <h2>Sustainable Practices</h2>
-                <a> We work hard to provide the best access to completely renewable products.
-                Our central workforce works diligently to innovate new types of renewable systems.
-                 We then use these throughout our development.
-                 This means that from our code to our manufacturing, everything here is carefully
-                  coordinated to be sustainable.
-                  </a>
+                <h2> {secondParagraphTitle} </h2>
+                <a> {secondParagraphText} </a>
               </div>
             </div>
 
