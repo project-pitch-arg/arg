@@ -19,7 +19,6 @@ export default class App extends Component{
   }
 
   render(){
-        console.log(!window.location.pathname.toUpperCase() === "/Internal".toUpperCase());
         return (
                 <div className="App">
                   <BrowserRouter>
