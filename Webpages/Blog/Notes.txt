@@ -25,8 +25,7 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Flytta variabler till json i chatten
 
 - JSON schema till ChangeableValues.json.
-
-- Lösenordsruta gick inte att skriva i
+    - Finns för chatten. Bloggen kvar.
 
 - Ett inlägg från februari har hamnat innan de i januari
 
@@ -55,6 +54,10 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - Appendix till allmän guide.
 
 - Ta med diskussion kring vad dikten betyder i chatt med allt möjigt.
+
+- Mention computer picture a bit in main post?
+
+- Text som är secretContent radbryter inte när rutan är slut.
 
 --------------- Prio 3 ---------------
 

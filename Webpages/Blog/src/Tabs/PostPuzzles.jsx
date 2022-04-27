@@ -42,7 +42,7 @@ export default function Puzzles(post) {
             <pre className="post-content">
               {post.content} 
               <form onSubmit={submitPassword(post)}>
-              <input type="text" value={sessionStorage.getItem('postSecret') || ''} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
+              <input type="text" value={sessionStorage.getItem('postSecret')} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
               <div type="submit" />
               </form>
             </pre>
@@ -423,7 +423,7 @@ export default function Puzzles(post) {
         </div>
       )
     }
-    // Pasword not solved, display input area.
+    // Password not solved, display input area.
     if(post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem('solvedPasswords'))).includes(post.secret)) {
       return (
         <div className="post">
@@ -434,7 +434,7 @@ export default function Puzzles(post) {
               <pre className="post-content">
                 {post.content} 
                 <form onSubmit={submitPassword(post)}>
-                <input type="text" value={sessionStorage.getItem('postSecret') || ''} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
+                <input type="text" value={sessionStorage.getItem('postSecret')} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
                 <div type="submit" />
                 </form>
               </pre>
