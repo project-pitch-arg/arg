@@ -43,7 +43,7 @@ export default function Puzzles(post) {
             <pre className="post-content">
               {post.content} 
               <form onSubmit={submitPassword(post)}>
-              <input type="text" value={sessionStorage.getItem("postSecret")} onChange={(e) => sessionStorage.setItem("postSecret", e.target.value)} className="input" placeholder="???" required />
+              <input type="text" value={sessionStorage["postSecret"]} onChange={(e) => sessionStorage.setItem("postSecret", e.target.value)} className="input" placeholder="???" required />
               <div type="submit" />
               </form>
             </pre>
@@ -435,7 +435,7 @@ export default function Puzzles(post) {
               <pre className="post-content">
                 {post.content} 
                 <form onSubmit={submitPassword(post)}>
-                <input type="text" value={sessionStorage.getItem('postSecret')} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
+                <input type="text" value={sessionStorage['postSecret']} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
                 <div type="submit" />
                 </form>
               </pre>
