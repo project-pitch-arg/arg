@@ -27,8 +27,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - JSON schema till ChangeableValues.json.
     - Finns för chatten. Bloggen kvar.
 
-- Ett inlägg från februari har hamnat innan de i januari
-
 - Kolla igenom error från JSON värden och om det ligger på rätt sida i koden.
 
 - Flytta runt kod så det kommer i en logisk ordning.
