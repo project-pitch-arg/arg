@@ -14,7 +14,7 @@
 */
 
 import { useState } from 'react';
-import { PROJECT_ID, PRIVATE_KEY, DEFAULT_CHATS } from '../ChangeableValues';
+import Values from "../JSONDocuments/ChangeableValues.json";
 import accounts from '../JSONDocuments/Users.json';
 
 function getPassword(user) {
@@ -27,6 +27,7 @@ function getPassword(user) {
     return;
 }
 
+var DEFAULT_CHATS = Values.DefaultChats;
 
 // Removes the 'getAccount' value from local
 // storage and reloads the window to return to 
@@ -86,7 +87,7 @@ const CreateAccount = () => {
         // Open the psot request to the server,
         // add headers and send the request.
         xhrUser.open("POST", "https://api.chatengine.io/users/");
-        xhrUser.setRequestHeader("PRIVATE-KEY", PRIVATE_KEY);
+        xhrUser.setRequestHeader("PRIVATE-KEY", Values.PrivateKey);
         xhrUser.setRequestHeader('Content-Type', 'application/json');
 
         xhrUser.send(JSON.stringify(userInfo));
@@ -115,7 +116,7 @@ function addDefaultChats() {
     // send the request.
     xhrArray[i].open("POST", "https://api.chatengine.io/chats/" + DEFAULT_CHATS[i][0] + "/people/");
             
-    xhrArray[i].setRequestHeader("Project-ID", PROJECT_ID);
+    xhrArray[i].setRequestHeader("Project-ID", Values.ProjectId);
 
     xhrArray[i].setRequestHeader("User-Name", DEFAULT_CHATS[i][1]);
     xhrArray[i].setRequestHeader("User-Secret", getPassword(DEFAULT_CHATS[i][1]));

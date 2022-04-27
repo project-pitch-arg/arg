@@ -1,5 +1,13 @@
 {
     "title": "Modifiable values for the blog page.",
+    "required": [
+        "userPicture1", "userPicture2", "username1", "username2",
+        "quoteTime", "iframeList", "answerToBeEncrypted", "encryptionKey",
+        "clueDate", "letterFont", "letterColour", "courseCode1", "courseCode1Index",
+        "courseCode2", "courseCode2Index", "threeDinosaurs", "hintDinosaurs",
+        "hintCourses", "redHintPicture", "blueHintPicture", "greenHintPicture",
+        "jigsawSudoku", "parkEntrance", "directions", "chatAddress", "postsPerPage"
+    ],
     "properties": {
         "userPicture1": {
             "title": "The name of the picture that is the avatar for username1. Should be in the Img-folder.",

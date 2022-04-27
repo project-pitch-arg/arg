@@ -1,0 +1,26 @@
+{
+    "title": "Modifiable values of the chat on the blog.",
+    "properties": {
+        "ProjectId": {
+            "title": "Id needed to access the chat.",
+            "type": "string"
+        },
+        "PrivateKey": {
+            "title": "Id needed to access the chat.",
+            "type": "string"
+        },
+        "DefaultChats": {
+            "title": "Should be edited after running StartUp.py. Contains the chat rooms a new user will have access to.",
+            "type": "array",
+            "items": {
+                "type": "array",
+                "minLenght": 2,
+                "maxLength": 2,
+                "items": {
+                    "type": ["integer", "string"]
+                }
+            }
+        }
+    },
+    "additionalProperties": false
+}

@@ -15,9 +15,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Notera att första inlägget i PostContent måste ha ett datum
 
-- Inkludera fakta från dokumentet om GU som finns på Drive.
-    - Har lagt till en. Vet inte hur mycket vi ska lägga till. Idéer?
-
 - Chatthistorik för allmän chatt och aprilpusslet.
 
 - Flytta variabler till json i chatten
@@ -29,7 +26,9 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Flytta runt kod så det kommer i en logisk ordning.
 
-- Gör Spaninebiderna med gömt innehåkk utbytbara.
+- Gör Spaninenbiderna med gömt innehåll utbytbara.
+
+- Får error i console för lösenord.
 
 --------------- Prio 2 ---------------
 
