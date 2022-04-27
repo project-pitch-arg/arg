@@ -1,3 +1,5 @@
+//NOT USED!!!
+
 /* This file contains variables you can
     change to get different results for the
     blog chat.
