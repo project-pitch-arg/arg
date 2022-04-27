@@ -68,7 +68,7 @@ function App() {
       if (!DIFFERENT_FONTS.includes(Variables.letterFont))
           throw new Error("The specified font should be an existing web safe font.");
   }
-  
+
   return (  
     // An HTML statement that sets up our website according to 
     // the specifications in "react-router-dom".

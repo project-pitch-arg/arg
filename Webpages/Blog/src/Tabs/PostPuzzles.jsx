@@ -14,9 +14,10 @@ export default function Puzzles(post) {
   var imageIdentifierKey = -1;
 
   // Create a list for solved passwords if it does not exist.
-  if(sessionStorage.getItem('solvedPasswords') === null) {
+  if(sessionStorage.getItem("solvedPasswords") === null) {
     var passwords = [""];
-    sessionStorage.setItem('solvedPasswords', JSON.stringify(passwords));
+    sessionStorage.setItem("solvedPasswords", JSON.stringify(passwords));
+
   }
   // Checks if a post is a puzzle and in that case which puzzle it is.
   // Depending on the result it will return different displays.
@@ -42,7 +43,7 @@ export default function Puzzles(post) {
             <pre className="post-content">
               {post.content} 
               <form onSubmit={submitPassword(post)}>
-              <input type="text" value={sessionStorage.getItem('postSecret')} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
+              <input type="text" value={sessionStorage.getItem("postSecret")} onChange={(e) => sessionStorage.setItem("postSecret", e.target.value)} className="input" placeholder="???" required />
               <div type="submit" />
               </form>
             </pre>
@@ -76,12 +77,12 @@ export default function Puzzles(post) {
   // Function to reveal content protcetec by password
   // when the password is correct.
   function submitPassword(post) {
-    if(sessionStorage.getItem('postSecret') === post.secret) {
-      var passwords = JSON.parse(sessionStorage.getItem('solvedPasswords'));
+    if(sessionStorage.getItem("postSecret") === post.secret) {
+      var passwords = JSON.parse(sessionStorage.getItem("solvedPasswords"));
       passwords.push(post.secret);
-      sessionStorage.setItem('solvedPasswords', JSON.stringify(passwords));
+      sessionStorage.setItem("solvedPasswords", JSON.stringify(passwords));
     }
-    sessionStorage.removeItem('postSecret');
+    sessionStorage.removeItem("postSecret");
     return;
   }
   
