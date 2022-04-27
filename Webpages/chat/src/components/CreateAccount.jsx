@@ -15,7 +15,7 @@
 
 import { useState } from 'react';
 import { PROJECT_ID, PRIVATE_KEY, DEFAULT_CHATS } from '../ChangeableValues';
-import accounts from '../Users.json';
+import accounts from '../JSONDocuments/Users.json';
 
 function getPassword(user) {
     var users = accounts;

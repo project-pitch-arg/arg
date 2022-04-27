@@ -10,16 +10,16 @@
         ],
         "properties": {
             "username": {
-                "type": "string",
-                "title": "The username that will be used when sending messages."
+                "title": "The username that will be used when sending messages.",
+                "type": "string"
             },
             "secret": {
-                "type": "string",
-                "title": "The secret (password) used for this user."
+                "title": "The secret (password) used for this user.",
+                "type": "string"
             },
             "email": {
-                "type": "string",
-                "title": "The email of the user. Needs to follow standard email formats (example@ex.com)."
+                "title": "The email of the user. Needs to follow standard email formats (example@ex.com).",
+                "type": "string"
             }
         },
         "additionalProperties": false

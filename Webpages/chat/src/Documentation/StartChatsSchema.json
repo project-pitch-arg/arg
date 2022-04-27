@@ -10,20 +10,20 @@
         ],
         "properties": {
             "admin": {
-                "type": "string",
-                "title": "The admin of the chatroom. Should be a user in Users.json."
+                "title": "The admin of the chatroom. Should be a user in Users.json.",
+                "type": "string"
             },
 
             "chat_name": {
-                "type": "string",
-                "title": "The name of the chatroom. The name should be unique."
+                "title": "The name of the chatroom. The name should be unique.",
+                "type": "string"
             },
             "users": {
+                "title": "The other members in this chat except the admin.",
                 "type": "array",
                 "items": {
                     "type": "string"
-                },
-                "title": "The other members in this chat except the admin."
+                }
             }
         } 
     },

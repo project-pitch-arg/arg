@@ -9,16 +9,16 @@
         ],
         "properties": {
             "chat_name": {
-                "type": "string",
-                "title": "The name of the chat to send the message in. If the name is missing, the message is sent to the same chat as the previous message."
+                "title": "The name of the chat to send the message in. If the name is missing, the message is sent to the same chat as the previous message.",
+                "type": "string"
             },
             "text": {
-                "type": "string",
-                "title": "The content of the message."
+                "title": "The content of the message.",
+                "type": "string"
             },
             "user": {
-                "type": "string",
-                "title": "The user who sent the message."
+                "title": "The user who sent the message.",
+                "type": "string"
             }
         },
         "additionalProperties": false

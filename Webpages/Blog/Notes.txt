@@ -20,7 +20,23 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Chatthistorik för allmän chatt och aprilpusslet.
 
+- Flytta alla bilder från public
+
+- Flytta variabler till json i chatten
+
+- JSON schema till ChangeableValues.json.
+
+- Lösenordsruta gick inte att skriva i
+
+- Ett inlägg från februari har hamnat innan de i januari
+
+- Kolla igenom error från JSON värden och om det ligger på rätt sida i koden.
+
+- Flytta runt kod så det kommer i en logisk ordning.
+
 --------------- Prio 2 ---------------
+
+- Kanske göra schema för encryptionKey bättre?
 
 - Organisera css-filer (bloggen fixad)
     - CSS-file. Add colour names to make it easier to change the overall impression.
@@ -44,3 +60,5 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Ta bort våra nycklar till chatten när allt är klart så man inte hamnar på mitt konto.
     - Dokumentera att detta måste fixas innan man starta bloggen.
+
+- Skulle kunna ha en lista med massa dinosaurier och att man välder relevanta därifrån istället för att skriva in dem.
