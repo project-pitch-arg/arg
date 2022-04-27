@@ -196,13 +196,13 @@ export default function Puzzles(post) {
       <div className="post-images">
         <div>
           <picture>
-            <source media="(min-width: 800px)" srcSet="PostImages/SunsetView.jpg" className="post-image"/> 
+            <source media="(min-width: 800px)" srcSet={require("../Img/SunsetView.jpg")} className="post-image"/> 
             <img src={require("../Img/" + Variables.parkEntrance)} alt="Image of park entrance." className="post-image"/>
           </picture>
         </div>
         <div>
           <picture>
-            <source media="(min-width: 600px)" srcSet="PostImages/RedSkyAndPool.JPG" className="post-image"/> 
+            <source media="(min-width: 600px)" srcSet={require("../Img/RedSkyAndPool.jpg")} className="post-image"/> 
             <img src="" alt={Variables.directions} className="post-image"/>
           </picture>
         </div>
@@ -219,7 +219,7 @@ export default function Puzzles(post) {
                 imageIdentifierKey++;
                 return (
                   <div key={imageIdentifierKey}>
-                    <img src={picture[0]} alt={picture[1]} className="post-image"/>
+                    <img src={require("../Img/" + picture[0])} alt={picture[1]} className="post-image"/>
                   </div>
                 )
                 })}

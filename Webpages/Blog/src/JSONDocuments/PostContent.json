@@ -12,7 +12,7 @@
         "date": [2022, 1, 7],
         "poster": "Robot1311213",
         "content": "Have you figured out what our usernames mean yet? I'll give you a hint for Fexjo. What is this?",
-        "pictures": [["PostImages/Caesar.png", "Some nice salad."]],
+        "pictures": [["Caesar.png", "Some nice salad."]],
         "puzzleNr": "B-c1",
         "comment": "This puzzle is solved in the chat."
     },
@@ -27,7 +27,7 @@
     {
         "poster": "Robot1311213",
         "content": "Just a happy dinosaur to make your day better.",
-        "pictures": [["PostImages/BabyDino.png", "Dino!!!"]]
+        "pictures": [["BabyDino.png", "Dino!!!"]]
     },
     {
         "poster": "Fexjo",
@@ -68,7 +68,7 @@
     {
         "poster": "Fexjo",
         "content": "I figured that we haven't really showed much presence for our schools of choice lately and just thought I'd leave this here. To commemorate all the good times we've had and will have in the future.",
-        "pictures": [["PostImages/ChalmersLogo.png", "Chalmers logo in gold."], ["PostImages/GUBuilding.jpg", "An old building belonging to Gothenburg University"]]
+        "pictures": [["ChalmersLogo.png", "Chalmers logo in gold."], ["GUBuilding.jpg", "An old building belonging to Gothenburg University"]]
     },
     {
         "poster": "Robot1311213",
@@ -133,7 +133,7 @@
     {
         "poster": "Fexjo",
         "content": "If you ever feel lost, just look at this sign I found at my university. It is trying to help, but somehow makes you feel all the more confused. It did work out in the end though, and I found the direction for my goal.",
-        "pictures": [["PostImages/GUSign.jpg", "Sign with many provided directions."]]
+        "pictures": [["GUSign.jpg", "Sign with many provided directions."]]
     },
     {
         "poster": "Fexjo",
@@ -146,7 +146,7 @@
     {
         "poster": "Fexjo",
         "content": "Some of my courses have been situated at Lindholmen campus. It's a place where both GU and Chalmers study at. I haven't really explored it much beyond the classrooms and such so I decided to walk around and take some pictures of some interesting things that I found there.",
-        "pictures": [["PostImages/Birds.jpg", "Fake birds."],["PostImages/Kuggen.jpg", "A peculiar looking library named Kuggen."],["PostImages/FakeBoat.jpg", "A model boat."],["PostImages/RealBoat.jpg", "A boat parked outside Lindholmen campus."]]
+        "pictures": [["Birds.jpg", "Fake birds."],["Kuggen.jpg", "A peculiar looking library named Kuggen."],["FakeBoat.jpg", "A model boat."],["RealBoat.jpg", "A boat parked outside Lindholmen campus."]]
     },
     {
         "poster": "Robot1311213",
@@ -205,7 +205,7 @@
     {
         "poster": "Fexjo",
         "content": "Both our resident robot and I have been feeling a bit cooped up inside for a while. And we haven't really done much together lately. So we decided to take a bit of a walk. Just enjoy the sights and explore parts of the city. Even living in Gothenburg for an entire lifetime will still leave many places unexplored. Not to mention that I've only been here for a year. We saw many beautiful sights on our exploration, though one stuck out to me. We came across this as we were wandering aimlessly along a cycling route. The route is called 'Kattegattsleden' for the avid cyclists that are interested. Apparently it stretches for 390 km, quite a distance to be sure. Back on topic though, the bridge is truly a marvel of engineering. Even I can tell that much without much knowledge in structural architecture. Could do with a paint job but hey, I'm not in charge. ",
-        "pictures": [["PostImages/Kattegattleden.jpg", "Massive bridge by cycling route."]]
+        "pictures": [["Kattegattleden.jpg", "Massive bridge by cycling route."]]
     },
     {
         "date": [2022, 3, 25],
@@ -235,7 +235,7 @@
     {
         "poster": "Fexjo",
         "content": "I was going to listen to some music and maybe an audiobook on the flight today. Only once we were in the air did I notice that it hadn't downloaded. It turned out to be quite a long trip after that.",
-        "pictures": [["PostImages/PlaneWing.jpg", "A plane wing."]]
+        "pictures": [["PlaneWing.jpg", "A plane wing."]]
     },
     
     {
@@ -246,12 +246,12 @@
     {
         "poster": "Fexjo",
         "content": "One of the first things I noticed when arriving at my place of residence was that there were a lot of cats in the area. They are surprisingly friendly, walking up to strangers and begging for pets, no fear in them whatsoever. One of the cats even decided to inhabit my place and adopt himself through me while I'm here. I don't have the heart to shoo him away so I guess I temporarily own a cat now. It's going to be an interesting experience.",
-        "pictures": [["PostImages/CatRestingOnChair.jpg", "Cat resting on chair."],["PostImages/WhiteCat.jpg", "A white cat."],["PostImages/SnoozeCat.jpg", "A snoozing cat."],["PostImages/CatLickingHimself.jpg", "A cat licking his fur."]]
+        "pictures": [["CatRestingOnChair.jpg", "Cat resting on chair."],["WhiteCat.jpg", "A white cat."],["SnoozeCat.jpg", "A snoozing cat."],["CatLickingHimself.jpg", "A cat licking his fur."]]
     },
     {
         "poster": "Fexjo",
         "content": "I've noticed that I'm probably going to be uploading a bunch of images while I'm away on this trip. There's just too much to show. There's also the fact that I can do it quite quickly and can focus on the vacation for most of the time instead of writing content here. So expect me to not be writing as much until I'm back. To keep up with that theme, here are some more images.",
-        "pictures": [["PostImages/AlhambraPool.jpg", "Reflecting pool at Alhambra."],["PostImages/OrangePlant.jpg", "An orange plant."],["PostImages/Staircase.jpg", "Some stairs outside."],["PostImages/Dolphin.jpg", "A dolphin."]]
+        "pictures": [["AlhambraPool.jpg", "Reflecting pool at Alhambra."],["OrangePlant.jpg", "An orange plant."],["Staircase.jpg", "Some stairs outside."],["Dolphin.jpg", "A dolphin."]]
     },
     {
         "poster": "Fexjo",
@@ -260,12 +260,12 @@
     {
         "poster": "Fexjo",
         "content": "Just thought I should share some more cool pictures of Spain while I'm here. I don't get this chance often.",
-        "pictures": [["PostImages/OceanView.jpg", "A view of the ocean."],["PostImages/WhiteHouses.jpg", "Some white houses on a hill."],["PostImages/Umbrellas.jpg", "A bunch of floating umbrellas."],["PostImages/ColorfulBuilding.jpg", "A colorful building."]]
+        "pictures": [["OceanView.jpg", "A view of the ocean."],["WhiteHouses.jpg", "Some white houses on a hill."],["Umbrellas.jpg", "A bunch of floating umbrellas."],["ColorfulBuilding.jpg", "A colorful building."]]
     },
     {
         "poster": "Fexjo",
         "content": "There is a lot of beautiful plantlife in this climate that I don't see much of usually. Just walking along and enjoying the scenery and beauty of nature is surprisingly calming and relaxing. Taking some time to cool off and just shift your worries away gives quite a lot of peace in the moment. Though don't do it too long, I've had a bunch of procrastination sessions start that way.",
-        "pictures": [["PostImages/PalmTree.jpg", "A palm tree."],["PostImages/RedTree.jpg", "A tree with red flowers."],["PostImages/TreeRoots.jpg", "A tree with long roots."],["PostImages/GrapeVine.jpg", "A hanging plant."]]
+        "pictures": [["PalmTree.jpg", "A palm tree."],["RedTree.jpg", "A tree with red flowers."],["TreeRoots.jpg", "A tree with long roots."],["GrapeVine.jpg", "A hanging plant."]]
     },
     {
         "poster": "Robot1311213",
@@ -274,7 +274,7 @@
     {
         "poster": "Fexjo",
         "content": "I need to give some credit to the place that I'm staying at. They have the most fantastic view. At the same time it really showcases the weather as well. I've included a picture of one of the few times that I saw a cloud in the sky during my time here.",
-        "pictures": [["PostImages/LonelyCloud.jpg", "A single cloud in the sky."],["PostImages/ShadedPool.jpg", "Shaded view of pool."],["PostImages/ClearReflectingPool.jpg", "Clear blue sky and pool."],["PostImages/SunsetPool.jpg", "Pool with sunset."]]
+        "pictures": [["LonelyCloud.jpg", "A single cloud in the sky."],["ShadedPool.jpg", "Shaded view of pool."],["ClearReflectingPool.jpg", "Clear blue sky and pool."],["SunsetPool.jpg", "Pool with sunset."]]
     },
     {
         "date": [2022, 4, 16],
@@ -289,7 +289,7 @@
         "date": [2022, 4, 18],
         "poster": "Fexjo",
         "content": "It's now officially spring. The way to know that is the fact that minigolf opens up for customers. Seeing a prime opportunity and not willing to miss it, I took Robot out for a match. It was beautiful weather outside, warm enough to not have to bother with jackets or even sweatshirts. We played very evenly, sometimes there was just a difference of one hit between us and usually we had the exact same score. Robot did manage to do a hole-in-one though, which is always nice when it happens, though I do wish I could have had that as well. I did end up winning in the end, so I'm kind of happy for that at least.",
-        "pictures": [["PostImages/Minigolf1.jpg", "A minigolf course."],["PostImages/Minigolf2.jpg", "A minigolf course."]]
+        "pictures": [["Minigolf1.jpg", "A minigolf course."],["Minigolf2.jpg", "A minigolf course."]]
     },
     {
         "poster": "Fexjo",
@@ -298,7 +298,7 @@
     {
         "poster": "Robot1311213",
         "content": "We visited the Natural History Museum in Gothenburg today. And what a blast it was! ＼(٥⁀▽⁀ )／ We got to see so many different specimens of birds, mammals, insects, and of course, dinosaurs. They had a lot of cool stuff to go through, they even had a hedge maze outside which we went through. I highly recommend going there for yourself. I made Fexjo take some images that I included here, can't let everyone else be remiss of some of the experience. \n \nAnd of course, I finally went to see the blue whale I've menttioned before. Imagine something that big moving... Perhaps I should go on a whale sighting trip in the future to be even closer to imagining a huge, moving dinosaur.",
-        "pictures": [["PostImages/MuseumDino.jpg", "Skeleton of an Ichtyosaurus."],["PostImages/MuseumMaze.jpg", "A hedge maze."],["PostImages/MuseumSeal.jpg", "Statues of some seals."],["PostImages/MuseumWhale.jpg", "Skeleton of a whale."]]
+        "pictures": [["MuseumDino.jpg", "Skeleton of an Ichtyosaurus."],["MuseumMaze.jpg", "A hedge maze."],["MuseumSeal.jpg", "Statues of some seals."],["MuseumWhale.jpg", "Skeleton of a whale."]]
     },
     {
         "poster": "Fexjo",
@@ -308,17 +308,17 @@
         "date": [2022, 4, 22],
         "poster": "Fexjo",
         "content": "Today was quite a special treat. I have known for a while about the archipelago of islands surrounding Gothenburg and how beautiful they can be. Today was the day where the weather was nice enough and Robot had enough free time to show me around. And what a sight it was! We saw some beautiful views and encountered many interesting peculiarities. One of which was some sort of resting or camping site in the middle of the woods. We did spend most of the time along the coast though, there was a nice coastal trail to follow which really helped us navigate. Although Robot is a native he hasn't really been around the islands much himself. It was a wonderful time though and I've enclosed some images below to show some of the things we saw.",
-        "pictures": [["PostImages/IslandDock.jpg", "A dock with boats."],["PostImages/IslandRocks.jpg", "A nice rocky view."],["PostImages/IslandView.jpg", "A nice sunny view."],["PostImages/IslandHuts.jpg", "Some huts in a forest."]]
+        "pictures": [["IslandDock.jpg", "A dock with boats."],["IslandRocks.jpg", "A nice rocky view."],["IslandView.jpg", "A nice sunny view."],["IslandHuts.jpg", "Some huts in a forest."]]
     },
     {
         "poster": "Robot1311213",
         "content": "Yesterday Fexjo convinced me that we should go out to the archipelago. This did seem like a pretty fun idea but I don't know if I would do it again. I mean, the views were nice and all but some of the stuff really sealed the deal for me. For one we had to spend an hour on the bus to get there, and then a while more on the ferry over to the island itself. Then when we were there Fexjo had us walking along a trail all day. So much walking. (￣ ￣|||) Other than that I have to admit that it was quite a nice time. I even saw some interesting stuff on our meandering path to nowhere. They're below if anyone is interested.",
-        "pictures": [["PostImages/IslandWindmill.jpg", "A windmill."],["PostImages/IslandAnchor.jpg", "An anchor and a ball on a rock."],["PostImages/IslandShip.jpg", "A yellow ship in the distance."],["PostImages/IslandDeer.jpg", "A deer."]]
+        "pictures": [["IslandWindmill.jpg", "A windmill."],["IslandAnchor.jpg", "An anchor and a ball on a rock."],["IslandShip.jpg", "A yellow ship in the distance."],["IslandDeer.jpg", "A deer."]]
     },
     {
         "poster": "Fexjo",
         "content": "Saw this nice-looking boat today. Somehow, it did not rain although the sky was grey all day.",
-        "pictures": [["PostImages/Boat.jpg", "Picture of a boat."]]
+        "pictures": [["Boat.jpg", "Picture of a boat."]]
     },
     {
         "poster": "Robot1311213",
@@ -328,7 +328,7 @@
         "date": [2022, 4, 26],
         "poster": "Fexjo",
         "content": "Happy birthday, Robot! In Sweden, you don't sing Happy Birthday on birthdays. They actually use an entire different song. I tried hard to learn it for today and included a picture of my practice sheet in case someone else is curious.",
-        "pictures": [["PostImages/JaMåHanLeva.png", "Notes to the swedish version of Happy Birthday."]]
+        "pictures": [["JaMåHanLeva.png", "Notes to the swedish version of Happy Birthday."]]
     },
     {
         "poster": "Robot1311213",
@@ -382,7 +382,7 @@
     {
         "poster": "Robot1311213",
         "content": "Fexjo made me jealous with his vacation in Spain, so I went on a trip! It was only during the weekend. And I did not feel like going to Stockholm, the capital of Sweden, so instead I went further north! It was not much compared to Spain, but I had really fun. I took some friends with me and we explored all sorts of places none of us hade been to before. For example, in the left picture you can see Lapporten, which has been painted and pictured loads of times. It is actually pretty famous.",
-        "pictures": [["PostImages/NatureSweden.png", "Picture of a swedish lake with mountains in the distance"], ["PostImages/NatureSweden2.png", "Picture of a moutnain with a valley shaped like a U."]]
+        "pictures": [["NatureSweden.png", "Picture of a swedish lake with mountains in the distance"], ["NatureSweden2.png", "Picture of a moutnain with a valley shaped like a U."]]
     },
     {
         "poster": "Fexjo",
@@ -462,7 +462,7 @@
     {
         "poster": "Fexjo",
         "content": "I've been told that a big part of the GU and Chalmers experience is to attend the dinner parties that they hold. It hasn't really caught my eye and I've been busy during the times that they've been held. But now I decided to attend one before I return home so that I can get the full experience. It was quite fun but definitely not my kind of crowd. The food was good but I'm not sure I'm a fan of all the singing. I've attached the lyrics to the traditional song that is sung at the beginning of every dinner party at GU. If you're as confused as I am over the lyrics, don't worry, so is Robot and every other non-GU student or swede that I've talked to.",
-        "pictures": [["PostImages/SongLyrics.png", "Song lyrics."]]
+        "pictures": [["SongLyrics.png", "Song lyrics."]]
     },
     {
         "poster": "Robot1311213",
@@ -548,7 +548,7 @@
         "date": [2022, 6, 16],
         "poster": "Robot1311213",
         "content": "I borrowed some pictures from Fexjo to make these. What do you think all of it adds up to?",
-        "pictures": [["Puzzles/Skyline1.jpg", "A skyline."], ["Puzzles/Skyline2.png", "A skyline"],  ["Puzzles/Skyline3.jpg", "A skyline"], ["Puzzles/Shapes.png", "Two rectangles and a triangle."],  ["Puzzles/Lines.png", "Four underscores in different colours. Three with signs."], ["Puzzles/Signs.png", "Four underscores with minus and then two plus signs between them."] ],
+        "pictures": [["Skyline1.jpg", "A skyline."], ["Skyline2.png", "A skyline"],  ["Skyline3.jpg", "A skyline"], ["Shapes.png", "Two rectangles and a triangle."],  ["Lines.png", "Four underscores in different colours. Three with signs."], ["Signs.png", "Four underscores with minus and then two plus signs between them."] ],
         "puzzleNr": "B-p2",
         "comment": "This is the main post to puzzle B-p2."
     },

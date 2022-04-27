@@ -20,8 +20,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Chatthistorik för allmän chatt och aprilpusslet.
 
-- Flytta alla bilder från public
-
 - Flytta variabler till json i chatten
 
 - JSON schema till ChangeableValues.json.
@@ -31,7 +29,11 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Flytta runt kod så det kommer i en logisk ordning.
 
+- Gör Spaninebiderna med gömt innehåkk utbytbara.
+
 --------------- Prio 2 ---------------
+
+- PostPuzzles kan antagligen rensas en del. En hel del kod som upprepas.
 
 - Kanske göra schema för encryptionKey bättre?
 
@@ -55,7 +57,7 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Mention computer picture a bit in main post?
 
-- Text som är secretContent radbryter inte när rutan är slut.
+- Text som är secretContent radbryter inte när rutan är slut. Dyker upp en scrollbar, men borde inte vara så svårt att fixa
 
 --------------- Prio 3 ---------------
 
