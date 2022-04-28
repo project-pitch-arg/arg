@@ -17,22 +17,36 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Chatthistorik för allmän chatt och aprilpusslet.
 
-- Flytta variabler till json i chatten
-
-- JSON schema till ChangeableValues.json.
-    - Finns för chatten. Bloggen kvar.
-
-- Kolla igenom error från JSON värden och om det ligger på rätt sida i koden.
-
 - Flytta runt kod så det kommer i en logisk ordning.
 
 - Gör Spaninenbiderna med gömt innehåll utbytbara.
+    - Sara
 
-- Får error i console för lösenord.
+- Fixa fortsättning på Skylines
+    - Sara fixar ny sida
+
+- Fixa PostPuzzles struktur och upprepande kod.
+    - Ludvig
+
+- Gå igenom alla kommentarer
+
+- Flytta error för fel i json
+    - Ludvig
+
+- Flytta färger till JSON
+    - Sara
+
+- Gå igenom så att alla klasser i chattens css används.
+    - Ludvig
+
+- Gör dino mer automatisk.
+    - Sara
+
+- Dinolista
+    - Sara (A-L)
+    - Ludvig (M-Z)
 
 --------------- Prio 2 ---------------
-
-- PostPuzzles kan antagligen rensas en del. En hel del kod som upprepas.
 
 - Kanske göra schema för encryptionKey bättre?
 
@@ -57,6 +71,7 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Mention computer picture a bit in main post?
 
 - Text som är secretContent radbryter inte när rutan är slut. Dyker upp en scrollbar, men borde inte vara så svårt att fixa
+    - Sara
 
 --------------- Prio 3 ---------------
 
@@ -64,3 +79,5 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - Dokumentera att detta måste fixas innan man starta bloggen.
 
 - Skulle kunna ha en lista med massa dinosaurier och att man välder relevanta därifrån istället för att skriva in dem.
+
+- Lägg till något som buffrar eller nåt när man gör ett konto. Tar en stund så man undrar om nåt händer
