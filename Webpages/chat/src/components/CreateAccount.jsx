@@ -10,7 +10,7 @@
    THe account is then added to the 
    chosen default chats. You can edit
    these by changing the DEFAULT_CHATS
-   variable in changeableVariables.jsx.
+   variable in changeableVariables.json.
 */
 
 import { useState } from 'react';

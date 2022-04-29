@@ -6,9 +6,12 @@ import Home from "./Tabs/Home";
 import Chat from "./Tabs/TabChat";
 import Posts from "./Tabs/TabPosts";
 import Variables from "./JSONDocuments/ChangeableValues.json"
-import About from "./Tabs//TabAbout";
-import Quotes from "./Tabs//TabQuotes";
+import About from "./Tabs/TabAbout";
+import Quotes from "./Tabs/TabQuotes";
 import Header from "./Header/Header";
+import Memory from "./Tabs/SkylinePuzzle/Memory";
+import TextPuzzle from "./Tabs/SkylinePuzzle/TextPuzzle";
+import SolvedScreen from "./Tabs/SkylinePuzzle/SolvedScreen";
 
 function App() {
   
@@ -81,8 +84,11 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Chat" element={<Chat />} />
           <Route exact path="/Posts" element={<Posts />} />
-            <Route exact path="/About" element={<About />} />
-            <Route exact path="/Quotes" element={<Quotes />} />
+            <Route exact path="/Posts/478" element={<Memory />}/>
+            <Route exact path="/Posts/GU" element={<TextPuzzle />}/>
+            <Route exact path="/Posts/Triceratops" element={<SolvedScreen />}/>
+          <Route exact path="/About" element={<About />} />
+          <Route exact path="/Quotes" element={<Quotes />} />
         </Routes>
       </BrowserRouter>
     </div>
