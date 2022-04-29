@@ -228,3 +228,7 @@ a {
 .team-member a {
     margin-top: 15px;
 }
+.lyra_img{
+border-right: 1px solid blue;
+border-bottom: 1px solid blue;
+}

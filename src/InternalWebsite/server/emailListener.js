@@ -251,7 +251,7 @@ lyra_mailListener.on("mail", function(mail, seqno, attributes){
         var text = mail.text.toUpperCase();
         var key = "wilfred";
         //checks if the email contains any words that match hint keys
-        var hintKeys = ["help", "advice", "guidance", "hand", "support", "assist", "hint"];
+        var hintKeys = ["help", "advice", "guidance", "hand", "support", "assist", "hint","credentials","intranet"];
         var doesContain = false;
         for(let i = 0; i<hintKeys.length;i++){
              if(text.includes(hintKeys[i].toUpperCase())){
