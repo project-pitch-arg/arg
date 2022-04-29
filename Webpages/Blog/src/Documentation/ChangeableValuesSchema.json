@@ -87,6 +87,18 @@
             "type": "integer",
             "exclusiveMinimum": 0
         },
+        "courseCode3": {
+            "title": "The third course code. Found by chosen items from 'listForCourseCode3",
+            "type": "string"
+        },
+        "listForCourseCode3": {
+            "title": "List of items giving clues for course code 3.",
+            "type": "array",
+            "minLength": 3,
+            "items": {
+                "type": "string"
+            }
+        },
         "threeDinosaurs": {
             "title": "Names of three dinosaurs were the first letters combine to a course code.",
             "type": "array",

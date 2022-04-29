@@ -35,6 +35,9 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Flytta färger till JSON
     - Sara
+    - Så tänkte göra detta, men typ alla metoder jag läst om hämtar object och ändrar så. 
+        VIlket vi inte kan göra för html objektet skapas inte förrän efteråt.
+        Så vet inte riktigt hur vi tänkte göra detta.
 
 - Gå igenom så att alla klasser i chattens css används.
     - Ludvig
@@ -42,9 +45,14 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Gör dino mer automatisk.
     - Sara
 
+- Använder vi allt i App.css?
+
 - Dinolista
-    - Sara (A-L)
     - Ludvig (M-Z)
+
+- Fixa så att kodkommentarer och kod inte har saker som B-p1 osv.
+
+- Ändra så ledtrådar i dokumentationen kommer från tester
 
 --------------- Prio 2 ---------------
 

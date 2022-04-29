@@ -11,6 +11,7 @@
 :export {
     postBackground: var(--post-background);
 }
+
 /* The colour of the background often used.*/
 .content {
     height: 85vh;
