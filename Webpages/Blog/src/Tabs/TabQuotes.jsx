@@ -11,7 +11,7 @@ import "./TabContent.css";
 import quotesContent from "../JSONDocuments/QuotesContent.json";
 import Variables from "../JSONDocuments/ChangeableValues.json";
 
-export default function printingQuotes() {
+export default function PrintingQuotes() {
 
   // Function to get a random integer between two limits.
   // The maximum is exclusive and the minimum is inclusive.
