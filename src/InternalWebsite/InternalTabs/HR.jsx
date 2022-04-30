@@ -44,7 +44,7 @@ export default class HR extends Component{
             )
         }
         else {
-            return (<div>Loading...</div>)
+            return (<div class="newsBlock"></div>)
         }
     }
 }

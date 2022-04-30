@@ -36,13 +36,11 @@ export default class Console extends Component{
     //Called when input is submitted
     handleInput = (event) =>{
         event.preventDefault();
-
         var command = event.target.command.value.split(/\s+/)[0];
         var data = event.target.command.value.split(/\s+/)[1];
         var answers = event.target.command.value.split(/\s+/);
         answers.splice(0,1);
         answers.splice(0,1);
-
         switch (command){
             case "/help":
                 this.previousCommands.push("The commands available are:");
@@ -79,7 +77,7 @@ export default class Console extends Component{
                 break;
             case "/changePassword":
                     if(this.adminOn && data === "CEO"){
-                        if(answers.length === 3){
+                        if(answers.length === this.securityAnswers.length){
                             var check = true;
                             for(var i = 0; i < answers.length; i++){
                                 if(answers[i].toUpperCase() !== this.securityAnswers[i].toUpperCase()){

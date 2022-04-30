@@ -15,5 +15,4 @@ export default class Extra extends Component{
                 </div>
             )
     }
-
 }

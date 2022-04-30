@@ -16,6 +16,7 @@ export default class Policy extends Component{
         this.secretPDF = [];
         this.keys = [];
         this.input = "";
+        this.correctKeys = Variables.keysPressedDownForConsole;
     }
 
     //Adds eventListeners for key presses
@@ -82,14 +83,18 @@ export default class Policy extends Component{
     //Called when a key is pressed
     _handleKeyDown = (event) => {
         this.keys.push(event.key);
-        if(event.key !== "o" && event.key !== "p" && event.key !== "e" && event.key !== "n" && event.key !== "Enter" ){
-            this.keys = [];
+        for(var i = 0; i < this.correctKeys.length; i++){
+            if(!this.correctKeys.includes(event.key) && event.key !== "Enter"){
+               this.keys = [];
+            }
         }
         switch( event.key ) {
             case "Enter":
-                if(this.checkPressedKeys("o") && this.checkPressedKeys("p") && this.checkPressedKeys("e") && this.checkPressedKeys("n") && !this.state.ceo){
-                    this.setState({hidden: !this.state.hidden});
-                    this.keys = [];
+                for(var j = 0; j < this.correctKeys.length; j++){
+                    if(this.checkPressedKeys(this.correctKeys.charAt(j)) && !this.state.ceo){
+                       this.setState({hidden: !this.state.hidden});
+                       this.keys = [];
+                    }
                 }
                 break;
             default:
@@ -165,7 +170,7 @@ export default class Policy extends Component{
             )
         }
         else {
-            return (<div>Loading...</div>)
+            return (<div class="newsBlock"></div>)
         }
     }
 }
