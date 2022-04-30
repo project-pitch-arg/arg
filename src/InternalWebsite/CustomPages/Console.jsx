@@ -11,9 +11,8 @@ export default class Console extends Component{
         this.previousCommands = [""];
         this.helpCommands = Variables.helpCommands;
         this.adminCommands = Variables.adminCommands;
-        this.securityAnswers = [
-            Variables.firstSecurityAnswer, Variables.secondSecurityAnswer, Variables.thirdSecurityAnswer
-        ]
+        this.securityAnswers = Variables.securityAnswers;
+        this.securityQuestions = Variables.securityQuestions;
         this.adminCode = Variables.adminCode;
         this.adminOn = false;
         this.securityCheck = false;
@@ -99,10 +98,12 @@ export default class Console extends Component{
                         }
                         else {
                             this.previousCommands.push("Security Questions: ");
-                            this.previousCommands.push(Variables.firstSecurityQuestion);
-                            this.previousCommands.push(Variables.secondSecurityQuestion);
-                            this.previousCommands.push(Variables.thirdSecurityQuestion);
-                            this.previousCommands.push("Answer question in format /changePassword [user] [answer 1] [answer2] [answer3]");
+                            var questionFormat = "";
+                            for(i = 0; i < this.securityQuestions.length; i++){
+                                this.previousCommands.push(this.securityQuestions[i]);
+                                questionFormat += " [answer " + (i+1) + "]";
+                            }
+                            this.previousCommands.push("Answer question in format /changePassword [user]" + questionFormat);
                         }
                     }
                     else if(this.adminOn){

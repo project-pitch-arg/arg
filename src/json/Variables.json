@@ -3,12 +3,16 @@
   "smallConsoleCode" : "231",
   "adminCode" : "3186",
   "smallDecryptConsole" : "2FUaiv5Dq4SLlZ2KD9OI",
-  "firstSecurityQuestion" : "Name of pet",
-  "firstSecurityAnswer" : "Lexi",
-  "secondSecurityQuestion" : "Name of favorite movie villain",
-  "secondSecurityAnswer" : "two-face",
-  "thirdSecurityQuestion" : "Hometown",
-  "thirdSecurityAnswer" : "Comillas",
+  "securityQuestions" : [
+    "Name of pet",
+    "Name of favorite movie villain",
+    "Hometown"
+  ],
+  "securityAnswers" : [
+    "Lexi",
+    "two-face",
+    "Comillas"
+  ],
   "helpCommands" : [
       "/admin [code] Activates admin commands",
       "/clear clears the console"
