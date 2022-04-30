@@ -23,12 +23,16 @@ export default class Quiz extends Component{
     //Checks if all questions have a selected answer. If not the user is alerted to finish it.
     quizDone = (event) => {
         event.preventDefault();
-        if(event.target.answer0.value !== "" && event.target.answer1.value !== "" && event.target.answer2.value !== ""){
+        var check = true;
+        for(var i = 0; i < this.quiz.length; i++){
+            if(event.target["answer" + i].value === ""){
+                alert("Please answer all questions");
+                check = false;
+                break;
+            }
+        }
+        if(check)
             this.setState({quizComplete: true});
-        }
-        else {
-            alert("Please answer all questions");
-        }
     }
 
     render(){

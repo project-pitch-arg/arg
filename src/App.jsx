@@ -22,7 +22,7 @@ export default class App extends Component{
         return (
                 <div className="App">
                   <BrowserRouter>
-                    {window.location.pathname.toUpperCase() !== "/Internal".toUpperCase() ? (
+                    {!window.location.pathname.toUpperCase().includes("/internal".toUpperCase()) ? (
                     <div>
                         <TopBar />
                         <ScrollToTop smooth color='blue' style={{background:'#e2e2e2'}}/>
@@ -35,7 +35,7 @@ export default class App extends Component{
                       <Route exact path="/AboutUs" element={<AboutUs />} />
                       <Route exact path="/Internal/*" element={<Internal/>} />
                     </Routes>
-                    {window.location.pathname.toUpperCase() !== "/Internal".toUpperCase() ? (
+                    {!window.location.pathname.toUpperCase().includes("/internal".toUpperCase()) ? (
                         <div>
                             <Footer />
                         </div>
