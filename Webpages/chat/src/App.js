@@ -9,9 +9,9 @@ import LoginForm from './components/LoginForm';
 import './App.css';
 
 import CreateAccount from './components/CreateAccount';
-import { PROJECT_ID } from './ChangeableValues';
+import variables from './JSONDocuments/ChangeableValues';
 
-const projectID = PROJECT_ID;
+const projectID = variables.ProjectId;
 
 
 const App = () => {

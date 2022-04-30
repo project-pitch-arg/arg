@@ -1,5 +1,7 @@
 export default function TextPuzzle(){
     return (
-        <div>Text Puzzle</div>
+        <div class="content">
+            Text Puzzle
+        </div>
     )
 }

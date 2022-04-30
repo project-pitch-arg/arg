@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
 import {hashCode} from './CreateAccount';
-import { PROJECT_ID } from '../ChangeableValues';
+import variables from '../JSONDocuments/ChangeableValues';
 
-const projectID = PROJECT_ID;
+const projectID = variables.ProjectId;
 
 export var haveAccount;
 

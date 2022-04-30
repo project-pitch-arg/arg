@@ -1,5 +1,7 @@
 export default function SolvedScreen(){
     return (
-        <div>Solved</div>
+        <div class="content">
+            Solved
+        </div>
     )
 }

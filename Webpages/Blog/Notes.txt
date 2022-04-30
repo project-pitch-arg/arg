@@ -25,9 +25,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Fixa fortsättning på Skylines
     - Sara fixar ny sida
 
-- Fixa PostPuzzles struktur och upprepande kod.
-    - Ludvig
-
 - Gå igenom alla kommentarer
 
 - Flytta error för fel i json
@@ -39,16 +36,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
         VIlket vi inte kan göra för html objektet skapas inte förrän efteråt.
         Så vet inte riktigt hur vi tänkte göra detta.
 
-- Gå igenom så att alla klasser i chattens css används.
-    - Ludvig
-
 - Gör dino mer automatisk.
     - Sara
-
-- Använder vi allt i App.css?
-
-- Dinolista
-    - Ludvig (M-Z)
 
 - Fixa så att kodkommentarer och kod inte har saker som B-p1 osv.
 
@@ -85,7 +74,5 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Ta bort våra nycklar till chatten när allt är klart så man inte hamnar på mitt konto.
     - Dokumentera att detta måste fixas innan man starta bloggen.
-
-- Skulle kunna ha en lista med massa dinosaurier och att man välder relevanta därifrån istället för att skriva in dem.
 
 - Lägg till något som buffrar eller nåt när man gör ett konto. Tar en stund så man undrar om nåt händer

@@ -13,66 +13,109 @@ export default function Puzzles(post) {
 
   var imageIdentifierKey = -1;
 
+  var picture = hasPicture(post);
+
   // Create a list for solved passwords if it does not exist.
   if(sessionStorage.getItem("solvedPasswords") === null) {
     var passwords = [""];
     sessionStorage.setItem("solvedPasswords", JSON.stringify(passwords));
 
   }
-  // Checks if a post is a puzzle and in that case which puzzle it is.
-  // Depending on the result it will return different displays.
-  if(post.hasOwnProperty("puzzleNr")) {
-    switch (post.puzzleNr) {
-      case "B-p1": return puzzleBp1(post);
-      case "B-p2": break;
-      case "B-c1": break; 
-      case "B-c2": break;
-      case "B-c3": break;
-      case "B-c4": return puzzleBc4(post);
-      default: break;
-    }  
-  }
-  // Pasword not solved, display input area.
-  if(post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem('solvedPasswords'))).includes(post.secret)) {
+  
+  // Return appropriately formatted post after altering according to 
+  // potential puzzles.
     return (
       <div className="post">
           <div className="post-date">
-              {post.date[0]}.{post.date[1]}.{post.date[2]}
-            <div className="post-name"> 
-              {post.poster} 
-            <pre className="post-content">
-              {post.content} 
-              <form onSubmit={submitPassword(post)}>
-              <input type="text" value={sessionStorage["postSecret"]} onChange={(e) => sessionStorage.setItem("postSecret", e.target.value)} className="input" placeholder="???" required />
-              <div type="submit" />
-              </form>
-            </pre>
-            {hasPicture(post)}
-            </div>
+            {post.date[0]}.{post.date[1]}.{post.date[2]}
+            {showContent(post)}
           </div>
         </div>
     )
+
+/* -------------------- Functions -------------------- */  
+
+  function showContent(post) {
+    // Checks if a post is a puzzle and in that case which puzzle it is.
+    // Depending on the result it will return different displays.
+    if(post.hasOwnProperty("puzzleNr")) {
+      switch (post.puzzleNr) {
+        case "B-p1": return puzzleBp1(post);
+        case "B-p2": break;
+        case "B-c1": break;
+        case "B-c2": break;
+        case "B-c3": break;
+        case "B-c4": puzzleBc4(post); break;
+        default: break;
+      }  
+    }
+    return (
+      <div className="post-name" id="content" >
+        {post.poster}
+        <pre className="post-content">
+          {post.content}{checkPassword(post)}
+        </pre>
+        {picture}
+      </div>
+    )
   }
-  // Password solved, display secret content.
-  return (
-    <div className="post">
-      <div className="post-date">
-        {post.date[0]}.{post.date[1]}.{post.date[2]}
-        <div className="post-name"> 
-          {post.poster} 
-          <pre className="post-content"> 
+
+  // Function to encode the puzzle B-p1.
+  // See more in the puzzle docuemntation for the blog.
+  function puzzleBp1(post) {
+    post = changeDinos(post);
+    post.date[1] = Variables.clueDate;
+
+    // This post has the puzzle in it.
+    if (post.comment === "This is the main post to puzzle B-p1.") {
+      return (
+        <div className="post-name" id="content" >
+        {post.poster}
+        {changeString(post,changeColor(post, Variables.courseCode1, Variables.courseCode1Index),changeFont(post, Variables.courseCode2, Variables.courseCode2Index))}
+        <p style={{margin: "0", color: colors.postBackground}}>
+          {encodedMsg(JSON.stringify(Variables.answerToBeEncrypted))}
+        </p>
+        {insertPuzzlePics()}
+        </div>
+      )
+    } else {
+      return (
+        <div className="post-name" id="content" >
+          {post.poster}
+          <pre className="post-content">
             {post.content}
-            <pre>
-              {post.secretContent}
-            </pre>
           </pre>
+          <p style={{margin: "0", color: colors.postBackground}}>
+            {checkForHelper(post)}
+          </p>
           {hasPicture(post)}
         </div>
-      </div>
-    </div>
-  )
-  
-/* -------------------- Functions -------------------- */  
+      )
+    }
+  }
+
+  function puzzleBc4(post) {
+    if (post.comment === "This is the main post to puzzle B-c4.") {
+      picture = multiPicture();
+    }
+  }
+
+  function checkPassword(post) {
+    if (post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem('solvedPasswords'))).includes(post.secret)) {
+      return (
+        <form onSubmit={submitPassword(post)}>
+          <input type="text" value={sessionStorage["postSecret"]} onChange={(e) => sessionStorage.setItem("postSecret", e.target.value)} className="input" placeholder="???" required />
+          <div type="submit" />
+        </form>
+      )
+      } else {
+        return (
+          <pre>
+            {post.secretContent}
+          </pre>
+        )
+      }
+  }
 
   // Function to reveal content protcetec by password
   // when the password is correct.
@@ -359,109 +402,5 @@ export default function Puzzles(post) {
       return Variables.hintCourses;
     }
     return;
-  }
-
-  // Function to encode the puzzle B-p1.
-  // See more in the puzzle docuemntation for the blog.
-  function puzzleBp1(post) {
-    post = changeDinos(post);
-    post.date[1] = Variables.clueDate;
-
-    // This post has the puzzle in it.
-    if (post.comment === "This is the main post to puzzle B-p1.") {
-      return (
-        <div className="post">
-          <div className="post-date">
-            {post.date[0]}.{post.date[1]}.{post.date[2]}
-          <div className="post-name"> 
-            {post.poster} 
-          {changeString(post,changeColor(post, Variables.courseCode1, Variables.courseCode1Index),changeFont(post, Variables.courseCode2, Variables.courseCode2Index))}
-          <p style={{margin: "0", color: colors.postBackground}}> 
-              {encodedMsg(JSON.stringify(Variables.answerToBeEncrypted))}
-          </p>
-          {insertPuzzlePics()}
-          </div>
-        </div>
-      </div>
-     )
-    }
-    // Else, it is one of the helper posts which also has a strange date as clue.
-    return (
-      <div className="post">
-        <div className="post-date">
-          {post.date[0]}.{post.date[1]}.{post.date[2]}
-        <div className="post-name"> 
-          {post.poster} 
-        <pre className="post-content">
-          {post.content}
-        </pre>
-        <p style={{margin: "0", color: colors.postBackground}}>
-          {checkForHelper(post)}
-        </p>
-        {hasPicture(post)}
-        </div>
-      </div>
-    </div>
-   )
-  }
-
-  // Function to set up puzzle B-c4.
-  // See documentation for explanation.
-  function puzzleBc4(post) {
-    if (post.comment === "This is the main post to puzzle B-c4.") {
-      return (
-        <div className="post">
-          <div className="post-date">
-              {post.date[0]}.{post.date[1]}.{post.date[2]}
-            <div className="post-name"> 
-              {post.poster} 
-            <pre className="post-content"> 
-              {post.content}
-            </pre>
-              {multiPicture()}
-            </div>
-          </div>
-        </div>
-      )
-    }
-    // Password not solved, display input area.
-    if(post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem('solvedPasswords'))).includes(post.secret)) {
-      return (
-        <div className="post">
-            <div className="post-date">
-                {post.date[0]}.{post.date[1]}.{post.date[2]}
-              <div className="post-name"> 
-                {post.poster} 
-              <pre className="post-content">
-                {post.content} 
-                <form onSubmit={submitPassword(post)}>
-                <input type="text" value={sessionStorage['postSecret']} onChange={(e) => sessionStorage.setItem('postSecret', e.target.value)} className="input" placeholder="???" required />
-                <div type="submit" />
-                </form>
-              </pre>
-              {hasPicture(post)}
-              </div>
-            </div>
-          </div>
-      )
-    }
-    // Password solved, display secret content.
-    return (
-      <div className="post">
-        <div className="post-date">
-          {post.date[0]}.{post.date[1]}.{post.date[2]}
-          <div className="post-name"> 
-            {post.poster} 
-            <pre className="post-content"> 
-              {post.content}
-              <pre>
-                {post.secretContent}
-              </pre>
-            </pre>
-            {hasPicture(post)}
-          </div>
-        </div>
-      </div>
-    )
   }
 }
