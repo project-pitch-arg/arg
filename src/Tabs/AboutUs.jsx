@@ -76,7 +76,7 @@ export default function AboutUs() {
 
           <div class="content">
 
-                <h2 style={{"margin": "70px"}}>Who are we?</h2>
+                <h2 style={{"margin": "70px"}}>Our Team</h2>
               <div id="team-content">
                 <div class="team-member"><img src={markImg}/><a>Mark Roswell</a></div>
                 <div class="team-member"><img src={manuelImg}/><a>Manuel Mallory</a></div>
