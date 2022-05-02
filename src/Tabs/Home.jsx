@@ -49,7 +49,9 @@ export default function Home() {
       window.scrollTo(0, 0)
     }, [])
 
+
     return (
+
         <div>
           <div class="header" style={{backgroundImage: `url(${header})`}}>
             <h1> {headerTitle} </h1>
@@ -85,15 +87,20 @@ export default function Home() {
               <a> {fourthParagraphText} </a>
             </div>
               <div id="center-homepage-img">
-                <div class="homepage-img"><img  onClick={() => clickImg("1")} src={techImg1}/><i style={{"padding-top": "10px"}}>Image 1. A security camera</i></div>
-                <div class="homepage-img"><img  onClick={() => clickImg("2")} src={techImg2}/><i style={{"padding-top": "10px"}}>Image 2. A front door camera</i></div>
-                <div class="homepage-img"><img  onClick={() => clickImg("3")} src={techImg3}/><i style={{"padding-top": "10px"}}> Image 3. A security guard</i></div>
+                <div class="homepage-img"><img  onClick={() => clickImg("1")} src={techImg1}/><i style={{"padding": "10px"}}>Image 1. A security camera</i></div>
+                <div class="homepage-img"><img  onClick={() => clickImg("2")} src={techImg2}/><i style={{"padding": "10px"}}>Image 2. A front door camera</i></div>
+                <div class="homepage-img"><img  onClick={() => clickImg("3")} src={techImg3}/><i style={{"padding": "10px"}}> Image 3. A security guard</i></div>
               </div>
         </div>
+        {clearConsole()}
     </div>
+
 
       )
 
+    }
+    function clearConsole(){
+        console.clear();
     }
     function clickImg(string){
         console.clear();

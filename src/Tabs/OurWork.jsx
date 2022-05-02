@@ -126,13 +126,16 @@ const jsonData = require('../json/companyWebsite.json');
               <div id="future-right"><img src={futurePlans2} alt="" height='100%' width='100%'/></div>
             </div>
           </div>
+          {clearConsole()}
         </div>
       
     )
 }
 
 document.body.addEventListener('click', mouseUp, true);
-
+function clearConsole(){
+        console.clear();
+    }
 function mouseUp() {
     try {
           var currentSlide1 = document.getElementById("slideshow-container").getElementsByClassName("active")[0].getAttribute("data-index");

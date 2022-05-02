@@ -76,7 +76,7 @@ export default function AboutUs() {
 
           <div class="content">
 
-                <h2 style={{"margin-top": "70px"}}>Who are we?</h2>
+                <h2 style={{"margin": "70px"}}>Our Team</h2>
               <div id="team-content">
                 <div class="team-member"><img src={markImg}/><a>Mark Roswell</a></div>
                 <div class="team-member"><img src={manuelImg}/><a>Manuel Mallory</a></div>
@@ -87,10 +87,14 @@ export default function AboutUs() {
               <div id="team-content">
                   <div class="team-member"><img src={summerImg}/><a>Summer Morton</a></div>
                   <div class="team-member"><img src={madeleineImg}/><a>Madeleine Baldwin</a></div>
-                  <div class="team-member"><img src={lyraImg}/><a>Lyra Bell</a></div>
+                  <div class="team-member" ><img src={lyraImg} class = "lyra_img"/><a>Lyra Bell</a></div>
                   <div class="team-member"><img src={eloiseImg}/><a>Eloise Christensen</a></div>
                </div>
           </div>
+            {clearConsole()}
         </div>
     )
 }
+function clearConsole(){
+        console.clear();
+    }
