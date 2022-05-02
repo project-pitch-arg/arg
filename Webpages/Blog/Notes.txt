@@ -32,9 +32,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Flytta färger till JSON
     - Sara
-    - Så tänkte göra detta, men typ alla metoder jag läst om hämtar object och ändrar så. 
-        VIlket vi inte kan göra för html objektet skapas inte förrän efteråt.
-        Så vet inte riktigt hur vi tänkte göra detta.
 
 - Gör dino mer automatisk.
     - Sara
@@ -42,6 +39,9 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Fixa så att kodkommentarer och kod inte har saker som B-p1 osv.
 
 - Ändra så ledtrådar i dokumentationen kommer från tester
+
+- Fixa textplacering i memory.
+- Fixa så att höjden inte behöver skrivas ut.
 
 --------------- Prio 2 ---------------
 
