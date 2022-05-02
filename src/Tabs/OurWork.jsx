@@ -160,26 +160,30 @@ function puzzle() {
     var codeCurIndex = code.charAt(attempt.length);
 
     if(attempt == code.slice(0,attempt.length )){
-            if(codePrevIndex < codeCurIndex ){ //changes depending on if the player goes forward or backwards
-                if(currentSlide >= codePrevIndex && currentSlide <= codeCurIndex ){
-                    if(codeCurIndex == currentSlide){
-                        attempt += currentSlide;
-                    }
-                }
-                else{
-                    attempt = String(currentSlide);
-                }
-            }
-            else if(codePrevIndex > codeCurIndex ){
-                if(currentSlide <= codePrevIndex && currentSlide >= codeCurIndex ){
-                    if(codeCurIndex == currentSlide){
-                        attempt += currentSlide;
-                    }
-                }
-                else{
-                    attempt = String(currentSlide);
+        if(currentSlide == code.charAt(code.length - 2)){
+            //insert code that checks to see if player lands on code.length - 1
+        }
+        //if statements change depending on if the player goes forward or backwards
+        if(codePrevIndex < codeCurIndex ){
+            if(currentSlide >= codePrevIndex && currentSlide <= codeCurIndex ){
+                if(codeCurIndex == currentSlide){
+                    attempt += currentSlide;
                 }
             }
+            else{
+                attempt = String(currentSlide);
+            }
+        }
+        else if(codePrevIndex > codeCurIndex ){
+            if(currentSlide <= codePrevIndex && currentSlide >= codeCurIndex ){
+                if(codeCurIndex == currentSlide){
+                    attempt += currentSlide;
+                }
+            }
+            else{
+                attempt = String(currentSlide);
+            }
+        }
     }
     else{
         attempt = String(currentSlide);
