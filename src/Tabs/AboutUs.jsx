@@ -61,8 +61,6 @@ export default function AboutUs() {
               </div>
             </div>
 
-
-
             <div class="content-left-content">
              <div class="content-left-img"><img src={environmentImg}/></div>
               <div class="content-left-desc">
@@ -70,7 +68,6 @@ export default function AboutUs() {
                 <a> {secondParagraphText} </a>
               </div>
             </div>
-
 
           </div>
 

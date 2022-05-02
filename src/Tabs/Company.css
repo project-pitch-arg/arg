@@ -21,8 +21,10 @@ body {
     margin-right: auto;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    /*background-size: initial;*/
 }
+
 
 h1 {
     width: 100%;

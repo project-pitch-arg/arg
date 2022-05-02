@@ -132,28 +132,32 @@ const jsonData = require('../json/companyWebsite.json');
     )
 }
 
-document.body.addEventListener('click', mouseUp, true);
+document.body.addEventListener('click', puzzle, true);
+
 function clearConsole(){
         console.clear();
-    }
-function mouseUp() {
+}
+
+/*
+This function checks if the user has pressed anywhere on screen,
+then checks which slide is active,
+then adds this slide to attempt, (this means that the mouse press is one slide behind)
+if the attempt went the wrong way or overstepped then attempt is reset,
+the player must cycle from right to left to right ... until completed.
+*/
+function puzzle() {
     try {
           var currentSlide1 = document.getElementById("slideshow-container").getElementsByClassName("active")[0].getAttribute("data-index");
     } catch (error) {
     }
+
     if(currentSlide1 === null){
         currentSlide1 = 0;
     }
+
     var currentSlide = parseInt(currentSlide1) + 1;
     var codePrevIndex = code.charAt(attempt.length -1);
     var codeCurIndex = code.charAt(attempt.length);
-
-    // Debugging logs
-    // console.log("codeCharAt - 1 = " + code.charAt(attempt.length - 1));
-    // console.log("codeCharAt = " + code.charAt(attempt.length ));
-    // console.log("current slide " + currentSlide);
-    // console.log("sliced code:" + code.slice(0,attempt.length ));
-    // console.log("length:" + attempt.length);
 
     if(attempt == code.slice(0,attempt.length )){
             if(codePrevIndex < codeCurIndex ){ //changes depending on if the player goes forward or backwards
@@ -180,7 +184,6 @@ function mouseUp() {
     else{
         attempt = String(currentSlide);
     }
-
     if (attempt === code) {
       console.log(crackedUsername);
     }
