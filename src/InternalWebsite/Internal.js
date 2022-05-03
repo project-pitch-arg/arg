@@ -11,7 +11,7 @@ export default class Internal extends Component {
       this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
-    //When componentmounts check if logged in.
+    //When Component mounts it checks if the user is logged in.
     async componentDidMount() {
       this.updateWindowDimensions();
       window.addEventListener('resize', this.updateWindowDimensions);
@@ -38,7 +38,6 @@ export default class Internal extends Component {
     updateWindowDimensions() {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
-
 
     logIn = () =>{
         this.setState({loggedIn: true});
