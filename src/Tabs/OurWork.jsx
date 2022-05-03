@@ -12,15 +12,9 @@ const jsonData = require('../json/companyWebsite.json');
 
   //----------- puzzle related strings
 
-  var firstVar  = ourWork.puzzle_var.first_var;
-  var secondVar = ourWork.puzzle_var.second_var;
-  var thirdVar  = ourWork.puzzle_var.third_var;
-  var fourthVar = ourWork.puzzle_var.fourth_var;
-  var fifthVar = ourWork.puzzle_var.fifth_var;
-
-  var crackedUsername = ourWork.username;
-  var puzzleUnlocked = false;
-
+  var code  = ourWork.puzzle;
+  var username = ourWork.username;
+  var attempt = code.charAt(0);
 
   //---------- header title
 
@@ -51,9 +45,8 @@ const jsonData = require('../json/companyWebsite.json');
   var futurePlans2  = FUTURE_PLANS[1];
   var futurePlans3  = FUTURE_PLANS[2];
 
-  // Variables used within the code
-  var attempt = firstVar;
-  var code = firstVar + secondVar + thirdVar + fourthVar + fifthVar;
+
+
   
 }
 
@@ -132,56 +125,63 @@ const jsonData = require('../json/companyWebsite.json');
     )
 }
 
-document.body.addEventListener('click', mouseUp, true);
+document.body.addEventListener('click', puzzle, true);
+
 function clearConsole(){
         console.clear();
-    }
-function mouseUp() {
+}
+
+/*
+This function checks if the user has pressed anywhere on screen,
+then checks which slide is active,
+then adds this slide to attempt, (this means that the mouse press is one slide behind)
+if the attempt went the wrong way or overstepped then attempt is reset,
+the player must cycle from right to left to right ... until completed.
+*/
+function puzzle() {
     try {
           var currentSlide1 = document.getElementById("slideshow-container").getElementsByClassName("active")[0].getAttribute("data-index");
     } catch (error) {
     }
+
     if(currentSlide1 === null){
         currentSlide1 = 0;
     }
+
     var currentSlide = parseInt(currentSlide1) + 1;
     var codePrevIndex = code.charAt(attempt.length -1);
     var codeCurIndex = code.charAt(attempt.length);
 
-    // Debugging logs
-    // console.log("codeCharAt - 1 = " + code.charAt(attempt.length - 1));
-    // console.log("codeCharAt = " + code.charAt(attempt.length ));
-    // console.log("current slide " + currentSlide);
-    // console.log("sliced code:" + code.slice(0,attempt.length ));
-    // console.log("length:" + attempt.length);
-
     if(attempt == code.slice(0,attempt.length )){
-            if(codePrevIndex < codeCurIndex ){ //changes depending on if the player goes forward or backwards
-                if(currentSlide >= codePrevIndex && currentSlide <= codeCurIndex ){
-                    if(codeCurIndex == currentSlide){
-                        attempt += currentSlide;
-                    }
-                }
-                else{
-                    attempt = String(currentSlide);
-                }
-            }
-            else if(codePrevIndex > codeCurIndex ){
-                if(currentSlide <= codePrevIndex && currentSlide >= codeCurIndex ){
-                    if(codeCurIndex == currentSlide){
-                        attempt += currentSlide;
-                    }
-                }
-                else{
-                    attempt = String(currentSlide);
+        if(currentSlide == code.charAt(code.length - 2)){
+            //insert code that checks to see if player lands on code.length - 1
+        }
+        //if statements change depending on if the player goes forward or backwards
+        if(codePrevIndex < codeCurIndex ){
+            if(currentSlide >= codePrevIndex && currentSlide <= codeCurIndex ){
+                if(codeCurIndex == currentSlide){
+                    attempt += currentSlide;
                 }
             }
+            else{
+                attempt = String(currentSlide);
+            }
+        }
+        else if(codePrevIndex > codeCurIndex ){
+            if(currentSlide <= codePrevIndex && currentSlide >= codeCurIndex ){
+                if(codeCurIndex == currentSlide){
+                    attempt += currentSlide;
+                }
+            }
+            else{
+                attempt = String(currentSlide);
+            }
+        }
     }
     else{
         attempt = String(currentSlide);
     }
-
     if (attempt === code) {
-      console.log(crackedUsername);
+      console.log(username);
     }
 }

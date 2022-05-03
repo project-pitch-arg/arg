@@ -21,13 +21,7 @@
             }
       },
       "our_work": {
-            "puzzle_var": {
-                  "first_var": "1",
-                  "second_var": "4",
-                  "third_var": "2",
-                  "fourth_var": "5",
-                  "fifth_var": "3"
-            },
+            "puzzle": "14253",
             "username": "Edmund Schmidt",
             "header_title": "Our Work",
             "first_paragraph": { 

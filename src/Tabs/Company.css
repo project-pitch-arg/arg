@@ -19,10 +19,11 @@ body {
     background-image: url("../img/header.png"); /* Standard header if nothing is assigned */
     margin-left: auto;
     margin-right: auto;
-    background-attachment: fixed;
+    background-attachment: relative;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
+
 
 h1 {
     width: 100%;

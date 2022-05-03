@@ -1,45 +1,54 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './Company.css';
+import {basicFetchDataJson} from "../InternalWebsite/Client/Client";
+
 
 import { ABOUT_US_HEADER, ENVIRONMENT_IMAGE, GOALS_IMAGE, EMPLOYEES_IMAGES} from '../ImageImports';
 
 const jsonData = require('../json/companyWebsite.json');
 
+
 {
-  var aboutUs = jsonData.about_us;
+    var aboutUs = jsonData.about_us;
+    var accountPassword = aboutUs.password;
+
+    //---------- header title
+
+    var headerTitle = aboutUs.header_title;
 
 
-  //---------- header title
+    //----------- paragraph title and text
 
-  var headerTitle = aboutUs.header_title;
+    var firstParagraphTitle = aboutUs.first_paragraph.title;
+    var secondParagraphTitle = aboutUs.second_paragraph.title;
 
-  
-  //----------- paragraph title and text
-
-  var firstParagraphTitle = aboutUs.first_paragraph.title;
-  var secondParagraphTitle = aboutUs.second_paragraph.title;
-
-  var firstParagraphText = aboutUs.first_paragraph.text;
-  var secondParagraphText = aboutUs.second_paragraph.text;
+    var firstParagraphText = aboutUs.first_paragraph.text;
+    var secondParagraphText = aboutUs.second_paragraph.text;
 
 
-  //----------- images
+    //----------- images
 
-  var aboutUsHeaderImg = ABOUT_US_HEADER;
-  var environmentImg = ENVIRONMENT_IMAGE;
-  var goalsImg = GOALS_IMAGE;
-  var christianImg = EMPLOYEES_IMAGES[0];
-  var eloiseImg = EMPLOYEES_IMAGES[1];
-  var georgeImg = EMPLOYEES_IMAGES[2];
-  var lyraImg = EMPLOYEES_IMAGES[3];
-  var madeleineImg  = EMPLOYEES_IMAGES[4];
-  var manuelImg = EMPLOYEES_IMAGES[5];
-  var markImg = EMPLOYEES_IMAGES[6];
-  var summerImg = EMPLOYEES_IMAGES[7];
+    var aboutUsHeaderImg = ABOUT_US_HEADER;
+    var environmentImg = ENVIRONMENT_IMAGE;
+    var goalsImg = GOALS_IMAGE;
+    var christianImg = EMPLOYEES_IMAGES[0];
+    var eloiseImg = EMPLOYEES_IMAGES[1];
+    var georgeImg = EMPLOYEES_IMAGES[2];
+    var lyraImg = EMPLOYEES_IMAGES[3];
+    var madeleineImg  = EMPLOYEES_IMAGES[4];
+    var manuelImg = EMPLOYEES_IMAGES[5];
+    var markImg = EMPLOYEES_IMAGES[6];
+    var summerImg = EMPLOYEES_IMAGES[7];
 }
+
+function checkVariableParameters(){
+    //TODO add possible checks
+}
+
+
 export default function AboutUs() {
-    
+    checkVariableParameters();
     useEffect(() => {
       window.scrollTo(0, 0)
     }, [])
@@ -61,8 +70,6 @@ export default function AboutUs() {
               </div>
             </div>
 
-
-
             <div class="content-left-content">
              <div class="content-left-img"><img src={environmentImg}/></div>
               <div class="content-left-desc">
@@ -70,7 +77,6 @@ export default function AboutUs() {
                 <a> {secondParagraphText} </a>
               </div>
             </div>
-
 
           </div>
 

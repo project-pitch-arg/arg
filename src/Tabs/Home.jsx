@@ -42,9 +42,20 @@ const jsonData = require('../json/companyWebsite.json');
     var techImg3 = TECH_IMAGES[2];
 
 }
+function checkVariableParameters(){
 
+
+
+    for (let i = 0; i < passphrase.length; i++) {
+        if(parseInt(passphrase.charAt(i)) < 1 || parseInt(passphrase.charAt(i)) > 3){
+            throw new Error("Home passphrase numbers must be between 1 and 3!");
+        }
+    }
+
+
+}
 export default function Home() {
-    
+    checkVariableParameters();
     useEffect(() => {
       window.scrollTo(0, 0)
     }, [])
@@ -61,7 +72,7 @@ export default function Home() {
             
             <div class="content-right-content">
               <div class="content-right-img">
-                <img  onClick={() => clickFirstImg("1")} src={introImg} height='215px'/>
+                <img  onClick={() => initializePuzzle("1")} src={introImg} height='215px'/>
               </div>
               <div class="content-right-desc">
                 <h2> {firstParagraphTitle} </h2>
@@ -87,9 +98,9 @@ export default function Home() {
               <a> {fourthParagraphText} </a>
             </div>
               <div id="center-homepage-img">
-                <div class="homepage-img"><img  onClick={() => clickImg("1")} src={techImg1}/><i style={{"padding": "10px"}}>Image 1. A security camera</i></div>
-                <div class="homepage-img"><img  onClick={() => clickImg("2")} src={techImg2}/><i style={{"padding": "10px"}}>Image 2. A front door camera</i></div>
-                <div class="homepage-img"><img  onClick={() => clickImg("3")} src={techImg3}/><i style={{"padding": "10px"}}> Image 3. A security guard</i></div>
+                <div class="homepage-img"><img  onClick={() => imagePuzzle("1")} src={techImg1}/><i style={{"padding": "10px"}}>Image 1. A security camera</i></div>
+                <div class="homepage-img"><img  onClick={() => imagePuzzle("2")} src={techImg2}/><i style={{"padding": "10px"}}>Image 2. A front door camera</i></div>
+                <div class="homepage-img"><img  onClick={() => imagePuzzle("3")} src={techImg3}/><i style={{"padding": "10px"}}> Image 3. A security guard</i></div>
               </div>
         </div>
         {clearConsole()}
@@ -102,9 +113,11 @@ export default function Home() {
     function clearConsole(){
         console.clear();
     }
-    function clickImg(string){
-        console.clear();
+    function imagePuzzle(string){
+        clearConsole();
         attempt = attempt + string;
+
+        //resets attempt if input is wrong
         if(attempt.charAt(attempt.length - 1) !== passphrase.charAt(attempt.length -1)){
             attempt = "";
         }
@@ -114,19 +127,20 @@ export default function Home() {
                 attempt = "";
         }
     }
-    function clickFirstImg(){
+    function initializePuzzle(){
+        clearConsole()
         var text = "";
+
+        //splits up the passphrase with "-"
         for (let i = 0; i < passphrase.length; i++) {
             if(i == passphrase.length - 1){
-            text += passphrase.slice(i, i + 1);
+                text += passphrase.slice(i, i + 1);
             }
             else{
-            text += passphrase.slice(i, i + 1) + " - ";
+                text += passphrase.slice(i, i + 1) + " - ";
             }
 
         }
-        console.clear();
         console.log(text);
-        //console.log(passphrase);
     }
 
