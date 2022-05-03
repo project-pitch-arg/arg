@@ -12,15 +12,9 @@ const jsonData = require('../json/companyWebsite.json');
 
   //----------- puzzle related strings
 
-  var firstVar  = ourWork.puzzle_var.first_var;
-  var secondVar = ourWork.puzzle_var.second_var;
-  var thirdVar  = ourWork.puzzle_var.third_var;
-  var fourthVar = ourWork.puzzle_var.fourth_var;
-  var fifthVar = ourWork.puzzle_var.fifth_var;
-
-  var crackedUsername = ourWork.username;
-  var puzzleUnlocked = false;
-
+  var code  = ourWork.puzzle;
+  var username = ourWork.username;
+  var attempt = code.charAt(0);
 
   //---------- header title
 
@@ -51,9 +45,8 @@ const jsonData = require('../json/companyWebsite.json');
   var futurePlans2  = FUTURE_PLANS[1];
   var futurePlans3  = FUTURE_PLANS[2];
 
-  // Variables used within the code
-  var attempt = firstVar;
-  var code = firstVar + secondVar + thirdVar + fourthVar + fifthVar;
+
+
   
 }
 
@@ -189,6 +182,6 @@ function puzzle() {
         attempt = String(currentSlide);
     }
     if (attempt === code) {
-      console.log(crackedUsername);
+      console.log(username);
     }
 }

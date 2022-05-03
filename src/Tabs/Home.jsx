@@ -42,9 +42,20 @@ const jsonData = require('../json/companyWebsite.json');
     var techImg3 = TECH_IMAGES[2];
 
 }
+function checkVariableParameters(){
 
+
+
+    for (let i = 0; i < passphrase.length; i++) {
+        if(parseInt(passphrase.charAt(i)) < 1 || parseInt(passphrase.charAt(i)) > 3){
+            throw new Error("Home passphrase numbers must be between 1 and 3!");
+        }
+    }
+
+
+}
 export default function Home() {
-    
+    checkVariableParameters();
     useEffect(() => {
       window.scrollTo(0, 0)
     }, [])
