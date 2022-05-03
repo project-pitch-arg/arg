@@ -1,9 +1,11 @@
 .topbar {
   position: relative;
   top: 0px;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
+  display: block;
+
 }
 
 #topbar-ul {
@@ -51,6 +53,7 @@
 .menyDiv{
     background-color: #24647f;
     padding: 10px;
+    display: relative;
 }
 .dropdown {
   float: left;

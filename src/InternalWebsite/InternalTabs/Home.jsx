@@ -6,7 +6,7 @@ export default class Home extends Component{
         return (
                 <div class="newsBlock">
                     <h2>Welcome to our intranet</h2>
-                    <p>Here u can find all needed information about company internals.</p>
+                    <p>Here you can find all needed information about company internals.</p>
                 </div>
             )
     }

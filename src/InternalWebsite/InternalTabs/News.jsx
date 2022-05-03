@@ -22,14 +22,20 @@ export default class News extends Component{
         var check = true;
         while(check){
             check = false;
-            for(var i = 0; i < list.length - 1; i++){
-                if(new Date(list[i].date).getTime() < new Date(list[i+1].date).getTime()){
-                    check = true;
-                    var temp = list[i];
-                    list[i] = list[i+1];
-                    list[i+1] = temp;
+            try {
+                for(var i = 0; i < list.length - 1; i++){
+                    if(new Date(list[i].date).getTime() < new Date(list[i+1].date).getTime()){
+                        check = true;
+                        var temp = list[i];
+                        list[i] = list[i+1];
+                        list[i+1] = temp;
+                    }
                 }
             }
+            catch (e){
+                console.error(e)
+            }
+
         }
     }
 
