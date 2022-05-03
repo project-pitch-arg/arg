@@ -1,7 +1,8 @@
 
 //------------- JSON
 
-var jsonData1 = require('../../json/companyWebsite.json');
+var jsonData1 = require('../../json/OurWork.json');
+var jsonData2 = require('../../json/AboutUs.json');
 var jsonData = require('../../json/emailResponses.json');
 var variables = require('../../json/Variables.json');
 
@@ -29,12 +30,12 @@ var wilfred_third_reply = wilfred_temp.third_reply;
 var wilfred_fourth_reply = wilfred_temp.fourth_reply;
 
 //our work password
-var temp = jsonData1.our_work;
-var ourWorkPassword = temp.username;
+// var temp = jsonData1.our_work;
+var ourWorkPassword = jsonData1.username;
 
 //about us password
-var temp = jsonData1.about_us;
-var aboutUsPassword = temp.password;
+// var temp = jsonData1.about_us;
+var aboutUsPassword = jsonData2.password;
 
 //--------------
 const path = require('path');

@@ -1,0 +1,39 @@
+{
+  "puzzle_var": {
+        "first_var": "1",
+        "second_var": "4",
+        "third_var": "2",
+        "fourth_var": "5",
+        "fifth_var": "3"
+  },
+  "username": "Edmund Schmidt",
+  "header_title": "Our Work",
+  "first_paragraph": { 
+        "title": "Current work",
+        "text": "Our team of engineers are not only working on new ways to improve security but also finding methods in which customers can be more active in their own security. One of these ongoing projects aims to provide detailed information and visuals summarizing activity in and around their area on a weekly or monthly basis. We believe this will provide the customer with a sense of calm, reassuring them that their business is safe while out on a holiday."
+  },
+  
+  "second_paragraph": {
+        "title": "What we have done",
+        "text": "We have created applications across multiple platforms (smartphones, computers and smart watches) that allow customers to access their security cameras wherever they may be. We use unique technologies such as patrolling drones capable of dynamic automated security unlike any normal camera is able to do. However impressive these technologies may sound, our true ‘ace up the sleeve’ lies in our software, our Artificial Intelligence. "
+  },
+  "third_paragraph": {
+        "title": "Future Work",
+        "text": "For future work we want to continue expanding on the technologies we already have and develop new methods of surveillance unlike any that exist today. Our engineers have expressed interest in ideas such as linking up our systems to the customers doors, elevators, computer hardware and wireless systems. We believe this will help us achieve our dream of a 0% crime rate."
+  },
+  "images": {
+      "header":  "img/work-header.jpg",
+      "interaction":  "img/interaction.jpg",
+      "slideImages":  [
+            "img/slide-image-1.jpg",
+            "img/slide-image-2.jpg",
+            "img/slide-image-3.jpg",
+            "img/slide-image-4.jpg",
+            "img/slide-image-5.jpg"],
+      "futurePlans": [
+            "img/future-ai.jpg",
+            "img/robotic-future.jpg",
+            "img/future-security.jpg"
+      ]
+  }
+}

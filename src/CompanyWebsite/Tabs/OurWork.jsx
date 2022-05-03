@@ -1,56 +1,56 @@
 import React from 'react';
 import {Slide} from 'react-slideshow-image';
-import './Company.css';
 import { useEffect} from 'react';
+import './Company.css';
+import { importImage } from '../SharedFunctions';
+import Variables from '../../json/OurWork.json';
 
-import { OUR_WORK_HEADER, INTERACTION, SLIDE_IMAGES, FUTURE_PLANS } from '../ImageImports';
-
-const jsonData = require('../json/companyWebsite.json');
 
 {
-  var ourWork = jsonData.our_work;
+  // var Variables = jsonData.our_work;
 
   //----------- puzzle related strings
 
-  var firstVar  = ourWork.puzzle_var.first_var;
-  var secondVar = ourWork.puzzle_var.second_var;
-  var thirdVar  = ourWork.puzzle_var.third_var;
-  var fourthVar = ourWork.puzzle_var.fourth_var;
-  var fifthVar = ourWork.puzzle_var.fifth_var;
+  var firstVar  = Variables.puzzle_var.first_var;
+  var secondVar = Variables.puzzle_var.second_var;
+  var thirdVar  = Variables.puzzle_var.third_var;
+  var fourthVar = Variables.puzzle_var.fourth_var;
+  var fifthVar = Variables.puzzle_var.fifth_var;
 
-  var crackedUsername = ourWork.username;
-  var puzzleUnlocked = false;
+  var crackedUsername = Variables.username;
 
 
   //---------- header title
 
-  var headerTitle = ourWork.header_title;
+  var headerTitle = Variables.header_title;
 
   
   //-------------paragraph title and text
 
-  var firstParagraphTitle = ourWork.first_paragraph.title;
-  var secondParagraphTitle = ourWork.second_paragraph.title;
-  var thirdParagraphTitle = ourWork.third_paragraph.title;
+  var firstParagraphTitle = Variables.first_paragraph.title;
+  var secondParagraphTitle = Variables.second_paragraph.title;
+  var thirdParagraphTitle = Variables.third_paragraph.title;
 
-  var firstParagraphText = ourWork.first_paragraph.text;
-  var secondParagraphText = ourWork.second_paragraph.text;
-  var thirdParagraphText = ourWork.third_paragraph.text;
+  var firstParagraphText = Variables.first_paragraph.text;
+  var secondParagraphText = Variables.second_paragraph.text;
+  var thirdParagraphText = Variables.third_paragraph.text;
 
 
   //----------- images
 
-  var header        = OUR_WORK_HEADER;
-  var interaction   = INTERACTION;
-  var slideImage1   = SLIDE_IMAGES[0];
-  var slideImage2   = SLIDE_IMAGES[1];
-  var slideImage3   = SLIDE_IMAGES[2];
-  var slideImage4   = SLIDE_IMAGES[3];
-  var slideImage5   = SLIDE_IMAGES[4];
-  var futurePlans1  = FUTURE_PLANS[0];
-  var futurePlans2  = FUTURE_PLANS[1];
-  var futurePlans3  = FUTURE_PLANS[2];
+  var images = Variables.images;
 
+  var header        = importImage(images.header);
+  var interaction   = importImage(images.interaction);
+  var slideImage1   = importImage(images.slideImages[0]);
+  var slideImage2   = importImage(images.slideImages[1]);
+  var slideImage3   = importImage(images.slideImages[2]);
+  var slideImage4   = importImage(images.slideImages[3]);
+  var slideImage5   = importImage(images.slideImages[4]);
+  var futurePlans1  = importImage(images.futurePlans[0]);
+  var futurePlans2  = importImage(images.futurePlans[1]);
+  var futurePlans3  = importImage(images.futurePlans[2]);
+  
   // Variables used within the code
   var attempt = firstVar;
   var code = firstVar + secondVar + thirdVar + fourthVar + fifthVar;

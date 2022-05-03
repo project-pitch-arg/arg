@@ -2,44 +2,42 @@ import React from 'react';
 import { useEffect } from 'react';
 import './Company.css';
 import 'react-slideshow-image/dist/styles.css';
-
-import { HOME_HEADER, INTRO_IMAGE, TECH_IMAGES } from '../ImageImports';
-
-const jsonData = require('../json/companyWebsite.json');
+import { importImage } from '../SharedFunctions';
+import Variables from "../../json/Home.json";
 
 {
     //---------- puzzle related strings
 
-    var home = jsonData.home
-    var passphrase = home.passphrase;
-    var encryptedEmail = home.encrypted_email;
+    // var Variables = jsonData.home
+    var passphrase = Variables.passphrase;
+    var encryptedEmail = Variables.encrypted_email;
     var attempt = "";
 
 
     //---------- header title
 
-    var headerTitle = home.header_title;
+    var headerTitle = Variables.header_title;
 
 
     //---------- paragraph titles and texts
 
-    var firstParagraphTitle = home.first_paragraph.title;
-    var secondParagraphTitle = home.second_paragraph.title;
-    var thirdParagraphTitle = home.third_paragraph.title;
-    var fourthParagraphTitle = home.fourth_paragraph.title;
+    var firstParagraphTitle = Variables.first_paragraph.title;
+    var secondParagraphTitle = Variables.second_paragraph.title;
+    var thirdParagraphTitle = Variables.third_paragraph.title;
+    var fourthParagraphTitle = Variables.fourth_paragraph.title;
 
-    var firstParagraphText = home.first_paragraph.text;
-    var secondParagraphText = home.second_paragraph.text;
-    var thirdParagraphText = home.third_paragraph.text;
-    var fourthParagraphText = home.fourth_paragraph.text;
+    var firstParagraphText = Variables.first_paragraph.text;
+    var secondParagraphText = Variables.second_paragraph.text;
+    var thirdParagraphText = Variables.third_paragraph.text;
+    var fourthParagraphText = Variables.fourth_paragraph.text;
 
     //------------ images from imageImport file
 
-    var header = HOME_HEADER;
-    var introImg = INTRO_IMAGE;
-    var techImg1 = TECH_IMAGES[0];
-    var techImg2 = TECH_IMAGES[1];
-    var techImg3 = TECH_IMAGES[2];
+    var header = importImage(Variables.images.header);
+    var introImg = importImage(Variables.images.introImg);
+    var techImg1 = importImage(Variables.images.techImages[0]);
+    var techImg2 = importImage(Variables.images.techImages[1]);
+    var techImg3 = importImage(Variables.images.techImages[2]);
 
 }
 

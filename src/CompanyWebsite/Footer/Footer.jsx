@@ -1,12 +1,12 @@
 import './Footer.css';
+import Variables from '../json/Footer.json';
 
-const jsonData = require('../json/companyWebsite.json');
 
 {
-    var footer = jsonData.footer;
+    // var Variables = jsonData.footer;
 
-    var email = footer.email;
-    var author = footer.author;
+    var email = Variables.email;
+    var author = Variables.author;
 }
 
 export default function Footer() {

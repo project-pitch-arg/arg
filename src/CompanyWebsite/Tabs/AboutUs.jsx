@@ -1,42 +1,43 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './Company.css';
+import { importImage } from '../SharedFunctions';
+import Variables from '../../json/AboutUs.json';
 
-import { ABOUT_US_HEADER, ENVIRONMENT_IMAGE, GOALS_IMAGE, EMPLOYEES_IMAGES} from '../ImageImports';
-
-const jsonData = require('../json/companyWebsite.json');
 
 {
-  var aboutUs = jsonData.about_us;
+  // var Variables = jsonData.about_us;
 
 
   //---------- header title
 
-  var headerTitle = aboutUs.header_title;
+  var headerTitle = Variables.header_title;
 
   
   //----------- paragraph title and text
 
-  var firstParagraphTitle = aboutUs.first_paragraph.title;
-  var secondParagraphTitle = aboutUs.second_paragraph.title;
+  var firstParagraphTitle = Variables.first_paragraph.title;
+  var secondParagraphTitle = Variables.second_paragraph.title;
 
-  var firstParagraphText = aboutUs.first_paragraph.text;
-  var secondParagraphText = aboutUs.second_paragraph.text;
+  var firstParagraphText = Variables.first_paragraph.text;
+  var secondParagraphText = Variables.second_paragraph.text;
 
 
   //----------- images
 
-  var aboutUsHeaderImg = ABOUT_US_HEADER;
-  var environmentImg = ENVIRONMENT_IMAGE;
-  var goalsImg = GOALS_IMAGE;
-  var christianImg = EMPLOYEES_IMAGES[0];
-  var eloiseImg = EMPLOYEES_IMAGES[1];
-  var georgeImg = EMPLOYEES_IMAGES[2];
-  var lyraImg = EMPLOYEES_IMAGES[3];
-  var madeleineImg  = EMPLOYEES_IMAGES[4];
-  var manuelImg = EMPLOYEES_IMAGES[5];
-  var markImg = EMPLOYEES_IMAGES[6];
-  var summerImg = EMPLOYEES_IMAGES[7];
+  var images = Variables.images;
+
+  var header = importImage(images.header);
+  var environmentImg = importImage(images.environmentImg);
+  var goalsImg = importImage(images.goalsImg);
+  var christianImg = importImage(images.employees.christianYates);
+  var eloiseImg = importImage(images.employees.eloiseChristensen);
+  var georgeImg = importImage(images.employees.georgeCaroll);
+  var lyraImg = importImage(images.employees.lyraBell);
+  var madeleineImg = importImage(images.employees.madeleineBaldwin);
+  var manuelImg = importImage(images.employees.manuelMallory);
+  var markImg = importImage(images.employees.markRoswell);
+  var summerImg = importImage(images.employees.summerMorton);
 }
 export default function AboutUs() {
     
@@ -47,7 +48,7 @@ export default function AboutUs() {
     return(
 
         <div>
-          <div class="header"style={{backgroundImage: `url(${aboutUsHeaderImg})`}}>
+          <div class="header"style={{backgroundImage: `url(${header})`}}>
             <h1> {headerTitle} </h1>
           </div>
 

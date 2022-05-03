@@ -1,20 +1,18 @@
 import {Link} from "react-router-dom";
-import './Tabs/Company.css';
+import './CompanyWebsite/Tabs/Company.css';
 import './Wrong.css';
-import { WRONG_HEADER, HOME_ICON } from "./ImageImports";
+import { importImage } from "./SharedFunctions";
+import Variables from './json/Wrong.json';
 
-const jsonData = require('./json/companyWebsite.json');
 
 {
-  var wrong = jsonData.wrong;
-
-  var wrongMessage = wrong.wrong_message;
+  var wrongMessage = Variables.wrong_message;
   
 
   //---------- images
 
-  var wrongHeader = WRONG_HEADER;
-  var homeIcon = HOME_ICON;
+  var wrongHeader = importImage(Variables.header);
+  var homeIcon = importImage(Variables.homeIcon);
 }
 
 export default function Wrong() {
