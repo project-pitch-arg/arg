@@ -1,8 +1,7 @@
 import {Link} from "react-router-dom";
-import './CompanyWebsite/Tabs/Company.css';
 import './Wrong.css';
 import { importImage } from "./SharedFunctions";
-import Variables from './json/Wrong.json';
+import Variables from '../json/Wrong.json';
 
 
 {

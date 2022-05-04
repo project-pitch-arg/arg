@@ -1,10 +1,8 @@
 import './Footer.css';
-import Variables from '../json/Footer.json';
+import Variables from '../../json/Footer.json';
 
 
 {
-    // var Variables = jsonData.footer;
-
     var email = Variables.email;
     var author = Variables.author;
 }

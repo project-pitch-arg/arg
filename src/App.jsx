@@ -3,13 +3,13 @@ import React, {Component,useEffect } from 'react';
 import ScrollToTop from "react-scroll-to-top";
 
 import TopBar from './CompanyWebsite/TopBar/TopBar';
-import Wrong from './Wrong';
+import Wrong from './CompanyWebsite/Wrong';
 import Home from './CompanyWebsite/Tabs/Home';
 import OurWork from './CompanyWebsite/Tabs/OurWork';
 import AboutUs from './CompanyWebsite/Tabs/AboutUs';
 import Internal from './InternalWebsite/Internal';
 
-import Footer from './Footer/Footer';
+import Footer from './CompanyWebsite/Footer/Footer';
 
 export default class App extends Component{
 
