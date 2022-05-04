@@ -3,16 +3,16 @@
   "header_title": "About Us",
   "first_paragraph": {
         "title": "Our Goals",
-        "text": "Our primary goal is for all customers, those with and without financial stability, to feel safe. Listening to feedback and improving services is what we strive for. If you ever need us for anything we will be by your side ready to help."
+        "text": "Our primary goal is for all customers, those with and without financial stability, to feel safe. Listening to feedback and improving services is what we strive for. If you ever need us for anything we will be by your side ready to help.",
+        "image": "img/goals.jpg"
   },
   "second_paragraph": {
         "title": "Sustainable Practices",
-        "text": "We work hard to provide the best access to completely renewable products. Our internal workforce works diligently to innovate new types of renewable systems. We then use these throughout our development. This means that from our code to our manufacturing, everything here is carefully coordinated to be sustainable."
+        "text": "We work hard to provide the best access to completely renewable products. Our internal workforce works diligently to innovate new types of renewable systems. We then use these throughout our development. This means that from our code to our manufacturing, everything here is carefully coordinated to be sustainable.",
+        "image": "img/environment.jpg"
   },
   "images": {
        "header":  "img/aboutUsBackground.jpg",
-       "environmentImg":  "img/environment.jpg",
-       "goalsImg":  "img/goals.jpg",
        "employees": {
              "christianYates":  "img/christian-yates.jpg",
              "eloiseChristensen":  "img/eloise-christensen.jpg",

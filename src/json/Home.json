@@ -4,7 +4,8 @@
   "header_title": "Difax",
   "first_paragraph": { 
         "title": "What we do",
-        "text": "We combine the latest AI and surveillance technology to provide our customers with the highest levels of security. We start by setting up equipment around your area which then connects to our servers here at Difax. This equipment lets us monitor and observe potential threats against you or your company. If a threat is deemed actionable our elite security guards will be at your location before the perpetrators can do anything."
+        "text": "We combine the latest AI and surveillance technology to provide our customers with the highest levels of security. We start by setting up equipment around your area which then connects to our servers here at Difax. This equipment lets us monitor and observe potential threats against you or your company. If a threat is deemed actionable our elite security guards will be at your location before the perpetrators can do anything.",
+        "image": "img/intro-img.jpg"
   },
   "second_paragraph": {
         "title": "Why choose us?",
@@ -20,7 +21,6 @@
   },
   "images": {
         "header": "img/header.png",
-        "introImg": "img/intro-img.jpg",
         "techImages": [
               "img/homepage-img1.jpg",
               "img/homepage-img2.jpg",

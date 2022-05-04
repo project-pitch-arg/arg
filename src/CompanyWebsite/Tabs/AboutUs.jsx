@@ -14,13 +14,16 @@ import Variables from '../../json/AboutUs.json';
   var headerTitle = Variables.header_title;
 
   
-  //----------- paragraph title and text
+  //----------- paragraph title, text & images
 
   var firstParagraphTitle = Variables.first_paragraph.title;
   var secondParagraphTitle = Variables.second_paragraph.title;
-
+  
   var firstParagraphText = Variables.first_paragraph.text;
   var secondParagraphText = Variables.second_paragraph.text;
+  
+  var firstParagraphImage = importImage(Variables.first_paragraph.image);
+  var secondParagraphImage = importImage(Variables.second_paragraph.image);
 
 
   //----------- images
@@ -28,8 +31,6 @@ import Variables from '../../json/AboutUs.json';
   var images = Variables.images;
 
   var header = importImage(images.header);
-  var environmentImg = importImage(images.environmentImg);
-  var goalsImg = importImage(images.goalsImg);
   var christianImg = importImage(images.employees.christianYates);
   var eloiseImg = importImage(images.employees.eloiseChristensen);
   var georgeImg = importImage(images.employees.georgeCaroll);
@@ -55,7 +56,7 @@ export default function AboutUs() {
           <div class="content">
 
             <div class="content-right-content">
-              <div class="content-right-img"><img src={goalsImg}/> </div>
+              <div class="content-right-img"><img src={secondParagraphImage}/> </div>
               <div class="content-right-desc">
                 <h2> {firstParagraphTitle} </h2>
                 <a> {firstParagraphText} </a>
@@ -65,7 +66,7 @@ export default function AboutUs() {
 
 
             <div class="content-left-content">
-             <div class="content-left-img"><img src={environmentImg}/></div>
+             <div class="content-left-img"><img src={firstParagraphImage}/></div>
               <div class="content-left-desc">
                 <h2> {secondParagraphTitle} </h2>
                 <a> {secondParagraphText} </a>

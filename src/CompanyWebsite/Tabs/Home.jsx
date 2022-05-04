@@ -33,11 +33,13 @@ import Variables from "../../json/Home.json";
 
     //------------ images from imageImport file
 
-    var header = importImage(Variables.images.header);
-    var introImg = importImage(Variables.images.introImg);
-    var techImg1 = importImage(Variables.images.techImages[0]);
-    var techImg2 = importImage(Variables.images.techImages[1]);
-    var techImg3 = importImage(Variables.images.techImages[2]);
+    var images = Variables.images;
+
+    var header = importImage(images.header);
+    var introImg = importImage(Variables.first_paragraph.image);
+    var techImg1 = importImage(images.techImages[0]);
+    var techImg2 = importImage(images.techImages[1]);
+    var techImg3 = importImage(images.techImages[2]);
 
 }
 

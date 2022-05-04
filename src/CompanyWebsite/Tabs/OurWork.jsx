@@ -11,11 +11,7 @@ import Variables from '../../json/OurWork.json';
 
   //----------- puzzle related strings
 
-  var firstVar  = Variables.puzzle_var.first_var;
-  var secondVar = Variables.puzzle_var.second_var;
-  var thirdVar  = Variables.puzzle_var.third_var;
-  var fourthVar = Variables.puzzle_var.fourth_var;
-  var fifthVar = Variables.puzzle_var.fifth_var;
+  var puzzleVar  = Variables.puzzle_var;
 
   var crackedUsername = Variables.username;
 
@@ -25,7 +21,7 @@ import Variables from '../../json/OurWork.json';
   var headerTitle = Variables.header_title;
 
   
-  //-------------paragraph title and text
+  //-------------paragraph title, text & images
 
   var firstParagraphTitle = Variables.first_paragraph.title;
   var secondParagraphTitle = Variables.second_paragraph.title;
@@ -35,13 +31,13 @@ import Variables from '../../json/OurWork.json';
   var secondParagraphText = Variables.second_paragraph.text;
   var thirdParagraphText = Variables.third_paragraph.text;
 
+  var firstParagraphImage   = importImage(Variables.first_paragraph.image);
 
   //----------- images
 
   var images = Variables.images;
 
   var header        = importImage(images.header);
-  var interaction   = importImage(images.interaction);
   var slideImage1   = importImage(images.slideImages[0]);
   var slideImage2   = importImage(images.slideImages[1]);
   var slideImage3   = importImage(images.slideImages[2]);
@@ -52,8 +48,8 @@ import Variables from '../../json/OurWork.json';
   var futurePlans3  = importImage(images.futurePlans[2]);
   
   // Variables used within the code
-  var attempt = firstVar;
-  var code = firstVar + secondVar + thirdVar + fourthVar + fifthVar;
+  var attempt = puzzleVar.charAt(0);
+  var code = puzzleVar;
   
 }
 
@@ -72,7 +68,7 @@ import Variables from '../../json/OurWork.json';
           <div class="content">
             <div class="content-right-content">
               <div class="content-right-img">
-                <img src={interaction} alt="" height='215px'/>
+                <img src={firstParagraphImage} alt="" height='215px'/>
               </div>
               <div class="content-right-desc">
                 <h2> {firstParagraphTitle} </h2>

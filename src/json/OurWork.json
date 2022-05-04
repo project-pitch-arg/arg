@@ -1,16 +1,11 @@
 {
-  "puzzle_var": {
-        "first_var": "1",
-        "second_var": "4",
-        "third_var": "2",
-        "fourth_var": "5",
-        "fifth_var": "3"
-  },
+  "puzzle_var": "14253",
   "username": "Edmund Schmidt",
   "header_title": "Our Work",
   "first_paragraph": { 
         "title": "Current work",
-        "text": "Our team of engineers are not only working on new ways to improve security but also finding methods in which customers can be more active in their own security. One of these ongoing projects aims to provide detailed information and visuals summarizing activity in and around their area on a weekly or monthly basis. We believe this will provide the customer with a sense of calm, reassuring them that their business is safe while out on a holiday."
+        "text": "Our team of engineers are not only working on new ways to improve security but also finding methods in which customers can be more active in their own security. One of these ongoing projects aims to provide detailed information and visuals summarizing activity in and around their area on a weekly or monthly basis. We believe this will provide the customer with a sense of calm, reassuring them that their business is safe while out on a holiday.",
+        "image": "img/interaction.jpg"
   },
   
   "second_paragraph": {
@@ -23,7 +18,6 @@
   },
   "images": {
       "header":  "img/work-header.jpg",
-      "interaction":  "img/interaction.jpg",
       "slideImages":  [
             "img/slide-image-1.jpg",
             "img/slide-image-2.jpg",

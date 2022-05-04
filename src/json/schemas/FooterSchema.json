@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Footer",
+  "definitions": {
+      "Footer": {
+          "title": "Footer",
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+              "author": {
+                  "type": "string"
+              },
+              "email": {
+                  "type": "string",
+                  "format": "email"
+              }
+          },
+          "required": [
+              "author",
+              "email"
+          ]
+      }
+  }
+}
