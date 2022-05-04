@@ -324,6 +324,8 @@
 .turn {
     transform: rotateY(180deg);
 }
-.blue {
-    background-color: blue !important;
+.correct-pair {
+    transform: rotateY(180deg);
+    border-color: aqua;
+    border-style: double;
 }
