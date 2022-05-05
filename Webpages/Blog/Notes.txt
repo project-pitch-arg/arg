@@ -16,11 +16,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Flytta runt kod så det kommer i en logisk ordning.
 
-- Gör Spanienbiderna med gömt innehåll utbytbara.
+- Gör Spanienbilderna med gömt innehåll utbytbara.
     - Sara
-
-- Fixa fortsättning på Skylines
-    - Sara fixar ny sida
 
 - Gå igenom alla kommentarer
 
@@ -31,7 +28,7 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     - Sara
 
 - Gör dino mer automatisk.
-    - Sara
+    - Ludivg
 
 - Fixa så att kodkommentarer och kod inte har saker som B-p1 osv.
 
@@ -40,7 +37,15 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Fixa textplacering i memory.
 - Fixa så att höjden inte behöver skrivas ut.
 
+- Flytta isär chatthistorik för olika rum
+    - Sara
+
+- Ta bort alla tillfällen då mejl nämns
+    - Ludvig
+
 --------------- Prio 2 ---------------
+
+ - Flytta fliknamn till JSON.
 
 - Kanske göra schema för encryptionKey bättre?
 
@@ -49,9 +54,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Notera någonstans att chatnamn som skapas i början behöver vara unika. Kan inte fixas med JSON schema.
     - Gäller StartUp filer.
-
-- Add an email in case the chat does not work?
-    - I About, endast för Edwin i så fall. För Wilfreds får man senare.
 
 - Fixa så att man inte kan försöka lägga in eller skicka meddelanden med användare som inte finns
     - Borde bara inte fungera med servern, men borde testas.
@@ -63,7 +65,7 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Mention computer picture a bit in main post?
 
 - Text som är secretContent radbryter inte när rutan är slut. Dyker upp en scrollbar, men borde inte vara så svårt att fixa
-    - Sara
+    - Ludvig
 
 --------------- Prio 3 ---------------
 
