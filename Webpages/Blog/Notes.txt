@@ -3,9 +3,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 1 ---------------
 
-- Ha med Cake i chatten om allt så att man kan nämna om dikten
-    att det är cakew för att skilja från det.
-
 - Lägg till att Mr X och icniVad inte kommer delta på ett tag.
     - Mr X ger ingen anledning. Säger bara att han kommer vara borta.
     - icniVad "Real life came knocking... sad"
@@ -15,7 +12,7 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Notera att första inlägget i PostContent måste ha ett datum
 
-- Chatthistorik för allmän chatt och aprilpusslet.
+- Chatthistorik för allmän chatt.
 
 - Flytta runt kod så det kommer i en logisk ordning.
 
@@ -62,8 +59,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Dokumentation med användarprofiler.
     - Typ kopiera txt dokumentet som redan finns.
     - Appendix till allmän guide.
-
-- Ta med diskussion kring vad dikten betyder i chatt med allt möjigt.
 
 - Mention computer picture a bit in main post?
 

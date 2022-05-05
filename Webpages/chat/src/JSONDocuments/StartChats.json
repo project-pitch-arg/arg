@@ -25,9 +25,9 @@
         "users": ["Robot1311213", "Fexjo", "icniVad", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
     },
     {
-        "admin": "Pinnipedia",
-        "chat_name": "Where is this?",
-        "users": ["Robot1311213", "Fexjo", "Mr X", "icniVad", "Tree123", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+        "admin": "Tree123",
+        "chat_name": "I found something strange",
+        "users": ["Robot1311213", "Fexjo", "Mr X", "icniVad", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
     }
 
 ]
