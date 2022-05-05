@@ -21,14 +21,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Gå igenom alla kommentarer
 
-- Flytta error för fel i json
-    - Ludvig
-
 - Flytta färger till JSON
     - Sara
-
-- Gör dino mer automatisk.
-    - Ludivg
 
 - Fixa så att kodkommentarer och kod inte har saker som B-p1 osv.
 
@@ -39,9 +33,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Flytta isär chatthistorik för olika rum
     - Sara
-
-- Ta bort alla tillfällen då mejl nämns
-    - Ludvig
 
 --------------- Prio 2 ---------------
 
@@ -61,8 +52,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Dokumentation med användarprofiler.
     - Typ kopiera txt dokumentet som redan finns.
     - Appendix till allmän guide.
-
-- Mention computer picture a bit in main post?
 
 - Text som är secretContent radbryter inte när rutan är slut. Dyker upp en scrollbar, men borde inte vara så svårt att fixa
     - Ludvig

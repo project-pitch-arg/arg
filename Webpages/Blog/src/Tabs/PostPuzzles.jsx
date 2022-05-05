@@ -385,9 +385,25 @@ export default function Puzzles(post) {
   // specified names from ChangeableValues. Also makes
   // sure that they are all capitalized. See documentation.
   function changeDinos(post) {
-    const dino1 = Variables.threeDinosaurs[0][0].toUpperCase() + Variables.threeDinosaurs[0].slice(1);
-    const dino2 = Variables.threeDinosaurs[1][0].toLocaleUpperCase() + Variables.threeDinosaurs[1].slice(1);
-    const dino3 = Variables.threeDinosaurs[2][0].toLocaleUpperCase() + Variables.threeDinosaurs[2].slice(1);
+    if (!post.content.includes("XXDINO1XX") && !post.content.includes("XXDINO2XX") && !post.content.includes("XXDINO3XX")) {
+      return post;
+    }
+    const LIST_COPY = Variables.listForCourseCode3;
+    var firstTriggered = false;
+    var secondTriggered = false;
+    var thirdTriggered = false;
+    for (var i = 0; i < LIST_COPY.length; i++) {
+      if (LIST_COPY[i][0].toLocaleUpperCase() == Variables.courseCode3[0][0].toLocaleUpperCase() && !firstTriggered) {
+        var dino1 = LIST_COPY[i][0].toLocaleUpperCase() + LIST_COPY[i].slice(1);
+        firstTriggered = true;
+      } else if (LIST_COPY[i][0].toLocaleUpperCase() == Variables.courseCode3[1][0].toLocaleUpperCase() && !secondTriggered) {
+        var dino2 = LIST_COPY[i][0].toLocaleUpperCase() + LIST_COPY[i].slice(1);
+        secondTriggered = true;
+      } else if (LIST_COPY[i][0].toLocaleUpperCase() == Variables.courseCode3[2][0].toLocaleUpperCase() && !thirdTriggered) {
+        var dino3 = LIST_COPY[i][0].toLocaleUpperCase() + LIST_COPY[i].slice(1);
+        thirdTriggered = true;
+      } 
+    }
     post.content = post.content.replace("XXDINO1XX", dino1);
     post.content = post.content.replace("XXDINO2XX", dino2);
     post.content = post.content.replace("XXDINO3XX", dino3);
@@ -403,4 +419,53 @@ export default function Puzzles(post) {
     }
     return;
   }
+}
+
+export function errorChecker() {
+  // Start with some error checking for the JSON values
+  const DIFFERENT_COLORS = ["AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure", "Beige", "Bisque", "Black", "BlanchedAlmond", "Blue",
+                            "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse", "Chocolate", "Coral", "CornflowerBlue", "Cornsilk", 
+                            "Crimson", "Cyan", "DarkBlue", "DarkCyan", "DarkGoldenRod", "DarkGray", "DarkGrey", "DarkGreen", "DarkKhaki", 
+                            "DarkMagenta", "DarkOliveGreen", "DarkOrange", "DarkOrchid", "DarkRed", "DarkSalmon", "DarkSeaGreen", "DarkSlateBlue",
+                            "DarkSlateGray", "DarkSlateGrey", "DarkTurquoise", "DarkViolet", "DeepPink", "DeepSkyBlue", "DimGray", "DimGrey",
+                            "DodgerBlue", "FireBrick", "FloralWhite", "ForestGreen", "Fuchsia", "Gainsboro", "GhostWhite", "Gold", "GoldenRod",
+                            "Gray", "Grey", "Green", "GreenYellow", "HoneyDew", "HotPink", "IndianRed", "Indigo", "Ivory", "Khaki", "Lavender",
+                            "LavenderBlush", "LawnGreen", "LemonChiffon", "LightBlue", "LightCoral", "LightCyan", "LightGoldenRodYellow", "LightGray", 
+                            "LightGrey", "LightGreen", "LightPink", "LightSalmon", "LightSeaGreen", "LightSkyBlue", "LightSlateGray", "LightSlateGrey",
+                            "LightSteelBlue", "LightYellow", "Lime", "LimeGreen", "Linen", "Magenta", "Maroon", "MediumAquaMarine", "MediumBlue", 
+                            "MediumOrchid", "MediumPurple", "MediumSeaGreen", "MediumSlateBlue", "MediumSpringGreen", "MediumTurquoise", "MediumVioletRed",
+                            "MidnightBlue", "MintCream", "MistyRose", "Moccasin", "NavajoWhite", "Navy", "OldLace", "Olive", "OliveDrab", "Orange",
+                            "OrangeRed", "Orchid", "PaleGoldenRod", "PaleGreen", "PaleTurquoise", "PaleVioletRed", "PapayaWhip", "PeachPuff", "Peru",
+                            "Pink", "Plum", "PowderBlue", "Purple", "RebeccaPurple", "Red", "RosyBrown", "RoyalBlue", "SaddleBrown", "Salmon", "SandyBrown",
+                            "SeaGreen", "SeaShell", "Sienna", "Silver", "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow", "SpringGreen", "SteelBlue", 
+                            "Tan", "Teal", "Thistle", "Tomato", "Turquoise", "Violet", "Wheat", "White", "WhiteSmoke", "Yellow", "YellowGreen"];
+
+  const DIFFERENT_FONTS = ["Arial", "Arial Black", "Verdana", "Tahoma", "Trebuchet MS", "Impact", "Times New Roman", "Didot", "Georgia", "American Typewriter",
+                            "Andalé Mono", "Courier", "Lucida Console", "Monaco", "Bradley Hand", "Brush Script MT", "Luminari", "Comic Sans MS"];
+
+  if (Variables.quoteTime < 1)
+      throw new Error("Delay for quotes has to be a positive number.");
+  if (Variables.encryptionKey[0][0].length !== 1)
+      throw new Error("First encryption key has to be a single letter.");
+  if (Variables.encryptionKey[1][0].length !== 1)
+      throw new Error("Second encryption key has to be a single letter.");
+  if (Variables.encryptionKey[2][0].length !== 1)
+      throw new Error("Third encryption key has to be a single letter.");
+  if (Variables.encryptionKey[3][0].length !== 1)
+      throw new Error("Fourth encryption key has to be a single letter.");
+  if (Variables.courseCode1.length !== 3)
+      throw new Error("First course code has to be three letters.");
+  if (Variables.courseCode2.length !== 3)
+      throw new Error("Second course code has to be three letters.");
+  if (Variables.courseCode3.length !== 3)
+      throw new Error("Third course code has to be three letters.");
+  if (Variables.postsPerPage < 1)
+      throw new Error("1 or more posts has to be displayed.");
+  if (!(!DIFFERENT_COLORS.includes(Variables.letterColour) && !(Variables.letterColour.slice(0,3) === "rbg") && 
+        !(Variables.letterColour.slice(0,1) === "#") && !(Variables.letterColour.slice(0,3) === "hsl") && 
+        !(Variables.letterColour.slice(0,4) === "rgba") && !(Variables.letterColour.slice(0,4) === "hsla"))) {
+      throw new Error("The specified color should be a color in a correct format.");
+  }
+  if (!DIFFERENT_FONTS.includes(Variables.letterFont))
+      throw new Error("The specified font should be an existing web safe font.");
 }

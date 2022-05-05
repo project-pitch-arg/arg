@@ -34,7 +34,6 @@
                             "Ultrasaurus", "Velociraptor", "Vulcanodon", "Vahiny", "Weewarrasaurus", "Wamweracaudia", "Wulong",
                             "Xenoposeidon", "Xixianykus", "Xuanhanosaurus", "Yandusaurus", "Yinlong", "Yutyrannus", "Zby",
                             "Zuul", "Zhongjianosaurus"],
-    "threeDinosaurs": ["Aardonyx", "Datanglong", "Talarurus"],
     "hintDinosaurs": "I wonder why only two dinosaurs are capitalized? Maybe you can find another one that's capitalized as well?",
     "hintCourses": "See if you can build some other course codes from pieces you find here and there. I'm sure you'll find something interesting on their canvas course pages.",
     "redHintPicture": [1, ["Duros.jpg", "DurosLightRed.jpg", "DurosRed.jpg", "DurosDarkRed.jpg"]],

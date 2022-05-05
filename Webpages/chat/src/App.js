@@ -50,7 +50,7 @@ const App = () => {
         <p>
         Is something not working? </p>
         <p>
-        Please contact us through the information on the About page.
+        Make a new chat room and add one of us. We'll check out your complaint.
         </p>
       </div>
     </div>
