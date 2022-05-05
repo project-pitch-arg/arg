@@ -36,7 +36,7 @@ export default function Home() {
             </div>
             <div id="home-right"> 
               If you're new to the website we recommend you check out our&nbsp;
-              <Link className="link" onClick={Help} to="/About">
+              <Link className="link" onClick={Help} to={"/" + Variables.tabNames[4]}>
                 About 
               </Link>
             </div>
