@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./TopBar.css";
 import {Link} from "react-router-dom";
-
+import Variables from "../JSONDocuments/ChangeableValues.json";
 
 export default function TopBar(props) {
 
@@ -22,18 +22,18 @@ export default function TopBar(props) {
             case "":
                 document.getElementById("tab-home").classList.add("active");
             break;
-            case "Chat":
-                document.getElementById("tab-chat").classList.add("active");
-            break;
-            case "Posts":
+            case Variables.tabNames[1]:
                 document.getElementById("tab-posts").classList.add("active");
             break;
-            case "About":
-                document.getElementById("tab-about").classList.add("active");
-            break;    
-            case "Quotes":
+            case Variables.tabNames[2]:
+                document.getElementById("tab-chat").classList.add("active");
+            break;
+            case Variables.tabNames[3]:
                 document.getElementById("tab-Quotes").classList.add("active");
             break ;
+            case Variables.tabNames[4]:
+                document.getElementById("tab-about").classList.add("active");
+            break;    
             default: break;   
         }
       }
@@ -50,11 +50,11 @@ export default function TopBar(props) {
           // Various CSS classes help format and display the buttons available on the topbar.
             <div className="topbar">
               <ul id="topbar-ul">
-                <li className="topbar-li"><Link id="tab-home" onClick={() => HIGHLIGHT_ACTIVE("")} to ="/"> Home </Link></li>
-                <li className="topbar-li"><Link id="tab-posts" onClick={() => HIGHLIGHT_ACTIVE("Posts")} to ="/Posts"> Posts</Link></li>
-                <li className="topbar-li"><Link id="tab-chat" onClick={() => HIGHLIGHT_ACTIVE("Chat")} to ="/Chat"> Chat </Link></li>
-                <li className="topbar-li"><Link id="tab-Quotes" onClick={() => HIGHLIGHT_ACTIVE("Quotes")} to ="/Quotes"> Quotes </Link></li>
-                <li className="topbar-li"><Link id="tab-about" onClick={() => HIGHLIGHT_ACTIVE("About")} to ="/About"> About </Link></li>
+                <li className="topbar-li"><Link id="tab-home" onClick={() => HIGHLIGHT_ACTIVE("")} to ="/"> {Variables.tabNames[0]} </Link></li>
+                <li className="topbar-li"><Link id="tab-posts" onClick={() => HIGHLIGHT_ACTIVE("Posts")} to ={"/" + Variables.tabNames[1]}> {Variables.tabNames[1]}</Link></li>
+                <li className="topbar-li"><Link id="tab-chat" onClick={() => HIGHLIGHT_ACTIVE("Chat")} to ={"/" + Variables.tabNames[2]}> {Variables.tabNames[2]} </Link></li>
+                <li className="topbar-li"><Link id="tab-Quotes" onClick={() => HIGHLIGHT_ACTIVE("Quotes")} to ={"/" + Variables.tabNames[3]}> {Variables.tabNames[3]} </Link></li>
+                <li className="topbar-li"><Link id="tab-about" onClick={() => HIGHLIGHT_ACTIVE("About")} to ={"/" + Variables.tabNames[4]}> {Variables.tabNames[4]} </Link></li>
               </ul>
             </div>
         )

@@ -12,6 +12,7 @@ import { errorChecker } from "./Tabs/PostPuzzles";
 import Memory from "./Tabs/SkylinePuzzle/Memory";
 import TextPuzzle from "./Tabs/SkylinePuzzle/TextPuzzle";
 import SolvedScreen from "./Tabs/SkylinePuzzle/SolvedScreen";
+import Variables from "./JSONDocuments/ChangeableValues.json";
 
 function App() {
   
@@ -33,13 +34,13 @@ function App() {
         <Routes>
           <Route path="*" element={<Wrong />} /> {/*Default when path doesn't match any of the ones listed below*/}
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/Chat" element={<Chat />} />
-          <Route exact path="/Posts" element={<Posts />} />
-            <Route exact path="/Posts/478" element={<Memory />}/>
-            <Route exact path="/Posts/GU" element={<TextPuzzle />}/>
-            <Route exact path="/Posts/Triceratops" element={<SolvedScreen />}/>
-          <Route exact path="/About" element={<About />} />
-          <Route exact path="/Quotes" element={<Quotes />} />
+          <Route exact path={"/" + Variables.tabNames[1]} element={<Posts />} />
+          <Route exact path={"/" + Variables.tabNames[2]} element={<Chat />} />
+            <Route exact path={"/" + Variables.tabNames[1] + "/478"} element={<Memory />}/>
+            <Route exact path={"/" + Variables.tabNames[1] + "/GU"} element={<TextPuzzle />}/>
+            <Route exact path={"/" + Variables.tabNames[1] + "/Triceratops"} element={<SolvedScreen />}/>
+          <Route exact path={"/" + Variables.tabNames[3]} element={<Quotes />} />
+          <Route exact path={"/" + Variables.tabNames[4]} element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>

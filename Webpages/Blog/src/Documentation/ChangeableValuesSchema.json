@@ -4,9 +4,10 @@
         "userPicture1", "userPicture2", "username1", "username2",
         "quoteTime", "iframeList", "answerToBeEncrypted", "encryptionKey",
         "clueDate", "letterFont", "letterColour", "courseCode1", "courseCode1Index",
-        "courseCode2", "courseCode2Index", "threeDinosaurs", "hintDinosaurs",
+        "courseCode2", "courseCode2Index", "hintDinosaurs",
         "hintCourses", "redHintPicture", "blueHintPicture", "greenHintPicture",
-        "jigsawSudoku", "parkEntrance", "directions", "chatAddress", "postsPerPage"
+        "jigsawSudoku", "parkEntrance", "directions", "chatAddress", "postsPerPage",
+        "tabNames"
     ],
     "properties": {
         "userPicture1": {
@@ -99,15 +100,6 @@
                 "type": "string"
             }
         },
-        "threeDinosaurs": {
-            "title": "Names of three dinosaurs were the first letters combine to a course code.",
-            "type": "array",
-            "minLength": 3,
-            "maxLength": 3,
-            "items": {
-                "type": "string"
-            }
-        },
         "hintDinosaurs": {
             "title": "A hidden hint for the meaning of the dinosaurs.",
             "type": "string"
@@ -185,6 +177,15 @@
             "type": "integer",
             "exclusiveMinimum": 0,
             "maximum": 10
+        },
+        "tabNames": {
+            "title": "The names of the 5 different tabs on the website.",
+            "type": "array",
+            "minLength": 5,
+            "maxLength": 5,
+            "items": {
+                "type": ["string"]
+            }
         }
     },
     "additionalProperties": false

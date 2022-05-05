@@ -36,8 +36,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 2 ---------------
 
- - Flytta fliknamn till JSON.
-
 - Kanske göra schema för encryptionKey bättre?
 
 - Organisera css-filer (bloggen fixad)
