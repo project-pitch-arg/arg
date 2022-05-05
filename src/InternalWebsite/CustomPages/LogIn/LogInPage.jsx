@@ -75,8 +75,8 @@ export default class LogInPage extends Component{
     render(){
         return (<div className="popup-box">
           <div className="box">
-            <h1 style={{color: "black", fontSize: "45px"}}>Account</h1>
-            <form onSubmit={this.logIn}>
+            <h1 className="logInHeader">Account</h1>
+            <form className="logInForm" onSubmit={this.logIn}>
                 <label>Username</label>
                 <input type="text" id="username"/>
                 <label>Password</label>
@@ -84,9 +84,9 @@ export default class LogInPage extends Component{
                 {this.cipher !== "" ? (<div><label>Cipher</label><input type="text" id="cipher"/>
                 <p>Solve security cipher to prove your identity. You have {this.getTimeLeft()} seconds.</p>
                 <p style={{color: "white"}}><i>Hint: Answer should be an animal</i></p>
-                <p style={{color: "red"}}>{this.cipher}</p><div class="progress-bar-div">
-                <img class="progress-bar-image" src={progressBar} alt="Progress bar"/>
-                <div class="progress-bar-removal" style={{width: this.getTimeInPercentage(this.currentTimer)}}></div>
+                <p style={{color: "red"}}>{this.cipher}</p><div className="progress-bar-div">
+                <img className="progress-bar-image" src={progressBar} alt="Progress bar"/>
+                <div className="progress-bar-removal" style={{width: this.getTimeInPercentage(this.currentTimer)}}></div>
                 </div>
                 </div>) : (null) }
                 <input type="submit" id="submit" value="Log in"/>

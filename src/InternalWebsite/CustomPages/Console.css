@@ -24,7 +24,6 @@
     color: white;
     border-bottom: 1px solid white;
     padding: 10px;
-    line-height: 60%;
     overflow: scroll;
     margin-top: 20px;
 }
@@ -33,6 +32,7 @@
     margin-top: 10px;
     text-align: left;
     overflowY: scroll;
+    white-space: normal;
 }
 .block{
     height: 50px;

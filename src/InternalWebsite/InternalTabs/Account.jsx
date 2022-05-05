@@ -12,10 +12,10 @@ export default class Account extends Component{
 
     render(){
         return (
-            <div class="newsBlock">
+            <div className="newsBlock" >
                 <h1>{this.account.username}</h1>
                 <img style={{width: "30vh"}}src={require('../images/'+ this.account.username +".jpg")} alt=""/>
-                <button class="switchAccount" onClick={this.props.logOut}>Sign out</button>
+                <button className="switchAccount" onClick={this.props.logOut}>Sign out</button>
             </div>
         )
     }

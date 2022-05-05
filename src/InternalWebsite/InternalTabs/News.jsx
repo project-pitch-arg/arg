@@ -49,12 +49,12 @@ export default class News extends Component{
     render(){
         if(this.state.dataReceived){
             return (
-                <div class="newsBlock" style={{overflowY: 'scroll'}}>
-                    <h1 class="newsHeader">News</h1>
+                <div className="newsBlock" style={{overflowY: 'scroll'}} >
+                    <h1 className="newsHeader">News</h1>
                     {
                         Object.keys(this.news).map((key) => {
                             return (<List
-                               class="list"
+                               className="list"
                                itemLayout="horizontal"
                                dataSource={key}
                                key={key}
@@ -63,9 +63,9 @@ export default class News extends Component{
                                    <List.Item.Meta
                                      title={this.news[item].title + " - " + this.news[item].date}
                                      description={this.news[item].img ?
-                                     (<div class="listItem"><img class="news" src={require("../images/" + this.news[item].img + ".jpg")} alt={"CEO" }/><p class="newsText">{this.news[item].text}</p></div>)
+                                     (<div className="listItem"><img className="news" src={require("../images/" + this.news[item].img + ".jpg")} alt={"CEO" }/><p className="newsText">{this.news[item].text}</p></div>)
                                      :
-                                     (<div class="listItem"><p class="newsText">{this.news[item].text}</p></div>)}
+                                     (<div className="listItem"><p className="newsText">{this.news[item].text}</p></div>)}
                                    />
                                  </List.Item>
                                )}
@@ -77,7 +77,7 @@ export default class News extends Component{
             )
         }
         else {
-            return (<div class="newsBlock"></div>)
+            return (<div className="newsBlock"></div>)
         }
 
     }

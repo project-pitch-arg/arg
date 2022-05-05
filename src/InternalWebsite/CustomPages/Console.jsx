@@ -8,7 +8,7 @@ export default class Console extends Component{
 
     constructor(props){
         super(props);
-        this.previousCommands = [""];
+        this.previousCommands = [];
         this.helpCommands = Variables.helpCommands;
         this.adminCommands = Variables.adminCommands;
         this.securityAnswers = Variables.securityAnswers;
@@ -129,15 +129,15 @@ export default class Console extends Component{
         return (
             <div>
               <form onSubmit={this.handleInput}>
-                <div class="commandBlock">{
-                    this.previousCommands.map((command) => {
-                        return (<p>{command + "\n"}</p>)
+                <div className="commandBlock">{
+                    this.previousCommands.map((command, i) => {
+                        return (<p key={command + i}>{command}</p>)
                     })}
                     <div style= {{float: "left", clear:"both"}}
                         ref={this.messagesEnd}>
                     </div>
                </div>
-                <input class="console" type="text" name="name" id="command" autoFocus/>
+                <input className="console" type="text" name="name" id="command" autoFocus/>
               </form>
             </div>
         )
