@@ -44,5 +44,7 @@
     "directions": "20 34N, 25 150SE, 115 71E, 88 336NW, 72 354N, 35 53NE, 60 6N, 60 310NW, 55 33NE, 80 14N, 24 73E, 125 116SE, 62 84E, 112 16N, 155 18N, 30 260W, 34 303NW, 73 280W, 227 104E, 110 351N, 5 38NE, 25 155SE, F23",
     "chatAddress": "http://localhost:3001/",
     "postsPerPage": 5,
-    "tabNames": ["Home", "Posts", "Chat", "Quotes", "About"]
+    "tabNames": ["Home", "Posts", "Chat", "Quotes", "About"],
+    "currentQuestionText": "1 = ?",
+    "currentQuestion": 1
 }

@@ -101,7 +101,7 @@ export default function Puzzles(post) {
   }
 
   function checkPassword(post) {
-    if (post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem('solvedPasswords'))).includes(post.secret)) {
+    if (post.hasOwnProperty("secret") && !(JSON.parse(sessionStorage.getItem("solvedPasswords"))).includes(post.secret)) {
       return (
         <form onSubmit={submitPassword(post)}>
           <input type="text" value={sessionStorage["postSecret"]} onChange={(e) => sessionStorage.setItem("postSecret", e.target.value)} className="input" placeholder="???" required />
@@ -117,7 +117,7 @@ export default function Puzzles(post) {
       }
   }
 
-  // Function to reveal content protcetec by password
+  // Function to reveal content protected by password
   // when the password is correct.
   function submitPassword(post) {
     if(sessionStorage.getItem("postSecret") === post.secret) {
