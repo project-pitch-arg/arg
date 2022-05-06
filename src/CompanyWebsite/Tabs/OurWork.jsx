@@ -122,58 +122,68 @@ import Variables from '../../json/OurWork.json';
               <div id="future-right"><img src={futurePlans2} alt="" height='100%' width='100%'/></div>
             </div>
           </div>
+          {clearConsole()}
         </div>
       
     )
 }
 
-document.body.addEventListener('click', mouseUp, true);
+document.body.addEventListener('click', puzzle, true);
 
-function mouseUp() {
+function clearConsole(){
+        console.clear();
+}
+
+/*
+This function checks if the user has pressed anywhere on screen,
+then checks which slide is active,
+then adds this slide to attempt, (this means that the mouse press is one slide behind)
+if the attempt went the wrong way or overstepped then attempt is reset,
+the player must cycle from right to left to right ... until completed.
+*/
+function puzzle() {
     try {
           var currentSlide1 = document.getElementById("slideshow-container").getElementsByClassName("active")[0].getAttribute("data-index");
     } catch (error) {
     }
+
     if(currentSlide1 === null){
         currentSlide1 = 0;
     }
+
     var currentSlide = parseInt(currentSlide1) + 1;
     var codePrevIndex = code.charAt(attempt.length -1);
     var codeCurIndex = code.charAt(attempt.length);
 
-    // Debugging logs
-    // console.log("codeCharAt - 1 = " + code.charAt(attempt.length - 1));
-    // console.log("codeCharAt = " + code.charAt(attempt.length ));
-    // console.log("current slide " + currentSlide);
-    // console.log("sliced code:" + code.slice(0,attempt.length ));
-    // console.log("length:" + attempt.length);
-
     if(attempt == code.slice(0,attempt.length )){
-            if(codePrevIndex < codeCurIndex ){ //changes depending on if the player goes forward or backwards
-                if(currentSlide >= codePrevIndex && currentSlide <= codeCurIndex ){
-                    if(codeCurIndex == currentSlide){
-                        attempt += currentSlide;
-                    }
-                }
-                else{
-                    attempt = String(currentSlide);
-                }
-            }
-            else if(codePrevIndex > codeCurIndex ){
-                if(currentSlide <= codePrevIndex && currentSlide >= codeCurIndex ){
-                    if(codeCurIndex == currentSlide){
-                        attempt += currentSlide;
-                    }
-                }
-                else{
-                    attempt = String(currentSlide);
+        if(currentSlide == code.charAt(code.length - 2)){
+            //insert code that checks to see if player lands on code.length - 1
+        }
+        //if statements change depending on if the player goes forward or backwards
+        if(codePrevIndex < codeCurIndex ){
+            if(currentSlide >= codePrevIndex && currentSlide <= codeCurIndex ){
+                if(codeCurIndex == currentSlide){
+                    attempt += currentSlide;
                 }
             }
+            else{
+                attempt = String(currentSlide);
+            }
+        }
+        else if(codePrevIndex > codeCurIndex ){
+            if(currentSlide <= codePrevIndex && currentSlide >= codeCurIndex ){
+                if(codeCurIndex == currentSlide){
+                    attempt += currentSlide;
+                }
+            }
+            else{
+                attempt = String(currentSlide);
+            }
+        }
     }
     else{
         attempt = String(currentSlide);
     }
-
     if (attempt === code) {
       console.log(crackedUsername);
     }

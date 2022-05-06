@@ -143,34 +143,34 @@ export default class Policy extends Component{
     render(){
         if(this.state.dataReceived) {
             return (
-                <div class="newsBlock">
-                    <h1 class="underline">Policy Documents</h1>
+                <div className="newsBlock" >
+                    <h1 className="underline">Policy Documents</h1>
                   {
                     this.normalPDF.map((file) => {
-                        return <div class="pdfItemDiv" key={file}><button class="pdfItem" onClick={() => this.getPDF(file, "getPDF")}>{file.split(".")[0]}</button></div>
+                        return <div className="pdfItemDiv" key={file}><button className="pdfItem" onClick={() => this.getPDF(file, "getPDF")}>{file.split(".")[0]}</button></div>
                     })
                   }
                   { this.state.ceo ?
-                    (<div><div class="underlineDiv"></div>
-                        {!this.state.secret ? (<div class="lockedArchiveDiv"><h3 class="lockedArchive">Encrypted Archive</h3><img src={require("../images/Lock.png")} class="lock" alt="Lock" onClick={this.unlock}/>
+                    (<div><div className="underlineDiv"></div>
+                        {!this.state.secret ? (<div className="lockedArchiveDiv"><h3 className="lockedArchive">Encrypted Archive</h3><img src={require("../images/Lock.png")} className="lock" alt="Lock" onClick={this.unlock}/>
                             {this.state.unlockConsole ? (<form onSubmit={this.handleInputDecrypt}>
-                             <input class="smallConsole" placeholder="Enter key..." type="text" name="name" id="command"/>
+                             <input className="smallConsole" placeholder="Enter key..." type="text" name="name" id="command"/>
                            </form> ) : (null)}</div>)
                            :
                            (this.secretPDF.map((file) => {
-                              return <div class="pdfItemDiv" key={file}><button class="pdfItem" onClick={() => this.getPDF(file, "getSecretPDF")}>{file.split(".")[0]}</button></div>
+                              return <div className="pdfItemDiv" key={file}><button className="pdfItem" onClick={() => this.getPDF(file, "getSecretPDF")}>{file.split(".")[0]}</button></div>
                           }))
                         }</div>) : (null)
                   }
                   {!this.state.hidden ? (
                       <form onSubmit={this.handleInput}>
-                        <input class="smallConsole" placeholder="Enter code..." type="text" name="name" id="command"/>
+                        <input className="smallConsole" placeholder="Enter code..." type="text" name="name" id="command"/>
                       </form>) : (null)}
                 </div>
             )
         }
         else {
-            return (<div class="newsBlock"></div>)
+            return (<div className="newsBlock"></div>)
         }
     }
 }

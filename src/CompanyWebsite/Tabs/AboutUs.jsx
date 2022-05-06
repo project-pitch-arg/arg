@@ -3,13 +3,13 @@ import { useEffect } from 'react';
 import './Company.css';
 import { importImage } from '../SharedFunctions';
 import Variables from '../../json/AboutUs.json';
+import {basicFetchDataJson} from "../../InternalWebsite/Client/Client";
+
+
 
 
 {
-  // var Variables = jsonData.about_us;
-
-
-  //---------- header title
+    //---------- header title
 
   var headerTitle = Variables.header_title;
 
@@ -26,7 +26,7 @@ import Variables from '../../json/AboutUs.json';
   var secondParagraphImage = importImage(Variables.second_paragraph.image);
 
 
-  //----------- images
+    //----------- images
 
   var images = Variables.images;
 
@@ -40,8 +40,14 @@ import Variables from '../../json/AboutUs.json';
   var markImg = importImage(images.employees.markRoswell);
   var summerImg = importImage(images.employees.summerMorton);
 }
+
+function checkVariableParameters(){
+    //TODO add possible checks
+}
+
+
 export default function AboutUs() {
-    
+    checkVariableParameters();
     useEffect(() => {
       window.scrollTo(0, 0)
     }, [])
@@ -63,8 +69,6 @@ export default function AboutUs() {
               </div>
             </div>
 
-
-
             <div class="content-left-content">
              <div class="content-left-img"><img src={firstParagraphImage}/></div>
               <div class="content-left-desc">
@@ -73,12 +77,11 @@ export default function AboutUs() {
               </div>
             </div>
 
-
           </div>
 
           <div class="content">
 
-                <h2 style={{"margin-top": "70px"}}>Who are we?</h2>
+                <h2 style={{"margin": "70px"}}>Our Team</h2>
               <div id="team-content">
                 <div class="team-member"><img src={markImg}/><a>Mark Roswell</a></div>
                 <div class="team-member"><img src={manuelImg}/><a>Manuel Mallory</a></div>
@@ -89,10 +92,14 @@ export default function AboutUs() {
               <div id="team-content">
                   <div class="team-member"><img src={summerImg}/><a>Summer Morton</a></div>
                   <div class="team-member"><img src={madeleineImg}/><a>Madeleine Baldwin</a></div>
-                  <div class="team-member"><img src={lyraImg}/><a>Lyra Bell</a></div>
+                  <div class="team-member" ><img src={lyraImg} class = "lyra_img"/><a>Lyra Bell</a></div>
                   <div class="team-member"><img src={eloiseImg}/><a>Eloise Christensen</a></div>
                </div>
           </div>
+            {clearConsole()}
         </div>
     )
 }
+function clearConsole(){
+        console.clear();
+    }

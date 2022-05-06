@@ -2,21 +2,22 @@
 .popup-box {
   position: fixed;
   background: #24647f;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
+  overflow: scroll;
 }
 
 .box {
   position: relative;
-  width: 25%;
+  width: 30%;
   margin: 0 auto;
-  height: auto;
-  margin-top: calc(100vh - 85vh - 20px);
+  height: 70%;
+  margin-top: 10vh;
   background: white;
   border-radius: 25px;
-  padding: 50px;
+  padding: 3%;
   border: 1px solid #999;
   overflow: auto;
   color: black;
@@ -44,6 +45,7 @@
     border: none;
     border-radius: 10px;
     border: 1px solid black;
+    font-size: 16px;
 }
 .box input[type=submit]:hover{
     background-color: #069ac6;
@@ -56,9 +58,12 @@ button{
 }
 img.progress-bar-image{
     padding: 5px;
-    min-width: 100%;
-    height: 40px;
+    width:100%;
+    height: 3vh;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: none;
+    object-fit: cover;
 }
 div.progress-bar-div{
     width: 100%;
@@ -70,7 +75,7 @@ div.progress-bar-div{
 div.progress-bar-removal{
     background-color: white;
     float: right;
-    height: 30px;
+    height: 3vh;
     right: -5px;
     top: 5px;
     position: absolute;
@@ -78,4 +83,27 @@ div.progress-bar-removal{
 }
 img{
     border-radius: 20px;
+}
+.logInHeader{
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-size: 6vw;
+    margin-top: 0%;
+    font-style: none;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: #fff;
+}
+.logInForm{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+}
+.logInForm label{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 16px;
 }

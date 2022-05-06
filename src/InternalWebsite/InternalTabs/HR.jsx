@@ -25,13 +25,13 @@ export default class HR extends Component{
     render(){
         if(this.state.dataReceived){
             return (
-                <div class="newsBlock">
-                    <h1 class="underline">HR Staff</h1>
+                <div className="newsBlock" >
+                    <h1 className="underline">HR Staff</h1>
                     <h2>Need to report an issue? Contact HR</h2>
                     <div>
                     {
                         Object.keys(this.hr).map((key) => {
-                            return (<div class="hrObject" key={key}>
+                            return (<div className="hrObject" key={key}>
                                 <h2 style={{color: "black"}}>{this.hr[key].name}</h2>
                                 <img src={require('../images/' + this.hr[key].name + ".jpg")} alt={"Image of " + this.hr[key].name }/>
                                 <h3>Email: {this.hr[key].email}</h3>
@@ -44,7 +44,7 @@ export default class HR extends Component{
             )
         }
         else {
-            return (<div class="newsBlock"></div>)
+            return (<div className="newsBlock"></div>)
         }
     }
 }

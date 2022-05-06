@@ -19,10 +19,11 @@ body {
     background-image: url("../../img/header.png"); /* Standard header if nothing is assigned */
     margin-left: auto;
     margin-right: auto;
-    background-attachment: fixed;
+    background-attachment: relative;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
+
 
 h1 {
     width: 100%;
@@ -227,4 +228,8 @@ a {
 
 .team-member a {
     margin-top: 15px;
+}
+.lyra_img{
+border-right: 1px solid blue;
+border-bottom: 1px solid blue;
 }

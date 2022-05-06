@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import InternalWrong from '../Wrong';
 import Home from '../InternalTabs/Home';
 import {fetchData} from '../Client/Client.jsx';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 
 export default class TopBar extends Component {
 
@@ -14,10 +14,16 @@ export default class TopBar extends Component {
         super(props);
         this.locations = [];
         this.customLocations = [];
+        this.selectedFile = "";
     }
 
     async componentDidMount(){
         await this.addTabs("/InternalTabs/", this.locations);
+        this.setRemainingHeightForContent();
+        window.addEventListener("resize", this.setRemainingHeightForContent);
+    }
+    componentWillUnmount(){
+        window.removeEventListener("resize", this.setRemainingHeightForContent);
     }
 
     //Changes the selected button in the topbar.
@@ -66,12 +72,25 @@ export default class TopBar extends Component {
            }
       }
 
+      setRemainingHeightForContent(){
+            const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+            try{
+                document.getElementById(window.location.pathname.split("/")[2] + "tag").style.height = vh - 50 - (document.getElementById("menu").offsetTop + document.getElementById("menu").offsetHeight) + "px";
+            }
+            catch{
+
+            }
+      }
+
       //Tries to create component using specific component name.
       getComponent = (file, Tag) => {
+            this.selectedFile = file;
             return (<Route key={file} path={"/" + file} element={
-                  <Suspense fallback={<InternalWrong />}>
-                      <Tag reloadPage={this.reloadPage} logOut={this.props.logOut}/>
-                  </Suspense>
+                  <div id={file + "tag"}>
+                      <Suspense fallback={<InternalWrong />}>
+                          <Tag reloadPage={this.reloadPage} logOut={this.props.logOut}/>
+                      </Suspense>
+                  </div>
               }/>);
       }
 
@@ -83,10 +102,10 @@ export default class TopBar extends Component {
             this.removeCustomTabs("Console");
           }
           return (
-                <div className="topbar">
-                    <header><h1 className="internalHeader">Difax</h1></header>
+                <div className="topbar" id="topbar">
+                    <header ><h1 id="topbarHeader" className="internalHeader">Difax</h1></header>
 
-                      <div className="menyDiv">
+                      <div className="menyDiv" id="menu">
                       <ul id='topbar-ul'>
                       {
                         this.locations.map((file, index) => {
@@ -106,13 +125,13 @@ export default class TopBar extends Component {
                           {
                             this.locations.map((file) => {
                                 const Tag = lazy(() => import("../InternalTabs/" + file));
-                                return this.getComponent(file, Tag);
+                                return this.getComponent(file, Tag)
                             })
                           }
                           {
                             this.customLocations.map((file) => {
                                 const Tag = lazy(() => import("../CustomPages/" + file));
-                                return this.getComponent(file, Tag);
+                                return this.getComponent(file, Tag)
                             })
                           }
                       }
