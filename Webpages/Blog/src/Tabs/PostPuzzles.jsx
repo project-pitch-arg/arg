@@ -38,36 +38,36 @@ export default function Puzzles(post) {
   function showContent(post) {
     // Checks if a post is a puzzle and in that case which puzzle it is.
     // Depending on the result it will return different displays.
-    if(post.hasOwnProperty("puzzleNr")) {
-      switch (post.puzzleNr) {
-        case "B-p1": return puzzleBp1(post);
-        case "B-p2": break;
-        case "B-c1": break;
-        case "B-c2": break;
-        case "B-c3": break;
-        case "B-c4": puzzleBc4(post); break;
+    if(post.hasOwnProperty("puzzle")) {
+      switch (post.puzzle) {
+        case "Main puzzle": return puzzleBp1(post);
+        case "Skyline puzzle": break;
+        case "Username puzzle": break;
+        case "Poem puzzle": break;
+        case "Quotes puzzle": break;
+        case "Changing Image puzzle": puzzleBc4(post); break;
         default: break;
       }  
     }
     return (
       <div className="post-name" id="content" >
         {post.poster}
-        <pre className="post-content">
+        <div className="post-content">
           {post.content}{checkPassword(post)}
-        </pre>
+        </div>
         {picture}
       </div>
     )
   }
 
-  // Function to encode the puzzle B-p1.
+  // Function to encode the Main puzzle.
   // See more in the puzzle docuemntation for the blog.
   function puzzleBp1(post) {
     post = changeDinos(post);
     post.date[1] = Variables.clueDate;
 
     // This post has the puzzle in it.
-    if (post.comment === "This is the main post to puzzle B-p1.") {
+    if (post.comment === "This is the main post to Main puzzle.") {
       return (
         <div className="post-name" id="content" >
         {post.poster}
@@ -95,7 +95,7 @@ export default function Puzzles(post) {
   }
 
   function puzzleBc4(post) {
-    if (post.comment === "This is the main post to puzzle B-c4.") {
+    if (post.comment === "This is the main post to Changing Image puzzle.") {
       picture = multiPicture();
     }
   }
@@ -110,9 +110,10 @@ export default function Puzzles(post) {
       )
       } else {
         return (
-          <pre>
+          <div>
+            <br />
             {post.secretContent}
-          </pre>
+          </div>
         )
       }
   }
@@ -412,9 +413,9 @@ export default function Puzzles(post) {
 
   // Detection function to know which post should lead to which function.
   function checkForHelper(post) {
-    if(post.comment === "This post is helper post 1 to puzzle B-p1.") {
+    if(post.comment === "This post is helper post 1 to Main puzzle.") {
       return Variables.hintDinosaurs;
-    } else if (post.comment === "This post is helper post 2 to puzzle B-p1") {
+    } else if (post.comment === "This post is helper post 2 to Main puzzle") {
       return Variables.hintCourses;
     }
     return;

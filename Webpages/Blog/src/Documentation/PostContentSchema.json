@@ -39,7 +39,7 @@
                     }
                 }
             },
-            "puzzleNr": {
+            "puzzle": {
                 "title": "Which puzzle the post belongs to.",
                 "type": "string"
             },

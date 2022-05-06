@@ -13,7 +13,7 @@
         "poster": "Robot1311213",
         "content": "Have you figured out what our usernames mean yet? I'll give you a hint for Fexjo. What is this?",
         "pictures": [["Caesar.png", "Some nice salad."]],
-        "puzzleNr": "B-c1",
+        "puzzle": "Username puzzle",
         "comment": "This puzzle is solved in the chat."
     },
     {
@@ -78,8 +78,8 @@
         "date": [2022, 2, 7],
         "poster": "Robot1311213",
         "content": "Gothenburg has this nice place that's not quite a zoo but somewhat close enough. It's called Universeum, I visited today. They have a bunch of animals and fish and all sorts of creatures. I especially like the rainforest section. The differences to a regular zoo comes from the fact that this is all inside one building. Nothing is left to the open sky, which is why they don't have Lions and Antelopes I assume. They also have some sections where you can play kids-friendly games and learn about the human body or learn about space. Definitely a recommendation to visit at least once if you're ever in Gothenburg.",
-        "puzzleNr": "B-c2",
-        "comment": "This puzzle is a helper post to puzzle B-c2"
+        "puzzle": "Poem puzzle",
+        "comment": "This puzzle is a helper post to Poem puzzle"
     },
     {
         "poster": "Robot1311213",
@@ -93,7 +93,7 @@
         "date": [2022, 2, 11],
         "poster": "Robot1311213",
         "content": "I composed a poem for everyone today. What do you think? \n \n At pleasant temperature, \n in contrast to how you would like life to be, \n an idea that seems perfect, \n held or fixed in position securely, \n a mistake. \n \n A place where you can buy drinks and simple meals, \n filled with a continuous humming sound, \n a particular variety or type, \n the process of gaining this, \n a victory.",
-        "puzzleNr": "B-c2",
+        "puzzle": "Poem puzzle",
         "comment": "This puzzle is solved in the chat."
     },
     {
@@ -182,8 +182,8 @@
         "date": [2022, 3, 19],
         "poster": "Robot1311213",
         "content": "So today I have a message for you all through the words of our betters. Can you figure it out? \n \n Kathryn Davis 3 \n Nelson Mandela 7 \n Dr. Who 12 \n Eleanor Roosevelt 8 \n Margaret Mead 9 \n Steve Miller 1, \n Jay Leno 20 \n John D Rockefeller 13! \n \n Good luck! (￣▽￣)ノ",
-        "puzzleNr": "B-c3",
-        "comment": "This is the main post to puzzle B-c3."
+        "puzzle": "Quotes puzzle",
+        "comment": "This is the main post to Quotes puzzle."
     },
     {
         "poster": "Robot1311213",
@@ -363,8 +363,8 @@
         "date": [2022, 5, 3],
         "poster": "Robot1311213",
         "content": "Man, this latest course of mine, LMA017, was so fun. Way too little math for my taste though. I do like that all the courses I've gone to have a similar format, with three letters followed by three numbers. The similarity and symmetry is pleasing to me. (っ˘ω˘ς ) Though I do wonder where the format even originated.",
-        "puzzleNr": "B-p1",
-        "comment": "This post is helper post 2 to puzzle B-p1"
+        "puzzle": "Main puzzle",
+        "comment": "This post is helper post 2 to Main puzzle"
     },
     {
         "date": [2022, 5, 4],
@@ -448,8 +448,8 @@
         "date": [2022, 5, 23],
         "poster": "Robot1311213",
         "content": "There's a bunch of interesting ciphers out there. The famous ones, like Caesar, Alberti, or Vigenère. But also some more obscure ones, like Phaistos, Voynich, or Bellaso. Personally, I favor variants of the famous ones. (￣▽￣)ノ Alberti is the most famous Cipher Disk as an example, but there's also so many more Cipher Disks out there. Take the Aeneas, which existed 5th century BC, way before Alberti! Σ(O_O) For some more modern alternatives we have the Union Cipher disk or the Mexican Army Wheel. This is such a fascinating topic, I could talk about them all day. I recommend checking out a physical cipher, something to play around with in your hands, it's very interactive and loads of fun. ヽ(o^ ^o)ﾉ",
-        "puzzleNr": "B-p1",
-        "comment": "This post is a helper post to puzzle B-p1"
+        "puzzle": "Main puzzle",
+        "comment": "This post is a helper post to Main puzzle"
     },
     {
         "poster": "Robot1311213",
@@ -476,15 +476,15 @@
         "date": [2022, 6, 4],
         "poster": "Robot1311213",
         "content": "I've been hard at work today. It's the time of year when the entire home is cleaned. ┬─┬ノ( º _ ºノ) It's quite backbreaking work but definitely necessary. Just ask any student living alone. (; -_-) But it's not all hard work, there's some fun as well. (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ When going through all my old stuff I found quite a few items that I had misplaced over the years. There were 20 lego characters, 5 old school books, 2 different retro game systems, 12 pencils, and 269 marbles. I might have had a marble obsession once upon a time. (￣▽￣*)ゞ The fact that I counted them out just now might mean I still do...",
-        "puzzleNr": "B-c4",
-        "comment": "This post is a helper post to puzzle B-c4"
+        "puzzle": "Changing Image puzzle",
+        "comment": "This post is a helper post to Changing Image puzzle"
     },
     {
         "date": [2022, 6, 5],
         "poster": "Fexjo",
         "content": "These are some images from back when I was on my vacation in Spain. I forgot to post them then so I'm doing it now. Robot reminded me after he had done his big house cleaning.",
-        "puzzleNr": "B-c4",
-        "comment": "This is the main post to puzzle B-c4."
+        "puzzle": "Changing Image puzzle",
+        "comment": "This is the main post to Changing Image puzzle."
     },
     {
         "date": [2022, 6, 5],
@@ -504,17 +504,17 @@
         "date": [2022, 6, 8],
         "poster": "Robot1311213",
         "content": "Have you found something odd with a post lately? If you can arrive at the 8-letter answer, I'll give you a reward. Perhaps you should keep this in mind while trying to figure it out: \n ___ like us",
-        "puzzleNr": "B-c4",
-        "comment": "This post is a helper post to puzzle B-c4"
+        "puzzle": "Changing Image puzzle",
+        "comment": "This post is a helper post to Changing Image puzzle"
     },
     {
         "date": [2022, 6, 9],
         "poster": "Robot1311213",
         "content": "I have a friend who recently suffered an accident. This meant that he got temporarily deaf in one ear, luckily he's soon to recover full hearing. We played some games together though and sometimes he got really surprised because he wouldn't hear the sound from one side of his headphones. This got me thinking of accessibility in general in games. How much do games consider accessibility for various conditions? This search led to a few interesting results, not only informative of games but also something else. If you know what I'm talking about then I'm sure you'll be able to input the correct solution below.",
         "secret": "ABCCABAC",
-        "secretContent": "Congratulations for solving this newest puzzle. It's my most complex one yet.\nAs a reward you will receive a 200kr gift card that applies to a variety of stores,\nboth online and physical. 200kr translates roughly to 20$.\nJust send 'Stegosaurus solved the riddle' to me in a private chat and I'll make sure you get your prize.\nOnly the first person to discover this gets it though, so my apologies if you're here later,\nbut good job still!",
-        "puzzleNr": "B-c4",
-        "comment": "This post is a helper post to puzzle B-c4"
+        "secretContent": "Congratulations for solving this newest puzzle. It's my most complex one yet. As a reward you will receive a 200kr gift card that applies to a variety of stores, both online and physical. 200kr translates roughly to 20$. Just send 'Stegosaurus solved the riddle' to me in a private chat and I'll make sure you get your prize. Only the first person to discover this gets it though, so my apologies if you're here later, but good job still!",
+        "puzzle": "Changing Image puzzle",
+        "comment": "This post is a helper post to Changing Image puzzle"
     },
     {
         "date": [2022, 6, 10],
@@ -529,8 +529,8 @@
         "date": [2022, 6, 12],
         "poster": "Robot1311213",
         "content": "I never told you, but my favorite dinosaurs are XXDINO1XX, XXDINO2XX and ichthyosaurus.",
-        "puzzleNr": "B-p1",
-        "comment": "This post is helper post 1 to puzzle B-p1."
+        "puzzle": "Main puzzle",
+        "comment": "This post is helper post 1 to Main puzzle."
     },
     {
         "poster": "Fexjo",
@@ -549,8 +549,8 @@
         "poster": "Robot1311213",
         "content": "I borrowed some pictures from Fexjo to make these. What do you think all of it adds up to?",
         "pictures": [["Skyline1.jpg", "A skyline."], ["Skyline2.png", "A skyline"],  ["Skyline3.jpg", "A skyline"], ["Shapes.png", "Two rectangles and a triangle."],  ["Lines.png", "Four underscores in different colours. Three with signs."], ["Signs.png", "Four underscores with minus and then two plus signs between them."] ],
-        "puzzleNr": "B-p2",
-        "comment": "This is the main post to puzzle B-p2."
+        "puzzle": "Skyline puzzle",
+        "comment": "This is the main post to Skyline puzzle."
     },
     {
         "poster": "Fexjo",
@@ -564,8 +564,8 @@
         "date": [2022, 6, 19],
         "poster": "Robot1311213",
         "content": "I ate some duros, also known as mexican wheels, while reading about my favorite dinosaurs today. Unfortunately, the book did not include ichthyosaurus, but XXDINO3XX also seems really cool. It was nice with the duros. I then went online and found some drawn art of ichtyosauruses just to get that out of my system. While doing that I happened upon a meme of some funny psuedocode for having a bunch of coffee. I kinda resonate with that to be honest. I also got the answer that I now have a job this summer. But as you know I won't tell you what company it is. Feel free to try to figure it out!",
-        "puzzleNr": "B-p1",
-        "comment": "This is the main post to puzzle B-p1."
+        "puzzle": "Main puzzle",
+        "comment": "This is the main post to Main puzzle."
     },
     {
         "poster": "Robot1311213",

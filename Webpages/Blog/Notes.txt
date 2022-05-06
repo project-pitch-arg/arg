@@ -24,8 +24,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Flytta färger till JSON
     - Sara
 
-- Fixa så att kodkommentarer och kod inte har saker som B-p1 osv.
-
 - Ändra så ledtrådar i dokumentationen kommer från tester
 
 - Fixa textplacering i memory.
@@ -50,9 +48,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Dokumentation med användarprofiler.
     - Typ kopiera txt dokumentet som redan finns.
     - Appendix till allmän guide.
-
-- Text som är secretContent radbryter inte när rutan är slut. Dyker upp en scrollbar, men borde inte vara så svårt att fixa
-    - Ludvig
 
 --------------- Prio 3 ---------------
 
