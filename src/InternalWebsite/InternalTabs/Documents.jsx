@@ -82,32 +82,16 @@ export default class Policy extends Component{
 
     //Called when a key is pressed
     _handleKeyDown = (event) => {
-        this.keys.push(event.key);
+        if(event.key !== "Enter") this.keys.push(event.key);
         for(var i = 0; i < this.correctKeys.length; i++){
             if(!this.correctKeys.includes(event.key) && event.key !== "Enter"){
                this.keys = [];
             }
         }
-        switch( event.key ) {
-            case "Enter":
-                for(var j = 0; j < this.correctKeys.length; j++){
-                    if(this.checkPressedKeys(this.correctKeys.charAt(j)) && !this.state.ceo){
-                       this.setState({hidden: !this.state.hidden});
-                       this.keys = [];
-                    }
-                }
-                break;
-            default:
-                break;
+        if(this.keys.length >= this.correctKeys.length && !this.state.ceo && event.key === "Enter"){
+           this.setState({hidden: !this.state.hidden});
+           this.keys = [];
         }
-    }
-
-    //Checks if specific key is pressed down
-    checkPressedKeys(key){
-        if(this.keys.some(item => key === item)){
-            return true;
-        }
-        return false;
     }
 
     //Called when input is submitted into "open" console
