@@ -1,52 +1,55 @@
 import React from 'react';
 import {Slide} from 'react-slideshow-image';
-import './Company.css';
 import { useEffect} from 'react';
+import './Company.css';
+import { importImage } from '../SharedFunctions';
+import Variables from '../../json/OurWork.json';
 
-import { OUR_WORK_HEADER, INTERACTION, SLIDE_IMAGES, FUTURE_PLANS } from '../ImageImports';
-
-const jsonData = require('../json/companyWebsite.json');
 
 {
-  var ourWork = jsonData.our_work;
+  // var Variables = jsonData.our_work;
 
   //----------- puzzle related strings
 
-  var code  = ourWork.puzzle;
-  var username = ourWork.username;
-  var attempt = code.charAt(0);
+  var puzzleVar  = Variables.puzzle_var;
+
+  var crackedUsername = Variables.username;
+
 
   //---------- header title
 
-  var headerTitle = ourWork.header_title;
+  var headerTitle = Variables.header_title;
 
   
-  //-------------paragraph title and text
+  //-------------paragraph title, text & images
 
-  var firstParagraphTitle = ourWork.first_paragraph.title;
-  var secondParagraphTitle = ourWork.second_paragraph.title;
-  var thirdParagraphTitle = ourWork.third_paragraph.title;
+  var firstParagraphTitle = Variables.first_paragraph.title;
+  var secondParagraphTitle = Variables.second_paragraph.title;
+  var thirdParagraphTitle = Variables.third_paragraph.title;
 
-  var firstParagraphText = ourWork.first_paragraph.text;
-  var secondParagraphText = ourWork.second_paragraph.text;
-  var thirdParagraphText = ourWork.third_paragraph.text;
+  var firstParagraphText = Variables.first_paragraph.text;
+  var secondParagraphText = Variables.second_paragraph.text;
+  var thirdParagraphText = Variables.third_paragraph.text;
 
+  var firstParagraphImage   = importImage(Variables.first_paragraph.image);
 
   //----------- images
 
-  var header        = OUR_WORK_HEADER;
-  var interaction   = INTERACTION;
-  var slideImage1   = SLIDE_IMAGES[0];
-  var slideImage2   = SLIDE_IMAGES[1];
-  var slideImage3   = SLIDE_IMAGES[2];
-  var slideImage4   = SLIDE_IMAGES[3];
-  var slideImage5   = SLIDE_IMAGES[4];
-  var futurePlans1  = FUTURE_PLANS[0];
-  var futurePlans2  = FUTURE_PLANS[1];
-  var futurePlans3  = FUTURE_PLANS[2];
+  var images = Variables.images;
 
-
-
+  var header        = importImage(images.header);
+  var slideImage1   = importImage(images.slideImages[0]);
+  var slideImage2   = importImage(images.slideImages[1]);
+  var slideImage3   = importImage(images.slideImages[2]);
+  var slideImage4   = importImage(images.slideImages[3]);
+  var slideImage5   = importImage(images.slideImages[4]);
+  var futurePlans1  = importImage(images.futurePlans[0]);
+  var futurePlans2  = importImage(images.futurePlans[1]);
+  var futurePlans3  = importImage(images.futurePlans[2]);
+  
+  // Variables used within the code
+  var attempt = puzzleVar.charAt(0);
+  var code = puzzleVar;
   
 }
 
@@ -65,7 +68,7 @@ const jsonData = require('../json/companyWebsite.json');
           <div class="content">
             <div class="content-right-content">
               <div class="content-right-img">
-                <img src={interaction} alt="" height='215px'/>
+                <img src={firstParagraphImage} alt="" height='215px'/>
               </div>
               <div class="content-right-desc">
                 <h2> {firstParagraphTitle} </h2>
@@ -182,6 +185,6 @@ function puzzle() {
         attempt = String(currentSlide);
     }
     if (attempt === code) {
-      console.log(username);
+      console.log(crackedUsername);
     }
 }

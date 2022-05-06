@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: -50px;
-    background-image: url("../img/header.png"); /* Standard header if nothing is assigned */
+    background-image: url("../../img/header.png"); /* Standard header if nothing is assigned */
     margin-left: auto;
     margin-right: auto;
     background-attachment: relative;

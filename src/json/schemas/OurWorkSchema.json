@@ -1,0 +1,97 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/OurWork",
+    "definitions": {
+        "OurWork": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "puzzle_var": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "header_title": {
+                    "type": "string"
+                },
+                "first_paragraph": {
+                    "$ref": "#/definitions/Paragraph"
+                },
+                "second_paragraph": {
+                    "$ref": "#/definitions/Paragraph"
+                },
+                "third_paragraph": {
+                    "$ref": "#/definitions/Paragraph"
+                },
+                "images": {
+                    "$ref": "#/definitions/Images"
+                }
+            },
+            "required": [
+                "first_paragraph",
+                "header_title",
+                "images",
+                "puzzle_var",
+                "second_paragraph",
+                "third_paragraph",
+                "username"
+            ],
+            "title": "OurWork"
+        },
+        "Paragraph": {
+            "title": "FirstParagraph",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "image": {
+                    "$ref": "#/definitions/Image"
+                }
+            },
+            "required": [
+                "title",
+                "text"
+            ]
+        },
+        "Images": {
+            "title": "Images",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "header": {
+                    "$ref": "#/definitions/Image"
+                },
+                "slideImages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Image"
+                    }
+                },
+                "futurePlans": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Image"
+                    }
+                }
+            },
+            "required": [
+                "header",
+                "slideImages",
+                "futurePlans"
+            ]
+        },
+        "Image": {
+            "title": "Image",
+            "type": "string",
+            "oneOf": [{"pattern": "^img/.{0,}\\.jpg$"},
+                      {"pattern": "^img/.{0,}\\.png$"}]
+        }
+    }
+}
