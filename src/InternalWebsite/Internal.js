@@ -1,7 +1,8 @@
 import "./internal.css";
-import React, { lazy, Suspense,Component } from 'react';
+import React, { Component } from 'react';
 import Login from "./CustomPages/LogIn/LogInPage";
 import {getAccountData} from "./CustomPages/LogIn/LogIn";
+import BarOnTop from "./InternalTopBar/BarOnTop";
 
 export default class Internal extends Component {
 
@@ -9,6 +10,7 @@ export default class Internal extends Component {
       super(props);
       this.state = { width: 0, height: 0,loggedIn: false };
       this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+      this.loggedIn = localStorage.getItem("loggedIn");
     }
 
     //When Component mounts it checks if the user is logged in.
@@ -18,16 +20,19 @@ export default class Internal extends Component {
       document.title = "Difax";
       document.body.style.overflow = "hidden"
       try {
-            var json = JSON.parse(localStorage.getItem("user"));
-            if(json !== null && await getAccountData(json)){
-               this.setState({loggedIn: true})
-            }
-            else {
-                this.setState({loggedIn: false})
-            }
+          var json = JSON.parse(localStorage.getItem("user"));
+          if(json !== null && await getAccountData(json)){
+             this.setState({loggedIn: true})
+             this.logIn();
+          }
+          else {
+              this.setState({loggedIn: false})
+              this.logOut();
+          }
       }
       catch {
-            this.setState({loggedIn: false})
+          this.setState({loggedIn: false})
+          this.logOut();
       }
     }
 
@@ -39,36 +44,29 @@ export default class Internal extends Component {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
-    logIn = () =>{
+    logIn = () => {
+        localStorage.setItem("loggedIn", true);
         this.setState({loggedIn: true});
     }
 
-    logOut = () =>{
+    logOut = () => {
         localStorage.removeItem("user");
+        localStorage.setItem("loggedIn", false);
         this.setState({loggedIn: false});
     }
 
-    //Tries to load BarOnTop component if it can't it switches to Login component
-    loadComponent(Tag){
-        <Suspense fallback={Tag = Login}>
-           Tag = lazy(() => import("./InternalTopBar/BarOnTop"));
-        </Suspense>
-    }
-
     render(){
-      var Tag = Login;
-      if(this.state.loggedIn){
-          Tag = lazy(() => import("./InternalTopBar/BarOnTop"));
-      }
-      return (
+        return (
         <div className="InternalApp">
             <div className="Login-component" style={{height: this.state.height, overflowY: 'scroll'}}>
-                <Suspense fallback={<Login/>}>
-                     <Tag logIn={this.logIn} logOut={this.logOut} loggedIn={this.state.loggedIn}/>
-                </Suspense>
+                     { localStorage.getItem("loggedIn") === "true"?
+                     <BarOnTop logIn={this.logIn} logOut={this.logOut} loggedIn={this.state.loggedIn}/>
+                     :
+                     <Login logIn={this.logIn} logOut={this.logOut} loggedIn={this.state.loggedIn}/>
+                     }
              </div>
         </div>
-      );
+        );
     }
 }
 

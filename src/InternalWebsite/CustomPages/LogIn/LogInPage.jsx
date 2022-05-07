@@ -20,6 +20,7 @@ export default class LogInPage extends Component{
     async loadCEO() {
         this.ceoName = await getCEOName();
     }
+
     //Is called log in button is pressed
     logIn = async (event) => {
         event.preventDefault();

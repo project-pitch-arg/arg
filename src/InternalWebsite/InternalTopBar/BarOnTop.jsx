@@ -103,18 +103,18 @@ export default class TopBar extends Component {
             this.removeCustomTabs("Console");
           }
           return (
-                <div className="topbar" id="topbar">
+                <div className="topbarInternal" id="topbar">
                     <header ><h1 id="topbarHeader" className="internalHeader">Difax</h1></header>
 
                       <div className="menyDiv" id="menu">
-                      <ul id='topbar-ul'>
+                      <ul id='topbarInternal-ul'>
                       {
                         this.locations.map((file, index) => {
                             if(file === "Account"){
-                                return (<li id='topbar-li-Right' className='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
+                                return (<li id='topbarInternal-li-Right' className='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
                             }
                             else {
-                                return (<li id='topbar-li' className='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
+                                return (<li id='topbarInternal-li' className='topbar-li' key={index}><Link id={file} key={index} onClick={() => this.highlightActive({file})} to ={file}> {file} </Link></li>);
                             }
                         })
                       }

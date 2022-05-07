@@ -1,4 +1,4 @@
-.topbar {
+.topbarInternal {
   position: relative;
   top: 0px;
   height: 100vh;
@@ -8,7 +8,7 @@
 
 }
 
-#topbar-ul {
+#topbarInternal-ul {
   list-style-type: none;
   overflow: hidden;
   background-color: white;
@@ -21,17 +21,17 @@
   margin-left: auto;
 }
 
-#topbar-li {
+#topbarInternal-li {
   float: left;
   margin-right: auto;
   margin-left: auto;
 }
 
-#topbar-li-Right{
+#topbarInternal-li-Right{
     float: right;
 }
   
-.topbar a {
+.topbarInternal a {
   display: block;
   color: black;
   /* text-align: center; */
@@ -42,12 +42,12 @@
   
 }
 
-.topbar a:hover {
+.topbarInternal a:hover {
   background-color: darkslategray;
   color: white;
 }
 
-.topbar a.active {
+.topbarInternal a.active {
   background-color: #24647f;
   color: white;
 }
