@@ -3,6 +3,7 @@ import {basicFetchDataJson} from "../../Client/Client";
 import progressBar from "../../images/progress bar.jpg";
 import {getAccountData} from "./LogIn";
 import "./LogInPage.css";
+import {getCEOName} from "../../CommonCode/CommonCode";
 
 export default class LogInPage extends Component{
 
@@ -13,8 +14,12 @@ export default class LogInPage extends Component{
         this.cipher = "";
         this.currentTimer = "";
         this.timerActivated = false;
+        this.ceoName = "";
+        this.loadCEO();
     }
-
+    async loadCEO() {
+        this.ceoName = await getCEOName();
+    }
     //Is called log in button is pressed
     logIn = async (event) => {
         event.preventDefault();
@@ -29,7 +34,7 @@ export default class LogInPage extends Component{
                 this.props.logIn();
             }
         }
-        else if(event.target.username.value.toUpperCase() === "CEO" && localStorage.getItem("password") === event.target.password.value){
+        else if(event.target.username.value === this.ceoName && localStorage.getItem("password") === event.target.password.value){
             if(!this.timerActivated){
                 this.reloadPage();
                 this.timerActivated = true;

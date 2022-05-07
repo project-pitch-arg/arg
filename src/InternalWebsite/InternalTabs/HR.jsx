@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './TabContent.css';
 import {basicFetchData} from "../Client/Client"
+import {nameFormatting} from "../CommonCode/CommonCode";
 
 
 export default class HR extends Component{
@@ -32,7 +33,7 @@ export default class HR extends Component{
                     {
                         Object.keys(this.hr).map((key) => {
                             return (<div className="hrObject" key={key}>
-                                <h2 style={{color: "black"}}>{this.hr[key].name}</h2>
+                                <h2 style={{color: "black"}}>{nameFormatting(this.hr[key].name)}</h2>
                                 <img src={require('../images/' + this.hr[key].name + ".jpg")} alt={"Image of " + this.hr[key].name }/>
                                 <h3>Email: {this.hr[key].email}</h3>
                                 </div>

@@ -3,6 +3,7 @@ import "./TabContent.css";
 import {basicFetchData} from "../Client/Client";
 import axios from 'axios';
 import Variables from "../../json/Variables";
+import {getCEOName} from "../CommonCode/CommonCode";
 
 
 export default class Policy extends Component{
@@ -17,13 +18,17 @@ export default class Policy extends Component{
         this.keys = [];
         this.input = "";
         this.correctKeys = Variables.keysPressedDownForConsole;
+        this.ceoName = ""
+        this.loadCEO();
     }
-
+    async loadCEO(){
+        this.ceoName = await getCEOName();
+    }
     //Adds eventListeners for key presses
     async componentDidMount(){
         await this.getPolicy();
         this.checkKey(localStorage.getItem("keyForFiles"));
-        if(JSON.parse(localStorage.getItem("user")).username === "CEO"){
+        if(JSON.parse(localStorage.getItem("user")).username === this.ceoName){
             if(!this.state.ceo){
                 this.setState({ceo: true});
             }

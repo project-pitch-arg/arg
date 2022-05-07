@@ -94,26 +94,27 @@ app.post("/getUser", (req, res) => {
   if(!check)
     return res.send({error: "Wrong password or username!"});
 });
+app.post("/getCEOName", (req, res) => {
+    const response = fs.readFileSync("../../json/Accounts.json");
+    var data = JSON.parse(response);
+    var check = false;
+    Object.keys(data[0]).forEach((key) => {
+            if(data[0][key].title === "CEO"){
+                check = true;
+                return res.send({name: data[0][key].username});
+            }
+      });
+      if(!check)
+        return res.send({error: "No CEO in database"});
+});
 
 app.post("/checkCipher", (req, res) => {
   var response = req.body.cipher;
   if(cipher === response){
         const file = fs.readFileSync("../../json/Accounts.json");
         var data = JSON.parse(file);
-        const tokenFile = fs.readFileSync("../../json/Tokens.json");
-        var json = JSON.parse(tokenFile);
-        var ip_adress = req.socket.remoteAddress;
-        try{
-            json[ip_adress].token = json[ip_adress].token;
-        }
-        catch{
-            json[ip_adress] = { "token" : getRandomInt(100000000000000000000,1000000000000000000000)};
-        }
-        fs.writeFileSync("../../json/Tokens.json", JSON.stringify(json));
         Object.keys(data[0]).forEach((key) => {
-              if(data[0][key].username === "CEO"){
-                    data[0][key].password = "";
-                    data[0][key].token = json[ip_adress].token;
+              if(data[0][key].title === "CEO"){
                     return res.send(data[0][key]);
               }
         })
@@ -121,24 +122,6 @@ app.post("/checkCipher", (req, res) => {
   else {
     return res.send({error: "Wrong answer!"});
   }
-});
-
-app.post("/checkToken", (req, res) => {
-    const tokenFile = fs.readFileSync("../../json/Tokens.json");
-    var json = JSON.parse(tokenFile);
-    var ip_adress = req.socket.remoteAddress;
-    var token = req.body.token;
-    try {
-        if(token === json[ip_adress].token){
-            return res.send({"token" : true})
-        }
-        else {
-            return res.send({"token" : false})
-        }
-    }
-    catch {
-        return res.send({"token" : false})
-    }
 });
 
 app.post("/getCipher", (req, res) => {

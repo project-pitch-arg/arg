@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Console.css';
 import Variables from "../../json/Variables.json";
+import {getCEOName} from "../CommonCode/CommonCode";
 
 export default class Console extends Component{
 
@@ -17,8 +18,12 @@ export default class Console extends Component{
         this.adminOn = false;
         this.securityCheck = false;
         this.messagesEnd = React.createRef();
+        this.CEOName = "";
+        this.loadCEO();
     }
-
+    async loadCEO(){
+        this.CEOName = await getCEOName();
+    }
     //Controls the scroll for the command prompt so that it always scrolls down to the newest command response
     componentDidMount() {
       this.scrollToBottom();
@@ -31,7 +36,6 @@ export default class Console extends Component{
     scrollToBottom = () => {
       this.messagesEnd.current.scrollIntoView({ behavior: "smooth" });
     }
-
     //Called when input is submitted
     handleInput = (event) =>{
         event.preventDefault();
@@ -68,14 +72,14 @@ export default class Console extends Component{
                 break;
             case "/currentAdmin":
                     if(this.adminOn){
-                        this.previousCommands.push("Current Admin: CEO");
+                        this.previousCommands.push("Current Admin: " + this.CEOName);
                     }
                     else {
                         this.defaultMessage(command);
                     }
                 break;
             case "/changePassword":
-                    if(this.adminOn && data === "CEO"){
+                    if(this.adminOn && data === this.CEOName){
                         if(answers.length === this.securityAnswers.length){
                             var check = true;
                             for(var i = 0; i < answers.length; i++){
@@ -86,13 +90,13 @@ export default class Console extends Component{
                                 }
                             }
                             if(check){
-                                this.previousCommands.push("Security questions completed, you can now use /changePassword CEO [newpassword]");
+                                this.previousCommands.push("Security questions completed, you can now use /changePassword " + this.CEOName + " [newpassword]");
                                 this.securityCheck = true;
                             }
                             break;
                         }
                         else if(this.securityCheck && answers.length === 1){
-                            this.previousCommands.push("CEO password changed");
+                            this.previousCommands.push(this.CEOName +  " password changed");
                             localStorage.setItem("password", answers[0]);
                             break;
                         }

@@ -1,16 +1,13 @@
 [{
   "u1" : {
-    "username": "Edmund Schmidt",
+    "username": "Edmund_Schmidt",
+    "title" : "CFO",
     "password": "26873444",
     "email" : "Hello@gmail.com"
   },
   "u2" : {
-    "username": "Mark Ryan",
-    "password": "1342342354365345345",
-    "email" : "Hello@gmail.com"
-  },
-  "u3" : {
-    "username": "CEO",
+    "username": "Mark_Roswell",
+    "title" : "CEO",
     "password": "jer2fjer,oifjer534534!",
     "email" : "Hello@gmail.com"
   }
