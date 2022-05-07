@@ -14,13 +14,14 @@ export default class TopBar extends Component {
         super(props);
         this.locations = [];
         this.customLocations = [];
-        this.selectedFile = "";
     }
 
     async componentDidMount(){
         await this.addTabs("/InternalTabs/", this.locations);
-        this.setRemainingHeightForContent();
         window.addEventListener("resize", this.setRemainingHeightForContent);
+        if(window.location.pathname.length === 9) window.history.replaceState(null, "New Page Title", "/Internal/Home");
+        this.setRemainingHeightForContent();
+
     }
     componentWillUnmount(){
         window.removeEventListener("resize", this.setRemainingHeightForContent);
@@ -52,6 +53,7 @@ export default class TopBar extends Component {
             for (var i = 0; i < data.files.length; i++) {
                     location.push(data.files[i]);
             }
+
             this.setState({dataReceived: true});
       }
 
@@ -78,13 +80,12 @@ export default class TopBar extends Component {
                 document.getElementById(window.location.pathname.split("/")[2] + "tag").style.height = vh - 50 - (document.getElementById("menu").offsetTop + document.getElementById("menu").offsetHeight) + "px";
             }
             catch{
-
+                window.location.reload();
             }
       }
 
       //Tries to create component using specific component name.
       getComponent = (file, Tag) => {
-            this.selectedFile = file;
             return (<Route key={file} path={"/" + file} element={
                   <div id={file + "tag"}>
                       <Suspense fallback={<InternalWrong />}>
@@ -133,6 +134,7 @@ export default class TopBar extends Component {
                                 const Tag = lazy(() => import("../CustomPages/" + file));
                                 return this.getComponent(file, Tag)
                             })
+
                           }
                       }
                       </Routes>
