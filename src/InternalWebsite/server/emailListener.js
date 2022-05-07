@@ -266,7 +266,7 @@ function readPDF(callback){
           var text = "";
           new PdfReader().parseBuffer(pdfBuffer, function(err, item){
              if (err){
-                 onError(err);
+                 console.log(err);
                  return;
                  }
               else if (!item){

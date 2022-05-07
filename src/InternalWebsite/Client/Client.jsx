@@ -1,5 +1,5 @@
 //Standard ip for server
-const path = "http://localhost:8080";
+const path = "http://95.80.24.200:3000";
 
 //Standard post request to server
 const options = {

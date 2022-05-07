@@ -51,7 +51,7 @@ export default class Policy extends Component{
         var json = {
             "fileName" : fileName
         }
-        axios(`http://localhost:8080/` + path, {
+        axios(`http://95.80.24.200:3000/` + path, {
                 method: "POST",
                 responseType: "blob",
                 data: json

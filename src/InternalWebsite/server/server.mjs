@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(cors());
+//app.use(cors());
 
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded());
@@ -129,6 +129,13 @@ app.post("/getCipher", (req, res) => {
     return res.send({data: encryptedCipher});
 });
 
-app.listen(process.env.PORT || 8080, () =>
-  console.log('Server listening on port 8080!'),
+app.use(express.static(path.join(__dirname, '/../../../build')));
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '/../../../build', 'index.html'));
+});
+
+app.listen(process.env.PORT || 3000, () =>
+  console.log('Server listening on port 3000!'),
 );
+
