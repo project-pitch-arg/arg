@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 
 export default function Memory(){
-    //Skriv for-loppar med array.forEach?
+    // Skriv for-loppar med array.forEach?
+    // Get data from JSON
+    // Lives
+    // Clue for next screen
+    // Reset button
     var testData = [{text: "Text 1.1", tag: 1}, {text: "Text 1.2", tag: 1}, {text: "Text 2.1", tag: 2},
                     {text: "Text 2.2", tag: 2}, {text: "Text 3.1", tag: 3}, {text: "Text 3.2", tag: 3},
                     {text: "Text 4.1", tag: 4}, {text: "Text 4.2", tag: 4}, {text: "Text 5.1", tag: 5},
@@ -10,6 +14,8 @@ export default function Memory(){
                     {text: "Text 8.2", tag: 8}]
 
     var cardObject = null;
+    var livesObject = null;
+    var livesCount = 6;
 
     testData = shuffle(testData)
     var j = 0
@@ -20,13 +26,6 @@ export default function Memory(){
 
     useEffect(startUp);
 
-    function startUp() {
-        const cards = document.querySelectorAll(".card");
-        for(var i = 0; i < cards.length; i++) {
-            cards[i].addEventListener("click", turnCard);
-        }
-    }
-
     var identifierKey = -1;
     
     if(sessionStorage.getItem("Memory")) {
@@ -36,18 +35,38 @@ export default function Memory(){
             </div>
         )
     }
-    
 
     return (
         <div className="memory, content">
-            <div className="card-list">
-            {testData.map(card => {
-                identifierKey++;
-                return (<div key={identifierKey} > {cardGenerator(card.text)} </div>)
-        })}
+            <div>
+                <div className="card-list">
+                {testData.map(card => {
+                    identifierKey++;
+                    return (<div key={identifierKey} > {cardGenerator(card.text)} </div>)
+                })}
+                </div>
+                <div className="mem-button">
+                    <p className="lives">
+                        Lives: <span className="lives-count"> </span>
+                    </p>
+                    <button className="button" onClick={resetMem}> {"Reset"} </button> 
+                </div>
             </div>
         </div>
     )
+
+    function resetMem() {
+        window.location.reload()
+    }
+
+    function startUp() {
+        const cards = document.querySelectorAll(".card");
+        for(var i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("click", turnCard);
+        }
+        livesObject = document.querySelector(".lives-count");
+        livesObject.textContent = livesCount;
+    }
 
 // Fisher-Yates shuffle function.
     function shuffle(array) {
@@ -104,6 +123,11 @@ export default function Memory(){
         setTimeout(function(){ notPaired(pointerEvent.path[1], cardObject)}, 1500)
     }
 
+    // Check if player lost
+    if(livesCount === 0) {
+        resetMem();
+    }
+
     return;
 }  
 
@@ -116,6 +140,8 @@ export default function Memory(){
                 turnedCards[i][1] = "Not turned"
             }
         }
+        livesCount--;
+        livesObject.textContent = livesCount;
         return;
     }
 

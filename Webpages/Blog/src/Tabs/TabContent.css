@@ -298,34 +298,64 @@
     align-items: center;
     grid-gap: 15px;
     perspective: 800px;
+    
   }
   .card {
     position: relative;
     transform-style: preserve-3d;
-    height: 128px; /*FIX THIS! Do not want to specify like this*/
+    height: 100px; /*FIX THIS! Do not want to specify like this*/
+    width: 100px;
     transition: all 2s ease;
 }
 .front {
+    background: radial-gradient(hsl(93, 51%, 72%), hsl(93, 40%, 60%));
     background-color: rgb(161, 203, 159);
     position: absolute;
     width: 100%;
     height: 100%;
-    height: 128px; /*FIX THIS! Do not want to specify like this*/
+    height: inherit;
     font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.607);
+    text-align: center;
     transform: rotateY(-180deg);
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.167);
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .back {
-    background-color: crimson;
+    /*background-color: crimson; */
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    border-color: black;
+    border-style: groove;
+    background-color: hsl(93, 40%, 60%);
+    opacity: 0.8;
+    background-image:  linear-gradient(135deg, black 25%, transparent 25%), linear-gradient(225deg, black 25%, transparent 25%), linear-gradient(45deg, black 25%, transparent 25%), linear-gradient(315deg, black 25%, hsl(93, 40%, 60%) 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 10px 10px;
+    background-repeat: repeat;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.167);
 }
 .turn {
     transform: rotateY(180deg);
 }
 .correct-pair {
     transform: rotateY(180deg);
-    border-color: aqua;
+    border-color: black;
     border-style: double;
 }
+.mem-button {
+    margin-top: 3vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.lives {
+    font-size: larger;
+    font-weight: bold;
+    margin-right: 3vw;
+}
+

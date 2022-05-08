@@ -3,6 +3,20 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 1 ---------------
 
+- Bugg i memory om man vänder kort för fort
+
+- Snygga till koden för memory
+    - Sara
+
+- Behöver just nu sätta höjden manuellt till .card för memory.
+    Fattar inte riktigt varför men blir 0 annars.
+
+- Uppdatera Skylines i rapporten
+
+- Ändra Sudokun så att den bara har tre olika färger. SKa också bara finnas en 
+    bild med nolla i varhe färg då. Jag föreslår vi tar den som är tydligast för
+    ingen brukar hitta dem ändå.
+
 - Lägg till att Mr X och icniVad inte kommer delta på ett tag.
     - Mr X ger ingen anledning. Säger bara att han kommer vara borta.
     - icniVad "Real life came knocking... sad"
@@ -34,6 +48,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 2 ---------------
 
+- Flytta bakgrundsfärger (det gröna) till variabler och JSON från TabContent.css?
+
 - Kanske göra schema för encryptionKey bättre?
 
 - Organisera css-filer (bloggen fixad)
@@ -48,6 +64,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 - Dokumentation med användarprofiler.
     - Typ kopiera txt dokumentet som redan finns.
     - Appendix till allmän guide.
+
+- Fixa css så att man kan ha olika många kort i memory
 
 --------------- Prio 3 ---------------
 
