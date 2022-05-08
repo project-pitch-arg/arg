@@ -7,7 +7,7 @@
         "courseCode2", "courseCode2Index", "hintDinosaurs",
         "hintCourses", "redHintPicture", "blueHintPicture", "greenHintPicture",
         "jigsawSudoku", "parkEntrance", "directions", "chatAddress", "postsPerPage",
-        "tabNames", "currentQuestionText", "currentQuestion"
+        "tabNames", "currentQuestion"
     ],
     "properties": {
         "userPicture1": {
@@ -186,10 +186,6 @@
             "items": {
                 "type": ["string"]
             }
-        },
-        "currentQuestionText": {
-            "title:": "What is currently showing up in the input box for the text puzzle after moving on from the Skyline puzzle.",
-            "type": "string"
         },
         "currentQuestion": {
             "title": "What number of text is currently being solved in the text puzzle after moving on from the Skyline puzzle.",

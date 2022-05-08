@@ -1,9 +1,9 @@
+import { getElementById } from "domutils";
 import Variables from "../../JSONDocuments/ChangeableValues.json";
 
 export default function TextPuzzle(){
 
     var currentQuestion = Variables.currentQuestion;
-    var currentQuestionText = Variables.currentQuestionText;
 
     return (
         <div className="content">
@@ -114,94 +114,77 @@ export default function TextPuzzle(){
     )
 
     function checkAnswer() {
-        if (currentQuestion !== 9 && !JSON.parse(sessionStorage.getItem("answerFound"))) {
-            return (
-                <div>
-                    {currentQuestionText}
-                    <br />
-                    <form onSubmit={submitAnswer}>
-                        <input type="text" value={sessionStorage["textAnswer"]} onChange={(e) => sessionStorage.setItem("textAnswer", e.target.value)} className="input" placeholder="???" required />
-                        <div type="submit" />
-                    </form>
+        return (
+            <div>
+                <div id="questionText">
+                    1 = ?
                 </div>
-          )
-        } else {
-            return (
-                <div>
-                    The answer is Triceratops.
-
-                    <button onClick={reset()}>
-                        Reset puzzle.
-                    </button>
-                </div>
-            )
-          }
+                <br />
+                <form onSubmit={submitAnswer}>
+                    <input type="text" value={sessionStorage["textAnswer"]} onChange={(e) => sessionStorage.setItem("textAnswer", e.target.value)} className="input" placeholder="???" required />
+                    <div type="submit" />
+                </form>
+            </div>
+        )
       }
-
-    function reset() {
-        currentQuestion = 1;
-        currentQuestionText = "1 = ?";
-        sessionStorage.setItem("answerFound", false);
-        return;
-    }
 
     function submitAnswer(event) {
         event.preventDefault();
         switch (currentQuestion) {
             case 1:
                 if(sessionStorage.getItem("textAnswer") === "Music and drama students") {
-                    currentQuestionText = "2 = ?";
+                    var text = document.getElementById("questionText");
+                    text.innerHTML = "2 = ?";
                     currentQuestion = 2;
-                    console.log("2 = ?");
                 }
                 break;
             case 2:
-                if(sessionStorage.getItem("textAnswer") === "Nollning") {
-                    currentQuestionText= "3 = ?";
+                if(sessionStorage.getItem("textAnswer") === "Mottagningen") {
+                    var text = document.getElementById("questionText");
+                    text.innerHTML = "3 = ?";
                     currentQuestion = 3;
-                    console.log("3 = ?");
                 }
                 break;
             case 3:
                 if(sessionStorage.getItem("textAnswer") === "70") {
-                    currentQuestionText = "4 = ?";
+                    var text = document.getElementById("questionText");
+                    text.innerHTML = "4 = ?";
                     currentQuestion = 4;
-                    console.log("4 = ?");
                 }  
                 break;
             case 4:
                 if(sessionStorage.getItem("textAnswer") === "8") {
-                    currentQuestionText = "5 = ?";
+                    var text = document.getElementById("questionText");
+                    text.innerHTML = "5 = ?";
                     currentQuestion = 5;
-                    console.log("5 = ?");
                 }
                 break;
             case 5:
-                if(sessionStorage.getItem("textAnswer") === "Sequentially") {
-                    currentQuestionText = "6 = ?";
+                if(sessionStorage.getItem("textAnswer") === "Taken sequentially") {
+                    var text = document.getElementById("questionText");
+                    text.innerHTML = "6 = ?";
                     currentQuestion = 6;
-                    console.log("6 = ?");
                 }
                 break;
             case 6:
                 if(sessionStorage.getItem("textAnswer") === "Erasmus and Linnaeus Palme programmes") {
-                    currentQuestionText = "7 = ?";
+                    var text = document.getElementById("questionText");
+                    text.innerHTML = "7 = ?";
                     currentQuestion = 7;
-                    console.log("7 = ?");
                 }
                 break;
             case 7:
-                if(sessionStorage.getItem("textAnswer") === "Avoided") {
-                    currentQuestionText = "8 = ?";
+                if(sessionStorage.getItem("textAnswer") === "Avoided at GU") {
+                    var text = document.getElementById("questionText");
+                    text.innerHTML = "8 = ?";
                     currentQuestion = 8;
-                    console.log("8 = ?");
                 }
                 break;
             case 8:
                 if(sessionStorage.getItem("textAnswer") === "Moa Ekbom") {
                     currentQuestion = 9;
-                    sessionStorage.setItem("answerFound", true);
-                    console.log("The answer is Triceratops");
+                    var text = document.getElementById("questionText");
+                    text.innerHTML = "The answer is Triceratops";
                 }
                 break;
         }
