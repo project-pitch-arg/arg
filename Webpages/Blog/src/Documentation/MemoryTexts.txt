@@ -35,8 +35,9 @@ On the topic of time management;
 In many countries, it is common to take several courses in parallel for the entire semester. At the University of Gothenburg, it is most common to take courses sequentially, i.e., one course after the other during the semester. 
 
 Memory pair;
-    Multiple courses
-    Sequentially
+    Courses
+    Taken sequentially
+    (Changed this)
 
 Text error;
 Switch parallel with sequential
@@ -48,8 +49,9 @@ On the topic of libraries;
 Our eight libraries offer study environments with large reading rooms, individual study places, computers and group rooms. 
 
 Memory pairs;
-    Amount of libraries
+    Amount of libraries at GU
     8
+    (Changed)
 
 Text error;
 Change the number
@@ -62,8 +64,9 @@ During the first weeks, the students’ unions arrange welcome week and orientat
 Information about activities for new students is usually available on the websites of the students’ unions, on social media and on notice boards around campus. If you have questions, contact one of the students’ unions. 
 
 Memory pairs;
-    First few weeks
+    Reception of the first few weeks
     Nollning
+    (Ändrade detta. Man ska ju inte säga nollning utan mottagning.)
 
 Text error;
 Different weeks

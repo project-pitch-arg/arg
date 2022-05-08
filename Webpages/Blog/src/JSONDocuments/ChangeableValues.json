@@ -46,5 +46,13 @@
     "postsPerPage": 5,
     "tabNames": ["Home", "Posts", "Chat", "Quotes", "About"],
     "currentQuestionText": "1 = ?",
-    "currentQuestion": 1
+    "currentQuestion": 1,
+    "memoryCards": [{"text": "Exchange student exceptions","tag": 1},{"text": "Music and drama students","tag": 1},
+                    {"text": "Exchange student housing","tag": 2},{"text": "Erasmus and Linnaeus Palme programmes","tag": 2},
+                    {"text": "Courses","tag": 3},{"text": "Taken sequentially","tag": 3},
+                    {"text": "Amount of libraries at GU","tag": 4},{"text": "8","tag": 4},
+                    {"text": "Reception of the first few weeks","tag": 5},{"text": "Mottagningen","tag": 5},
+                    {"text": "Animal testing","tag": 6},{"text": "Avoided at GU","tag": 6},
+                    {"text": "University of Gothenburg","tag": 7},{"text": "GU","tag": 7},
+                    {"text": "Place to create interesting games and augment reality","tag": 8},{"text": "Game Design & Technology Master's Programme","tag": 8}]
 }

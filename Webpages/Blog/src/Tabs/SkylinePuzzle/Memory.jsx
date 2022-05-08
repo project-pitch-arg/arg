@@ -1,17 +1,12 @@
 import { useEffect } from "react";
+import Variables from "../../JSONDocuments/ChangeableValues.json";
 
 export default function Memory(){
     // Skriv for-loppar med array.forEach?
-    // Get data from JSON
-    // Lives
     // Clue for next screen
-    // Reset button
-    var testData = [{text: "Text 1.1", tag: 1}, {text: "Text 1.2", tag: 1}, {text: "Text 2.1", tag: 2},
-                    {text: "Text 2.2", tag: 2}, {text: "Text 3.1", tag: 3}, {text: "Text 3.2", tag: 3},
-                    {text: "Text 4.1", tag: 4}, {text: "Text 4.2", tag: 4}, {text: "Text 5.1", tag: 5},
-                    {text: "Text 5.2", tag: 5}, {text: "Text 6.1", tag: 6}, {text: "Text 6.2", tag: 6},
-                    {text: "Text 7.1", tag: 7}, {text: "Text 7.2", tag: 7}, {text: "Text 8.1", tag: 8},
-                    {text: "Text 8.2", tag: 8}]
+    // Error check på data från JSON. Kolla så att det finns jämnt antal av varje tag.
+    // Snygga till koden och kommentera
+    var testData = Variables.memoryCards;
 
     var cardObject = null;
     var livesObject = null;
@@ -64,8 +59,10 @@ export default function Memory(){
         for(var i = 0; i < cards.length; i++) {
             cards[i].addEventListener("click", turnCard);
         }
-        livesObject = document.querySelector(".lives-count");
-        livesObject.textContent = livesCount;
+        if(sessionStorage.getItem("Memory") === null) {
+            livesObject = document.querySelector(".lives-count");
+            livesObject.textContent = livesCount;
+        }
     }
 
 // Fisher-Yates shuffle function.
@@ -94,10 +91,6 @@ export default function Memory(){
                 cardObject = pointerEvent.path[1]
         }
     }
-    if(checkForWin()) {
-        sessionStorage.setItem("Memory", true)
-        window.location.reload();
-    }
 
     const check = checkForPair()
     if(check === "Pair") {
@@ -123,6 +116,10 @@ export default function Memory(){
         setTimeout(function(){ notPaired(pointerEvent.path[1], cardObject)}, 1500)
     }
 
+    if(checkForWin()) {
+        sessionStorage.setItem("Memory", true)
+        window.location.reload();
+    }
     // Check if player lost
     if(livesCount === 0) {
         resetMem();

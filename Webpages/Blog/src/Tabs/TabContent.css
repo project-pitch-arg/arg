@@ -346,6 +346,7 @@
     transform: rotateY(180deg);
     border-color: black;
     border-style: double;
+    border-width: 5px;
 }
 .mem-button {
     margin-top: 3vh;
