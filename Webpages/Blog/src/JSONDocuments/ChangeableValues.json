@@ -45,7 +45,6 @@
     "chatAddress": "http://localhost:3001/",
     "postsPerPage": 5,
     "tabNames": ["Home", "Posts", "Chat", "Quotes", "About"],
-    "currentQuestionText": "1 = ?",
     "currentQuestion": 1,
     "memoryCards": [{"text": "Exchange student exceptions","tag": 1},{"text": "Music and drama students","tag": 1},
                     {"text": "Exchange student housing","tag": 2},{"text": "Erasmus and Linnaeus Palme programmes","tag": 2},

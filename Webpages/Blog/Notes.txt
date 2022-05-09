@@ -25,11 +25,6 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
     bild med nolla i varhe färg då. Jag föreslår vi tar den som är tydligast för
     ingen brukar hitta dem ändå.
 
-- Lägg till att Mr X och icniVad inte kommer delta på ett tag.
-    - Mr X ger ingen anledning. Säger bara att han kommer vara borta.
-    - icniVad "Real life came knocking... sad"
-    - Sedan sent i allt om allo chatten.
-
 - Lägg till att man behöver ändra address till chatten när man lagt upp allt på en server i dokumentation.
 
 - Notera att första inlägget i PostContent måste ha ett datum
