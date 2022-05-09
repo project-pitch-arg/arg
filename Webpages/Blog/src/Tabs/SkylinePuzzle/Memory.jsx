@@ -10,7 +10,7 @@ export default function Memory(){
 
     var cardObject = null;
     var livesObject = null;
-    var livesCount = 6;
+    var livesCount = Variables.initialLives;
 
     testData = shuffle(testData)
     var j = 0
@@ -22,14 +22,6 @@ export default function Memory(){
     useEffect(startUp);
 
     var identifierKey = -1;
-    
-    if(sessionStorage.getItem("Memory")) {
-        return (
-            <div className="content">
-                YOU WIN!
-            </div>
-        )
-    }
 
     return (
         <div className="memory, content">
@@ -44,14 +36,17 @@ export default function Memory(){
                     <p className="lives">
                         Lives: <span className="lives-count"> </span>
                     </p>
-                    <button className="button" onClick={resetMem}> {"Reset"} </button> 
-                </div>
+                    {sessionStorage.getItem("Memory") != null ? 
+                        <button className="button" onClick={resetMem}> {"071085"} </button> :
+                        <button className="button" onClick={resetMem}> {"Reset"} </button>}
+                </div> 
             </div>
         </div>
     )
 
     function resetMem() {
-        window.location.reload()
+        window.location.reload();
+        sessionStorage.removeItem("Memory");
     }
 
     function startUp() {
@@ -59,10 +54,8 @@ export default function Memory(){
         for(var i = 0; i < cards.length; i++) {
             cards[i].addEventListener("click", turnCard);
         }
-        if(sessionStorage.getItem("Memory") === null) {
-            livesObject = document.querySelector(".lives-count");
-            livesObject.textContent = livesCount;
-        }
+        livesObject = document.querySelector(".lives-count");
+        livesObject.textContent = livesCount;
     }
 
 // Fisher-Yates shuffle function.
@@ -113,12 +106,11 @@ export default function Memory(){
             }
         }
     else if(check === "No pair") {
-        setTimeout(function(){ notPaired(pointerEvent.path[1], cardObject)}, 1500)
+        setTimeout(function(){ notPaired(pointerEvent.path[1], cardObject)}, 2000)
     }
 
     if(checkForWin()) {
-        sessionStorage.setItem("Memory", true)
-        window.location.reload();
+        setTimeout(winMem, 5000);
     }
     // Check if player lost
     if(livesCount === 0) {
@@ -127,6 +119,11 @@ export default function Memory(){
 
     return;
 }  
+
+    function winMem() {
+        sessionStorage.setItem("Memory", true)
+        window.location.reload();
+    }
 
     function notPaired(card1, card2) {
         card1.classList.remove("turn")

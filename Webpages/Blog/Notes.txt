@@ -3,6 +3,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 1 ---------------
 
+- Appendix bör uppdateras så avsnitten modifications handlar om hur man redigerar svårighetsgrad.
+
 - Kolla så alla filer har ett litet intro innan imports.
 
 - Kolla så att JSON-scheman stämmer nu när vi uppdaterat saker.
