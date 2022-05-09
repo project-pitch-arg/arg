@@ -37,7 +37,7 @@ function App() {
           <Route exact path={"/" + Variables.tabNames[1]} element={<Posts />} />
           <Route exact path={"/" + Variables.tabNames[2]} element={<Chat />} />
             <Route exact path={"/" + Variables.tabNames[1] + "/478"} element={<Memory />}/>
-            <Route exact path={"/" + Variables.tabNames[1] + "/GU"} element={<TextPuzzle />}/>
+            <Route exact path={"/" + Variables.tabNames[1] + "/071085"} element={<TextPuzzle />}/>
             <Route exact path={"/" + Variables.tabNames[1] + "/Triceratops"} element={<SolvedScreen />}/>
           <Route exact path={"/" + Variables.tabNames[3]} element={<Quotes />} />
           <Route exact path={"/" + Variables.tabNames[4]} element={<About />} />
