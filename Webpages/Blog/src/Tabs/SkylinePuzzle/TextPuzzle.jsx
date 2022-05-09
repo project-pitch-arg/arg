@@ -90,9 +90,8 @@ export default function TextPuzzle(){
                     </div>
 
                     <div className="post-content">
-                        Human research <br />
                         More or less all projects involving research on humans and falling under the Ethical Review Act (Etikprövningslagen EPL, SFS 2003:460) require an ethical review by the Swedish Ethical Review Authority(Etikprövningsmyndigheten, EPM).
-                        Animal research <br />
+                        <br /> <br />
                         A large proportion of medical research is conducted in test tubes or by using cell cultures. Animal testing is often performed in lieu of human testing. There are many studies that require animal testing and which can give us better diagnosis and treatment of diseases such as cancer, diabetes, Parkin's and stroke.
                     </div>
                 </div>
@@ -106,7 +105,7 @@ export default function TextPuzzle(){
                         The Ethics Committee
                         The task of the committee is to support researchers and management in matters that concern research ethics, such as legislation, regulations, guidelines, ethics, health, and the environment.
                         It was set up by the vice-chancellor in March 2021. The committee handles suspected deviations from good research practice that cannot be deemed research misconduct.
-                        The committee's secretary is Björn Rydevik, Ethics Administrator at the Grants and Innovation Office. She can answer questions concerning ethical reviews, good practice, requirements from research funders and research partnerships. 
+                        The committee's secretary is Björn Rydevik, Ethics Administrator at the Grants and Innovation Office. He can answer questions concerning ethical reviews, good practice, requirements from research funders and research partnerships. 
                     </div>
                 </div>
             </div>
@@ -132,57 +131,57 @@ export default function TextPuzzle(){
         event.preventDefault();
         switch (currentQuestion) {
             case 1:
-                if(sessionStorage.getItem("textAnswer") === "Music and drama students") {
+                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "music and drama students") {
                     var text = document.getElementById("questionText");
                     text.innerHTML = "2 = ?";
                     currentQuestion = 2;
                 }
                 break;
             case 2:
-                if(sessionStorage.getItem("textAnswer") === "Mottagningen") {
+                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "mottagningen") {
                     var text = document.getElementById("questionText");
                     text.innerHTML = "3 = ?";
                     currentQuestion = 3;
                 }
                 break;
             case 3:
-                if(sessionStorage.getItem("textAnswer") === "70") {
+                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "70") {
                     var text = document.getElementById("questionText");
                     text.innerHTML = "4 = ?";
                     currentQuestion = 4;
                 }  
                 break;
             case 4:
-                if(sessionStorage.getItem("textAnswer") === "8") {
+                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "8") {
                     var text = document.getElementById("questionText");
                     text.innerHTML = "5 = ?";
                     currentQuestion = 5;
                 }
                 break;
             case 5:
-                if(sessionStorage.getItem("textAnswer") === "Taken sequentially") {
+                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "taken sequentially") {
                     var text = document.getElementById("questionText");
                     text.innerHTML = "6 = ?";
                     currentQuestion = 6;
                 }
                 break;
             case 6:
-                if(sessionStorage.getItem("textAnswer") === "Erasmus and Linnaeus Palme programmes") {
+                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "erasmus and linnaeus palme programmes") {
                     var text = document.getElementById("questionText");
                     text.innerHTML = "7 = ?";
                     currentQuestion = 7;
                 }
                 break;
             case 7:
-                if(sessionStorage.getItem("textAnswer") === "Avoided at GU") {
+                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "avoided at gu") {
                     var text = document.getElementById("questionText");
                     text.innerHTML = "8 = ?";
                     currentQuestion = 8;
                 }
                 break;
             case 8:
-                if(sessionStorage.getItem("textAnswer") === "Moa Ekbom") {
-                    currentQuestion = 9;
+                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "moa ekbom") {
+                    currentQuestion = 1;
                     var text = document.getElementById("questionText");
                     text.innerHTML = "The answer is Triceratops";
                 }
