@@ -1,10 +1,11 @@
 import React, {  lazy, Suspense, Component } from 'react';
 import './BarOnTop.css';
 import {Link} from "react-router-dom";
-import InternalWrong from '../Wrong';
+import InternalWrong from '../Wrong.jsx';
 import Home from '../InternalTabs/Home';
 import {fetchData} from '../Client/Client.jsx';
 import {  Routes, Route } from 'react-router-dom';
+import Empty from "../InternalTabs/Empty";
 
 export default class TopBar extends Component {
 
@@ -12,17 +13,16 @@ export default class TopBar extends Component {
 
     constructor(props) {
         super(props);
-        this.locations = [];
+        this.locations = ["Account", "Home", "Company", "Documents", "HR", "News", "Quiz"];
         this.customLocations = [];
     }
 
     async componentDidMount(){
-        await this.addTabs("/InternalTabs/", this.locations);
         window.addEventListener("resize", this.setRemainingHeightForContent);
         if(window.location.pathname.length === 9) window.history.replaceState(null, "New Page Title", "/Internal/Home");
         this.setRemainingHeightForContent();
-
     }
+
     componentWillUnmount(){
         window.removeEventListener("resize", this.setRemainingHeightForContent);
     }
@@ -37,24 +37,11 @@ export default class TopBar extends Component {
         }
         try {
             document.getElementById(path.file).classList.add('active');
+            this.setRemainingHeightForContent();
         }
         catch{
             console.log("no such path")
         }
-      }
-
-      //Request for all tabs from the server and adds them to the list.
-      addTabs = async (path, location) => {
-            var json = {
-                data: path
-            }
-            const response = await fetchData('/getFiles', json);
-            const data = await response.json();
-            for (var i = 0; i < data.files.length; i++) {
-                    location.push(data.files[i]);
-            }
-
-            this.setState({dataReceived: true});
       }
 
       reloadPage = () => {
@@ -63,15 +50,11 @@ export default class TopBar extends Component {
 
       //Adds custom tab to the list. Custom tabs are in the "CustomPages" folder.
       addCustomTabs = (fileName) => {
-            if(!this.customLocations.includes(fileName)){
-                this.customLocations.push(fileName);
-            }
+            if(!this.customLocations.includes(fileName)) this.customLocations.push(fileName);
       }
 
       removeCustomTabs = (fileName) => {
-           if(this.customLocations.includes(fileName)){
-               this.customLocations.splice(fileName,1);
-           }
+           if(this.customLocations.includes(fileName)) this.customLocations.splice(fileName,1);
       }
 
       setRemainingHeightForContent(){
@@ -80,7 +63,7 @@ export default class TopBar extends Component {
                 document.getElementById(window.location.pathname.split("/")[2] + "tag").style.height = vh - 50 - (document.getElementById("menu").offsetTop + document.getElementById("menu").offsetHeight) + "px";
             }
             catch{
-                window.location.reload();
+                document.getElementById("InternalWrongtag").style.height = vh - 50 - (document.getElementById("menu").offsetTop + document.getElementById("menu").offsetHeight) + "px";
             }
       }
 
@@ -88,7 +71,7 @@ export default class TopBar extends Component {
       getComponent = (file, Tag) => {
             return (<Route key={file} path={"/" + file} element={
                   <div id={file + "tag"}>
-                      <Suspense fallback={<InternalWrong />}>
+                      <Suspense fallback={<Empty />}>
                           <Tag reloadPage={this.reloadPage} logOut={this.props.logOut}/>
                       </Suspense>
                   </div>
@@ -96,16 +79,11 @@ export default class TopBar extends Component {
       }
 
       render(){
-          if(localStorage.getItem('Console') === "true"){
-            this.addCustomTabs("Console");
-          }
-          else {
-            this.removeCustomTabs("Console");
-          }
+          if(localStorage.getItem('Console') === "true") this.addCustomTabs("Console");
+          else this.removeCustomTabs("Console");
           return (
                 <div className="topbarInternal" id="topbar">
-                    <header ><h1 id="topbarHeader" className="internalHeader">Difax</h1></header>
-
+                      <header ><h1 id="topbarHeader" className="internalHeader">Difax</h1></header>
                       <div className="menyDiv" id="menu">
                       <ul id='topbarInternal-ul'>
                       {
@@ -122,7 +100,7 @@ export default class TopBar extends Component {
                       </div>
                       <Routes>
                           <Route exact path="/" element={<Home/>}/>
-                          <Route exact path="/*" element={<InternalWrong />} />
+                          <Route path="/*" element={<InternalWrong />} />
                           {
                             this.locations.map((file) => {
                                 const Tag = lazy(() => import("../InternalTabs/" + file));
@@ -134,7 +112,6 @@ export default class TopBar extends Component {
                                 const Tag = lazy(() => import("../CustomPages/" + file));
                                 return this.getComponent(file, Tag)
                             })
-
                           }
                       }
                       </Routes>

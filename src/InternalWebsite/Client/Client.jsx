@@ -1,5 +1,7 @@
+import {ip_address} from "../CommonCode/CommonCode";
+
 //Standard ip for server
-const path = "http://95.80.24.200:3000";
+const path = ip_address;
 
 //Standard post request to server
 const options = {

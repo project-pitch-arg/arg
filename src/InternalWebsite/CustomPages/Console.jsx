@@ -10,11 +10,6 @@ export default class Console extends Component{
     constructor(props){
         super(props);
         this.previousCommands = [];
-        this.helpCommands = Variables.helpCommands;
-        this.adminCommands = Variables.adminCommands;
-        this.securityAnswers = Variables.securityAnswers;
-        this.securityQuestions = Variables.securityQuestions;
-        this.adminCode = Variables.adminCode;
         this.adminOn = false;
         this.securityCheck = false;
         this.messagesEnd = React.createRef();
@@ -47,13 +42,13 @@ export default class Console extends Component{
         switch (command){
             case "/help":
                 this.previousCommands.push("The commands available are:");
-                if(this.adminOn){
-                    this.adminCommands.forEach((command) => {
+                if(this.adminOn || localStorage.getItem("adminOn") === "true"){
+                    Variables.adminCommands.forEach((command) => {
                         this.previousCommands.push(command);
                     })
                 }
                 else {
-                    this.helpCommands.forEach((command) => {
+                    Variables.helpCommands.forEach((command) => {
                         this.previousCommands.push(command);
                     })
                 }
@@ -62,9 +57,10 @@ export default class Console extends Component{
                     this.previousCommands = [];
                     break;
             case "/admin":
-                    if(data === this.adminCode){
+                    if(data === Variables.adminCode){
                         this.previousCommands.push("Admin commands activated!");
                         this.adminOn = true;
+                        localStorage.setItem("adminOn", true);
                     }
                     else {
                         this.previousCommands.push("Invalid code!");
@@ -80,10 +76,10 @@ export default class Console extends Component{
                 break;
             case "/changePassword":
                     if(this.adminOn && data === this.CEOName){
-                        if(answers.length === this.securityAnswers.length){
+                        if(answers.length === Variables.securityAnswers.length){
                             var check = true;
                             for(var i = 0; i < answers.length; i++){
-                                if(answers[i].toUpperCase() !== this.securityAnswers[i].toUpperCase()){
+                                if(answers[i].toUpperCase() !== Variables.securityAnswers[i].toUpperCase()){
                                     this.previousCommands.push("Wrong answers");
                                     check = false;
                                     break;
@@ -103,8 +99,8 @@ export default class Console extends Component{
                         else {
                             this.previousCommands.push("Security Questions: ");
                             var questionFormat = "";
-                            for(i = 0; i < this.securityQuestions.length; i++){
-                                this.previousCommands.push(this.securityQuestions[i]);
+                            for(i = 0; i < Variables.securityQuestions.length; i++){
+                                this.previousCommands.push(Variables.securityQuestions[i]);
                                 questionFormat += " [answer " + (i+1) + "]";
                             }
                             this.previousCommands.push("Answer question in format /changePassword [user]" + questionFormat);

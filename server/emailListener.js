@@ -1,10 +1,10 @@
-
 //------------- JSON
+var jsonPath = "../src/json/"
 
-var jsonData1 = require('../../json/OurWork.json');
-var jsonData2 = require('../../json/AboutUs.json');
-var jsonData = require('../../json/emailResponses.json');
-var variables = require('../../json/Variables.json');
+var jsonData1 = require(jsonPath + 'OurWork.json');
+var jsonData2 = require(jsonPath + 'AboutUs.json');
+var jsonData = require(jsonPath + 'emailResponses.json');
+var variables = require(jsonPath +  'Variables.json');
 
 var helena_temp = jsonData.helena;
 var lyra_temp = jsonData.lyra;

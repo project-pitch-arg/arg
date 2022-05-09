@@ -83,6 +83,10 @@ p.newsText{
   display: block;
   margin-bottom: 20px;
 }
+.wrongMessage{
+    margin-top: 10px;
+    color: red;
+}
 
 .pdfItem:hover{
     background-color: #33adff;

@@ -3,10 +3,10 @@ import "./TabContent.css";
 import {basicFetchData} from "../Client/Client";
 import axios from 'axios';
 import Variables from "../../json/Variables";
-import {getCEOName} from "../CommonCode/CommonCode";
+import {getCEOName, ip_address} from "../CommonCode/CommonCode";
 
 
-export default class Policy extends Component{
+export default class Documents extends Component{
 
     state = { dataReceived: false, numberOfPages: 0, pageNumber: 1, fileName: null, hidden: true, unlockConsole: false, secret: false, ceo: false}
 
@@ -28,9 +28,10 @@ export default class Policy extends Component{
     async componentDidMount(){
         await this.getPolicy();
         this.checkKey(localStorage.getItem("keyForFiles"));
+        if(localStorage.getItem("smallConsole") === "true") this.setState({hidden: false});
         if(JSON.parse(localStorage.getItem("user")).username === this.ceoName){
             if(!this.state.ceo){
-                this.setState({ceo: true});
+                this.setState({ceo: true, hidden: true});
             }
             await this.getSecret();
         }
@@ -51,7 +52,7 @@ export default class Policy extends Component{
         var json = {
             "fileName" : fileName
         }
-        axios(`http://95.80.24.200:3000/` + path, {
+        axios(ip_address + path, {
                 method: "POST",
                 responseType: "blob",
                 data: json
@@ -95,6 +96,7 @@ export default class Policy extends Component{
         }
         if(this.keys.length >= this.correctKeys.length && !this.state.ceo && event.key === "Enter"){
            this.setState({hidden: !this.state.hidden});
+           localStorage.setItem("smallConsole", true);
            this.keys = [];
         }
     }
@@ -108,12 +110,23 @@ export default class Policy extends Component{
             window.history.replaceState(null, "New Page Title", "/Internal/Console");
             window.location.reload(false);
         }
+        else {
+            this.setState({wrongMessage: "Wrong code"});
+            setTimeout(() => {
+                this.setState({wrongMessage: ""});
+            }, 3000);
+        }
     }
 
     //Called when input is submitted into decrypt console
     handleInputDecrypt = (event) => {
         event.preventDefault();
-        this.checkKey(event.target.command.value);
+        if(!this.checkKey(event.target.command.value)){
+            this.setState({wrongMessage: "Wrong code"});
+            setTimeout(() => {
+                this.setState({wrongMessage: ""});
+            }, 3000);
+        }
     }
 
     //Checks if the key entered is correct
@@ -121,7 +134,9 @@ export default class Policy extends Component{
         if(value === Variables.smallDecryptConsole){
             this.setState({secret: true});
             localStorage.setItem("keyForFiles", value);
+            return true;
         }
+        return false;
     }
 
     //Called when lock is pressed
@@ -142,9 +157,9 @@ export default class Policy extends Component{
                   { this.state.ceo ?
                     (<div><div className="underlineDiv"></div>
                         {!this.state.secret ? (<div className="lockedArchiveDiv"><h3 className="lockedArchive">Encrypted Archive</h3><img src={require("../images/Lock.png")} className="lock" alt="Lock" onClick={this.unlock}/>
-                            {this.state.unlockConsole ? (<form onSubmit={this.handleInputDecrypt}>
+                            {this.state.unlockConsole ? (<div><form onSubmit={this.handleInputDecrypt}>
                              <input className="smallConsole" placeholder="Enter key..." type="text" name="name" id="command"/>
-                           </form> ) : (null)}</div>)
+                           </form> <p className="wrongMessage">{this.state.wrongMessage}</p></div>) : (null)}</div>)
                            :
                            (this.secretPDF.map((file) => {
                               return <div className="pdfItemDiv" key={file}><button className="pdfItem" onClick={() => this.getPDF(file, "getSecretPDF")}>{file.split(".")[0]}</button></div>
@@ -152,9 +167,9 @@ export default class Policy extends Component{
                         }</div>) : (null)
                   }
                   {!this.state.hidden ? (
-                      <form onSubmit={this.handleInput}>
+                      <div className="centeredDiv"><form onSubmit={this.handleInput}>
                         <input className="smallConsole" placeholder="Enter code..." type="text" name="name" id="command"/>
-                      </form>) : (null)}
+                      </form><p className="wrongMessage">{this.state.wrongMessage}</p></div>) : (null) }
                 </div>
             )
         }
