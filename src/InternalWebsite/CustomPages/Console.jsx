@@ -10,7 +10,7 @@ export default class Console extends Component{
     constructor(props){
         super(props);
         this.previousCommands = [];
-        this.adminOn = false;
+        this.adminOn = localStorage.getItem("adminOn");
         this.securityCheck = false;
         this.messagesEnd = React.createRef();
         this.CEOName = "";
@@ -42,7 +42,7 @@ export default class Console extends Component{
         switch (command){
             case "/help":
                 this.previousCommands.push("The commands available are:");
-                if(this.adminOn || localStorage.getItem("adminOn") === "true"){
+                if(this.adminOn){
                     Variables.adminCommands.forEach((command) => {
                         this.previousCommands.push(command);
                     })
@@ -63,7 +63,7 @@ export default class Console extends Component{
                         localStorage.setItem("adminOn", true);
                     }
                     else {
-                        this.previousCommands.push("Invalid code!");
+                        this.previousCommands.push(data + " is incorrect!");
                     }
                 break;
             case "/currentAdmin":
@@ -80,7 +80,7 @@ export default class Console extends Component{
                             var check = true;
                             for(var i = 0; i < answers.length; i++){
                                 if(answers[i].toUpperCase() !== Variables.securityAnswers[i].toUpperCase()){
-                                    this.previousCommands.push("Wrong answers");
+                                    this.previousCommands.push("The answers " + answers.toString() + " are incorrect!");
                                     check = false;
                                     break;
                                 }
@@ -107,7 +107,7 @@ export default class Console extends Component{
                         }
                     }
                     else if(this.adminOn){
-                        this.previousCommands.push( data + " was not found in database!");
+                        this.previousCommands.push(data + " was not found in database!");
                     }
                     else {
                         this.defaultMessage(command);
