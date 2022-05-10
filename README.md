@@ -29,4 +29,4 @@ In the server directory, you can run:
 
 ### `node server.mjs`
 
-Starts the node server. Before starting server change the ip_address to new servers ip this variable can be found inside src/Internalwebsite/CommonCode/CommonCode.jsx. After doing this you should run 'npm run build' in the arg directory. Then you can run this command and everything should be up and running. 
+Starts the node server. Before starting server change the ip_address to the new server's ip address. This variable can be found inside src/Internalwebsite/CommonCode/CommonCode.jsx. After doing this you should run 'npm run build' in the arg directory. Then you can run this command and everything should be up and running. 
