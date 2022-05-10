@@ -3,6 +3,12 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 1 ---------------
 
+- Ändra Drama and Music students-paret i memory (från testning)
+
+- Testa så att det ändrar färger som tänkt om man gör det via JSON.
+
+- Flytta textgåtans info till JSON.
+
 - Appendix bör uppdateras så avsnitten modifications handlar om hur man redigerar svårighetsgrad.
 
 - Kolla så alla filer har ett litet intro innan imports.
