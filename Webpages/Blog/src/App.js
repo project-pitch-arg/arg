@@ -36,9 +36,9 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path={"/" + Variables.tabNames[1]} element={<Posts />} />
           <Route exact path={"/" + Variables.tabNames[2]} element={<Chat />} />
-            <Route exact path={"/" + Variables.tabNames[1] + Variables.tabNames[5]} element={<Memory />}/>
-            <Route exact path={"/" + Variables.tabNames[1] + Variables.tabNames[6]} element={<TextPuzzle />}/>
-            <Route exact path={"/" + Variables.tabNames[1] + Variables.tabNames[7]} element={<SolvedScreen />}/>
+            <Route exact path={"/" + Variables.tabNames[1] + "/" + Variables.tabNames[5]} element={<Memory />}/>
+            <Route exact path={"/" + Variables.tabNames[1] + "/" + Variables.tabNames[6]} element={<TextPuzzle />}/>
+            <Route exact path={"/" + Variables.tabNames[1] + "/" + Variables.tabNames[7]} element={<SolvedScreen />}/>
           <Route exact path={"/" + Variables.tabNames[3]} element={<Quotes />} />
           <Route exact path={"/" + Variables.tabNames[4]} element={<About />} />
         </Routes>
