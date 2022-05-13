@@ -1,6 +1,6 @@
 import {basicFetchDataJson} from "../Client/Client";
 
-export var ip_address = "http://95.80.24.200:3000";
+export var ip_address = "http://localhost:3000";
 
 export function nameFormatting(name){
     var realName = name.split("_");
