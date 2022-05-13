@@ -9,15 +9,12 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 - Testa så att det ändrar färger som tänkt om man gör det via JSON.
 
-- Flytta textgåtans info till JSON.
-
 - Appendix bör uppdateras så avsnitten modifications handlar om hur man redigerar svårighetsgrad.
 
 - Kolla så alla filer har ett litet intro innan imports.
 
 - Kolla så att JSON-scheman stämmer nu när vi uppdaterat saker.
-
-- Tabs för skylinegåtan är inte modifierbara med JSON.
+    - Lägg till MemoryCards i ChangeableValues json schema.
 
 - Bugg i memory om man vänder kort för fort
 

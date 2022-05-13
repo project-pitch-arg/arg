@@ -462,8 +462,8 @@ export function errorChecker() {
       throw new Error("Third course code has to be three letters.");
   if (Variables.postsPerPage < 1)
       throw new Error("1 or more posts has to be displayed.");
-  if (Variables.tabNames.length !== 5)
-      throw new Error("There are supposed to be 5 tab names.");
+  if (Variables.tabNames.length !== 8)
+      throw new Error("There are supposed to be 8 tab names.");
   if (!(!DIFFERENT_COLORS.includes(Variables.letterColour) && !(Variables.letterColour.slice(0,3) === "rbg") && 
         !(Variables.letterColour.slice(0,1) === "#") && !(Variables.letterColour.slice(0,3) === "hsl") && 
         !(Variables.letterColour.slice(0,4) === "rgba") && !(Variables.letterColour.slice(0,4) === "hsla"))) {

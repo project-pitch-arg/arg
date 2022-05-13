@@ -7,7 +7,7 @@
         "courseCode2", "courseCode2Index", "hintDinosaurs",
         "hintCourses", "redHintPicture", "blueHintPicture", "greenHintPicture",
         "jigsawSudoku", "parkEntrance", "directions", "chatAddress", "postsPerPage",
-        "tabNames", "currentQuestion"
+        "tabNames", "currentQuestion", "textPuzzles"
     ],
     "properties": {
         "userPicture1": {
@@ -179,18 +179,27 @@
             "maximum": 10
         },
         "tabNames": {
-            "title": "The names of the 5 different tabs on the website.",
+            "title": "The names of the 8 different tabs on the website. This includes the 3 hidden ones.",
             "type": "array",
-            "minLength": 5,
-            "maxLength": 5,
+            "minLength": 8,
+            "maxLength": 8,
             "items": {
-                "type": ["string"]
+                "type": "string"
             }
         },
         "currentQuestion": {
             "title": "What number of text is currently being solved in the text puzzle after moving on from the Skyline puzzle.",
             "type": "integer",
             "exclusiveMinimum": 0
+        },
+        "textPuzzles": {
+            "title": "The text showing in the respective slot in the text puzzle after solving the memory puzzle.",
+            "type": "array",
+            "minLength": 8,
+            "maxLength": 8,
+            "items": {
+                "type": "string"
+            }
         }
     },
     "additionalProperties": false
