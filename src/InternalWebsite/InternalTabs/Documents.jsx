@@ -151,7 +151,7 @@ export default class Documents extends Component{
                     <h1 className="underline">Policy Documents</h1>
                   {
                     this.normalPDF.map((file) => {
-                        return <div className="pdfItemDiv" key={file}><button className="pdfItem" onClick={() => this.getPDF(file, "getPDF")}>{file.split(".")[0]}</button></div>
+                        return <div className="pdfItemDiv" key={file}><button className="pdfItem" onClick={() => this.getPDF(file, "/getPDF")}>{file.split(".")[0]}</button></div>
                     })
                   }
                   { this.state.ceo ?
@@ -162,7 +162,7 @@ export default class Documents extends Component{
                            </form> <p className="wrongMessage">{this.state.wrongMessage}</p></div>) : (null)}</div>)
                            :
                            (this.secretPDF.map((file) => {
-                              return <div className="pdfItemDiv" key={file}><button className="pdfItem" onClick={() => this.getPDF(file, "getSecretPDF")}>{file.split(".")[0]}</button></div>
+                              return <div className="pdfItemDiv" key={file}><button className="pdfItem" onClick={() => this.getPDF(file, "/getSecretPDF")}>{file.split(".")[0]}</button></div>
                           }))
                         }</div>) : (null)
                   }
