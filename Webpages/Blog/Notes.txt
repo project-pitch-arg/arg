@@ -3,6 +3,8 @@ Sara: Mr X, Tree123, DiggerTigger, Daemonosaurus, Fexjo
 
 --------------- Prio 1 ---------------
 
+- Kolla på varningar mm när sidorna startas
+
 - Ändra Drama and Music students-paret i memory (från testning)
 
 - Testa så att det ändrar färger som tänkt om man gör det via JSON.
