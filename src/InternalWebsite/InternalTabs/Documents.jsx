@@ -16,10 +16,12 @@ export default class Documents extends Component{
         this.normalPDF = [];
         this.secretPDF = [];
         this.keys = [];
+        this.clickedKeysFromText = [];
         this.input = "";
         this.correctKeys = Variables.keysPressedDownForConsole;
         this.ceoName = ""
         this.loadCEO();
+        this.title = Array.from(Variables.titleForDocuments);
     }
     async loadCEO(){
         this.ceoName = await getCEOName();
@@ -35,7 +37,9 @@ export default class Documents extends Component{
             }
             await this.getSecret();
         }
-        document.addEventListener("keydown", this._handleKeyDown);
+        document.addEventListener("keydown", event => this._handleKeyDown(event, this.keys));
+        const container = document.getElementById("container");
+        container.addEventListener('click', this.clickHandler, false);
     }
 
     //Removes eventListeners for key presses
@@ -49,9 +53,9 @@ export default class Documents extends Component{
 
     //Requests and displays specific pdf file from server
     async getPDF(fileName, path){
-        var json = {
-            "fileName" : fileName
-        }
+        const json = {
+            "fileName": fileName
+        };
         axios(ip_address + path, {
                 method: "POST",
                 responseType: "blob",
@@ -87,17 +91,17 @@ export default class Documents extends Component{
     }
 
     //Called when a key is pressed
-    _handleKeyDown = (event) => {
-        if(event.key !== "Enter") this.keys.push(event.key);
-        for(var i = 0; i < this.correctKeys.length; i++){
-            if(!this.correctKeys.includes(event.key) && event.key !== "Enter"){
-               this.keys = [];
+    _handleKeyDown = (event, keyArray) => {
+        if(event.key !== "Enter") keyArray.push(event.key);
+        for(let i = 0; i < this.correctKeys.length; i++){
+            if(!this.correctKeys.toUpperCase().includes(event.key.toUpperCase()) && event.key !== "Enter"){
+                keyArray.length = 0;
             }
         }
-        if(this.keys.length >= this.correctKeys.length && !this.state.ceo && event.key === "Enter"){
+        if(keyArray.length >= this.correctKeys.length && !this.state.ceo && event.key === "Enter"){
            this.setState({hidden: !this.state.hidden});
-           localStorage.setItem("smallConsole", true);
-           this.keys = [];
+           localStorage.setItem("smallConsole", "true");
+           keyArray.length = 0;
         }
     }
 
@@ -105,7 +109,7 @@ export default class Documents extends Component{
     handleInput = (event) => {
         event.preventDefault();
         if(event.target.command.value === Variables.smallConsoleCode){
-            localStorage.setItem('Console', true);
+            localStorage.setItem('Console', "true");
             this.reloadPage();
             window.history.replaceState(null, "New Page Title", "/Internal/Console");
             window.location.reload(false);
@@ -129,6 +133,17 @@ export default class Documents extends Component{
         }
     }
 
+    clickHandler = (event) => {
+        const key = {
+            key: event.target.textContent
+        };
+        this._handleKeyDown(key,this.clickedKeysFromText);
+        if(this.clickedKeysFromText.length === 4){
+            key.key = "Enter";
+            this._handleKeyDown(key, this.clickedKeysFromText);
+        }
+    }
+
     //Checks if the key entered is correct
     checkKey(value){
         if(value === Variables.smallDecryptConsole){
@@ -148,33 +163,35 @@ export default class Documents extends Component{
         if(this.state.dataReceived) {
             return (
                 <div className="newsBlock" >
-                    <h1 className="underline">Policy Documents</h1>
+                    <div className="marginDiv" id="container">{this.title.map((char) => {
+                        return <span className="underline">{char}</span>
+                    })}</div>
                   {
                     this.normalPDF.map((file) => {
                         return <div className="pdfItemDiv" key={file}><button className="pdfItem" onClick={() => this.getPDF(file, "/getPDF")}>{file.split(".")[0]}</button></div>
                     })
                   }
                   { this.state.ceo ?
-                    (<div><div className="underlineDiv"></div>
+                    (<div><div className="underlineDiv"/>
                         {!this.state.secret ? (<div className="lockedArchiveDiv"><h3 className="lockedArchive">Encrypted Archive</h3><img src={require("../images/Lock.png")} className="lock" alt="Lock" onClick={this.unlock}/>
                             {this.state.unlockConsole ? (<div><form onSubmit={this.handleInputDecrypt}>
                              <input className="smallConsole" placeholder="Enter key..." type="text" name="name" id="command"/>
-                           </form> <p className="wrongMessage">{this.state.wrongMessage}</p></div>) : (null)}</div>)
+                           </form> <p className="wrongMessage">{this.state.wrongMessage}</p></div>) : null}</div>)
                            :
                            (this.secretPDF.map((file) => {
                               return <div className="pdfItemDiv" key={file}><button className="pdfItem" onClick={() => this.getPDF(file, "/getSecretPDF")}>{file.split(".")[0]}</button></div>
                           }))
-                        }</div>) : (null)
+                        }</div>) : null
                   }
                   {!this.state.hidden ? (
                       <div className="centeredDiv"><form onSubmit={this.handleInput}>
                         <input className="smallConsole" placeholder="Enter code..." type="text" name="name" id="command"/>
-                      </form><p className="wrongMessage">{this.state.wrongMessage}</p></div>) : (null) }
+                      </form><p className="wrongMessage">{this.state.wrongMessage}</p></div>) : null }
                 </div>
             )
         }
         else {
-            return (<div className="newsBlock"></div>)
+            return (<div className="newsBlock"/>)
         }
     }
 }
