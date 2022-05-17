@@ -181,14 +181,13 @@ h1.underline{
     font-family: Verdana,serif;
     font-size: 35px;
     position: relative;
-
 }
 div.marginDiv{
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-h2{
+.newsBlock h2{
     color: white;
     font-size: 22px;
 }
