@@ -1,6 +1,6 @@
 .topbarInternal {
   position: relative;
-  top: 0px;
+  top: 0;
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -55,7 +55,6 @@
 .menyDiv{
     background-color: #24647f;
     padding: 10px;
-    display: relative;
 }
 
 .internalHeader{

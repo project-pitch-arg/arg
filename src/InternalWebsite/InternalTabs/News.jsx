@@ -19,14 +19,14 @@ export default class News extends Component{
 
     //Sorts the lists by date descending with newest first
     sortByDate(list){
-        var check = true;
+        let check = true;
         while(check){
             check = false;
             try {
-                for(var i = 0; i < list.length - 1; i++){
+                for(let i = 0; i < list.length - 1; i++){
                     if(new Date(list[i].date).getTime() < new Date(list[i+1].date).getTime()){
                         check = true;
-                        var temp = list[i];
+                        const temp = list[i];
                         list[i] = list[i+1];
                         list[i+1] = temp;
                     }
@@ -77,7 +77,7 @@ export default class News extends Component{
             )
         }
         else {
-            return (<div className="newsBlock"></div>)
+            return (<div className="newsBlock"/>)
         }
 
     }

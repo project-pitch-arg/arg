@@ -19,17 +19,17 @@ export function fetchData(postPath, data){
 
 //Handles the most used way to request and use data
 export async function basicFetchData(path){
-    var json = {}
+    const json = {};
     const response = await fetchData(path, json);
     const data = await response.json();
-    var array = [];
+    const array = [];
     try {
         Object.keys(data[0]).forEach((key) => {
                   array.push(data[0][key]);
             })
     }
     catch {
-        Object.keys(data).forEach((key,index) => {
+        Object.keys(data).forEach((key) => {
             data[key].forEach((value) => {
                 array.push(value)
             })

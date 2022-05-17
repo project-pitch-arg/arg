@@ -1,50 +1,48 @@
 //------------- JSON
-var jsonPath = "../src/json/"
+const jsonPath = "../src/json/";
 
-var jsonData1 = require(jsonPath + 'OurWork.json');
-var jsonData2 = require(jsonPath + 'AboutUs.json');
-var jsonData = require(jsonPath + 'emailResponses.json');
-var variables = require(jsonPath +  'Variables.json');
+const jsonData1 = require(jsonPath + 'OurWork.json');
+const jsonData2 = require(jsonPath + 'AboutUs.json');
+const jsonData = require(jsonPath + 'emailResponses.json');
+const variables = require(jsonPath + 'Variables.json');
 
-var helena_temp = jsonData.helena;
-var lyra_temp = jsonData.lyra;
-var wilfred_temp = jsonData.wilfred;
+const helena_temp = jsonData.helena;
+const lyra_temp = jsonData.lyra;
+const wilfred_temp = jsonData.wilfred;
 
 //--------------Helena
 
-var helena_first_reply = helena_temp.first_reply;
-var helena_second_reply = helena_temp.second_reply;
-var helena_third_reply = helena_temp.third_reply;
-var helena_no_reply = helena_temp.no_reply;
+const helena_first_reply = helena_temp.first_reply;
+const helena_second_reply = helena_temp.second_reply;
+const helena_third_reply = helena_temp.third_reply;
+const helena_no_reply = helena_temp.no_reply;
 
 //------------ Lyra
 
-var lyra_first_reply = lyra_temp.first_reply;
-var lyra_hint = lyra_temp.hint;
-var lyra_no_reply = lyra_temp.no_reply;
+const lyra_first_reply = lyra_temp.first_reply;
+const lyra_hint = lyra_temp.hint;
+const lyra_no_reply = lyra_temp.no_reply;
 
 //------------ Wilfred
-var wilfred_first_reply = wilfred_temp.first_reply;
-var wilfred_second_reply = wilfred_temp.second_reply;
-var wilfred_third_reply = wilfred_temp.third_reply;
-var wilfred_fourth_reply = wilfred_temp.fourth_reply;
+const wilfred_first_reply = wilfred_temp.first_reply;
+const wilfred_second_reply = wilfred_temp.second_reply;
+const wilfred_third_reply = wilfred_temp.third_reply;
+const wilfred_fourth_reply = wilfred_temp.fourth_reply;
 
 //our work password
 // var temp = jsonData1.our_work;
-var ourWorkPassword = jsonData1.username;
+const ourWorkPassword = jsonData1.username;
 
 //about us password
 // var temp = jsonData1.about_us;
-var aboutUsPassword = jsonData2.password;
+const aboutUsPassword = jsonData2.password;
 
 //--------------
 const path = require('path');
 const fs = require('fs');
 const PdfReader = require('pdfreader').PdfReader;
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-var Imap = require('imap'),
-    inspect = require('util').inspect;
-var MailListener = require("mail-listener2");
+const MailListener = require("mail-listener2");
 
 //------------- Creation of MailListeners
 
@@ -69,22 +67,22 @@ function createMailListener(email, pass){
     });
 }
 
-var helena_email_credentials = {
+const helena_email_credentials = {
     email: "helena.godspeed@gmail.com",
     password: "Speed241"
 };
-var lyra_email_credentials = {
+const lyra_email_credentials = {
     email: "LyraBell.Difax@gmail.com",
     password: "ColoradoSprings532"
 };
-var wilfred_email_credentials = {
+const wilfred_email_credentials = {
     email: "wilfredmalm285@gmail.com",
     password: "yellowstoneCaldera916"
-}
+};
 
-var helena_mailListener = createMailListener(helena_email_credentials.email, helena_email_credentials.password);
-var lyra_mailListener = createMailListener(lyra_email_credentials.email, lyra_email_credentials.password);
-var wilfred_mailListener = createMailListener(wilfred_email_credentials.email, wilfred_email_credentials.password);
+const helena_mailListener = createMailListener(helena_email_credentials.email, helena_email_credentials.password);
+const lyra_mailListener = createMailListener(lyra_email_credentials.email, lyra_email_credentials.password);
+const wilfred_mailListener = createMailListener(wilfred_email_credentials.email, wilfred_email_credentials.password);
 
 //-------------- start listening
 
@@ -127,7 +125,7 @@ wilfred_mailListener.on("error", function(err){
 });
 
 //----------------
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 
 function createTransportForMailer(email, password){
     return nodemailer.createTransport({
@@ -144,16 +142,18 @@ wilfred_transporter = createTransportForMailer(wilfred_email_credentials.email, 
 
 //---------------------
 function standardMailOptions(email){
-    return mailOptions = {
+    return {
          from: email,
          to: '',
          subject: '',
          text: '',
    };
 }
-var helena_mailOptions = standardMailOptions(helena_email_credentials.email);
-var lyra_mailOptions = standardMailOptions(lyra_email_credentials.email);
-var wilfred_mailOptions = standardMailOptions(wilfred_email_credentials.email);
+
+const helena_mailOptions = standardMailOptions(helena_email_credentials.email);
+const lyra_mailOptions = standardMailOptions(lyra_email_credentials.email);
+const wilfred_mailOptions = standardMailOptions(wilfred_email_credentials.email);
+
 //--------------------
 
 function sendMail(subject, to , message, mailOptions, transporter){
@@ -170,7 +170,7 @@ function sendMail(subject, to , message, mailOptions, transporter){
 }
 
 //------------- helena mail listener arguments
-helena_mailListener.on("mail", function(mail, seqno, attributes){
+helena_mailListener.on("mail", function(mail){
     try {
         if(mail.text.includes(variables.smallConsoleCode)){
             sendMail("Hello", mail.from, helena_first_reply, helena_mailOptions, helena_transporter);
@@ -193,13 +193,13 @@ helena_mailListener.on("mail", function(mail, seqno, attributes){
      }
 });
 //------------- lyra mail listener arguments
-lyra_mailListener.on("mail", function(mail, seqno, attributes){
+lyra_mailListener.on("mail", function(mail){
     try {
-        var text = mail.text.toUpperCase();
-        var key = "wilfred";
+        const text = mail.text.toUpperCase();
+        const key = "wilfred";
         //checks if the email contains any words that match hint keys
-        var hintKeys = ["help", "advice", "guidance", "hand", "support", "assist", "hint","credentials","intranet"];
-        var doesContain = false;
+        const hintKeys = ["help", "advice", "guidance", "hand", "support", "assist", "hint", "credentials", "intranet"];
+        let doesContain = false;
         for(let i = 0; i<hintKeys.length;i++){
              if(text.includes(hintKeys[i].toUpperCase())){
                 doesContain = true;
@@ -220,9 +220,9 @@ lyra_mailListener.on("mail", function(mail, seqno, attributes){
     }
 });
 //------------- wilfred mail listener arguments
-wilfred_mailListener.on("mail", function(mail, seqno, attributes){
+wilfred_mailListener.on("mail", function(mail){
     try {
-        var text = mail.text.toUpperCase();
+        const text = mail.text.toUpperCase();
         if(text.includes(ourWorkPassword.toUpperCase()) && text.includes(aboutUsPassword.toUpperCase()) ){
             sendMail("Hello again", mail.from, wilfred_second_reply, wilfred_mailOptions, wilfred_transporter)
         }
@@ -246,32 +246,31 @@ lyra_mailListener.on("attachment", function(attachment){
   console.log(attachment.path);
 });
 wilfred_mailListener.on("attachment", function(attachment){
-      var pathAttachments = path.join(__dirname, "/attachments/")
-      setTimeout(readPDF,20000,collectNormalTexts,pathAttachments);
+    console.log(attachment.path);
+    const pathAttachments = path.join(__dirname, "/attachments/");
+    setTimeout(readPDF,20000,collectNormalTexts,pathAttachments);
 
-      var secretDirectory = path.join(__dirname, "/SecretFiles/")
-      setTimeout(readPDF, 20000, collectSecretTexts,secretDirectory);
+    const secretDirectory = path.join(__dirname, "/SecretFiles/");
+    setTimeout(readPDF, 20000, collectSecretTexts,secretDirectory);
 });
 //Reads pdf attachments and check if they include the necessary secret information for wilfred
 function readPDF(callback){
-    var dir = arguments[1];
+    const dir = arguments[1];
     fs.readdir(dir, function(err, filenames) {
         if (err) {
-          onError(err);
+          console.log(err);
           return;
         }
         filenames.forEach(function(filename) {
           fs.readFile (dir + filename, (err, pdfBuffer) => {
           // pdfBuffer contains the file content
-          var text = "";
-          new PdfReader().parseBuffer(pdfBuffer, function(err, item){
+              let text = "";
+              new PdfReader().parseBuffer(pdfBuffer, function(err, item){
              if (err){
                  console.log(err);
-                 return;
                  }
               else if (!item){
                 callback(text, filenames.length);
-                return;
               }
               else if (item.text)
                   text += item.text;
@@ -281,11 +280,11 @@ function readPDF(callback){
     });
 }
 
-var totalText = "";
-var iText = 0;
-var secretText = "";
-var secretTextLoaded = false;
-var normalTextLoaded = false;
+let totalText = "";
+let iText = 0;
+let secretText = "";
+let secretTextLoaded = false;
+let normalTextLoaded = false;
 
 //Counts the number of sent files read. If all files are read proceed to compare texts.
 function collectNormalTexts(text, filenames){
@@ -300,7 +299,7 @@ function collectNormalTexts(text, filenames){
 }
 
 //Counts the number of secret files read. If all files are read proceed to compare texts.
-function collectSecretTexts(text,filenames){
+function collectSecretTexts(text){
     secretText += text;
     secretTextLoaded = true;
     if(normalTextLoaded){

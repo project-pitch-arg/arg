@@ -20,7 +20,7 @@ export default class Internal extends Component {
       document.title = "Difax";
       document.body.style.overflow = "hidden"
       try {
-          var json = JSON.parse(localStorage.getItem("user"));
+          const json = JSON.parse(localStorage.getItem("user"));
           if(json !== null && await getAccountData(json)){
              this.setState({loggedIn: true})
              this.logIn();
@@ -45,13 +45,13 @@ export default class Internal extends Component {
     }
 
     logIn = () => {
-        localStorage.setItem("loggedIn", true);
+        localStorage.setItem("loggedIn", "true");
         this.setState({loggedIn: true});
     }
 
     logOut = () => {
         localStorage.removeItem("user");
-        localStorage.setItem("loggedIn", false);
+        localStorage.setItem("loggedIn", "false");
         this.setState({loggedIn: false});
     }
 

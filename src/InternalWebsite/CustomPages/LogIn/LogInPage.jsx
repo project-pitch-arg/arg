@@ -23,10 +23,11 @@ export default class LogInPage extends Component{
 
     //Is called log in button is pressed
     logIn = async (event) => {
+        let json;
         event.preventDefault();
         if(event.target.cipher){
-            var json = {"cipher": event.target.cipher.value};
-            var response = await basicFetchDataJson("/checkCipher", json);
+            json = {"cipher": event.target.cipher.value};
+            const response = await basicFetchDataJson("/checkCipher", json);
             if(response.error){
                 alert(response.error)
             }
@@ -39,7 +40,7 @@ export default class LogInPage extends Component{
             if(!this.timerActivated){
                 this.reloadPage();
                 this.timerActivated = true;
-                this.activateCipher();
+                await this.activateCipher();
             }
         }
         else {
@@ -64,8 +65,8 @@ export default class LogInPage extends Component{
 
     //Client asks the server for the cipher and starts the clock
     activateCipher = async () => {
-        var json = {"data": "placeholder"};
-        var response  = await basicFetchDataJson("/getCipher", json);
+        const json = {"data": "placeholder"};
+        const response = await basicFetchDataJson("/getCipher", json);
         this.cipher = await response.data;
         const delay = 60000;
         setTimeout(this.activateCipher, delay);
@@ -92,9 +93,9 @@ export default class LogInPage extends Component{
                 <p style={{color: "white"}}><i>Hint: Answer should be an animal</i></p>
                 <p style={{color: "red"}}>{this.cipher}</p><div className="progress-bar-div">
                 <img className="progress-bar-image" src={progressBar} alt="Progress bar"/>
-                <div className="progress-bar-removal" style={{width: this.getTimeInPercentage(this.currentTimer)}}></div>
+                <div className="progress-bar-removal" style={{width: this.getTimeInPercentage(this.currentTimer)}}/>
                 </div>
-                </div>) : (null) }
+                </div>) : null }
                 <input type="submit" id="submit" value="Log in"/>
             </form>
           </div>

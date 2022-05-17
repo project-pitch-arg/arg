@@ -1,10 +1,10 @@
+// noinspection ES6CheckImport
+
 import React, {  lazy, Suspense, Component } from 'react';
 import './BarOnTop.css';
-import {Link} from "react-router-dom";
+import {Link, Routes, Route} from "react-router-dom";
 import InternalWrong from '../Wrong.jsx';
 import Home from '../InternalTabs/Home';
-import {fetchData} from '../Client/Client.jsx';
-import {  Routes, Route } from 'react-router-dom';
 import Empty from "../InternalTabs/Empty";
 
 export default class TopBar extends Component {
@@ -29,7 +29,7 @@ export default class TopBar extends Component {
 
     //Changes the selected button in the topbar.
     highlightActive = (path) => {
-        var oldActiveElements = document.getElementsByClassName('active');
+        const oldActiveElements = document.getElementsByClassName('active');
         if (oldActiveElements.length > 0) {
           for (let elem of oldActiveElements){
               elem.classList.remove('active');
@@ -113,7 +113,6 @@ export default class TopBar extends Component {
                                 return this.getComponent(file, Tag)
                             })
                           }
-                      }
                       </Routes>
                 </div>
             )

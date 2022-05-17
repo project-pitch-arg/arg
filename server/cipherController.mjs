@@ -38,10 +38,10 @@ const caesarCipher = function(s, k) {
 export function generateCipher(){
     cipher = "";
     encryptedCipher = "";
-    var randomLetter = getRandomInt(69,118);
-    var word = fs.readFileSync("../src/json/cipherWords.json");
-    var json = JSON.parse(word);
-    var animal = json[getRandomInt(0,json.length)];
+    getRandomInt(69,118);
+    const word = fs.readFileSync("../src/json/cipherWords.json");
+    const json = JSON.parse(word);
+    const animal = json[getRandomInt(0, json.length)];
     cipher += animal;
     encryptedCipher += caesarCipher(animal,231);
     setTimeout(clearCipher, 60000)

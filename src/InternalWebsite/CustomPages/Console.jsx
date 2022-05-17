@@ -33,10 +33,11 @@ export default class Console extends Component{
     }
     //Called when input is submitted
     handleInput = (event) =>{
+        let i;
         event.preventDefault();
-        var command = event.target.command.value.split(/\s+/)[0];
-        var data = event.target.command.value.split(/\s+/)[1];
-        var answers = event.target.command.value.split(/\s+/);
+        const command = event.target.command.value.split(/\s+/)[0];
+        const data = event.target.command.value.split(/\s+/)[1];
+        const answers = event.target.command.value.split(/\s+/);
         answers.splice(0,1);
         answers.splice(0,1);
         switch (command){
@@ -60,7 +61,7 @@ export default class Console extends Component{
                     if(data === Variables.adminCode){
                         this.previousCommands.push("Admin commands activated!");
                         this.adminOn = true;
-                        localStorage.setItem("adminOn", true);
+                        localStorage.setItem("adminOn", "true");
                     }
                     else {
                         this.previousCommands.push(data + " is incorrect!");
@@ -77,8 +78,8 @@ export default class Console extends Component{
             case "/changePassword":
                     if(this.adminOn && data === this.CEOName){
                         if(answers.length === Variables.securityAnswers.length){
-                            var check = true;
-                            for(var i = 0; i < answers.length; i++){
+                            let check = true;
+                            for(i = 0; i < answers.length; i++){
                                 if(answers[i].toUpperCase() !== Variables.securityAnswers[i].toUpperCase()){
                                     this.previousCommands.push("The answers " + answers.toString() + " are incorrect!");
                                     check = false;
@@ -98,7 +99,7 @@ export default class Console extends Component{
                         }
                         else {
                             this.previousCommands.push("Security Questions: ");
-                            var questionFormat = "";
+                            let questionFormat = "";
                             for(i = 0; i < Variables.securityQuestions.length; i++){
                                 this.previousCommands.push(Variables.securityQuestions[i]);
                                 questionFormat += " [answer " + (i+1) + "]";

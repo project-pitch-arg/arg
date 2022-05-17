@@ -23,8 +23,8 @@ export default class Quiz extends Component{
     //Checks if all questions have a selected answer. If not the user is alerted to finish it.
     quizDone = (event) => {
         event.preventDefault();
-        var check = true;
-        for(var i = 0; i < this.quiz.length; i++){
+        let check = true;
+        for(let i = 0; i < this.quiz.length; i++){
             if(event.target["answer" + i].value === ""){
                 alert("Please answer all questions");
                 check = false;
@@ -48,7 +48,7 @@ export default class Quiz extends Component{
                                 return (<div className="quizObject" key={key}>
                                     <h2 style={{color: "black", marginBottom: "10px", marginTop: "0"}}>{this.quiz[key].text}</h2>
                                     {
-                                        Object.entries(this.quiz[key].alternatives).map(([name,value], index) => {
+                                        Object.entries(this.quiz[key].alternatives).map(([name,value]) => {
                                             return (<div key={value}>
                                               <input type="radio" id={name} name={"answer" + key} value={value}/>
                                               <label htmlFor={name}>{value}</label>
@@ -64,7 +64,7 @@ export default class Quiz extends Component{
                 )
         }
         else {
-            return (<div className="newsBlock"></div>)
+            return (<div className="newsBlock"/>)
         }
     }
 }
