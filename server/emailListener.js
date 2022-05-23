@@ -3,7 +3,7 @@ const jsonPath = "../src/json/";
 
 const jsonData1 = require(jsonPath + 'OurWork.json');
 const jsonData2 = require(jsonPath + 'AboutUs.json');
-const jsonData = require(jsonPath + 'emailResponses.json');
+const jsonData = require(jsonPath + 'EmailResponses.json');
 const variables = require(jsonPath + 'Variables.json');
 
 const helena_temp = jsonData.helena;
@@ -12,22 +12,22 @@ const wilfred_temp = jsonData.wilfred;
 
 //--------------Helena
 
-const helena_first_reply = helena_temp.first_reply;
-const helena_second_reply = helena_temp.second_reply;
-const helena_third_reply = helena_temp.third_reply;
-const helena_no_reply = helena_temp.no_reply;
+const helena_firstReply = helena_temp.firstReply;
+const helena_secondReply = helena_temp.secondReply;
+const helena_thirdReply = helena_temp.thirdReply;
+const helena_noReply = helena_temp.noReply;
 
 //------------ Lyra
 
-const lyra_first_reply = lyra_temp.first_reply;
+const lyra_firstReply = lyra_temp.firstReply;
 const lyra_hint = lyra_temp.hint;
-const lyra_no_reply = lyra_temp.no_reply;
+const lyra_noReply = lyra_temp.noReply;
 
 //------------ Wilfred
-const wilfred_first_reply = wilfred_temp.first_reply;
-const wilfred_second_reply = wilfred_temp.second_reply;
-const wilfred_third_reply = wilfred_temp.third_reply;
-const wilfred_fourth_reply = wilfred_temp.fourth_reply;
+const wilfred_firstReply = wilfred_temp.firstReply;
+const wilfred_secondReply = wilfred_temp.secondReply;
+const wilfred_thirdReply = wilfred_temp.thirdReply;
+const wilfred_fourthReply = wilfred_temp.fourthReply;
 
 //our work password
 // var temp = jsonData1.our_work;
@@ -173,19 +173,19 @@ function sendMail(subject, to , message, mailOptions, transporter){
 helena_mailListener.on("mail", function(mail){
     try {
         if(mail.text.includes(variables.smallConsoleCode)){
-            sendMail("Hello", mail.from, helena_first_reply, helena_mailOptions, helena_transporter);
+            sendMail("Hello", mail.from, helena_firstReply, helena_mailOptions, helena_transporter);
             setTimeout(function() {
-                sendMail("Hello again", mail.from, helena_second_reply, helena_mailOptions, helena_transporter)
+                sendMail("Hello again", mail.from, helena_secondReply, helena_mailOptions, helena_transporter)
             }, 60000);
         }
         else if(mail.text.includes(variables.adminCode)){
-            sendMail("Hello", mail.from, helena_first_reply, helena_mailOptions, helena_transporter);
+            sendMail("Hello", mail.from, helena_firstReply, helena_mailOptions, helena_transporter);
             setTimeout(function() {
-                sendMail("Hello", mail.to[0], mail.from, helena_third_reply,helena_mailOptions,helena_transporter)
+                sendMail("Hello", mail.to[0], mail.from, helena_thirdReply,helena_mailOptions,helena_transporter)
             }, 60000);
         }
         else {
-            sendMail("Hello", mail.from, helena_no_reply, helena_mailOptions, helena_transporter);
+            sendMail("Hello", mail.from, helena_noReply, helena_mailOptions, helena_transporter);
         }
     }
     catch (e){
@@ -206,13 +206,13 @@ lyra_mailListener.on("mail", function(mail){
              }
         }
         if(text.includes(key.toUpperCase())){
-            sendMail("Hello", mail.from, lyra_first_reply , lyra_mailOptions, lyra_transporter);
+            sendMail("Hello", mail.from, lyra_firstReply , lyra_mailOptions, lyra_transporter);
         }
         else if(doesContain){
             sendMail("An introduction to Difax", mail.from, lyra_hint, lyra_mailOptions, lyra_transporter);
         }
         else {
-          sendMail("Hello", mail.from, lyra_no_reply, lyra_mailOptions, lyra_transporter);
+          sendMail("Hello", mail.from, lyra_noReply, lyra_mailOptions, lyra_transporter);
         }
     }
     catch (e){
@@ -224,13 +224,13 @@ wilfred_mailListener.on("mail", function(mail){
     try {
         const text = mail.text.toUpperCase();
         if(text.includes(ourWorkPassword.toUpperCase()) && text.includes(aboutUsPassword.toUpperCase()) ){
-            sendMail("Hello again", mail.from, wilfred_second_reply, wilfred_mailOptions, wilfred_transporter)
+            sendMail("Hello again", mail.from, wilfred_secondReply, wilfred_mailOptions, wilfred_transporter)
         }
         else if(mail.attachments !== undefined){
             wilfred_mailOptions.to = mail.from;
         }
         else {
-          sendMail("Hello", mail.from, wilfred_first_reply , wilfred_mailOptions, wilfred_transporter);
+          sendMail("Hello", mail.from, wilfred_firstReply , wilfred_mailOptions, wilfred_transporter);
         }
     }
     catch (e){
@@ -310,10 +310,10 @@ function collectSecretTexts(text){
 //Compares the sent attachments text and those stored in "SecretFiles"-
 function compareTexts(text1, text2){
     if(text1.includes(text2)){
-        sendMail("Hello", wilfred_mailOptions.to, wilfred_fourth_reply, wilfred_mailOptions, wilfred_transporter);
+        sendMail("Hello", wilfred_mailOptions.to, wilfred_fourthReply, wilfred_mailOptions, wilfred_transporter);
     }
     else {
-        sendMail("Hello", wilfred_mailOptions.to, wilfred_third_reply, wilfred_mailOptions, wilfred_transporter);
+        sendMail("Hello", wilfred_mailOptions.to, wilfred_thirdReply, wilfred_mailOptions, wilfred_transporter);
     }
     totalText = "";
     secretText = "";

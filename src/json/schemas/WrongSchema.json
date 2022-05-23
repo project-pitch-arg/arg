@@ -7,7 +7,7 @@
           "type": "object",
           "additionalProperties": true,
           "properties": {
-              "wrong_message": {
+              "wrongMessage": {
                   "type": "string"
               },
               "header": {
@@ -20,7 +20,7 @@
           "required": [
               "header",
               "homeIcon",
-              "wrong_message"
+              "wrongMessage"
           ]
       },
       "Image": {

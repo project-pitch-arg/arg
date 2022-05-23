@@ -11,27 +11,27 @@ import Variables from '../../json/OurWork.json';
 
   //----------- puzzle related strings
 
-  var puzzleVar  = Variables.puzzle_var;
+  var puzzleVar  = Variables.puzzleVar;
 
   var crackedUsername = Variables.username;
 
 
   //---------- header title
 
-  var headerTitle = Variables.header_title;
+  var headerTitle = Variables.headerTitle;
 
   
   //-------------paragraph title, text & images
 
-  var firstParagraphTitle = Variables.first_paragraph.title;
-  var secondParagraphTitle = Variables.second_paragraph.title;
-  var thirdParagraphTitle = Variables.third_paragraph.title;
+  var firstParagraphTitle = Variables.firstParagraph.title;
+  var secondParagraphTitle = Variables.secondParagraph.title;
+  var thirdParagraphTitle = Variables.thirdParagraph.title;
 
-  var firstParagraphText = Variables.first_paragraph.text;
-  var secondParagraphText = Variables.second_paragraph.text;
-  var thirdParagraphText = Variables.third_paragraph.text;
+  var firstParagraphText = Variables.firstParagraph.text;
+  var secondParagraphText = Variables.secondParagraph.text;
+  var thirdParagraphText = Variables.thirdParagraph.text;
 
-  var firstParagraphImage   = importImage(Variables.first_paragraph.image);
+  var firstParagraphImage   = importImage(Variables.firstParagraph.image);
 
   //----------- images
 

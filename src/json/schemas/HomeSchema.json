@@ -10,22 +10,22 @@
                     "type": "string",
                     "format": "integer"
                 },
-                "encrypted_email": {
+                "encryptedEmail": {
                     "type": "string"
                 },
-                "header_title": {
+                "headerTitle": {
                     "type": "string"
                 },
-                "first_paragraph": {
+                "firstParagraph": {
                     "$ref": "#/definitions/Paragraph"
                 },
-                "second_paragraph": {
+                "secondParagraph": {
                     "$ref": "#/definitions/Paragraph"
                 },
-                "third_paragraph": {
+                "thirdParagraph": {
                     "$ref": "#/definitions/Paragraph"
                 },
-                "fourth_paragraph": {
+                "fourthParagraph": {
                     "$ref": "#/definitions/Paragraph"
                 },
                 "images": {
@@ -34,12 +34,12 @@
             },
             "required": [
                 "passphrase",
-                "encrypted_email",
-                "first_paragraph",
-                "second_paragraph",
-                "third_paragraph",
-                "fourth_paragraph",
-                "header_title",
+                "encryptedEmail",
+                "firstParagraph",
+                "secondParagraph",
+                "thirdParagraph",
+                "fourthParagraph",
+                "headerTitle",
                 "images"
             ]
         },

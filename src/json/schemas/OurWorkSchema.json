@@ -6,23 +6,23 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "puzzle_var": {
+                "puzzleVar": {
                     "type": "string",
                     "format": "integer"
                 },
                 "username": {
                     "type": "string"
                 },
-                "header_title": {
+                "headerTitle": {
                     "type": "string"
                 },
-                "first_paragraph": {
+                "firstParagraph": {
                     "$ref": "#/definitions/Paragraph"
                 },
-                "second_paragraph": {
+                "secondParagraph": {
                     "$ref": "#/definitions/Paragraph"
                 },
-                "third_paragraph": {
+                "thirdParagraph": {
                     "$ref": "#/definitions/Paragraph"
                 },
                 "images": {
@@ -30,12 +30,12 @@
                 }
             },
             "required": [
-                "first_paragraph",
-                "header_title",
+                "firstParagraph",
+                "headerTitle",
                 "images",
-                "puzzle_var",
-                "second_paragraph",
-                "third_paragraph",
+                "puzzleVar",
+                "secondParagraph",
+                "thirdParagraph",
                 "username"
             ],
             "title": "OurWork"

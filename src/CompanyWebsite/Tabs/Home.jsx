@@ -10,33 +10,33 @@ import Variables from "../../json/Home.json";
 
     // var Variables = jsonData.home
     var passphrase = Variables.passphrase;
-    var encryptedEmail = Variables.encrypted_email;
+    var encryptedEmail = Variables.encryptedEmail;
     var attempt = "";
 
 
     //---------- header title
 
-    var headerTitle = Variables.header_title;
+    var headerTitle = Variables.headerTitle;
 
 
     //---------- paragraph titles and texts
 
-    var firstParagraphTitle = Variables.first_paragraph.title;
-    var secondParagraphTitle = Variables.second_paragraph.title;
-    var thirdParagraphTitle = Variables.third_paragraph.title;
-    var fourthParagraphTitle = Variables.fourth_paragraph.title;
+    var firstParagraphTitle = Variables.firstParagraph.title;
+    var secondParagraphTitle = Variables.secondParagraph.title;
+    var thirdParagraphTitle = Variables.thirdParagraph.title;
+    var fourthParagraphTitle = Variables.fourthParagraph.title;
 
-    var firstParagraphText = Variables.first_paragraph.text;
-    var secondParagraphText = Variables.second_paragraph.text;
-    var thirdParagraphText = Variables.third_paragraph.text;
-    var fourthParagraphText = Variables.fourth_paragraph.text;
+    var firstParagraphText = Variables.firstParagraph.text;
+    var secondParagraphText = Variables.secondParagraph.text;
+    var thirdParagraphText = Variables.thirdParagraph.text;
+    var fourthParagraphText = Variables.fourthParagraph.text;
 
     //------------ images from imageImport file
 
     var images = Variables.images;
 
     var header = importImage(images.header);
-    var introImg = importImage(Variables.first_paragraph.image);
+    var introImg = importImage(Variables.firstParagraph.image);
     var techImg1 = importImage(images.techImages[0]);
     var techImg2 = importImage(images.techImages[1]);
     var techImg3 = importImage(images.techImages[2]);

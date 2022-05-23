@@ -11,13 +11,13 @@
                     "type": "string",
                     "format": "integer"
                 },
-                "header_title": {
+                "headerTitle": {
                     "type": "string"
                 },
-                "first_paragraph": {
+                "firstParagraph": {
                     "$ref": "#/definitions/Paragraph"
                 },
-                "second_paragraph": {
+                "secondParagraph": {
                     "$ref": "#/definitions/Paragraph"
                 },
                 "images": {
@@ -25,9 +25,9 @@
                 }
             },
             "required": [
-                "header_title",
-                "first_paragraph",
-                "second_paragraph",
+                "headerTitle",
+                "firstParagraph",
+                "secondParagraph",
                 "images",
                 "password"
             ]

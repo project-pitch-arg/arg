@@ -39,7 +39,7 @@ export function generateCipher(){
     cipher = "";
     encryptedCipher = "";
     getRandomInt(69,118);
-    const word = fs.readFileSync("../src/json/cipherWords.json");
+    const word = fs.readFileSync("../src/json/CipherWords.json");
     const json = JSON.parse(word);
     const animal = json[getRandomInt(0, json.length)];
     cipher += animal;

@@ -11,19 +11,19 @@ import {basicFetchDataJson} from "../../InternalWebsite/Client/Client";
 {
     //---------- header title
 
-  var headerTitle = Variables.header_title;
+  var headerTitle = Variables.headerTitle;
 
   
   //----------- paragraph title, text & images
 
-  var firstParagraphTitle = Variables.first_paragraph.title;
-  var secondParagraphTitle = Variables.second_paragraph.title;
+  var firstParagraphTitle = Variables.firstParagraph.title;
+  var secondParagraphTitle = Variables.secondParagraph.title;
   
-  var firstParagraphText = Variables.first_paragraph.text;
-  var secondParagraphText = Variables.second_paragraph.text;
+  var firstParagraphText = Variables.firstParagraph.text;
+  var secondParagraphText = Variables.secondParagraph.text;
   
-  var firstParagraphImage = importImage(Variables.first_paragraph.image);
-  var secondParagraphImage = importImage(Variables.second_paragraph.image);
+  var firstParagraphImage = importImage(Variables.firstParagraph.image);
+  var secondParagraphImage = importImage(Variables.secondParagraph.image);
 
 
     //----------- images

@@ -5,7 +5,7 @@ import Variables from '../json/Wrong.json';
 
 
 {
-  var wrongMessage = Variables.wrong_message;
+  var wrongMessage = Variables.wrongMessage;
   
 
   //---------- images
