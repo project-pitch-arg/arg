@@ -1,0 +1,47 @@
+[
+    {
+        "username": "Robot1311213",
+        "secret": "Imarobot",
+        "email": "wilf@example.com"
+    },
+    {
+        "username": "Fexjo",
+        "secret": "MynameisCaesar",
+        "email": "edwin@example.com"
+    },
+    {
+        "username": "Mr X",
+        "secret": "ILovePuzzles",
+        "email": "kayden@example.com"
+    },
+    {
+        "username": "icniVad",
+        "secret": "daVinciCode",
+        "email": "alejandro@example.com"
+    },
+    {
+        "username": "Tree123",
+        "secret": "TreesAndFlowers",
+        "email": "martina@example.com"
+    },
+    {
+        "username": "Pinnipedia",
+        "secret": "SealPupsAreCute",
+        "email": "lynn@example.com"
+    },
+    {
+        "username": "Daemonosaurus",
+        "secret": "IAmNotADemon",
+        "email": "kaj@example.com"
+    },
+    {
+        "username": "SpikeyTike",
+        "secret": "TomAndJerry",
+        "email": "taylor@example.com"
+    },
+    {
+        "username": "DiggerTigger",
+        "secret": "WinnieHasNiceQuotes",
+        "email": "eli@example.com"
+    }
+]

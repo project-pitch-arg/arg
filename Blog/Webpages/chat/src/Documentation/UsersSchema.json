@@ -1,0 +1,27 @@
+{
+    "title": "Users to add in the chat.",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "username", 
+            "secret", 
+            "email"
+        ],
+        "properties": {
+            "username": {
+                "title": "The username that will be used when sending messages.",
+                "type": "string"
+            },
+            "secret": {
+                "title": "The secret (password) used for this user.",
+                "type": "string"
+            },
+            "email": {
+                "title": "The email of the user. Needs to follow standard email formats (example@ex.com).",
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
+    }
+}  

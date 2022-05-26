@@ -1,0 +1,57 @@
+[
+    {
+        "question": "What do I do? What is this place? Help!", 
+        "answerUser1": "Welcome to our small part of the internet. This is simply where we post our thoughts on matters that we are interested in and share it with the world. You can find it under 'Posts'.", 
+        "answerUser2": "We also have a chat that you can use to communicate with not only us but also other people that use this website. I hope you enjoy your time here. Oh, and don't forget to check the Quotes of the Day, they are quite marvelous in my opinion."
+    },
+    {
+        "question": "Who are we?", 
+        "answerUser1": "I'm a 23-year old masters student at Chalmers Institute of Technology who doesn't know what I'm suppsed to do with all the puzzles I make. Also, never EVER give me grapefruit!", 
+        "answerUser2": "An exchange student that went to the University of Gothenburg in Sweden, a while back. I like to explore and take photos with my phone to remember places."
+    },
+    {
+        "question": "Where are you from?",
+        "answerUser1": "I was manufactured in Gothenburg. I have been situated here for all of my existence.",
+        "answerUser2": "I originate from Great Britain, but started this website with Robot1312113 after getting to know him during the period of time I spent studying in Sweden."
+    },
+    {
+        "question": "Why do we have a blog?", 
+        "answerUser1": "To keep in contact with each other and have someone solve my puzzles.", 
+        "answerUser2": "It's nice to be able to upload what you think about and pictures you like."
+    },
+    {
+        "question": "How can you contact us?",
+        "answerUser1": "By sacrificing two goats and a llama to the eldritch overlords of our domain.",
+        "answerUser2": "We occasionally check the chat. There's a special chat for contact with us. If you don't already have an account for the chat it is quite simple. Just go to the chat tab and click the 'Create Account' button. After that, simply fill in your information."
+    },
+    {
+        "question": "What are these puzzles you keep mentioning?", 
+        "answerUser1": "That is for you to figure out.", 
+        "answerUser2": "What puzzles?"
+    },
+    {
+        "question": "Can I copy your content?", 
+        "answerUser1": "Ctrl + C and Ctrl + V are sacred buttons not to be used here.", 
+        "answerUser2": "Small pieces, but please avoid to do so. For further information please check our Code of Conduct lower down on this page."
+    },
+    {
+        "question": "Why is the blog green?", 
+        "answerUser1": "Because Fexjo wanted it to be.", 
+        "answerUser2": ":)"
+    },
+    {
+        "question": "Why do you not upload pictures of yourselves?", 
+        "answerUser1": "What's wrong with my robot?", 
+        "answerUser2": "I would like my online life to be kept separate from my IRL one."
+    },
+    {
+        "question": "What's 678^2/3698?", 
+        "answerUser1": "0x3F", 
+        "answerUser2": "≈124.306111412"
+    },
+    {
+        "question": "Code of Conduct",
+        "answerUser1": "We don't have that many rules but certain things are quite important to think about. To start with, please act appropriately in the chat. We do not want anyone acting untoward or cause offence. In cases like that your account might be suspended.",
+        "answerUser2": "Please also respect our privacy and the sanctity of this website. The content we have included is entirely work of our own or publicly available under the Creative Commons License or similar avenues of availability. Using any of the content on this website for commercial use would be a violation of our copyright claim and punishable by law accordingly. Use of content on this website for other gains is also not something we support and we would appreciate that everything you see on this website stays on only this website and not get moved to any other public space."
+    }
+]

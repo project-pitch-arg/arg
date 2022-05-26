@@ -1,0 +1,89 @@
+Notes of the users we have created and some of their personalities as well 
+as how they ended up on the blog.
+Some of the information is repeated in users.json.
+Avatars are currently not used, but ideas of what they
+could be are added.
+Currently, all emails are fake.
+
+---------- User 1 ----------
+Username: Mr X
+Password: ILovePuzzles
+Real name: Kayden Oakeley
+Email: kayden@example.com
+Avatar: Pieces of a puzzle
+Puzzles?: Yes, yes, yes!
+Why here?: Was reading Shower Thoughts, and Google thought
+            Daily thoughts are similar.
+Personality: Basically here for the puzzles. Does not
+                chat much unless there is a mystery to solve.
+                Likes to write formally.
+
+---------- User 2 ----------
+Username: icniVad
+Password: daVinciCode
+Real name: Alejandro Rhys
+Email: alejandro@example.com
+Avatar: Da Vinci's airplane design
+Puzzles?: Those are usually my type of thing.
+Why here?: Friend of a friend of a friend. So do not know them well.
+Personality: Likes puzzles and can be quite stubborn. Can become stuck
+                in one point of view and sometimes having a hard time
+                looking from anothers point of view.
+
+---------- User 3 ----------
+Username: Tree123
+Password: TreesAndFlowers
+Real name: Martina Christie
+Email: martina@example.com
+Avatar: A bush or flowers
+Puzzles?: Sometimes. But lose interest if they are too hard.
+Why here?: In the same group of exchagne students as Edwin.
+Personality: Mainly reads the chat and only writes things about
+                puzzles she is quite sure about. Does not
+                care about using apostrophes '.
+
+---------- User 4 ----------
+Username: Pinnipedia
+Password: SealPupsAreCute
+Real name: Lynn Lauren
+Email: lynn@example.com
+Avatar: A seal (pup).
+Puzzles?: Not really her thing. But checks in every now and then.
+Why here?: A friend of Mr. X.
+Personality: Mainly here because her friend is and is not very active.
+                Communicates mainly through emojis/kaomojis.
+
+---------- User 5 ----------
+Username: Daemonosaurus
+Password: IAmNotADemon
+Real name: Kaj Holmberg
+Email: kaj@example.com
+Avatar: A demon.
+Puzzles?: No, thank you. I may check and comment when all is done, but do not solve them.
+Why here?: Robot1312113 came at the right time and really did make his day better.
+Personality: Mainly chats every now and then when in the mood. Likes dinosaurs and
+                mentions them every now and then. Can have fun trading facts with 
+                Robot1312113.
+
+---------- User 6 ----------
+Username: SpikeyTike
+Password: TomAndJerry
+Real name: Taylor Stevenson
+Email: taylor@example.com
+Avatar: Spike from Tom & Jerry
+Puzzles?: Nope.
+Why here?: Knows Wilfred (Robot1312113) but lives in another city now.
+Personality: Likes to argue back and forth with his sister.
+
+---------- User 7 ----------
+Username: DiggerTigger
+Password: WinnieHasNiceQuotes
+Real name: Elisabeth Stevenson
+Email: eli@example.com
+Avatar: Tigger from Winnie The Pooh
+Puzzles?: No, thank you.
+Why here?: Because her brother is. And because of the nice quotes on
+            QotD made her stay.
+Personality: Argues back and forth with her brother, but it is just
+                how they communicate. Has a lot of spelling mistakes.            
+

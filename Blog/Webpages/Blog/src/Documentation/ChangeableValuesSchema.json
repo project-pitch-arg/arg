@@ -1,0 +1,206 @@
+{
+    "title": "Modifiable values for the blog page.",
+    "required": [
+        "userPicture1", "userPicture2", "username1", "username2",
+        "quoteTime", "iframeList", "answerToBeEncrypted", "encryptionKey",
+        "clueDate", "letterFont", "letterColour", "courseCode1", "courseCode1Index",
+        "courseCode2", "courseCode2Index", "hintDinosaurs",
+        "hintCourses", "redHintPicture", "blueHintPicture", "greenHintPicture",
+        "jigsawSudoku", "parkEntrance", "directions", "chatAddress", "postsPerPage",
+        "tabNames", "currentQuestion", "textPuzzles"
+    ],
+    "properties": {
+        "userPicture1": {
+            "title": "The name of the picture that is the avatar for username1. Should be in the Img-folder.",
+            "type": "string"
+        },
+        "userPicture2": {
+            "title": "The name of the picture that is the avatar for username2. Should be in the Img-folder.",
+            "type": "string"
+        },
+        "username1": {
+            "title": "Username of one of the creators on the blog. It should be the same as one of the posters of the blog posts.",
+            "type": "string"
+        },
+        "username2": {
+            "title": "Username of one of the creators on the blog. It should be the same as one of the posters of the blog posts.",
+            "type": "string"
+        },
+        "quoteTime": {
+            "title": "The number of seconds each quote on TabQuotes is shown.",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "iframeList": {
+            "title": "List of website addresses for the jigsaws displayed on the Home tab.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "answerToBeEncrypted": {
+            "title": "The website that is the answer for the main puzzle, see the documentation.",
+            "type": "string" 
+        },
+        "encryptionKey": {
+            "title": "Key for the Mexican Army Wheel that encrypts the 'answerToBeEncrypted.",
+            "type": "array",
+            "minLength": 4,
+            "maxLength": 4,
+            "items": {
+                "type": "array",
+                "minLength": 2,
+                "maxLength": 2,
+                "items": {
+                    "type": ["string", "integer"],
+                    "exclusiveMinimum": 0,
+                    "exclusiveMaximum": 100
+                }
+            }
+        },
+        "clueDate": {
+            "title": "Will replace the month in all posts related to the main puzzle (see documentation). Should be one of the options in the encryptionKey.",
+            "type": "string" 
+        },
+        "letterFont": {
+            "title": "Letter font to be used to identify a course code.",
+            "type": "string"
+        },
+        "letterColour": {
+            "title": "Letter colour to be used to identify a course code.",
+            "type": "string"
+        },
+        "courseCode1": {
+            "title:": "Hidden course code.",
+            "type": "string"
+        },
+        "courseCode1Index": {
+            "title": "For example, the number 2 will replace every second occurance of letters in the course code inside the main puzzle post to indicate the course code.",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "courseCode2": {
+            "title:": "Hidden course code.",
+            "type": "string"
+        },
+        "courseCode2Index": {
+            "title": "For example, the number 2 will replace every second occurance of letters in the course code inside the main puzzle post to indicate the course code.",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "courseCode3": {
+            "title": "The third course code. Found by chosen items from 'listForCourseCode3",
+            "type": "string"
+        },
+        "listForCourseCode3": {
+            "title": "List of items giving clues for course code 3.",
+            "type": "array",
+            "minLength": 3,
+            "items": {
+                "type": "string"
+            }
+        },
+        "hintDinosaurs": {
+            "title": "A hidden hint for the meaning of the dinosaurs.",
+            "type": "string"
+        },
+        "hintCourses": {
+            "title": "A hidden hint to tell the player that finding course codes is a good idea.",
+            "type": "string"
+        },
+        "redHintPicture": {
+            "title": "The first number is the index of which picture is chosen in the second list.",
+            "type": "array",
+            "minLength": 2,
+            "maxLength": 2,
+            "items": {
+                "type": ["integer", "array"],
+                "minimum": 0,
+                "maximum": 2,
+                "minLength": 3,
+                "maxLength": 3,
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "blueHintPicture": {
+            "title": "The first number is the index of which picture is chosen in the second list.",
+            "type": "array",
+            "minLength": 2,
+            "maxLength": 2,
+            "items": {
+                "type": ["integer", "array"],
+                "minimum": 0,
+                "maximum": 2,
+                "minLength": 3,
+                "maxLength": 3,
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "greenHintPicture": {
+            "title": "The first number is the index of which picture is chosen in the second list.",
+            "type": "array",
+            "minLength": 2,
+            "maxLength": 2,
+            "items": {
+                "type": ["integer", "array"],
+                "minimum": 0,
+                "maximum": 2,
+                "minLength": 3,
+                "maxLength": 3,
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "jigsawSudoku": {
+            "title": "The Sudoku the player gets the course code numbers from. Should be in the Img-folder.",
+            "type": "string"
+        },
+        "parkEntrance": {
+            "title": "Picture of the start to directions. See documentation for more information about the puzzle. Should be in the Img-folder.",
+            "type": "string"
+        },
+        "directions": {
+            "title": "The directions from the parkEntrance. See documenationt for details.",
+            "type": "string"
+        },
+        "chatAddress": {
+            "title": "The website address to the chat.",
+            "type": "string"
+        },
+        "postsPerPage": {
+            "title": "The amount of posts displayed on one page of the blog before you need to switch page.",
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 10
+        },
+        "tabNames": {
+            "title": "The names of the 8 different tabs on the website. This includes the 3 hidden ones.",
+            "type": "array",
+            "minLength": 8,
+            "maxLength": 8,
+            "items": {
+                "type": "string"
+            }
+        },
+        "currentQuestion": {
+            "title": "What number of text is currently being solved in the text puzzle after moving on from the Skyline puzzle.",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "textPuzzles": {
+            "title": "The text showing in the respective slot in the text puzzle after solving the memory puzzle.",
+            "type": "array",
+            "minLength": 8,
+            "maxLength": 8,
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "additionalProperties": false
+}

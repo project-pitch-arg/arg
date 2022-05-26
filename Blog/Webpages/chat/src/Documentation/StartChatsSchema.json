@@ -1,0 +1,31 @@
+{
+    "title": "Chatrooms to create in the chat.",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "admin",
+            "chat_name",
+            "users"
+        ],
+        "properties": {
+            "admin": {
+                "title": "The admin of the chatroom. Should be a user in Users.json.",
+                "type": "string"
+            },
+
+            "chat_name": {
+                "title": "The name of the chatroom. The name should be unique.",
+                "type": "string"
+            },
+            "users": {
+                "title": "The other members in this chat except the admin.",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        } 
+    },
+    "additionalProperties": false
+}

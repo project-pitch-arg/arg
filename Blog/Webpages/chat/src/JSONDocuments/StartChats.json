@@ -1,0 +1,33 @@
+[
+    {
+        "admin": "Robot1311213",
+        "chat_name": "Welcome",
+        "users": ["Fexjo"]
+    },
+    {
+        "admin": "Fexjo",
+        "chat_name": "Daily thoughts about Daily Thoughts",
+        "users": ["Robot1311213", "Mr X", "icniVad", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+    },
+    {
+        "admin": "icniVad",
+        "chat_name": "Usernames?",
+        "users": ["Robot1311213", "Fexjo", "Mr X", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+    },
+    {
+        "admin": "icniVad",
+        "chat_name": "Simply a poem?",
+        "users": ["Robot1311213", "Fexjo", "Mr X", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+    },
+    {
+        "admin": "Mr X",
+        "chat_name": "A new puzzle",
+        "users": ["Robot1311213", "Fexjo", "icniVad", "Tree123", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+    },
+    {
+        "admin": "Tree123",
+        "chat_name": "I found something strange",
+        "users": ["Robot1311213", "Fexjo", "Mr X", "icniVad", "Pinnipedia", "Daemonosaurus", "SpikeyTike", "DiggerTigger"]
+    }
+
+]

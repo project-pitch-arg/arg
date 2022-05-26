@@ -1,0 +1,361 @@
+/* -------------------- Shared styles -------------------- */
+
+/* The main colours used. */
+:root {
+    --post-list-background: hsl(47, 34%, 74%);
+    --post-background: hsl(47, 28%, 66%);
+    --quote-background: #aa9a84;
+}
+/* Export the background to hide text for puzzle Main puzzle.
+    See documentation for information about this puzzle. */
+:export {
+    postBackground: var(--post-background);
+}
+
+/* The colour of the background often used.*/
+.content {
+    height: 85vh;
+    background: repeating-linear-gradient( 45deg,hsl(93, 40%, 60%), hsl(93, 27%, 45%), 1px,hsl(93, 40%, 60%) 1px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+/* Style of all scrollbars (does not work in all browsers). */
+::-webkit-scrollbar {
+    width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: hsl(93, 40%, 60%); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: hsl(93, 27%, 45%); 
+}
+/* Create an area on the right side */
+.right-side {
+    margin-left: 40px;
+    margin-right: 40px;
+    justify-content: center;
+    text-align: center;
+}
+/* The profile pictures placement. */
+.author-pictures {
+    padding-top: 10vh;
+    position: relative;
+}
+/* How images are usually placed. */
+.image {
+    height: 12vh;
+    max-width: 20vw;
+    position: center;
+    border: 5px solid #555;
+    background-color: hsl(93, 27%, 45%);
+}
+/* Design of the buttons used to change
+    the page of posts currently viewed.
+    Also to change jigsaw puzzle on the Home tab. */
+.button {
+    width: 150px;
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 1px;
+    font-size: 10px;
+    cursor: pointer;
+}
+/* The design of the buttons when you
+    cannot click them because you reach the
+    end of the posts. */
+.button[disabled] {
+    color: grey;
+    opacity: 0.7;
+    cursor: default;
+}
+
+/* --------------------TabHome -------------------- */
+
+/* Link to a different page. This is a text segment.
+   On the home page this is a link to the About page. */
+.link {
+    color: black;
+}
+
+/* ID to make sure that the entire home page is scrollable. */
+#home {
+    overflow: scroll;
+}
+
+/* Formatting for the text above the jigsaw on the home page. */
+#home-wrapper {
+    margin-top: 60vh;
+    margin-left: 10vw;
+    width: 80vw;
+    height: 30vh;
+    overflow: hidden;
+}
+
+/* Two classes to make sure that segments are next to each other. */
+.home-left {
+    width: 50vw;
+    height: auto;
+    float: left;
+    overflow: hidden;
+}
+.home-right {
+    overflow: hidden;
+    margin-top: 5vh;
+}
+
+/* ID to show the appropriate amount of the 
+   iframe of the jigsaw on the home page.*/
+#home-iframe-container {
+    width: 98vw;
+    height: 85vh;
+    overflow: hidden;     
+}
+
+/* ID to show part of the ifram and not
+   show the options bar. */
+#home-iframe {
+    width: 90vw;     
+    height: 80vh;     
+    margin-top: -5vh; 
+    overflow: hidden;
+}
+
+/* Class for formatting large text */
+.title-text {
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 5%;
+    padding: 10px;
+    position: relative;
+}
+
+/* --------------------TabPosts -------------------- */
+
+/* The color of the background outside
+    of the posts. */
+.background {
+    height: 100vh;
+    justify-content: left;
+    display: flex;
+    background: repeating-linear-gradient( 45deg,hsl(93, 40%, 60%), hsl(93, 27%, 45%), 1px,hsl(93, 40%, 60%) 1px);
+}
+/* Creates an area to place posts in.
+    Has a scrollbar if necessary. */
+.postlist {
+    height: 100vh;
+    width: 90%;
+    min-width: 50vw;
+    background-color: var(--post-list-background);
+    margin-left: 40px;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* The style for individual posts. The posts
+    size depends on the amount of content. */
+.post {
+    max-width: 70vw;
+    width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 10px;  
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: var(--post-background);
+    text-align: left;
+    position: center;
+    overflow-y: visible;
+}
+/* Places the date of the posts in the upper right. */
+.post-date {
+    margin:0px;
+    padding:0px;
+    bottom:0;
+    right:0;
+    text-align: right;
+    position: relative;
+    list-style: none;
+}
+/* Places the name of the poster in the upper left, 
+    with a different use of font.*/
+.post-name {
+    text-align: left;
+    font-weight: bold;
+}
+/* Sets the font back to normal after
+    the post-name has changed it for the
+    content of the post. */
+.post-content {
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+/* Area for images in post */
+.post-images {
+    column-count: 2;
+    width: 100%;
+    max-width: 1000px;
+}
+/* Sets the size of the images in a posts. */
+.post-image {
+    width: 100%;
+    max-height: 500px;
+    padding: 5px;
+}
+/* Keeps the buttons together at a certain place. */
+.buttongroup {
+    margin-top: 2vh;
+}
+
+/* -------------------- Tab Chat -------------------- */
+
+.chat-area {
+    overflow: hidden;
+}
+/* Fits the chat to the window. */
+.chat {
+    height: 79vh;
+    width: 100vw;
+}
+
+/* -------------------- Tab Quotes -------------------- */
+
+/* Makes a block and sets the text for the quotes */
+.quote {
+    width: 50vw;
+    padding: 2vh;
+    background-color: var(--quote-background);
+    color: black;
+    font-size: 3vh;
+}
+/* Displays the name of the person who said the quote. */
+.said-by {
+    color: black;
+    text-align: right;
+}
+
+/* -------------------- Tab About -------------------- */
+
+/* Creates an area to place questions in.
+    Has a scrollbar if necessary. */
+.question-list {
+    height: 80vh;
+    width: 70%;
+    background-color: var(--post-list-background);
+    justify-content: center;
+    text-align: center;
+    position: center;
+    overflow-y: auto;
+    justify-content: center;
+    font-size: medium;
+}
+/* The style for individual questions. */
+.question {
+    width: 60%;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 10px;  
+    padding: 10px;
+    text-align: left;
+    position: center;
+    font-weight: bold;
+    overflow-y: visible;
+}
+/* Font for formatting of questions and answer text. */
+.answer {
+    font-weight: normal;
+}
+
+/* --------------------Tab478 -------------------- */
+
+.memory {
+    height: 85vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(4,8rem);
+    grid-template-rows: repeat(4,8rem);
+    align-items: center;
+    grid-gap: 15px;
+    perspective: 800px;
+    
+  }
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    height: 100px; /*FIX THIS! Do not want to specify like this*/
+    width: 100px;
+    transition: all 2s ease;
+}
+.front {
+    background: radial-gradient(hsl(93, 51%, 72%), hsl(93, 40%, 60%));
+    background-color: rgb(161, 203, 159);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    height: inherit;
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.607);
+    text-align: center;
+    transform: rotateY(-180deg);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-color: black;
+    border-style: groove;
+    background-color: hsl(93, 40%, 60%);
+    opacity: 0.8;
+    background-image:  linear-gradient(135deg, black 25%, transparent 25%), linear-gradient(225deg, black 25%, transparent 25%), linear-gradient(45deg, black 25%, transparent 25%), linear-gradient(315deg, black 25%, hsl(93, 40%, 60%) 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 10px 10px;
+    background-repeat: repeat;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.167);
+}
+.turn {
+    transform: rotateY(180deg);
+    box-shadow: -12px 12px 2px 1px rgba(0, 0, 0, 0.167) !important;
+}
+.correct-pair {
+    transform: rotateY(180deg);
+    border-color: black;
+    border-style: double;
+    border-width: 5px;
+}
+.mem-button {
+    margin-top: 3vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.lives {
+    font-size: larger;
+    font-weight: bold;
+    margin-right: 3vw;
+}
+
