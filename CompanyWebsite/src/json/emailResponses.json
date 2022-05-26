@@ -1,0 +1,21 @@
+{
+  "helena":{
+    "firstReply" :"Where did you get this code? \n I will ask IT what it is about. \n//Helena" ,
+    "secondReply" : "I talked with IT and they say it's for a restricted page and we thank you for not sharing it.  \n//Helena",
+    "thirdReply" : "I talked with IT and they say it's for a restricted command and we thank you for not sharing it. \n//Helena",
+    "noReply" : "Hello, i'm out of the office for a two week vacation i will be back on the 1st of April \n Best Regards Helena :)"
+  },
+
+  "lyra": {
+    "firstReply" : "Hello, \n \n You mentioned Wilfred? Well I haven’t heard from him in a while but he is a smart guy and I am sure he will find his way Home.\n \n If there is any trouble please feel free to contact me \n \n Lyra Bell",
+    "hint" : "Welcome! \n \n Here at Difax Our Work ensures that your information is hidden from prying eyes. \n What is there to know About Us at Difax? Well, ME personally I like to write text that reveals our true intentions, of helping customers.",
+    "noReply" : "Hello, \n \n I am currently not available and cannot respond to you right now.\n \n Lyra Bell"
+  },
+
+  "wilfred": {
+    "firstReply" :"You found me, good.\n \n Lyra has hidden the intranet access details somewhere in the website, however I do not know where they are located. You must find these credentials and mail them to me. I will then provide you with a URL. \n \n Wilfred" ,
+    "secondReply" : "You found the credentials! Well done \n \n Here is the URL: /Internal. I believe the information is stored in hidden documents, please send them to me if you find them.",
+    "thirdReply" : "This is good information but i don't think it is enough, see if you could find out anything more. \n\n //Wilfred",
+    "fourthReply" : "This is exactly the information i need, i will content the authorities immediately. Thank you so much for the help,  i don't know how to thank you :). \n//Wilfred"
+  }
+}

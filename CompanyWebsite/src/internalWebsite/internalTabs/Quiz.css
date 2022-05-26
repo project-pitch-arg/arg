@@ -1,0 +1,34 @@
+.questionForm{
+    text-align: left;
+    color: black;
+    margin-top: 20px;
+}
+.questionForm input[type=radio]{
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+}
+.questionForm input[type=submit]{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    padding: 10px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.questionForm input[type=submit]:hover{
+    background-color: #069ac6;
+
+}
+.quizObject{
+    background-color: white;
+    max-width: 70%;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px gray;
+    padding: 10px;
+}

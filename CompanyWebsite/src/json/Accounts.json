@@ -1,0 +1,14 @@
+[{
+  "u1" : {
+    "username": "Edmund_Schmidt",
+    "title" : "CFO",
+    "password": "26873444",
+    "email" : "Hello@gmail.com"
+  },
+  "u2" : {
+    "username": "Mark_Roswell",
+    "title" : "CEO",
+    "password": "jer2fjer,oifjer534534!",
+    "email" : "Hello@gmail.com"
+  }
+}]

@@ -1,0 +1,29 @@
+[{
+  "t1" : {
+    "title": "Company retreat",
+    "img" : "hometown",
+    "text": "It's time again for the company's yearly retreat. We will be traveling to our usual spot where we will enjoy a delightful weekend. Activities start on March 18 at 6 pm. Our CEO was kind enough to provide a beautiful image of the landscape.",
+    "date": "2022/04/11"
+  },
+  "t2" : {
+    "title": "Our CEO",
+    "img" : "Mark_Roswell",
+    "text" : "Our CEO Mark Roswell has been with us since the start in 1998.",
+    "date" : "2022/03/17"
+  },
+  "t3" : {
+    "title": "Charity Drive &\nVolunteer Opportunity",
+    "text" : "As we do every year, we love to give back to\nthose who need it most - more so at this\ntime of year. Our annual charity drive is still\nongoing for one more week, clothes and\nnon-perishable goods will be collected by\nMay 15 and delivered to three shelters\nin the inner-city. If you wish to make any\ndonations of any kind, please do so soon\nthat you don't miss your opportunity.\nWe are also volunteering on Sundays for the\nOut of the Cold program organized by local\nparishes. For those interested, you can still\nsign up. There are 10 Sundays left, 7\ndifferent churches, with a need for\nvolunteers from 3pm-7pm.",
+    "date" : "2022/03/15"
+  },
+  "t4" : {
+    "title": "We are hiring",
+    "text" : "Good people tend to know good people - help us fill the new role of security specialist.\nRefer someone you know, share it on social media, or apply for the job yourself.\nAs a bonus, we're also offering 2000 kr for successful hires! Email HR for more information.",
+    "date" : "2022/03/19"
+  },
+  "t5" : {
+    "title": "Welcome our new hire!",
+    "text" : "This week we have added another person to our great team, please welcome Mark Ryan which is our new HR representative. Feel free to ask any HR related questions to him.",
+    "date" : "2022/03/23"
+  }
+}]

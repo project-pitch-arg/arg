@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/AboutUs",
+    "definitions": {
+        "AboutUs": {
+            "type": "object",
+            "title": "AboutUs",
+            "additionalProperties": false,
+            "properties": {
+                "password": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "headerTitle": {
+                    "type": "string"
+                },
+                "firstParagraph": {
+                    "$ref": "#/definitions/Paragraph"
+                },
+                "secondParagraph": {
+                    "$ref": "#/definitions/Paragraph"
+                },
+                "images": {
+                    "$ref": "#/definitions/Images"
+                }
+            },
+            "required": [
+                "headerTitle",
+                "firstParagraph",
+                "secondParagraph",
+                "images",
+                "password"
+            ]
+        },
+        "Paragraph": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "image": {
+                    "$ref": "#/definitions/Image"
+                }
+            },
+            "required": [
+                "title",
+                "text"
+            ],
+            "title": "Paragraph"
+        },
+        "Images": {
+            "title": "Images",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "header": {
+                    "$ref": "#/definitions/Image"
+                },
+                "employees": {
+                    "$ref": "#/definitions/Employees"
+                }
+            },
+            "required": [
+                "employees",
+                "header"
+            ]
+        },
+        "Employees": {
+            "title": "Employees",
+            "type": "object",
+            "additionalProperties": true,
+            "minProperties": 8,
+            "maxProperties": 8,
+            "patternProperties": {
+                "": {"$ref": "#/definitions/Image"}
+            }
+        },
+        "Image": {
+            "title": "Image",
+            "type": "string",
+            "oneOf": [{"pattern": "^img/.{0,}\\.jpg$"},
+                      {"pattern": "^img/.{0,}\\.png$"}]
+        }
+    }
+}

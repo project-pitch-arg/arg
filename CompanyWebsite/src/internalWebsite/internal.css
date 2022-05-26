@@ -1,0 +1,34 @@
+.InternalApp {
+  text-align: center;
+  height: 100%;
+  color: white;
+
+}
+.Login-component {
+    /* The image used */
+    /* background-image: url(./images/background.jpg); */
+    background-color: white;
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+

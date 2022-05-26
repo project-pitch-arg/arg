@@ -1,0 +1,201 @@
+.newsBlock{
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #24647f;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: scroll;
+    position: relative;
+    margin-top: 10px;
+    color: white;
+}
+
+.list{
+    border-bottom: 1px dashed white;
+    border-top: 1px dashed white;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.listItem{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+p.newsText{
+    margin-top: 10px;
+    font-size: 15px;
+    color: white;
+    text-align: left;
+}
+
+.newsHeader{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quiz button{
+    padding: 10px;
+    background-color: #7FC6B7;
+    border-radius: 10px;
+    color: white;
+}
+
+.hrObject{
+    background-color: white;
+    max-height: 40%;
+    max-width: 40%;
+    border-radius: 5%;
+    margin: 10px auto;
+    box-shadow: 2px 2px gray;
+    padding: 10px;
+    display: block;
+    word-wrap: break-word;
+}
+.pdfItemDiv{
+    padding: 1px;
+}
+
+.pdfItem {
+  background-color: white;
+  border: none;
+  color: black;
+    text-align: center;
+  text-decoration: none;
+    font-size: 16px;
+  width: 25%;
+  border-radius: 2px;
+  box-shadow: 4px 4px black;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.wrongMessage{
+    margin-top: 10px;
+    color: red;
+}
+
+.pdfItem:hover{
+    background-color: #33adff;
+}
+
+img{
+    max-width: 80%;
+    border-radius: 50px;
+    box-shadow: 2px 2px gray;
+}
+
+img.graph{
+    max-width: 40%;
+    max-height: 60%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+img.news{
+    width: 80%;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+img.lock{
+    width: 5vh;
+    box-shadow: none;
+}
+
+img.lock:hover{
+    content: url(../images/LockGray.png);
+}
+
+.underlineDiv{
+    border: 1px solid white;
+    margin-bottom: 10px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lockedArchiveDiv{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lockedArchive{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.smallConsole {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 5px;
+}
+
+.smallConsole:focus{
+    color: white;
+    background-color: black;
+}
+
+.switchAccount{
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 40px;
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.switchAccount:hover{
+    background-color: #069ac6;
+}
+
+.newsBlock h1 {
+    color: white;
+    font-family: Verdana,serif;
+    font-size: 35px;
+}
+
+h1.underline{
+    font-family: Verdana,serif;
+    font-size: 35px;
+    position: relative;
+}
+.underline{
+    font-family: Verdana,serif;
+    font-size: 35px;
+    position: relative;
+}
+div.marginDiv{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.newsBlock h2{
+    color: white;
+    font-size: 22px;
+}
+
+.newsBlock h3{
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}

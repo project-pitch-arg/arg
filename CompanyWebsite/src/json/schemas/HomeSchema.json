@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/HomeSchema",
+    "definitions": {
+        "HomeSchema": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "passphrase": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "encryptedEmail": {
+                    "type": "string"
+                },
+                "headerTitle": {
+                    "type": "string"
+                },
+                "firstParagraph": {
+                    "$ref": "#/definitions/Paragraph"
+                },
+                "secondParagraph": {
+                    "$ref": "#/definitions/Paragraph"
+                },
+                "thirdParagraph": {
+                    "$ref": "#/definitions/Paragraph"
+                },
+                "fourthParagraph": {
+                    "$ref": "#/definitions/Paragraph"
+                },
+                "images": {
+                    "$ref": "#/definitions/Images"
+                }
+            },
+            "required": [
+                "passphrase",
+                "encryptedEmail",
+                "firstParagraph",
+                "secondParagraph",
+                "thirdParagraph",
+                "fourthParagraph",
+                "headerTitle",
+                "images"
+            ]
+        },
+        "Paragraph": {
+            "title": "Paragraph",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "image": {
+                    "$ref": "#/definitions/Image"
+                }
+            },
+            "required": [
+                "title",
+                "text"
+            ]
+        },
+        "Images": {
+            "title": "Images",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "header": {
+                    "$ref": "#/definitions/Image"
+                },
+                "techImages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Image"
+                    }
+                }
+            },
+            "required": [
+                "header",
+                "techImages"
+            ]
+        },
+        "Image": {
+            "title": "Image",
+            "type": "string",
+            "oneOf": [{"pattern": "^img/.{0,}\\.jpg$"},
+                      {"pattern": "^img/.{0,}\\.png$"}]
+        }
+    }
+}

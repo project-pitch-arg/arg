@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Wrong",
+  "definitions": {
+      "Wrong": {
+          "title": "Wrong",
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+              "wrongMessage": {
+                  "type": "string"
+              },
+              "header": {
+                "$ref": "#/definitions/Image"
+              },
+              "homeIcon": {
+                "$ref": "#/definitions/Image"
+              }
+          },
+          "required": [
+              "header",
+              "homeIcon",
+              "wrongMessage"
+          ]
+      },
+      "Image": {
+          "title": "Image",
+          "type": "string",
+          "oneOf": [{"pattern": "^img/.{0,}\\.jpg$"},
+                    {"pattern": "^img/.{0,}\\.png$"}]
+      }
+  }
+}

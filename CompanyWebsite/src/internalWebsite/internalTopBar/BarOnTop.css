@@ -1,0 +1,64 @@
+.topbarInternal {
+  position: relative;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+
+}
+
+#topbarInternal-ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: white;
+  display: block;
+  position: relative;
+  border-radius: 20px;
+  padding: 10px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#topbarInternal-li {
+  float: left;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#topbarInternal-li-Right{
+    float: right;
+}
+  
+.topbarInternal a {
+  display: block;
+  color: black;
+  /* text-align: center; */
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-right: 10px;
+  
+}
+
+.topbarInternal a:hover {
+  background-color: darkslategray;
+  color: white;
+}
+
+.topbarInternal a.active {
+  background-color: #24647f;
+  color: white;
+}
+
+.menyDiv{
+    background-color: #24647f;
+    padding: 10px;
+}
+
+.internalHeader{
+    color: #24647f;
+    font-size: 40px;
+    font-style: normal;
+}

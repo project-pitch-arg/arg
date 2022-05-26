@@ -1,0 +1,26 @@
+{
+  "keysPressedDownForConsole" : "open",
+  "smallConsoleCode" : "231",
+  "adminCode" : "3186",
+  "smallDecryptConsole" : "2FUaiv5Dq4SLlZ2KD9OI",
+  "titleForDocuments" : "Policy Documents",
+  "securityQuestions" : [
+    "Name of pet",
+    "Name of favorite movie villain",
+    "Hometown"
+  ],
+  "securityAnswers" : [
+    "Lexi",
+    "two-face",
+    "Comillas"
+  ],
+  "helpCommands" : [
+      "/admin [code] Activates admin commands",
+      "/clear clears the console"
+  ],
+  "adminCommands" : [
+    "/changePassword [user] Changes the password of a user",
+    "/currentAdmin Shows the current Admin User",
+    "/clear clears the console"
+  ]
+}
