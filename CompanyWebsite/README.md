@@ -1,4 +1,4 @@
-## Steps to run the project
+## How to run the Company Website
 
 ### In the arg directory: 
 
