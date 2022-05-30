@@ -1,4 +1,4 @@
-import {basicFetchDataJson} from "../Client/Client";
+import {basicFetchDataJson} from "../client/Client";
 
 export var ip_address = "http://localhost:3000";
 

@@ -1,4 +1,4 @@
-import {basicFetchDataJson} from "../../Client/Client";
+import {basicFetchDataJson} from "../../client/Client";
 
 //Checks user credentials against database and return user data if the credentials are correct
 export async function getAccountData(json){

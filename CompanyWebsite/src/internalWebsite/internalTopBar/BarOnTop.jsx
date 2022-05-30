@@ -4,8 +4,8 @@ import React, {  lazy, Suspense, Component } from 'react';
 import './BarOnTop.css';
 import {Link, Routes, Route} from "react-router-dom";
 import InternalWrong from '../Wrong.jsx';
-import Home from '../InternalTabs/Home';
-import Empty from "../InternalTabs/Empty";
+import Home from '../internalTabs/Home';
+import Empty from "../internalTabs/Empty";
 
 export default class TopBar extends Component {
 

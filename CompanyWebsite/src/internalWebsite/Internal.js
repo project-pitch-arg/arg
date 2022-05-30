@@ -1,8 +1,8 @@
 import "./internal.css";
 import React, { Component } from 'react';
-import Login from "./CustomPages/LogIn/LogInPage";
-import {getAccountData} from "./CustomPages/LogIn/LogIn";
-import BarOnTop from "./InternalTopBar/BarOnTop";
+import Login from "./customPages/logIn/LogInPage";
+import {getAccountData} from "./customPages/logIn/LogIn";
+import BarOnTop from "./internalTopBar/BarOnTop";
 
 export default class Internal extends Component {
 

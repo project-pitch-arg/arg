@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './Company.css';
 import { importImage } from '../SharedFunctions';
 import Variables from '../../json/AboutUs.json';
-import {basicFetchDataJson} from "../../InternalWebsite/Client/Client";
+import {basicFetchDataJson} from "../../internalWebsite/client/Client";
 
 
 

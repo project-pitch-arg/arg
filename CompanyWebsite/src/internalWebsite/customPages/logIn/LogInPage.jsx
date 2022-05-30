@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {basicFetchDataJson} from "../../Client/Client";
+import {basicFetchDataJson} from "../../client/Client";
 import progressBar from "../../images/progress bar.jpg";
 import {getAccountData} from "./LogIn";
 import "./LogInPage.css";
-import {getCEOName} from "../../CommonCode/CommonCode";
+import {getCEOName} from "../../commonCode/CommonCode";
 
 export default class LogInPage extends Component{
 

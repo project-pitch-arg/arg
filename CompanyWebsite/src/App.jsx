@@ -2,14 +2,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React, {Component,useEffect } from 'react';
 import ScrollToTop from "react-scroll-to-top";
 
-import TopBar from './CompanyWebsite/TopBar/TopBar';
-import Wrong from './CompanyWebsite/Wrong';
-import Home from './CompanyWebsite/Tabs/Home';
-import OurWork from './CompanyWebsite/Tabs/OurWork';
-import AboutUs from './CompanyWebsite/Tabs/AboutUs';
-import Internal from './InternalWebsite/Internal';
+import TopBar from './companyWebsite/topBar/TopBar';
+import Wrong from './companyWebsite/Wrong';
+import Home from './companyWebsite/tabs/Home';
+import OurWork from './companyWebsite/tabs/OurWork';
+import AboutUs from './companyWebsite/tabs/AboutUs';
+import Internal from './internalWebsite/Internal';
 
-import Footer from './CompanyWebsite/Footer/Footer';
+import Footer from './companyWebsite/footer/Footer';
 
 export default class App extends Component{
 

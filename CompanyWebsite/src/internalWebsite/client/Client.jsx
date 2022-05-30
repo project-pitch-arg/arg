@@ -1,4 +1,4 @@
-import {ip_address} from "../CommonCode/CommonCode";
+import {ip_address} from "../commonCode/CommonCode";
 
 //Standard ip for server
 const path = ip_address;

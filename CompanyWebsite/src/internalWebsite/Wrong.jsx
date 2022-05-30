@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './InternalTabs/TabContent.css';
+import './internalTabs/TabContent.css';
 
 export default class InternalWrong extends Component{
     render(){
