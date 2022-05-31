@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import "./TabContent.css";
-import {basicFetchData} from "../Client/Client";
+import {basicFetchData} from "../client/Client";
 import axios from 'axios';
 import Variables from "../../json/Variables";
 import {getCEOName, ip_address} from "../commonCode/CommonCode";

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {basicFetchData} from "../Client/Client"
+import {basicFetchData} from "../client/Client"
 import "./Quiz.css";
 export default class Quiz extends Component{
 
