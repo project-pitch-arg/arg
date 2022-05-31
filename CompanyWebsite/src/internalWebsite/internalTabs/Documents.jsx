@@ -3,7 +3,7 @@ import "./TabContent.css";
 import {basicFetchData} from "../Client/Client";
 import axios from 'axios';
 import Variables from "../../json/Variables";
-import {getCEOName, ip_address} from "../CommonCode/CommonCode";
+import {getCEOName, ip_address} from "../commonCode/CommonCode";
 
 
 export default class Documents extends Component{

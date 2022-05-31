@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './TabContent.css';
-import {nameFormatting} from "../CommonCode/CommonCode";
+import {nameFormatting} from "../commonCode/CommonCode";
 
 export default class Account extends Component{
 

@@ -103,13 +103,13 @@ export default class TopBar extends Component {
                           <Route path="/*" element={<InternalWrong />} />
                           {
                             this.locations.map((file) => {
-                                const Tag = lazy(() => import("../InternalTabs/" + file));
+                                const Tag = lazy(() => import("../internalTabs/" + file));
                                 return this.getComponent(file, Tag)
                             })
                           }
                           {
                             this.customLocations.map((file) => {
-                                const Tag = lazy(() => import("../CustomPages/" + file));
+                                const Tag = lazy(() => import("../customPages/" + file));
                                 return this.getComponent(file, Tag)
                             })
                           }

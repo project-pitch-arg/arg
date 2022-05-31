@@ -1,6 +1,6 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
-import {ip_address} from "./InternalWebsite/CommonCode/CommonCode";
+import {ip_address} from "./internalWebsite/commonCode/CommonCode";
 
 module.exports = function(app) {
   app.use(

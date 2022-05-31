@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Console.css';
 import Variables from "../../json/Variables.json";
-import {getCEOName} from "../CommonCode/CommonCode";
+import {getCEOName} from "../commonCode/CommonCode";
 
 export default class Console extends Component{
 
