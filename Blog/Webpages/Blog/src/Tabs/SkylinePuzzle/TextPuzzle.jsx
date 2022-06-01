@@ -1,4 +1,4 @@
-import { getElementById } from "domutils";
+
 import Variables from "../../JSONDocuments/ChangeableValues.json";
 
 export default function TextPuzzle(){
@@ -121,7 +121,7 @@ export default function TextPuzzle(){
         event.preventDefault();
         switch (currentQuestion) {
             case 1:
-                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "music and drama students") {
+                if(sessionStorage.getItem("textAnswer").toLocaleLowerCase() === "gmv") {
                     var text = document.getElementById("questionText");
                     text.innerHTML = "2 = ?";
                     currentQuestion = 2;

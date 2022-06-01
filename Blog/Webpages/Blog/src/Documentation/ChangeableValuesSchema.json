@@ -7,7 +7,7 @@
         "courseCode2", "courseCode2Index", "hintDinosaurs",
         "hintCourses", "redHintPicture", "blueHintPicture", "greenHintPicture",
         "jigsawSudoku", "parkEntrance", "directions", "chatAddress", "postsPerPage",
-        "tabNames", "currentQuestion", "textPuzzles"
+        "tabNames", "memoryCards", "initialLives", "currentQuestion", "textPuzzles"
     ],
     "properties": {
         "userPicture1": {
@@ -186,6 +186,31 @@
             "items": {
                 "type": "string"
             }
+        },
+        "memoryCards": {
+            "title": "The eight memory pairs. The tags should be the numbers 1-8 and each should occur two times.",
+            "type": "array",
+            "minLength": 8,
+            "maxLength": 8,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "tag": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 8
+                    },
+                    "additionalProperties": false
+                }
+            }
+        },
+        "initialLives": {
+            "title": "The number of lives a player has for the memory game.",
+            "type": "integer",
+            "minimum": 1
         },
         "currentQuestion": {
             "title": "What number of text is currently being solved in the text puzzle after moving on from the Skyline puzzle.",
